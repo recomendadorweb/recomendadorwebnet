@@ -80,7 +80,7 @@ footer { font-size: 0.9em; text-align: center; color: #666; margin-top: 3em; }
 </head>
 <body>
 <div class="container">
-<h1 id="titulo-principal">Mejores Teclados Gaming 2025 | Opiniones Reales | <span id="fecha-actualizacion" style="font-size:0.6em; color:#555;"></span></h1>
+<h1 id="titulo-principal">Mejores Teclados Gaming 2025 | Opiniones Reales | <span id="fecha-actualizacion"></span></h1>
 
 <img src="teclado-gaming-cartoon.png" alt="Teclado gaming estilo cartoon">
 
@@ -164,31 +164,34 @@ footer { font-size: 0.9em; text-align: center; color: #666; margin-top: 3em; }
 <p>Hoy en día sí, gracias a tecnologías como Bluetooth 5.0 o conexiones propietarias de alta velocidad como Lightspeed de Logitech.</p>
 
 <footer>
-<p style="font-size:0.8em; color:#555;">Última actualización: <span id="fecha-footer"></span></p>
+
 © 2025 Recomendador.net - Algunos enlaces pueden generar comisiones de afiliado sin coste para ti.
 </footer>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
-                   "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
-    const ahora = new Date();
-    const mes = meses[ahora.getMonth()];
-    const año = ahora.getFullYear();
-    document.title = document.title.replace(/Actualizado.*$/, `Actualizado ${mes.charAt(0).toUpperCase() + mes.slice(1)} ${año}`);
-  });
 
-    var fechaActualizacion = document.getElementById("fecha-actualizacion");
-    if (fechaActualizacion) {
-        fechaActualizacion.innerText = mes.charAt(0).toUpperCase() + mes.slice(1) + " " + año;
-    }
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
+                 "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+  const ahora = new Date();
+  const mes = meses[ahora.getMonth()];
+  const año = ahora.getFullYear();
   
-    var fechaFooter = document.getElementById("fecha-footer");
-    if (fechaFooter) {
-        fechaFooter.innerText = mes.charAt(0).toUpperCase() + mes.slice(1) + " " + año;
-    }
-  </script>
+  // Actualizar título visible
+  const fechaTitulo = document.getElementById("fecha-actualizacion");
+  if (fechaTitulo) {
+    fechaTitulo.textContent = mes.charAt(0).toUpperCase() + mes.slice(1) + " " + año;
+  }
+
+  
+  }
+
+  // También actualizar el <title> de navegador
+  document.title = document.title.replace(/Actualizado.*$/, `Actualizado ${mes.charAt(0).toUpperCase() + mes.slice(1)} ${año}`);
+});
+</script>
+
 
 
 </body>
