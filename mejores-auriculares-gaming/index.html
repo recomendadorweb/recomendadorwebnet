@@ -4,64 +4,22 @@
 <html lang="es">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-3ZN94Y4QHN');
-</script>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Descubre los mejores auriculares gaming de 2025 con recomendaciones reales de Carlos, analista experto con 15 años de experiencia. Opiniones personales y comparativa completa." name="description"/>
 <meta content="auriculares gaming, mejores auriculares gaming 2025, análisis de auriculares, recomendaciones gaming, comparativa auriculares" name="keywords"/>
 <title>Mejores Auriculares Gaming 2025 | Opiniones Reales | Actualizado Abril 2025</title>
 <link href="https://recomendador.net/mejores-auriculares-gaming/" rel="canonical"/>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/global/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="estilos.css" rel="stylesheet"/></head>
+<link href="/global/estilos.css" rel="stylesheet"/></head>
 <body>
 
 
 
-<header class="hero-banner-rediseñado">
-  <div class="hero-inner">
-    <div class="hero-logo">
-      <img src="logo.png" alt="Logo Recomendador.net"/>
-    </div>
-    
-
-
-<div class="hero-texto" style="margin-left: auto; text-align: right;">
-  <p><strong>🛡️ Recomendaciones reales desde 2009</strong></p>
-  <p>⭐ Análisis imparciales por expertos tech</p>
-</div>
-
-
-
-  </div>
-</header>
-
-
-
-<nav class="main-nav">
-<div class="nav-container" style="padding: 0.4em 1em;">
-<div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('activo')">
-  ☰
-</div>
-<a class="logo" href="/"></a>
-
-<ul class="nav-links">
-  <li><a href="/mejores-auriculares-gaming">🎧 Auriculares</a></li>
-  <li><a href="/mejores-teclados-gaming">⌨️ Teclados</a></li>
-  <li><a href="/mejores-ratones-gaming">🖱 Ratones</a></li>
-  <li><a href="/mejores-microfonos-gaming">🎙 Micrófonos</a></li>
-</ul>
-
-
-</div>
-</nav>
+<div id="header-placeholder"></div>
 <div class="container">
 <h1>Mejores Auriculares Gaming 2025 | Opiniones Reales | Actualizado Abril 2025</h1>
 <img alt="Auriculares gaming estilo cartoon" loading="lazy" src="images/auriculares.webp" style="max-height: 280px; width: auto; display: block; margin: 1em auto;"/>
@@ -182,31 +140,26 @@
 <div style="text-align:center; margin-top: 3em;">
   <a href="#" class="boton">⬆️ Volver arriba</a>
 </div>
-<footer>
-    © 2025 Recomendador.net - Algunos enlaces pueden generar comisiones de afiliado sin coste para ti.
-  </footer>
+<div id="footer-placeholder"></div>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('activo');
-  });
-});
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (toggle && navLinks) {
-      toggle.addEventListener('click', function () {
-        navLinks.classList.toggle('activo');
+  <script>
+    fetch('/global/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+          document.querySelector('.nav-links')?.classList.toggle('activo');
+        });
       });
-    }
-  });
-</script>
+
+    fetch('/global/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+  <script src="/global/scripts.js"></script>
 </body>
 
 </html>

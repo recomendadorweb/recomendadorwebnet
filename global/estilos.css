@@ -29,3 +29,35 @@ body {font-family: 'Poppins', sans-serif;line-height: 1.6;margin: 0;padding: 0;b
   margin: 3em 0 2em;
   height: 0;
 }
+
+.guia {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.guia:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.guia h2 {
+  margin-top: 0;
+  color: #004aad;
+}
+
+.guia a {
+  display: inline-block;
+  margin-top: 1em;
+  color: #0073e6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.guia a:hover {
+  text-decoration: underline;
+}

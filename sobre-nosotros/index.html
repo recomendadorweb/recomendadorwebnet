@@ -6,11 +6,12 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Sobre Nosotros | Conoce a Carlos López</title>
 <meta content="Conoce a Carlos López, analista con más de 15 años de experiencia probando productos tecnológicos. Descubre cómo realiza sus análisis reales en nuestras guías." name="description"/>
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="/global/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 
-<link href="estilos.css" rel="stylesheet"/></head>
+<link href="/global/estilos.css" rel="stylesheet"/></head>
 <body>
+<div id="header-placeholder"></div>
 <div class="container">
 <h1>Sobre Nosotros</h1>
 <div class="autor">
@@ -41,9 +42,28 @@
 <li>🎮 <strong>Enfoque práctico:</strong> no me interesa solo lo técnico, sino cómo mejora tu experiencia como usuario.</li>
 </ul>
 <p>Gracias por confiar en mi trabajo. Mi compromiso es seguir publicando guías útiles, honestas y actualizadas para que tu compra sea siempre la más acertada.</p>
-<footer>
-      © 2025 Recomendador.net
-    </footer>
+<div id="footer-placeholder"></div>
 </div>
+
+  
+  <script src="scripts.js"></script>
+
+  <script>
+    fetch('/global/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+          document.querySelector('.nav-links')?.classList.toggle('activo');
+        });
+      });
+
+    fetch('/global/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+  <script src="/global/scripts.js"></script>
 </body>
 </html>
