@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Título de la Página</title>
+  <link rel="stylesheet" href="/global/estilos.css"/>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <main class="container">
+    <!-- Contenido de la página -->
+  </main>
+  <div id="footer-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+          document.querySelector('.nav-links')?.classList.toggle('activo');
+        });
+      });
+
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+  <script src="scripts.js"></script>
+</body>
+</html>

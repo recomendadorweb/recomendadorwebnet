@@ -3,14 +3,8 @@
 <html lang="es">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-3ZN94Y4QHN');
-</script>
+
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Guías de compra de periféricos gaming con opiniones reales y comparativas. Encuentra los mejores ratones, teclados y auriculares con análisis detallado." name="description"/>
@@ -18,8 +12,9 @@
 <title>Guías de Compra Gaming | Recomendador.net</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
 
-<link href="estilos.css" rel="stylesheet"/></head>
+<link href="/global/estilos.css" rel="stylesheet"/></head>
 <body>
+<div id="header-placeholder"></div>
 <div class="container">
 <h1>Guías de Compra de Periféricos Gaming</h1>
 <div class="guia">
@@ -42,9 +37,25 @@
 <p>Analizamos los micrófonos más recomendados para streamers y gamers. Calidad de sonido, diseño y facilidad de uso probados por expertos.</p>
 <a href="/mejores-microfonos-gaming">Ver guía completa</a>
 </div>
-<footer>
-      © 2025 Recomendador.net
-    </footer>
+<div id="footer-placeholder"></div>
 </div>
+
+  <script>
+    fetch('/global/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+          document.querySelector('.nav-links')?.classList.toggle('activo');
+        });
+      });
+
+    fetch('/global/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+  <script src="/global/scripts.js"></script>
 </body>
 </html>

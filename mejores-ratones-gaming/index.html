@@ -2,23 +2,19 @@
 <html lang="es">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-3ZN94Y4QHN');
-</script>
+
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Descubre los mejores ratones gaming de 2025 con recomendaciones reales de Carlos, analista experto con 15 años de experiencia. Opiniones personales y comparativa completa.">
 <meta name="keywords" content="ratones gaming, mejores ratones gaming 2025, análisis de ratones, recomendaciones gaming, comparativa ratones">
 <title>Mejores Ratones Gaming 2025 | Opiniones Reales | Actualizado Abril 2025</title>
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="/global/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/global/estilos.css">
 </head>
 <body>
+<div id="header-placeholder"></div>
 <div class="container">
 <h1 id="titulo-principal">Mejores Ratones Gaming 2025 | Opiniones Reales | Actualizado Abril 2025</h1>
 
@@ -143,9 +139,25 @@
 <h3>¿Es importante el número de DPI?</h3>
 <p>Sí, pero más importante aún es la calidad del sensor. Un ratón con muchos DPI pero mal sensor no ofrecerá buena precisión.</p>
 
-<footer>
-© 2025 Recomendador.net - Algunos enlaces pueden generar comisiones de afiliado sin coste para ti.
-</footer>
+<div id="footer-placeholder"></div>
 </div>
+
+  <script>
+    fetch('/global/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+          document.querySelector('.nav-links')?.classList.toggle('activo');
+        });
+      });
+
+    fetch('/global/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+  </script>
+  <script src="/global/scripts.js"></script>
 </body>
 </html>
