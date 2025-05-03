@@ -2,19 +2,55 @@
 
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-
-
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="Guías de compra de periféricos gaming con opiniones reales y comparativas. Encuentra los mejores ratones, teclados y auriculares con análisis detallado." name="description"/>
 <meta content="guías de compra gaming, teclados gaming, auriculares gaming, ratones gaming, recomendaciones periféricos" name="keywords"/>
+<link href="https://www.recomendador.net/" rel="canonical"/>
 <title>Guías de Compra Gaming | Recomendador.net</title>
+<link href="/global/favicon.ico" rel="icon" type="image/x-icon"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
-
-<link href="/global/estilos.css" rel="stylesheet"/></head>
+<link href="/global/estilos.css" rel="stylesheet"/>
+<!-- Open Graph -->
+<meta content="Guías de Compra Gaming | Recomendador.net" property="og:title"/>
+<meta content="Comparativas de teclados, auriculares y ratones gaming con opiniones reales." property="og:description"/>
+<meta content="https://www.recomendador.net/global/logo.png" property="og:image"/>
+<meta content="https://www.recomendador.net/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<!-- Twitter Card -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Guías de Compra Gaming | Recomendador.net" name="twitter:title"/>
+<meta content="Comparativas de periféricos gaming con análisis y recomendaciones." name="twitter:description"/>
+<meta content="https://www.recomendador.net/global/logo.png" name="twitter:image"/>
+</head>
 <body>
-<div id="header-placeholder"></div>
+<header class="hero-banner-rediseñado">
+<div class="hero-inner">
+<div class="hero-logo">
+<a href="/">
+<img alt="Logo Recomendador.net" loading="lazy" src="/global/logo.png"/>
+</a>
+</div>
+<div class="hero-texto" style="margin-left: auto; text-align: right;">
+<p><strong>🛡️ Recomendaciones reales desde 2009</strong></p>
+<p>⭐ Análisis imparciales por expertos tech</p>
+</div>
+</div>
+</header>
+<nav class="main-nav">
+<div class="nav-container" style="padding: 0.4em 1em;">
+<div class="hamburger">
+    ☰
+  </div>
+<a class="logo" href="/"></a>
+<ul class="nav-links">
+<li><a href="/mejores-auriculares-gaming">🎧 Auriculares</a></li>
+<li><a href="/mejores-teclados-gaming">⌨️ Teclados</a></li>
+<li><a href="/mejores-ratones-gaming">🖱 Ratones</a></li>
+<li><a href="/mejores-microfonos-gaming">🎙 Micrófonos</a></li>
+</ul>
+</div>
+</nav>
 <div class="container">
 <h1>Guías de Compra de Periféricos Gaming</h1>
 <div class="guia">
@@ -37,25 +73,10 @@
 <p>Analizamos los micrófonos más recomendados para streamers y gamers. Calidad de sonido, diseño y facilidad de uso probados por expertos.</p>
 <a href="/mejores-microfonos-gaming">Ver guía completa</a>
 </div>
-<div id="footer-placeholder"></div>
+<footer>
+    © 2025 Recomendador.net - Algunos enlaces pueden generar comisiones de afiliado sin coste para ti.
+  </footer>
 </div>
-
-  <script>
-    fetch('/global/header.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-        document.querySelector('.hamburger')?.addEventListener('click', () => {
-          document.querySelector('.nav-links')?.classList.toggle('activo');
-        });
-      });
-
-    fetch('/global/footer.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('footer-placeholder').innerHTML = html;
-      });
-  </script>
-  <script src="/global/scripts.js"></script>
+<script src="/global/scripts.js"></script>
 </body>
 </html>
