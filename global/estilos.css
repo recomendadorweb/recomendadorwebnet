@@ -693,3 +693,10 @@ img[alt*="Auriculares"] {
 .guia a:hover {
   text-decoration: underline;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6em;
+    line-height: 1.2;
+  }
+}
