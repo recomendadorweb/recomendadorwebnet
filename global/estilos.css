@@ -725,3 +725,12 @@ img[alt*="Auriculares"] {
   font-weight: 700;
   src: url('fonts/poppins-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+/* Normaliza los estilos de todos los enlaces en todos sus estados */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #0073e6;
+  text-decoration: none;
+}
