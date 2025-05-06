@@ -726,11 +726,10 @@ img[alt*="Auriculares"] {
   src: url('fonts/poppins-v23-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-/* Normaliza los estilos de todos los enlaces en todos sus estados */
-a:not(.boton):link,
-a:not(.boton):visited,
-a:not(.boton):hover,
-a:not(.boton):active {
+a:not(.boton):not(.nav-links a):not(.hero-banner a):not(.hero-banner-rediseñado a):link,
+a:not(.boton):not(.nav-links a):not(.hero-banner a):not(.hero-banner-rediseñado a):visited,
+a:not(.boton):not(.nav-links a):not(.hero-banner a):not(.hero-banner-rediseñado a):hover,
+a:not(.boton):not(.nav-links a):not(.hero-banner a):not(.hero-banner-rediseñado a):active {
   color: #0073e6;
   text-decoration: none;
 }
