@@ -727,10 +727,10 @@ img[alt*="Auriculares"] {
 }
 
 /* Normaliza los estilos de todos los enlaces en todos sus estados */
-a:link,
-a:visited,
-a:hover,
-a:active {
+a:not(.boton):link,
+a:not(.boton):visited,
+a:not(.boton):hover,
+a:not(.boton):active {
   color: #0073e6;
   text-decoration: none;
 }
