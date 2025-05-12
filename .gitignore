@@ -1,0 +1,17 @@
+# Ignorar la carpeta generada automáticamente por Jekyll
+_site/
+
+# Ignorar dependencias y archivos del entorno
+.bundle/
+vendor/
+
+# Ignorar archivos temporales de editores
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Ignorar logs y cachés
+.jekyll-cache/
+.jekyll-metadata

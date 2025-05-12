@@ -1,0 +1,27 @@
+# _config.yml
+
+title: Recomendador.net
+description: Guías de compra de periféricos gaming probadas por expertos.
+url: "https://recomendador.net" # tu dominio en producción
+baseurl: "" # déjalo vacío si el sitio está en la raíz del dominio
+
+# Directorios
+include: ["_pages"]
+exclude: ["node_modules", "vendor", "Gemfile", "Gemfile.lock"]
+
+# Permalink limpio
+permalink: pretty
+
+# Plugins (si los usas en el futuro)
+plugins:
+  - jekyll-seo-tag
+
+# Markdown por defecto
+markdown: kramdown
+
+# Soporte para includes con relative_url
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
