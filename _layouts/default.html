@@ -41,6 +41,15 @@
   {% include header.html %}
     {{ content }}
 
-<script src="{{ '/global/scripts.js' | relative_url }}"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("activo");
+    });
+  });
+</script>
 </body>
 </html>

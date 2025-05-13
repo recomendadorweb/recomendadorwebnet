@@ -12,10 +12,6 @@ exclude: ["node_modules", "vendor", "Gemfile", "Gemfile.lock"]
 # Permalink limpio
 permalink: pretty
 
-# Plugins (si los usas en el futuro)
-plugins:
-  - jekyll-seo-tag
-
 # Markdown por defecto
 markdown: kramdown
 
