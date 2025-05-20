@@ -1,79 +1,56 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google Analytics (defer hasta interacción) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  // Solo carga gtag.js tras el primer scroll, clic o movimiento del mouse
-  const startAnalytics = () => {
-    if (window.gtagScriptLoaded) return;
-    window.gtagScriptLoaded = true;
-
-    const script = document.createElement('script');
-    script.src = "https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN";
-    script.async = true;
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      gtag('js', new Date());
-      gtag('config', 'G-3ZN94Y4QHN');
+  <!-- Google Analytics diferido -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    const startAnalytics = () => {
+      if (window.gtagScriptLoaded) return;
+      window.gtagScriptLoaded = true;
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN";
+      script.async = true;
+      document.head.appendChild(script);
+      script.onload = () => {
+        gtag('js', new Date());
+        gtag('config', 'G-3ZN94Y4QHN');
+      };
     };
-  };
+    ['click', 'scroll', 'mousemove', 'touchstart'].forEach(event =>
+      window.addEventListener(event, startAnalytics, { once: true })
+    );
+  </script>
 
-  ['click', 'scroll', 'mousemove', 'touchstart'].forEach(event =>
-    window.addEventListener(event, startAnalytics, { once: true })
-  );
-</script>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="{{ page.description | default: site.description }}" name="description"/>
-<meta content="{{ page.keywords | default: site.keywords }}" name="keywords"/>
-<title>{{ page.title | default: site.title }}</title>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="{{ page.description | default: site.description }}" name="description"/>
+  <meta content="{{ page.keywords | default: site.keywords }}" name="keywords"/>
+  <title>{{ page.title | default: site.title }}</title>
   {% if page.canonical %}
-  <link href="{{ page.canonical }}" rel="canonical"/>
+    <link href="{{ page.canonical }}" rel="canonical"/>
   {% else %}
-  <link href="{{ site.url | append: page.url }}" rel="canonical"/>
+    <link href="{{ site.url | append: page.url }}" rel="canonical"/>
   {% endif %}
   <link href="{{ '/global/favicon.ico' | relative_url }}" rel="icon" type="image/x-icon"/>
-<meta content="Carlos López" name="author"/>
-<!-- Open Graph -->
-<meta content="{{ page.title | default: site.title }}" property="og:title"/>
-<meta content="{{ page.description | default: site.description }}" property="og:description"/>
-<meta content="https://recomendador.net/global/logo.webp" property="og:image"/>
-<meta content="{{ page.url | absolute_url }}" property="og:url"/>
-<meta content="website" property="og:type"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="{{ page.title | default: site.title }}" name="twitter:title"/>
-<meta content="{{ page.description | default: site.description }}" name="twitter:description"/>
-<meta content="https://recomendador.net/global/logo.webp" name="twitter:image"/>
-<link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-regular.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-500.woff2" rel="preload" type="font/woff2">
-<link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-600.woff2" rel="preload" type="font/woff2"/>
-<link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-700.woff2" rel="preload" type="font/woff2"/>
-
-</link></head>
+  <meta content="Carlos López" name="author"/>
+  <meta content="{{ page.title | default: site.title }}" property="og:title"/>
+  <meta content="{{ page.description | default: site.description }}" property="og:description"/>
+  <meta content="https://recomendador.net/global/logo.webp" property="og:image"/>
+  <meta content="{{ page.url | absolute_url }}" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="{{ page.title | default: site.title }}" name="twitter:title"/>
+  <meta content="{{ page.description | default: site.description }}" name="twitter:description"/>
+  <meta content="https://recomendador.net/global/logo.webp" name="twitter:image"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-regular.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-500.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-600.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-700.woff2" rel="preload" type="font/woff2"/>
+</head>
 <body>
-<style>@media (max-width: 768px) {
-  .nav-links.activo {
-    display: flex !important;
-  }
-}</style>
   {% include header.html %}
-    {{ content }}
-
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const navLinks = document.querySelector(".nav-links");
-
-    hamburger.addEventListener("click", function () {
-      navLinks.classList.toggle("activo");
-    });
-  });
-</script>
+  {{ content }}
 </body>
 </html>
