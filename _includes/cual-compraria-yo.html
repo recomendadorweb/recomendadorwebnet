@@ -1,0 +1,10 @@
+{% assign recomendacion = site.data[include.datafile] %}
+<section id="mi-eleccion" class="cual-compraria-yo">
+  <h2>¿Cuál compraría yo? {{ recomendacion.titulo }}</h2>
+  <p>{{ recomendacion.texto }}</p>
+  <ul>
+    {% for favorito in recomendacion.favoritos %}
+      <li><strong>{{ favorito.titulo }}</strong>: {{ favorito.descripcion }}</li>
+    {% endfor %}
+  </ul>
+</section>

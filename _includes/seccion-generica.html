@@ -1,0 +1,14 @@
+{% assign seccion = site.data[include.datafile][include.index] %}
+<div class="seccion-generica">
+  <h2>{{ seccion.titulo }}</h2>
+  {% if seccion.texto %}
+    <p>{{ seccion.texto }}</p>
+  {% endif %}
+  {% if seccion.bullets %}
+    <ul>
+      {% for item in seccion.bullets %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>

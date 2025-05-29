@@ -1,0 +1,15 @@
+{% assign productos = site.data[include.datafile].productos %}
+<section class="lista-productos">
+  <h2>Análisis detallado de cada modelo</h2>
+  {% for producto in productos %}
+    <article class="producto">
+      <h3>{{ producto.nombre }}</h3>
+      <p>{{ producto.descripcion }}</p>
+      <ul>
+        {% for bullet in producto.bullets %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    </article>
+  {% endfor %}
+</section>

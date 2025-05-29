@@ -1,0 +1,24 @@
+{% assign productos = site.data[include.datafile].productos %}
+<section class="tabla-comparativa">
+  <h2>Comparativa rápida</h2>
+  <table class="desktop">
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>DPI</th>
+        <th>Botones</th>
+        <th>Peso</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for producto in productos %}
+        <tr>
+          <td>{{ producto.nombre }}</td>
+          <td>{{ producto.dpi }}</td>
+          <td>{{ producto.botones }}</td>
+          <td>{{ producto.peso }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>

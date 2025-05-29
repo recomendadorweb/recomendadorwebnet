@@ -1,0 +1,10 @@
+{% assign preguntas = site.data[include.datafile].preguntas %}
+<section id="faq" class="faq">
+  <h2>Preguntas frecuentes</h2>
+  {% for item in preguntas %}
+    <div class="faq-item">
+      <h3>{{ item.pregunta }}</h3>
+      <p>{{ item.respuesta }}</p>
+    </div>
+  {% endfor %}
+</section>

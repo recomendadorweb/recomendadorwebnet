@@ -1,0 +1,11 @@
+<div class="producto">
+  <img src="{{ item.imagen }}" alt="{{ item.nombre }}" width="300" height="300" loading="lazy" />
+  <h3>{{ item.nombre }}</h3>
+  <p>{{ item.descripcion }}</p>
+  <ul>
+    {% for bullet in item.bullets %}
+      <li>{{ bullet }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{{ item.enlace }}" class="boton">Ver en Amazon</a>
+</div>
