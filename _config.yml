@@ -7,13 +7,15 @@ baseurl: "" # déjalo vacío si el sitio está en la raíz del dominio
 
 # Directorios
 include: ["_pages"]
-exclude: ["node_modules", "vendor", "Gemfile", "Gemfile.lock"]
+exclude: ["node_modules", "vendor", "Gemfile", "Gemfile.lock", "README.md"]
 
 # Permalink limpio
 permalink: pretty
 
 # Markdown por defecto
 markdown: kramdown
+
+plugins: []
 
 # Soporte para includes con relative_url
 defaults:
