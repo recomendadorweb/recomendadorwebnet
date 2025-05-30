@@ -35,10 +35,12 @@
     {% for producto in productos %}
     <div class="ficha-teclado" style="margin-bottom: 1em; padding: 1em; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
       <img alt="{{ producto.nombre }}" src="{{ producto.imagen }}" style="max-width: 100%; max-height: 120px;" />
-      <h3 style="font-size: 1.1em; margin-top: 0.6em;">{{ producto.nombre }}</h3>
+      <h3 style="text-align: center;font-size: 1.1em; margin-top: 0.6em;">{{ producto.nombre }}</h3>
       <p><strong>Lo mejor:</strong> {{ producto.lo_mejor }}</p>
       <p><strong>A tener en cuenta:</strong> {{ producto.a_tener_en_cuenta }}</p>
+      <div style="text-align: center;">
       <a href="{{ producto.enlace }}" target="_blank" style="display: inline-block; margin-top: 0.5em; color: #fff; background-color: #004aad; padding: 0.5em 1em; border-radius: 5px; text-decoration: none;">Ver en Amazon</a>
+      </div>
     </div>
     {% endfor %}
   </div>
