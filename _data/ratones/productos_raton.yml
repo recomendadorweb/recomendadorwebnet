@@ -1,5 +1,6 @@
 productos:
 - nombre: Logitech G502 HERO
+  brand: Logitech
   imagen: images/raton-gaming-Logitech-G502-HERO.webp
   valoracion: 5
   descripcion: He usado el Logitech G502 HERO durante varias sesiones intensas y destaca
@@ -16,7 +17,10 @@ productos:
   - 'Rueda con dos modos: libre y por pasos'
   - Diseño ergonómico, ideal para manos grandes
   enlace: https://amzn.to/4jUd5r2
+  lo_mejor: 🎯 Sensor HERO 25K con peso ajustable y 11 botones
+  a_tener_en_cuenta: 🔊 Algo ruidoso si no te gusta la rueda con clics
 - nombre: Razer Basilisk V3 X HyperSpeed
+  brand: Razer
   imagen: images/raton-gaming-Razer-Basilisk-V3-X-HyperSpeed.webp
   valoracion: 4.5
   descripcion: 'Probé este ratón inalámbrico y me sorprendió su rendimiento: sin lags
@@ -32,7 +36,10 @@ productos:
   - Buena respuesta de los clics y botones laterales
   - Ideal para juegos tipo MOBA y RPG
   enlace: https://amzn.to/4cRYLNz
+  lo_mejor: 🔋 Hasta 285h de batería, dual wireless
+  a_tener_en_cuenta: 🖱 Sin RGB ni sensor de gama alta
 - nombre: Razer Basilisk V3
+  brand: Razer
   imagen: images/raton-gaming-Razer-Basilisk-V3.webp
   valoracion: 4
   descripcion: En mis pruebas con el Basilisk V3, noté una gran mejora en velocidad
@@ -48,7 +55,10 @@ productos:
   - Compatible con Synapse para macros y perfiles
   - Alta velocidad de respuesta en juegos competitivos
   enlace: https://amzn.to/4cY6WrA
+  lo_mejor: 💡 Rueda inteligente, RGB y sensor Focus+
+  a_tener_en_cuenta: 📦 Algo pesado para quienes buscan ligereza
 - nombre: Logitech G403 HERO
+  brand: Logitech
   imagen: images/raton-gaming-Logitech-G403-HERO.webp
   valoracion: 4
   descripcion: Este ratón me pareció ideal para quienes buscan un diseño simple pero
@@ -64,7 +74,10 @@ productos:
   - Ideal para largas sesiones de juego
   - Buena opción calidad-precio sin estética llamativa
   enlace: https://amzn.to/3EDfyar
+  lo_mejor: ⚖️ Ligero, ergonómico y preciso
+  a_tener_en_cuenta: 🎮 Sólo 6 botones programables
 - nombre: ASUS ROG SPATHA X
+  brand: Asus
   imagen: images/raton-gaming-ASUS-ROG-SPATHA-X.webp
   valoracion: 4
   descripcion: Tras probarlo, el SPATHA X me impresionó por su robustez, conectividad
@@ -80,7 +93,10 @@ productos:
   - Diseño robusto y de gran tamaño
   - Perfecto para jugadores con manos grandes
   enlace: https://amzn.to/3ETZfWC
+  lo_mejor: 🔧 12 botones, base carga y diseño robusto
+  a_tener_en_cuenta: 📐 Muy grande, sólo apto para manos grandes
 - nombre: Logitech G402 Hyperion Fury
+  brand: Logitech
   imagen: images/raton-gaming-Logitech-G402-Hyperion-Fury.webp
   valoracion: 4
   descripcion: Este ratón me ha sorprendido por su increíble velocidad de respuesta,
@@ -96,7 +112,10 @@ productos:
   - Tasa de sondeo de 1000 Hz
   - Ideal para shooters como CS2 o Apex Legends
   enlace: https://amzn.to/3SaQwme
+  lo_mejor: 🚀 Sensor Fusion Engine y tasa 1000Hz
+  a_tener_en_cuenta: ❌ Sin RGB, diseño algo anticuado
 - nombre: SteelSeries Aerox 5 Wireless
+  brand: SteelSeries
   imagen: images/raton-gaming-SteelSeries-Aerox-5-Wireless.webp
   valoracion: 4.5
   descripcion: 'Al probar el Aerox 5 Wireless, lo que más me impresionó fue su ligereza:
@@ -112,7 +131,10 @@ productos:
   - Hasta 180 horas de batería
   - Resistencia al agua y al polvo (IP54)
   enlace: https://amzn.to/4dvGiqo
+  lo_mejor: 🪶 Ultraligero y perforado, IP54
+  a_tener_en_cuenta: ⛽ Autonomía menor que otros (180h)
 - nombre: Razer Viper V3 HyperSpeed
+  brand: Razer
   imagen: images/raton-gaming-Razer-Viper-V3-HyperSpeed.webp
   valoracion: 4.5
   descripcion: El Viper V3 HyperSpeed me ha encantado por su ligereza y precisión
@@ -128,7 +150,10 @@ productos:
   - Diseño ambidiestro y ligero (82g)
   - Compatible con Razer Synapse para personalización
   enlace: https://amzn.to/43fJXDN
+  lo_mejor: 🎮 Sensor 30K DPI y diseño ambidiestro
+  a_tener_en_cuenta: 🔋 Usa una pila AA, no batería recargable
 - nombre: Corsair NIGHTSWORD
+  brand: Corsair
   imagen: images/raton-gaming-Corsair-NIGHTSWORD.webp
   valoracion: 4
   descripcion: El Corsair NIGHTSWORD es una bestia pensada para quienes quieren ajustar
@@ -144,7 +169,10 @@ productos:
   - 10 botones totalmente programables
   - Iluminación RGB dinámica
   enlace: https://amzn.to/4kijY6h
+  lo_mejor: ⚖️ Pesos ajustables y 10 botones
+  a_tener_en_cuenta: 📏 Muy orientado a manos grandes
 - nombre: Razer DeathAdder V3
+  brand: Razer
   imagen: images/raton-gaming-Razer-DeathAdder-V3.webp
   valoracion: 5
   descripcion: El DeathAdder V3 me ha parecido una auténtica joya para shooters. Es
@@ -160,3 +188,5 @@ productos:
   - Switches ópticos Razer de 3.ª generación
   - Conectividad inalámbrica Razer HyperSpeed
   enlace: https://amzn.to/4jZTlTt
+  lo_mejor: 🧠 Precisión quirúrgica y peso ultraligero
+  a_tener_en_cuenta: 🕹️ No apto para zurdos
