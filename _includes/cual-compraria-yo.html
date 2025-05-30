@@ -1,10 +1,15 @@
-{% assign recomendacion = site.data[include.datafile] %}
-<section id="mi-eleccion" class="cual-compraria-yo">
-  <h2>¿Cuál compraría yo? {{ recomendacion.titulo }}</h2>
-  <p>{{ recomendacion.texto }}</p>
-  <ul>
-    {% for favorito in recomendacion.favoritos %}
-      <li><strong>{{ favorito.titulo }}</strong>: {{ favorito.descripcion }}</li>
-    {% endfor %}
-  </ul>
-</section>
+{% assign datos = site.data.ratones.cual_compraria_yo %}
+
+<h2 id="mi-eleccion">{{ datos.titulo }}</h2>
+<p>{{ datos.intro }}</p>
+
+{% for item in datos.elecciones %}
+  <h3>{{ item.categoria }}</h3>
+  <p>{{ item.descripcion }}</p>
+  <a class="boton"
+     href="{{ item.enlace }}"
+     style="min-height:44px"
+     target="_blank">
+     🖱 Ver {{ item.modelo }} en Amazon
+  </a>
+{% endfor %}

@@ -1,10 +1,22 @@
-{% assign preguntas = site.data[include.datafile].preguntas %}
-<section id="faq" class="faq">
-  <h2>Preguntas frecuentes</h2>
+{% assign preguntas = site.data.ratones.faq_raton.faq %}
+{% assign productos = site.data.ratones.productos_raton.productos %}
+
+<section class="faq">
   {% for item in preguntas %}
     <div class="faq-item">
-      <h3>{{ item.pregunta }}</h3>
-      <p>{{ item.respuesta }}</p>
+      <h3>{{ item.question }}</h3>
+      <p>{{ item.answer | markdownify }}</p>
+
+      {% for producto in productos %}
+        {% if item.answer contains producto.nombre %}
+          <a class="boton"
+             href="{{ producto.enlace }}"
+             style="font-size: 0.85em; padding: 8px 12px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;"
+             target="_blank">
+             🖱 {{ producto.nombre }} en Amazon
+          </a>
+        {% endif %}
+      {% endfor %}
     </div>
   {% endfor %}
 </section>

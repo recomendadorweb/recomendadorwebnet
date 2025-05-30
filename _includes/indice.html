@@ -1,9 +1,19 @@
-<h2>Índice de Contenidos</h2>
-<ul>
-  <li><a href="#comparativa-rapida">Comparativa rápida de ratones gaming recomendados</a></li>
-  <li><a href="#introduccion">¿Qué es un ratón gaming?</a></li>
-  <li><a href="#por-que-comprar">¿Por qué deberías comprar un ratón gaming?</a></li>
-  <li><a href="#ratones-valorados">Comparativa real de los mejores ratones gaming de 2025</a></li>
-  <li><a href="#mi-eleccion">¿Cuál compraría yo?</a></li>
-  <li><a href="#faq">Preguntas frecuentes</a></li>
-</ul>
+{% assign secciones = site.data.ratones[include.datafile].secciones %}
+<nav class="indice">
+  <h2>Índice de contenidos</h2>
+  <ul>
+    {% for seccion in secciones %}
+      <li>
+        <a href="#{{ seccion.id }}">{{ seccion.titulo }}</a>
+        {% if seccion.id == "productos" %}
+          {% assign productos = site.data.ratones[seccion.productos_datafile].productos %}
+          <ul>
+            {% for producto in productos %}
+              <li><a href="#{{ producto.nombre }}">{{ producto.nombre }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
