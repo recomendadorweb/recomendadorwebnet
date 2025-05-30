@@ -1,0 +1,15 @@
+{% assign datos = site.data.ratones.cual_compraria_yo %}
+
+<h2 id="mi-eleccion">{{ datos.titulo }}</h2>
+<p>{{ datos.intro }}</p>
+
+{% for item in datos.elecciones %}
+  <h3>{{ item.categoria }}</h3>
+  <p>{{ item.descripcion }}</p>
+  <a class="boton"
+     href="{{ item.enlace }}"
+     style="min-height:44px"
+     target="_blank">
+     🖱 Ver {{ item.modelo }} en Amazon
+  </a>
+{% endfor %}

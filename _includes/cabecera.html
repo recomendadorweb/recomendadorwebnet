@@ -1,0 +1,10 @@
+{% assign datos = site.data.ratones.cabecera %}
+
+<h1 id="titulo-principal">{{ datos.titulo }}</h1>
+<img 
+  alt="{{ datos.imagen.alt }}"
+  sizes="(max-width: 768px) 600px, 600px"
+  src="{{ datos.imagen.src }}"
+  srcset="{{ datos.imagen.srcset }}"
+  style="{{ datos.imagen.style }}"
+  width="{{ datos.imagen.width }}" />

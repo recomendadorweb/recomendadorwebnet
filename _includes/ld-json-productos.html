@@ -1,0 +1,65 @@
+{% assign productos = site.data.ratones.productos_raton.productos %}
+
+{% assign fecha_texto = page.fecha_actualizacion | downcase %}
+
+{% if fecha_texto contains "enero" %}
+  {% assign fecha_iso = "2025-01-01" %}
+{% elsif fecha_texto contains "febrero" %}
+  {% assign fecha_iso = "2025-02-01" %}
+{% elsif fecha_texto contains "marzo" %}
+  {% assign fecha_iso = "2025-03-01" %}
+{% elsif fecha_texto contains "abril" %}
+  {% assign fecha_iso = "2025-04-01" %}
+{% elsif fecha_texto contains "mayo" %}
+  {% assign fecha_iso = "2025-05-01" %}
+{% elsif fecha_texto contains "junio" %}
+  {% assign fecha_iso = "2025-06-01" %}
+{% elsif fecha_texto contains "julio" %}
+  {% assign fecha_iso = "2025-07-01" %}
+{% elsif fecha_texto contains "agosto" %}
+  {% assign fecha_iso = "2025-08-01" %}
+{% elsif fecha_texto contains "septiembre" %}
+  {% assign fecha_iso = "2025-09-01" %}
+{% elsif fecha_texto contains "octubre" %}
+  {% assign fecha_iso = "2025-10-01" %}
+{% elsif fecha_texto contains "noviembre" %}
+  {% assign fecha_iso = "2025-11-01" %}
+{% elsif fecha_texto contains "diciembre" %}
+  {% assign fecha_iso = "2025-12-01" %}
+{% else %}
+  {% assign fecha_iso = "2025-01-01" %}
+{% endif %}
+
+<script type="application/ld+json">
+  [
+  {% for producto in productos %}
+
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "{{ producto.nombre | escape }}",
+  "image": "{{ producto.imagen | absolute_url }}",
+  "url": "{{ producto.enlace }}",
+  "brand": {
+    "@type": "Brand",
+    "name": "{{ producto.brand | escape }}"
+  },
+  "review": {
+    "@type": "Review",
+    "author": {
+      "@type": "Person",
+      "name": "Carlos López"
+    },
+    "datePublished": "{{ fecha_iso }}",
+    "reviewBody": {{ producto.descripcion | jsonify }},
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "{{ producto.valoracion }}",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
+</script>

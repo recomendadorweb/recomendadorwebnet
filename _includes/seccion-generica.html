@@ -1,0 +1,19 @@
+{% assign seccion = site.data.ratones[include.datafile][include.index] %}
+<style>li > p {
+  margin: 0;
+  display: inline;
+}
+</style>
+<div class="seccion-generica">
+  <h2 id="{{ seccion.id }}">{{ seccion.titulo }}</h2>
+  {% if seccion.texto %}
+    <p>{{ seccion.texto | markdownify }}</p>
+  {% endif %}
+  {% if seccion.bullets %}
+    <ul>
+      {% for item in seccion.bullets %}
+        <li>{{ item | markdownify }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
