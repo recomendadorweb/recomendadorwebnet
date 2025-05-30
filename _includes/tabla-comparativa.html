@@ -15,7 +15,7 @@
         {% for producto in productos %}
           <tr style="background-color: {% if forloop.index0 % 2 == 0 %}#f9f9f9{% else %}#ffffff{% endif %}; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
           <td style="border: 1px solid #ddd;">
-            <img alt="{{ producto.nombre }}" src="{{ producto.imagen }}" style="max-height: 60px;" />
+            <img alt="{{ producto.nombre }}" src="{{ producto.imagen }}" style="height: auto; max-height: 60px; width: auto; max-width: 100%;" />
           </td>
           <td style="padding: 0.6em; text-align: center;"><strong>{{ producto.nombre }}</strong></td>
           <td style="padding: 0.6em;">{{ producto.lo_mejor }}</td>
@@ -34,7 +34,7 @@
   <div class="tabla-comparativa-movil">
     {% for producto in productos %}
     <div class="ficha-teclado" style="margin-bottom: 1em; padding: 1em; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <img alt="{{ producto.nombre }}" src="{{ producto.imagen }}" style="max-width: 100%; max-height: 120px;" />
+      <img alt="{{ producto.nombre }}" src="{{ producto.imagen }}" style="max-width: 100%; height: auto; max-height: 120px; width: auto;" />
       <h3 style="text-align: center;font-size: 1.1em; margin-top: 0.6em;">{{ producto.nombre }}</h3>
       <p><strong>Lo mejor:</strong> {{ producto.lo_mejor }}</p>
       <p><strong>A tener en cuenta:</strong> {{ producto.a_tener_en_cuenta }}</p>
