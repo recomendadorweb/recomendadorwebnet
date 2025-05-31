@@ -249,14 +249,18 @@
       toggle.onclick = () => {
         menu.classList.add("show");
         overlay.classList.add("show");
+        document.body.classList.add("menu-abierto");
       };
       close.onclick = () => {
         menu.classList.remove("show");
         overlay.classList.remove("show");
+        document.body.classList.remove("menu-abierto");
+
       };
       overlay.onclick = () => {
         menu.classList.remove("show");
         overlay.classList.remove("show");
+        document.body.classList.remove("menu-abierto");
       };
     }
   });
@@ -1447,7 +1451,11 @@
 © 2025 Recomendador.net - Algunos enlaces pueden generar comisiones de afiliado sin coste para ti.
 </footer>
 </div>
-<a class="boton-flotante" href="#mi-eleccion">🎯 Ver ratón gaming recomendado</a>
+<style>
+.menu-abierto .boton-flotante {
+  display: none !important;
+}
+</style><a class="boton-flotante" href="#mi-eleccion">🎯 Ver ratón gaming recomendado</a>
 
 
 

@@ -251,14 +251,18 @@
       toggle.onclick = () => {
         menu.classList.add("show");
         overlay.classList.add("show");
+        document.body.classList.add("menu-abierto");
       };
       close.onclick = () => {
         menu.classList.remove("show");
         overlay.classList.remove("show");
+        document.body.classList.remove("menu-abierto");
+
       };
       overlay.onclick = () => {
         menu.classList.remove("show");
         overlay.classList.remove("show");
+        document.body.classList.remove("menu-abierto");
       };
     }
   });
