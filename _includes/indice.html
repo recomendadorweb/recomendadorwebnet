@@ -6,7 +6,7 @@
       <li>
         <a href="#{{ seccion.id }}">{{ seccion.titulo }}</a>
         {% if seccion.id == "productos" %}
-          {% assign productos = site.data.ratones[seccion.productos_datafile].productos %}
+          {% assign productos = site.data[tipo][seccion.productos_datafile].productos %}
           <ul>
             {% for producto in productos %}
               <li><a href="#{{ producto.nombre }}">{{ producto.nombre }}</a></li>

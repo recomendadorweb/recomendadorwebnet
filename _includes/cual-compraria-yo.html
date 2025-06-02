@@ -1,15 +1,21 @@
 {% assign datos = site.data[tipo].cual_compraria_yo %}
+{% assign productos = site.data[tipo].productos.productos %}
 
 <h2 id="mi-eleccion">{{ datos.titulo }}</h2>
 <p>{{ datos.intro }}</p>
 
 {% for item in datos.elecciones %}
-  <h3>{{ item.categoria }}</h3>
-  <p>{{ item.descripcion }}</p>
-  <a class="boton"
-     href="{{ item.enlace }}"
-     style="min-height:44px"
-     target="_blank">
-     🖱 Ver {{ item.modelo }} en Amazon
-  </a>
+
+        <h3>{{ item.categoria }}</h3>
+        <p>{{ item.descripcion }}</p>
+        {% for producto in productos %}
+        {% if item.modelo contains producto.nombre %}
+        <a class="boton"
+          href="{{ producto.enlace }}"
+          style="min-height:44px"
+          target="_blank">
+          🖱 Ver {{ item.modelo }} en Amazon
+        </a>
+          {% endif %}
+      {% endfor %}
 {% endfor %}

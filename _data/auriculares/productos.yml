@@ -4,7 +4,7 @@ productos:
   a_tener_en_cuenta: 🎧 Ideal para eSports, 💬 Micrófono nítido
   enlace: https://amzn.to/4jC56iA
   imagen: images/4.webp
-  valoracion: 5.0
+  valoracion: 5
   descripcion: Este modelo ha sido mi favorito durante las pruebas más intensas. El
     Razer BlackShark V2 HyperSpeed ofrece un sonido tan limpio y posicional que me
     dio ventaja real en partidas de Valorant. No noté latencia en ningún momento,
@@ -42,7 +42,7 @@ productos:
   a_tener_en_cuenta: 🔋 Hasta 50h de batería, 👂 Peso ultraligero
   enlace: https://amzn.to/3RI95Oq
   imagen: images/2.webp
-  valoracion: 4.0
+  valoracion: 4
   descripcion: Llevo usando los Razer Barracuda X desde hace semanas y son mi elección
     favorita para jugar en portátil o consola. Pesan poquísimo, casi ni los notas
     puestos, y la conexión es instantánea. Me encanta cómo pasan de la Steam Deck
@@ -61,12 +61,21 @@ productos:
   a_tener_en_cuenta: 🔋 Buena autonomía, 💬 Micrófono abatible
   enlace: https://amzn.to/45eMUHh
   imagen: images/auriculares-gaming-Corsair-HS80-RGB-WIRELESS.webp
+  descripcion: 'El Corsair HS80 me encantó desde que lo saqué de la caja. Tiene un diseño premium, con diadema flotante muy cómoda y sonido Dolby Atmos que me sumergió completamente en juegos como Cyberpunk 2077. La conexión inalámbrica no tiene cortes y el RGB es espectacular si te gusta cuidar la estética del setup. El micrófono también me pareció muy sólido. Lo usaría como opción principal sin dudarlo.'
+  caracteristicas:
+  - Sonido Hi-Res certificado con Dolby Atmos
+  - Conectividad inalámbrica de baja latencia
+  - Micrófono abatible de gran calidad
+  - Diadema flotante y almohadillas suaves
+  - RGB personalizable con software iCUE
+  brand: Corsair
+  valoracion: 4.5
 - nombre: Logitech G PRO X
   lo_mejor: 🎙️ Micrófono Blue VO!CE, 🎮 Sonido envolvente pro
   a_tener_en_cuenta: ⚙️ Configuración avanzada, 💪 Construcción premium
   enlace: https://amzn.to/4dxgr19
   imagen: images/auriculares-gaming-Logitech-G-PRO-X.webp
-  valoracion: 5.0
+  valoracion: 5
   descripcion: 'Este modelo es uno de los más profesionales que he usado. Desde el
     primer momento se nota que el Logitech G PRO X está diseñado para eSports: el
     sonido es súper detallado y el micrófono Blue VO!CE marca una diferencia brutal
@@ -105,7 +114,7 @@ productos:
   a_tener_en_cuenta: 🎤 Micrófono plegable, 🧩 Buen rendimiento por el precio
   enlace: https://amzn.to/3YmqH6d
   imagen: images/3.webp
-  valoracion: 4.0
+  valoracion: 4
   descripcion: El Logitech G432 fue uno de los primeros modelos que probé, y para
     su precio me sorprendió muchísimo. El sonido 7.1 realmente mejora la experiencia
     en shooters como Warzone o Apex, permitiéndome detectar pasos y disparos con precisión.
@@ -124,7 +133,7 @@ productos:
   a_tener_en_cuenta: 🎤 Mic. abatible, 🖥️ Compatible con PC y consolas
   enlace: https://amzn.to/3ELH71h
   imagen: images/5.webp
-  valoracion: 4.0
+  valoracion: 4
   descripcion: He jugado varias noches con los Corsair VOID RGB ELITE y me gustó mucho
     su potencia de sonido. La experiencia es inmersiva, con bajos profundos y buena
     separación de canales. Aunque el diseño es algo voluminoso, resulta cómodo y su
@@ -162,7 +171,7 @@ productos:
   a_tener_en_cuenta: 🎤 Micrófono abatible, 🪶 Cómodo muchas horas
   enlace: https://amzn.to/433vfRG
   imagen: images/auriculares-gaming-Corsair-HS55-SURROUND.webp
-  valoracion: 4.0
+  valoracion: 4
   descripcion: Este auricular fue una grata sorpresa. El Corsair HS55 Surround combina
     ligereza con una buena calidad de sonido 7.1. Lo probé en sesiones largas y no
     me molestó en absoluto. El micrófono capta bien la voz, aunque sin florituras.

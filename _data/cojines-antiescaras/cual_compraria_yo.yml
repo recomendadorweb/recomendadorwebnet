@@ -1,15 +1,18 @@
 titulo: ¿Cuál compraría yo?
-intro: 'Después de probar todos estos teclados durante semanas, hay varias opciones que destacaría dependiendo de lo que estés buscando. Te cuento mis recomendaciones personales:'
+intro: 'No hay un único cojín antiescaras perfecto para todo el mundo. Dependerá de tu peso, del tipo de silla que uses, del tiempo que pases sentado y de si ya tienes molestias o no. Pero si tuviera que elegir, según los distintos casos, aquí van mis recomendaciones personales:'
 elecciones:
-- categoria: 🔝 Para jugadores competitivos o exigentes
-  modelo: Razer Huntsman V2 Analog
-  descripcion: 'Sin duda me quedo con el Razer Huntsman V2 Analog. La posibilidad de programar doble función por tecla me parece una ventaja diferencial, especialmente en juegos como Valorant o CS:GO. La el acabado en aluminio lo convierten en una herramienta profesional, más que un simple teclado.'
-  enlace: https://amzn.to/43eeeTx
-- categoria: ⚖️ Para quienes buscan equilibrio entre calidad y precio
-  modelo: Razer BlackWidow V4 X
-  descripcion: 'El Razer BlackWidow V4 X me parece el más completo en esta gama: switches mecánicos de calidad, iluminación RGB por tecla, rueda de control y una sensación de robustez excelente. Ideal tanto para jugar como para trabajar cómodamente.'
-  enlace: https://amzn.to/3ZgarUw
-- categoria: 💸 Para presupuestos ajustados (pero exigentes)
-  modelo: Mars Gaming MKPRO
-  descripcion: 'Si no quieres gastar mucho pero buscas algo que luzca y rinda bien, el Mars Gaming MKPRO es mi apuesta. Tiene switches mecánicos, RGB completo y una estructura que no parece para nada barata. Perfecto si estás montando tu primer setup gaming sin arruinarte.'
-  enlace: https://amzn.to/4j6eppL
+- categoria: 🟠 Para uso prolongado en silla de ruedas
+  modelo: KMINA Cojín Antiescaras
+  descripcion: 'Me quedo con el KMINA. Es firme, estable y aguanta muy bien largas jornadas. No es mullido, pero ofrece un soporte excelente si vas a pasar muchas horas sentado.'
+- categoria: 🟢 Si tienes molestias en el coxis o buscas alivio en esa zona
+  modelo: OrtoPrime para Coxis
+  descripcion: ' Si tienes molestias en el coxis o buscas alivio en esa zona: Recomiendo el OrtoPrime para Coxis o el Mobiclinic con hueco. Ambos están diseñados para reducir presión justo donde más se necesita.'
+- categoria: 🔵 Si buscas un cojín viscoelástico cómodo para casa o la oficina
+  modelo: TECNOCOLCHÓN Visco Air
+  descripcion: 'El TECNOCOLCHÓN Visco Air es el más agradable que he probado. Muy mullido y transpirable.'
+- categoria: 🧳 Si necesitas algo portátil, económico y práctico
+  modelo: SILKORA® Premium
+  descripcion: 'El SILKORA® Premium es muy fácil de llevar y cumple bien su función si no necesitas algo muy grueso.'
+- categoria: ⚖️ Si buscas el mejor equilibrio entre comodidad y soporte
+  modelo: VALENTIA MEDICAL Visco + HR
+  descripcion: 'Me quedo con el VALENTIA MEDICAL Visco + HR. Se adapta bien, no es ni muy blando ni muy duro, y aguanta bien el uso continuo.'
