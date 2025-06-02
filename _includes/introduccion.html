@@ -1,4 +1,4 @@
-{% assign datos = site.data.ratones.introduccion %}
+{% assign datos = site.data[tipo].introduccion %}
 
 
-<p>{{ datos.descripcion | markdownify }}</p>
+{{ datos.descripcion | markdownify }}

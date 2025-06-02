@@ -1,5 +1,5 @@
-{% assign preguntas = site.data.ratones.faq_raton.faq %}
-{% assign productos = site.data.ratones.productos_raton.productos %}
+{% assign preguntas = site.data[tipo].faq.faq %}
+{% assign productos = site.data[tipo].productos.productos %}
 
 <section class="faq">
   {% for item in preguntas %}

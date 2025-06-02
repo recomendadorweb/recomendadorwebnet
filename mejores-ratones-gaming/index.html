@@ -6,6 +6,8 @@ keywords: ratones gaming, mejores ratones gaming 2025, análisis de ratones, rec
 canonical: https://recomendador.net/mejores-ratones-gaming/
 ---
 
+{% assign tipo = "ratones" %}
+
 {% include menu.html %}
 {% include estiloazul.html %}
 
@@ -14,39 +16,39 @@ canonical: https://recomendador.net/mejores-ratones-gaming/
 {% assign autor = site.data.autores.carlos %}
 {% include autor.html %}
 {% include actualizacion.html %}
-{% include introduccion.html datafile="indice_raton" %}
+{% include introduccion.html datafile="indice" %}
 
-{% include indice.html datafile="indice_raton" %}
+{% include indice.html datafile="indice" %}
 <div class="separador"></div>
 
 <h2 id="comparativa">Comparativa rápida de ratones gaming recomendados</h2>
-{% include tabla-comparativa.html datafile="productos_raton" %}
+{% include tabla-comparativa.html datafile="productos" %}
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 <div class="separador"></div>
 
 <!-- Sección: ¿Qué es un ratón gaming? -->
-{% include seccion-generica.html datafile="secciones_raton" index=0 %}
+{% include seccion-generica.html datafile="secciones" index=0 %}
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 <div class="separador"></div>
 
-{% include seccion-generica.html datafile="secciones_raton" index=1 %}
+{% include seccion-generica.html datafile="secciones" index=1 %}
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 <div class="separador"></div>
 
 <!-- Lista de productos con análisis -->
 <h2 id="productos">Comparativa real de los mejores ratones gaming de 2025 (probados en partidas reales)</h2>
-{% include lista-productos.html datafile="productos_raton" %}
+{% include lista-productos.html datafile="productos" %}
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 <div class="separador"></div>
 
 <!-- ¿Cuál compraría yo? -->
-{% include cual-compraria-yo.html datafile="recomendacion_raton" %}
+{% include cual-compraria-yo.html datafile="recomendacion" %}
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 <div class="separador"></div>
 
 <!-- Preguntas frecuentes -->
 <h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
-{% include faq.html datafile="faq_raton" %}
+{% include faq.html datafile="faq" %}
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 
 <div class="separador"></div>
@@ -55,6 +57,6 @@ canonical: https://recomendador.net/mejores-ratones-gaming/
 </div>
 {% include boton-recomendado.html %}
 
-{% include ld-json-faq.html datafile="faq_raton" %}
-{% include ld-json-productos.html datafile="productos_raton" %}
+{% include ld-json-faq.html datafile="faq" %}
+{% include ld-json-productos.html datafile="productos" %}
 
