@@ -8,14 +8,14 @@
 
         <h3>{{ item.categoria }}</h3>
         <p>{{ item.descripcion }}</p>
-        {% for producto in productos %}
+      {% for producto in productos %}
         {% if item.modelo contains producto.nombre %}
-        <a class="boton"
-          href="{{ producto.enlace }}"
+          <a class="boton"
+             href="{{ producto.enlace }}"
           style="min-height:44px"
-          target="_blank">
-          🖱 Ver {{ item.modelo }} en Amazon
-        </a>
-          {% endif %}
+             target="_blank">
+             🖱 {{ producto.nombre }} en Amazon
+          </a>
+        {% endif %}
       {% endfor %}
 {% endfor %}
