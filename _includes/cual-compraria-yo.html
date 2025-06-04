@@ -2,12 +2,12 @@
 {% assign productos = site.data[tipo].productos.productos %}
 
 <h2 id="mi-eleccion">{{ datos.titulo }}</h2>
-<p>{{ datos.intro }}</p>
+<p>{{ datos.intro | markdownify }}</p>
 
 {% for item in datos.elecciones %}
 
         <h3>{{ item.categoria }}</h3>
-        <p>{{ item.descripcion }}</p>
+        <p>{{ item.descripcion | markdownify }}</p>
       {% for producto in productos %}
         {% if item.modelo contains producto.nombre %}
           <a class="boton"

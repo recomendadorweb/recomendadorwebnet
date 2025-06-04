@@ -2,7 +2,7 @@ productos:
 - nombre: SteelSeries Alias Pro Kit
   brand: SteelSeries
   imagen: images/microfono-steelseries-alias-pro-kit.webp
-  valoracion: 5.0
+  valoracion: 5
   descripcion: 'Este es el micrófono que más he usado en grabaciones profesionales.
     Viene con una interfaz XLR integrada, así que no necesitas comprar nada más para
     empezar. Suena como los micros de estudio: la voz sale cálida, redonda y con gran
@@ -38,12 +38,15 @@ productos:
   - Varias configuraciones de captación
   - Compatible con Mac, Windows y más
   enlace: https://amzn.to/43iwkUu
-  lo_mejor: '🔌 USB plug & play 🎛 Controles físicos 🔁 Múltiples patrones 🎙 Sonido versátil'
+  lo_mejor: '	🔌 USB plug & play
+    🎛 Controles físicos
+    🔁 Múltiples patrones
+    🎙 Sonido versátil'
   a_tener_en_cuenta: '📏 Tamaño algo voluminoso'
 - nombre: Elgato Wave:3
   brand: Elgato
   imagen: images/elgato-wave-3.webp
-  valoracion: 5.0
+  valoracion: 5
   descripcion: He probado muchos micros USB, pero pocos suenan tan bien como este.
     El Elgato Wave:3 tiene un sonido sorprendentemente limpio y detallado, perfecto
     para podcasting y grabaciones vocales. Además, su sistema anti-clipping evita
@@ -64,7 +67,7 @@ productos:
 - nombre: Elgato Wave DX
   brand: Elgato
   imagen: images/elgato-wave-dx.webp
-  valoracion: 5.0
+  valoracion: 5
   descripcion: Este es mi opción de confianza cuando grabo en sitios con ruido de
     fondo. Es un micrófono dinámico con conexión XLR, lo que significa que capta solo
     lo que tienes justo delante. He grabado con él incluso con ventiladores encendidos
@@ -105,7 +108,7 @@ productos:
 - nombre: SteelSeries Alias
   brand: SteelSeries
   imagen: images/microfono-steelseries-alias.webp
-  valoracion: 4.0
+  valoracion: 4
   descripcion: Este micro es perfecto si no quieres complicarte con configuraciones
     avanzadas. Funciona por USB-C y suena muy bien directamente al conectarlo. Lo
     he usado para grabar entrevistas, sesiones de formación online y también directos,
@@ -165,7 +168,7 @@ productos:
 - nombre: HyperX SoloCast
   brand: HyperX
   imagen: images/hyperx-solocast.webp
-  valoracion: 4.0
+  valoracion: 4
   descripcion: Este micro ha sido mi recomendación habitual para quienes se inician
     en la creación de contenido. Es compacto, fácil de usar y suena mucho mejor que
     cualquier micro integrado o auricular. Lo conectas por USB y listo. He grabado
@@ -185,7 +188,7 @@ productos:
 - nombre: Trust Gaming GXT 252 Emita Plus
   brand: Trust
   imagen: images/microfono-trust-gxt-252-emita-plus.webp
-  valoracion: 4.0
+  valoracion: 4
   descripcion: Este kit me ha parecido una opción ideal para empezar bien desde el
     principio. Incluye el micrófono, brazo articulado, filtro pop y amortiguador,
     todo lo necesario para un entorno de grabación básico. Lo he probado en podcasts
@@ -200,5 +203,8 @@ productos:
   - Ideal para empezar sin gastar mucho
   - Buena opción para formación online o vídeos personales
   enlace: https://amzn.to/3RJE7W5
-  lo_mejor: '📦 Pack completo 🎙 Captación decente 🔧 Fácil de montar 💰 Buen precio'
+  lo_mejor: "📦 Pack completo
+    🎙 Captación decente
+    🔧 Fácil de montar
+    💰 Buen precio"
   a_tener_en_cuenta: '🔈 Rendimiento correcto para empezar'

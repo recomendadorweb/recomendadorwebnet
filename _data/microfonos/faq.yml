@@ -1,24 +1,30 @@
----
 faq:
-- question: ¿Cuál es el mejor teclado gaming actualmente?
-  answer: 'El Razer Huntsman V2 Analog es uno de los mejores teclados gaming del momento gracias a sus switches ajustables, estructura premium y integrada.'
-- question: ¿Qué teclado mecánico gaming me recomiendas?
-  answer: 'Si buscas un teclado mecánico gaming completo, el Razer BlackWidow V4 X y el Mars Gaming MKPRO ofrecen excelente respuesta, buena construcción y RGB.'
-- question: ¿Qué teclados gaming tienen mejor relación calidad-precio?
-  answer: 'El Razer Ornata V3 X y el Razer Apex 3 son opciones asequibles con buen diseño, retroiluminación y gran comodidad para jugar o trabajar.'
-- question: ¿Cuál es el mejor teclado gaming para shooters (FPS)?
-  answer: 'Los teclados TKL como el Razer BlackWidow V3 Tenkeyless y el Razer Huntsman V2 Analog son ideales para FPS: compactos, rápidos y precisos.'
-- question: ¿Qué teclado gaming inalámbrico me recomiendas?
-  answer: 'En esta comparativa solo hemos analizado teclados con cable por su baja latencia. En futuras actualizaciones incluiremos opciones inalámbricas si cumplen los estándares gaming.'
-- question: ¿Cuál es un teclado silencioso para jugar en casa?
-  answer: 'El Razer Apex 3 y el Razer Ornata V3 X usan tecnologías de membrana silenciosas, ideales para entornos compartidos o sesiones largas.'
-- question: ¿Qué diferencia hay entre teclado mecánico y de membrana?
-  answer: 'El mecánico ofrece mayor precisión y durabilidad, como el MKPRO o el BlackWidow V4 X. Los de membrana, como el G213, son más suaves y silenciosos.'
-- question: ¿Cuál es el mejor teclado gaming por menos de 50€?
-  answer: 'El Mars Gaming MKPRO ofrece experiencia mecánica a precio reducido. El Logitech G213 también es una opción sólida por ese presupuesto.'
-- question: ¿Importa que el teclado tenga reposamuñecas?
-  answer: 'Sí, mejora la ergonomía si pasas muchas horas escribiendo o jugando. El Razer Huntsman V2 Analog y el Corsair K55 RGB PRO lo incluyen de serie.'
-- question: ¿Qué teclado sirve tanto para trabajar como para jugar?
-  answer: 'Si buscas versatilidad, el Razer Ornata V3 X y el Razer Apex 3 son silenciosos, cómodos y con buen rendimiento para ambas tareas.'
-- question: ¿Qué teclado mecánico es resistente y con buen diseño?
-  answer: 'El Logitech G512 destaca por su estructura de aluminio, switches GX personalizables y estética sobria. Muy equilibrado en calidad, diseño y precio.'
+  - question: "🎤 ¿Cuál es el mejor micrófono para podcast en casa?"
+    answer: "Uno de los más completos es el SteelSeries Alias Pro Kit, ya que ofrece calidad de estudio con conexión XLR y una interfaz incluida. Es ideal si te tomas el podcasting en serio y quieres sonar como un profesional desde casa."
+
+  - question: "📻 ¿Qué micrófono USB recomiendas para empezar un podcast?"
+    answer: "El Blue Yeti de Logitech sigue siendo una de las mejores opciones USB para podcast. Es fácil de usar, suena bien desde el primer minuto y tiene patrones de captación para grabar solo o acompañado."
+
+  - question: "🎧 ¿Qué diferencia hay entre un micrófono de podcast y uno de streaming?"
+    answer: "En realidad, pueden usarse ambos para lo mismo. Lo importante es la claridad vocal. Para podcast se prioriza la fidelidad y el tono cálido, mientras que en streaming se valora también la capacidad de captar bien la voz en directo, incluso con ruido de fondo."
+
+  - question: "🔴 ¿Cuál es el mejor micrófono para streaming en 2025?"
+    answer: "El Elgato Wave:3 es uno de los más recomendables para streaming gracias a su sonido claro, software de mezcla incluido y sistema anti-clipping que evita saturaciones. Es ideal para directos y contenido en vivo."
+
+  - question: "🎙 ¿Qué micrófono usar para podcast si tengo presupuesto limitado?"
+    answer: "El HyperX SoloCast es una gran opción económica. Es plug & play, suena mejor que cualquier micro integrado y ocupa poco espacio. Ideal para quien empieza sin complicaciones."
+
+  - question: "🛠 ¿Necesito una interfaz de audio para grabar podcast?"
+    answer: "Depende del micrófono. Los que usan conexión USB (como el Blue Yeti o Elgato Wave:3) no la necesitan. Pero si eliges uno XLR como el Alias Pro Kit o el Wave DX, necesitarás una interfaz para conectarlo al ordenador."
+
+  - question: "🎚 ¿Qué micrófono tiene mejor relación calidad-precio para streaming?"
+    answer: "El HyperX QuadCast ofrece muy buen sonido, varios patrones de captación y detalles como base antivibración y mute táctil. Una opción sólida si buscas calidad sin subir demasiado de precio."
+
+  - question: "🏠 ¿Qué micrófono elige la gente para grabar voz en casa?"
+    answer: "Muchos creadores eligen el SteelSeries Alias porque tiene un sonido limpio, buena presencia vocal y se conecta fácilmente por USB-C. Funciona genial para podcasting, vídeos de YouTube o formación online."
+
+  - question: "🎮 ¿Sirve un micrófono de podcast para gaming?"
+    answer: "Absolutamente. De hecho, muchos streamers usan micros de podcast porque mejoran mucho la calidad del directo. Cualquier modelo con captación cardioide y buen aislamiento de ruido es perfecto para gaming también."
+
+  - question: "🎓 ¿Qué micrófono me recomiendas si doy clases online?"
+    answer: "El Logitech G Yeti GX es ideal si tienes algo de ruido en casa. Su cancelación activa de ruido y calidad vocal lo hacen perfecto para reuniones, webinars o clases por Zoom."
