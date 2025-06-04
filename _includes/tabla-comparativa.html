@@ -6,8 +6,8 @@
         <tr>
           <th style="padding: 0.8em;">Imagen</th>
           <th style="padding: 0.8em;">Modelo</th>
-          <th style="padding: 0.8em;">Lo mejor</th>
-          <th style="padding: 0.8em;">A tener en cuenta</th>
+          <th style="padding: 0.8em;">{{ site.data.[tipo][include.datafile].titulo_lo_mejor | default: "Lo mejor" }}</th>
+          <th style="padding: 0.8em;">{{ site.data.[tipo][include.datafile].titulo_a_tener_en_cuenta | default: "A tener en cuenta" }}</th>
           <th style="padding: 0.8em;">Comprar</th>
         </tr>
       </thead>

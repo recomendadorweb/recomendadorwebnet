@@ -1,3 +1,5 @@
+titulo_lo_mejor: "Material"
+titulo_a_tener_en_cuenta: "Características"
 productos:
 - nombre: TECNOCOLCHÓN Visco Air
   brand: TECNOCOLCHÓN
@@ -17,7 +19,7 @@ productos:
   - No hace ruido ni se deforma
   enlace: https://amzn.to/3H34MuM
   lo_mejor: Viscoelástica
-  a_tener_en_cuenta: Reversible, 2 lados de diferente firmeza
+  a_tener_en_cuenta: Reversible, 2 lados de diferente firmeza, funda lavable hasta 60º, 40 x 40 x 6cm
 - nombre: SILKORA® Premium
   brand: SILKORA®
   imagen: images/cojin-antiescaras-silkora-premium.webp
@@ -35,7 +37,7 @@ productos:
   - No se deforma con facilidad
   enlace: https://amzn.to/4khgj8o
   lo_mejor: Viscoelástica + capa de gel
-  a_tener_en_cuenta: Cuadrado con funda impermeable
+  a_tener_en_cuenta: Cuadrado con funda impermeable, Incluye 2 fundas extras, asa de transporte, 40 x 40 x 8cm
 - nombre: PEPE Mobility
   brand: PEPE
   imagen: images/cojin-antiescaras-pepe-mobility.webp
@@ -53,7 +55,7 @@ productos:
   - Ideal para uso doméstico
   enlace: https://amzn.to/4mt1Rfe
   lo_mejor: Viscoelástica + espuma de poliuretano
-  a_tener_en_cuenta: Rectangular
+  a_tener_en_cuenta: Rectangular, Funda lavable, transpirable, impermeable y antideslizante, 42 x 42 x 8cm
 - nombre: VALENTIA MEDICAL Visco + HR
   brand: VALENTIA
   imagen: images/cojin-antiescaras-valentia-medical.webp
@@ -71,10 +73,10 @@ productos:
   - Se adapta al cuerpo sin deformarse
   enlace: https://amzn.to/4mGbSpA
   lo_mejor: Viscoelástica + espuma HR
-  a_tener_en_cuenta: Rectangular
+  a_tener_en_cuenta: Rectangular, Mejora la postura, funda lavable y transpirable, 42 x 42 x 8cm
 - nombre: Mobiclinic® con hueco central
   brand: Mobiclinic®
-  imagen: placeholder.webp
+  imagen: images/cojin-antiescaras-mobiclinic.webp
   valoracion: 4.5
   descripcion: Este modelo está claramente pensado para aliviar presión en el coxis
     o el área sacra. La forma con hueco central se nota al sentarse y ayuda a quienes
@@ -86,12 +88,12 @@ productos:
   - Funda transpirable y desmontable
   - Se adapta a sillas estándar y ruedas
   - Buena opción para uso preventivo
-  enlace: ''
-  lo_mejor: ''
-  a_tener_en_cuenta: ''
+  enlace: 'https://amzn.to/3HkJKI7'
+  lo_mejor: 'Espuma anatómica'
+  a_tener_en_cuenta: 'Cuadrado con agujero central, Prevención de úlceras por presión, ideal para coxis, 40 x 38cm'
 - nombre: OrtoPrime para Coxis
   brand: OrtoPrime
-  imagen: placeholder.webp
+  imagen: images/cojin-antiescaras-ortoprime-coxis.webp
   valoracion: 4.5
   descripcion: Este cojín tiene una forma en U clásica, con la parte trasera recortada
     para liberar presión en el coxis. Es una solución sencilla pero efectiva. Ideal
@@ -103,9 +105,9 @@ productos:
   - Funda lavable incluida
   - No se desliza
   - Ligero
-  enlace: ''
-  lo_mejor: ''
-  a_tener_en_cuenta: ''
+  enlace: 'https://amzn.to/4jk6x4h'
+  lo_mejor: 'Espuma anatómica'
+  a_tener_en_cuenta: 'Redondo con agujero central, Alivia presión en coxis, funda lavable, 39 x 39cm'
 - nombre: OrtoPrime Herradura
   brand: OrtoPrime
   imagen: images/cojin-antiescaras-ortoprime-herradura.webp
@@ -122,7 +124,7 @@ productos:
   - Ligero
   enlace: https://amzn.to/4kaQiaY
   lo_mejor: Espuma anatómica
-  a_tener_en_cuenta: Forma de herradura
+  a_tener_en_cuenta: Forma de herradura, Diseño ergonómico, distribuye el peso de forma homogénea, 40 x 40 x 8cm
 - nombre: OrtoPrime Ranurado
   brand: OrtoPrime
   imagen: images/cojin-antiescaras-ortoprime.webp
@@ -138,10 +140,10 @@ productos:
   - Ideal para uso prolongado
   enlace: https://amzn.to/4k6Ikjh
   lo_mejor: Espuma anatómica
-  a_tener_en_cuenta: Rectangular con ranuras
+  a_tener_en_cuenta: Rectangular con ranuras, Alivia presión en coxis, funda lavable y transpirable, 40 x 39 x 8cm
 - nombre: KMINA Cojín Antiescaras
   brand: KMINA
-  imagen: placeholder.webp
+  imagen: images/cojin-antiescaras-kmina.webp
   valoracion: 4.5
   descripcion: Tiene una combinación de espuma técnica con viscoelástica, y se nota
     más firme que otros modelos. Me ha parecido especialmente útil para personas que
@@ -153,12 +155,12 @@ productos:
   - Funda antideslizante y lavable
   - Ideal para silla de ruedas
   - No genera calor
-  enlace: ''
-  lo_mejor: ''
-  a_tener_en_cuenta: ''
+  enlace: 'https://amzn.to/3Sd9MQ3'
+  lo_mejor: 'Viscoelástica'
+  a_tener_en_cuenta: 'Rectangular, Mejora la postura, funda lavable y transpirable, 41 x 41 x 7cm'
 - nombre: VALENTIA MEDICAL Viscoelástica firme
   brand: VALENTIA
-  imagen: placeholder.webp
+  imagen: images/cojin-antiescaras-valentia-medical-visco.webp
   valoracion: 5
   descripcion: Modelo simple pero efectivo. Su espuma Viscoelástica es firme, resistente
     y no se hunde. Me parece una gran opción si priorizas la durabilidad. Para quienes
@@ -170,12 +172,12 @@ productos:
   - Funda resistente
   - Soporta hasta 100 kg
   - Buena opción institucional o doméstica
-  enlace: ''
-  lo_mejor: ''
-  a_tener_en_cuenta: ''
+  enlace: 'https://amzn.to/3Fcmpb7'
+  lo_mejor: 'Viscoelástica'
+  a_tener_en_cuenta: 'Rectangular, Mejora la postura, funda lavable y transpirable, 42 x 42 x 8cm'
 - nombre: VALENTIA MEDICAL Viscoelástica
   brand: VALENTIA
-  imagen: placeholder.webp
+  imagen: images/cojin-antiescaras-valentia-medical-3.webp
   valoracion: 4.5
   descripcion: Mismo modelo que el anterior pero con una espuma menos firme. Su espuma
     Viscoelástica es resistente y no se hunde pero no aguanta tanto peso como el anterior.
@@ -184,12 +186,12 @@ productos:
   - Ideal para uso moderado
   - Funda resistente
   - Buena opción institucional o doméstica
-  enlace: ''
-  lo_mejor: ''
-  a_tener_en_cuenta: ''
+  enlace: 'https://amzn.to/3YW3eZL'
+  lo_mejor: 'Viscoelástica'
+  a_tener_en_cuenta: 'Rectangular, Mejora la postura, funda lavable y transpirable, 42 x 42 x 8cm'
 - nombre: dumald Cojín Antiescaras
   brand: dumald
-  imagen: placeholder.webp
+  imagen: images/cojin-antiescaras-dumald.webp
   valoracion: 4.5
   descripcion: Este cojín está bien construido, con buena densidad y grosor. Me ha
     sorprendido por su rigidez inicial, pero tras unos minutos se adapta al cuerpo.
@@ -201,6 +203,6 @@ productos:
   - Soporte firme sin hundirse
   - Se adapta bien tras unos minutos
   - Ideal para sillas de ruedas
-  enlace: ''
-  lo_mejor: ''
-  a_tener_en_cuenta: ''
+  enlace: 'https://amzn.to/3H7s0Ac'
+  lo_mejor: 'Cojín de aire'
+  a_tener_en_cuenta: 'Cuadrado, Previene activamente escaras, úlceras e irritaciones, 43 x 43cm'

@@ -1,5 +1,7 @@
+{% assign datos = site.data[tipo].cabecera %}
+
 <style>
 .menu-abierto .boton-flotante {
   display: none !important;
 }
-</style><a class="boton-flotante" href="#mi-eleccion">🎯 Ver ratón gaming recomendado</a>
+</style><a class="boton-flotante" href="#mi-eleccion">🎯 Ver {{ datos.literal }}</a>
