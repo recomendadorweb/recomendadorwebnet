@@ -1,5 +1,7 @@
 {% assign datos = site.data[tipo].cual_compraria_yo %}
 {% assign productos = site.data[tipo].productos.productos %}
+{% assign datos2 = site.data[tipo].cabecera %}
+
 
 <h2 id="mi-eleccion">{{ datos.titulo }}</h2>
 <p>{{ datos.intro | markdownify }}</p>
@@ -14,7 +16,7 @@
              href="{{ producto.enlace }}"
           style="min-height:44px"
              target="_blank">
-             🖱 {{ producto.nombre }} en Amazon
+             {{ datos2.emoji }} {{ producto.nombre }} en Amazon
           </a>
         {% endif %}
       {% endfor %}

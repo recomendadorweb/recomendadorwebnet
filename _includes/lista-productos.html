@@ -1,4 +1,6 @@
 {% assign productos = site.data[tipo].productos.productos %}
+{% assign datos = site.data[tipo].cabecera %}
+
 <style>.separador-producto {
   border-top: 1px solid #838383;
   margin: 1.5em 0;
@@ -21,7 +23,7 @@
           {% endfor %}
         </ul>
       {% endif %}
-      <a class="boton" href="{{ producto.enlace }}" style="min-height:44px" target="_blank">🖱 Ver oferta actual en Amazon</a>
+      <a class="boton" href="{{ producto.enlace }}" style="min-height:44px" target="_blank">{{ datos.emoji }} Ver oferta actual en Amazon</a>
     </div>
     
 

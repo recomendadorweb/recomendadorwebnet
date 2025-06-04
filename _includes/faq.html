@@ -1,5 +1,6 @@
 {% assign preguntas = site.data[tipo].faq.faq %}
 {% assign productos = site.data[tipo].productos.productos %}
+{% assign datos = site.data[tipo].cabecera %}
 
 <section class="faq">
   {% for item in preguntas %}
@@ -13,7 +14,7 @@
              href="{{ producto.enlace }}"
              style="font-size: 0.85em; padding: 8px 12px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;"
              target="_blank">
-             🖱 {{ producto.nombre }} en Amazon
+             {{ datos.emoji }} {{ producto.nombre }} en Amazon
           </a>
         {% endif %}
       {% endfor %}
