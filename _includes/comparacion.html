@@ -1,0 +1,31 @@
+
+{% assign datos = site.data[tipo].comparacion %}
+
+<h2 id="{{ datos.id | default: 'porque-elegir-barros' }}">{{ datos.titulo }}</h2>
+
+<p>{{ datos.intro | markdownify }}</p>
+
+{% if datos.subtitulo %}
+<p><strong>{{ datos.subtitulo }}</strong></p>
+{% endif %}
+
+<table style="width:100%;border-collapse:collapse;margin-top:1em;">
+  <thead>
+    <tr style="background:#fce4ec;">
+      <th style="padding:0.8em;border:1px solid #e1cde9;">{{ datos.columna_izquierda }}</th>
+      <th style="padding:0.8em;border:1px solid #e1cde9;">{{ datos.columna_derecha }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for fila in datos.comparativa %}
+    <tr {% if forloop.index0 % 2 != 0 %}style="background:#faf5fc;"{% endif %}>
+      <td style="padding:0.8em;border:1px solid #e1cde9;">{{ fila.izquierda }}</td>
+      <td style="padding:0.8em;border:1px solid #e1cde9;">{{ fila.derecha }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% if datos.cierre %} 
+<p style="margin-top:1.5em;"><em>{{ datos.cierre | markdownify }}</em></p>
+{% endif %}

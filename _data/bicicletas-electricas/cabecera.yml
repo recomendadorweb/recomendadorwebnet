@@ -1,8 +1,8 @@
 titulo: Las Mejores Bicicletas Eléctricas de 2025
 imagen:
-  alt: Ilustración de bicicletas electricas gaming estilo cartoon para videojuegos
+  alt: Ilustración de bicicletas electricas con fondo de una ciudad
   src: /global/images/
-  srcset: /global/images/bici_barcelona_900x200.png 600w, /global/images/bici_barcelona_900x200.png
+  srcset: /global/images/bici_barcelona_900x200.webp 600w, /global/images/bici_barcelona_900x200.webp
     1024w
   width: 600
   style: 'width:100%;max-height:200px;object-fit:cover;border-radius:10px;'

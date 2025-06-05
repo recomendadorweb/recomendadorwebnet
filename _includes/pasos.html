@@ -1,0 +1,35 @@
+{% assign pagina = site.data.barros.pasos %}
+<h2 id="pasos">{{ pagina.titulo }}</h2>
+<p>{{ pagina.introduccion }}</p>
+
+{% assign steps = pagina.pasos %}
+{% assign total = steps | size %}
+{% assign last_index = total | minus: 1 %}
+
+{% for i in (0..last_index) %}
+  {% assign even = i | divided_by: 2 | times: 2 %}
+  {% if i == even %}
+    <div class="grupo-pasos" style="display:flex;flex-wrap:wrap;gap:2%;margin-bottom:2em;">
+      {% assign paso1 = steps[i] %}
+      <div class="paso-barro" style="flex:1 1 48%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:stretch;">
+        <section class="paso-barro" id="{{ paso1.id }}" style="padding:0.7em;background:#faf5fb;border-left:6px solid #b39ddb;border-radius:10px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+          <h3>{{ paso1.icono }} {{ paso1.titulo }}</h3>
+          <p>{{ paso1.descripcion }}</p>
+          <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" />
+        </section>
+      </div>
+
+      {% assign j = i | plus: 1 %}
+      {% if j < total %}
+        {% assign paso2 = steps[j] %}
+        <div class="paso-barro" style="flex:1 1 48%;box-sizing:border-box;display:flex;flex-direction:column;justify-content:stretch;">
+          <section class="paso-barro" id="{{ paso2.id }}" style="padding:0.7em;background:#faf5fb;border-left:6px solid #b39ddb;border-radius:10px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
+            <h3>{{ paso2.icono }} {{ paso2.titulo }}</h3>
+            <p>{{ paso2.descripcion }}</p>
+            <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" />
+          </section>
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endfor %}

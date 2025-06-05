@@ -1,0 +1,29 @@
+{% assign datos = site.data[tipo].productos-barros %}
+
+  {% for barro in datos %}
+<section style="margin-bottom:3em;padding:1.5em;background:#faf7fc;border-left:6px solid #b39ddb;border-radius:10px;">
+  <h3 class="producto-titulo" style="display:flex;justify-content:space-between;align-items:center;">
+    {{ barro.emoji }} {{ barro.titulo }}
+    {% if barro.recomendado %}
+      <span style="background:#7b4b94;color:#fff;padding:0.3em 0.7em;border-radius:6px;font-size:0.8em;">⭐ Recomendado</span>
+    {% endif %}
+  </h3>
+
+  {% for bloque in barro.bloques %}
+    <h4>{{ bloque.subtitulo }}</h4>
+    <p>{{ bloque.texto }}</p>
+  {% endfor %}
+
+  {% if barro.colores %}
+    <h4>🌈 Colores disponibles:</h4>
+    <div style="display:flex;flex-wrap:wrap;gap:1em;margin-top:1em;">
+      {% for color in barro.colores %}
+        <div style="flex:1 1 calc(33.333% - 1em);display:flex;align-items:center;">
+          <span style="display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:{{ color.color }};margin-right:0.4em;border:1px solid #aaa;"></span>
+          <a href="{{ color.link }}" style="color:#7b4b94;text-decoration:none;font-weight:500;" target="_blank">{{ color.nombre }}</a>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+{% endfor %}
