@@ -9,57 +9,187 @@ pagination:
 ---
 {% include menu.html %}
 {% include estiloazul.html %}
+<style>
+  /* ======= DESTACADOS ======= */
+.section-hero-list {
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #79b2f7 0%, #87c4fd 100%);
+  background-image: radial-gradient(rgba(0, 60, 120, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-color: #004aad;
+  color: #1a1a1a;
+}
+
+
+
+
+.destacados-oscuro {
+  background-color: #1c1e21;
+  background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: rgb(180, 95, 95);
+}
+
+.destacados-box {
+  padding: 0.5rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+
+.destacados-title {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(5, 0, 0);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hero-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hero-item a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: rgb(126, 45, 45);
+}
+
+.hero-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.6);
+  transition: filter 0.3s ease;
+}
+
+.hero-item:hover img {
+  filter: brightness(0.4);
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: white;
+}
+
+/* Responsive grid */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======= LO ÚLTIMO ======= */
+.recent-posts {
+  margin-top: 3rem;
+}
+
+.recent-posts h2 {
+  margin-bottom: 1.5rem;
+}
+
+.recent-abstract {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.recent-abstract img {
+  width: 140px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.recent-content h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.recent-content p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+@media (max-width: 600px) {
+  .recent-abstract {
+    flex-direction: column;
+  }
+
+  .recent-abstract img {
+    width: 100%;
+  }
+}
+
+</style>
 <div class="container">
 
-<section class="intro">
-  <h1>Bienvenidos a Recomendador.net</h1>
-  <p>En Recomendador.net analizamos productos de forma imparcial para ayudarte a tomar la mejor decisión de compra. Con más de 15 años de experiencia, nuestro equipo prueba y compara productos tecnológicos, de belleza y salud.</p>
-  <img src="/global/images/equipo.png" alt="Foto del equipo" style="max-width: 100%; border-radius: 1rem; margin-top: 1rem;">
+
+</style>
+<!-- 🔥 ARTÍCULOS DESTACADOS -->
+<section class="section-hero-list">
+    <div class="section-hero-list destacados-box">
+    <h2 class="destacados-title">🌟 Artículos destacados</h2>
+    <div class="hero-grid">
+      {% assign destacados = site.posts | where_exp: "post", "post.destacado" %}
+      {% assign destacados = destacados | sort: "destacado" %}
+      {% for post in destacados limit:3 %}
+        <div class="hero-item">
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.image | default: '/assets/images/default.webp' }}" alt="{{ post.title }}">
+            <div class="hero-title">{{ post.title }}</div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
 
-<hr><nav class="categorias">
-  <h2>Categorías</h2>
-  <ul>
-    {% for cat in site.categories %}
-      <li><a href="/categoria/{{ cat[0] | slugify }}/">{{ cat[0] }}</a></li>
+
+<!-- 📰 LO ÚLTIMO -->
+<section class="recent-posts">
+  <div class="container">
+    <h2>Lo último</h2>
+    {% assign ultimos = site.posts | where_exp: "post", "post.destacado == nil" %}
+    {% for post in ultimos %}
+      <article class="recent-abstract abstract-article">
+        <a href="{{ post.url | relative_url }}">
+          <img src="{{ post.image | default: '/assets/images/default-small.webp' }}" alt="{{ post.title }}">
+        </a>
+        <div class="recent-content">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+        </div>
+      </article>
     {% endfor %}
-  </ul>
-
-  <h2>Etiquetas</h2>
-  <ul>
-    {% for tag in site.tags %}
-      <li><a href="/tag/{{ tag[0] | slugify }}/">{{ tag[0] }}</a></li>
-    {% endfor %}
-  </ul>
-</nav>
-
-<section class="blog-completo">
-  <h2>Últimos artículos</h2>
-
-  {% for post in paginator.posts %}
-    <article style="margin-bottom: 3rem;">
-      <h3>{{ post.title }}</h3>
-      <p><small>Publicado el {{ post.date | date: "%d/%m/%Y" }}</small></p>
-      {{ post.content }}
-    </article>
-  {% endfor %}
-
-  <div class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path }}">← Anterior</a>
-    {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <strong>{{ page }}</strong>
-      {% else %}
-        <a href="{{ paginator.paginate_path | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path }}">Siguiente →</a>
-    {% endif %}
   </div>
 </section>
 {% include footer.html %}
