@@ -9,188 +9,702 @@ pagination:
 ---
 {% include menu.html %}
 {% include estiloazul.html %}
-<style>
-  /* ======= DESTACADOS ======= */
-.section-hero-list {
-  padding: 2rem 0;
-  background: linear-gradient(135deg, #79b2f7 0%, #87c4fd 100%);
-  background-image: radial-gradient(rgba(0, 60, 120, 0.05) 1px, transparent 1px);
-  background-size: 24px 24px;
-  background-color: #004aad;
-  color: #1a1a1a;
+  <style>
+:root {
+  --hotpost-height: 150px; /* Altura base para side-posts */
 }
 
-
-
-
-.destacados-oscuro {
-  background-color: #1c1e21;
-  background-image: radial-gradient(rgba(255,255,255,0.02) 1px, transparent 1px);
-  background-size: 20px 20px;
-  color: rgb(180, 95, 95);
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
 }
 
-.destacados-box {
-  padding: 0.5rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  background: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-}
-
-
-.destacados-title {
-  font-size: 1.8rem;
-  margin-bottom: 1.2rem;
-  font-weight: 600;
+h2 {
   text-align: center;
-  color: rgb(5, 0, 0);
+  margin: 30px 0 10px;
+  font-size: 1.8em;
+  color: #333;
 }
 
-.hero-grid {
+.hot-posts,
+.grid-posts {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+/* HOT POSTS estilo Krio */
+.hot-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-areas:
+    "main side1"
+    "main side2";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: var(--hotpost-height) var(--hotpost-height);
+  gap: 20px;
 }
 
-.hero-item {
+.main-post {
+  grid-area: main;
+  height: calc(var(--hotpost-height) * 2 + 20px);
+}
+
+.side-post:nth-of-type(2) {
+  grid-area: side1;
+  height: var(--hotpost-height);
+}
+
+.side-post:nth-of-type(3) {
+  grid-area: side2;
+  height: var(--hotpost-height);
+}
+
+.post {
   position: relative;
-  overflow: hidden;
   border-radius: 10px;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.hero-item a {
-  display: block;
-  position: relative;
-  text-decoration: none;
-  color: rgb(126, 45, 45);
-}
-
-.hero-item img {
+.post img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
   object-fit: cover;
-  filter: brightness(0.6);
-  transition: filter 0.3s ease;
+  display: block;
 }
 
-.hero-item:hover img {
-  filter: brightness(0.4);
+/* Etiqueta de categoría estilo Krio */
+.post-category {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fc3c68; /* Azul oscuro típico de Krio */
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 0 0 4px 0; /* solo esquina inferior derecha redondeada */
+  z-index: 3;
+  letter-spacing: 0.4px;
 }
 
-.hero-title {
+/* Overlay de título y subtítulo */
+.post-text {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1rem;
+  padding: 20px 15px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  font-size: 1.3rem;
+  color: #fff;
+  z-index: 2;
+}
+.post-title {
+  margin: 0;
+  font-size: 1.5em;
   font-weight: bold;
-  line-height: 1.2;
-  color: white;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* Responsive grid */
-@media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr 1fr;
+.post-subtitle {
+  margin: 5px 0 0;
+  font-size: 1em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.post-text h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.post-text .post-subtitle {
+  margin: 0;
+  font-size: 0.9em;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+/* GRID POSTS */
+.grid-posts .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.grid-posts .post {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000;
+  height: var(--hotpost-height);
+}
+
+.grid-posts img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.grid-posts .post-category,
+.grid-posts .post-text {
+  position: absolute;
+}
+
+.grid-posts .post-category {
+  top: 12px;
+  left: 12px;
+  background-color: #e50914;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 3;
+  letter-spacing: 0.5px;
+}
+
+.grid-posts .post-text {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 12px 18px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 80%);
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.grid-posts h3 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.grid-posts .post-subtitle {
+  margin: 0;
+  font-size: 0.85em;
+  opacity: 0.85;
+}
+
+/* Enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hot-grid {
+    grid-template-areas:
+      "main"
+      "side1"
+      "side2";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .main-post,
+  .side-post:nth-of-type(2),
+  .side-post:nth-of-type(3),
+  .grid-posts .post {
+    height: auto;
+  }
+
+  .post img {
+    height: auto;
   }
 }
+.category-list {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
 
-@media (max-width: 600px) {
-  .hero-grid {
+.category {
+  flex: 1;
+  min-width: 280px;
+}
+
+.category-title {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #364e68;
+  padding-bottom: 5px;
+  color: #364e68;
+  text-transform: uppercase;
+}
+
+.category ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.category li img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.category li a {
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+}
+
+.category li a:hover {
+  text-decoration: underline;
+}
+
+.category .date {
+  display: block;
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 4px;
+}
+.categorias-destacadas {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.categoria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.categoria-tarjeta {
+  position: relative;
+  height: 180px; /* Tarjetas más compactas */
+  border-radius: 8px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.categoria-tarjeta a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.categoria-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #364e68;
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0 0 4px 0;
+  z-index: 3;
+}
+
+.categoria-texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  color: #fff;
+  z-index: 2;
+}
+
+.categoria-texto h3 {
+  margin: 0 0 3px;
+  font-size: 1em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.categoria-texto p {
+  margin: 0;
+  font-size: 0.85em;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.tabla-categorias {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+
+.columna-categoria {
+  display: flex;
+  flex-direction: column;
+}
+.titulo-categoria {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-left: 5px solid #fc3c68;
+  padding-left: 12px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* Tarjeta tipo card */
+.tarjeta-categoria {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 10px;
+}
+
+.tarjeta-categoria img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.tarjeta-categoria .contenido {
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-categoria .contenido h4 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: #222;
+}
+
+.tarjeta-categoria .contenido p {
+  margin: 4px 0 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+
+.tabla-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.columna-categoria {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+/* Tarjetas con texto dentro de la imagen */
+
+
+.columna-categoria {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card-post {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Texto dentro de la imagen */
+.card-post .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 60%);
+  color: white;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.card-post .overlay h4 {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6); /* mejora la visibilidad */
+}
+@media (max-width: 768px) {
+  .tabla-grid {
     grid-template-columns: 1fr;
   }
 }
-
-/* ======= LO ÚLTIMO ======= */
-.recent-posts {
-  margin-top: 3rem;
+.ver-mas-categoria {
+  margin-top: 10px;
 }
 
-.recent-posts h2 {
-  margin-bottom: 1.5rem;
+.ver-mas-categoria a {
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #364e68;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #f0f4f8;
+  transition: background-color 0.2s ease;
 }
 
-.recent-abstract {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+.ver-mas-categoria a:hover {
+  background-color: #dde7f0;
 }
 
-.recent-abstract img {
-  width: 140px;
-  height: auto;
-  border-radius: 8px;
+/* ===== HOT POSTS ===== */
+
+.hot-post,
+.hot-post-secundario {
+  position: relative;
+  overflow: hidden;
+}
+
+.hot-post img,
+.hot-post-secundario img {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.recent-content h3 {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
+.hot-post:hover img,
+.hot-post-secundario:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8); /* oscurece la imagen al pasar el ratón */
 }
 
-.recent-content p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #ccc;
+/* ===== TARJETAS DE CATEGORÍA ===== */
+
+.card-post {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 600px) {
-  .recent-abstract {
-    flex-direction: column;
-  }
+.card-post img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  display: block;
+}
 
-  .recent-abstract img {
-    width: 100%;
-  }
+.card-post:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
 }
 
 </style>
 <div class="container">
-
-
-</style>
-<!-- 🔥 ARTÍCULOS DESTACADOS -->
-<section class="section-hero-list">
-    <div class="section-hero-list destacados-box">
-    <h2 class="destacados-title">🌟 Artículos destacados</h2>
-    <div class="hero-grid">
-      {% assign destacados = site.posts | where_exp: "post", "post.destacado" %}
-      {% assign destacados = destacados | sort: "destacado" %}
-      {% for post in destacados limit:3 %}
-        <div class="hero-item">
-          <a href="{{ post.url | relative_url }}">
-            <img src="{{ post.image | default: '/assets/images/default.webp' }}" alt="{{ post.title }}">
-            <div class="hero-title">{{ post.title }}</div>
-          </a>
-        </div>
-      {% endfor %}
+  <section class="hot-posts">
+  <div class="hot-grid">
+<article class="post hot-post main-post">
+  <a href="#">
+    <img src="global/images/1.png" alt="Publicación principal">
+    <span class="post-category">Tecnología</span>
+    <div class="post-text">
+      <h3 class="post-title">El mejor teclado gaming de 2025</h3>
+      <p class="post-subtitle">Analizamos los modelos más rápidos y cómodos del mercado</p>
     </div>
+  </a>
+</article>
+<article class="post hot-post-secundario side-post">
+  <a href="#">
+    <img src="global/images/2.png" alt="Publicación secundaria 1">
+    <span class="post-category">Periféricos</span>
+    <div class="post-text">
+      <h3 class="post-title">El mejor teclado gaming de 2025</h3>
+    </div>
+  </a>
+</article>
+<article class="post hot-post-secundario side-post">
+  <a href="#">
+    <img src="global/images/3.png" alt="Publicación secundaria 1">
+    <span class="post-category">Periféricos</span>
+    <div class="post-text">
+      <h3 class="post-title">El mejor teclado gaming de 2025</h3>
+    </div>
+  </a>
+</article>
   </div>
 </section>
-
-
-<!-- 📰 LO ÚLTIMO -->
-<section class="recent-posts">
-  <div class="container">
-    <h2>Lo último</h2>
-    {% assign ultimos = site.posts | where_exp: "post", "post.destacado == nil" %}
-    {% for post in ultimos %}
-      <article class="recent-abstract abstract-article">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | default: '/assets/images/default-small.webp' }}" alt="{{ post.title }}">
-        </a>
-        <div class="recent-content">
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+<section class="tabla-categorias">
+  <div class="tabla-grid">
+    
+    <!-- Columna Gaming -->
+    <div>
+      <h3 class="titulo-categoria">Gaming</h3>
+      <div class="card-post">
+        <img src="global/images/1.png" alt="Gaming">
+        <div class="overlay">
+          <h4>Ratones para eSports</h4>
         </div>
-      </article>
-    {% endfor %}
+      </div>
+            <div class="card-post">
+        <img src="global/images/1.png" alt="Gaming">
+        <div class="overlay">
+          <h4>Ratones para eSports</h4>
+        </div>
+      </div>
+                  <div class="card-post">
+        <img src="global/images/1.png" alt="Gaming">
+        <div class="overlay">
+          <h4>Ratones para eSports</h4>
+        </div>
+      </div>
+      <div class="ver-mas-categoria">
+  <a href="/categoria/gaming">Ver más de Gaming →</a>
+</div>
+    </div>
+
+    <!-- Columna Deportes -->
+    <div>
+      <h3 class="titulo-categoria">Deportes</h3>
+      <div class="card-post">
+        <img src="global/images/3.png" alt="Deportes">
+        <div class="overlay">
+          <h4>Zapatillas running 2025</h4>
+        </div>
+      </div>
+            <div class="card-post">
+        <img src="global/images/3.png" alt="Deportes">
+        <div class="overlay">
+          <h4>Zapatillas running 2025</h4>
+        </div>
+      </div>
+            <div class="card-post">
+        <img src="global/images/3.png" alt="Deportes">
+        <div class="overlay">
+          <h4>Zapatillas running 2025</h4>
+        </div>
+      </div>
+<div class="ver-mas-categoria">
+  <a href="/categoria/gaming">Ver más de Deportes →</a>
+</div>
+    </div>
+
+    <!-- Columna Tecnología -->
+    <div>
+      <h3 class="titulo-categoria">Tecnología</h3>
+      <div class="card-post">
+        <img src="global/images/5.png" alt="Tecnología">
+        <div class="overlay">
+          <h4>Micrófonos para streaming</h4>
+        </div>
+      </div>
+            <div class="card-post">
+        <img src="global/images/5.png" alt="Tecnología">
+        <div class="overlay">
+          <h4>Micrófonos para streaming</h4>
+        </div>
+      </div>
+            <div class="card-post">
+        <img src="global/images/5.png" alt="Tecnología">
+        <div class="overlay">
+          <h4>Micrófonos para streaming</h4>
+        </div>
+      </div>
+      <div class="ver-mas-categoria">
+  <a href="/categoria/gaming">Ver más de Tecnología →</a>
+</div>
+    </div>
+
   </div>
 </section>
-{% include footer.html %}
+
+
+
+
+
+  <!-- Sección de Grid Posts -->
+  <section class="grid-posts">
+    <h2>📚 Más publicaciones</h2>
+    <div class="grid">
+      <article class="post">
+        <a href="#">
+          <img src="global/images/4.png" alt="Grid Post 1">
+          <h3>Título de la publicación 1</h3>
+        </a>
+      </article>
+      <article class="post">
+        <a href="#">
+          <img src="global/images/5.png" alt="Grid Post 2">
+          <h3>Título de la publicación 2</h3>
+        </a>
+      </article>
+      <article class="post">
+        <a href="#">
+          <img src="global/images/imagenchatgpt.png" alt="Grid Post 3">
+          <h3>Título de la publicación 3</h3>
+        </a>
+      </article>
+      <article class="post">
+        <a href="#">
+          <img src="global/images/imagenchatgpt.png" alt="Grid Post 4">
+          <h3>Título de la publicación 4</h3>
+        </a>
+      </article>
+    </div>
+  </section>
+
 </div>
