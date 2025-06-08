@@ -35,6 +35,9 @@ h2 {
   padding: 0 20px;
 }
 
+.hot-posts {
+  margin: 0 auto 30px;
+}
 /* HOT POSTS estilo Krio */
 .hot-grid {
   display: grid;
@@ -43,7 +46,7 @@ h2 {
     "main side2";
   grid-template-columns: 2fr 1fr;
   grid-template-rows: var(--hotpost-height) var(--hotpost-height);
-  gap: 20px;
+  gap: 10px;
 }
 
 .main-post {
@@ -361,7 +364,7 @@ a {
 }
 .tabla-categorias {
   max-width: 1100px;
-  margin: 60px auto;
+  margin: 0 auto 30px;
   padding: 0 20px;
 }
 
@@ -443,7 +446,7 @@ a {
   gap: 20px;
 }
 
-.card-post {
+.card-post:not(.clasica) {
   position: relative;
   width: 100%;
   height: 180px;
@@ -554,9 +557,179 @@ a {
   filter: brightness(0.8);
 }
 
+/* Nuevo estilo para tarjetas más limpias */
+.card-post.clasica {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card-post.clasica:hover {
+  transform: translateY(-2px);
+}
+
+.card-post.clasica img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-post.clasica .card-texto {
+  padding: 12px 15px;
+}
+
+.card-post.clasica .card-texto h4 {
+  margin: 0 0 6px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #222;
+}
+
+.card-post.clasica .card-texto p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.card-post.clasica .autor {
+  margin-top: 6px;
+  font-size: 0.8em;
+  color: #999;
+}
+.categoria-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f4f8;
+  padding: 10px 20px;
+  border-left: 5px solid #fc3c68;
+  border-radius: 8px;
+  margin: 40px auto 20px;
+  max-width: 1100px;
+}
+
+.titulo-categoria-header {
+  margin: 0;
+  font-size: 1.4em;
+  color: #333;
+  font-weight: bold;
+}
+
+.boton-ver-mas {
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #fc3c68;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.boton-ver-mas:hover {
+  background-color: #d82b53;
+}
+.cabeceras-categorias {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 20px;
+              max-width: 1100px;
+              margin: 40px auto 30px;
+              padding: 0 20px;
+            }
+            
+ .categoria-barra {
+  background-color: #007bff ;
+  background: linear-gradient(to right, #007bff, #0056d2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 2px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-bottom: 16px;
+}
+
+.nombre-categoria {
+  font-size: 0.95em;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.boton-categoria {
+  font-size: 0.75em;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.boton-categoria:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;
+}
+
+
+.seccion-contenedor {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 25px 20px;
+  margin-bottom: 20px;
+}
+
+.indicador-seccion {
+  background-color: #007bff ;
+  background: linear-gradient(to right, #007bff, #0056d2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 2px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-bottom: 7px;
+}
+
+.indicador-seccion h2 {
+  margin: 0;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  color: white;
+}
+.indicador-seccion .boton-seccion {
+  font-size: 0.85em;
+  font-weight: 600;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.indicador-seccion .boton-seccion:hover {
+  background-color: rgba(255,255,255,0.15);
+}
+     
+
 </style>
 <div class="container">
-  <section class="hot-posts">
+<section class="hot-posts seccion-contenedor">
   <div class="hot-grid">
 <article class="post hot-post main-post">
   <a href="#">
@@ -588,30 +761,94 @@ a {
 </article>
   </div>
 </section>
-<section class="tabla-categorias">
+
+
+<section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
+<div class="indicador-seccion">
+  <h2>🎯 Encuentra justo lo que necesitas</h2>
+      <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
+</div>
+  <div class="categoria-grid">
+    <div class="categoria-tarjeta" style="background-image: url('global/images/6.png')">
+      <a href="/guia/ratones-esports">
+        <span class="categoria-label">Para competir</span>
+        <div class="categoria-texto">
+          <h3>Ratones de alta precisión</h3>
+          <p>Diseñados para shooters tipo Valorant o CS2</p>
+        </div>
+      </a>
+    </div>
+    <div class="categoria-tarjeta" style="background-image: url('global/images/7.png')">
+      <a href="/guia/teclados-oficina">
+        <span class="categoria-label">Para trabajar</span>
+        <div class="categoria-texto">
+          <h3>Teclados silenciosos y cómodos</h3>
+          <p>Perfectos para teletrabajo o estudios</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
+<div class="indicador-seccion">
+  <h2>🎯 Colecciones destacadas</h2>
+        <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
+</div>  <div class="categoria-grid">
+    <div class="categoria-tarjeta" style="background-image: url('global/images/8.png')">
+      <a href="/coleccion/especial-verano">
+        <span class="categoria-label">Verano 2025</span>
+        <div class="categoria-texto">
+          <h3>Ratones frescos y teclados sin cables</h3>
+          <p>Ideales para combatir el calor y el cableado</p>
+        </div>
+      </a>
+    </div>
+    <div class="categoria-tarjeta" style="background-image: url('global/images/9.png')">
+      <a href="/coleccion/regalos-gamers">
+        <span class="categoria-label">🎮 Regalos</span>
+        <div class="categoria-texto">
+          <h3>Ideas para gamers y streamers</h3>
+          <p>Desde 15€ hasta setups completos</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="tabla-categorias seccion-contenedor">
   <div class="tabla-grid">
-    
-    <!-- Columna Gaming -->
     <div>
-      <h3 class="titulo-categoria">Gaming</h3>
-      <div class="card-post">
-        <img src="global/images/1.png" alt="Gaming">
-        <div class="overlay">
-          <h4>Ratones para eSports</h4>
-        </div>
-      </div>
-            <div class="card-post">
-        <img src="global/images/1.png" alt="Gaming">
-        <div class="overlay">
-          <h4>Ratones para eSports</h4>
-        </div>
-      </div>
-                  <div class="card-post">
-        <img src="global/images/1.png" alt="Gaming">
-        <div class="overlay">
-          <h4>Ratones para eSports</h4>
-        </div>
-      </div>
+  <div class="categoria-barra">
+    <span class="nombre-categoria">🤖 Tecnología</span>
+    <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
+  </div>
+  <div class="card-post clasica">
+  <img src="global/images/1.png" alt="Ratones para eSports">
+  <div class="card-texto">
+    <h4>Ratones para eSports</h4>
+    <p>Los mejores modelos para competir a alto nivel en shooters como Valorant o CS2.</p>
+    <div class="autor">por Carlos López</div>
+  </div>
+</div>
+<div class="card-post clasica">
+  <img src="global/images/1.png" alt="Ratones para eSports">
+  <div class="card-texto">
+    <h4>Ratones para eSports</h4>
+    <p>Los mejores modelos para competir a alto nivel en shooters como Valorant o CS2.</p>
+    <div class="autor">por Carlos López</div>
+  </div>
+</div>
+<div class="card-post clasica">
+  <img src="global/images/1.png" alt="Ratones para eSports">
+  <div class="card-texto">
+    <h4>Ratones para eSports</h4>
+    <p>Comparativa de los mejores ratones para competir en shooters.</p>
+    <div class="autor">por Carlos López</div>
+  </div>
+</div>
       <div class="ver-mas-categoria">
   <a href="/categoria/gaming">Ver más de Gaming →</a>
 </div>
@@ -619,8 +856,11 @@ a {
 
     <!-- Columna Deportes -->
     <div>
-      <h3 class="titulo-categoria">Deportes</h3>
-      <div class="card-post">
+  <div class="categoria-barra">
+    <span class="nombre-categoria">🎮 Gaming</span>
+    <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
+  </div>
+        <div class="card-post">
         <img src="global/images/3.png" alt="Deportes">
         <div class="overlay">
           <h4>Zapatillas running 2025</h4>
@@ -645,8 +885,10 @@ a {
 
     <!-- Columna Tecnología -->
     <div>
-      <h3 class="titulo-categoria">Tecnología</h3>
-      <div class="card-post">
+  <div class="categoria-barra">
+    <span class="nombre-categoria">🧠 Salud</span>
+    <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
+  </div>      <div class="card-post">
         <img src="global/images/5.png" alt="Tecnología">
         <div class="overlay">
           <h4>Micrófonos para streaming</h4>
@@ -671,40 +913,4 @@ a {
 
   </div>
 </section>
-
-
-
-
-
-  <!-- Sección de Grid Posts -->
-  <section class="grid-posts">
-    <h2>📚 Más publicaciones</h2>
-    <div class="grid">
-      <article class="post">
-        <a href="#">
-          <img src="global/images/4.png" alt="Grid Post 1">
-          <h3>Título de la publicación 1</h3>
-        </a>
-      </article>
-      <article class="post">
-        <a href="#">
-          <img src="global/images/5.png" alt="Grid Post 2">
-          <h3>Título de la publicación 2</h3>
-        </a>
-      </article>
-      <article class="post">
-        <a href="#">
-          <img src="global/images/imagenchatgpt.png" alt="Grid Post 3">
-          <h3>Título de la publicación 3</h3>
-        </a>
-      </article>
-      <article class="post">
-        <a href="#">
-          <img src="global/images/imagenchatgpt.png" alt="Grid Post 4">
-          <h3>Título de la publicación 4</h3>
-        </a>
-      </article>
-    </div>
-  </section>
-
 </div>
