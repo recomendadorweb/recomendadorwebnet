@@ -763,9 +763,7 @@ a {
   height: 180px;
   overflow: hidden;
 }
-.post.hot-post.main-post {
-  position: relative;
-}
+
 .tarjeta-final .contenedor-img:hover img {
   transform: scale(1.05);
   filter: brightness(0.8);
@@ -777,7 +775,6 @@ a {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 
@@ -804,23 +801,112 @@ a {
   color: #555;
   line-height: 1.4;
 }
-.avatar-autor {
-  position: absolute !important;
-  bottom: 10px !important;
-  right: 10px !important;
-  width: 32px !important;
-  height: 32px !important;
-  border-radius: 50% !important;
-  border: 2px solid #fff;
-  object-fit: cover !important;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+
+
+
+
+.avatar-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   z-index: 4;
-  pointer-events: none;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   background-color: #fff;
+  transition: transform 0.2s ease;
 }
 
+.avatar-link:hover {
+  transform: scale(1.1);
+}
 
+.avatar-link img.avatar-autor {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border: none;
+  pointer-events: none;
+}
 
+/* Posición relativa solo donde hace falta */
+.tarjeta-final .contenedor-img,
+.categoria-tarjeta a,
+.post.hot-post.main-post,
+.post.hot-post-secundario.side-post {
+  position: relative;
+}
+
+.categoria-tarjeta {
+  position: relative;
+  overflow: hidden;
+}
+
+.categoria-tarjeta .contenedor-avatar {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 4;
+}
+
+.avatar-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.avatar-link:hover {
+  transform: scale(1.1);
+}
+
+.avatar-link img.avatar-autor {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border: none;
+  pointer-events: none;
+}
+
+.categoria-tarjeta .contenedor-avatar {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  z-index: 4;
+}
+
+.categoria-tarjeta .avatar-link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.categoria-tarjeta .avatar-link:hover {
+  transform: scale(1.1);
+}
+
+.categoria-tarjeta .avatar-link img.avatar-autor {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  pointer-events: none;
+}
 </style>
 
 {% include estiloazul.html %}
@@ -829,279 +915,241 @@ a {
 
 <div class="container">
 <section class="hot-posts seccion-contenedor">
-  <div class="hot-grid">
+<div class="hot-grid">
 <article class="post hot-post main-post">
-  <a href="#">
-    <img src="global/images/1.png" alt="Publicación principal">
-    <span class="post-category">Tecnología</span>
-    <div class="post-text">
-      <h3 class="post-title">El mejor teclado gaming de 2025</h3>
-      <p class="post-subtitle">Analizamos los modelos más rápidos y cómodos del mercado</p>
-    </div>
-        <img class="avatar-autor" src="global/images/avatarSara.jpg" alt="Avatar Carlos">
-  </a>
+<a href="#">
+<img alt="Publicación principal" src="global/images/1.png"/>
+<span class="post-category">Tecnología</span>
+<div class="post-text">
+<h3 class="post-title">El mejor teclado gaming de 2025</h3>
+<p class="post-subtitle">Analizamos los modelos más rápidos y cómodos del mercado</p>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></a>
 </article>
 <article class="post hot-post-secundario side-post">
-  <a href="#">
-    <img src="global/images/2.png" alt="Publicación secundaria 1">
-    <span class="post-category">Periféricos</span>
-    <div class="post-text">
-      <h3 class="post-title">El mejor teclado gaming de 2025</h3>
-    </div>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-  </a>
+<a href="#">
+<img alt="Publicación secundaria 1" src="global/images/2.png"/>
+<span class="post-category">Periféricos</span>
+<div class="post-text">
+<h3 class="post-title">El mejor teclado gaming de 2025</h3>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></a>
 </article>
 <article class="post hot-post-secundario side-post">
-  <a href="#">
-    <img src="global/images/3.png" alt="Publicación secundaria 1">
-    <span class="post-category">Periféricos</span>
-    <div class="post-text">
-      <h3 class="post-title">El mejor teclado gaming de 2025</h3>
-    </div>
-        <img class="avatar-autor" src="global/images/avatarSara.jpg" alt="Avatar Carlos">
-
-  </a>
+<a href="#">
+<img alt="Publicación secundaria 1" src="global/images/3.png"/>
+<span class="post-category">Periféricos</span>
+<div class="post-text">
+<h3 class="post-title">El mejor teclado gaming de 2025</h3>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></a>
 </article>
-  </div>
+</div>
 </section>
-
-
 <section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
 <div class="indicador-seccion">
-  <h2>🎯 Encuentra justo lo que necesitas</h2>
-      <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
+<h2>🎯 Encuentra justo lo que necesitas</h2>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
 </div>
-  <div class="categoria-grid">
+<div class="categoria-grid">
 <div class="categoria-tarjeta">
-  <a href="/guia/ratones-esports">
-    <div class="bg-img" style="background-image: url('global/images/6.png')"></div>
-    <span class="categoria-label">Para competir</span>
-    <div class="categoria-texto">
-      <h3>Ratones de alta precisión</h3>
-      <p>Diseñados para shooters tipo Valorant o CS2</p>
-    </div>
-      <img class="avatar-autor" src="global/images/avatarSara.jpg" alt="Avatar Carlos">
-  </a>
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('global/images/6.png')"></div>
+<span class="categoria-label">Para competir</span>
+<div class="categoria-texto">
+<h3>Ratones de alta precisión</h3>
+<p>Diseñados para shooters tipo Valorant o CS2</p>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a><div class="contenedor-avatar" style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Carlos López" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div></a>
 </div>
 <div class="categoria-tarjeta">
-  <a href="/guia/ratones-esports">
-    <div class="bg-img" style="background-image: url('global/images/7.png')"></div>
-    <span class="categoria-label">Para competir</span>
-    <div class="categoria-texto">
-      <h3>Ratones de alta precisión</h3>
-      <p>Diseñados para shooters tipo Valorant o CS2</p>
-    </div>
-      <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-  </a>
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('global/images/7.png')"></div>
+<span class="categoria-label">Para competir</span>
+<div class="categoria-texto">
+<h3>Ratones de alta precisión</h3>
+<p>Diseñados para shooters tipo Valorant o CS2</p>
 </div>
-  </div>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a><div class="contenedor-avatar" style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Carlos López" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div></a>
+</div>
+</div>
 </section>
-
-
 <section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
 <div class="indicador-seccion">
-  <h2>🎯 Colecciones destacadas</h2>
-        <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
-</div>  <div class="categoria-grid">
+<h2>🎯 Colecciones destacadas</h2>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
+</div> <div class="categoria-grid">
 <div class="categoria-tarjeta">
-  <a href="/guia/ratones-esports">
-    <div class="bg-img" style="background-image: url('global/images/8.png')"></div>
-    <span class="categoria-label">Verano 2025</span>
-    <div class="categoria-texto">
-          <h3>Ratones frescos y teclados sin cables</h3>
-          <p>Ideales para combatir el calor y el cableado</p>
-    </div>
-      <img class="avatar-autor" src="global/images/avatarSara.jpg" alt="Avatar Carlos">
-
-  </a>
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('global/images/8.png')"></div>
+<span class="categoria-label">Verano 2025</span>
+<div class="categoria-texto">
+<h3>Ratones frescos y teclados sin cables</h3>
+<p>Ideales para combatir el calor y el cableado</p>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a><div class="contenedor-avatar" style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Carlos López" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div></a>
 </div>
 <div class="categoria-tarjeta">
-  <a href="/guia/ratones-esports">
-    <div class="bg-img" style="background-image: url('global/images/9.png')"></div>
-    <span class="categoria-label">🎮 Regalos</span>
-    <div class="categoria-texto">
-          <h3>Ideas para gamers y streamers</h3>
-          <p>Desde 15€ hasta setups completos</p>
-    </div>
-      <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-  </a>
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('global/images/9.png')"></div>
+<span class="categoria-label">🎮 Regalos</span>
+<div class="categoria-texto">
+<h3>Ideas para gamers y streamers</h3>
+<p>Desde 15€ hasta setups completos</p>
 </div>
-  </div>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a><div class="contenedor-avatar" style="position: absolute; bottom: 10px; right: 10px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Carlos López" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div></a>
+</div>
+</div>
 </section>
-
-
 <section class="tabla-categorias seccion-contenedor">
-  <div class="tabla-grid">
-    <div>
-  <div class="categoria-barra">
-    <span class="nombre-categoria">🤖 Tecnología</span>
-    <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
-  </div>
-
-<div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarSara.jpg" alt="Avatar Carlos">
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+<div class="tabla-grid">
+<div>
+<div class="categoria-barra">
+<span class="nombre-categoria">🤖 Tecnología</span>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
 </div>
 <div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
 </div>
 <div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
 </div>
-
-
-      <div class="ver-mas-categoria">
-  <a href="/categoria/gaming">Ver más de Gaming →</a>
-</div>
-    </div>
-
-    <!-- Columna Deportes -->
-    <div>
-  <div class="categoria-barra">
-    <span class="nombre-categoria">🎮 Gaming</span>
-    <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
-  </div>
-<div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+</a>
 </div>
 <div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
 </div>
-<div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+</a>
 </div>
 <div class="ver-mas-categoria">
-  <a href="/categoria/gaming">Ver más de Deportes →</a>
+<a href="/categoria/gaming">Ver más de Gaming →</a>
 </div>
-    </div>
-
-    <!-- Columna Tecnología -->
-    <div>
-  <div class="categoria-barra">
-    <span class="nombre-categoria">🧠 Salud</span>
-    <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
-  </div> 
-<div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+</div>
+<!-- Columna Deportes -->
+<div>
+<div class="categoria-barra">
+<span class="nombre-categoria">🎮 Gaming</span>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
 </div>
 <div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
 </div>
 <div class="tarjeta-final">
-  <a href="/guia/ratones-esports">
-    <div class="contenedor-img">
-      <img src="global/images/1.png" alt="Ratones para eSports">
-      <span class="post-category">Gaming</span>
-        <img class="avatar-autor" src="global/images/avatarCarlos.png" alt="Avatar Carlos">
-
-    </div>
-    <div class="info-texto">
-      <h4>Ratones para eSports: precisión extrema</h4>
-      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-      <p class="autor-fecha">por Carlos López – junio 2025</p>
-    </div>
-  </a>
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
 </div>
-      <div class="ver-mas-categoria">
-  <a href="/categoria/gaming">Ver más de Tecnología →</a>
+</a>
 </div>
-    </div>
-
-  </div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="ver-mas-categoria">
+<a href="/categoria/gaming">Ver más de Deportes →</a>
+</div>
+</div>
+<!-- Columna Tecnología -->
+<div>
+<div class="categoria-barra">
+<span class="nombre-categoria">🧠 Salud</span>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Carlos López"><img alt="Avatar" class="avatar-autor" src="global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="ver-mas-categoria">
+<a href="/categoria/gaming">Ver más de Tecnología →</a>
+</div>
+</div>
+</div>
 </section>
 {% include footer.html %}
 
