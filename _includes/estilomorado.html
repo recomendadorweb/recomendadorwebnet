@@ -1,6 +1,28 @@
 <style>
+  @font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-700.woff2') format('woff2');
+}
+
 body{ font-family:'Poppins',sans-serif;line-height:1.5;margin:0;padding:0;background:linear-gradient(135deg,#ede7f6,#fce4ec);color:#4a3c4c;}
-.container{ max-width:920px;margin:auto;padding:1.3em 2em 2em 2em;background:#ffffffeb;backdrop-filter:blur(2px);}
+.container{ max-width:1000px;margin:auto;padding:1.3em 2em 2em 2em;background:#ffffffeb;backdrop-filter:blur(2px);}
 h1,h2,h3{ color:#7b4b94;}
 h1{ font-size:2.4em;margin-bottom:0.5em;}
 h2{ margin-top:2em;font-size:1.8em;}
@@ -22,13 +44,13 @@ footer{ font-size:0.9em;text-align:center;color:#666;margin-top:3em;}
 .main-nav{ background:#7b4b94;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
 .nav-container{ max-width:960px;margin:auto;display:flex;align-items:center;justify-content:flex-end;padding:1em;flex-wrap:wrap;}
 .nav-links{ display:flex;gap:1.2em;list-style:none;padding:0;margin:0;}
-.nav-links a{ color:#fff;text-decoration:none;font-weight:500;}
+.nav-links a{ color:#fff;text-decoration:none; font-size: 1em;font-weight:500;}
 .nav-links a:hover{ color:#ede7f6;}
 @media (max-width:768px){ .nav-container{ flex-direction:column;align-items:flex-start;gap:1em;} .nav-links{ flex-direction:column;width:100%;} }
 .hamburger{ display:none;font-size:1.3em;cursor:pointer;color:white;}
 @media (max-width:768px){ .hamburger{ display:block;} .nav-links{ display:none;flex-direction:column;width:100%;margin-top:1em;} }
-.hero-inner{ display:flex;align-items:flex-start;justify-content:flex-start;width:100%;max-width:1140px;margin:auto;gap:1em;}
-.hero-texto p{ font-size:1.3em;margin:0;  line-height: 14.4px;}
+.hero-inner{ display:flex;align-items:flex-start;justify-content:flex-start;width:100%;max-width:1000px;margin:auto;gap:1em;}
+.hero-texto p{ font-size:1.2em;margin:0;  line-height: 14.4px;}
 @media (max-width:768px){ .hero-inner{ gap:1em; } .hero-texto p{ font-size:1em; line-height: 1; } }
 .nav-links li.dropdown{ position:relative;}
 .nav-links .submenu{ display:none;position:absolute;background-color:#7b4b94;padding:0.5em 0;list-style:none;top:100%;left:0;min-width:180px;z-index:10;border-radius:0 0 6px 6px;}
@@ -36,7 +58,7 @@ footer{ font-size:0.9em;text-align:center;color:#666;margin-top:3em;}
 .nav-links .submenu a{ display:block;padding:0.6em 1em;color:#fff;text-decoration:none;white-space:nowrap;}
 .nav-links .submenu a:hover{ background-color:#5e3574;}
 .hero-banner-rediseñado{ background:linear-gradient(135deg,#9977d8 0%,#5e3574 50%,#9977d8 100%);height:96px;display:flex;align-items:center;justify-content:flex-start;border-bottom:1px solid #fbeff2;}
-.hero-banner-rediseñado .hero-inner{ max-width:920px;width:100%;margin:auto;display:flex;align-items:center;padding:0 2em;}
+.hero-banner-rediseñado .hero-inner{ max-width:1000px;width:100%;margin:auto;display:flex;align-items:center;padding:0 2em;}
 .hero-banner-rediseñado .hero-logo img{ max-height:64px;height:auto;width:auto;margin:0;transform:none;}
 .hero-banner-rediseñado .hero-texto{ text-align:right;flex:1;}
 .hero-banner-rediseñado .hero-texto p{ font-size:0.9em;margin:0.2em 0;color:white;}
@@ -109,7 +131,6 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1em;
   font-weight: 400;
   color: #222;
 }
@@ -125,13 +146,8 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-
-html {
-  font-size: 16px;
-}
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1em;
   font-weight: 400;
   color: #222;
   line-height: 1.5;
@@ -217,12 +233,6 @@ body {
   p {
     line-height: 1.7;
   }
-}
-nav a {
-  font-family: 'Poppins', sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 25.6px;
 }
 
 </style>
