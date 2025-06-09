@@ -87,10 +87,10 @@ h2 {
   left: 0;
   background-color: #fc3c68; /* Azul oscuro típico de Krio */
   color: #fff;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
   text-transform: uppercase;
-  padding: 6px 12px;
+  padding: 3px 8px;
   border-radius: 0 0 4px 0; /* solo esquina inferior derecha redondeada */
   z-index: 3;
   letter-spacing: 0.4px;
@@ -307,13 +307,34 @@ a {
 
 .categoria-tarjeta {
   position: relative;
-  height: 180px; /* Tarjetas más compactas */
-  border-radius: 8px;
   overflow: hidden;
+  height: 150px; /* 👈 aquí se define la altura */
+  border-radius: 8px;
+}
+
+.categoria-tarjeta .bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, filter 0.4s ease;
+  z-index: 1;
 }
+
+.categoria-tarjeta:hover .bg-img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+.categoria-tarjeta .categoria-label,
+.categoria-tarjeta .categoria-texto {
+  position: bottom;
+  z-index: 2;
+}
+
 
 .categoria-tarjeta a {
   display: block;
@@ -322,6 +343,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 
 .categoria-label {
   position: absolute;
@@ -352,6 +374,7 @@ a {
   margin: 0 0 3px;
   font-size: 1em;
   font-weight: bold;
+  color: white;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 
@@ -684,7 +707,7 @@ a {
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   padding: 25px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .indicador-seccion {
@@ -724,7 +747,64 @@ a {
 .indicador-seccion .boton-seccion:hover {
   background-color: rgba(255,255,255,0.15);
 }
-     
+ .tarjeta-final {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+    margin-bottom: 7px;
+
+}
+
+.tarjeta-final .contenedor-img {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.tarjeta-final .contenedor-img:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+
+.tarjeta-final img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+
+
+.tarjeta-final .info-texto {
+  padding: 12px 15px;
+}
+
+.tarjeta-final h4 {
+  margin: 0 0 6px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #222;
+}
+
+.tarjeta-final .autor-fecha {
+  font-size: 0.8em;
+  color: #888;
+  margin: 0;
+}
+.tarjeta-final .descripcion {
+  margin: 6px 0 4px;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;
+}
+
+
+
 
 </style>
 
@@ -773,24 +853,26 @@ a {
       <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
 </div>
   <div class="categoria-grid">
-    <div class="categoria-tarjeta" style="background-image: url('global/images/6.png')">
-      <a href="/guia/ratones-esports">
-        <span class="categoria-label">Para competir</span>
-        <div class="categoria-texto">
-          <h3>Ratones de alta precisión</h3>
-          <p>Diseñados para shooters tipo Valorant o CS2</p>
-        </div>
-      </a>
+<div class="categoria-tarjeta">
+  <a href="/guia/ratones-esports">
+    <div class="bg-img" style="background-image: url('global/images/6.png')"></div>
+    <span class="categoria-label">Para competir</span>
+    <div class="categoria-texto">
+      <h3>Ratones de alta precisión</h3>
+      <p>Diseñados para shooters tipo Valorant o CS2</p>
     </div>
-    <div class="categoria-tarjeta" style="background-image: url('global/images/7.png')">
-      <a href="/guia/teclados-oficina">
-        <span class="categoria-label">Para trabajar</span>
-        <div class="categoria-texto">
-          <h3>Teclados silenciosos y cómodos</h3>
-          <p>Perfectos para teletrabajo o estudios</p>
-        </div>
-      </a>
+  </a>
+</div>
+<div class="categoria-tarjeta">
+  <a href="/guia/ratones-esports">
+    <div class="bg-img" style="background-image: url('global/images/7.png')"></div>
+    <span class="categoria-label">Para competir</span>
+    <div class="categoria-texto">
+      <h3>Ratones de alta precisión</h3>
+      <p>Diseñados para shooters tipo Valorant o CS2</p>
     </div>
+  </a>
+</div>
   </div>
 </section>
 
@@ -800,24 +882,26 @@ a {
   <h2>🎯 Colecciones destacadas</h2>
         <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
 </div>  <div class="categoria-grid">
-    <div class="categoria-tarjeta" style="background-image: url('global/images/8.png')">
-      <a href="/coleccion/especial-verano">
-        <span class="categoria-label">Verano 2025</span>
-        <div class="categoria-texto">
+<div class="categoria-tarjeta">
+  <a href="/guia/ratones-esports">
+    <div class="bg-img" style="background-image: url('global/images/8.png')"></div>
+    <span class="categoria-label">Verano 2025</span>
+    <div class="categoria-texto">
           <h3>Ratones frescos y teclados sin cables</h3>
           <p>Ideales para combatir el calor y el cableado</p>
-        </div>
-      </a>
     </div>
-    <div class="categoria-tarjeta" style="background-image: url('global/images/9.png')">
-      <a href="/coleccion/regalos-gamers">
-        <span class="categoria-label">🎮 Regalos</span>
-        <div class="categoria-texto">
+  </a>
+</div>
+<div class="categoria-tarjeta">
+  <a href="/guia/ratones-esports">
+    <div class="bg-img" style="background-image: url('global/images/9.png')"></div>
+    <span class="categoria-label">🎮 Regalos</span>
+    <div class="categoria-texto">
           <h3>Ideas para gamers y streamers</h3>
           <p>Desde 15€ hasta setups completos</p>
-        </div>
-      </a>
     </div>
+  </a>
+</div>
   </div>
 </section>
 
@@ -829,30 +913,48 @@ a {
     <span class="nombre-categoria">🤖 Tecnología</span>
     <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
   </div>
-  <div class="card-post clasica">
-  <img src="global/images/1.png" alt="Ratones para eSports">
-  <div class="card-texto">
-    <h4>Ratones para eSports</h4>
-    <p>Los mejores modelos para competir a alto nivel en shooters como Valorant o CS2.</p>
-    <div class="autor">por Carlos López</div>
-  </div>
+
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
 </div>
-<div class="card-post clasica">
-  <img src="global/images/1.png" alt="Ratones para eSports">
-  <div class="card-texto">
-    <h4>Ratones para eSports</h4>
-    <p>Los mejores modelos para competir a alto nivel en shooters como Valorant o CS2.</p>
-    <div class="autor">por Carlos López</div>
-  </div>
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
 </div>
-<div class="card-post clasica">
-  <img src="global/images/1.png" alt="Ratones para eSports">
-  <div class="card-texto">
-    <h4>Ratones para eSports</h4>
-    <p>Comparativa de los mejores ratones para competir en shooters.</p>
-    <div class="autor">por Carlos López</div>
-  </div>
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
 </div>
+
+
       <div class="ver-mas-categoria">
   <a href="/categoria/gaming">Ver más de Gaming →</a>
 </div>
@@ -864,24 +966,45 @@ a {
     <span class="nombre-categoria">🎮 Gaming</span>
     <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
   </div>
-        <div class="card-post">
-        <img src="global/images/3.png" alt="Deportes">
-        <div class="overlay">
-          <h4>Zapatillas running 2025</h4>
-        </div>
-      </div>
-            <div class="card-post">
-        <img src="global/images/3.png" alt="Deportes">
-        <div class="overlay">
-          <h4>Zapatillas running 2025</h4>
-        </div>
-      </div>
-            <div class="card-post">
-        <img src="global/images/3.png" alt="Deportes">
-        <div class="overlay">
-          <h4>Zapatillas running 2025</h4>
-        </div>
-      </div>
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
+</div>
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
+</div>
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
+</div>
 <div class="ver-mas-categoria">
   <a href="/categoria/gaming">Ver más de Deportes →</a>
 </div>
@@ -892,24 +1015,46 @@ a {
   <div class="categoria-barra">
     <span class="nombre-categoria">🧠 Salud</span>
     <a href="/categoria/gaming" class="boton-categoria">Ver más</a>
-  </div>      <div class="card-post">
-        <img src="global/images/5.png" alt="Tecnología">
-        <div class="overlay">
-          <h4>Micrófonos para streaming</h4>
-        </div>
-      </div>
-            <div class="card-post">
-        <img src="global/images/5.png" alt="Tecnología">
-        <div class="overlay">
-          <h4>Micrófonos para streaming</h4>
-        </div>
-      </div>
-            <div class="card-post">
-        <img src="global/images/5.png" alt="Tecnología">
-        <div class="overlay">
-          <h4>Micrófonos para streaming</h4>
-        </div>
-      </div>
+  </div> 
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
+</div>
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
+</div>
+<div class="tarjeta-final">
+  <a href="/guia/ratones-esports">
+    <div class="contenedor-img">
+      <img src="global/images/1.png" alt="Ratones para eSports">
+      <span class="post-category">Gaming</span>
+    </div>
+    <div class="info-texto">
+      <h4>Ratones para eSports: precisión extrema</h4>
+      <p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+      <p class="autor-fecha">por Carlos López – junio 2025</p>
+    </div>
+  </a>
+</div>
       <div class="ver-mas-categoria">
   <a href="/categoria/gaming">Ver más de Tecnología →</a>
 </div>
