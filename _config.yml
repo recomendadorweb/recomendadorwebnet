@@ -15,7 +15,10 @@ permalink: pretty
 # Markdown por defecto
 markdown: kramdown
 
-plugins: []
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-archives
+  - jekyll/tagging
 
 # Soporte para includes con relative_url
 defaults:
@@ -23,3 +26,39 @@ defaults:
       path: ""
     values:
       layout: default
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
+  auto: true
+  indexpage: 'index.html'
+
+tag_page_layout: tag
+tag_page_dir: tag
+tag_permalink_style: pretty
+tag_permalink: '/tag/:name/'
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+    - year
+    - month
+  layouts:
+    year: archive
+    month: archive
+    tag: archive
+    category: archive
+  permalinks:
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
