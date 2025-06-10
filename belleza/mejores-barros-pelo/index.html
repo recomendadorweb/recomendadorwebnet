@@ -57,16 +57,40 @@
       </a>
     </div>
     <div class="hero-texto" style="margin-left: auto; text-align: right;">
-      <p><strong>🛡️ Recomendaciones reales desde 2017</strong></p>
+      <p><strong>🛡️ Recomendaciones reales desde 2020</strong></p>
       <p>⭐ Análisis imparciales por expertos</p>
+      <p>🔝​ Lo probamos por ti para que elijas lo mejor</p>
+
     </div>
   </div>
 </header>
 
 
   <style>
-body{ font-family:'Poppins',sans-serif;line-height:1.6;margin:0;padding:0;background:linear-gradient(135deg,#ede7f6,#fce4ec);color:#4a3c4c;}
-.container{ max-width:920px;margin:auto;padding:1.3em 2em 2em 2em;background:#ffffffeb;backdrop-filter:blur(2px);}
+  @font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-700.woff2') format('woff2');
+}
+
+body{ font-family:'Poppins',sans-serif;line-height:1.5;margin:0;padding:0;background:linear-gradient(135deg,#ede7f6,#fce4ec);color:#4a3c4c;}
+.container{ max-width:1000px;margin:auto;padding:1.3em 2em 2em 2em;background:#ffffffeb;backdrop-filter:blur(2px);}
 h1,h2,h3{ color:#7b4b94;}
 h1{ font-size:2.4em;margin-bottom:0.5em;}
 h2{ margin-top:2em;font-size:1.8em;}
@@ -88,21 +112,21 @@ footer{ font-size:0.9em;text-align:center;color:#666;margin-top:3em;}
 .main-nav{ background:#7b4b94;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
 .nav-container{ max-width:960px;margin:auto;display:flex;align-items:center;justify-content:flex-end;padding:1em;flex-wrap:wrap;}
 .nav-links{ display:flex;gap:1.2em;list-style:none;padding:0;margin:0;}
-.nav-links a{ color:#fff;text-decoration:none;font-weight:500;}
+.nav-links a{ color:#fff;text-decoration:none; font-size: 1em;font-weight:500;}
 .nav-links a:hover{ color:#ede7f6;}
 @media (max-width:768px){ .nav-container{ flex-direction:column;align-items:flex-start;gap:1em;} .nav-links{ flex-direction:column;width:100%;} }
 .hamburger{ display:none;font-size:1.3em;cursor:pointer;color:white;}
 @media (max-width:768px){ .hamburger{ display:block;} .nav-links{ display:none;flex-direction:column;width:100%;margin-top:1em;} }
-.hero-inner{ display:flex;align-items:flex-start;justify-content:flex-start;width:100%;max-width:1140px;margin:auto;gap:1em;}
-.hero-texto p{ font-size:1.3em;margin:0;}
-@media (max-width:768px){ .hero-inner{ gap:1em; } .hero-texto p{ font-size:1em; } }
+.hero-inner{ display:flex;align-items:flex-start;justify-content:flex-start;width:100%;max-width:1000px;margin:auto;gap:1em;}
+.hero-texto p{ font-size:1.2em;margin:0;  line-height: 14.4px;}
+@media (max-width:768px){ .hero-inner{ gap:1em; } .hero-texto p{ font-size:1em; line-height: 1; } }
 .nav-links li.dropdown{ position:relative;}
 .nav-links .submenu{ display:none;position:absolute;background-color:#7b4b94;padding:0.5em 0;list-style:none;top:100%;left:0;min-width:180px;z-index:10;border-radius:0 0 6px 6px;}
 .nav-links .submenu li{ margin:0;}
 .nav-links .submenu a{ display:block;padding:0.6em 1em;color:#fff;text-decoration:none;white-space:nowrap;}
 .nav-links .submenu a:hover{ background-color:#5e3574;}
 .hero-banner-rediseñado{ background:linear-gradient(135deg,#9977d8 0%,#5e3574 50%,#9977d8 100%);height:96px;display:flex;align-items:center;justify-content:flex-start;border-bottom:1px solid #fbeff2;}
-.hero-banner-rediseñado .hero-inner{ max-width:920px;width:100%;margin:auto;display:flex;align-items:center;padding:0 2em;}
+.hero-banner-rediseñado .hero-inner{ max-width:1000px;width:100%;margin:auto;display:flex;align-items:center;padding:0 2em;}
 .hero-banner-rediseñado .hero-logo img{ max-height:64px;height:auto;width:auto;margin:0;transform:none;}
 .hero-banner-rediseñado .hero-texto{ text-align:right;flex:1;}
 .hero-banner-rediseñado .hero-texto p{ font-size:0.9em;margin:0.2em 0;color:white;}
@@ -175,7 +199,6 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1em;
   font-weight: 400;
   color: #222;
 }
@@ -183,7 +206,7 @@ body {
 p {
   font-size: 1em;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #222;
 }
 
@@ -191,18 +214,12 @@ h1, h2, h3 {
   font-weight: 700;
 }
 
-
-html {
-  font-size: 16px;
-}
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1em;
   font-weight: 400;
   color: #222;
   line-height: 1.5;
   letter-spacing: 0;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 p {
@@ -285,50 +302,59 @@ body {
     line-height: 1.7;
   }
 }
-</style>
 
+</style>
 <nav class="main-nav">
-  <div class="nav-container" style="padding: 0.4em 1em;">
+  <div class="nav-container" style="padding: 0.4em 1em; display: flex; justify-content: space-between; align-items: center;">
+    
+    <!-- Enlace del Blog a la izquierda -->
+    <div class="nav-left nav-links">
+      <a href="/" style="color: white; text-decoration: none; font-weight: 500;">📝 Inicio</a>
+    </div>
+    <!-- Guías de compra y el resto de enlaces -->
+    <div class="nav-right" style="display: flex; align-items: center; gap: 1.2em; margin-left: auto;">
     <div class="hamburger" id="menu-toggle">☰</div>
-    <ul class="nav-links">
+      <ul class="nav-links" style="margin: 0;">
         <li class="dropdown">
-        <a href="/belleza/mejores-barros-pelo/">💄 Belleza</a>
-        <ul class="submenu">
-          <li><a href="/belleza/mejores-barros-pelo/">💄 Barros para el Pelo</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="/salud/mejor-cojin-antiescaras/">🧠 Salud</a>
-        <ul class="submenu">
-          <li><a href="/salud/mejor-cojin-antiescaras/">🧠 Cojín antiescaras</a></li>
-        </ul>
-      </li>
-       <li class="dropdown">
-        <a href="/mejores-bicicletas-electricas/">🚴‍♂️ Deportes</a>
-        <ul class="submenu">
-          <li><a href="/mejores-bicicletas-electricas/">🚴‍♂️ Bicicletas Eléctricas</a></li>
-        </ul>
-      </li>
+          <a href="/belleza/mejores-barros-pelo/">💄 Belleza</a>
+          <ul class="submenu">
+            <li><a href="/belleza/mejores-barros-pelo/">💄 Barros para el Pelo</a></li>
+          </ul>
+        </li>
         <li class="dropdown">
-        <a href="">🎮 Gaming</a>
-        <ul class="submenu">
-          <li><a href="/mejores-teclados-gaming/">⌨️ Mejores Teclados Gaming</a></li>
-          <li><a href="/mejores-ratones-gaming/">🖱 Mejores Ratones Gaming</a></li>
-          <li><a href="/mejores-auriculares-gaming/">🎧 Mejores Auriculares Gaming</a></li>
-          <li><a href="/raton-gaming-mars/">🖱 Ratones Mars Gaming</a></li>
-          <li><a href="/teclado-mars-gaming/">⌨️ Teclados Mars Gaming</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="">🤖 Tecnología</a>
-        <ul class="submenu">
-          <li><a href="/mejores-microfonos-gaming/">🎙 Mejores Micrófonos</a></li>
-        </ul>
-      </li>
-      <li><a href="/contacto/">📬 Contacto</a></li>
-    </ul>
+          <a href="/salud/mejor-cojin-antiescaras/">🧠 Salud</a>
+          <ul class="submenu">
+            <li><a href="/salud/mejor-cojin-antiescaras/">🧠 Cojín antiescaras</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/mejores-bicicletas-electricas/">🚴‍♂️ Deportes</a>
+          <ul class="submenu">
+            <li><a href="/mejores-bicicletas-electricas/">🚴‍♂️ Bicicletas Eléctricas</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">🎮 Gaming</a>
+          <ul class="submenu">
+            <li><a href="/mejores-teclados-gaming/">⌨️ Mejores Teclados Gaming</a></li>
+            <li><a href="/mejores-ratones-gaming/">🖱 Mejores Ratones Gaming</a></li>
+            <li><a href="/mejores-auriculares-gaming/">🎧 Mejores Auriculares Gaming</a></li>
+            <li><a href="/raton-gaming-mars/">🖱 Ratones Mars Gaming</a></li>
+            <li><a href="/teclado-mars-gaming/">⌨️ Teclados Mars Gaming</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">🤖 Tecnología</a>
+          <ul class="submenu">
+            <li><a href="/mejores-microfonos-gaming/">🎙 Mejores Micrófonos</a></li>
+          </ul>
+        </li>
+        <li><a href="/contacto/">📬 Contacto</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+
 
 <!-- Menú móvil slide-in mejorado -->
 <div id="overlay" class="overlay" style="display: none;"></div>
@@ -1261,13 +1287,6 @@ body {
 © 2025 Recomendador.net - Algunos enlaces pueden generar comisiones de afiliado sin coste para ti.
 </footer>
 </div>
-
-
-<style>
-.menu-abierto .boton-flotante {
-  display: none !important;
-}
-</style><a class="boton-flotante" href="#mi-eleccion">🎯 Ver barros recomendados</a>
 
 
 
