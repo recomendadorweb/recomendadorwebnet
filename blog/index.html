@@ -1,0 +1,783 @@
+---
+layout: default
+title: Guias de compra verificadas por expertos
+description: "Compara los mejores productos de 2025: desde belleza hasta productos gaming como ratones, teclados, auriculares, micrófonos y más. Guías imparciales con análisis y recomendaciones reales."
+keywords: guías de compra gaming, teclados gaming, auriculares gaming, ratones gaming, recomendaciones periféricos
+canonical: https://recomendador.net
+pagination:
+  enabled: true
+---
+
+  <style>:root {--hotpost-height: 150px; /* Altura base para side-posts */}
+body {font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;}
+h2 {text-align: center;
+  margin: 30px 0 10px;
+  font-size: 1.8em;
+  color: #333;}
+.hot-posts,
+.grid-posts {max-width: 1100px;
+  margin: 0 auto 50px;
+  padding: 0 20px;}
+.hot-posts {margin: 0 auto 30px;}
+/* HOT POSTS estilo Krio */
+.hot-grid {display: grid;
+  grid-template-areas:
+    "main side1"
+    "main side2";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: var(--hotpost-height) var(--hotpost-height);
+  gap: 10px;}
+.main-post {grid-area: main;
+  height: calc(var(--hotpost-height) * 2 + 20px);}
+.side-post:nth-of-type(2) {grid-area: side1;
+  height: var(--hotpost-height);}
+.side-post:nth-of-type(3) {grid-area: side2;
+  height: var(--hotpost-height);}
+.post {position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  height: 100%;}
+.post img {width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;}
+/* Etiqueta de categoría estilo Krio */
+.post-category {position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fc3c68; /* Azul oscuro típico de Krio */
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 0 0 4px 0; /* solo esquina inferior derecha redondeada */
+  z-index: 3;
+  letter-spacing: 0.4px;}
+/* Overlay de título y subtítulo */
+.post-text {position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  z-index: 2;}
+.post-title {margin: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);}
+.post-subtitle {margin: 5px 0 0;
+  font-size: 1em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);}
+.post-text h3 {margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3;}
+.post-text .post-subtitle {margin: 0;
+  font-size: 0.9em;
+  opacity: 0.85;
+  line-height: 1.4;}
+/* GRID POSTS */
+.grid-posts .grid {display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;}
+.grid-posts .post {position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000;
+  height: var(--hotpost-height);}
+.grid-posts img {width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;}
+.grid-posts .post-category,
+.grid-posts .post-text {position: absolute;}
+.grid-posts .post-category {top: 12px;
+  left: 12px;
+  background-color: #e50914;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 3;
+  letter-spacing: 0.5px;}
+.grid-posts .post-text {bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 12px 18px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 80%);
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;}
+.grid-posts h3 {margin: 0;
+  font-size: 1.1em;
+  font-weight: bold;}
+.grid-posts .post-subtitle {margin: 0;
+  font-size: 0.85em;
+  opacity: 0.85;}
+/* Enlaces */
+a {text-decoration: none;
+  color: inherit;}
+/* Responsive */
+@media (max-width: 768px) {.hot-grid {
+    grid-template-areas:
+      "main"
+      "side1"
+      "side2";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;}
+.main-post,
+  .side-post:nth-of-type(2),
+  .side-post:nth-of-type(3),
+  .grid-posts .post {height: auto;}
+}
+.category-list {display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 20px;}
+.category {flex: 1;
+  min-width: 280px;}
+.category-title {font-size: 1.2em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #364e68;
+  padding-bottom: 5px;
+  color: #364e68;
+  text-transform: uppercase;}
+.category ul {list-style: none;
+  padding: 0;
+  margin: 0;}
+.category li {display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;}
+.category li img {width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;}
+.category li a {font-size: 0.95em;
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;}
+.category li a:hover {text-decoration: underline;}
+.category .date {display: block;
+  font-size: 0.8em;
+  color: #777;
+  margin-top: 4px;}
+.categorias-destacadas {max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;}
+.categoria-grid {display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;}
+.categoria-tarjeta {position: relative;
+  overflow: hidden;
+  height: 150px; /* 👈 aquí se define la altura */
+  border-radius: 8px;}
+.categoria-tarjeta .bg-img {position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  z-index: 1;}
+.categoria-tarjeta:hover .bg-img {transform: scale(1.05);
+  filter: brightness(0.8);}
+.categoria-tarjeta .categoria-label,
+.categoria-tarjeta .categoria-texto {position: bottom;
+  z-index: 2;}
+.categoria-tarjeta a {display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;}
+.categoria-label {position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #364e68;
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0 0 4px 0;
+  z-index: 3;}
+.categoria-texto {position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), transparent);
+  color: #fff;
+  z-index: 2;}
+.categoria-texto h3 {margin: 0 0 3px;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);}
+.categoria-texto p {margin: 0;
+  font-size: 0.85em;
+  opacity: 0.9;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);}
+.tabla-categorias {max-width: 1100px;
+  margin: 0 auto 30px;
+  padding: 0 20px;}
+.columna-categoria {display: flex;
+  flex-direction: column;}
+.titulo-categoria {font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-left: 5px solid #fc3c68;
+  padding-left: 12px;
+  color: #222;
+  margin-bottom: 20px;}
+/* Tarjeta tipo card */
+.tarjeta-categoria {display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 10px;}
+.tarjeta-categoria img {width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;}
+.tarjeta-categoria .contenido {display: flex;
+  flex-direction: column;}
+.tarjeta-categoria .contenido h4 {margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: #222;}
+.tarjeta-categoria .contenido p {margin: 4px 0 0;
+  font-size: 0.9em;
+  color: #666;}
+.tabla-grid {display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;}
+/* Tarjetas con texto dentro de la imagen */
+
+
+.columna-categoria {flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;}
+.card-post:not(.clasica) {position: relative;
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);}
+.card-post img {width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;}
+/* Texto dentro de la imagen */
+.card-post .overlay {position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 60%);
+  color: white;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  box-sizing: border-box;}
+.card-post .overlay h4 {margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6); /* mejora la visibilidad */}
+@media (max-width: 768px) {.tabla-grid {
+    grid-template-columns: 1fr;}
+}
+.ver-mas-categoria {margin-top: 10px;}
+.ver-mas-categoria a {display: inline-block;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #364e68;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #f0f4f8;
+  transition: background-color 0.2s ease;}
+.ver-mas-categoria a:hover {background-color: #dde7f0;}
+/* ===== HOT POSTS ===== */
+
+.hot-post,
+.hot-post-secundario {position: relative;
+  overflow: hidden;}
+.hot-post img,
+.hot-post-secundario img {display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;}
+.hot-post:hover img,
+.hot-post-secundario:hover img {transform: scale(1.05);
+  filter: brightness(0.8); /* oscurece la imagen al pasar el ratón */}
+/* ===== TARJETAS DE CATEGORÍA ===== */
+
+.card-post {position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
+.card-post:hover img {transform: scale(1.05);
+  filter: brightness(0.8);}
+/* Nuevo estilo para tarjetas más limpias */
+.card-post.clasica {display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;}
+.card-post.clasica:hover {transform: translateY(-2px);}
+.card-post.clasica img {width: 100%;
+  height: 180px;
+  object-fit: cover;}
+.card-post.clasica .card-texto {padding: 12px 15px;}
+.card-post.clasica .card-texto h4 {margin: 0 0 6px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #222;}
+.card-post.clasica .card-texto p {margin: 0;
+  font-size: 0.9em;
+  color: #666;}
+.card-post.clasica .autor {margin-top: 6px;
+  font-size: 0.8em;
+  color: #999;}
+.categoria-header {display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f4f8;
+  padding: 10px 20px;
+  border-left: 5px solid #fc3c68;
+  border-radius: 8px;
+  margin: 40px auto 20px;
+  max-width: 1100px;}
+.titulo-categoria-header {margin: 0;
+  font-size: 1.4em;
+  color: #333;
+  font-weight: bold;}
+.boton-ver-mas {display: inline-block;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #fc3c68;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;}
+.boton-ver-mas:hover {background-color: #d82b53;}
+.cabeceras-categorias {display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+              gap: 20px;
+              max-width: 1100px;
+              margin: 40px auto 30px;
+              padding: 0 20px;}
+.categoria-barra {background-color: #007bff ;
+  background: linear-gradient(to right, #007bff, #0056d2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 2px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-bottom: 16px;}
+.nombre-categoria {font-size: 0.95em;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;}
+.boton-categoria {font-size: 0.75em;
+  font-weight: 600;
+  color: #ffffff !important;
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 4px 0;}
+.boton-categoria:hover {background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff !important;}
+.seccion-contenedor {background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  padding: 25px 20px;
+  margin-bottom: 10px;}
+.indicador-seccion {background-color: #007bff ;
+  background: linear-gradient(to right, #007bff, #0056d2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  padding: 2px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-bottom: 7px;}
+.indicador-seccion h2 {margin: 0;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  color: white;}
+.indicador-seccion .boton-seccion {font-size: 0.85em;
+  font-weight: 600;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;}
+.indicador-seccion .boton-seccion:hover {background-color: rgba(255,255,255,0.15);}
+.tarjeta-final {background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+    margin-bottom: 7px;}
+.tarjeta-final .contenedor-img {position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;}
+.tarjeta-final .contenedor-img:hover img {transform: scale(1.05);
+  filter: brightness(0.8);}
+.tarjeta-final img {width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;}
+.tarjeta-final .info-texto {padding: 12px 15px;}
+.tarjeta-final h4 {margin: 0 0 6px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #222;}
+.tarjeta-final .autor-fecha {font-size: 0.8em;
+  color: #888;
+  margin: 0;}
+.tarjeta-final .descripcion {margin: 6px 0 4px;
+  font-size: 0.9em;
+  color: #555;
+  line-height: 1.4;}
+.avatar-link {position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 4;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ffffff; /* ✅ aquí va el borde */
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: transform 0.2s ease;}
+.avatar-link:hover {transform: scale(1.1);}
+.avatar-link img.avatar-autor {width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  border: none;
+  pointer-events: none;}
+/* Posición relativa solo donde hace falta */
+.tarjeta-final .contenedor-img,
+.categoria-tarjeta a,
+.post.hot-post.main-post,
+.post.hot-post-secundario.side-post {position: relative;}
+.categoria-tarjeta .contenedor-avatar {position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  z-index: 4;}
+.categoria-tarjeta .avatar-link {display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  transition: transform 0.2s ease;}
+.categoria-tarjeta .avatar-link:hover {transform: scale(1.1);}
+.categoria-tarjeta .avatar-link img.avatar-autor {width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none;
+  pointer-events: none;}
+.tarjeta-final .contenedor-img img {transition: transform 0.4s ease, filter 0.4s ease;}</style>
+
+{% include estiloazul.html %}
+{% include menu.html %}
+
+
+<div class="container">
+<section class="hot-posts seccion-contenedor">
+<div class="hot-grid">
+<article class="post hot-post main-post">
+<a href="#">
+<img alt="Publicación principal" src="/global/images/1.png"/>
+<span class="post-category">Tecnología</span>
+<div class="post-text">
+<h3 class="post-title">El mejor teclado gaming de 2025</h3>
+<p class="post-subtitle">Analizamos los modelos más rápidos y cómodos del mercado</p>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></a>
+</article>
+<article class="post hot-post-secundario side-post">
+<a href="#">
+<img alt="Publicación secundaria 1" src="/global/images/2.png"/>
+<span class="post-category">Periféricos</span>
+<div class="post-text">
+<h3 class="post-title">El mejor teclado gaming de 2025</h3>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></a>
+</article>
+<article class="post hot-post-secundario side-post">
+<a href="#">
+<img alt="Publicación secundaria 1" src="/global/images/3.png"/>
+<span class="post-category">Periféricos</span>
+<div class="post-text">
+<h3 class="post-title">El mejor teclado gaming de 2025</h3>
+</div>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></a>
+</article>
+</div>
+</section>
+<section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
+<div class="indicador-seccion">
+<h2>🎯 Encuentra justo lo que necesitas</h2>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
+</div>
+<div class="categoria-grid">
+<div class="categoria-tarjeta">
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('/global/images/6.png')"></div>
+<span class="categoria-label">Para competir</span>
+<div class="categoria-texto">
+<h3>Ratones de alta precisión</h3>
+<p>Diseñados para shooters tipo Valorant o CS2</p>
+</div>
+<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
+</div>
+<div class="categoria-tarjeta">
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('/global/images/7.png')"></div>
+<span class="categoria-label">Para competir</span>
+<div class="categoria-texto">
+<h3>Ratones de alta precisión</h3>
+<p>Diseñados para shooters tipo Valorant o CS2</p>
+</div>
+<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
+</div>
+</div>
+</section>
+<section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
+<div class="indicador-seccion">
+<h2>🎯 Colecciones destacadas</h2>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
+</div> <div class="categoria-grid">
+<div class="categoria-tarjeta">
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('/global/images/8.png')"></div>
+<span class="categoria-label">Verano 2025</span>
+<div class="categoria-texto">
+<h3>Ratones frescos y teclados sin cables</h3>
+<p>Ideales para combatir el calor y el cableado</p>
+</div>
+<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
+</div>
+<div class="categoria-tarjeta">
+<a href="/guia/ratones-esports">
+<div class="bg-img" style="background-image: url('/global/images/9.png')"></div>
+<span class="categoria-label">🎮 Regalos</span>
+<div class="categoria-texto">
+<h3>Ideas para gamers y streamers</h3>
+<p>Desde 15€ hasta setups completos</p>
+</div>
+<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
+</div>
+</div>
+</section>
+<section class="tabla-categorias seccion-contenedor">
+<div class="tabla-grid">
+<div>
+<div class="categoria-barra">
+<span class="nombre-categoria">🤖 Tecnología</span>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Tecnología</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Tecnología</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Tecnología</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="ver-mas-categoria">
+<a href="/categoria/gaming">Ver más de Gaming →</a>
+</div>
+</div>
+<!-- Columna Deportes -->
+<div>
+<div class="categoria-barra">
+<span class="nombre-categoria">🎮 Gaming</span>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Gaming</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="ver-mas-categoria">
+<a href="/categoria/gaming">Ver más de Deportes →</a>
+</div>
+</div>
+<!-- Columna Tecnología -->
+<div>
+<div class="categoria-barra">
+<span class="nombre-categoria">🧠 Salud</span>
+<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Salud</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Sara Campos"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarSara.jpg"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Salud</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Sara Campos"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarSara.jpg"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="tarjeta-final">
+<a href="/guia/ratones-esports">
+<div class="contenedor-img">
+<img alt="Ratones para eSports" src="/global/images/1.png"/>
+<span class="post-category">Salud</span>
+<a class="avatar-link" href="/autor/carlos" title="Escrito por Sara Campos"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarSara.jpg"/></a></div>
+<div class="info-texto">
+<h4>Ratones para eSports: precisión extrema</h4>
+<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
+<p class="autor-fecha">por Carlos López – junio 2025</p>
+</div>
+</a>
+</div>
+<div class="ver-mas-categoria">
+<a href="/categoria/gaming">Ver más de Tecnología →</a>
+</div>
+</div>
+</div>
+</section>
+
+
+{% include footer.html %}
+
+</div>
