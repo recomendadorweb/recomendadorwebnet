@@ -8,20 +8,38 @@ pagination:
   enabled: true
 ---
 
-  <style>:root {--hotpost-height: 150px; /* Altura base para side-posts */}
-body {font-family: Arial, sans-serif;
+  <style>
+:root {
+  --color-azul-profesional: #364e68;
+  --color-rosa-destacado: #fc3c68;
+  --color-fondo-claro: #f5f5f5;
+  --color-texto-gris: #666;
+  --color-claro-hover: #dde7f0;
+  --color-fondo-widget: #f0f4f8;
+  --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.post img, .card-post img, .tarjeta-final img, .tarjeta-categoria img, .categoria li img, .avatar-link img.avatar-autor {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+:root {--hotpost-height: 150px; /* Altura base para side-posts */}
+body {font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;}
+  background-color: var(--color-fondo-claro);}
 h2 {text-align: center;
   margin: 30px 0 10px;
   font-size: 1.8em;
   color: #333;}
 .hot-posts,
-.grid-posts {max-width: 1100px;
+.grid-posts {max-width: 1200px;
   margin: 0 auto 50px;
-  padding: 0 20px;}
-.hot-posts {margin: 0 auto 30px;}
+  padding: 0 0px;}
+.hot-posts {margin: 0 auto 0px;}
 /* HOT POSTS estilo Krio */
 .hot-grid {display: grid;
   grid-template-areas:
@@ -43,15 +61,12 @@ h2 {text-align: center;
   display: flex;
   flex-direction: column;
   height: 100%;}
-.post img {width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;}
+
 /* Etiqueta de categoría estilo Krio */
 .post-category {position: absolute;
   top: 0;
   left: 0;
-  background-color: #fc3c68; /* Azul oscuro típico de Krio */
+  background-color: var(--color-rosa-destacado); /* Azul oscuro típico de Krio */
   color: #fff;
   font-size: 12px;
   font-weight: 600;
@@ -149,16 +164,16 @@ a {text-decoration: none;
   gap: 30px;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto 60px;
   padding: 0 20px;}
 .category {flex: 1;
   min-width: 280px;}
 .category-title {font-size: 1.2em;
   margin-bottom: 15px;
-  border-bottom: 2px solid #364e68;
+  border-bottom: 2px solid var(--color-azul-profesional);
   padding-bottom: 5px;
-  color: #364e68;
+  color: var(--color-azul-profesional);
   text-transform: uppercase;}
 .category ul {list-style: none;
   padding: 0;
@@ -181,7 +196,7 @@ a {text-decoration: none;
   font-size: 0.8em;
   color: #777;
   margin-top: 4px;}
-.categorias-destacadas {max-width: 1100px;
+.categorias-destacadas {max-width: 1200px;
   margin: 60px auto;
   padding: 0 20px;}
 .categoria-grid {display: grid;
@@ -213,7 +228,7 @@ a {text-decoration: none;
 .categoria-label {position: absolute;
   top: 0;
   left: 0;
-  background-color: #364e68;
+  background-color: var(--color-azul-profesional);
   color: #fff;
   font-size: 10px;
   padding: 4px 10px;
@@ -238,15 +253,15 @@ a {text-decoration: none;
   font-size: 0.85em;
   opacity: 0.9;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);}
-.tabla-categorias {max-width: 1100px;
+.tabla-categorias {max-width: 1120px;
   margin: 0 auto 30px;
-  padding: 0 20px;}
+  padding: 0 10px;}
 .columna-categoria {display: flex;
   flex-direction: column;}
 .titulo-categoria {font-size: 1.1em;
   font-weight: bold;
   text-transform: uppercase;
-  border-left: 5px solid #fc3c68;
+  border-left: 5px solid var(--color-rosa-destacado);
   padding-left: 12px;
   color: #222;
   margin-bottom: 20px;}
@@ -258,13 +273,9 @@ a {text-decoration: none;
   background: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px var(--color-shadow);
   padding: 10px;}
-.tarjeta-categoria img {width: 80px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 4px;
-  flex-shrink: 0;}
+
 .tarjeta-categoria .contenido {display: flex;
   flex-direction: column;}
 .tarjeta-categoria .contenido h4 {margin: 0;
@@ -273,7 +284,7 @@ a {text-decoration: none;
   color: #222;}
 .tarjeta-categoria .contenido p {margin: 4px 0 0;
   font-size: 0.9em;
-  color: #666;}
+  color: var(--color-texto-gris);}
 .tabla-grid {display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;}
@@ -292,10 +303,7 @@ a {text-decoration: none;
   overflow: hidden;
   margin-bottom: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);}
-.card-post img {width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;}
+
 /* Texto dentro de la imagen */
 .card-post .overlay {position: absolute;
   bottom: 0;
@@ -321,13 +329,13 @@ a {text-decoration: none;
 .ver-mas-categoria a {display: inline-block;
   font-size: 0.9em;
   font-weight: bold;
-  color: #364e68;
+  color: var(--color-azul-profesional);
   text-decoration: none;
   padding: 6px 12px;
   border-radius: 20px;
-  background-color: #f0f4f8;
+  background-color: var(--color-fondo-widget);
   transition: background-color 0.2s ease;}
-.ver-mas-categoria a:hover {background-color: #dde7f0;}
+.ver-mas-categoria a:hover {background-color: var(--color-claro-hover);}
 /* ===== HOT POSTS ===== */
 
 .hot-post,
@@ -348,8 +356,8 @@ a {text-decoration: none;
   overflow: hidden;
   border-radius: 8px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-.card-post:hover img {transform: scale(1.05);
+  box-shadow: 0 2px 6px var(--color-shadow);}
+.card-post:hover img {transform: scale(1.05); filter: brightness(0.9); transition: transform 0.3s ease, filter 0.3s ease;
   filter: brightness(0.8);}
 /* Nuevo estilo para tarjetas más limpias */
 .card-post.clasica {display: flex;
@@ -357,7 +365,7 @@ a {text-decoration: none;
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px var(--color-shadow);
   transition: transform 0.2s ease;}
 .card-post.clasica:hover {transform: translateY(-2px);}
 .card-post.clasica img {width: 100%;
@@ -370,7 +378,7 @@ a {text-decoration: none;
   color: #222;}
 .card-post.clasica .card-texto p {margin: 0;
   font-size: 0.9em;
-  color: #666;}
+  color: var(--color-texto-gris);}
 .card-post.clasica .autor {margin-top: 6px;
   font-size: 0.8em;
   color: #999;}
@@ -379,19 +387,20 @@ a {text-decoration: none;
   align-items: center;
   background-color: #f2f4f8;
   padding: 10px 20px;
-  border-left: 5px solid #fc3c68;
+  border-left: 5px solid var(--color-rosa-destacado);
   border-radius: 8px;
   margin: 40px auto 20px;
-  max-width: 1100px;}
+  max-width: 1200px;}
 .titulo-categoria-header {margin: 0;
   font-size: 1.4em;
   color: #333;
-  font-weight: bold;}
+  font-weight: bold;
+  text-align: left;}
 .boton-ver-mas {display: inline-block;
   font-size: 0.9em;
   font-weight: bold;
   color: #fff;
-  background-color: #fc3c68;
+  background-color: var(--color-rosa-destacado);
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 20px;
@@ -400,7 +409,7 @@ a {text-decoration: none;
 .cabeceras-categorias {display: grid;
               grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
               gap: 20px;
-              max-width: 1100px;
+              max-width: 1200px;
               margin: 40px auto 30px;
               padding: 0 20px;}
 .categoria-barra {background-color: #007bff ;
@@ -431,7 +440,7 @@ a {text-decoration: none;
 .seccion-contenedor {background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  padding: 25px 20px;
+  padding: 15px 15px;
   margin-bottom: 10px;}
 .indicador-seccion {background-color: #007bff ;
   background: linear-gradient(to right, #007bff, #0056d2);
@@ -463,19 +472,16 @@ a {text-decoration: none;
 .tarjeta-final {background: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px var(--color-shadow);
   transition: transform 0.2s ease;
     margin-bottom: 7px;}
 .tarjeta-final .contenedor-img {position: relative;
   width: 100%;
   height: 180px;
   overflow: hidden;}
-.tarjeta-final .contenedor-img:hover img {transform: scale(1.05);
+.tarjeta-final .contenedor-img:hover img {transform: scale(1.05); filter: brightness(0.9); transition: transform 0.3s ease, filter 0.3s ease;
   filter: brightness(0.8);}
-.tarjeta-final img {width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;}
+
 .tarjeta-final .info-texto {padding: 12px 15px;}
 .tarjeta-final h4 {margin: 0 0 6px;
   font-size: 1em;
@@ -495,18 +501,14 @@ a {text-decoration: none;
   display: block;
   width: 32px;
   height: 32px;
-  border: 1px solid #ffffff; /* ✅ aquí va el borde */
+  border: 1px solid #000000; /* ✅ aquí va el borde */
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   background-color: #fff;
   transition: transform 0.2s ease;}
 .avatar-link:hover {transform: scale(1.1);}
-.avatar-link img.avatar-autor {width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  border: none;
-  pointer-events: none;}
+
 /* Posición relativa solo donde hace falta */
 .tarjeta-final .contenedor-img,
 .categoria-tarjeta a,
@@ -527,19 +529,168 @@ a {text-decoration: none;
   background-color: #fff;
   transition: transform 0.2s ease;}
 .categoria-tarjeta .avatar-link:hover {transform: scale(1.1);}
-.categoria-tarjeta .avatar-link img.avatar-autor {width: 100%;
-  height: 100%;
+.categoria-tarjeta 
+.tarjeta-final .contenedor-img img {transition: transform 0.4s ease, filter 0.4s ease;}
+.sidebar-list {list-style: none;
+  padding: 0;
+  margin: 0;}
+.sidebar-list li {margin-bottom: 8px;}
+.sidebar-list a {color: var(--color-azul-profesional);
+  text-decoration: none;
+  font-weight: 500;}
+.sidebar-list a:hover {text-decoration: underline;}
+.etiquetas {display: flex;
+  flex-wrap: wrap;
+  gap: 8px;}
+.etiquetas .tag {background-color: var(--color-fondo-widget);
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 0.85em;
+  text-decoration: none;
+  color: var(--color-azul-profesional);
+  font-weight: 500;}
+.etiquetas .tag:hover {background-color: var(--color-claro-hover);}
+
+
+.blog-tarjeta {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-tarjeta:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-thumb img {
+  width: 200px;
+  height: 160px;
   object-fit: cover;
-  border: none;
-  pointer-events: none;}
-.tarjeta-final .contenedor-img img {transition: transform 0.4s ease, filter 0.4s ease;}</style>
+  border-radius: 8px;
+}
+
+.tarjeta-thumb {
+  flex-shrink: 0;
+}
+
+.tarjeta-info {
+  margin-left: 16px;
+  flex: 1;
+}
+
+.tarjeta-title {
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: bold;
+  text-align: left;
+  color: #000000;
+
+}
+
+.tarjeta-title a {
+  color: #000000 !important;
+  text-align: left;
+}
+
+.tarjeta-title a:hover {
+  color: #1A73E8 !important;
+  text-decoration: underline;
+}
+
+.entry-meta {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 8px 0;
+}
+
+.tarjeta-excerpt {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+}
+.popular-box-widget {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.popular-box-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.popular-box-header h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0;
+}
+
+.popular-box-content {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.popular-box-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.popular-thumb {
+  display: block;
+  width: 72px;
+  height: 72px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.popular-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popular-title {
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #222;
+  text-decoration: none;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.popular-title:hover {
+  color: #1A73E8;
+  text-decoration: underline;
+}
+
+.popular-date {
+  font-size: 0.8em;
+  color: #888;
+}
+
+</style>
 
 {% include estiloazul.html %}
 {% include menu.html %}
 
 
-<div class="container">
-<section class="hot-posts seccion-contenedor">
+<div class="container style=padding: 0; !important">
+<section class="hot-posts">
 <div class="hot-grid">
 <article class="post hot-post main-post">
 <a href="#">
@@ -549,7 +700,6 @@ a {text-decoration: none;
 <h3 class="post-title">El mejor teclado gaming de 2025</h3>
 <p class="post-subtitle">Analizamos los modelos más rápidos y cómodos del mercado</p>
 </div>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></a>
 </article>
 <article class="post hot-post-secundario side-post">
 <a href="#">
@@ -558,7 +708,6 @@ a {text-decoration: none;
 <div class="post-text">
 <h3 class="post-title">El mejor teclado gaming de 2025</h3>
 </div>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></a>
 </article>
 <article class="post hot-post-secundario side-post">
 <a href="#">
@@ -567,215 +716,206 @@ a {text-decoration: none;
 <div class="post-text">
 <h3 class="post-title">El mejor teclado gaming de 2025</h3>
 </div>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></a>
 </article>
 </div>
 </section>
-<section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
-<div class="indicador-seccion">
-<h2>🎯 Encuentra justo lo que necesitas</h2>
-<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
-</div>
-<div class="categoria-grid">
-<div class="categoria-tarjeta">
-<a href="/guia/ratones-esports">
-<div class="bg-img" style="background-image: url('/global/images/6.png')"></div>
-<span class="categoria-label">Para competir</span>
-<div class="categoria-texto">
-<h3>Ratones de alta precisión</h3>
-<p>Diseñados para shooters tipo Valorant o CS2</p>
-</div>
-<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
-</div>
-<div class="categoria-tarjeta">
-<a href="/guia/ratones-esports">
-<div class="bg-img" style="background-image: url('/global/images/7.png')"></div>
-<span class="categoria-label">Para competir</span>
-<div class="categoria-texto">
-<h3>Ratones de alta precisión</h3>
-<p>Diseñados para shooters tipo Valorant o CS2</p>
-</div>
-<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
-</div>
-</div>
+<div class="contenido-con-sidebar" style="display: flex; max-width: 1120px; margin: 0 auto; padding: 0 0px;">
+<div class="contenido-principal" style="width: 75%;">
+<h2 class="titulo-categoria-header">Últimos posts ></h2>
+<section style="max-width: 1200px; margin: auto;">
+
+<article class="blog-tarjeta hentry index-post post-0">
+  <div class="tarjeta-thumb">
+    <a href="tu-url-del-post">
+      <img src="/global/images/1.png" alt="Opera Browser Lets You Apply Dark Mode to Web Page">
+    </a>
+  </div>
+  <div class="tarjeta-info">
+    <h2 class="tarjeta-title">
+      <a href="tu-url-del-post">Opera Browser Lets You Apply Dark Mode to Web Page</a>
+    </h2>
+
+    <p class="tarjeta-excerpt">
+      Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
+    </p>
+        <div class="entry-meta">
+      <span class="entry-author">Por Carlos López</span>
+      <span class="entry-date">• 11 de junio, 2025</span>
+    </div>
+  </div>
+</article>
+<article class="blog-tarjeta hentry index-post post-0">
+  <div class="tarjeta-thumb">
+    <a href="tu-url-del-post">
+      <img src="/global/images/1.png" alt="Opera Browser Lets You Apply Dark Mode to Web Page">
+    </a>
+  </div>
+  <div class="tarjeta-info">
+    <h2 class="tarjeta-title">
+      <a href="tu-url-del-post">Opera Browser Lets You Apply Dark Mode to Web Page</a>
+    </h2>
+
+    <p class="tarjeta-excerpt">
+      Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
+    </p>
+        <div class="entry-meta">
+      <span class="entry-author">Por Carlos López</span>
+      <span class="entry-date">• 11 de junio, 2025</span>
+    </div>
+  </div>
+</article>
+<article class="blog-tarjeta hentry index-post post-0">
+  <div class="tarjeta-thumb">
+    <a href="tu-url-del-post">
+      <img src="/global/images/1.png" alt="Opera Browser Lets You Apply Dark Mode to Web Page">
+    </a>
+  </div>
+  <div class="tarjeta-info">
+    <h2 class="tarjeta-title">
+      <a href="tu-url-del-post">Opera Browser Lets You Apply Dark Mode to Web Page</a>
+    </h2>
+
+    <p class="tarjeta-excerpt">
+      Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
+    </p>
+        <div class="entry-meta">
+      <span class="entry-author">Por Carlos López</span>
+      <span class="entry-date">• 11 de junio, 2025</span>
+    </div>
+  </div>
+</article>
+<article class="blog-tarjeta hentry index-post post-0">
+  <div class="tarjeta-thumb">
+    <a href="tu-url-del-post">
+      <img src="/global/images/1.png" alt="Opera Browser Lets You Apply Dark Mode to Web Page">
+    </a>
+  </div>
+  <div class="tarjeta-info">
+    <h2 class="tarjeta-title">
+      <a href="tu-url-del-post">Opera Browser Lets You Apply Dark Mode to Web Page</a>
+    </h2>
+
+    <p class="tarjeta-excerpt">
+      Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
+    </p>
+        <div class="entry-meta">
+      <span class="entry-author">Por Carlos López</span>
+      <span class="entry-date">• 11 de junio, 2025</span>
+    </div>
+  </div>
+</article>
+
+<article class="blog-tarjeta hentry index-post post-0">
+  <div class="tarjeta-thumb">
+    <a href="tu-url-del-post">
+      <img src="/global/images/1.png" alt="Opera Browser Lets You Apply Dark Mode to Web Page">
+    </a>
+  </div>
+  <div class="tarjeta-info">
+    <h2 class="tarjeta-title">
+      <a href="tu-url-del-post">Opera Browser Lets You Apply Dark Mode to Web Page</a>
+    </h2>
+
+    <p class="tarjeta-excerpt">
+      Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
+    </p>
+        <div class="entry-meta">
+      <span class="entry-author">Por Carlos López</span>
+      <span class="entry-date">• 11 de junio, 2025</span>
+    </div>
+  </div>
+</article>
+
 </section>
-<section class="seccion-contenedor" style="max-width:1100px;padding:20px;">
-<div class="indicador-seccion">
-<h2>🎯 Colecciones destacadas</h2>
-<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
-</div> <div class="categoria-grid">
-<div class="categoria-tarjeta">
-<a href="/guia/ratones-esports">
-<div class="bg-img" style="background-image: url('/global/images/8.png')"></div>
-<span class="categoria-label">Verano 2025</span>
-<div class="categoria-texto">
-<h3>Ratones frescos y teclados sin cables</h3>
-<p>Ideales para combatir el calor y el cableado</p>
 </div>
-<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
+<aside class="barra-lateral" style="width: 25%; margin-left: 15px;">
+
+
+<div class="popular-box-widget">
+  <div class="popular-box-header">
+    <h3>Posts Populares ></h3>
+  </div>
+  <div class="popular-box-content">
+
+    <div class="popular-box-item">
+      <a href="/guia/teclados-gaming" class="popular-thumb" style="background-image:url(/global/images/1.png);"></a>
+      <div class="popular-text">
+        <a href="/guia/teclados-gaming" class="popular-title">Los mejores teclados gaming</a>
+        <div class="popular-date">1 de junio 2025</div>
+      </div>
+    </div>
+
+    <div class="popular-box-item">
+      <a href="/guia/auriculares-streaming" class="popular-thumb" style="background-image:url(/global/images/2.png);"></a>
+      <div class="popular-text">
+        <a href="/guia/auriculares-streaming" class="popular-title">Auriculares ideales para streaming</a>
+        <div class="popular-date">15 de mayo 2025</div>
+      </div>
+    </div>
+
+    <div class="popular-box-item">
+      <a href="/guia/sillas-ergonomicas" class="popular-thumb" style="background-image:url(/global/images/3.png);"></a>
+      <div class="popular-text">
+        <a href="/guia/sillas-ergonomicas" class="popular-title">Top sillas ergonómicas 2025</a>
+        <div class="popular-date">10 de abril 2025</div>
+      </div>
+    </div>
+
+  </div>
 </div>
-<div class="categoria-tarjeta">
-<a href="/guia/ratones-esports">
-<div class="bg-img" style="background-image: url('/global/images/9.png')"></div>
-<span class="categoria-label">🎮 Regalos</span>
-<div class="categoria-texto">
-<h3>Ideas para gamers y streamers</h3>
-<p>Desde 15€ hasta setups completos</p>
+
+
+<div class="widget">
+<h3 class="widget-title">🔥 Populares</h3>
+<ul class="sidebar-list">
+<li><a href="/guia/ratones-esports">Ratones esports para competir</a></li>
+<li><a href="/guia/ratones-ergonomicos">Ratones ergonómicos</a></li>
+<li><a href="/guia/ratones-inalambricos">Modelos sin cables</a></li>
+</ul>
 </div>
-<div class="contenedor-avatar" style="position: absolute; bottom: 32px; right: 0px; width: 32px; height: 32px; z-index: 4;"><a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Carlos López" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div></a>
-</div>
-</div>
-</section>
-<section class="tabla-categorias seccion-contenedor">
-<div class="tabla-grid">
+<div class="widget">
+<h3 class="widget-title">Belleza consciente</h3>
+<div style="display: flex; align-items: center; gap: 12px;">
+<img alt="Sara Campos" src="/global/images/avatarSara.jpg" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid #e0e0e0;"/>
 <div>
-<div class="categoria-barra">
-<span class="nombre-categoria">🤖 Tecnología</span>
-<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Tecnología</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Tecnología</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Tecnología</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="ver-mas-categoria">
-<a href="/categoria/gaming">Ver más de Gaming →</a>
-</div>
-</div>
-<!-- Columna Deportes -->
-<div>
-<div class="categoria-barra">
-<span class="nombre-categoria">🎮 Gaming</span>
-<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Gaming</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Gaming</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Gaming</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Carlos López"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarCarlos.png"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="ver-mas-categoria">
-<a href="/categoria/gaming">Ver más de Deportes →</a>
-</div>
-</div>
-<!-- Columna Tecnología -->
-<div>
-<div class="categoria-barra">
-<span class="nombre-categoria">🧠 Salud</span>
-<a class="boton-categoria" href="/categoria/gaming">Ver más</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Salud</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Sara Campos"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarSara.jpg"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Salud</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Sara Campos"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarSara.jpg"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="tarjeta-final">
-<a href="/guia/ratones-esports">
-<div class="contenedor-img">
-<img alt="Ratones para eSports" src="/global/images/1.png"/>
-<span class="post-category">Salud</span>
-<a class="avatar-link" href="/autor/carlos" title="Escrito por Sara Campos"><img alt="Avatar" class="avatar-autor" src="/global/images/avatarSara.jpg"/></a></div>
-<div class="info-texto">
-<h4>Ratones para eSports: precisión extrema</h4>
-<p class="descripcion">Comparativa actualizada para shooters como Valorant o CS2.</p>
-<p class="autor-fecha">por Carlos López – junio 2025</p>
-</div>
-</a>
-</div>
-<div class="ver-mas-categoria">
-<a href="/categoria/gaming">Ver más de Tecnología →</a>
+<p style="margin: 0; font-size: 0.85em; color: #444;">Guías naturales de <strong>Sara Campos</strong>, experta en estética y cuidado capilar.</p>
+<a href="/categoria/belleza" style="display: inline-block; margin-top: 5px; font-size: 0.85em; color: #0077aa; font-weight: 600;">→ Ver sección Belleza</a>
 </div>
 </div>
 </div>
-</section>
+<div class="widget">
+<h3 class="widget-title">📅 Calendario</h3>
+<ul class="sidebar-list">
+<li><a href="/calendario/junio-2025">Junio 2025</a></li>
+<li><a href="/calendario/julio-2025">Julio 2025</a></li>
+<li><a href="/calendario/agosto-2025">Agosto 2025</a></li>
+</ul>
+<div class="widget">
+<h3 class="widget-title">🎧 Últimos análisis</h3>
+<ul class="sidebar-list">
+<li><a href="/guia/auriculares-ps5">Auriculares para PS5</a></li>
+<li><a href="/guia/microfonos-streaming">Micrófonos para streaming</a></li>
+</ul>
+</div>
+<div class="widget">
+<h3 class="widget-title">📬 Newsletter</h3>
+<p>Suscríbete para recibir nuestras guías actualizadas:</p>
+<form action="/newsletter" method="post">
+<input name="email" placeholder="Tu email" style="width:100%; padding:8px; margin-bottom:8px; border:1px solid #ccc; border-radius:4px;" type="email"/>
+<button style="width:100%; padding:8px; background-color:#364e68; color:white; border:none; border-radius:4px;" type="submit">Suscribirse</button>
+</form>
+</div>
+<div class="widget">
+<h3 class="widget-title">🏷️ Etiquetas</h3>
+<div class="etiquetas">
+<a class="tag" href="/categoria/gaming">Gaming</a>
+<a class="tag" href="/categoria/tecnologia">Tecnología</a>
+<a class="tag" href="/categoria/belleza">Belleza</a>
+<a class="tag" href="/categoria/salud">Salud</a>
+</div>
+</div>
+</div></aside>
+</div>
 
 
 {% include footer.html %}
