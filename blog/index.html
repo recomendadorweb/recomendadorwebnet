@@ -849,7 +849,17 @@ a {text-decoration: none;
     margin-top: 12px;
   }
 }
-
+@media (max-width: 768px) {
+  .popular-box-widget {
+    width: 100% !important;
+    margin: 0 auto 20px;
+  }
+}
+@media (max-width: 768px) {
+  .widget.type-grid .grid-items {
+    grid-template-columns: 1fr !important;
+  }
+}
 </style>
 
 {% include estiloazul.html %}
