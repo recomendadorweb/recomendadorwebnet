@@ -816,6 +816,40 @@ a {text-decoration: none;
   color: #888;
   margin: 4px 10px 10px;
 }
+@media (max-width: 768px) {
+  .contenido-con-sidebar {
+    flex-direction: column;
+  }
+  .contenido-principal {
+    width: 100% !important;
+  }
+  .barra-lateral {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .blog-tarjeta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-thumb img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .tarjeta-thumb {
+    width: 100%;
+  }
+
+  .tarjeta-info {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+}
+
 </style>
 
 {% include estiloazul.html %}
