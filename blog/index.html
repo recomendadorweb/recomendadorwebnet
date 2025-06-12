@@ -89,6 +89,17 @@ h2 {text-align: center;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);}
+  .comparativa-title {  
+  font-size: 0.95em;
+  font-weight: 600;
+  color: #000000 !important;
+  text-decoration: none;
+  line-height: 1.3;
+  margin: 13px;
+}
+h3.comparativa-title:hover {
+  color: #1A73E8 !important;
+}
 .post-subtitle {margin: 5px 0 0;
   font-size: 1em;
   font-weight: normal;
@@ -690,7 +701,121 @@ a {text-decoration: none;
   font-weight: bold;
   margin: 0;
 }
+.entry-meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
 
+.entry-meta img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.entry-meta span {
+  font-size: 0.85rem;
+  color: #666;
+}
+.load-more-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.load-more-button {
+  background-color: #2979ff;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.load-more-button:hover {
+  background-color: #1a5ed8;
+}
+#back-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 42px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#back-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+#back-top:hover {
+  background-color: #0056b3;
+}
+.widget.type-grid .grid-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.widget.type-grid .grid-item {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  text-align: left;
+}
+
+.widget.type-grid .grid-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.widget.type-grid .grid-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.widget.type-grid .post-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  margin: 8px 10px 0;
+  line-height: 1.3;
+}
+
+.widget.type-grid .post-title:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.widget.type-grid .post-date {
+  font-size: 0.75rem;
+  color: #888;
+  margin: 4px 10px 10px;
+}
 </style>
 
 {% include estiloazul.html %}
@@ -733,7 +858,6 @@ a {text-decoration: none;
 <div class="contenido-con-sidebar" style="display: flex; gap: 0px;">
   <div class="contenido-principal" style="width: 75%;">
 <section style="max-width: 1200px; margin: auto;">
-
 <article class="blog-tarjeta hentry index-post post-0">
   <div class="tarjeta-thumb">
     <a href="tu-url-del-post">
@@ -748,10 +872,14 @@ a {text-decoration: none;
     <p class="tarjeta-excerpt">
       Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
     </p>
-        <div class="entry-meta">
-      <span class="entry-author">Por Carlos López</span>
-      <span class="entry-date">• 11 de junio, 2025</span>
-    </div>
+
+<div class="entry-meta" style="margin-top: 12px;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
+    <img src="/global/images/avatarCarlos.png" alt="Carlos López" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;">
+    <span style="font-size: 0.85rem; color: #666;">Por Carlos López • 11 de junio, 2025</span>
+  </div>
+</div>
+
   </div>
 </article>
 <article class="blog-tarjeta hentry index-post post-0">
@@ -768,10 +896,14 @@ a {text-decoration: none;
     <p class="tarjeta-excerpt">
       Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
     </p>
-        <div class="entry-meta">
-      <span class="entry-author">Por Carlos López</span>
-      <span class="entry-date">• 11 de junio, 2025</span>
-    </div>
+
+<div class="entry-meta" style="margin-top: 12px;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
+    <img src="/global/images/avatarCarlos.png" alt="Carlos López" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;">
+    <span style="font-size: 0.85rem; color: #666;">Por Carlos López • 11 de junio, 2025</span>
+  </div>
+</div>
+
   </div>
 </article>
 <article class="blog-tarjeta hentry index-post post-0">
@@ -788,10 +920,14 @@ a {text-decoration: none;
     <p class="tarjeta-excerpt">
       Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
     </p>
-        <div class="entry-meta">
-      <span class="entry-author">Por Carlos López</span>
-      <span class="entry-date">• 11 de junio, 2025</span>
-    </div>
+
+<div class="entry-meta" style="margin-top: 12px;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
+    <img src="/global/images/avatarCarlos.png" alt="Carlos López" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;">
+    <span style="font-size: 0.85rem; color: #666;">Por Carlos López • 11 de junio, 2025</span>
+  </div>
+</div>
+
   </div>
 </article>
 <article class="blog-tarjeta hentry index-post post-0">
@@ -808,13 +944,16 @@ a {text-decoration: none;
     <p class="tarjeta-excerpt">
       Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
     </p>
-        <div class="entry-meta">
-      <span class="entry-author">Por Carlos López</span>
-      <span class="entry-date">• 11 de junio, 2025</span>
-    </div>
+
+<div class="entry-meta" style="margin-top: 12px;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
+    <img src="/global/images/avatarCarlos.png" alt="Carlos López" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;">
+    <span style="font-size: 0.85rem; color: #666;">Por Carlos López • 11 de junio, 2025</span>
+  </div>
+</div>
+
   </div>
 </article>
-
 <article class="blog-tarjeta hentry index-post post-0">
   <div class="tarjeta-thumb">
     <a href="tu-url-del-post">
@@ -829,17 +968,118 @@ a {text-decoration: none;
     <p class="tarjeta-excerpt">
       Breve resumen del contenido, no más de 2 líneas para mantener el diseño ordenado y limpio.
     </p>
-        <div class="entry-meta">
-      <span class="entry-author">Por Carlos López</span>
-      <span class="entry-date">• 11 de junio, 2025</span>
-    </div>
+
+<div class="entry-meta" style="margin-top: 12px;">
+  <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
+    <img src="/global/images/avatarCarlos.png" alt="Carlos López" style="width: 28px; height: 28px; border-radius: 50%; object-fit: cover;">
+    <span style="font-size: 0.85rem; color: #666;">Por Carlos López • 11 de junio, 2025</span>
+  </div>
+</div>
+
   </div>
 </article>
+
 
 </section>
+<div class="load-more-container">
+  <button class="load-more-button">
+    Load More <span style="margin-left: 4px;">▼</span>
+  </button>
+</div>
+<div class="fila-titulo">
+  <h2 class="titulo-principal">Últimas guías de compra actualizadas ></h2>
+</div>
+<div class="widget HTML is-visible type-grid" id="custom-grid-widget">
+  <div class="grid-items">
+    <div class="grid-item">
+      <a href="#">
+        <img src="/global/images/1.png" alt="Post 1">
+      </a>
+      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
+      <p class="post-date">July 30, 2020</p>
+    </div>
+    <div class="grid-item">
+      <a href="#">
+        <img src="/global/images/2.png" alt="Post 1">
+      </a>
+      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
+      <p class="post-date">July 30, 2020</p>
+    </div>
+    <div class="grid-item">
+      <a href="#">
+        <img src="/global/images/3.png" alt="Post 1">
+      </a>
+      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
+      <p class="post-date">July 30, 2020</p>
+    </div>
+        <div class="grid-item">
+      <!-- contenido personalizado -->
+      <a href="#">
+        <img src="/global/images/1.png" alt="Post 1">
+      </a>
+      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
+      <p class="post-date">July 30, 2020</p>
+    </div>
+    <div class="grid-item">
+      <a href="#">
+        <img src="/global/images/1.png" alt="Post 1">
+      </a>
+      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
+      <p class="post-date">July 30, 2020</p>
+    </div>
+    <div class="grid-item">
+      <a href="#">
+        <img src="/global/images/1.png" alt="Post 1">
+      </a>
+      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
+      <p class="post-date">July 30, 2020</p>
+    </div>
+    <!-- Añade más .grid-item según necesites -->
+  </div>
+</div>
+
 </div>
 <aside class="barra-lateral" style="width: 25%; margin-left: 15px;">
 
+<div class="popular-box-widget">
+  <div class="popular-box-header">
+    <h3>Conoce al equipo ></h3>
+  </div>
+  <div class="popular-box-content">
+    
+    <!-- Carlos López -->
+    <div class="popular-box-item">
+      <a href="/autores/carlos-lopez" class="popular-thumb" style="background-image:url(/global/images/avatarCarlos.png);"></a>
+      <div class="popular-text">
+        <a href="/autores/carlos-lopez" class="popular-title">Carlos López</a>
+        <div class="popular-date">Analista tech con 15 años de experiencia</div>
+      </div>
+    </div>
+
+    <!-- Sara Martín -->
+    <div class="popular-box-item">
+      <a href="/autores/sara-campos" class="popular-thumb" style="background-image:url(/global/images/avatarSara.jpg);"></a>
+      <div class="popular-text">
+        <a href="/autores/sara-campos" class="popular-title">Sara Campos</a>
+        <div class="popular-date">Especialista en belleza y bienestar</div>
+      </div>
+    </div>
+
+        <div class="popular-box-item">
+      <a href="/autores/equipo" class="popular-thumb" style="background-image:url(/global/images/avatarDavid.png);"></a>
+      <div class="popular-text">
+        <a href="/autores/equipo" class="popular-title">David Jimenez</a>
+        <div class="popular-date">Analista deportivo con experiencia en guías y pruebas</div>
+      </div>
+    </div>
+        
+    <div style="text-align: center; margin-top: 12px;">
+      <a href="/sobre-nosotros/" style="font-size: 0.9em; font-weight: bold; color: var(--color-azul-profesional); text-decoration: none;">
+        Ver todo el equipo →
+      </a>
+    </div>
+  </div>
+</div>
 
 <div class="popular-box-widget">
   <div class="popular-box-header">
@@ -873,15 +1113,54 @@ a {text-decoration: none;
 
   </div>
 </div>
+
+<style>
+.tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 11px;
+}
+
+.tag-box a {
+  display: inline-block;
+  padding: 3px 11px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.tag-box a:hover {
+  background: #007bff;
+  color: white !important;
+}
+.popular-box-content.tag-box {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+</style>
+
 <div class="popular-box-widget">
   <div class="popular-box-header">
     <h3>Categorías ></h3>
   </div>
-  <div class="popular-box-content">
-
-
+  <div class="popular-box-content tag-box">
+    {% assign sorted_categories = site.categories | sort %}
+    {% for category in sorted_categories %}
+      <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">
+        {{ category[0] }}
+      </a>
+    {% endfor %}
   </div>
 </div>
+
+
+
 <div class="popular-box-widget">
   <div class="popular-box-header">
     <h3>Newsletter ></h3>
@@ -899,3 +1178,23 @@ a {text-decoration: none;
 {% include footer.html %}
 
 </div>
+<a href="#" id="back-top" title="Volver arriba" role="button">↑</a>
+<script>
+  const backTopBtn = document.getElementById('back-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 150) {
+      backTopBtn.classList.add('visible');
+    } else {
+      backTopBtn.classList.remove('visible');
+    }
+  });
+
+  backTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>

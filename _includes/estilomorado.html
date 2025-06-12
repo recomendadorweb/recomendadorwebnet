@@ -234,5 +234,12 @@ body {
     line-height: 1.7;
   }
 }
+.only-desktop { display: block; }
+.only-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .only-desktop { display: none !important; }
+  .only-mobile { display: block !important; }
+}
 
 </style>
