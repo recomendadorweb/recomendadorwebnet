@@ -39,7 +39,7 @@ pagination:
     before: 2
     after: 2
   auto: true
-  indexpage: 'blog/index.html'
+  indexpage: 'index.html'
 
 tag_page_layout: tag
 tag_page_dir: tag
@@ -58,7 +58,7 @@ jekyll-archives:
     tag: archive
     category: archive
   permalinks:
-    year: '/data_blog/:year/'
-    month: '/data_blog/:year/:month/'
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
     tag: '/tag/:name/'
     category: '/category/:name/'
