@@ -75,6 +75,7 @@ h2 {text-align: center;
   border-radius: 0 0 4px 0; /* solo esquina inferior derecha redondeada */
   z-index: 3;
   letter-spacing: 0.4px;}
+  .post-category:hover {background-color: #004aad; /* Cambia a rojo al pasar el ratón */}
 /* Overlay de título y subtítulo */
 .post-text {position: absolute;
   bottom: 0;
@@ -696,6 +697,7 @@ a {text-decoration: none;
   color: #888;
 }
 .titulo-principal {
+  margin-top: 20px !important;
   font-size: 1.4em;
   color: #333;
   text-align: left;
@@ -885,34 +887,59 @@ a {text-decoration: none;
 
 <div class="container style=padding: 0; !important">
 <section class="hot-posts">
-<div class="hot-grid">
-<article class="post hot-post main-post">
-<a href="#">
-<img alt="Publicación principal" src="/global/images/1.png"/>
-<span class="post-category">Tecnología</span>
-<div class="post-text">
-<h3 class="post-title">El mejor teclado gaming de 2025</h3>
-<p class="post-subtitle">Analizamos los modelos más rápidos y cómodos del mercado</p>
-</div>
-</article>
-<article class="post hot-post-secundario side-post">
-<a href="#">
-<img alt="Publicación secundaria 1" src="/global/images/2.png"/>
-<span class="post-category">Periféricos</span>
-<div class="post-text">
-<h3 class="post-title">El mejor teclado gaming de 2025</h3>
-</div>
-</article>
-<article class="post hot-post-secundario side-post">
-<a href="#">
-<img alt="Publicación secundaria 1" src="/global/images/3.png"/>
-<span class="post-category">Periféricos</span>
-<div class="post-text">
-<h3 class="post-title">El mejor teclado gaming de 2025</h3>
-</div>
-</article>
-</div>
+  <div class="hot-grid">
+    {% assign principal = site.posts | where: "destacado", 1 | first %}
+    {% assign secundario2 = site.posts | where: "destacado", 2 | first %}
+    {% assign secundario3 = site.posts | where: "destacado", 3 | first %}
+
+    {% if principal %}
+    <article class="post hot-post main-post">
+      <a href="{{ principal.url | relative_url }}">
+        <img alt="{{ principal.title }}" src="{{ principal.image | relative_url }}"/>
+            <a href="/categoria/{{ principal.categories[0] | slugify }}/">
+              <span class="post-category"> {{ principal.categories[0] }} </span>
+            </a>
+        <div class="post-text">
+          <h3 class="post-title">{{ principal.title }}</h3>
+          {% if principal.subtitle %}
+            <p class="post-subtitle">{{ principal.subtitle }}</p>
+          {% endif %}
+        </div>
+      </a>
+    </article>
+    {% endif %}
+
+    {% if secundario2 %}
+    <article class="post hot-post-secundario side-post side1">
+      <a href="{{ secundario2.url | relative_url }}">
+        <img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}"/>
+            <a href="/categoria/{{ secundario2.categories[0] | slugify }}/">
+        <span class="post-category">{{ secundario2.categories[0] }}</span>
+        </a>
+        <div class="post-text">
+          <h3 class="post-title">{{ secundario2.title }}</h3>
+        </div>
+      </a>
+    </article>
+    {% endif %}
+
+    {% if secundario3 %}
+    <article class="post hot-post-secundario side-post side2">
+      <a href="{{ secundario3.url | relative_url }}">
+        <img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}"/>
+                    <a href="/categoria/{{ secundario3.categories[0] | slugify }}/">
+
+        <span class="post-category">{{ secundario3.categories[0] }}</span>
+      </a>
+        <div class="post-text">
+          <h3 class="post-title">{{ secundario3.title }}</h3>
+        </div>
+      </a>
+    </article>
+    {% endif %}
+  </div>
 </section>
+
 <div class="fila-titulo">
   <h2 class="titulo-principal">Últimos posts ></h2>
 </div>
