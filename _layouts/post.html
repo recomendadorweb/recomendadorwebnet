@@ -108,8 +108,7 @@ layout: default
     </figure>
     {% endif %}
 
-      {% assign autor = site.data.autores[page.autor] %}
-      
+  {% assign autor = site.data.autor.autores[post.autor] %}
 <div class="autor">
   <a href="{{ autor.enlace }}" style="text-decoration: none; color: inherit;" target="_blank">
     <div class="bloque-autor">
@@ -142,7 +141,7 @@ layout: default
       {% if page.categories %}
         <p><strong>Categorías:</strong>
         {% for category in page.categories %}
-          <a href="/category/{{ category | slugify }}/">{{ category }}</a>
+          <a href="/categoria/{{ category | slugify }}/">{{ category }}</a>
         {% endfor %}
         </p>
       {% endif %}

@@ -919,8 +919,9 @@ a {text-decoration: none;
 <div class="contenido-con-sidebar" style="display: flex; gap: 0px;">
   <div class="contenido-principal" style="width: 75%;">
 <section style="max-width: 1200px; margin: auto;">
-{% for post in site.posts limit:5 %}
-<article class="blog-tarjeta hentry">
+  {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+  {% for post in sorted_posts %}
+<article class="blog-tarjeta hentry post-item" style="display: none;">
   <div class="tarjeta-thumb">
     <a href="{{ post.url | relative_url }}">
       <img src="{{ post.image | default: '/global/images/1.png' }}" alt="{{ post.title }}">
@@ -935,10 +936,10 @@ a {text-decoration: none;
     </p>
     <div class="entry-meta">
       <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
-        {% assign autor = site.data.autores.autores[post.autor] %}
-        <img src="{{ autor.avatar }}" alt="{{ autor.name }}">
+        {% assign autor = site.data.autor.autores.[post.autor] %}
+        <img src="{{ autor.avatar }}" alt="{{ autor.nombre }}">
         <span style="font-size: 0.85rem; color: #666;">
-          Por <a class="author-post" href="{{ autor.url }}">{{ autor.name }}</a> • {% include date_es.html date=post.date %}
+          Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }}</a> • {% include date_es.html date=post.date %}
         </span>
       </div>
     </div>
@@ -946,14 +947,15 @@ a {text-decoration: none;
 </article>
 {% endfor %}
 
-
-
 </section>
-<div class="load-more-container">
-  <button class="load-more-button">
-    Load More <span style="margin-left: 4px;">▼</span>
-  </button>
-</div>
+  <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
+    <button class="load-more-button" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Cargar más ▼</button>
+  </div>
+
+  <div id="enlace-final" style="display: none; margin-top: 2rem; text-align: center;margin-bottom: 2rem;">
+        <a href="/blog/2025/"><button class="load-more-button" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Ver todos los posts</button></a>
+  </div>
+
 <div class="fila-titulo">
   <h2 class="titulo-principal">Últimas guías de compra actualizadas ></h2>
 </div>
@@ -1120,7 +1122,7 @@ a {text-decoration: none;
   <div class="popular-box-content tag-box">
     {% assign sorted_categories = site.categories | sort %}
     {% for category in sorted_categories %}
-      <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">
+      <a href="{{ site.baseurl }}/categoria/{{ category[0] | slugify }}/">
         {{ category[0] }}
       </a>
     {% endfor %}
@@ -1147,6 +1149,30 @@ a {text-decoration: none;
 
 </div>
 <a href="#" id="back-top" title="Volver arriba" role="button">↑</a>
+<script>
+  const posts = document.querySelectorAll('.post-item');
+  const loadMoreButton = document.querySelector('.load-more-button');
+  const enlaceFinal = document.getElementById('enlace-final');
+  let visibleCount = 0;
+  const postsPerClick = 5;
+
+  function showNextPosts() {
+    for (let i = visibleCount; i < visibleCount + postsPerClick; i++) {
+      if (posts[i]) {
+        posts[i].style.display = 'flex'; // usa 'block' si no usas Flexbox
+      }
+    }
+    visibleCount += postsPerClick;
+
+    if (visibleCount >= posts.length) {
+      loadMoreButton.style.display = 'none';
+      enlaceFinal.style.display = 'block';
+    }
+  }
+
+  loadMoreButton.addEventListener('click', showNextPosts);
+  showNextPosts(); // Mostrar los primeros 5 al cargar
+</script>
 <script>
   const backTopBtn = document.getElementById('back-top');
 
