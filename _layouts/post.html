@@ -51,12 +51,16 @@ layout: default
     text-align: center;
   }
 
-  figure.post-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.75rem;
-    border: 1px solid #ddd;
-  }
+figure.post-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  width: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  display: block;
+  margin: auto;
+}
 
   .post-content h2 {
     font-size: 1.5rem;
@@ -108,9 +112,9 @@ layout: default
     </figure>
     {% endif %}
 
-  {% assign autor = site.data.autor.autores[post.autor] %}
+    {% assign autor = site.data.autor.autores.[page.autor] %}
 <div class="autor">
-  <a href="{{ autor.enlace }}" style="text-decoration: none; color: inherit;" target="_blank">
+  <a href="{{ autor.enlaceBlog }}" style="text-decoration: none; color: inherit;" target="_blank">
     <div class="bloque-autor">
       <img alt="{{ autor.descripcion_alt }}" class="avatar" height="48"
         loading="lazy" src="{{ autor.avatar }}" />
