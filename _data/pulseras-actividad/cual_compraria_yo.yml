@@ -1,0 +1,20 @@
+titulo: "¿Cuál compraría yo?"
+intro: >
+  Después de probar estas pulseras durante semanas en distintos contextos (entrenamiento, descanso, trabajo), 
+  aquí te dejo mis recomendaciones personales según el tipo de usuario que seas:
+elecciones:
+  - categoria: "🔝 Para quienes quieren lo mejor en precisión y diseño"
+    modelo: "HUAWEI Band 10 Smartwatch"
+    descripcion: >
+      La **Huawei Band 10** combina diseño elegante, pantalla AMOLED grande y sensores muy precisos. 
+      Es cómoda, se carga rápido y su batería dura hasta dos semanas. Me encantó para entrenar y descansar.
+  - categoria: "⚖️ Para quienes buscan equilibrio entre funciones y precio"
+    modelo: "Xiaomi Smart Band 9"
+    descripcion: >
+      La **Smart Band 9** de Xiaomi tiene una pantalla espectacular y todos los sensores que necesitas. 
+      Es muy ligera, con buena batería, y suficiente para deporte, trabajo y sueño. Muy completa para su precio.
+  - categoria: "💸 Para presupuestos ajustados"
+    modelo: "Xiaomi Smart Band 9 Active"
+    descripcion: >
+      Si solo buscas lo básico pero fiable, la **Smart Band 9 Active** cumple de sobra. 
+      Mide lo esencial, tiene buena autonomía y cuesta mucho menos. Ideal para iniciarse.
