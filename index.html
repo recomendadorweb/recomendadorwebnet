@@ -993,54 +993,30 @@ a {text-decoration: none;
 <div class="fila-titulo">
   <h2 class="titulo-principal">Últimas guías de compra actualizadas ></h2>
 </div>
+
 <div class="widget HTML is-visible type-grid" id="custom-grid-widget">
   <div class="grid-items">
-    <div class="grid-item">
-      <a href="#">
-        <img src="/global/images/1.png" alt="Post 1">
-      </a>
-      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
-      <p class="post-date">July 30, 2020</p>
-    </div>
-    <div class="grid-item">
-      <a href="#">
-        <img src="/global/images/2.png" alt="Post 1">
-      </a>
-      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
-      <p class="post-date">July 30, 2020</p>
-    </div>
-    <div class="grid-item">
-      <a href="#">
-        <img src="/global/images/3.png" alt="Post 1">
-      </a>
-      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
-      <p class="post-date">July 30, 2020</p>
-    </div>
+
+    {% assign guias_actualizadas = site.pages | sort: "last_modified_at" | reverse %}
+    {% for guia in guias_actualizadas %}
+      {% if guia.last_modified_at and guia.title and guia.path contains "index.html" %}
         <div class="grid-item">
-      <!-- contenido personalizado -->
-      <a href="#">
-        <img src="/global/images/1.png" alt="Post 1">
-      </a>
-      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
-      <p class="post-date">July 30, 2020</p>
-    </div>
-    <div class="grid-item">
-      <a href="#">
-        <img src="/global/images/1.png" alt="Post 1">
-      </a>
-      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
-      <p class="post-date">July 30, 2020</p>
-    </div>
-    <div class="grid-item">
-      <a href="#">
-        <img src="/global/images/1.png" alt="Post 1">
-      </a>
-      <a href="#"><h3 class="comparativa-title">Opera Browser Lets You Apply Dark Mode to Web Page</h3></a>
-      <p class="post-date">July 30, 2020</p>
-    </div>
-    <!-- Añade más .grid-item según necesites -->
+          <a href="{{ guia.url | relative_url }}">
+            <img src="{{ guia.imagen | default: '/global/images/default.webp' }}" alt="{{ guia.title }}">
+          </a>
+          <a href="{{ guia.url | relative_url }}">
+            <h3 class="comparativa-title">{{ guia.title }}</h3>
+          </a>
+          <p class="post-date">
+            {{ guia.last_modified_at | date: "%d/%m/%Y" }}
+          </p>
+        </div>
+      {% endif %}
+    {% endfor %}
+
   </div>
 </div>
+
 
 </div>
 <aside class="barra-lateral" style="width: 25%; margin-left: 15px;">
