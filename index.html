@@ -892,30 +892,34 @@ a {text-decoration: none;
     {% assign secundario2 = site.posts | where: "destacado", 2 | first %}
     {% assign secundario3 = site.posts | where: "destacado", 3 | first %}
 
-    {% if principal %}
-    <article class="post hot-post main-post">
-      <a href="{{ principal.url | relative_url }}">
-        <img alt="{{ principal.title }}" src="{{ principal.image | relative_url }}"/>
-            <a href="/categoria/{{ principal.categories[0] | slugify }}/">
-              <span class="post-category"> {{ principal.categories[0] }} </span>
-            </a>
-        <div class="post-text">
-          <h3 class="post-title">{{ principal.title }}</h3>
-          {% if principal.subtitle %}
-            <p class="post-subtitle">{{ principal.subtitle }}</p>
-          {% endif %}
-        </div>
-      </a>
-    </article>
-    {% endif %}
+{% if principal %}
+<article class="post hot-post main-post" style="position: relative;">
+  {% if principal.categories %}
+    <a href="/categoria/{{ principal.categories[0] | slugify }}/">
+      <span class="post-category">{{ principal.categories[0] }}</span>
+    </a>
+  {% endif %}
+  <a href="{{ principal.url | relative_url }}" style="display: block; height: 100%;">
+    <img alt="{{ principal.title }}" src="{{ principal.image | relative_url }}" />
+    <div class="post-text">
+      <h3 class="post-title">{{ principal.title }}</h3>
+      {% if principal.subtitle %}
+        <p class="post-subtitle">{{ principal.subtitle }}</p>
+      {% endif %}
+    </div>
+  </a>
+</article>
+{% endif %}
 
-    {% if secundario2 %}
-    <article class="post hot-post-secundario side-post side1">
-      <a href="{{ secundario2.url | relative_url }}">
-        <img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}"/>
-            <a href="/categoria/{{ secundario2.categories[0] | slugify }}/">
-        <span class="post-category">{{ secundario2.categories[0] }}</span>
+ {% if secundario2 %}
+    <article class="post hot-post-secundario side-post side1" style="position: relative;">
+      {% if secundario2.categories %}
+        <a href="/categoria/{{ secundario2.categories[0] | slugify }}/">
+          <span class="post-category">{{ secundario2.categories[0] }}</span>
         </a>
+      {% endif %}
+      <a href="{{ secundario2.url | relative_url }}" style="display: block; height: 100%;">
+        <img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario2.title }}</h3>
         </div>
@@ -924,13 +928,14 @@ a {text-decoration: none;
     {% endif %}
 
     {% if secundario3 %}
-    <article class="post hot-post-secundario side-post side2">
-      <a href="{{ secundario3.url | relative_url }}">
-        <img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}"/>
-                    <a href="/categoria/{{ secundario3.categories[0] | slugify }}/">
-
-        <span class="post-category">{{ secundario3.categories[0] }}</span>
-      </a>
+    <article class="post hot-post-secundario side-post side2" style="position: relative;">
+      {% if secundario3.categories %}
+        <a href="/categoria/{{ secundario3.categories[0] | slugify }}/">
+          <span class="post-category">{{ secundario3.categories[0] }}</span>
+        </a>
+      {% endif %}
+      <a href="{{ secundario3.url | relative_url }}" style="display: block; height: 100%;">
+        <img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario3.title }}</h3>
         </div>
@@ -940,15 +945,21 @@ a {text-decoration: none;
   </div>
 </section>
 
+<div style="background-color: #fef6f8; padding: 12px 18px; margin: 10px auto 10px; max-width: 900px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 0.95rem; color: #444;">
+  Descubre la nueva sección de <strong>belleza</strong>, donde <strong>Sara Campos</strong> comparte su experiencia profesional en estética, tratamientos naturales y bienestar femenino.
+  <a href="/belleza/" style="color: #b03e6f; font-weight: bold; text-decoration: none; margin-left: 8px;">Visítala aquí →</a>
+</div>
 <div class="fila-titulo">
-  <h2 class="titulo-principal">Últimos posts ></h2>
+  <h2 class="titulo-principal" style="margin-top: 10px !important">Últimos posts ></h2>
 </div>
 <div class="contenido-con-sidebar" style="display: flex; gap: 0px;">
   <div class="contenido-principal" style="width: 75%;">
 <section style="max-width: 1200px; margin: auto;">
   {% assign sorted_posts = site.posts | sort: "date" | reverse %}
   {% for post in sorted_posts %}
-<article class="blog-tarjeta hentry post-item" style="display: none;">
+  {% unless post.categories contains "belleza" %}
+
+  <article class="blog-tarjeta hentry post-item" style="display: none;">
   <div class="tarjeta-thumb" style="position: relative;">
     <a href="{{ post.url | relative_url }}">
       <img src="{{ post.image | default: '/global/images/1.png' }}" alt="{{ post.title }}">
@@ -970,7 +981,7 @@ a {text-decoration: none;
     </p>
     <div class="entry-meta">
       <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
-        {% assign autor = site.data.autor.autores.[post.autor] %}
+        {% assign autor = site.data.autor.autores[post.autor] %}
         <img src="{{ autor.avatar }}" alt="{{ autor.nombre }}">
         <span style="font-size: 0.85rem; color: #666;">
           Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }}</a> • {% include date_es.html date=post.date %}
@@ -979,8 +990,8 @@ a {text-decoration: none;
     </div>
   </div>
 </article>
+  {% endunless %}
 {% endfor %}
-
 </section>
   <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
     <button class="load-more-button" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Cargar más ▼</button>
@@ -998,7 +1009,7 @@ a {text-decoration: none;
   <div class="grid-items">
 
     {% assign guias_actualizadas = site.pages | sort: "last_modified_at" | reverse %}
-    {% for guia in guias_actualizadas %}
+    {% for guia in guias_actualizadas limit:6 %}
       {% if guia.last_modified_at and guia.title and guia.path contains "index.html" %}
         <div class="grid-item">
           <a href="{{ guia.url | relative_url }}">
@@ -1046,7 +1057,7 @@ a {text-decoration: none;
     </div>
 
         <div class="popular-box-item">
-      <a href="/sobre-nosotros/#david" class="popular-thumb" style="background-image:url(/global/images/avatarDavid.png);"></a>
+      <a href="/sobre-nosotros/#david" class="popular-thumb" style="background-image:url(/global/images/avatarDavid.jpg);"></a>
       <div class="popular-text">
         <a href="/sobre-nosotros/#david" class="popular-title">David Jimenez</a>
         <div class="popular-date">Analista deportivo con experiencia en guías y pruebas</div>
@@ -1139,18 +1150,36 @@ a {text-decoration: none;
   </div>
 </div>
 
+<style>#results-container {
+  margin-top: 12px;
+  padding-left: 0;
+  overflow: visible;
+}
 
+#results-container li {
+  list-style: none;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  border: 1px solid #fc3c68;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  background: #fff;
+  white-space: normal;
+  word-wrap: break-word;
+}
 
+</style>
 <div class="popular-box-widget">
   <div class="popular-box-header">
-    <h3>Newsletter ></h3>
+    <h3>Búsqueda ></h3>
   </div>
-  <div class="popular-box-content">
-
-  
-
-  </div>
+<div class="popular-box-content">
+  <input type="text" id="search-input" placeholder="Escribe para buscar" style="width: 100%; padding: 8px 3px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;" />
+  <ul id="results-container" style="margin-top: 16px; list-style: none; padding: 0;"></ul>
 </div>
+</div>
+
+
 </aside>
 </div>
 
@@ -1159,6 +1188,19 @@ a {text-decoration: none;
 
 </div>
 <a href="#" id="back-top" title="Volver arriba" role="button">↑</a>
+<script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+<script>
+  SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '/search.json',
+    searchResultTemplate: '<li style="margin-bottom: 10px;"><a href="{url}" style="color: #fc3c68; font-weight: bold; text-decoration: none;">{title}</a></li>',
+    noResultsText: '<li style="color: #999;">No se encontraron resultados</li>',
+    limit: 10,
+    fuzzy: false
+  });
+</script>
+
 <script>
   const posts = document.querySelectorAll('.post-item');
   const loadMoreButton = document.querySelector('.load-more-button');

@@ -49,7 +49,6 @@ tag_permalink: '/tag/:name/'
 jekyll-archives:
   enabled:
     - categories
-    - tags
     - year
     - month
   layouts:

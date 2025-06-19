@@ -1,0 +1,159 @@
+---
+layout: default
+title: Belleza - Recomendador.net
+canonical: https://recomendador.net/belleza/
+---
+
+{% include estilomorado.html %}
+{% include menu.html %}
+
+<style>
+
+  .archive-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .archive-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .archive-card:hover {
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  }
+
+  .archive-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .archive-content {
+    padding: 1rem 1.2rem;
+  }
+
+  .archive-date {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .archive-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+  }
+
+  .archive-title:hover {
+    color: #0066cc;
+  }
+
+  .archive-excerpt {
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .archive-button {
+    display: inline-block;
+    background: #0066cc;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .archive-button:hover {
+    background: #004999;
+  }
+
+  .pagination {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .pagination a, .pagination strong {
+    margin: 0 0.25rem;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .pagination a {
+    background: #eee;
+    color: #333;
+  }
+
+  .pagination a:hover {
+    background: #ddd;
+  }
+
+  .pagination strong {
+    background: #0066cc;
+    color: white;
+  }
+</style>
+<div class="container">
+
+  <h1>Consejos reales desde mi centro de estética</h1>
+
+<section style="background: #fff0f5; padding: 2em; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 3em;">
+  <div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: center;">
+    <div style="flex: 1 1 240px; max-width: 280px;">
+      <img src="/global/images/fotoSaraCampos.webp" alt="Sara Campos" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" loading="lazy">
+    </div>
+    <div style="flex: 2 1 400px;">
+      <h2 style="color: #b03e6f; font-family: 'Georgia', serif; font-size: 1.8em; margin-bottom: 0.3em;margin-top: 1em;">Conoce a Sara Campos</h2>
+      <p style="font-weight: bold; color: #5a2d43;">Esteticista con 20 años de experiencia</p>
+      <p style="margin-top: 0.8em; color: #444;">
+        <strong>Sara Campos</strong> es esteticista profesional con más de 20 años de experiencia y directora de su propia clínica de estética. A lo largo de su carrera ha ayudado a cientos de mujeres a mejorar el aspecto y la salud de su piel, su cabello y su bienestar general, siempre desde un enfoque natural, respetuoso y personalizado.
+      </p>
+      <p style="margin-top: 0.6em; color: #444;">
+        Su trabajo abarca tratamientos faciales, corporales y capilares con ingredientes de origen vegetal, técnicas no invasivas y una filosofía clara: <em>la belleza real se cuida desde la experiencia, no desde las modas</em>. Desde 2024 colabora con Recomendador.net compartiendo consejos útiles y guías honestas basadas en su trabajo diario con clientas reales.
+      </p>
+      <p style="margin-top: 0.6em; color: #444;">
+        Si buscas recomendaciones efectivas, sin artificios ni químicos innecesarios, aquí encontrarás una visión profesional y cercana de la estética natural.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="fila-titulo">
+  <h2 class="titulo-principal">Últimos posts ></h2>
+</div>
+  {% assign posts = site.posts | where_exp: "post", "post.categories contains 'belleza'" %}
+
+  <div class="archive-grid">
+    {% for post in posts %}
+    <article class="archive-card">
+      <a href="{{ post.url }}">
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+      </a>
+      <div class="archive-content">
+        <p class="archive-date">{{ post.date | date: "%d/%m/%Y" }} — por {{ post.autor | capitalize }}</p>
+        <a href="{{ post.url }}" class="archive-title">{{ post.title }}</a>
+        <p class="archive-excerpt">{{ post.excerpt }}</p>
+        <a href="{{ post.url }}" class="archive-button">Leer más</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% include footer.html %}
+
+</div>

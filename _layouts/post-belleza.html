@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% include estiloazul.html %}
+{% include estilomorado.html %}
 {% include menu.html %}
 
 <style>
@@ -102,8 +102,10 @@ figure.post-image img {
 </style>
 <div class="container">
 <div class="post-container">
+  <a href="/belleza/" title="Ir a la página de Belleza">← Volver a Belleza</a>
+
   <article>
-    <h1 class="titulo">{{ page.title }}</h1>
+    <h1 class="titulo" style="margin-top: 10px !important">{{ page.title }}</h1>
     <h2 class="subtitulo">{{ page.excerpt }}</h2>
 
     {% if page.image %}
