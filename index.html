@@ -671,6 +671,15 @@ a {text-decoration: none;
   flex-shrink: 0;
 }
 
+.popular-thumb-guias {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 8px;
+}
+
 .popular-text {
   flex: 1;
   display: flex;
@@ -1074,35 +1083,22 @@ a {text-decoration: none;
 
 <div class="popular-box-widget">
   <div class="popular-box-header">
-    <h3>Posts Populares ></h3>
+    <h3>Guías de compra Populares ></h3>
   </div>
-  <div class="popular-box-content">
-
+<div class="popular-box-content">
+  {% assign top_posts = site.pages | where_exp: "post", "post.top" %}
+  {% assign sorted_top_posts = top_posts | sort: "top" %}
+  {% for post in sorted_top_posts limit:5 %}
     <div class="popular-box-item">
-      <a href="/guia/teclados-gaming" class="popular-thumb" style="background-image:url(/global/images/1.png);"></a>
+      <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block; width:80px; height:80px; flex-shrink:0; background-image:url({{ post.imagen }}); background-size:cover; background-position:center center; border-radius:8px;"></a>
       <div class="popular-text">
-        <a href="/guia/teclados-gaming" class="popular-title">Los mejores teclados gaming</a>
-        <div class="popular-date">1 de junio 2025</div>
+        <a href="{{ post.url }}" class="popular-title">{{ post.shortTitle }}</a>
+        <div class="popular-date">{{ post.date | date: "%-d de %B %Y" }}</div>
       </div>
     </div>
+  {% endfor %}
+</div>
 
-    <div class="popular-box-item">
-      <a href="/guia/auriculares-streaming" class="popular-thumb" style="background-image:url(/global/images/2.png);"></a>
-      <div class="popular-text">
-        <a href="/guia/auriculares-streaming" class="popular-title">Auriculares ideales para streaming</a>
-        <div class="popular-date">15 de mayo 2025</div>
-      </div>
-    </div>
-
-    <div class="popular-box-item">
-      <a href="/guia/sillas-ergonomicas" class="popular-thumb" style="background-image:url(/global/images/3.png);"></a>
-      <div class="popular-text">
-        <a href="/guia/sillas-ergonomicas" class="popular-title">Top sillas ergonómicas 2025</a>
-        <div class="popular-date">10 de abril 2025</div>
-      </div>
-    </div>
-
-  </div>
 </div>
 
 <style>
