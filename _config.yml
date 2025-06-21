@@ -1,13 +1,17 @@
 # _config.yml
 
 title: Recomendador.net
-description: Guías de compra de periféricos gaming probadas por expertos.
+description: Guías de compra realizadas por expertos.
 url: "https://recomendador.net" # tu dominio en producción
 baseurl: "" # déjalo vacío si el sitio está en la raíz del dominio
+author:
+  name: "Carlos López"
+  email: recomendadorwebnet@gmail.com
+lang: es
 
 # Directorios
 include: ["_pages"]
-exclude: ["node_modules", "vendor", "Gemfile", "Gemfile.lock", "README.md"]
+exclude: ["node_modules/", "vendor/", "Gemfile", "Gemfile.lock", "README.md", "global/", "google*.html"]
 
 # Permalink limpio
 permalink: pretty
@@ -19,6 +23,8 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-archives
   - jekyll/tagging
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Soporte para includes con relative_url
 defaults:
