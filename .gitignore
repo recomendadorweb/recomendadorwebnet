@@ -4,6 +4,7 @@ _site/
 # Ignorar dependencias y archivos del entorno
 .bundle/
 vendor/
+renombrador.py
 
 # Ignorar archivos temporales de editores
 *.swp

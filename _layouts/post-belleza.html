@@ -1,0 +1,159 @@
+---
+layout: default
+---
+
+{% include estilomorado.html %}
+{% include menu.html %}
+
+<style>
+  .post-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0rem 0rem;
+    font-family: system-ui, sans-serif;
+    line-height: 1.7;
+    color: #222;
+  }
+
+  h1.titulo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0rem;
+    color: #111;
+  }
+
+  h2.subtitulo {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 0rem;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  .post-meta img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  figure.post-image {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+figure.post-image img {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+  width: auto;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  display: block;
+  margin: auto;
+}
+
+  .post-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    color: #111;
+  }
+
+  .post-content h3 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    color: #222;
+  }
+
+  .post-content img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+  }
+
+  .tags-categories {
+    margin-top: 3rem;
+    font-size: 0.9rem;
+  }
+
+  .tags-categories a {
+    color: #007acc;
+    text-decoration: none;
+    margin-right: 0.5rem;
+  }
+
+  hr.separator {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2.5rem;
+  }
+  hr {
+    border-top: 1px solid #ccc;
+    margin-top: 2rem;  
+  }
+</style>
+<div class="container">
+<div class="post-container">
+  <a href="/belleza/" title="Ir a la página de Belleza">← Volver a Belleza</a>
+
+  <article>
+    <h1 class="titulo" style="margin-top: 10px !important">{{ page.title }}</h1>
+    <h2 class="subtitulo">{{ page.excerpt }}</h2>
+
+    {% if page.image %}
+    <figure class="post-image">
+      <img src="{{ page.image }}" alt="{{ page.title }}">
+    </figure>
+    {% endif %}
+
+    {% assign autor = site.data.autor.autores[page.autor] %}
+<div class="autor">
+  <a href="{{ autor.enlaceBlog }}" style="text-decoration: none; color: inherit;" target="_blank">
+    <div class="bloque-autor">
+      <img alt="{{ autor.descripcion_alt }}" class="avatar" height="48"
+        loading="lazy" src="{{ autor.avatar }}" />
+      <div class="info-autor">
+        <p class="nombre-autor">{{ autor.nombre }}</p>
+        <p class="rol-autor">{{ autor.rol }}</p>
+        <p class="rol-autor">{% include date_es.html date=page.date %}</p>
+
+      </div>
+    </div>
+  </a>
+</div>
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <hr>
+
+    <div class="tags-categories">
+      {% if page.tags %}
+        <p><strong>Etiquetas:</strong>
+        {% for tag in page.tags %}
+          <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
+        {% endfor %}
+        </p>
+      {% endif %}
+
+      {% if page.categories %}
+        <p><strong>Categorías:</strong>
+        {% for category in page.categories %}
+          <a href="/categoria/{{ category | slugify }}/">{{ category }}</a>
+        {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+  </article>
+</div>
+
+{% include footer.html %}
+</div>

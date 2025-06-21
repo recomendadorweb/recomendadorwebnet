@@ -1,13 +1,17 @@
 # _config.yml
 
 title: Recomendador.net
-description: Guías de compra de periféricos gaming probadas por expertos.
+description: Guías de compra realizadas por expertos.
 url: "https://recomendador.net" # tu dominio en producción
 baseurl: "" # déjalo vacío si el sitio está en la raíz del dominio
+author:
+  name: "Carlos López"
+  email: recomendadorwebnet@gmail.com
+lang: es
 
 # Directorios
 include: ["_pages"]
-exclude: ["node_modules", "vendor", "Gemfile", "Gemfile.lock", "README.md"]
+exclude: ["node_modules/", "vendor/", "Gemfile", "Gemfile.lock", "README.md", "global/", "google*.html"]
 
 # Permalink limpio
 permalink: pretty
@@ -19,6 +23,8 @@ plugins:
   - jekyll-paginate-v2
   - jekyll-archives
   - jekyll/tagging
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Soporte para includes con relative_url
 defaults:
@@ -29,7 +35,7 @@ defaults:
 
 pagination:
   enabled: true
-  per_page: 5
+  per_page: 10
   permalink: '/page/:num/'
   title: ':title - page :num'
   limit: 0
@@ -39,7 +45,7 @@ pagination:
     before: 2
     after: 2
   auto: true
-  indexpage: 'blog/index.html'
+  indexpage: 'index.html'
 
 tag_page_layout: tag
 tag_page_dir: tag
@@ -49,7 +55,6 @@ tag_permalink: '/tag/:name/'
 jekyll-archives:
   enabled:
     - categories
-    - tags
     - year
     - month
   layouts:
@@ -58,7 +63,7 @@ jekyll-archives:
     tag: archive
     category: archive
   permalinks:
-    year: '/data_blog/:year/'
-    month: '/data_blog/:year/:month/'
+    year: '/blog/:year/'
+    month: '/blog/:year/:month/'
     tag: '/tag/:name/'
-    category: '/category/:name/'
+    category: '/categoria/:name/'
