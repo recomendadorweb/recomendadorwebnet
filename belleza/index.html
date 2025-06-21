@@ -1,0 +1,728 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Analytics diferido -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    const startAnalytics = () => {
+      if (window.gtagScriptLoaded) return;
+      window.gtagScriptLoaded = true;
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN";
+      script.async = true;
+      document.head.appendChild(script);
+      script.onload = () => {
+        gtag('js', new Date());
+        gtag('config', 'G-3ZN94Y4QHN');
+      };
+    };
+    ['click', 'scroll', 'mousemove', 'touchstart'].forEach(event =>
+      window.addEventListener(event, startAnalytics, { once: true })
+    );
+  </script>
+
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Guías de compra realizadas por expertos." name="description"/>
+  <meta content="" name="keywords"/>
+  <title>Belleza - Recomendador.net</title>
+  
+    <link href="https://recomendador.net/belleza/" rel="canonical"/>
+  
+  <link href="/global/favicon.ico" rel="icon" type="image/x-icon"/>
+  <meta content="Carlos López" name="author"/>
+  <meta content="Belleza - Recomendador.net" property="og:title"/>
+  <meta content="Guías de compra realizadas por expertos." property="og:description"/>
+  <meta content="https://recomendador.net/global/logo.webp" property="og:image"/>
+  <meta content="https://recomendador.net/belleza/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="Belleza - Recomendador.net" name="twitter:title"/>
+  <meta content="Guías de compra realizadas por expertos." name="twitter:description"/>
+  <meta content="https://recomendador.net/global/logo.webp" name="twitter:image"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-regular.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-500.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-600.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-700.woff2" rel="preload" type="font/woff2"/>
+
+
+  <!-- otros tags -->
+</head>
+<body>
+  
+<header class="hero-banner-rediseñado">
+  <div class="hero-inner">
+    <div class="hero-logo">
+      <a aria-label="Ir a la homepage de Recomendador.net" href="/">
+        <img alt="Logo Recomendador.net" src="/global/logo.webp" width="600" />
+      </a>
+    </div>
+    <div class="hero-texto only-desktop" style="margin-left: auto; text-align: right;">
+      <p><strong>🛡️ Recomendaciones reales desde 2020</strong></p>
+      <p>⭐ Análisis imparciales por expertos</p>
+      <p>🔝​ Lo probamos por ti para que elijas lo mejor</p>
+
+    </div>
+  </div>
+</header>
+
+
+  <style>
+  @font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/global/fonts/poppins-v23-latin-700.woff2') format('woff2');
+}
+
+body{ font-family:'Poppins',sans-serif;line-height:1.5;margin:0;padding:0;background:linear-gradient(135deg,#ede7f6,#fce4ec);color:#4a3c4c;}
+.container{ max-width:1000px;margin:auto;padding:1.3em 2em 2em 2em;background:#ffffffeb;backdrop-filter:blur(2px);}
+h1,h2,h3{ color:#7b4b94;}
+h1{ font-size:2.4em;margin-bottom:0.5em;}
+h2{ margin-top:2em;font-size:1.8em;}
+h3{ margin-top:1.5em;font-size:1.4em;}
+img{ width:100%;max-width:600px;height:auto;display:block;margin:1em auto;}
+.autor{ display:flex;justify-content:flex-start;margin:1em 0 2em 0;}
+.bloque-autor{ display:flex;align-items:center;background:#ffffff;border:1px solid #e1cde9;box-shadow:0px 4px 10px rgba(0,0,0,0.04);border-radius:10px;padding:0.5em 0.8em;max-width:280px;}
+.avatar{ width:48px;height:48px;border-radius:50%;object-fit:cover;margin-right:0.8em;}
+.info-autor{ display:flex;flex-direction:column;justify-content:center;}
+.nombre-autor{ font-weight:bold;margin:0;font-size:1em;}
+.rol-autor{ font-size:0.8em;color:#666;margin:0;}
+ul{ padding-left:1.2em;}
+.producto{ border-bottom:1px solid #e1cde9;padding-bottom:2em;margin-bottom:2em;}
+.boton{ display:inline-block;background:#b39ddb;color:#fff;text-decoration:none;padding:0.9em 1.7em;border-radius:8px;margin-top:0.8em;font-weight:600;font-size:1.1em;max-width:100%;box-sizing:border-box;transition:background 0.3s ease;}
+.boton:hover{ background:#9575cd;}
+footer{ font-size:0.9em;text-align:center;color:#666;margin-top:3em;}
+.faq{ margin-top:3em;}
+.producto img{ max-height:260px;object-fit:contain;}
+.main-nav{ background:#7b4b94;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.nav-container{ max-width:960px;margin:auto;display:flex;align-items:center;justify-content:flex-end;padding:1em;flex-wrap:wrap;}
+.nav-links{ display:flex;gap:1.2em;list-style:none;padding:0;margin:0;}
+.nav-links a{ color:#fff;text-decoration:none; font-size: 1em;font-weight:500;}
+.nav-links a:hover{ color:#ede7f6;}
+@media (max-width:768px){ .nav-container{ flex-direction:column;align-items:flex-start;gap:1em;} .nav-links{ flex-direction:column;width:100%;} }
+.hamburger{ display:none;font-size:1.3em;cursor:pointer;color:white;}
+@media (max-width:768px){ .hamburger{ display:block;} .nav-links{ display:none;flex-direction:column;width:100%;margin-top:1em;} }
+.hero-inner{ display:flex;align-items:flex-start;justify-content:flex-start;width:100%;max-width:1000px;margin:auto;gap:1em;}
+.hero-texto p{ font-size:1.2em;margin:0;  line-height: 14.4px;}
+@media (max-width:768px){ .hero-inner{ gap:1em; } .hero-texto p{ font-size:1em; line-height: 1; } }
+.nav-links li.dropdown{ position:relative;}
+.nav-links .submenu{ display:none;position:absolute;background-color:#7b4b94;padding:0.5em 0;list-style:none;top:100%;left:0;min-width:180px;z-index:10;border-radius:0 0 6px 6px;}
+.nav-links .submenu li{ margin:0;}
+.nav-links .submenu a{ display:block;padding:0.6em 1em;color:#fff;text-decoration:none;white-space:nowrap;}
+.nav-links .submenu a:hover{ background-color:#5e3574;}
+.hero-banner-rediseñado{ background:linear-gradient(135deg,#9977d8 0%,#5e3574 50%,#9977d8 100%);height:96px;display:flex;align-items:center;justify-content:flex-start;border-bottom:1px solid #fbeff2;}
+.hero-banner-rediseñado .hero-inner{ max-width:1000px;width:100%;margin:auto;display:flex;align-items:center;padding:0 2em;}
+.hero-banner-rediseñado .hero-logo img{ max-height:64px;height:auto;width:auto;margin:0;transform:none;}
+.hero-banner-rediseñado .hero-texto{ text-align:right;flex:1;}
+.hero-banner-rediseñado .hero-texto p{ font-size:0.9em;margin:0.2em 0;color:white;}
+@media (max-width:600px){ .hero-inner{ flex-direction:column;gap:0.4em; } .hero-banner-rediseñado{ height:auto;padding:1em; } .hero-texto{ text-align:left; } .hero-logo img{ max-height:48px; } }
+.hamburger{ background:rgba(255,255,255,0.2);padding:0.2em 0.4em;border-radius:6px;transition:background 0.3s ease;}
+.hamburger:hover{ background:rgba(255,255,255,0.35);}
+img{ max-width:100%;height:auto;display:block;margin:0em auto;}
+.separador{ border-top:2px solid #7b4b94;margin:3em 0 2em;height:0;}
+a:not(.boton):not(.nav-links a):not(.hero-banner a):not(.hero-banner-rediseñado a){ color:#7b4b94;text-decoration:none;}
+.boton-flotante{ position:fixed;bottom:20px;right:20px;background:#7b4b94;color:white !important;padding:12px 20px;font-size:16px;border-radius:30px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:1000;}
+.boton-flotante:hover{ background:#5e3574;}
+@media (max-width:768px){ .nav-links li.dropdown .submenu li a{ padding-left:3em !important;font-size:0.95em;opacity:0.95;} }
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Ajustes adicionales para mejorar en móviles */
+@media (max-width: 600px) {
+  h1 { font-size: 1.8em; }
+  h2 { font-size: 1.4em; }
+  h3 { font-size: 1.2em; }
+  .container { padding: 1em; }
+  .bloque-autor { flex-direction: column; align-items: flex-start; gap: 0.6em; }
+  .bloque-autor img.avatar { width: 64px; height: 64px; margin-right: 0; }
+  .nav-links { flex-direction: column; display: none; }
+  .hamburger { display: block; }
+  .grupo-pasos { flex-direction: column !important; }
+  table { display: block; overflow-x: auto; width: 100%; }
+  .faq-item h3 { font-size: 1em; }
+  .paso-barro { margin-bottom: 1em; }
+}
+
+
+@media (max-width: 600px) {
+  .bloque-autor {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left;
+    gap: 0.6em;
+  }
+  .bloque-autor img.avatar {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+  }
+  .grupo-pasos {
+    flex-direction: column !important;
+    gap: 1em !important;
+  }
+  .grupo-pasos > div {
+    flex: 1 1 100% !important;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .grupo-pasos {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1em !important;
+  }
+  .grupo-pasos > div {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #222;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #222;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #222;
+  line-height: 1.5;
+  letter-spacing: 0;
+  -moz-osx-font-smoothing: grayscale;
+}
+p {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: #222;
+}
+h1 {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-top: 2em;
+}
+h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-top: 1.5em;
+}
+
+
+@media (max-width: 600px) {
+  img {
+    max-height: 180px;
+    object-fit: cover;
+  }
+  .boton {
+    font-size: 1em;
+    padding: 0.7em 1.2em;
+  }
+}
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .grupo-pasos {
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 768px) {
+  .nav-links li.dropdown .submenu {
+    position: relative;
+    display: block !important;
+    background: none;
+    padding-left: 1.5em;
+    border-radius: 0;
+  }
+  .nav-links li.dropdown .submenu li a {
+    padding: 0.4em 0;
+    font-size: 0.95em;
+  }
+}
+@media (max-width: 600px) {
+  h3.producto-titulo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3em;
+  }
+}
+.menu.show {
+  left: 0 !important;
+}
+.overlay.show {
+  display: block !important;
+}
+
+@media (min-width: 769px) {
+  .nav-links li.dropdown:hover > .submenu {
+    display: block;
+  }
+}
+@media (max-width: 600px) {
+  p {
+    line-height: 1.7;
+  }
+}
+.only-desktop { display: block; }
+.only-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .only-desktop { display: none !important; }
+  .only-mobile { display: block !important; }
+}
+
+</style>
+<style></style>
+
+<nav class="main-nav">
+  <div class="nav-container" style="padding: 0.4em 1em; display: flex; justify-content: space-between; align-items: center;">
+    
+    <!-- Enlace del Blog a la izquierda -->
+    <div class="nav-left nav-links">
+      <a href="/" style="color: white; text-decoration: none; font-weight: 500;">📝 Blog</a>
+    </div>
+    <!-- Guías de compra y el resto de enlaces -->
+<div class="hamburger" id="menu-toggle" style="margin-right: auto;">☰</div>
+<div class="nav-right" style="display: flex; align-items: center; gap: 1.2em;">
+      <ul class="nav-links" style="margin: 0;">
+<li class="menu-label" style="display: flex; align-items: center; color: #ccc; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 0.15em;">
+  🛒 GUÍAS DE COMPRA >
+</li>
+
+        <li class="dropdown">
+          <a href="/belleza/mejores-barros-pelo/">💄 Belleza</a>
+          <ul class="submenu">
+            <li><a href="/belleza/mejores-barros-pelo/">💄 Barros para el Pelo</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/salud/mejor-cojin-antiescaras/">🧠 Salud</a>
+          <ul class="submenu">
+            <li><a href="/salud/mejor-cojin-antiescaras/">🧠 Cojín antiescaras</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="/mejores-bicicletas-electricas/">🚴‍♂️ Deportes</a>
+          <ul class="submenu">
+            <li><a href="/mejores-bicicletas-electricas/">🚴‍♂️ Bicicletas Eléctricas</a></li>
+            <li><a href="/deportes/mejores-pulseras-actividad/">🏃 Pulseras de Actividad</a></li>
+            <li><a href="/deportes/mejores-smartwatches-deportivos/">⌚ Smartwatches Deportivos</a></li>
+
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">🎮 Gaming</a>
+          <ul class="submenu">
+            <li><a href="/mejores-teclados-gaming/">⌨️ Mejores Teclados Gaming</a></li>
+            <li><a href="/mejores-ratones-gaming/">🖱 Mejores Ratones Gaming</a></li>
+            <li><a href="/mejores-auriculares-gaming/">🎧 Mejores Auriculares Gaming</a></li>
+            <li><a href="/raton-gaming-mars/">🖱 Ratones Mars Gaming</a></li>
+            <li><a href="/teclado-mars-gaming/">⌨️ Teclados Mars Gaming</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">🤖 Tecnología</a>
+          <ul class="submenu">
+            <li><a href="/mejores-microfonos-gaming/">🎙 Mejores Micrófonos</a></li>
+          </ul>
+        </li>
+        <li><a href="/contacto/">📬 Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Menú móvil slide-in mejorado -->
+<div id="overlay" class="overlay" style="display: none;"></div>
+<nav id="mobile-menu" class="menu" style="left: -100%;">
+  <div class="mobile-header" style="border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; background-color: #ffffff; position: sticky; top: 0; z-index: 10;">
+    <h2>📂 Categorías</h2>
+    <button id="menu-close" class="close">&times;</button>
+  </div>
+  <ul>
+    <li>
+      <a href="#">🚴‍♂️ Deportes</a>
+      <ul>
+        <li><a href="/mejores-bicicletas-electricas/">⚡ Bicicletas eléctricas</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">💄 Belleza</a>
+      <ul>
+        <li><a href="/belleza/mejores-barros-pelo/">🌿 Barros para el pelo</a></li>
+      </ul>
+    </li>
+        <li>
+      <a href="#">🧠 Salud</a>
+      <ul>
+        <li><a href="/salud/mejor-cojin-antiescaras/">🧠 Cojin antiescaras</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">🎮 Gaming</a>
+      <ul>
+        <li><a href="/mejores-auriculares-gaming/">🎧 Mejores Auriculares Gaming</a></li>
+        <li><a href="/mejores-ratones-gaming/">🖱️ Mejores Ratones Gaming</a></li>
+        <li><a href="/raton-gaming-mars/">🔥 Ratones Mars Gaming</a></li>
+        <li><a href="/mejores-teclados-gaming/">⌨️ Mejores Teclados Gaming</a></li>
+        <li><a href="/teclado-mars-gaming/">🚀 Teclados Mars Gaming</a></li>
+      </ul>
+    </li>
+        <li>
+      <a href="#">🤖 Tecnología</a>
+      <ul>
+        <li><a href="/mejores-microfonos-gaming/">🎙️ Mejores Micrófonos</a></li>
+      </ul>
+    </li>
+        <li>
+       <a href="/contacto/">📬 ¡Contacta con nosotros!</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .menu {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(180deg, #ece9f1 0%, #ffffff 100%);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 1rem;
+    font-family: 'Poppins', sans-serif; font-size: 16px; line-height: 1.6;
+  }
+  .menu.show {
+    left: 0 !important;
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+  .overlay.show {
+    display: block !important;
+  }
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .mobile-header h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #222;
+  }
+  .close {
+    font-size: 2rem; font-weight: bold; font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff4c4c;
+  }
+  #mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  #mobile-menu ul > li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  #mobile-menu ul > li > a {
+    font-weight: bold; font-size: 1rem;
+    color: #222;
+    text-decoration: none;
+  }
+  #mobile-menu ul li ul {
+  margin-left: 1rem;
+  padding-left: 0.5rem;
+  border-left: 3px solid #ccc;
+  background-color: #fdfdfd;
+    margin-top: 0.3rem;
+    padding-left: 1rem;
+    border-left: 2px solid #ddd;
+  }
+  #mobile-menu ul li ul li a {
+    color: #555;
+    font-weight: normal;
+    display: block;
+    padding: 0.3rem 0;
+    text-decoration: none;
+  }
+</style>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const close = document.getElementById("menu-close");
+    const overlay = document.getElementById("overlay");
+
+    if (toggle && menu && close && overlay) {
+      toggle.onclick = () => {
+        menu.classList.add("show");
+        overlay.classList.add("show");
+        document.body.classList.add("menu-abierto");
+      };
+      close.onclick = () => {
+        menu.classList.remove("show");
+        overlay.classList.remove("show");
+        document.body.classList.remove("menu-abierto");
+
+      };
+      overlay.onclick = () => {
+        menu.classList.remove("show");
+        overlay.classList.remove("show");
+        document.body.classList.remove("menu-abierto");
+      };
+    }
+  });
+</script>
+
+<style>
+
+  .archive-container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .archive-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .archive-card:hover {
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  }
+
+  .archive-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .archive-content {
+    padding: 1rem 1.2rem;
+  }
+
+  .archive-date {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .archive-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+  }
+
+  .archive-title:hover {
+    color: #0066cc;
+  }
+
+  .archive-excerpt {
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .archive-button {
+    display: inline-block;
+    background: #0066cc;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+
+  .archive-button:hover {
+    background: #004999;
+  }
+
+  .pagination {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .pagination a, .pagination strong {
+    margin: 0 0.25rem;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  .pagination a {
+    background: #eee;
+    color: #333;
+  }
+
+  .pagination a:hover {
+    background: #ddd;
+  }
+
+  .pagination strong {
+    background: #0066cc;
+    color: white;
+  }
+</style>
+<div class="container">
+
+  <h1>Consejos reales desde mi centro de estética</h1>
+
+<section style="background: #fff0f5; padding: 2em; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 3em;">
+  <div style="display: flex; flex-wrap: wrap; gap: 2em; align-items: center;">
+    <div style="flex: 1 1 240px; max-width: 280px;">
+      <img src="/global/images/fotoSaraCampos.webp" alt="Sara Campos" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" loading="lazy">
+    </div>
+    <div style="flex: 2 1 400px;">
+      <h2 style="color: #b03e6f; font-family: 'Georgia', serif; font-size: 1.8em; margin-bottom: 0.3em;margin-top: 1em;">Conoce a Sara Campos</h2>
+      <p style="font-weight: bold; color: #5a2d43;">Esteticista con 20 años de experiencia</p>
+      <p style="margin-top: 0.8em; color: #444;">
+        <strong>Sara Campos</strong> es esteticista profesional con más de 20 años de experiencia y directora de su propia clínica de estética. A lo largo de su carrera ha ayudado a cientos de mujeres a mejorar el aspecto y la salud de su piel, su cabello y su bienestar general, siempre desde un enfoque natural, respetuoso y personalizado.
+      </p>
+      <p style="margin-top: 0.6em; color: #444;">
+        Su trabajo abarca tratamientos faciales, corporales y capilares con ingredientes de origen vegetal, técnicas no invasivas y una filosofía clara: <em>la belleza real se cuida desde la experiencia, no desde las modas</em>. Desde 2024 colabora con Recomendador.net compartiendo consejos útiles y guías honestas basadas en su trabajo diario con clientas reales.
+      </p>
+      <p style="margin-top: 0.6em; color: #444;">
+        Si buscas recomendaciones efectivas, sin artificios ni químicos innecesarios, aquí encontrarás una visión profesional y cercana de la estética natural.
+      </p>
+    </div>
+  </div>
+</section>
+
+<div class="fila-titulo">
+  <h2 class="titulo-principal">Últimos posts ></h2>
+</div>
+  
+
+  <div class="archive-grid">
+    
+    <article class="archive-card">
+      <a href="/belleza/cuidado%20de%20la%20piel/2025/06/11/granitos-despues-entrenar/">
+        <img src="/global/images/blog/granos-deporte.png" alt="¿Te salen granitos después de entrenar? Esto es lo que estás haciendo mal">
+      </a>
+      <div class="archive-content">
+        <p class="archive-date">11/06/2025 — por Sara</p>
+        <a href="/belleza/cuidado%20de%20la%20piel/2025/06/11/granitos-despues-entrenar/" class="archive-title">¿Te salen granitos después de entrenar? Esto es lo que estás haciendo mal</a>
+        <p class="archive-excerpt">Sudor, fricción y errores comunes: descubre por qué el ejercicio puede estar provocando tus brotes de acné y cómo solucionarlo desde hoy.</p>
+        <a href="/belleza/cuidado%20de%20la%20piel/2025/06/11/granitos-despues-entrenar/" class="archive-button">Leer más</a>
+      </div>
+    </article>
+    
+    <article class="archive-card">
+      <a href="/belleza/an%C3%A1lisis/2025/06/02/parches-granitos-funcionan/">
+        <img src="/global/images/blog/parches-granitos.png" alt="Parches para granitos: ¿funcionan o es marketing?">
+      </a>
+      <div class="archive-content">
+        <p class="archive-date">02/06/2025 — por Sara</p>
+        <a href="/belleza/an%C3%A1lisis/2025/06/02/parches-granitos-funcionan/" class="archive-title">Parches para granitos: ¿funcionan o es marketing?</a>
+        <p class="archive-excerpt">¿Sirven realmente los parches para eliminar granitos o son otro truco viral? Aquí te cuento lo que he visto con clientas reales y mi opinión como esteticista.</p>
+        <a href="/belleza/an%C3%A1lisis/2025/06/02/parches-granitos-funcionan/" class="archive-button">Leer más</a>
+      </div>
+    </article>
+    
+    <article class="archive-card">
+      <a href="/belleza/gu%C3%ADas/2025/05/26/ingredientes-debes-evitar-acne-rosacea/">
+        <img src="/global/images/blog/ingredientes-evitar-acne.png" alt="Ingredientes que debes evitar si tienes acné o rosácea">
+      </a>
+      <div class="archive-content">
+        <p class="archive-date">26/05/2025 — por Sara</p>
+        <a href="/belleza/gu%C3%ADas/2025/05/26/ingredientes-debes-evitar-acne-rosacea/" class="archive-title">Ingredientes que debes evitar si tienes acné o rosácea</a>
+        <p class="archive-excerpt">Evita brotes innecesarios en tu piel aprendiendo a identificar los ingredientes que agravan el acné y la rosácea. Guía 2025 con ejemplos claros.</p>
+        <a href="/belleza/gu%C3%ADas/2025/05/26/ingredientes-debes-evitar-acne-rosacea/" class="archive-button">Leer más</a>
+      </div>
+    </article>
+    
+    <article class="archive-card">
+      <a href="/belleza/ingredientes/2025/01/03/peores-ingredientes-cosmetica-segun-dermatologos/">
+        <img src="/global/images/blog/peores-ingredientes-cosmetica.png" alt="Los peores ingredientes en cosmética según dermatólogos">
+      </a>
+      <div class="archive-content">
+        <p class="archive-date">03/01/2025 — por Sara</p>
+        <a href="/belleza/ingredientes/2025/01/03/peores-ingredientes-cosmetica-segun-dermatologos/" class="archive-title">Los peores ingredientes en cosmética según dermatólogos</a>
+        <p class="archive-excerpt">Estos son los ingredientes que más alertan a los dermatólogos: irritantes, comedogénicos y disruptores. Aprende a detectarlos en tus productos.</p>
+        <a href="/belleza/ingredientes/2025/01/03/peores-ingredientes-cosmetica-segun-dermatologos/" class="archive-button">Leer más</a>
+      </div>
+    </article>
+    
+  </div>
+  <div style="text-align:center; margin-top: 3em;">
+<a class="boton" href="#" style="min-height:44px">⬆️ Volver arriba</a>
+</div>
+<footer>
+© 2025 Recomendador.net - Algunos enlaces pueden generar comisiones de afiliado sin coste para ti.
+</footer>
+
+</div>
+</body>
+</html>
