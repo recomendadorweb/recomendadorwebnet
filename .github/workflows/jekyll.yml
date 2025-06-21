@@ -19,9 +19,10 @@ jobs:
         ruby-version: '3.2'  # o la que prefieras
         bundler-cache: true
 
-    - name: Install Jekyll and dependencies
+    - name: Install Jekyll and dependencies (sin frozen)
       run: |
         gem install bundler
+        bundle config set frozen false
         bundle install
 
     - name: Build site
