@@ -11,7 +11,7 @@ lang: es
 
 # Directorios
 include: ["_pages"]
-exclude: ["node_modules/", "vendor/", "Gemfile", "Gemfile.lock", "README.md", "global/", "google*.html"]
+exclude: ["node_modules/", "vendor/", "Gemfile", "Gemfile.lock", "README.md"]
 
 # Permalink limpio
 permalink: pretty
