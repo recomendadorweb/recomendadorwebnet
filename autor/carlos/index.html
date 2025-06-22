@@ -1,5 +1,6 @@
 ---
 layout: autor
+autorFull: Carlos López
 title: Artículos de Carlos López | Recomendador.net
 autor: carlos
 permalink: /autor/carlos/
@@ -7,9 +8,6 @@ permalink: /autor/carlos/
 
 {% include menu.html %}
 <div class="container">
-  <p>Total de posts detectados: {{ site.posts | size }}</p>
-
-  <h1>Artículos de {{ page.title }}</h1>
 
   {% assign posts_autor = site.posts | where: "autor", page.autor | sort: 'date' | reverse %}
 

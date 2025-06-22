@@ -1,5 +1,6 @@
 ---
 layout: autor
+autorFull: David Jimenez
 title: Artículos de David Jimenez | Recomendador.net
 autor: david
 permalink: /autor/david/
@@ -7,9 +8,6 @@ permalink: /autor/david/
 
 {% include menu.html %}
 <div class="container">
-  <p>Total de posts detectados: {{ site.posts | size }}</p>
-
-  <h1>Artículos de {{ page.title }}</h1>
 
   {% assign posts_autor = site.posts | where: "autor", page.autor | sort: 'date' | reverse %}
 
