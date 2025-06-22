@@ -5,6 +5,7 @@ _site/
 .bundle/
 vendor/
 renombrador.py
+*py
 
 # Ignorar archivos temporales de editores
 *.swp
