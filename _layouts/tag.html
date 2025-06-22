@@ -81,7 +81,7 @@ layout: default
 </style>
 <div class="container"> 
 <div class="archive-container">
-  <h1>Entradas con la etiqueta: "{{ page.tag }}"</h1>
+  <h1>Entradas con la etiqueta: {{ page.tag | capitalize }}</h1>
 
   <div class="archive-grid">
     {% assign posts = site.tags[page.tag] %}
