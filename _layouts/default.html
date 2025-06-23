@@ -25,8 +25,12 @@
 
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="{{ page.description | default: site.description }}" name="description"/>
-  <meta content="{{ page.keywords | default: site.keywords }}" name="keywords"/>
+  <meta name="description" content="{% if page.description %}{{ page.description | escape }}{% elsif page.autorFull %}Artículos y recomendaciones escritas por {{ page.autorFull }} en Recomendador.net.
+  {% elsif page.excerpt %}{{ page.excerpt }}{% elsif page.tag %}Guías, consejos y productos sobre {{ page.tag | downcase }}. Descubre todo lo que necesitas saber en Recomendador.net.{% elsif page.category %}
+    Contenido útil y práctico sobre {{ page.category | downcase }}. Comparativas, trucos y recomendaciones.
+  {% elsif page.title %}Información sobre {{ page.title | downcase }} en Recomendador.net. Comparativas, análisis y recomendaciones prácticas.{% else %}{{ site.description | escape }}{% endif %}">
+
+<meta content="{{ page.keywords | default: site.keywords }}" name="keywords"/>
 <title>
 {% if page.tag %}
   Entradas con la etiqueta: {{ page.tag }} | Recomendador.net
