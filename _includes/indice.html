@@ -5,14 +5,14 @@
     {% for seccion in secciones %}
       <li>
         <a href="#{{ seccion.id }}">{{ seccion.titulo }}</a>
-        {% if seccion.id == "productos" %}
-          {% assign productos = site.data[tipo][seccion.productos_datafile].productos %}
-          <ul>
-            {% for producto in productos %}
-              <li><a href="#{{ producto.nombre }}">{{ producto.nombre }}</a></li>
-            {% endfor %}
-          </ul>
-        {% endif %}
+        {% if seccion.productos_datafile %}
+        {% assign productos = site.data[tipo][seccion.productos_datafile].productos %}
+        <ul>
+          {% for producto in productos %}
+            <li><a href="#{{ producto.nombre }}">{{ producto.nombre }}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
       </li>
     {% endfor %}
   </ul>

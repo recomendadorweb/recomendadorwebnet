@@ -1,14 +1,17 @@
 ---
 secciones:
-- id: comparativa
-  titulo: Comparativa rápida de auriculares gaming recomendados
 - id: que-es
-  titulo: ¿Qué son los auriculares gaming?
+  titulo: ¿Qué es una alarma para casa sin cuotas?
 - id: por-que-comprar
-  titulo: ¿Por qué deberías comprar unos auriculares gaming?
+  titulo: ¿Por qué elegir una alarma sin cuotas como Ring Alarm?
+- id: cuota-funcionalidades
+  titulo:  ¿Necesitas soporte humano y almacenamiento en la nube? Conoce el plan Ring Home Standard
 - id: productos
   productos_datafile: productos
-  titulo: Comparativa real de los mejores auriculares gaming de 2025 (inalámbricos y con cable)
+  titulo: Kits de Ring Alarm (Básico)
+- id: extras
+  productos_datafile: extras
+  titulo: Extras de Ring Alarm que puedes añadir para personalizar tu alarma
 - id: mi-eleccion
   titulo: ¿Cuál compraría yo?
 - id: faq

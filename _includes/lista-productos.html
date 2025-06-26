@@ -1,4 +1,4 @@
-{% assign productos = site.data[tipo].productos.productos %}
+{% assign productos = site.data[tipo][include.datafile].productos %}
 {% assign datos = site.data[tipo].cabecera %}
 
 <style>.separador-producto {
