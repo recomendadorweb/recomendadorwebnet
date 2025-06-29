@@ -1,0 +1,63 @@
+---
+layout: default
+title: Mejores Colchones 135x190 de 2025
+description: Descubre los mejores colchones 135x190 del mercado. Comparativa real con análisis viscoelásticos, HR y muelles ensacados. Opiniones personales y guía para elegir bien.
+keywords: colchones 135x190, mejores colchones viscoelásticos, colchones recomendados 2025, análisis colchones, comparativa descanso
+canonical: https://recomendador.net/hogar/colchones/mejores-colchones-135x190/
+last_modified_at: 2025-06-28
+imagen: /global/images/colchones.webp
+---
+{% assign tipo = "colchones135x190" %}
+
+{% include menu.html %}
+{% include estiloazul.html %}
+
+<div class="container">
+{% include cabecera.html datafile="cabecera" %}
+{% assign autor = site.data.autor.autores.carlos %}
+{% include autor.html %}
+{% include actualizacion.html %}
+{% include introduccion.html datafile="indice" %}
+
+{% include indice.html datafile="indice" %}
+<div class="separador"></div>
+
+<h2 id="comparativa">Comparativa rápida de colchones 135x190 recomendados</h2>
+{% include tabla-comparativa.html datafile="productos" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Sección: ¿Qué es un colchón viscoelástico 135x190? -->
+{% include seccion-generica.html datafile="secciones" index=0 %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Sección: ¿Por qué deberías comprar uno bueno? -->
+{% include seccion-generica.html datafile="secciones" index=1 %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Lista de productos con análisis -->
+<h2 id="productos">Comparativa real de los mejores colchones 135x190 de 2025 (probados y analizados)</h2>
+{% include lista-productos.html datafile="productos" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- ¿Cuál compraría yo? -->
+{% include cual-compraria-yo.html datafile="cual_compraria_yo" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Preguntas frecuentes -->
+<h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
+{% include faq.html datafile="faq" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+
+<div class="separador"></div>
+
+{% include footer.html %}
+</div>
+{% include boton-recomendado.html datafile="cabecera" %}
+
+{% include ld-json-faq.html datafile="faq" %}
+{% include ld-json-productos.html datafile="productos" %}
