@@ -1,14 +1,25 @@
 {% assign seccion = site.data[tipo][include.datafile][include.index] %}
+
+{% comment %} Usar emoji desde datos o por defecto desde cabecera {% endcomment %}
+{% if include.datos %}
+  {% assign emoji = include.datos.emoji %}
+{% else %}
+  {% assign emoji = site.data[tipo][include.datafile].cabecera.emoji %}
+{% endif %}
+
 <style>li > p {
   margin: 0;
   display: inline;
 }
 </style>
+
 <div class="seccion-generica">
   <h2 id="{{ seccion.id }}">{{ seccion.titulo }}</h2>
+
   {% if seccion.texto %}
     <p>{{ seccion.texto | markdownify }}</p>
   {% endif %}
+
   {% if seccion.bullets %}
     <ul>
       {% for item in seccion.bullets %}
@@ -16,7 +27,28 @@
       {% endfor %}
     </ul>
   {% endif %}
-    {% if seccion.texto2 %}
+
+  {% if seccion.modelos %}
+    {% assign modelos = seccion.modelos | split: "," %}
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px;">
+      {% for modelo in modelos %}
+        {% assign modelo_nombre = modelo | strip | downcase %}
+        {% for producto in site.data[tipo].productos.productos %}
+          {% assign nombre_producto = producto.nombre | strip | downcase %}
+          {% if nombre_producto == modelo_nombre %}
+            <a class="boton"
+               href="{{ producto.enlace }}"
+               style="font-size: 0.85em; padding: 8px 12px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;"
+               target="_blank">
+               {{ emoji }} {{ producto.nombre }} en Amazon
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if seccion.texto2 %}
     <p>{{ seccion.texto2 | markdownify }}</p>
   {% endif %}
 </div>
