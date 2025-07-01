@@ -9,7 +9,7 @@
 {% for item in datos.elecciones %}
 
         <h3>{{ item.categoria }}</h3>
-        <p>{{ item.descripcion | markdownify }}</p>
+    {{ item.descripcion | markdownify }}
       {% for producto in productos %}
         {% if item.modelo contains producto.nombre %}
           <a class="boton"
