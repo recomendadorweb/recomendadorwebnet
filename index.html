@@ -909,7 +909,7 @@ a {text-decoration: none;
     </a>
   {% endif %}
   <a href="{{ principal.url | relative_url }}" style="display: block; height: 100%;">
-    <img alt="{{ principal.title }}" src="{{ principal.image | relative_url }}" />
+    <img alt="{{ principal.title }}" src="{{ principal.image | relative_url }}" fetchpriority="high" />
     <div class="post-text">
       <h3 class="post-title">{{ principal.title }}</h3>
       {% if principal.subtitle %}
@@ -928,7 +928,7 @@ a {text-decoration: none;
         </a>
       {% endif %}
       <a href="{{ secundario2.url | relative_url }}" style="display: block; height: 100%;">
-        <img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}" />
+        <img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}" fetchpriority="high" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario2.title }}</h3>
         </div>
@@ -944,7 +944,7 @@ a {text-decoration: none;
         </a>
       {% endif %}
       <a href="{{ secundario3.url | relative_url }}" style="display: block; height: 100%;">
-        <img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}" />
+        <img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}" fetchpriority="high" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario3.title }}</h3>
         </div>
