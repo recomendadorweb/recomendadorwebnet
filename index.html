@@ -1184,7 +1184,7 @@ a {text-decoration: none;
 
 </div>
 <a href="#" id="back-top" title="Volver arriba" role="button">↑</a>
-<script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script>
+<script src="/assets/js/simple-jekyll-search.min.js" defer></script>
 <script>
   SimpleJekyllSearch({
     searchInput: document.getElementById('search-input'),
@@ -1240,3 +1240,24 @@ a {text-decoration: none;
     });
   });
 </script>
+<script defer>
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("search-input");
+    let initialized = false;
+
+    input.addEventListener("focus", function () {
+      if (initialized) return;
+
+      SimpleJekyllSearch({
+        searchInput: input,
+        resultsContainer: document.getElementById('results-container'),
+        json: '/search.json',
+        searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
+        noResultsText: 'No se encontraron resultados',
+      });
+
+      initialized = true;
+    });
+  });
+</script>
+
