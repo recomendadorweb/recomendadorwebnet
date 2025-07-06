@@ -933,7 +933,7 @@ a {text-decoration: none;
           <span class="post-category">{{ secundario2.categories[0] }}</span>
         </a>
       {% endif %}
-<img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}" width="400" height="225" loading="lazy" />
+<img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}" width="400" height="225" fetchpriority="high" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario2.title }}</h3>
         </div>
@@ -949,7 +949,7 @@ a {text-decoration: none;
         </a>
       {% endif %}
       <a href="{{ secundario3.url | relative_url }}" style="display: block; height: 100%;">
-<img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}" width="400" height="225" loading="lazy" />
+<img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}" width="400" height="225" fetchpriority="high" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario3.title }}</h3>
         </div>
