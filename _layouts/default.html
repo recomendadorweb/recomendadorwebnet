@@ -62,6 +62,9 @@
   <link as="font" crossorigin="anonymous" href="/global/fonts/poppins-v23-latin-700.woff2" rel="preload" type="font/woff2"/>
 
   <!-- otros tags -->
+
+  {% assign imgLCP = site.posts | where: "destacado", 1 | first %}
+<link rel="preload" as="image" href="{{ imgLCP.image | relative_url }}" fetchpriority="high">
 </head>
 <body>
   {% include header.html %}

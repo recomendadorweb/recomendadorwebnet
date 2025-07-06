@@ -9,6 +9,12 @@ pagination:
 ---
 
   <style>
+.img-post {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 :root {
   --color-azul-profesional: #364e68;
   --color-rosa-destacado: #fc3c68;
@@ -909,7 +915,7 @@ a {text-decoration: none;
     </a>
   {% endif %}
   <a href="{{ principal.url | relative_url }}" style="display: block; height: 100%;">
-    <img alt="{{ principal.title }}" src="{{ principal.image | relative_url }}" fetchpriority="high" />
+<img src="{{ principal.image }}" alt="{{ principal.title }}" width="800" height="450" fetchpriority="high" />
     <div class="post-text">
       <h3 class="post-title">{{ principal.title }}</h3>
       {% if principal.subtitle %}
@@ -927,8 +933,7 @@ a {text-decoration: none;
           <span class="post-category">{{ secundario2.categories[0] }}</span>
         </a>
       {% endif %}
-      <a href="{{ secundario2.url | relative_url }}" style="display: block; height: 100%;">
-        <img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}" fetchpriority="high" />
+<img alt="{{ secundario2.title }}" src="{{ secundario2.image | relative_url }}" width="400" height="225" loading="lazy" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario2.title }}</h3>
         </div>
@@ -944,7 +949,7 @@ a {text-decoration: none;
         </a>
       {% endif %}
       <a href="{{ secundario3.url | relative_url }}" style="display: block; height: 100%;">
-        <img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}" fetchpriority="high" />
+<img alt="{{ secundario3.title }}" src="{{ secundario3.image | relative_url }}" width="400" height="225" loading="lazy" />
         <div class="post-text">
           <h3 class="post-title">{{ secundario3.title }}</h3>
         </div>
@@ -971,7 +976,7 @@ a {text-decoration: none;
   <article class="blog-tarjeta hentry post-item" style="display: none;">
   <div class="tarjeta-thumb" style="position: relative;">
     <a href="{{ post.url | relative_url }}">
-      <img src="{{ post.image | default: '/global/images/1.webp' }}" alt="{{ post.title }}">
+<img src="{{ post.image }}" alt="{{ post.title }}" width="320" height="180" loading="lazy" />
        {% if post.categories %}
         <a href="/categoria/{{ post.categories[0] | slugify }}/">
           <span class="post-category">
@@ -991,7 +996,7 @@ a {text-decoration: none;
     <div class="entry-meta">
       <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
         {% assign autor = site.data.autor.autores[post.autor] %}
-        <img src="{{ autor.avatar }}" alt="{{ autor.nombre }}">
+        <img src="{{ autor.avatar }}" loading="lazy" width="28" height="28" alt="{{ autor.nombre }}">
         <span style="font-size: 0.85rem; color: #666;">
           Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }}</a> • {% include date_es.html date=post.date %}
         </span>
@@ -1022,7 +1027,7 @@ a {text-decoration: none;
       {% if guia.last_modified_at and guia.title and guia.path contains "index.html" %}
         <div class="grid-item">
           <a href="{{ guia.url | relative_url }}">
-            <img src="{{ guia.imagen | default: '/global/images/default.webp' }}" alt="{{ guia.title }}">
+            <img src="{{ guia.imagen | default: '/global/images/default.webp' }}" loading="lazy" alt="{{ guia.title }}">
           </a>
           <a href="{{ guia.url | relative_url }}">
             <h3 class="comparativa-title">{{ guia.title }}</h3>
