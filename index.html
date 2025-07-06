@@ -1054,7 +1054,7 @@ a {text-decoration: none;
     
     <!-- Carlos López -->
     <div class="popular-box-item">
-      <a href="/sobre-nosotros/#carlos" class="popular-thumb" style="background-image:url(/global/images/avatarCarlos.webp);"></a>
+      <a href="/sobre-nosotros/#carlos" class="popular-thumb" style="background-image:url(/global/images/avatarCarlos.webp);" alt="el avatar de carlos lópez"></a>
       <div class="popular-text">
         <a href="/sobre-nosotros/#carlos" class="popular-title">Carlos López</a>
         <div class="popular-date">Analista tech con 15 años de experiencia</div>
@@ -1063,7 +1063,7 @@ a {text-decoration: none;
 
     <!-- Sara Martín -->
     <div class="popular-box-item">
-      <a href="/sobre-nosotros/#sara" class="popular-thumb" style="background-image:url(/global/images/avatarSara.webp);"></a>
+      <a href="/sobre-nosotros/#sara" class="popular-thumb" style="background-image:url(/global/images/avatarSara.webp);" alt="el avatar de sara martín"></a>
       <div class="popular-text">
         <a href="/sobre-nosotros/#sara" class="popular-title">Sara Campos</a>
         <div class="popular-date">Especialista en belleza y bienestar</div>
@@ -1071,7 +1071,7 @@ a {text-decoration: none;
     </div>
 
         <div class="popular-box-item">
-      <a href="/sobre-nosotros/#david" class="popular-thumb" style="background-image:url(/global/images/avatarDavid.webp);"></a>
+      <a href="/sobre-nosotros/#david" class="popular-thumb" style="background-image:url(/global/images/avatarDavid.webp);" alt="el avatar de david jimenez"></a>
       <div class="popular-text">
         <a href="/sobre-nosotros/#david" class="popular-title">David Jimenez</a>
         <div class="popular-date">Analista deportivo con experiencia en guías y pruebas</div>
@@ -1095,7 +1095,7 @@ a {text-decoration: none;
   {% assign sorted_top_posts = top_posts | sort: "top" %}
   {% for post in sorted_top_posts limit:5 %}
     <div class="popular-box-item">
-      <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block; width:80px; height:80px; flex-shrink:0; background-image:url({{ post.imagen }}); background-size:cover; background-position:center center; border-radius:8px;"></a>
+      <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block; width:80px; height:80px; flex-shrink:0; background-image:url({{ post.imagen }}); background-size:cover; background-position:center center; border-radius:8px;" alt="{{ post.title }}"></a>
       <div class="popular-text">
         <a href="{{ post.url }}" class="popular-title">{{ post.shortTitle }}</a>
         <div class="popular-date">{{ post.date | date: "%-d de %B %Y" }}</div>
