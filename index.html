@@ -79,6 +79,8 @@
     <style>
     .main-post {
   min-height: 310px;
+  content-visibility: auto; /* permite hacer paint antes de calcular todo */
+  contain-intrinsic-size: 340px; /* da una estimación inicial de altura */
 }
 .img-post {
   aspect-ratio: 16 / 9;
