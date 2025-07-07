@@ -65,6 +65,10 @@
 
   {% assign imgLCP = site.posts | where: "destacado", 1 | first %}
 <link rel="preload" as="image" href="{{ imgLCP.image | relative_url }}" fetchpriority="high">
+  {% assign imgLCP2 = site.posts | where: "destacado", 2 | first %}
+<link rel="preload" as="image" href="{{ imgLCP2.image | relative_url }}" fetchpriority="high">
+  {% assign imgLCP3 = site.posts | where: "destacado", 3 | first %}
+<link rel="preload" as="image" href="{{ imgLCP3.image | relative_url }}" fetchpriority="high">
 </head>
 <body>
   {% include header.html %}
