@@ -947,6 +947,7 @@ a {text-decoration: none;
           <span class="post-category">{{ secundario2.categories[0] }}</span>
         </a>
       {% endif %}
+  <a href="{{ secundario2.url | relative_url }}" style="display: block; height: 100%;">
 <img 
   src="{{ secundario2.image | replace: '.webp', '-768w.webp' }}" 
   srcset="{{ secundario2.image | replace: '.webp', '-480w.webp' }} 480w,
