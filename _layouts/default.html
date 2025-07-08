@@ -74,7 +74,9 @@
     imagesrcset="{{ base }}-480w.webp 480w, {{ base }}-768w.webp 768w, {{ base }}-1200w.webp 1200w"
     imagesizes="{{ sizes }}">
 {% endfor %}
-
+{% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
+{% endif %}
 </head>
 <body>
   {% include header.html %}
