@@ -913,7 +913,7 @@ img {
   {% assign sorted_top_posts = top_posts | sort: "top" %}
   {% for post in sorted_top_posts limit:5 %}
     <div class="popular-box-item">
-      <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block; width:80px; height:80px; flex-shrink:0; background-image:url({{ post.imagen }}); background-size:cover; background-position:center center; border-radius:8px;" alt="{{ post.title }}"></a>
+      <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block; width:80px; height:80px; flex-shrink:0; background-image:url({{ post.imagen }}); background-size:cover; background-position:center center; border-radius:8px;" aria-label="{{ post.title }}"></a>
       <div class="popular-text">
         <a href="{{ post.url }}" class="popular-title">{{ post.shortTitle }}</a>
         <div class="popular-date">{{ post.date | date: "%-d de %B %Y" }}</div>
