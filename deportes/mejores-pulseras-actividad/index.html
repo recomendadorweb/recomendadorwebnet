@@ -1671,13 +1671,13 @@
 function loadAnalytics() {
   const script = document.createElement('script');
   script.async = true;
-  script.src = "https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN"; // Reemplaza con tu ID real
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-3ZN94Y4QHN";
   document.head.appendChild(script);
 
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-3ZN94Y4QHN'); // Reemplaza con tu ID real
+  gtag('config', 'G-3ZN94Y4QHN');
 }
 
 function setCookie(name, value, days) {
