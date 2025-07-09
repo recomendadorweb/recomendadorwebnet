@@ -413,6 +413,28 @@ figure.post-image img {
     border-top: 1px solid #ccc;
     margin-top: 2rem;  
   }
+
+.tag-box a {
+  display: inline-block;
+  padding: 3px 11px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.tag-box a:hover {
+  background: #007bff;
+  color: white !important;
+}
+.popular-box-content.tag-box {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 </style>
 <div class="container">
 <div class="post-container">
@@ -535,35 +557,41 @@ figure.post-image img {
 
     <hr>
 
-    <div class="tags-categories">
-      
-        <p><strong>Etiquetas:</strong>
+<div class="tags-categories popular-box-content tag-box">
+  
+    <div>
+      <p><strong>Etiquetas:</strong></p>
+      <div class="tag-box">
         
-          <a href="/tag/gadgets/">gadgets</a>
+          <a href="/tag/gadgets/">Gadgets</a>
         
-          <a href="/tag/verano/">verano</a>
+          <a href="/tag/verano/">Verano</a>
         
-          <a href="/tag/ventiladores/">ventiladores</a>
+          <a href="/tag/ventiladores/">Ventiladores</a>
         
-          <a href="/tag/aire-acondicionado-portatil/">aire acondicionado portatil</a>
+          <a href="/tag/aire-acondicionado-portatil/">Aire acondicionado portatil</a>
         
-          <a href="/tag/power-bank-solar/">power bank solar</a>
+          <a href="/tag/power-bank-solar/">Power bank solar</a>
         
-        </p>
-      
-
-      
-        <p><strong>Categorías:</strong>
-        
-          <a href="/categoria/hogar/">hogar</a>
-        
-          <a href="/categoria/gadgets/">gadgets</a>
-        
-          <a href="/categoria/verano/">verano</a>
-        
-        </p>
-      
+      </div>
     </div>
+  
+
+  
+    <div>
+      <p><strong>Categorías:</strong></p>
+      <div class="tag-box">
+        
+          <a href="/categoria/hogar/">Hogar</a>
+        
+          <a href="/categoria/gadgets/">Gadgets</a>
+        
+          <a href="/categoria/verano/">Verano</a>
+        
+      </div>
+    </div>
+  
+</div>
   </article>
 </div>
 

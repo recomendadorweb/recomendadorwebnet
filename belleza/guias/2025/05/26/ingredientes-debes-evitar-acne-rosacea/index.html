@@ -655,6 +655,27 @@ figure.post-image img {
     border-top: 1px solid #ccc;
     margin-top: 2rem;  
   }
+  .tag-box a {
+  display: inline-block;
+  padding: 3px 11px;
+  border: 1px solid #fce4ec;
+  border-radius: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.tag-box a:hover {
+  background: #7b4b94;
+  color: white !important;
+}
+.popular-box-content.tag-box {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 </style>
 <div class="container">
 <div class="post-container">
@@ -756,34 +777,39 @@ figure.post-image img {
     </div>
 
     <hr>
-
-    <div class="tags-categories">
-      
-        <p><strong>Etiquetas:</strong>
+<div class="tags-categories popular-box-content tag-box">
+  
+    <div>
+      <p><strong>Etiquetas:</strong></p>
+      <div class="tag-box">
         
-          <a href="/tag/acne/">acne</a>
+          <a href="/tag/acne/">Acne</a>
         
-          <a href="/tag/rosacea/">rosacea</a>
+          <a href="/tag/rosacea/">Rosacea</a>
         
-          <a href="/tag/ingredientes/">ingredientes</a>
+          <a href="/tag/ingredientes/">Ingredientes</a>
         
-          <a href="/tag/cuidado-facial/">cuidado facial</a>
+          <a href="/tag/cuidado-facial/">Cuidado facial</a>
         
-          <a href="/tag/cosmetica/">cosmetica</a>
+          <a href="/tag/cosmetica/">Cosmetica</a>
         
-        </p>
-      
-
-      
-        <p><strong>Categorías:</strong>
-        
-          <a href="/categoria/belleza/">belleza</a>
-        
-          <a href="/categoria/guias/">guias</a>
-        
-        </p>
-      
+      </div>
     </div>
+  
+
+  
+    <div>
+      <p><strong>Categorías:</strong></p>
+      <div class="tag-box">
+        
+          <a href="/categoria/belleza/">Belleza</a>
+        
+          <a href="/categoria/guias/">Guias</a>
+        
+      </div>
+    </div>
+  
+</div>
   </article>
 </div>
 

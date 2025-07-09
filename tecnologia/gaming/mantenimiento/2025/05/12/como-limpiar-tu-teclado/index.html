@@ -413,6 +413,28 @@ figure.post-image img {
     border-top: 1px solid #ccc;
     margin-top: 2rem;  
   }
+
+.tag-box a {
+  display: inline-block;
+  padding: 3px 11px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.tag-box a:hover {
+  background: #007bff;
+  color: white !important;
+}
+.popular-box-content.tag-box {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 </style>
 <div class="container">
 <div class="post-container">
@@ -498,35 +520,41 @@ figure.post-image img {
 
     <hr>
 
-    <div class="tags-categories">
-      
-        <p><strong>Etiquetas:</strong>
+<div class="tags-categories popular-box-content tag-box">
+  
+    <div>
+      <p><strong>Etiquetas:</strong></p>
+      <div class="tag-box">
         
-          <a href="/tag/teclados-mecanicos/">teclados mecanicos</a>
+          <a href="/tag/teclados-mecanicos/">Teclados mecanicos</a>
         
-          <a href="/tag/limpieza/">limpieza</a>
+          <a href="/tag/limpieza/">Limpieza</a>
         
-          <a href="/tag/consejos/">consejos</a>
+          <a href="/tag/consejos/">Consejos</a>
         
-          <a href="/tag/mantenimiento/">mantenimiento</a>
+          <a href="/tag/mantenimiento/">Mantenimiento</a>
         
-          <a href="/tag/perifericos/">perifericos</a>
+          <a href="/tag/perifericos/">Perifericos</a>
         
-        </p>
-      
-
-      
-        <p><strong>Categorías:</strong>
-        
-          <a href="/categoria/tecnologia/">tecnologia</a>
-        
-          <a href="/categoria/gaming/">gaming</a>
-        
-          <a href="/categoria/mantenimiento/">mantenimiento</a>
-        
-        </p>
-      
+      </div>
     </div>
+  
+
+  
+    <div>
+      <p><strong>Categorías:</strong></p>
+      <div class="tag-box">
+        
+          <a href="/categoria/tecnologia/">Tecnologia</a>
+        
+          <a href="/categoria/gaming/">Gaming</a>
+        
+          <a href="/categoria/mantenimiento/">Mantenimiento</a>
+        
+      </div>
+    </div>
+  
+</div>
   </article>
 </div>
 

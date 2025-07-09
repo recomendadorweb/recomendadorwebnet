@@ -413,6 +413,28 @@ figure.post-image img {
     border-top: 1px solid #ccc;
     margin-top: 2rem;  
   }
+
+.tag-box a {
+  display: inline-block;
+  padding: 3px 11px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.tag-box a:hover {
+  background: #007bff;
+  color: white !important;
+}
+.popular-box-content.tag-box {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 </style>
 <div class="container">
 <div class="post-container">
@@ -497,35 +519,41 @@ figure.post-image img {
 
     <hr>
 
-    <div class="tags-categories">
-      
-        <p><strong>Etiquetas:</strong>
+<div class="tags-categories popular-box-content tag-box">
+  
+    <div>
+      <p><strong>Etiquetas:</strong></p>
+      <div class="tag-box">
         
-          <a href="/tag/colchones/">colchones</a>
+          <a href="/tag/colchones/">Colchones</a>
         
-          <a href="/tag/verano/">verano</a>
+          <a href="/tag/verano/">Verano</a>
         
-          <a href="/tag/ofertas/">ofertas</a>
+          <a href="/tag/ofertas/">Ofertas</a>
         
-          <a href="/tag/descanso/">descanso</a>
+          <a href="/tag/descanso/">Descanso</a>
         
-          <a href="/tag/compra-inteligente/">compra inteligente</a>
+          <a href="/tag/compra-inteligente/">Compra inteligente</a>
         
-        </p>
-      
-
-      
-        <p><strong>Categorías:</strong>
-        
-          <a href="/categoria/descanso/">descanso</a>
-        
-          <a href="/categoria/hogar/">hogar</a>
-        
-          <a href="/categoria/consejos/">consejos</a>
-        
-        </p>
-      
+      </div>
     </div>
+  
+
+  
+    <div>
+      <p><strong>Categorías:</strong></p>
+      <div class="tag-box">
+        
+          <a href="/categoria/descanso/">Descanso</a>
+        
+          <a href="/categoria/hogar/">Hogar</a>
+        
+          <a href="/categoria/consejos/">Consejos</a>
+        
+      </div>
+    </div>
+  
+</div>
   </article>
 </div>
 
