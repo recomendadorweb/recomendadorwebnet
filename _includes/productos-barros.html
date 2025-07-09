@@ -20,7 +20,7 @@
       {% for color in barro.colores %}
         <div style="flex:1 1 calc(33.333% - 1em);display:flex;align-items:center;">
           <span style="display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:{{ color.color }};margin-right:0.4em;border:1px solid #aaa;"></span>
-          <a href="{{ color.link }}" style="color:#7b4b94;text-decoration:none;font-weight:500;" target="_blank">{{ color.nombre }}</a>
+          <a href="{{ color.link }}" rel="nofollow sponsored" style="color:#7b4b94;text-decoration:none;font-weight:500;" target="_blank">{{ color.nombre }}</a>
         </div>
       {% endfor %}
     </div>
