@@ -99,6 +99,28 @@ figure.post-image img {
     border-top: 1px solid #ccc;
     margin-top: 2rem;  
   }
+
+.tag-box a {
+  display: inline-block;
+  padding: 3px 11px;
+  border: 1px solid #007bff;
+  border-radius: 15px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.tag-box a:hover {
+  background: #007bff;
+  color: white !important;
+}
+.popular-box-content.tag-box {
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  gap: 8px;
+}
 </style>
 <div class="container">
 <div class="post-container">
@@ -133,23 +155,29 @@ figure.post-image img {
 
     <hr>
 
-    <div class="tags-categories">
-      {% if page.tags %}
-        <p><strong>Etiquetas:</strong>
+<div class="tags-categories popular-box-content tag-box">
+  {% if page.tags %}
+    <div>
+      <p><strong>Etiquetas:</strong></p>
+      <div class="tag-box">
         {% for tag in page.tags %}
-          <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>
+          <a href="/tag/{{ tag | slugify }}/">{{ tag | capitalize }}</a>
         {% endfor %}
-        </p>
-      {% endif %}
-
-      {% if page.categories %}
-        <p><strong>Categorías:</strong>
-        {% for category in page.categories %}
-          <a href="/categoria/{{ category | slugify }}/">{{ category }}</a>
-        {% endfor %}
-        </p>
-      {% endif %}
+      </div>
     </div>
+  {% endif %}
+
+  {% if page.categories %}
+    <div>
+      <p><strong>Categorías:</strong></p>
+      <div class="tag-box">
+        {% for category in page.categories %}
+          <a href="/categoria/{{ category | slugify }}/">{{ category | capitalize }}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</div>
   </article>
 </div>
 
