@@ -7,7 +7,6 @@ gem "jekyll-paginate-v2"
 gem "jekyll-archives"
 gem "jekyll-tagging"
 gem 'jekyll-seo-tag'
-gem 'jekyll-sitemap'
 gem 'csv'
 gem 'base64'
 gem 'wdm', '>= 0.1.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

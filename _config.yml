@@ -24,7 +24,6 @@ plugins:
   - jekyll-archives
   - jekyll/tagging
   - jekyll-seo-tag
-  - jekyll-sitemap
 
 # Soporte para includes con relative_url
 defaults:

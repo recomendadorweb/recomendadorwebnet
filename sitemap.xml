@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign baseurl = site.url | append: site.baseurl %}
+  
+  {%- for page in site.pages -%}
+    {%- unless page.url contains '/categoria/' 
+    or page.url contains '/tag/' 
+    or page.url contains '/blog/2025' 
+    or page.url contains 'sitemap.xml'
+    or page.url contains 'search.json'
+    or page.url contains '/autor/'
+    or page.url contains '/gracias/'
+    or page.url contains '/sobre-nosotros'
+    or page.sitemap == false -%}
+      <url>
+        <loc>{{ baseurl }}{{ page.url | replace:'index.html','' }}</loc>
+        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+      </url>
+    {%- endunless -%}
+  {%- endfor -%}
+
+  {%- for post in site.posts -%}
+    <url>
+      <loc>{{ baseurl }}{{ post.url }}</loc>
+      <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    </url>
+  {%- endfor -%}
+</urlset>

@@ -6,6 +6,7 @@ keywords: guías de compra gaming, teclados gaming, auriculares gaming, ratones 
 canonical: https://recomendador.net
 pagination:
   enabled: true
+date: 2025-07-17
 ---
 
 <style>
@@ -839,23 +840,33 @@ img {
 
 <div class="widget HTML is-visible type-grid" id="custom-grid-widget">
   <div class="grid-items">
+{% assign guias_actualizadas = site.pages | sort: "date" | reverse %}
+{% assign count = 0 %}
+{% for guia in guias_actualizadas %}
+  {% if guia.date and guia.title and guia.path contains "index.html" and guia.path != "belleza/index.html" and guia.path != "index.html" %}
+    {% if guia.imagen %}
+      {% assign imagen_url = guia.imagen | relative_url %}
+    {% else %}
+      {% assign imagen_url = '/global/images/default.webp' %}
+    {% endif %}
+    <div class="grid-item">
+      <a href="{{ guia.url | relative_url }}">
+        <img src="{{ guia.imagen | default: '/global/images/default.webp' }}" loading="lazy" alt="{{ guia.title }}">
+      </a>
+      <a href="{{ guia.url | relative_url }}">
+        <h3 class="comparativa-title">{{ guia.title }}</h3>
+      </a>
+      <p class="post-date">
+        {{ guia.date | date: "%d/%m/%Y" }}
+      </p>
+    </div>
+    {% assign count = count | plus: 1 %}
+    {% if count == 6 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
 
-    {% assign guias_actualizadas = site.pages | sort: "last_modified_at" | reverse %}
-    {% for guia in guias_actualizadas limit:6 %}
-      {% if guia.last_modified_at and guia.title and guia.path contains "index.html" %}
-        <div class="grid-item">
-          <a href="{{ guia.url | relative_url }}">
-            <img src="{{ guia.imagen | default: '/global/images/default.webp' }}" loading="lazy" alt="{{ guia.title }}">
-          </a>
-          <a href="{{ guia.url | relative_url }}">
-            <h3 class="comparativa-title">{{ guia.title }}</h3>
-          </a>
-          <p class="post-date">
-            {{ guia.last_modified_at | date: "%d/%m/%Y" }}
-          </p>
-        </div>
-      {% endif %}
-    {% endfor %}
 
   </div>
 </div>
