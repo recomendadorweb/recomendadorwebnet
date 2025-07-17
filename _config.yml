@@ -14,7 +14,7 @@ include: ["_pages"]
 exclude: ["node_modules/", "vendor/", "Gemfile", "Gemfile.lock", "README.md"]
 
 # Permalink limpio
-permalink: pretty
+permalink: /:categories/:title/
 
 # Markdown por defecto
 markdown: kramdown
