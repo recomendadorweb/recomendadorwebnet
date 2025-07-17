@@ -122,6 +122,7 @@ figure.post-image img {
   gap: 8px;
 }
 </style>
+
 <div class="container">
 <div class="post-container">
   <article>
@@ -161,7 +162,7 @@ figure.post-image img {
       <p><strong>Etiquetas:</strong></p>
       <div class="tag-box">
         {% for tag in page.tags %}
-          <a href="/tag/{{ tag | slugify }}/">{{ tag | capitalize }}</a>
+<a href="/tag/{{ tag | slugify }}/">{{ tag | capitalize_each }}</a>
         {% endfor %}
       </div>
     </div>
@@ -172,7 +173,7 @@ figure.post-image img {
       <p><strong>Categorías:</strong></p>
       <div class="tag-box">
         {% for category in page.categories %}
-          <a href="/categoria/{{ category | slugify }}/">{{ category | capitalize }}</a>
+<a href="/categoria/{{ category | slugify }}/">{{ category | capitalize_each }}</a>
         {% endfor %}
       </div>
     </div>

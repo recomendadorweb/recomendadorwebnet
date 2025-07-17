@@ -12,9 +12,9 @@
 <meta content="{{ page.keywords | default: site.keywords }}" name="keywords"/>
 <title>
 {% if page.tag %}
-  Entradas con la etiqueta: {{ page.tag }} | Recomendador.net
+  Entradas con la etiqueta: {{ page.tag | capitalize_each }} | Recomendador.net
 {% elsif page.type == "category" %}
-  Entradas en la categoría: {{ page.title }} | Recomendador.net
+Entradas en la categoría: {{ page.title | capitalize_each }} | Recomendador.net
 {% else %}
   {{ page.title | default: site.title }}
 {% endif %}

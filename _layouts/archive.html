@@ -115,9 +115,9 @@ pagination:
 {% elsif page.type == "month" %}
   <h1>Posts de {{ page.date | date: "%B de %Y" }}</h1>
 {% elsif page.type == "tag" %}
-  <h1>Posts con la etiqueta: {{ page.title | capitalize }}</h1>
+  <h1>Posts con la etiqueta: {{ page.title | capitalize_each }}</h1>
 {% elsif page.type == "category" %}
-  <h1>Posts en la categoría: {{ page.title | capitalize }}</h1>
+<h1>Posts en la categoría: {{ page.title | capitalize_each }}</h1>
 {% else %}
   <h1>Archivo</h1>
 {% endif %}
