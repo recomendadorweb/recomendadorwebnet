@@ -974,7 +974,7 @@ img {
     {% assign sorted_categories = site.categories | sort %}
     {% for category in sorted_categories %}
       <a href="{{ site.baseurl }}/categoria/{{ category[0] | slugify }}/">
-        {{ category[0] }}
+        {{ category[0] | capitalize_each}}
       </a>
     {% endfor %}
   </div>
