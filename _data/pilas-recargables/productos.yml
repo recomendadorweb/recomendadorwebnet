@@ -1,0 +1,35 @@
+productos:
+- nombre: EBL Pack de 8 pilas AAA 1100mAh
+  brand: EBL
+  imagen: images/pilas-recargables-aaa.webp
+  valoracion: 4.6
+  descripcion: 8 pilas AAA de 1100mAh con baja autodescarga y estuche incluido. Compatibles con todo tipo de dispositivos domésticos.
+  caracteristicas:
+    - "Capacidad: 1100mAh (Ni-MH)"
+    - "Tensión: 1,2V - Recargables"
+    - "Autodescarga baja: mantiene 80% tras 3 años"
+    - Tecnología ProCyco (1200 ciclos)
+    - Incluye caja de almacenamiento
+  enlace: https://amzn.to/4m8fvTZ
+  lo_mejor:
+    - Muy buena relación calidad-precio
+    - Ideales para mandos, linternas, despertadores...
+  a_tener_en_cuenta:
+    - Capacidad ajustada (1100mAh), no para usos muy exigentes
+- nombre: EBL Pack de 8 pilas AA 2800mAh
+  brand: EBL
+  imagen: images/pilas-recargables-aa.webp
+  valoracion: 4.7
+  descripcion: 8 pilas AA de 2800mAh, alta capacidad y larga vida útil. Con carcasa segura y tecnología ProCyco.
+  caracteristicas:
+    - "Capacidad: 2800mAh (Ni-MH)"
+    - "Tensión: 1,2V - Recargables"
+    - Baja autodescarga (80% tras 3 años)
+    - Carcasa de acero DBCK sin metales pesados
+    - Incluye estuche de almacenamiento
+  enlace: https://amzn.to/4kUgfLk
+  lo_mejor:
+    - Gran capacidad, ideales para cámaras y linternas potentes
+    - Construcción segura y libre de metales tóxicos
+  a_tener_en_cuenta:
+    - Precio algo más alto que las AAA
