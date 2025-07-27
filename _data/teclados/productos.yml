@@ -21,6 +21,7 @@ productos:
   - Reposamuñecas ergonómico incluido
   - Cuerpo de aluminio con acabado premium
   brand: Razer
+  asin: B08P52KQ8G
 - nombre: Razer BlackWidow V4 X
   lo_mejor: Switches mecánicos Green muy responsivos, RGB por tecla, rueda multifunción,
     teclas multimedia dedicadas
@@ -42,6 +43,7 @@ productos:
   - Teclas multimedia dedicadas
   - Estructura sólida con acabados premium
   brand: Razer
+  asin: B0C6MTPKQ1
 - nombre: Razer Ornata V3 X
   lo_mejor: Membrana silenciosa, diseño fino y cómodo, teclas planas y resistentes
     al agua, ideal para trabajar y jugar
@@ -62,6 +64,7 @@ productos:
   - Resistente a salpicaduras
   - Diseño ligero y cómodo para oficina o gaming
   brand: Razer
+  asin: B09X63H56X
 - nombre: Razer Apex 3
   lo_mejor: Teclado silencioso con resistencia IP32 al agua, RGB por zonas y controles
     multimedia dedicados
@@ -83,6 +86,7 @@ productos:
   - Reposamuñecas desmontable
   - Controles multimedia dedicados
   brand: Razer
+  asin: B082YRCL4T
 - nombre: Mars Gaming MKPRO
   lo_mejor: Switches mecánicos OUTEMU, chasis de aluminio, RGB completo y reposamuñecas
     desmontable
@@ -103,6 +107,7 @@ productos:
   - Chasis de aluminio reforzado
   - Formato completo con anti-ghosting
   brand: Mars
+  asin: B0F383W18C
 - nombre: Logitech G213 Prodigy
   lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado,
     resistente a líquidos
@@ -123,6 +128,7 @@ productos:
   - Resistente a salpicaduras
   - Software Logitech G HUB
   brand: Logitech
+  asin: B01L6L44NU
 - nombre: Corsair K55 RGB PRO
   lo_mejor: Teclas macro y multimedia dedicadas, resistencia IP42, RGB por zonas y
     compatible con iCUE
@@ -143,20 +149,27 @@ productos:
   - Controles multimedia dedicados
   - Compatible con Corsair iCUE
   brand: Corsair
+  asin: B08YDJ6DKN
 - nombre: Razer BlackWidow V3 TKL
   valoracion: 5
   caracteristicas:
-    - Switches mecánicos Razer Green
-    - Iluminación RGB por tecla
-    - Formato TKL compacto
-    - Diseño metálico robusto
-    - Compatible con Razer Synapse
-  descripcion: "Probé este teclado durante sesiones intensivas en juegos como Valorant, Apex y StarCraft II, y su rendimiento fue impecable. Sus switches Green ofrecen ese clic táctil satisfactorio que te da control absoluto sobre cada acción. Al ser TKL, me dejó mucho más espacio para mover el ratón, lo cual es una ventaja clara en FPS. El RGB individual por tecla se ve espectacular. El chasis es sólido y resistente. Si buscas precisión y diseño compacto, este teclado no falla."
+  - Switches mecánicos Razer Green
+  - Iluminación RGB por tecla
+  - Formato TKL compacto
+  - Diseño metálico robusto
+  - Compatible con Razer Synapse
+  descripcion: Probé este teclado durante sesiones intensivas en juegos como Valorant,
+    Apex y StarCraft II, y su rendimiento fue impecable. Sus switches Green ofrecen
+    ese clic táctil satisfactorio que te da control absoluto sobre cada acción. Al
+    ser TKL, me dejó mucho más espacio para mover el ratón, lo cual es una ventaja
+    clara en FPS. El RGB individual por tecla se ve espectacular. El chasis es sólido
+    y resistente. Si buscas precisión y diseño compacto, este teclado no falla.
   lo_mejor: Formato compacto sin pad numérico, switches Green, RGB individual y diseño
     robusto
   a_tener_en_cuenta: Perfecto para shooters y escritorios con poco espacio
   enlace: https://amzn.to/4j4Gxdc
   imagen: images/blackwidow-v3-tenkeyless.webp
+  asin: B097F5QSTB
 - nombre: Logitech G512
   lo_mejor: Switches GX (Brown, Red o Blue), chasis de aluminio, RGB por tecla y puerto
     USB integrado
@@ -177,6 +190,7 @@ productos:
   - Puerto USB passthrough integrado
   - Compatible con Logitech G HUB
   brand: Logitech
+  asin: B07W7M8CLV
 - nombre: Logitech G413 TKL SE
   lo_mejor: Diseño TKL compacto, retroiluminación blanca clara, carcasa de aluminio
     y switches táctiles
@@ -197,3 +211,4 @@ productos:
   - Retroiluminación blanca funcional
   - Diseño limpio y sin distracciones
   brand: Logitech
+  asin: B07W7KMK4W

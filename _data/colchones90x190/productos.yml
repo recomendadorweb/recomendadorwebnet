@@ -1,7 +1,6 @@
-titulo_lo_mejor: "Firmeza"
-titulo_a_tener_en_cuenta: "Material principal"
 productos:
-- a_tener_en_cuenta: Viscoelástica + Sensopur HR
+- ASIN: B01ETFVVQ8
+  a_tener_en_cuenta: Viscoelástica + Sensopur HR
   brand: Imperial Confort
   caracteristicas:
   - Firmeza media/alta
@@ -21,7 +20,8 @@ productos:
   lo_mejor: Media-Alta
   nombre: Imperial Confort Oslo New Viscoelástico
   valoracion: 4.3
-- a_tener_en_cuenta: Viscoelástica + HR multicapa
+- ASIN: B0F38HGRY1
+  a_tener_en_cuenta: Viscoelástica + HR multicapa
   brand: Todocama
   caracteristicas:
   - Firmeza media/alta
@@ -41,7 +41,8 @@ productos:
   lo_mejor: Media-Alta
   nombre: Todocama Pure Flow Max Viscoelástico
   valoracion: 4.5
-- a_tener_en_cuenta: HR + visco Bio Sense
+- ASIN: B07D2BX9BS
+  a_tener_en_cuenta: HR + visco Bio Sense
   brand: Dream Repair
   caracteristicas:
   - Firmeza media/alta
@@ -62,7 +63,8 @@ productos:
   lo_mejor: Media-Alta
   nombre: Simpur Dream Repair Viscoelástico
   valoracion: 4.6
-- a_tener_en_cuenta: Muelles ensacados + viscoelástica
+- ASIN: B07RP81T79
+  a_tener_en_cuenta: Muelles ensacados + viscoelástica
   brand: Simpur
   caracteristicas:
   - Firmeza alta
@@ -82,7 +84,8 @@ productos:
   lo_mejor: Alta
   nombre: Simpur Visco Spring Magestic Muelles Ensacados + Viscoelástico
   valoracion: 4.4
-- a_tener_en_cuenta: Memory foam + HR
+- ASIN: B016AFQAD4
+  a_tener_en_cuenta: Memory foam + HR
   brand: Dormio
   caracteristicas:
   - Firme
@@ -102,7 +105,8 @@ productos:
   lo_mejor: Media-Alta
   nombre: Dormio Zafiro Viscoelástico
   valoracion: 4.2
-- a_tener_en_cuenta: Memory foam + espuma Breath Soft
+- ASIN: B08YB77MQW
+  a_tener_en_cuenta: Memory foam + espuma Breath Soft
   brand: ZZ DON DESCANSO
   caracteristicas:
   - Firmeza media-alta
@@ -122,7 +126,8 @@ productos:
   lo_mejor: Media-Alta
   nombre: ZZ Don Descanso Mulhacén Viscoelástico
   valoracion: 4.4
-- a_tener_en_cuenta: Memory foam + HR FoamTech
+- ASIN: B0B9BX7R2R
+  a_tener_en_cuenta: Memory foam + HR FoamTech
   brand: Cecotec
   caracteristicas:
   - Firmeza alta
@@ -141,7 +146,8 @@ productos:
   lo_mejor: Alta
   nombre: Cecotec Flow ViscoCare 1900 Viscoelástico
   valoracion: 4.3
-- a_tener_en_cuenta: Visco carbono + biocerámica
+- ASIN: B07L9F6DMD
+  a_tener_en_cuenta: Visco carbono + biocerámica
   brand: ROYAL SLEEP
   caracteristicas:
   - Firmeza alta
@@ -160,7 +166,8 @@ productos:
   lo_mejor: Alta
   nombre: Royal Sleep Ceramic Plus Viscoelástico + Carbono
   valoracion: 4.6
-- a_tener_en_cuenta: Viscoelástica + HR
+- ASIN: B07YDV2D7S
+  a_tener_en_cuenta: Viscoelástica + HR
   brand: PIKOLIN
   caracteristicas:
   - Firmeza alta
@@ -179,3 +186,5 @@ productos:
   lo_mejor: Alta
   nombre: Pikolin Leah
   valoracion: 4.7
+titulo_a_tener_en_cuenta: Material principal
+titulo_lo_mejor: Firmeza

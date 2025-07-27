@@ -1,7 +1,4 @@
-- emoji: 🌿
-  titulo: 'Khadi: Coloración Ayurvédica 100% Vegetal'
-  recomendado: true
-  bloques:
+- bloques:
   - subtitulo: ✔️ ¿Por qué recomiendo Khadi?
     texto: Es una de las marcas que más uso en mi centro de belleza. Funciona especialmente
       bien en mujeres que vienen de años usando tintes químicos y buscan pasarse a
@@ -14,67 +11,86 @@
       color natural tras varias aplicaciones. Me encanta el tono Castaño Medio, pero
       el Cobre también deja reflejos preciosos.
   colores:
-  - nombre: Rubio toque dorado
+  - ASIN: B00SGZ8JSQ
+    color: '#f5e083'
     link: https://amzn.to/43llhdj
-    color: '#f5e083'
-  - nombre: Neutral, sin color
-    link: https://amzn.to/4j6VZoX
+    nombre: Rubio toque dorado
+  - ASIN: B00AFAYQ3W
     color: '#dddddd'
-  - nombre: Cobre
-    link: https://amzn.to/3SKojmg
+    link: https://amzn.to/4j6VZoX
+    nombre: Neutral, sin color
+  - ASIN: B07ZRCRS8D
     color: '#b87333'
-  - nombre: Rojizo
-    link: https://amzn.to/3YQtp40
+    link: https://amzn.to/3SKojmg
+    nombre: Cobre
+  - ASIN: B003TNOSXK
     color: '#cccccc'
-  - nombre: Castaño dorado
-    link: https://amzn.to/4k2GNKM
+    link: https://amzn.to/3YQtp40
+    nombre: Rojizo
+  - ASIN: B07G5BZYD4
     color: '#f0c14b'
-  - nombre: Rubio Claro
+    link: https://amzn.to/4k2GNKM
+    nombre: Castaño dorado
+  - ASIN: B00SGZHQSA
+    color: '#f5e083'
     link: https://amzn.to/4mn7N9x
-    color: '#f5e083'
-  - nombre: Castaño Medio
-    link: https://amzn.to/3FgeeKS
+    nombre: Rubio Claro
+  - ASIN: B07G56NP3M
     color: '#a8753f'
-  - nombre: Castaño Claro
-    link: https://amzn.to/3SGPiiD
+    link: https://amzn.to/3FgeeKS
+    nombre: Castaño Medio
+  - ASIN: B003TNR1WK
     color: '#e6d3a3'
-  - nombre: Castaño Avellana
+    link: https://amzn.to/3SGPiiD
+    nombre: Castaño Claro
+  - ASIN: B01AT9FI80
+    color: '#8b5d33'
     link: https://amzn.to/3H21nfW
+    nombre: Castaño Avellana
+  - ASIN: B01676KZCS
     color: '#8b5d33'
-  - nombre: Castaño Oscuro
     link: https://amzn.to/4dnxgvz
-    color: '#8b5d33'
-  - nombre: Rubio Oscuro Ceniza
+    nombre: Castaño Oscuro
+  - ASIN: B0773GQPDK
+    color: '#f5e083'
     link: https://amzn.to/4kuYK4L
-    color: '#f5e083'
-  - nombre: Castaño Ceniza
-    link: https://amzn.to/3ZfaEYn
+    nombre: Rubio Oscuro Ceniza
+  - ASIN: B07G58NBMG
     color: '#8b5d33'
-  - nombre: Indigo Puro
-    link: https://amzn.to/4mijjTv
+    link: https://amzn.to/3ZfaEYn
+    nombre: Castaño Ceniza
+  - ASIN: B00Q6S2DYQ
     color: '#3f51b5'
-  - nombre: Negro
-    link: https://amzn.to/43sSjZ1
+    link: https://amzn.to/4mijjTv
+    nombre: Indigo Puro
+  - ASIN: B003TNR1U2
     color: '#1c1c1c'
-  - nombre: Rojo Puro
-    link: https://amzn.to/4kqpao0
+    link: https://amzn.to/43sSjZ1
+    nombre: Negro
+  - ASIN: B003TNIWPU
     color: '#c0392b'
-  - nombre: Rubio Miel Amanecer
+    link: https://amzn.to/4kqpao0
+    nombre: Rojo Puro
+  - ASIN: B07GYN7RFR
+    color: '#f5e083'
     link: https://amzn.to/3FgGexW
+    nombre: Rubio Miel Amanecer
+  - ASIN: B00SGZCXRO
     color: '#f5e083'
-  - nombre: Rubio Medio
     link: https://amzn.to/45iRZ1o
-    color: '#f5e083'
-  - nombre: Caoba
-    link: https://amzn.to/4j6WEXp
+    nombre: Rubio Medio
+  - ASIN: B0C4T9CCCN
     color: '#a52a2a'
-  - nombre: Color prep
-    link: https://amzn.to/4jdG8oG
+    link: https://amzn.to/4j6WEXp
+    nombre: Caoba
+  - ASIN: B097BQV4LD
     color: '#a0c4ff'
-- emoji: 🌺
-  titulo: 'Radhe Shyam: Coloración 100% Natural con Tradición'
+    link: https://amzn.to/4jdG8oG
+    nombre: Color prep
+  emoji: 🌿
   recomendado: true
-  bloques:
+  titulo: 'Khadi: Coloración Ayurvédica 100% Vegetal'
+- bloques:
   - subtitulo: ✔️ ¿Por qué la recomiendo?
     texto: Es una marca veterana y muy versátil. Tiene tonos cálidos y fríos que se
       adaptan a diferentes bases de cabello. Mis clientas suelen elegirla cuando quieren
@@ -89,79 +105,102 @@
     texto: Al menos una hora de exposición para fijar bien el pigmento. Se nota mucho
       la diferencia si se respeta el tiempo.
   colores:
-  - nombre: Super Caoba Oscuro
+  - ASIN: B00V6AFQPM
+    color: '#a52a2a'
     link: https://amzn.to/43noMzE
-    color: '#a52a2a'
-  - nombre: Castaño Claro
-    link: https://amzn.to/43ri63H
+    nombre: Super Caoba Oscuro
+  - ASIN: B00DN9F7BW
     color: '#e6d3a3'
-  - nombre: Castaño Oscuro
+    link: https://amzn.to/43ri63H
+    nombre: Castaño Claro
+  - ASIN: B00DN9F8K2
+    color: '#8b5d33'
     link: https://amzn.to/44MEtmE
-    color: '#8b5d33'
-  - nombre: Rubio Intenso
+    nombre: Castaño Oscuro
+  - ASIN: B01HSPUOYG
+    color: '#f5e083'
     link: https://amzn.to/4jg4GgR
-    color: '#f5e083'
-  - nombre: Negro
-    link: https://amzn.to/4329gdQ
+    nombre: Rubio Intenso
+  - ASIN: B00DN9FBFY
     color: '#1c1c1c'
-  - nombre: Castaño Medio
-    link: https://amzn.to/3ZfbPqL
+    link: https://amzn.to/4329gdQ
+    nombre: Negro
+  - ASIN: B00LJ4052Y
     color: '#a8753f'
-  - nombre: Rubio Ceniza
+    link: https://amzn.to/3ZfbPqL
+    nombre: Castaño Medio
+  - ASIN: B00DN9FEQA
+    color: '#f5e083'
     link: https://amzn.to/4kw9kbH
-    color: '#f5e083'
-  - nombre: Castaño Caoba
+    nombre: Rubio Ceniza
+  - ASIN: B00DN9N64M
+    color: '#8b5d33'
     link: https://amzn.to/4k6SKiI
+    nombre: Castaño Caoba
+  - ASIN: B079DQ4N6Y
     color: '#8b5d33'
-  - nombre: Castaño Cobrizo
     link: https://amzn.to/4drXzRl
-    color: '#8b5d33'
-  - nombre: Caoba Oscuro
+    nombre: Castaño Cobrizo
+  - ASIN: B00DN9F6AE
+    color: '#a52a2a'
     link: https://amzn.to/3FgfNbI
-    color: '#a52a2a'
-  - nombre: Chocolate
-    link: https://amzn.to/43mdMml
+    nombre: Caoba Oscuro
+  - ASIN: B0CRRZ5GJ5
     color: '#cccccc'
-  - nombre: Rojo Burdeos
-    link: https://amzn.to/43oNpMI
+    link: https://amzn.to/43mdMml
+    nombre: Chocolate
+  - ASIN: B0CRS36BK2
     color: '#c0392b'
-  - nombre: Super Caoba Luminoso
+    link: https://amzn.to/43oNpMI
+    nombre: Rojo Burdeos
+  - ASIN: B00DN9F5A0
+    color: '#a52a2a'
     link: https://amzn.to/4msYzbW
-    color: '#a52a2a'
-  - nombre: Castaño Intenso
-    link: https://amzn.to/3Znub8M
+    nombre: Super Caoba Luminoso
+  - ASIN: B00V6AHO4I
     color: '#8b5d33'
-  - nombre: Rubio Dorado
-    link: https://amzn.to/4mlKv3F
+    link: https://amzn.to/3Znub8M
+    nombre: Castaño Intenso
+  - ASIN: B00DN9FHCQ
     color: '#f5e083'
-  - nombre: Indigo
-    link: https://amzn.to/432t8xo
+    link: https://amzn.to/4mlKv3F
+    nombre: Rubio Dorado
+  - ASIN: B00V6AHKLU
     color: '#3f51b5'
-  - nombre: Caoba Intenso
+    link: https://amzn.to/432t8xo
+    nombre: Indigo
+  - ASIN: B0CRS1MSBT
+    color: '#a52a2a'
     link: https://amzn.to/3SGpjI2
+    nombre: Caoba Intenso
+  - ASIN: B0CRS21KQ3
     color: '#a52a2a'
-  - nombre: Caoba Natural
     link: https://amzn.to/3H05Hw6
-    color: '#a52a2a'
-  - nombre: Sidr Tratamiento Capilar Natural
+    nombre: Caoba Natural
+  - ASIN: B07Z6NNNKX
+    color: '#e6e6e6'
     link: https://amzn.to/4ktVVRq
+    nombre: Sidr Tratamiento Capilar Natural
+  - ASIN: B07Z6NDKN9
     color: '#e6e6e6'
-  - nombre: Manjistha Tratamiento Capilar Natural
     link: https://amzn.to/4ko59OO
+    nombre: Manjistha Tratamiento Capilar Natural
+  - ASIN: B07Z6NDVPJ
     color: '#e6e6e6'
-  - nombre: Brahmi Tratamiento Capilar Natural
     link: https://amzn.to/3EZJwpn
-    color: '#e6e6e6'
-  - nombre: Tratamiento Capilar Ayurvédico Amla
-    link: https://amzn.to/4dswcXd
+    nombre: Brahmi Tratamiento Capilar Natural
+  - ASIN: B00DN9I534
     color: '#aed581'
-  - nombre: Fortalecedor de Cabello
-    link: https://amzn.to/3GZRTSl
+    link: https://amzn.to/4dswcXd
+    nombre: Tratamiento Capilar Ayurvédico Amla
+  - ASIN: B00DN9FDVG
     color: '#b2dfdb'
-- emoji: 🍃
-  titulo: 'Real Earth: Barros Orgánicos para un Cabello Saludable'
-  recomendado: false
-  bloques:
+    link: https://amzn.to/3GZRTSl
+    nombre: Fortalecedor de Cabello
+  emoji: 🌺
+  recomendado: true
+  titulo: 'Radhe Shyam: Coloración 100% Natural con Tradición'
+- bloques:
   - subtitulo: ✔️ ¿Qué ofrece esta marca?
     texto: Es una opción económica pero eficaz. Perfecta para quienes quieren iniciarse
       en el mundo de los pigmentos naturales sin gastar mucho, pero sin renunciar
@@ -177,19 +216,22 @@
     texto: Personas con cuero cabelludo sensible que quieren una solución sencilla,
       sin perfumes ni químicos, pero con buenos resultados.
   colores:
-  - nombre: Caoba
-    link: https://amzn.to/44FnFxL
+  - ASIN: B0BYGVSTVN
     color: '#a52a2a'
-  - nombre: Castaño Oscuro
-    link: https://amzn.to/3SIg8H7
+    link: https://amzn.to/44FnFxL
+    nombre: Caoba
+  - ASIN: B0BYGKV6G5
     color: '#8b5d33'
-  - nombre: Índigo
-    link: https://amzn.to/4drWMjl
+    link: https://amzn.to/3SIg8H7
+    nombre: Castaño Oscuro
+  - ASIN: B08ZYG5H29
     color: '#cccccc'
-- emoji: 🌸
-  titulo: 'Henna y 3x Indigo: Tradición Natural para el Cuidado Capilar'
+    link: https://amzn.to/4drWMjl
+    nombre: Índigo
+  emoji: 🍃
   recomendado: false
-  bloques:
+  titulo: 'Real Earth: Barros Orgánicos para un Cabello Saludable'
+- bloques:
   - subtitulo: ✔️ ¿Qué es?
     texto: Este producto combina dos hierbas, la henna y el índigo, para proporcionar
       un hermoso tono de cabello.
@@ -200,21 +242,30 @@
     texto: Es importante dejarla actuar al menos una hora para que el pigmento se
       fije bien. Cuanto más tiempo se deje, mayor será la intensidad del color.
   colores:
-  - nombre: Castaño Oscuro
+  - ASIN: B09SZCTP7F
+    color: '#8b5d33'
     link: https://amzn.to/3HgKD4r
-    color: '#8b5d33'
-  - nombre: Castaño Claro
-    link: https://amzn.to/4kl9SS9
+    nombre: Castaño Oscuro
+  - ASIN: B09SZBR8Z7
     color: '#e6d3a3'
-  - nombre: Castaño
-    link: https://amzn.to/4ko4e0O
+    link: https://amzn.to/4kl9SS9
+    nombre: Castaño Claro
+  - ASIN: B09SZC4BH8
     color: '#8b5d33'
-  - nombre: Rojo cobre
-    link: https://amzn.to/4moBWFg
+    link: https://amzn.to/4ko4e0O
+    nombre: Castaño
+  - ASIN: B09QD436MY
     color: '#b87333'
-  - nombre: Rubio Natural
-    link: https://amzn.to/4je8q2z
+    link: https://amzn.to/4moBWFg
+    nombre: Rojo cobre
+  - ASIN: B0D6WJF6GL
     color: '#f5e083'
-  - nombre: Neutro
-    link: https://amzn.to/4moe4BQ
+    link: https://amzn.to/4je8q2z
+    nombre: Rubio Natural
+  - ASIN: B0CHMR6MXX
     color: '#cccccc'
+    link: https://amzn.to/4moe4BQ
+    nombre: Neutro
+  emoji: 🌸
+  recomendado: false
+  titulo: 'Henna y 3x Indigo: Tradición Natural para el Cuidado Capilar'

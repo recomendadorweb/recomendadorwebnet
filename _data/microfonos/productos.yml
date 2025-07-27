@@ -1,8 +1,13 @@
 productos:
-- nombre: SteelSeries Alias Pro Kit
+- ASIN: B0CJ36GTW3
+  a_tener_en_cuenta: 📐 Requiere espacio, 💰 Inversión superior
   brand: SteelSeries
-  imagen: images/microfono-steelseries-alias-pro-kit.webp
-  valoracion: 5
+  caracteristicas:
+  - Calidad de audio de estudio con conexión XLR
+  - Interfaz incluida para controlar todo desde el primer día
+  - Ideal para podcasting profesional y directos exigentes
+  - Rechaza el ruido de fondo sin filtros digitales
+  - Diseño discreto y elegante para escritorio serio
   descripcion: 'Este es el micrófono que más he usado en grabaciones profesionales.
     Viene con una interfaz XLR integrada, así que no necesitas comprar nada más para
     empezar. Suena como los micros de estudio: la voz sale cálida, redonda y con gran
@@ -10,20 +15,21 @@ productos:
     directos en Twitch con él, y en todos los casos la calidad ha sido de primera.
     Me encanta lo sencillo que es de configurar y el control que ofrece. Si tu prioridad
     es sonar profesional desde casa, este es tu mejor aliado.'
-  caracteristicas:
-  - Calidad de audio de estudio con conexión XLR
-  - Interfaz incluida para controlar todo desde el primer día
-  - Ideal para podcasting profesional y directos exigentes
-  - Rechaza el ruido de fondo sin filtros digitales
-  - Diseño discreto y elegante para escritorio serio
   enlace: https://amzn.to/437YlPF
+  imagen: images/microfono-steelseries-alias-pro-kit.webp
   lo_mejor: 🎙 Calidad de estudio XLR + interfaz incluida 🔧 Control completo 🔊 Sonido
     cálido 🖥 Ideal para setups avanzados
-  a_tener_en_cuenta: 📐 Requiere espacio, 💰 Inversión superior
-- nombre: Logitech for Creators Blue Yeti
+  nombre: SteelSeries Alias Pro Kit
+  valoracion: 5
+- ASIN: B00N1YPXW2
+  a_tener_en_cuenta: 📏 Tamaño algo voluminoso
   brand: Logitech
-  imagen: images/logitech-for-creators-blue-yeti.webp
-  valoracion: 4.5
+  caracteristicas:
+  - Sonido profesional sin necesidad de interfaz
+  - Controles físicos accesibles y fiables
+  - Perfecto para podcasting, entrevistas y narración
+  - Varias configuraciones de captación
+  - Compatible con Mac, Windows y más
   descripcion: Un clásico que nunca pasa de moda, y con razón. El Blue Yeti lleva
     años siendo el preferido de muchos creadores por su versatilidad. Yo lo he usado
     para entrevistas, tutoriales y grabaciones de cursos, y siempre cumple. Suena
@@ -31,22 +37,21 @@ productos:
     si grabas solo como si entrevistas a alguien más. Además, tiene controles físicos
     (ganancia, mute y patrón) que ayudan mucho durante la grabación. No necesitas
     saber de sonido para sacarle partido.
-  caracteristicas:
-  - Sonido profesional sin necesidad de interfaz
-  - Controles físicos accesibles y fiables
-  - Perfecto para podcasting, entrevistas y narración
-  - Varias configuraciones de captación
-  - Compatible con Mac, Windows y más
   enlace: https://amzn.to/43iwkUu
-  lo_mejor: '	🔌 USB plug & play
-    🎛 Controles físicos
-    🔁 Múltiples patrones
-    🎙 Sonido versátil'
-  a_tener_en_cuenta: '📏 Tamaño algo voluminoso'
-- nombre: Elgato Wave:3
+  imagen: images/logitech-for-creators-blue-yeti.webp
+  lo_mejor: "\t\U0001F50C USB plug & play \U0001F39B Controles físicos \U0001F501\
+    \ Múltiples patrones \U0001F399 Sonido versátil"
+  nombre: Logitech for Creators Blue Yeti
+  valoracion: 4.5
+- ASIN: B088HHWC47
+  a_tener_en_cuenta: ⚙️ Software recomendado para sacarle partido
   brand: Elgato
-  imagen: images/elgato-wave-3.webp
-  valoracion: 5
+  caracteristicas:
+  - Sonido claro con calidad de estudio
+  - Filtro anti-clipping automático
+  - Software para mezclar voz, música y efectos
+  - Ideal para streaming y grabaciones vocales
+  - Diseño compacto que no molesta en cámara
   descripcion: He probado muchos micros USB, pero pocos suenan tan bien como este.
     El Elgato Wave:3 tiene un sonido sorprendentemente limpio y detallado, perfecto
     para podcasting y grabaciones vocales. Además, su sistema anti-clipping evita
@@ -54,20 +59,21 @@ productos:
     con énfasis. El software Wave Link es ideal si mezclas varias fuentes (como voz,
     música, Discord…). Para creadores que hacen de todo, es una opción comodísima
     y eficaz.
-  caracteristicas:
-  - Sonido claro con calidad de estudio
-  - Filtro anti-clipping automático
-  - Software para mezclar voz, música y efectos
-  - Ideal para streaming y grabaciones vocales
-  - Diseño compacto que no molesta en cámara
   enlace: https://amzn.to/3S9wTuE
+  imagen: images/elgato-wave-3.webp
   lo_mejor: 🧠 Anti-clipping automático 🎚 Mezclador digital 🔊 Sonido nítido 🧩 Integración
     con Wave Link
-  a_tener_en_cuenta: ⚙️ Software recomendado para sacarle partido
-- nombre: Elgato Wave DX
-  brand: Elgato
-  imagen: images/elgato-wave-dx.webp
+  nombre: Elgato Wave:3
   valoracion: 5
+- ASIN: B0B8GRCXB6
+  a_tener_en_cuenta: 🎛 Requiere interfaz de audio externa
+  brand: Elgato
+  caracteristicas:
+  - Captación muy direccional (ideal para espacios con ruido)
+  - Sonido cálido y profundo
+  - Conexión XLR (requiere interfaz)
+  - Construcción premium, totalmente metálica
+  - Ideal para podcast, locución o streamers avanzados
   descripcion: Este es mi opción de confianza cuando grabo en sitios con ruido de
     fondo. Es un micrófono dinámico con conexión XLR, lo que significa que capta solo
     lo que tienes justo delante. He grabado con él incluso con ventiladores encendidos
@@ -75,20 +81,21 @@ productos:
     La voz suena rica, con cuerpo y cero interferencias. Eso sí, necesitas una interfaz
     de audio, pero si ya la tienes o estás dispuesto a invertir, vale muchísimo la
     pena.
-  caracteristicas:
-  - Captación muy direccional (ideal para espacios con ruido)
-  - Sonido cálido y profundo
-  - Conexión XLR (requiere interfaz)
-  - Construcción premium, totalmente metálica
-  - Ideal para podcast, locución o streamers avanzados
   enlace: https://amzn.to/4j9KBbZ
+  imagen: images/elgato-wave-dx.webp
   lo_mejor: 🔇 Rechaza ruido ambiental 🎙 Sonido profesional 🧱 Diseño robusto 🔗 Conexión
     XLR
-  a_tener_en_cuenta: 🎛 Requiere interfaz de audio externa
-- nombre: HyperX QuadCast
+  nombre: Elgato Wave DX
+  valoracion: 5
+- ASIN: B07NZZZ746
+  a_tener_en_cuenta: 📐 Algo voluminoso en escritorios pequeños
   brand: HyperX
-  imagen: images/hyperx-quadcast.webp
-  valoracion: 4.5
+  caracteristicas:
+  - Cuatro patrones de captación según situación
+  - Audio potente y limpio sin interfaz
+  - Ideal para podcast, streams e incluso entrevistas
+  - Base antivibración incluida
+  - Diseño llamativo con iluminación LED
   descripcion: Visualmente atractivo, sí, pero lo mejor es cómo suena. Este micrófono
     es muy versátil, y eso me ha permitido usarlo tanto en grabaciones de voz para
     podcast como en charlas por Zoom o Twitch. Tiene varios patrones de captación,
@@ -96,19 +103,20 @@ productos:
     es robusta y evita ruidos molestos al mover la mesa. El control de ganancia es
     muy accesible y la luz LED te indica si estás en mute. Una opción muy completa
     sin necesidad de interfaz.
-  caracteristicas:
-  - Cuatro patrones de captación según situación
-  - Audio potente y limpio sin interfaz
-  - Ideal para podcast, streams e incluso entrevistas
-  - Base antivibración incluida
-  - Diseño llamativo con iluminación LED
   enlace: https://amzn.to/43l9dZv
+  imagen: images/hyperx-quadcast.webp
   lo_mejor: 🌈 Iluminación LED 🔄 4 patrones 🎛 Ganancia accesible 🎤 Calidad muy estable
-  a_tener_en_cuenta: 📐 Algo voluminoso en escritorios pequeños
-- nombre: SteelSeries Alias
+  nombre: HyperX QuadCast
+  valoracion: 4.5
+- ASIN: B0CJ36Q5WF
+  a_tener_en_cuenta: 🎚 Controles básicos pero suficientes
   brand: SteelSeries
-  imagen: images/microfono-steelseries-alias.webp
-  valoracion: 4
+  caracteristicas:
+  - Diseñado para creadores de contenido vocal
+  - USB-C con baja latencia y gran claridad
+  - Sonido con cuerpo sin ser plano
+  - Ideal para formación online, podcasts o directos
+  - Diseño profesional que no distrae
   descripcion: Este micro es perfecto si no quieres complicarte con configuraciones
     avanzadas. Funciona por USB-C y suena muy bien directamente al conectarlo. Lo
     he usado para grabar entrevistas, sesiones de formación online y también directos,
@@ -116,19 +124,20 @@ productos:
     de control que incluye te permite ajustar la ganancia o ecualizar según tus necesidades,
     pero si no quieres tocar nada, también puedes usarlo tal cual. Su diseño discreto
     hace que quede bien en cualquier setup.
-  caracteristicas:
-  - Diseñado para creadores de contenido vocal
-  - USB-C con baja latencia y gran claridad
-  - Sonido con cuerpo sin ser plano
-  - Ideal para formación online, podcasts o directos
-  - Diseño profesional que no distrae
   enlace: https://amzn.to/4jVygcg
+  imagen: images/microfono-steelseries-alias.webp
   lo_mejor: 🧑‍🏫 Voz clara 🔌 USB-C moderno 🧘 Fácil de configurar 💼 Diseño sobrio
-  a_tener_en_cuenta: 🎚 Controles básicos pero suficientes
-- nombre: Logitech G Yeti GX
+  nombre: SteelSeries Alias
+  valoracion: 4
+- ASIN: B07W4DH8KG
+  a_tener_en_cuenta: 🎮 Optimizado para uso individual
   brand: Logitech
-  imagen: images/microfono-logitech-g-yeti-gx.webp
-  valoracion: 4.5
+  caracteristicas:
+  - Cancelación activa de ruido muy eficaz
+  - Controles físicos intuitivos
+  - Estética moderna compatible con cualquier entorno
+  - Buen nivel de detalle vocal
+  - Conexión USB-C rápida y estable
   descripcion: Lo que más me gusta de este micro es su cancelación activa de ruido,
     que de verdad funciona. Lo probé en una habitación con ventilador y teclado mecánico,
     y el resultado fue una voz limpia, sin ruidos molestos. Suena claro, moderno y
@@ -136,19 +145,20 @@ productos:
     casa sin tratamiento acústico. El diseño es compacto y los controles físicos te
     permiten ajustar el volumen al vuelo. Para grabaciones rápidas y limpias, es una
     opción excelente.
-  caracteristicas:
-  - Cancelación activa de ruido muy eficaz
-  - Controles físicos intuitivos
-  - Estética moderna compatible con cualquier entorno
-  - Buen nivel de detalle vocal
-  - Conexión USB-C rápida y estable
   enlace: https://amzn.to/4jIQSMI
+  imagen: images/microfono-logitech-g-yeti-gx.webp
   lo_mejor: 🧼 Cancelación activa 🖱 Control físico de volumen 🔌 USB-C 🎧 Sonido limpio
-  a_tener_en_cuenta: 🎮 Optimizado para uso individual
-- nombre: Razer Seiren V3 Chroma
-  brand: Razer
-  imagen: images/microfono-razer-seiren-v3-chroma.webp
+  nombre: Logitech G Yeti GX
   valoracion: 4.5
+- ASIN: B0CVSLQYDM
+  a_tener_en_cuenta: 🎨 Más visual que técnico
+  brand: Razer
+  caracteristicas:
+  - Iluminación RGB personalizable
+  - Captación cardioide decente para voz directa
+  - Mute táctil silencioso
+  - Ideal para grabaciones personales y Twitch
+  - Diseño gamer con presencia
   descripcion: Aunque llama la atención por su iluminación RGB, lo que me sorprendió
     es lo bien que capta la voz. Lo he usado para grabar locuciones y clips para redes
     sociales, y su sonido es más que correcto. La captación cardioide hace un buen
@@ -156,19 +166,20 @@ productos:
     de mute táctil es muy útil durante sesiones en directo. No será el más natural
     para podcast largos, pero para contenido corto y visualmente atractivo, es una
     buena herramienta.
-  caracteristicas:
-  - Iluminación RGB personalizable
-  - Captación cardioide decente para voz directa
-  - Mute táctil silencioso
-  - Ideal para grabaciones personales y Twitch
-  - Diseño gamer con presencia
   enlace: https://amzn.to/3RIBHai
+  imagen: images/microfono-razer-seiren-v3-chroma.webp
   lo_mejor: 🌈 RGB dinámico 🤌 Mute táctil 🎧 Captación clara 🎮 Estética gaming cuidada
-  a_tener_en_cuenta: 🎨 Más visual que técnico
-- nombre: HyperX SoloCast
+  nombre: Razer Seiren V3 Chroma
+  valoracion: 4.5
+- ASIN: B08KFL3SFV
+  a_tener_en_cuenta: 📉 Funcionalidad básica (sin control de ganancia)
   brand: HyperX
-  imagen: images/hyperx-solocast.webp
-  valoracion: 4
+  caracteristicas:
+  - Plug & Play por USB muy cómodo
+  - Captación cardioide que elimina el ruido lateral
+  - Tamaño reducido para escritorios pequeños
+  - Buena relación calidad-precio
+  - Funciona en PC, Mac y consolas
   descripcion: Este micro ha sido mi recomendación habitual para quienes se inician
     en la creación de contenido. Es compacto, fácil de usar y suena mucho mejor que
     cualquier micro integrado o auricular. Lo conectas por USB y listo. He grabado
@@ -176,19 +187,20 @@ productos:
     tiene controles avanzados, pero eso también lo hace sencillo. Su patrón cardioide
     ayuda bastante a eliminar ruidos de fondo. Por su precio, es difícil encontrar
     algo mejor.
-  caracteristicas:
-  - Plug & Play por USB muy cómodo
-  - Captación cardioide que elimina el ruido lateral
-  - Tamaño reducido para escritorios pequeños
-  - Buena relación calidad-precio
-  - Funciona en PC, Mac y consolas
   enlace: https://amzn.to/4dnKkRj
+  imagen: images/hyperx-solocast.webp
   lo_mejor: 🔌 Conexión instantánea 📦 Compacto 🎤 Audio nítido 🖱 Mute con un toque
-  a_tener_en_cuenta: 📉 Funcionalidad básica (sin control de ganancia)
-- nombre: Trust Gaming GXT 252 Emita Plus
-  brand: Trust
-  imagen: images/microfono-trust-gxt-252-emita-plus.webp
+  nombre: HyperX SoloCast
   valoracion: 4
+- ASIN: B079GC95S4
+  a_tener_en_cuenta: 🔈 Rendimiento correcto para empezar
+  brand: Trust
+  caracteristicas:
+  - Incluye todos los accesorios básicos
+  - Captación más que correcta para voz hablada
+  - Configuración rápida y sencilla
+  - Ideal para empezar sin gastar mucho
+  - Buena opción para formación online o vídeos personales
   descripcion: Este kit me ha parecido una opción ideal para empezar bien desde el
     principio. Incluye el micrófono, brazo articulado, filtro pop y amortiguador,
     todo lo necesario para un entorno de grabación básico. Lo he probado en podcasts
@@ -196,15 +208,8 @@ productos:
     sin ruidos extraños, y con buena presencia. Es una opción que recomiendo mucho
     si tienes presupuesto limitado pero quieres sonar con calidad desde el primer
     día.
-  caracteristicas:
-  - Incluye todos los accesorios básicos
-  - Captación más que correcta para voz hablada
-  - Configuración rápida y sencilla
-  - Ideal para empezar sin gastar mucho
-  - Buena opción para formación online o vídeos personales
   enlace: https://amzn.to/3RJE7W5
-  lo_mejor: "📦 Pack completo
-    🎙 Captación decente
-    🔧 Fácil de montar
-    💰 Buen precio"
-  a_tener_en_cuenta: '🔈 Rendimiento correcto para empezar'
+  imagen: images/microfono-trust-gxt-252-emita-plus.webp
+  lo_mejor: 📦 Pack completo 🎙 Captación decente 🔧 Fácil de montar 💰 Buen precio
+  nombre: Trust Gaming GXT 252 Emita Plus
+  valoracion: 4
