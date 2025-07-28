@@ -1,6 +1,37 @@
-<style></style>
+<style>
+  #menu-float-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    background-color: #222;
+    color: white;
+    padding: 0.5rem 0.8rem;
+    font-size: 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: opacity 0.2s ease;
+  }
+  #menu-float-button.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  @media (min-width: 768px) {
+    #menu-float-button {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .nav-container {
+      display: none !important;
+    }
+  }
+</style>
 
 <nav class="main-nav">
+  <div id="menu-float-button">☰</div>
   <div class="nav-container" style="padding: 0.4em 0.4em; display: flex; justify-content: space-between; align-items: center;">
     
     <!-- Enlace del Blog a la izquierda -->
@@ -8,7 +39,6 @@
       <a href="/" style="color: white; text-decoration: none; font-weight: 500;">📝 Blog</a>
     </div>
     <!-- Guías de compra y el resto de enlaces -->
-<div class="hamburger" id="menu-toggle" style="margin-right: auto;">☰</div>
 <div class="nav-right" style="display: flex; align-items: center; gap: 1.2em;">
       <ul class="nav-links" style="margin: 0;">
 <li class="menu-label" style="display: flex; align-items: center; color: #ccc; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding-top: 0.15em;">
@@ -19,6 +49,7 @@
           <a href="/belleza/mejores-barros-pelo/">💄 Belleza</a>
           <ul class="submenu">
             <li><a href="/belleza/mejores-barros-pelo/">💄 Barros para el Pelo</a></li>
+            <li><a href="/belleza/trajes-de-flamenca/">💃 Trajes de Flamenca</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -84,9 +115,10 @@
       </ul>
     </li>
     <li>
-      <a href="#">💄 Belleza</a>
+      <a href="#">💄 Moda</a>
       <ul>
         <li><a href="/belleza/mejores-barros-pelo/">🌿 Barros para el pelo</a></li>
+        <li><a href="/belleza/trajes-de-flamenca/">💃 Trajes de Flamenca</a></li>
       </ul>
     </li>
         <li>
@@ -209,7 +241,7 @@
 </style>
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
+    const toggle = document.getElementById("menu-float-button");
     const menu = document.getElementById("mobile-menu");
     const close = document.getElementById("menu-close");
     const overlay = document.getElementById("overlay");
@@ -219,18 +251,18 @@
         menu.classList.add("show");
         overlay.classList.add("show");
         document.body.classList.add("menu-abierto");
+        toggle.classList.add("hidden"); // ocultar botón
       };
-      close.onclick = () => {
-        menu.classList.remove("show");
-        overlay.classList.remove("show");
-        document.body.classList.remove("menu-abierto");
 
-      };
-      overlay.onclick = () => {
+      const cerrarMenu = () => {
         menu.classList.remove("show");
         overlay.classList.remove("show");
         document.body.classList.remove("menu-abierto");
+        toggle.classList.remove("hidden"); // mostrar botón
       };
+
+      close.onclick = cerrarMenu;
+      overlay.onclick = cerrarMenu;
     }
   });
 </script>

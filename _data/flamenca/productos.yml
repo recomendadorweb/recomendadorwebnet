@@ -137,7 +137,7 @@ productos:
         width: 500
         height: 424
   - ASIN: B0CKM95RTP
-    nombre: Vestido Flamenca Niña con Flor
+    nombre: Vestido Flamenca con Flor (Infantil)
     brand: ReliBeauty
     enlace: https://amzn.to/4fenahp
     valoracion: 4.6
@@ -268,6 +268,8 @@ productos:
     imagen: https://m.media-amazon.com/images/I/51a0Do1t-DL._SL500_.jpg
     imagenHeight: 454
     imagenWidth: 500
+    lo_mejor: Buen diseño y precio asequible
+    a_tener_en_cuenta: Es un disfraz más que un traje profesional
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41XBNkeg3vL._SL500_.jpg
         width: 250
@@ -275,3 +277,39 @@ productos:
       - url: https://m.media-amazon.com/images/I/51dDK9J0uEL._SL500_.jpg
         width: 500
         height: 454
+  - ASIN: B019A3UAI4
+    nombre: Traje de Flamenca Mujer Rojo
+    brand: FIESTAS GUIRCA
+    enlace: https://amzn.to/4lJZgwF
+    valoracion: 4.2
+    descripcion: Disfraz de flamenca en color rojo con lunares blancos. Corte clásico de vestido de sevillana.
+    precio: "23,04\_€"
+    lo_mejor: Buen diseño y precio asequible
+    a_tener_en_cuenta: Es un disfraz más que un traje profesional
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagen: https://m.media-amazon.com/images/I/41efHDWplLL._SL500_.jpg
+    imagenHeight: 500
+    imagenWidth: 177
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41Ot9fsZhQL._SL500_.jpg
+        width: 273
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+        width: 320
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+        width: 500
+        height: 441
+      - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+        width: 320
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41RHy6MycfL._SL500_.jpg
+        width: 320
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+        width: 320
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+        width: 320
+        height: 500
