@@ -623,23 +623,275 @@
 
 
 
-<style>.separador-producto {
+<style>
+.separador-producto {
   border-top: 1px solid #838383;
   margin: 1.5em 0;
   opacity: 0.5;
-}</style>
+}
+.ficha-teclado img {
+  position: relative;
+  object-fit: contain;
+}
+.imagen-con-miniaturas {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ Alinea verticalmente al centro */
+  gap: 1.5em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+.imagen-con-miniaturas .principal {
+  max-height: 350px;
+  width: auto;
+}
+.galeria-miniaturas {
+  display: grid;
+  grid-template-columns: repeat(2, 50px);
+  grid-auto-rows: 50px;
+  gap: 8px;
+}
+.galeria-miniaturas img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+.galeria-miniaturas img:hover {
+  border: 2px solid #0073e6;
+}
+.galeria-miniaturas img.activa {
+  border: 2px solid #0073e6 !important;
+}
+@media (max-width: 768px) {
+  .galeria-miniaturas {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .galeria-miniaturas img {
+    flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.lupa-amazon-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  position: relative;
+}
+
+.lupa-imagen {
+  position: relative;
+}
+.lupa-imagen img {
+  display: block;
+  max-height: 350px;
+  cursor: zoom-in;
+}
+.zoom-flotante {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 2px solid #0073e6;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  display: none;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+</style>
+
+<script>
+  const activarZoom = window.innerWidth >= 768;
+
+function mostrarZoomFlotante(container) {
+  const zoom = document.getElementById('zoom-flotante');
+  const img = container.querySelector('img');
+  const srcZoom = img.getAttribute('data-zoom') || img.src;
+  zoom.style.display = 'block';
+  zoom.style.backgroundImage = `url('${srcZoom}')`;
+}
+
+function ocultarZoomFlotante() {
+  const zoom = document.getElementById('zoom-flotante');
+  zoom.style.display = 'none';
+}
+
+function moverZoomFlotante(e, container) {
+  const img = container.querySelector('img');
+  const zoom = document.getElementById('zoom-flotante');
+  const rect = img.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const percentX = (x / rect.width) * 100;
+  const percentY = (y / rect.height) * 100;
+
+  zoom.style.backgroundPosition = `${percentX}% ${percentY}%`;
+
+  // Posiciona el zoom junto al cursor
+  zoom.style.left = `${e.pageX + 20}px`;
+  zoom.style.top = `${e.pageY - 150}px`; // ajusta para centrar verticalmente
+}
+
+
+function seleccionarMiniatura(imgElement) {
+  const nuevaSrc = imgElement.getAttribute("data-src");
+  const contenedor = imgElement.closest(".ficha-teclado");
+  const principal = contenedor.querySelector(".lupa-imagen img");
+
+  principal.src = nuevaSrc;
+  principal.setAttribute('data-zoom', nuevaSrc);
+
+  const zoom = document.getElementById("zoom-flotante");
+  zoom.style.backgroundImage = `url('${nuevaSrc}')`;
+
+  const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
+  miniaturas.forEach(img => img.classList.remove("activa"));
+  imgElement.classList.add("activa");
+}
+</script>
+
+
+
+<div id="zoom-flotante" class="zoom-flotante"></div>
+
 <div class="bloque-productos">
   
     <div class="ficha-teclado">
       <h3 id="Kit Ring Alarm S">Kit Ring Alarm S</h3>
-      <a href="https://amzn.to/43W7Q51" target="_blank" rel="nofollow sponsored">
-      <img alt="Kit Ring Alarm S" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/kit-ring-alarm-s.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/43W7Q51" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-1"
+      src="https://m.media-amazon.com/images/I/317x2AkKttL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/317x2AkKttL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Kit Ring Alarm S"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/317x2AkKttL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/317x2AkKttL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Kit Ring Alarm S"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/315Da-eL+NL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/315Da-eL+NL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm S"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm S"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm S"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm S"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm S"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm S"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="286"
+        alt="Variante de Kit Ring Alarm S"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          249,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Ideal para pisos pequeños o viviendas de 1 dormitorio. Este kit básico incluye lo necesario para empezar: estación base, teclado, sensor de movimiento y sensor de contacto. Es perfecto si quieres probar Ring Alarm sin gastar de más.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Para pisos de hasta 1 dormitorio</li>
@@ -654,24 +906,137 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/43W7Q51" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/43W7Q51" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Kit Ring Alarm M">Kit Ring Alarm M</h3>
-      <a href="https://amzn.to/44lqHFF" target="_blank" rel="nofollow sponsored">
-      <img alt="Kit Ring Alarm M" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/kit-ring-alarm-m.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/44lqHFF" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-2"
+      src="https://m.media-amazon.com/images/I/21IkKDQdJyL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21IkKDQdJyL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Kit Ring Alarm M"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21IkKDQdJyL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21IkKDQdJyL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Kit Ring Alarm M"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/31qng+tBPVL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/31qng+tBPVL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm M"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm M"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm M"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm M"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm M"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm M"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="286"
+        alt="Variante de Kit Ring Alarm M"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          279,99 €
+        </span>
+        
+          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
+            Antes: 311,97 €
+          </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>El equilibrio ideal entre protección y precio. Este kit está diseñado para hogares medianos, con sensores suficientes para 2 puertas o ventanas y 2 sensores de movimiento. Apto para la mayoría de pisos y casas pequeñas.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Recomendado para 2 dormitorios</li>
@@ -686,24 +1051,137 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/44lqHFF" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/44lqHFF" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Kit Ring Alarm L">Kit Ring Alarm L</h3>
-      <a href="https://amzn.to/4kPozNi" target="_blank" rel="nofollow sponsored">
-      <img alt="Kit Ring Alarm L" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/kit-ring-alarm-L.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/4kPozNi" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-3"
+      src="https://m.media-amazon.com/images/I/21+td5PWVeL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21+td5PWVeL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Kit Ring Alarm L"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21+td5PWVeL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21+td5PWVeL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Kit Ring Alarm L"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41bJ2JOzkzL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41bJ2JOzkzL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm L"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm L"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm L"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm L"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm L"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm L"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="286"
+        alt="Variante de Kit Ring Alarm L"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          329,99 €
+        </span>
+        
+          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
+            Antes: 399,94 €
+          </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Este pack está pensado para viviendas más grandes o familias. Con sensores para 4 accesos y 3 zonas de movimiento, cubre muy bien casas de 2 o 3 dormitorios. Es la mejor opción si buscas una instalación duradera.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Cubre 4 puertas o ventanas</li>
@@ -718,24 +1196,137 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/4kPozNi" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/4kPozNi" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Kit Ring Alarm XL">Kit Ring Alarm XL</h3>
-      <a href="https://amzn.to/4kV8TYV" target="_blank" rel="nofollow sponsored">
-      <img alt="Kit Ring Alarm XL" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/kit-ring-alarm-xl.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/4kV8TYV" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-4"
+      src="https://m.media-amazon.com/images/I/21w1nU2PmSL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21w1nU2PmSL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Kit Ring Alarm XL"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21w1nU2PmSL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21w1nU2PmSL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Kit Ring Alarm XL"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/414XeOK-kxL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/414XeOK-kxL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm XL"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm XL"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm XL"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41tOkN9F+2L._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41tOkN9F+2L._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm XL"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm XL"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Kit Ring Alarm XL"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41ygijltiLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41ygijltiLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="286"
+        alt="Variante de Kit Ring Alarm XL"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          459,99 €
+        </span>
+        
+          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
+            Antes: 531,91 €
+          </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>El kit más completo de Ring Alarm. Perfecto para casas grandes, chalets o viviendas con varios accesos. Incluye sensores suficientes y la sirena exterior de serie. Es la opción más profesional sin depender de empresas de seguridad.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Para casas de más de 3 dormitorios</li>
@@ -750,12 +1341,12 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/4kV8TYV" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/4kV8TYV" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
   
-
 </div>
 
 
@@ -765,23 +1356,212 @@
 
 
 
-<style>.separador-producto {
+<style>
+.separador-producto {
   border-top: 1px solid #838383;
   margin: 1.5em 0;
   opacity: 0.5;
-}</style>
+}
+.ficha-teclado img {
+  position: relative;
+  object-fit: contain;
+}
+.imagen-con-miniaturas {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* ✅ Alinea verticalmente al centro */
+  gap: 1.5em;
+  margin-bottom: 1em;
+  flex-wrap: wrap;
+}
+.imagen-con-miniaturas .principal {
+  max-height: 350px;
+  width: auto;
+}
+.galeria-miniaturas {
+  display: grid;
+  grid-template-columns: repeat(2, 50px);
+  grid-auto-rows: 50px;
+  gap: 8px;
+}
+.galeria-miniaturas img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border 0.3s;
+}
+.galeria-miniaturas img:hover {
+  border: 2px solid #0073e6;
+}
+.galeria-miniaturas img.activa {
+  border: 2px solid #0073e6 !important;
+}
+@media (max-width: 768px) {
+  .galeria-miniaturas {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .galeria-miniaturas img {
+    flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.lupa-amazon-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  position: relative;
+}
+
+.lupa-imagen {
+  position: relative;
+}
+.lupa-imagen img {
+  display: block;
+  max-height: 350px;
+  cursor: zoom-in;
+}
+.zoom-flotante {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 2px solid #0073e6;
+  background-repeat: no-repeat;
+  background-size: 300%;
+  display: none;
+  z-index: 9999;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+</style>
+
+<script>
+  const activarZoom = window.innerWidth >= 768;
+
+function mostrarZoomFlotante(container) {
+  const zoom = document.getElementById('zoom-flotante');
+  const img = container.querySelector('img');
+  const srcZoom = img.getAttribute('data-zoom') || img.src;
+  zoom.style.display = 'block';
+  zoom.style.backgroundImage = `url('${srcZoom}')`;
+}
+
+function ocultarZoomFlotante() {
+  const zoom = document.getElementById('zoom-flotante');
+  zoom.style.display = 'none';
+}
+
+function moverZoomFlotante(e, container) {
+  const img = container.querySelector('img');
+  const zoom = document.getElementById('zoom-flotante');
+  const rect = img.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const percentX = (x / rect.width) * 100;
+  const percentY = (y / rect.height) * 100;
+
+  zoom.style.backgroundPosition = `${percentX}% ${percentY}%`;
+
+  // Posiciona el zoom junto al cursor
+  zoom.style.left = `${e.pageX + 20}px`;
+  zoom.style.top = `${e.pageY - 150}px`; // ajusta para centrar verticalmente
+}
+
+
+function seleccionarMiniatura(imgElement) {
+  const nuevaSrc = imgElement.getAttribute("data-src");
+  const contenedor = imgElement.closest(".ficha-teclado");
+  const principal = contenedor.querySelector(".lupa-imagen img");
+
+  principal.src = nuevaSrc;
+  principal.setAttribute('data-zoom', nuevaSrc);
+
+  const zoom = document.getElementById("zoom-flotante");
+  zoom.style.backgroundImage = `url('${nuevaSrc}')`;
+
+  const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
+  miniaturas.forEach(img => img.classList.remove("activa"));
+  imgElement.classList.add("activa");
+}
+</script>
+
+
+
+<div id="zoom-flotante" class="zoom-flotante"></div>
+
 <div class="bloque-productos">
   
     <div class="ficha-teclado">
       <h3 id="Ring Alarm Keypad (2.ª generación)">Ring Alarm Keypad (2.ª generación)</h3>
-      <a href="https://amzn.to/44qZ7YJ" target="_blank" rel="nofollow sponsored">
-      <img alt="Ring Alarm Keypad (2.ª generación)" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/teclado.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/44qZ7YJ" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-1"
+      src="https://m.media-amazon.com/images/I/31g2KUAR-AL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/31g2KUAR-AL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Ring Alarm Keypad (2.ª generación)"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/31g2KUAR-AL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/31g2KUAR-AL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Ring Alarm Keypad (2.ª generación)"
+    />
+    <!-- Variantes -->
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          59,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>El Ring Keypad V2 permite controlar fácilmente tu sistema Ring Alarm sin necesidad del móvil. Ofrece acceso rápido a los modos Casa, Fuera de casa y Desarmado, e incluye un botón de pánico para activar la alarma manualmente y notificar a tus contactos (requiere Ring Home Standard). Su diseño compacto se adapta bien a cualquier espacio, y puedes instalarlo sobre una mesa o fijarlo a la pared. Funciona con pilas o enchufado, y es compatible con estaciones base de 1.ª y 2.ª generación. Es ideal si quieres una forma rápida y segura de manejar tu alarma desde casa.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Compatible con Ring Alarm 1.ª y 2.ª generación</li>
@@ -796,24 +1576,70 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/44qZ7YJ" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/44qZ7YJ" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Detector de movimiento Ring Alarm (2.ª generación)">Detector de movimiento Ring Alarm (2.ª generación)</h3>
-      <a href="https://amzn.to/3T8069R" target="_blank" rel="nofollow sponsored">
-      <img alt="Detector de movimiento Ring Alarm (2.ª generación)" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/detector-movimiento.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/3T8069R" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-2"
+      src="https://m.media-amazon.com/images/I/21aPyBTmVrL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21aPyBTmVrL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Detector de movimiento Ring Alarm (2.ª generación)"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21aPyBTmVrL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21aPyBTmVrL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Detector de movimiento Ring Alarm (2.ª generación)"
+    />
+    <!-- Variantes -->
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          35,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Este sensor detecta cualquier movimiento dentro de casa y envía notificaciones inmediatas al móvil. Su diseño compacto es discreto y fácil de instalar, ya sea en esquinas o paredes planas, sin necesidad de herramientas. Funciona con pilas AA y cuenta con detección inteligente capaz de distinguir entre mascotas y personas, evitando falsas alarmas. Es totalmente compatible con estaciones base Ring Alarm de 1.ª y 2.ª generación y puede integrarse con Alexa, que también avisa si la batería está baja. Es un componente esencial para proteger pasillos o estancias amplias. de personas.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Diseño compacto y discreto</li>
@@ -828,24 +1654,70 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/3T8069R" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/3T8069R" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Sensor de contacto Ring Alarm (2.ª generación)">Sensor de contacto Ring Alarm (2.ª generación)</h3>
-      <a href="https://amzn.to/44bLCuG" target="_blank" rel="nofollow sponsored">
-      <img alt="Sensor de contacto Ring Alarm (2.ª generación)" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/sensor-contacto.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/44bLCuG" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-3"
+      src="https://m.media-amazon.com/images/I/21Yb+171RiL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21Yb+171RiL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Sensor de contacto Ring Alarm (2.ª generación)"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21Yb+171RiL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21Yb+171RiL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Sensor de contacto Ring Alarm (2.ª generación)"
+    />
+    <!-- Variantes -->
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          25,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Este sensor detecta la apertura de puertas o ventanas y te avisa al instante en el móvil. Su diseño compacto y el imán extraíble facilitan la instalación incluso en espacios estrechos, sin necesidad de herramientas. Funciona con dos pilas tipo botón CR2032 y se coloca fácilmente en marcos de puertas o ventanas. Compatible con estaciones base de 1.ª y 2.ª generación, también se integra con Alexa, que te avisa si la batería está baja. Es una opción eficaz y discreta para asegurar puntos de acceso clave en casa.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Compacto y fácil de instalar</li>
@@ -860,24 +1732,97 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/44bLCuG" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/44bLCuG" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Sensor de contacto de exteriores Ring Alarm">Sensor de contacto de exteriores Ring Alarm</h3>
-      <a href="https://amzn.to/4k3npMQ" target="_blank" rel="nofollow sponsored">
-      <img alt="Sensor de contacto de exteriores Ring Alarm" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/sensor-contacto-exteriores.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/4k3npMQ" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-4"
+      src="https://m.media-amazon.com/images/I/21-NT2krI4L._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21-NT2krI4L._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Sensor de contacto de exteriores Ring Alarm"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21-NT2krI4L._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21-NT2krI4L._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Sensor de contacto de exteriores Ring Alarm"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/21SsOho9YvL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/21SsOho9YvL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Sensor de contacto de exteriores Ring Alarm"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/21gv5hE6ySL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/21gv5hE6ySL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Sensor de contacto de exteriores Ring Alarm"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41V43o0DuML._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41V43o0DuML._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Sensor de contacto de exteriores Ring Alarm"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          59,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Este sensor está diseñado para proteger accesos exteriores como cobertizos, garajes o trasteros. Es resistente a la intemperie y funciona con batería, lo que permite instalarlo en casi cualquier entorno. Envía alertas en tiempo real cuando se abre una puerta o ventana, y puede configurarse para activar la sirena del sistema Ring Alarm si está armado. Incluye cinta adhesiva y tornillos para una instalación sencilla y segura. Compatible con estaciones base Ring Alarm de 1.ª y 2.ª generación, es ideal para ampliar la protección más allá del interior de la vivienda.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Notificaciones en tiempo real</li>
@@ -892,24 +1837,70 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/4k3npMQ" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/4k3npMQ" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Extensor de alcance Ring Alarm">Extensor de alcance Ring Alarm</h3>
-      <a href="https://amzn.to/4kNGdky" target="_blank" rel="nofollow sponsored">
-      <img alt="Extensor de alcance Ring Alarm" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/extensor-alcance.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/4kNGdky" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-5"
+      src="https://m.media-amazon.com/images/I/21KBki2FZvL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21KBki2FZvL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Extensor de alcance Ring Alarm"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21KBki2FZvL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21KBki2FZvL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Extensor de alcance Ring Alarm"
+    />
+    <!-- Variantes -->
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          29,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Este extensor se conecta directamente a una toma de corriente y amplía la señal de la estación base Ring Alarm, asegurando una conexión estable con todos los dispositivos del sistema, incluso en casas grandes o con muchas paredes. No requiere configuración: basta con enchufarlo para que funcione. Es compatible con estaciones base de 1.ª y 2.ª generación y resulta imprescindible si alguno de tus sensores o accesorios queda lejos del núcleo del sistema. Una solución simple pero efectiva para mejorar la cobertura de tu alarma.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Fácil instalación sin herramientas</li>
@@ -924,24 +1915,97 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/4kNGdky" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/4kNGdky" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Sirena para exteriores Ring Alarm">Sirena para exteriores Ring Alarm</h3>
-      <a href="https://amzn.to/4nnOZaP" target="_blank" rel="nofollow sponsored">
-      <img alt="Sirena para exteriores Ring Alarm" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/sirena-exteriores.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/4nnOZaP" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-6"
+      src="https://m.media-amazon.com/images/I/31AyZwko-xL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/31AyZwko-xL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Sirena para exteriores Ring Alarm"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/31AyZwko-xL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/31AyZwko-xL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Sirena para exteriores Ring Alarm"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/4142u3enVQL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/4142u3enVQL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Sirena para exteriores Ring Alarm"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/31uGHGGplLL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/31uGHGGplLL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Sirena para exteriores Ring Alarm"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/21n0v-lYURL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/21n0v-lYURL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="286"
+        alt="Variante de Sirena para exteriores Ring Alarm"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          79,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Esta sirena externa se activa junto con el sistema Ring Alarm para alertar visual y sonoramente a los vecinos en caso de intrusión. Incluye luces LED y sonido potente configurable en volumen y duración. Puede alimentarse por batería recargable, panel solar o enchufe (todos vendidos por separado), y es resistente a la intemperie, por lo que funciona todo el año. También permite iluminación nocturna programable. Compatible con estaciones base de 1.ª y 2.ª generación, es ideal para reforzar la disuasión en exteriores.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Configuración de volumen y duración</li>
@@ -956,24 +2020,97 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/4nnOZaP" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/4nnOZaP" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Botón del pánico Ring Alarm">Botón del pánico Ring Alarm</h3>
-      <a href="https://amzn.to/4kUuJf1" target="_blank" rel="nofollow sponsored">
-      <img alt="Botón del pánico Ring Alarm" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/boton-panico.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/4kUuJf1" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-7"
+      src="https://m.media-amazon.com/images/I/21yBHhaUOXL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/21yBHhaUOXL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Botón del pánico Ring Alarm"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/21yBHhaUOXL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/21yBHhaUOXL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Botón del pánico Ring Alarm"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/413oGCePq6L._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/413oGCePq6L._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Botón del pánico Ring Alarm"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/51HkCxABfPL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/51HkCxABfPL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Botón del pánico Ring Alarm"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/212iXGBbgUL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/212iXGBbgUL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Botón del pánico Ring Alarm"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          34,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Este botón permite pedir ayuda inmediata con solo pulsarlo, activando una alarma de pánico, médica o de incendio, según cómo lo configures desde la app de Ring. También envía notificaciones en tiempo real a los contactos compartidos. Incluye adhesivos para indicar su función y se puede colocar fácilmente en cualquier parte. Compatible con el sistema Ring Alarm (se requiere estación base), es una solución muy útil para personas mayores o situaciones de emergencia en casa. Compacto y eficaz, añade una capa extra de seguridad personal.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Funciona con Ring Alarm 1.ª y 2.ª gen.</li>
@@ -988,24 +2125,88 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/4kUuJf1" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/4kUuJf1" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Placa de seguridad Ring">Placa de seguridad Ring</h3>
-      <a href="https://amzn.to/3GeahGT" target="_blank" rel="nofollow sponsored">
-      <img alt="Placa de seguridad Ring" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/placa-seguridad.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/3GeahGT" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-8"
+      src="https://m.media-amazon.com/images/I/41S4bZikbAL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/41S4bZikbAL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Placa de seguridad Ring"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/41S4bZikbAL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/41S4bZikbAL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Placa de seguridad Ring"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41Gr7UKw-KL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41Gr7UKw-KL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Placa de seguridad Ring"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/21k7rTh-bdL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/21k7rTh-bdL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="286"
+        alt="Variante de Placa de seguridad Ring"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          9,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>La placa de seguridad Ring es un complemento visual pensado para disuadir intrusos mostrando que tu casa está protegida por el sistema Ring Alarm. Se puede fijar fácilmente con tornillos o con cinta adhesiva de doble cara (ambas incluidas), y está diseñada para colocarse en puertas, vallas o superficies visibles. Sus dimensiones compactas (6,3 x 6,3 cm) la hacen discreta pero efectiva. No es un dispositivo electrónico, pero sí un elemento disuasorio útil para reforzar la presencia visual de tu sistema de alarma.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Tamaño 6,3 x 6,3 cm</li>
@@ -1018,24 +2219,88 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/3GeahGT" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/3GeahGT" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Sensor de rotura de cristales Ring Alarm">Sensor de rotura de cristales Ring Alarm</h3>
-      <a href="https://amzn.to/4ldTHWs" target="_blank" rel="nofollow sponsored">
-      <img alt="Sensor de rotura de cristales Ring Alarm" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/sensor-rotura-cristales.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/4ldTHWs" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-9"
+      src="https://m.media-amazon.com/images/I/119DTNldC8L._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/119DTNldC8L._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Sensor de rotura de cristales Ring Alarm"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/119DTNldC8L._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/119DTNldC8L._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Sensor de rotura de cristales Ring Alarm"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/11xrHAudLzL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/11xrHAudLzL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Sensor de rotura de cristales Ring Alarm"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41HbFkFS+lL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41HbFkFS+lL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Sensor de rotura de cristales Ring Alarm"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          Sin precio
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Este sensor detecta sonidos reales de rotura de cristales utilizando inteligencia artificial para evitar falsas alarmas. Con un alcance de 7,6 metros, puede cubrir varias ventanas desde una sola ubicación. Al detectar un impacto, puede enviar notificaciones al móvil y activar la sirena del sistema Ring Alarm si está armado. Se instala en pared, techo o sobre una superficie plana, y se puede integrar con cámaras y timbres Ring para grabar automáticamente en caso de detección (requiere Ring Home Standard). Es una protección clave contra intrusiones a través de ventanas o cristales.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Cobertura de hasta 7,6 metros</li>
@@ -1050,24 +2315,133 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/4ldTHWs" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/4ldTHWs" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
+      <div class="separador-producto"></div>
+    
   
-    <div class="separador-producto"></div>
-  
-
     <div class="ficha-teclado">
       <h3 id="Ring Cámara interior (Indoor Camera 2.ª generación)">Ring Cámara interior (Indoor Camera 2.ª generación)</h3>
-      <a href="https://amzn.to/466K3AM" target="_blank" rel="nofollow sponsored">
-      <img alt="Ring Cámara interior (Indoor Camera 2.ª generación)" style="max-height:260px;object-fit:contain;" loading="lazy" src="images/camara.webp" />
-      </a>
-      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+<div class="imagen-con-miniaturas">
+<div class="lupa-imagen"
+     onmousemove="moverZoomFlotante(event, this)"
+     onmouseenter="mostrarZoomFlotante(this)"
+     onmouseleave="ocultarZoomFlotante(this)">
+  <a href="https://amzn.to/466K3AM" target="_blank" rel="nofollow sponsored">
+    <img
+      id="imagen-principal-10"
+      src="https://m.media-amazon.com/images/I/31Gomnom5tL._SL500_.jpg"
+      data-zoom="https://m.media-amazon.com/images/I/31Gomnom5tL._SL500_.jpg"
+      width="500"
+      height="500"
+      alt="Ring Cámara interior (Indoor Camera 2.ª generación)"
+    />
+  </a>
+</div>
+
+
+  <div class="galeria-miniaturas">
+    <!-- Imagen principal como miniatura -->
+    <img
+      src="https://m.media-amazon.com/images/I/31Gomnom5tL._SL500_.jpg"
+      data-src="https://m.media-amazon.com/images/I/31Gomnom5tL._SL500_.jpg"
+      class="activa"
+      onclick="seleccionarMiniatura(this)"
+      width="500"
+      height="500"
+      alt="Imagen principal de Ring Cámara interior (Indoor Camera 2.ª generación)"
+    />
+    <!-- Variantes -->
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41beJm5sdEL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41beJm5sdEL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Ring Cámara interior (Indoor Camera 2.ª generación)"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41Ici98-v4L._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41Ici98-v4L._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Ring Cámara interior (Indoor Camera 2.ª generación)"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41dFz6p9U+L._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41dFz6p9U+L._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Ring Cámara interior (Indoor Camera 2.ª generación)"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41HhuvT-NVL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41HhuvT-NVL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Ring Cámara interior (Indoor Camera 2.ª generación)"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41Xi0FYVsvL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41Xi0FYVsvL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Ring Cámara interior (Indoor Camera 2.ª generación)"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/51njeDAwC3L._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/51njeDAwC3L._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="500"
+        alt="Variante de Ring Cámara interior (Indoor Camera 2.ª generación)"
+      />
+    
+      <img
+        src="https://m.media-amazon.com/images/I/41CAs2M96NL._SL500_.jpg"
+        data-src="https://m.media-amazon.com/images/I/41CAs2M96NL._SL500_.jpg"
+        onclick="seleccionarMiniatura(this)"
+        width="500"
+        height="286"
+        alt="Variante de Ring Cámara interior (Indoor Camera 2.ª generación)"
+      />
+    
+  </div>
+</div>
+
+
+
+    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+    
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          59,99 €
+        </span>
+        
+      </p>
+    
+
+
       <p class="descripcion-review"><p>Esta cámara compacta permite vigilar el interior de tu casa en directo con vídeo HD 1080p y comunicación bidireccional, ideal para controlar mascotas o estancias importantes. Incluye una cubierta de privacidad extraíble que apaga tanto la cámara como el micrófono cuando no quieras grabar. Se instala fácilmente sobre una superficie plana o fijada a la pared, y solo requiere una toma de corriente y conexión Wi-Fi. Puedes emparejarla con Alexa o Ring Chime para recibir alertas en toda la casa. Con una suscripción Ring Home opcional, se activan funciones como grabación continua, historial de eventos y alertas inteligentes.</p>
 </p>
+
       
-      <h4>Principales características:</h4>
+        <h4>Principales características:</h4>
         <ul class="bullets-review">
           
             <li>Vídeo en directo con audio</li>
@@ -1082,12 +2456,12 @@
           
         </ul>
       
-      <a class="boton" href="https://amzn.to/466K3AM" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
+
+        <a class="boton" href="https://amzn.to/466K3AM" style="min-height:44px" target="_blank" rel="nofollow sponsored">🏠 Ver oferta actual en Amazon</a>
     </div>
+
     
-
   
-
 </div>
 
 
@@ -1391,7 +2765,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Kit Ring Alarm S",
-  "image": "https://recomendador.net/images/kit-ring-alarm-s.webp",
+  "image": "https://m.media-amazon.com/images/I/317x2AkKttL._SL500_.jpg",
   "url": "https://amzn.to/43W7Q51",
   "brand": {
     "@type": "Brand",
@@ -1419,7 +2793,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Kit Ring Alarm M",
-  "image": "https://recomendador.net/images/kit-ring-alarm-m.webp",
+  "image": "https://m.media-amazon.com/images/I/21IkKDQdJyL._SL500_.jpg",
   "url": "https://amzn.to/44lqHFF",
   "brand": {
     "@type": "Brand",
@@ -1447,7 +2821,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Kit Ring Alarm L",
-  "image": "https://recomendador.net/images/kit-ring-alarm-L.webp",
+  "image": "https://m.media-amazon.com/images/I/21+td5PWVeL._SL500_.jpg",
   "url": "https://amzn.to/4kPozNi",
   "brand": {
     "@type": "Brand",
@@ -1475,7 +2849,7 @@
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "Kit Ring Alarm XL",
-  "image": "https://recomendador.net/images/kit-ring-alarm-xl.webp",
+  "image": "https://m.media-amazon.com/images/I/21w1nU2PmSL._SL500_.jpg",
   "url": "https://amzn.to/4kV8TYV",
   "brand": {
     "@type": "Brand",
