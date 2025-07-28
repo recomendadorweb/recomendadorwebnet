@@ -1,0 +1,60 @@
+---
+layout: default
+title: Mejores Trajes de Flamenca 2025 (Probados y Recomendados)
+description: Descubre los mejores trajes de flamenca de 2025 con recomendaciones reales de Carlos, analista experto con 15 años de experiencia. Opiniones personales y comparativa completa.
+keywords: trajes de flamenca, mejores trajes de flamenca 2025, análisis de trajes, recomendaciones flamenca, comparativa trajes
+canonical: https://recomendador.net/belleza/trajes-de-flamenca/
+date: 2025-07-29
+imagen: /global/images/trajes-flamenca.webp
+---
+{% assign tipo = "flamenca" %}
+
+{% include menu.html %}
+{% include estilomorado.html %}
+
+<div class="container">
+{% include cabecera.html datafile="cabecera" %}
+{% assign autor = site.data.autor.autores.laura %}
+{% include autor.html %}
+{% include actualizacion.html %}
+{% include introduccion.html datafile="indice" %}
+
+{% include indice.html datafile="indice" %}
+<div class="separador"></div>
+
+<h2 id="comparativa">Comparativa rápida de ratones gaming recomendados</h2>
+{% include tabla-comparativa.html datafile="productos" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Sección: ¿Qué es un ratón gaming? -->
+{% include seccion-generica.html datafile="secciones" index=0 %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+{% include seccion-generica.html datafile="secciones" index=1 %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Lista de productos con análisis -->
+<h2 id="productos">Comparativa real de los mejores ratones gaming de 2025 (probados en partidas reales)</h2>
+{% include lista-productos.html datafile="productos" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- ¿Cuál compraría yo? -->
+{% include cual-compraria-yo.html datafile="recomendacion" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Preguntas frecuentes -->
+<h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
+{% include faq.html datafile="faq" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+
+{% include footer.html %}
+</div>
+{% include boton-recomendado.html datafile="cabecera" %}
+
+{% include ld-json-faq.html datafile="faq" %}
+{% include ld-json-productos.html datafile="productos" %}
