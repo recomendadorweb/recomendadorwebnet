@@ -1,71 +1,179 @@
 productos:
-- ASIN: B08L5TWL9D
-  a_tener_en_cuenta: 🚪 Cubre solo 1 acceso, 🔊 Sirena exterior no incluida
-  brand: Ring
-  caracteristicas:
-  - Para pisos de hasta 1 dormitorio
-  - Cubre 1 puerta o ventana
-  - Incluye sensor de movimiento para una estancia
-  - Instalación sencilla sin obras
-  - Compatible con Alexa y app móvil gratuita
-  descripcion: 'Ideal para pisos pequeños o viviendas de 1 dormitorio. Este kit básico
-    incluye lo necesario para empezar: estación base, teclado, sensor de movimiento
-    y sensor de contacto. Es perfecto si quieres probar Ring Alarm sin gastar de más.
-
-    '
-  enlace: https://amzn.to/43W7Q51
-  imagen: images/kit-ring-alarm-s.webp
-  lo_mejor: 👍 Ideal para iniciarse con Ring, 📦 Compacto y funcional
-  nombre: Kit Ring Alarm S
-  valoracion: 5
-- ASIN: B092B6K1KJ
-  a_tener_en_cuenta: 📦 No incluye sirena exterior por defecto
-  brand: Ring
-  caracteristicas:
-  - Recomendado para 2 dormitorios
-  - Cubre 2 accesos (puertas o ventanas)
-  - Detección de movimiento en 2 estancias
-  - Fácilmente ampliable
-  - Compatible con Alexa
-  descripcion: 'El equilibrio ideal entre protección y precio. Este kit está diseñado
-    para hogares medianos, con sensores suficientes para 2 puertas o ventanas y 2
-    sensores de movimiento. Apto para la mayoría de pisos y casas pequeñas.'
-  enlace: https://amzn.to/44lqHFF
-  imagen: images/kit-ring-alarm-m.webp
-  lo_mejor: ⚖️ Buen equilibrio entre precio y cobertura
-  nombre: Kit Ring Alarm M
-  valoracion: 5
-- ASIN: B0929TGRZF
-  a_tener_en_cuenta: 🔊 Sirena exterior no incluida
-  brand: Ring
-  caracteristicas:
-  - Cubre 4 puertas o ventanas
-  - 3 sensores de movimiento incluidos
-  - Ampliable con accesorios Ring
-  - Control por app o voz (Alexa)
-  - Sirena exterior opcional
-  descripcion: 'Este pack está pensado para viviendas más grandes o familias. Con
-    sensores para 4 accesos y 3 zonas de movimiento, cubre muy bien casas de 2 o 3
-    dormitorios. Es la mejor opción si buscas una instalación duradera.'
-  enlace: https://amzn.to/4kPozNi
-  imagen: images/kit-ring-alarm-L.webp
-  lo_mejor: 🏡 Ideal para casas medianas, 🔧 Muy personalizable
-  nombre: Kit Ring Alarm L
-  valoracion: 5
-- ASIN: B092BBK1GF
-  a_tener_en_cuenta: 🏗️ Volumen de sensores elevado, requiere tiempo para instalar
-  brand: Ring
-  caracteristicas:
-  - Para casas de más de 3 dormitorios
-  - Cubre 6 accesos
-  - Incluye 3 sensores de movimiento
-  - Incluye sirena de exterior
-  - Instalación sencilla, todo en un solo pack
-  descripcion: 'El kit más completo de Ring Alarm. Perfecto para casas grandes, chalets
-    o viviendas con varios accesos. Incluye sensores suficientes y la sirena exterior
-    de serie. Es la opción más profesional sin depender de empresas de seguridad.'
-  enlace: https://amzn.to/4kV8TYV
-  imagen: images/kit-ring-alarm-xl.webp
-  lo_mejor: 💪 Protección total, 🚫 Sin cuotas ni contratos
-  nombre: Kit Ring Alarm XL
-  valoracion: 5
+  - ASIN: B08L5TWL9D
+    a_tener_en_cuenta: 🚪 Cubre solo 1 acceso, 🔊 Sirena exterior no incluida
+    brand: Ring
+    caracteristicas:
+      - Para pisos de hasta 1 dormitorio
+      - Cubre 1 puerta o ventana
+      - Incluye sensor de movimiento para una estancia
+      - Instalación sencilla sin obras
+      - Compatible con Alexa y app móvil gratuita
+    descripcion: >
+      Ideal para pisos pequeños o viviendas de 1 dormitorio. Este kit básico incluye lo necesario para empezar: estación
+      base, teclado, sensor de movimiento y sensor de contacto. Es perfecto si quieres probar Ring Alarm sin gastar de
+      más.
+    enlace: https://amzn.to/43W7Q51
+    imagen: https://m.media-amazon.com/images/I/317x2AkKttL._SL500_.jpg
+    lo_mejor: 👍 Ideal para iniciarse con Ring, 📦 Compacto y funcional
+    nombre: Kit Ring Alarm S
+    valoracion: 5
+    precio: "249,99\_€"
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/315Da-eL+NL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg
+        width: 500
+        height: 286
+    imagenHeight: 500
+    imagenWidth: 500
+  - ASIN: B092B6K1KJ
+    a_tener_en_cuenta: 📦 No incluye sirena exterior por defecto
+    brand: Ring
+    caracteristicas:
+      - Recomendado para 2 dormitorios
+      - Cubre 2 accesos (puertas o ventanas)
+      - Detección de movimiento en 2 estancias
+      - Fácilmente ampliable
+      - Compatible con Alexa
+    descripcion: >-
+      El equilibrio ideal entre protección y precio. Este kit está diseñado para hogares medianos, con sensores
+      suficientes para 2 puertas o ventanas y 2 sensores de movimiento. Apto para la mayoría de pisos y casas pequeñas.
+    enlace: https://amzn.to/44lqHFF
+    imagen: https://m.media-amazon.com/images/I/21IkKDQdJyL._SL500_.jpg
+    lo_mejor: ⚖️ Buen equilibrio entre precio y cobertura
+    nombre: Kit Ring Alarm M
+    valoracion: 5
+    precio: "279,99\_€"
+    precioOriginal: "311,97\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/31qng+tBPVL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg
+        width: 500
+        height: 286
+    imagenHeight: 500
+    imagenWidth: 500
+  - ASIN: B0929TGRZF
+    a_tener_en_cuenta: 🔊 Sirena exterior no incluida
+    brand: Ring
+    caracteristicas:
+      - Cubre 4 puertas o ventanas
+      - 3 sensores de movimiento incluidos
+      - Ampliable con accesorios Ring
+      - Control por app o voz (Alexa)
+      - Sirena exterior opcional
+    descripcion: >-
+      Este pack está pensado para viviendas más grandes o familias. Con sensores para 4 accesos y 3 zonas de movimiento,
+      cubre muy bien casas de 2 o 3 dormitorios. Es la mejor opción si buscas una instalación duradera.
+    enlace: https://amzn.to/4kPozNi
+    imagen: https://m.media-amazon.com/images/I/21+td5PWVeL._SL500_.jpg
+    lo_mejor: 🏡 Ideal para casas medianas, 🔧 Muy personalizable
+    nombre: Kit Ring Alarm L
+    valoracion: 5
+    precio: "329,99\_€"
+    precioOriginal: "399,94\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41bJ2JOzkzL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41nDGi78YlL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41Mp8v4cGsL._SL500_.jpg
+        width: 500
+        height: 286
+    imagenHeight: 500
+    imagenWidth: 500
+  - ASIN: B092BBK1GF
+    a_tener_en_cuenta: 🏗️ Volumen de sensores elevado, requiere tiempo para instalar
+    brand: Ring
+    caracteristicas:
+      - Para casas de más de 3 dormitorios
+      - Cubre 6 accesos
+      - Incluye 3 sensores de movimiento
+      - Incluye sirena de exterior
+      - Instalación sencilla, todo en un solo pack
+    descripcion: >-
+      El kit más completo de Ring Alarm. Perfecto para casas grandes, chalets o viviendas con varios accesos. Incluye
+      sensores suficientes y la sirena exterior de serie. Es la opción más profesional sin depender de empresas de
+      seguridad.
+    enlace: https://amzn.to/4kV8TYV
+    imagen: https://m.media-amazon.com/images/I/21w1nU2PmSL._SL500_.jpg
+    lo_mejor: 💪 Protección total, 🚫 Sin cuotas ni contratos
+    nombre: Kit Ring Alarm XL
+    valoracion: 5
+    precio: "459,99\_€"
+    precioOriginal: "531,91\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/414XeOK-kxL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41gL1-21wLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/3157zRW2klL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41tOkN9F+2L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Pe2JsRtLL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41xBqqMVjxL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41ygijltiLL._SL500_.jpg
+        width: 500
+        height: 286
+    imagenHeight: 500
+    imagenWidth: 500

@@ -1,214 +1,467 @@
 productos:
-- nombre: Razer Huntsman V2 Analog
-  lo_mejor: Switches óptico-analógicos con doble acción, construcción premium en aluminio,
-    RGB espectacular y reposamuñecas cómodo
-  a_tener_en_cuenta: Diseñado para gamers avanzados y pros; gama alta con funciones
-    únicas
-  enlace: https://amzn.to/43eeeTx
-  imagen: images/teclado-gaming-Razer-Huntsman-V2-Analog.webp
-  valoracion: 5
-  descripcion: 'El Huntsman V2 Analog es un teclado brutal si buscas lo mejor en tecnología
-    y precisión. Sus switches ópticos-analógicos permiten programar dos funciones
-    por tecla según la presión, algo espectacular en juegos o edición avanzada. La
-    construcción es impecable: aluminio, cable trenzado y retroiluminación RGB impresionante.
-    Lo he usado con shooters, MOBAs y productividad y siempre me ha respondido al
-    máximo nivel. Viene con reposamuñecas y se nota que es un teclado pensado para
-    pros.'
-  caracteristicas:
-  - Switches óptico-analógicos Razer™ Analog
-  - Teclas programables con doble acción por presión
-  - Iluminación RGB Razer Chroma individual por tecla
-  - Reposamuñecas ergonómico incluido
-  - Cuerpo de aluminio con acabado premium
-  brand: Razer
-  asin: B08P52KQ8G
-- nombre: Razer BlackWidow V4 X
-  lo_mejor: Switches mecánicos Green muy responsivos, RGB por tecla, rueda multifunción,
-    teclas multimedia dedicadas
-  a_tener_en_cuenta: No incluye reposamuñecas, pero excelente calidad-precio dentro
-    de gama media-alta
-  enlace: https://amzn.to/3ZgarUw
-  imagen: images/teclado-gaming-Razer-BlackWidow-V4-X.webp
-  valoracion: 5
-  descripcion: Este teclado combina rendimiento, diseño y funcionalidades avanzadas.
-    Sus switches Green son táctiles y muy responsivos, ideales para juegos competitivos
-    o escribir con rapidez. Destaco la rueda multifunción y las teclas multimedia
-    dedicadas, perfectas para controlar el volumen y música sin salir del juego. El
-    RGB por tecla es brillante y se configura fácilmente desde Synapse. Un teclado
-    robusto y personalizable sin llegar al precio extremo del V4 Pro.
-  caracteristicas:
-  - Switches Razer Green (táctiles y clicky)
-  - Iluminación RGB individual por tecla
-  - Rueda multifunción con funciones personalizables
-  - Teclas multimedia dedicadas
-  - Estructura sólida con acabados premium
-  brand: Razer
-  asin: B0C6MTPKQ1
-- nombre: Razer Ornata V3 X
-  lo_mejor: Membrana silenciosa, diseño fino y cómodo, teclas planas y resistentes
-    al agua, ideal para trabajar y jugar
-  a_tener_en_cuenta: Buena opción económica si no necesitas un teclado mecánico
-  enlace: https://amzn.to/3FdWzmU
-  imagen: images/teclado-gaming-Razer-Ornata-V3-X.webp
-  valoracion: 3.5
-  descripcion: El Ornata V3 X es ideal para quienes buscan un teclado económico pero
-    con estilo gamer. Su perfil bajo y membrana silenciosa lo hacen perfecto para
-    oficina o juegos tranquilos. Me gustó su diseño fino, con teclas planas que se
-    sienten suaves y cómodas. Además, es resistente a líquidos, algo muy útil en entornos
-    compartidos. No es mecánico, pero cumple bien en navegación y juegos casuales.
-    Buena elección por un precio muy reducido.
-  caracteristicas:
-  - Perfil ultrabajo con teclas planas
-  - Membrana silenciosa
-  - Iluminación RGB por zonas
-  - Resistente a salpicaduras
-  - Diseño ligero y cómodo para oficina o gaming
-  brand: Razer
-  asin: B09X63H56X
-- nombre: Razer Apex 3
-  lo_mejor: Teclado silencioso con resistencia IP32 al agua, RGB por zonas y controles
-    multimedia dedicados
-  a_tener_en_cuenta: Perfecto para setups compartidos o nocturnos; sin iluminación
-    por tecla
-  enlace: https://amzn.to/4j4AKEe
-  imagen: images/teclado-gaming-Apex-3.webp
-  valoracion: 4
-  descripcion: Lo que más me gustó del Apex 3 es lo silencioso que es. Las teclas
-    son suaves, ideales para trabajar o jugar sin molestar a nadie. A pesar de ser
-    de membrana, su construcción se nota cuidada. Incluye controles multimedia dedicados
-    y reposamuñecas. Además, es resistente al agua (IP32), algo poco común. Su iluminación
-    RGB por zonas también le da un toque atractivo al setup. Muy recomendable si buscas
-    algo silencioso y bien hecho sin romper el presupuesto.
-  caracteristicas:
-  - Teclas silenciosas de membrana
-  - Iluminación RGB por zonas
-  - Resistencia IP32 a líquidos
-  - Reposamuñecas desmontable
-  - Controles multimedia dedicados
-  brand: Razer
-  asin: B082YRCL4T
-- nombre: Mars Gaming MKPRO
-  lo_mejor: Switches mecánicos OUTEMU, chasis de aluminio, RGB completo y reposamuñecas
-    desmontable
-  a_tener_en_cuenta: Excelente para empezar en mecánicos sin gastar mucho
-  enlace: https://amzn.to/4j6eppL
-  imagen: images/teclado-Mars-Gaming-MKPRO.webp
-  valoracion: 4.5
-  descripcion: El MKPRO es una de las mejores sorpresas de gama baja. Tiene switches
-    mecánicos OUTEMU que, si bien no están al nivel de los Cherry o Razer, ofrecen
-    una buena experiencia de tecleo. Me sorprendió su construcción en aluminio, que
-    lo hace muy robusto para su precio. Además, cuenta con iluminación RGB y un reposamuñecas
-    desmontable. Es ideal si quieres un teclado mecánico sin gastar demasiado y sin
-    renunciar a estética ni funcionalidades básicas.
-  caracteristicas:
-  - Switches mecánicos OUTEMU rojos
-  - Iluminación RGB completa
-  - Reposamuñecas desmontable
-  - Chasis de aluminio reforzado
-  - Formato completo con anti-ghosting
-  brand: Mars
-  asin: B0F383W18C
-- nombre: Logitech G213 Prodigy
-  lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado,
-    resistente a líquidos
-  a_tener_en_cuenta: Alternativa silenciosa y cómoda si no necesitas mecánico
-  enlace: https://amzn.to/43gMyNV
-  imagen: images/g213-gallery-1-nb.webp
-  valoracion: 3.5
-  descripcion: El G213 es un teclado que ha resistido bien el paso del tiempo. Aunque
-    no es mecánico, su membrana ofrece una buena respuesta y es bastante silenciosa.
-    Lo he usado tanto para juegos como para escribir y me ha dado resultados sólidos.
-    La iluminación RGB por zonas se ve muy bien y se puede configurar con Logitech
-    G Hub. Incluye un reposamuñecas integrado muy cómodo. Ideal para presupuestos
-    ajustados o setups híbridos.
-  caracteristicas:
-  - Teclas de membrana silenciosas
-  - Iluminación RGB por zonas
-  - Reposamuñecas integrado
-  - Resistente a salpicaduras
-  - Software Logitech G HUB
-  brand: Logitech
-  asin: B01L6L44NU
-- nombre: Corsair K55 RGB PRO
-  lo_mejor: Teclas macro y multimedia dedicadas, resistencia IP42, RGB por zonas y
-    compatible con iCUE
-  a_tener_en_cuenta: Ideal para productividad y MMO si no necesitas switches mecánicos
-  enlace: https://amzn.to/44FysIo
-  imagen: images/K55-RGB-PRO.webp
-  valoracion: 4
-  descripcion: 'Uno de los teclados más completos por su precio. Me sorprendió la
-    cantidad de funciones: tiene teclas dedicadas para macros, multimedia y controles
-    rápidos. La iluminación RGB por zonas es bastante llamativa y el software iCUE
-    permite personalizar todo. El diseño es sobrio pero robusto, y cuenta con certificación
-    IP42 contra derrames. Me ha funcionado genial para MMO y productividad. Muy recomendable
-    si no necesitas switches mecánicos.'
-  caracteristicas:
-  - Teclas macro dedicadas
-  - Iluminación RGB por zonas
-  - Resistencia al polvo y líquidos (IP42)
-  - Controles multimedia dedicados
-  - Compatible con Corsair iCUE
-  brand: Corsair
-  asin: B08YDJ6DKN
-- nombre: Razer BlackWidow V3 TKL
-  valoracion: 5
-  caracteristicas:
-  - Switches mecánicos Razer Green
-  - Iluminación RGB por tecla
-  - Formato TKL compacto
-  - Diseño metálico robusto
-  - Compatible con Razer Synapse
-  descripcion: Probé este teclado durante sesiones intensivas en juegos como Valorant,
-    Apex y StarCraft II, y su rendimiento fue impecable. Sus switches Green ofrecen
-    ese clic táctil satisfactorio que te da control absoluto sobre cada acción. Al
-    ser TKL, me dejó mucho más espacio para mover el ratón, lo cual es una ventaja
-    clara en FPS. El RGB individual por tecla se ve espectacular. El chasis es sólido
-    y resistente. Si buscas precisión y diseño compacto, este teclado no falla.
-  lo_mejor: Formato compacto sin pad numérico, switches Green, RGB individual y diseño
-    robusto
-  a_tener_en_cuenta: Perfecto para shooters y escritorios con poco espacio
-  enlace: https://amzn.to/4j4Gxdc
-  imagen: images/blackwidow-v3-tenkeyless.webp
-  asin: B097F5QSTB
-- nombre: Logitech G512
-  lo_mejor: Switches GX (Brown, Red o Blue), chasis de aluminio, RGB por tecla y puerto
-    USB integrado
-  a_tener_en_cuenta: Equilibrio perfecto entre calidad, rendimiento y estética
-  enlace: https://amzn.to/4k1m36q
-  imagen: images/teclado-gaming-Logitech-G512.webp
-  valoracion: 4.5
-  descripcion: El Logitech G512 me ha sorprendido por su tacto preciso y construcción
-    sólida. Utiliza switches GX mecánicos (puedes elegir entre Brown, Red o Blue),
-    muy estables y con buen recorrido. El chasis de aluminio le da un acabado premium
-    y muy resistente. El RGB por tecla se ve espectacular, y es totalmente personalizable
-    con Logitech G HUB. Perfecto para quienes buscan un teclado mecánico fiable y
-    elegante sin complicarse con florituras innecesarias.
-  caracteristicas:
-  - Switches mecánicos GX (Brown, Red o Blue)
-  - Iluminación RGB individual por tecla
-  - Estructura de aluminio cepillado
-  - Puerto USB passthrough integrado
-  - Compatible con Logitech G HUB
-  brand: Logitech
-  asin: B07W7M8CLV
-- nombre: Logitech G413 TKL SE
-  lo_mejor: Diseño TKL compacto, retroiluminación blanca clara, carcasa de aluminio
-    y switches táctiles
-  a_tener_en_cuenta: Diseño limpio y resistente para setups minimalistas
-  enlace: https://amzn.to/3Ziwxpk
-  imagen: images/g413-se-tkl-gallery-1-new.webp
-  valoracion: 4
-  descripcion: La versión TKL del G413 mantiene todo lo bueno del modelo grande, pero
-    con un tamaño más compacto. Perfecto para jugadores que quieren más espacio para
-    mover el ratón. Es robusto, con carcasa de aluminio y switches táctiles de buena
-    respuesta. No tiene RGB, solo luz blanca, pero es muy visible y elegante. Me ha
-    resultado muy cómodo en juegos como Apex y Warzone. Cumple con lo esencial sin
-    florituras.
-  caracteristicas:
-  - Formato TKL para mayor espacio en el escritorio
-  - Switches táctiles duraderos
-  - Chasis de aluminio cepillado
-  - Retroiluminación blanca funcional
-  - Diseño limpio y sin distracciones
-  brand: Logitech
-  asin: B07W7KMK4W
+  - nombre: Razer Huntsman V2 Analog
+    lo_mejor: >-
+      Switches óptico-analógicos con doble acción, construcción premium en aluminio, RGB espectacular y reposamuñecas
+      cómodo
+    a_tener_en_cuenta: Diseñado para gamers avanzados y pros; gama alta con funciones únicas
+    enlace: https://amzn.to/43eeeTx
+    imagen: https://m.media-amazon.com/images/I/41u2ZvNDELL._SL500_.jpg
+    valoracion: 5
+    descripcion: >-
+      El Huntsman V2 Analog es un teclado brutal si buscas lo mejor en tecnología y precisión. Sus switches
+      ópticos-analógicos permiten programar dos funciones por tecla según la presión, algo espectacular en juegos o
+      edición avanzada. La construcción es impecable: aluminio, cable trenzado y retroiluminación RGB impresionante. Lo
+      he usado con shooters, MOBAs y productividad y siempre me ha respondido al máximo nivel. Viene con reposamuñecas y
+      se nota que es un teclado pensado para pros.
+    caracteristicas:
+      - Switches óptico-analógicos Razer™ Analog
+      - Teclas programables con doble acción por presión
+      - Iluminación RGB Razer Chroma individual por tecla
+      - Reposamuñecas ergonómico incluido
+      - Cuerpo de aluminio con acabado premium
+    brand: Razer
+    ASIN: B08P52KQ8G
+    precio: "254,09\_€"
+    precioOriginal: "269,99\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/512hbwOMPnL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51bHD4eB8sL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41J0hMuv9kL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41oA1-58VaL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51HSRqYMtzL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41W6iBDh6KL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - nombre: Razer BlackWidow V4 X
+    lo_mejor: Switches mecánicos Green muy responsivos, RGB por tecla, rueda multifunción, teclas multimedia dedicadas
+    a_tener_en_cuenta: No incluye reposamuñecas, pero excelente calidad-precio dentro de gama media-alta
+    enlace: https://amzn.to/3ZgarUw
+    imagen: https://m.media-amazon.com/images/I/41HLdD5pgML._SL500_.jpg
+    valoracion: 5
+    descripcion: >-
+      Este teclado combina rendimiento, diseño y funcionalidades avanzadas. Sus switches Green son táctiles y muy
+      responsivos, ideales para juegos competitivos o escribir con rapidez. Destaco la rueda multifunción y las teclas
+      multimedia dedicadas, perfectas para controlar el volumen y música sin salir del juego. El RGB por tecla es
+      brillante y se configura fácilmente desde Synapse. Un teclado robusto y personalizable sin llegar al precio
+      extremo del V4 Pro.
+    caracteristicas:
+      - Switches Razer Green (táctiles y clicky)
+      - Iluminación RGB individual por tecla
+      - Rueda multifunción con funciones personalizables
+      - Teclas multimedia dedicadas
+      - Estructura sólida con acabados premium
+    brand: Razer
+    ASIN: B0C6MTPKQ1
+    precio: "119,00\_€"
+    precioOriginal: "123,34\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/51bekbhD7eL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51libLdBpbL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51OSLm9YI6L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51PgCHMcF0L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41wlO0r+g2L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51nt-Q0b+wL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41mdvLg+hcL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41lxqZ39GVL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41CZRmqd6pL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - nombre: Razer Ornata V3 X
+    lo_mejor: Membrana silenciosa, diseño fino y cómodo, teclas planas y resistentes al agua, ideal para trabajar y jugar
+    a_tener_en_cuenta: Buena opción económica si no necesitas un teclado mecánico
+    enlace: https://amzn.to/3FdWzmU
+    imagen: https://m.media-amazon.com/images/I/41Wgd+jlORL._SL500_.jpg
+    valoracion: 3.5
+    descripcion: >-
+      El Ornata V3 X es ideal para quienes buscan un teclado económico pero con estilo gamer. Su perfil bajo y membrana
+      silenciosa lo hacen perfecto para oficina o juegos tranquilos. Me gustó su diseño fino, con teclas planas que se
+      sienten suaves y cómodas. Además, es resistente a líquidos, algo muy útil en entornos compartidos. No es mecánico,
+      pero cumple bien en navegación y juegos casuales. Buena elección por un precio muy reducido.
+    caracteristicas:
+      - Perfil ultrabajo con teclas planas
+      - Membrana silenciosa
+      - Iluminación RGB por zonas
+      - Resistente a salpicaduras
+      - Diseño ligero y cómodo para oficina o gaming
+    brand: Razer
+    ASIN: B09X63H56X
+    precio: "39,99\_€"
+    precioOriginal: "49,99\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41kj-Nav9fL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51rknSfblqL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/5149qOnxKuL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/61-r8ftIW7L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/410bCTPi2FL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51tB-VMZj7L._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - nombre: Razer Apex 3
+    lo_mejor: Teclado silencioso con resistencia IP32 al agua, RGB por zonas y controles multimedia dedicados
+    a_tener_en_cuenta: Perfecto para setups compartidos o nocturnos; sin iluminación por tecla
+    enlace: https://amzn.to/4j4AKEe
+    imagen: https://m.media-amazon.com/images/I/413IejMcEwL._SL500_.jpg
+    valoracion: 4
+    descripcion: >-
+      Lo que más me gustó del Apex 3 es lo silencioso que es. Las teclas son suaves, ideales para trabajar o jugar sin
+      molestar a nadie. A pesar de ser de membrana, su construcción se nota cuidada. Incluye controles multimedia
+      dedicados y reposamuñecas. Además, es resistente al agua (IP32), algo poco común. Su iluminación RGB por zonas
+      también le da un toque atractivo al setup. Muy recomendable si buscas algo silencioso y bien hecho sin romper el
+      presupuesto.
+    caracteristicas:
+      - Teclas silenciosas de membrana
+      - Iluminación RGB por zonas
+      - Resistencia IP32 a líquidos
+      - Reposamuñecas desmontable
+      - Controles multimedia dedicados
+    brand: SteelSeries
+    ASIN: B082YRCL4T
+    precio: "63,98\_€"
+    precioOriginal: "79,99\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/51dN8rt7XcL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/410J4im3SeL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/5100IHCiFGL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51fBWLO03ZL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41N4XiSwrNL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51NYFKkczWL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - nombre: Mars Gaming MKPRO
+    lo_mejor: Switches mecánicos OUTEMU, chasis de aluminio, RGB completo y reposamuñecas desmontable
+    a_tener_en_cuenta: Excelente para empezar en mecánicos sin gastar mucho
+    enlace: https://amzn.to/4j6eppL
+    imagen: https://m.media-amazon.com/images/I/41fSYMkeoIL._SL500_.jpg
+    valoracion: 4.5
+    descripcion: >-
+      El MKPRO es una de las mejores sorpresas de gama baja. Tiene switches mecánicos OUTEMU que, si bien no están al
+      nivel de los Cherry o Razer, ofrecen una buena experiencia de tecleo. Me sorprendió su construcción en aluminio,
+      que lo hace muy robusto para su precio. Además, cuenta con iluminación RGB y un reposamuñecas desmontable. Es
+      ideal si quieres un teclado mecánico sin gastar demasiado y sin renunciar a estética ni funcionalidades básicas.
+    caracteristicas:
+      - Switches mecánicos OUTEMU rojos
+      - Iluminación RGB completa
+      - Reposamuñecas desmontable
+      - Chasis de aluminio reforzado
+      - Formato completo con anti-ghosting
+    brand: Mars Gaming
+    ASIN: B0F383W18C
+    precio: "40,89\_€"
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41rFx5MEjSL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/415zS5GQufL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51BPF2QhV5L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41gRp5Are1L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41nKTeb6z5L._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - nombre: Logitech G213 Prodigy
+    lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado, resistente a líquidos
+    a_tener_en_cuenta: Alternativa silenciosa y cómoda si no necesitas mecánico
+    enlace: https://amzn.to/43gMyNV
+    imagen: https://m.media-amazon.com/images/I/41Yz5u7yGTL._SL500_.jpg
+    valoracion: 3.5
+    descripcion: >-
+      El G213 es un teclado que ha resistido bien el paso del tiempo. Aunque no es mecánico, su membrana ofrece una
+      buena respuesta y es bastante silenciosa. Lo he usado tanto para juegos como para escribir y me ha dado resultados
+      sólidos. La iluminación RGB por zonas se ve muy bien y se puede configurar con Logitech G Hub. Incluye un
+      reposamuñecas integrado muy cómodo. Ideal para presupuestos ajustados o setups híbridos.
+    caracteristicas:
+      - Teclas de membrana silenciosas
+      - Iluminación RGB por zonas
+      - Reposamuñecas integrado
+      - Resistente a salpicaduras
+      - Software Logitech G HUB
+    brand: Logitech G
+    ASIN: B01L6L44NU
+    precio: "53,99\_€"
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/51t9X0NCl5L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41jyVx5ymtL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41x+cL2EipL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51r+xblHwPL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41Yw39QwuIL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41XQUaK42DL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - nombre: Corsair K55 RGB PRO
+    lo_mejor: Teclas macro y multimedia dedicadas, resistencia IP42, RGB por zonas y compatible con iCUE
+    a_tener_en_cuenta: Ideal para productividad y MMO si no necesitas switches mecánicos
+    enlace: https://amzn.to/44FysIo
+    imagen: https://m.media-amazon.com/images/I/41TUYE9g7gL._SL500_.jpg
+    valoracion: 4
+    descripcion: >-
+      Uno de los teclados más completos por su precio. Me sorprendió la cantidad de funciones: tiene teclas dedicadas
+      para macros, multimedia y controles rápidos. La iluminación RGB por zonas es bastante llamativa y el software iCUE
+      permite personalizar todo. El diseño es sobrio pero robusto, y cuenta con certificación IP42 contra derrames. Me
+      ha funcionado genial para MMO y productividad. Muy recomendable si no necesitas switches mecánicos.
+    caracteristicas:
+      - Teclas macro dedicadas
+      - Iluminación RGB por zonas
+      - Resistencia al polvo y líquidos (IP42)
+      - Controles multimedia dedicados
+      - Compatible con Corsair iCUE
+    brand: Corsair
+    ASIN: B08YDJ6DKN
+    precio: "64,99\_€"
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/414Jru+H5RL._SL500_.jpg
+        width: 500
+        height: 333
+      - url: https://m.media-amazon.com/images/I/51xMQyFw3US._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41LOT2gQHbL._SL500_.jpg
+        width: 500
+        height: 289
+      - url: https://m.media-amazon.com/images/I/51kwArs4MdS._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51NqzpbExfS._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51MjVUG8B2S._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51-hDBhYxcS._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51w5FG6QgNS._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41ri-Es4JaL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 281
+    imagenWidth: 500
+  - nombre: Razer BlackWidow V3 TKL
+    valoracion: 5
+    caracteristicas:
+      - Switches mecánicos Razer Green
+      - Iluminación RGB por tecla
+      - Formato TKL compacto
+      - Diseño metálico robusto
+      - Compatible con Razer Synapse
+    descripcion: >-
+      Probé este teclado durante sesiones intensivas en juegos como Valorant, Apex y StarCraft II, y su rendimiento fue
+      impecable. Sus switches Green ofrecen ese clic táctil satisfactorio que te da control absoluto sobre cada acción.
+      Al ser TKL, me dejó mucho más espacio para mover el ratón, lo cual es una ventaja clara en FPS. El RGB individual
+      por tecla se ve espectacular. El chasis es sólido y resistente. Si buscas precisión y diseño compacto, este
+      teclado no falla.
+    lo_mejor: Formato compacto sin pad numérico, switches Green, RGB individual y diseño robusto
+    a_tener_en_cuenta: Perfecto para shooters y escritorios con poco espacio
+    enlace: https://amzn.to/4j4Gxdc
+    imagen: https://m.media-amazon.com/images/I/41wbpd0kMkL._SL500_.jpg
+    ASIN: B097F5QSTB
+    brand: Razer
+    precio: "89,99\_€"
+    precioOriginal: "119,99\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/51sRR9W-H6L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/417bJIRsKFL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41DfZGkdxIL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Ch37vAhzL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41M03587YZL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51W9P1y1lAL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41tfetzGQvL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41HO8hmBkEL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - nombre: Logitech G512
+    lo_mejor: Switches GX (Brown, Red o Blue), chasis de aluminio, RGB por tecla y puerto USB integrado
+    a_tener_en_cuenta: Equilibrio perfecto entre calidad, rendimiento y estética
+    enlace: https://amzn.to/4k1m36q
+    imagen: https://m.media-amazon.com/images/I/41OHtRfuVEL._SL500_.jpg
+    valoracion: 4.5
+    descripcion: >-
+      El Logitech G512 me ha sorprendido por su tacto preciso y construcción sólida. Utiliza switches GX mecánicos
+      (puedes elegir entre Brown, Red o Blue), muy estables y con buen recorrido. El chasis de aluminio le da un acabado
+      premium y muy resistente. El RGB por tecla se ve espectacular, y es totalmente personalizable con Logitech G HUB.
+      Perfecto para quienes buscan un teclado mecánico fiable y elegante sin complicarse con florituras innecesarias.
+    caracteristicas:
+      - Switches mecánicos GX (Brown, Red o Blue)
+      - Iluminación RGB individual por tecla
+      - Estructura de aluminio cepillado
+      - Puerto USB passthrough integrado
+      - Compatible con Logitech G HUB
+    brand: Logitech G
+    ASIN: B07W7M8CLV
+    precio: "95,54\_€"
+    precioOriginal: "139,00\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41EiBx7h6GL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41qxSknTHKL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41GS9e9wxWL._SL500_.jpg
+        width: 500
+        height: 480
+      - url: https://m.media-amazon.com/images/I/41aMXlu+04L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/31LK1EZwsJL._SL500_.jpg
+        width: 500
+        height: 191
+      - url: https://m.media-amazon.com/images/I/218VP29e-uL._SL500_.jpg
+        width: 500
+        height: 156
+      - url: https://m.media-amazon.com/images/I/31YJvoskUlL._SL500_.jpg
+        width: 500
+        height: 255
+    imagenHeight: 287
+    imagenWidth: 500
+  - nombre: Logitech G413 TKL SE
+    lo_mejor: Diseño TKL compacto, retroiluminación blanca clara, carcasa de aluminio y switches táctiles
+    a_tener_en_cuenta: Diseño limpio y resistente para setups minimalistas
+    enlace: https://amzn.to/3Ziwxpk
+    imagen: https://m.media-amazon.com/images/I/31P2UYfjn1L._SL500_.jpg
+    valoracion: 4
+    descripcion: >-
+      La versión TKL del G413 mantiene todo lo bueno del modelo grande, pero con un tamaño más compacto. Perfecto para
+      jugadores que quieren más espacio para mover el ratón. Es robusto, con carcasa de aluminio y switches táctiles de
+      buena respuesta. No tiene RGB, solo luz blanca, pero es muy visible y elegante. Me ha resultado muy cómodo en
+      juegos como Apex y Warzone. Cumple con lo esencial sin florituras.
+    caracteristicas:
+      - Formato TKL para mayor espacio en el escritorio
+      - Switches táctiles duraderos
+      - Chasis de aluminio cepillado
+      - Retroiluminación blanca funcional
+      - Diseño limpio y sin distracciones
+    brand: Logitech G
+    ASIN: B07W7KMK4W
+    precio: "61,99\_€"
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41lTGyjm48L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41G-GOl-LTL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41cno43GaGL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51-zNf1LWpL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41TPXfU+qYL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41by1de4i3L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51zZLWogwGL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51zZLWogwGL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500

@@ -1,145 +1,326 @@
 productos:
-- ASIN: B0F339PBV2
-  a_tener_en_cuenta: No tiene GPS ni NFC, y para algunas funciones necesitas la app
-    Mi Fitness.
-  brand: Xiaomi
-  caracteristicas:
-  - Pantalla AMOLED 1,62″, 60 Hz y hasta 1200 nits
-  - 'Seguimiento: pulso, SpO₂, estrés, sueño y ciclo'
-  - Más de 150 modos deportivos
-  - Resistencia al agua 5 ATM
-  - Autonomía de hasta 21 días
-  descripcion: Probé la Xiaomi Smart Band 9 y me sorprendió lo ligera y completa que
-    es. La pantalla AMOLED de 1,62″ se ve genial incluso bajo el sol, y todo fluye
-    con su tasa de 60 Hz. Tiene seguimiento continuo de salud (pulso, SpO₂, estrés,
-    sueño), más de 150 modos deportivos y una batería que me duró casi tres semanas.
-    Ideal si buscas una pulsera potente, cómoda y sin complicaciones.
-  enlace: https://amzn.to/4jVdXeD
-  imagen: images/Xiaomi-Smart-Band-9.webp
-  lo_mejor: Pantalla muy brillante y fluida, gran autonomía y funciones completas
-    de salud en un diseño súper ligero.
-  nombre: Xiaomi Smart Band 9
-  valoracion: 4.4
-- ASIN: B0DK6ZC5ZC
-  a_tener_en_cuenta: No tiene pantalla AMOLED ni GPS; algunos datos de salud no son
-    tan precisos como en gamas más altas.
-  brand: Xiaomi
-  caracteristicas:
-  - Pantalla TFT de 1,47″, 60 Hz
-  - 'Muy ligera: solo 16,2 g'
-  - Seguimiento de pulso, SpO₂ y sueño
-  - Más de 50 modos deportivos
-  - Hasta 18 días de autonomía
-  descripcion: Esta versión Active de la Smart Band 9 me ha parecido ideal si buscas
-    una pulsera económica pero muy completa. Tiene una pantalla TFT de 1,47″ que se
-    ve nítida, es muy ligera (solo 16,2 g) y la batería me ha aguantado unos 2 días
-    con uso intenso, o más de 2 semanas en uso normal. Mantiene funciones clave como
-    el seguimiento de sueño, pulso y SpO₂, y su diseño cómodo la hace perfecta para
-    llevarla todo el día sin darte cuenta.
-  enlace: https://amzn.to/3SXn8QJ
-  imagen: images/Xiaomi-Smart-Band-9-Active.webp
-  lo_mejor: Comodísima para uso diario, con buena autonomía y funciones básicas de
-    salud que cumplen bien.
-  nombre: Xiaomi Smart Band 9 Active
-  valoracion: 4.3
-- ASIN: B0B6WRFY5S
-  a_tener_en_cuenta: No tiene GPS ni funciones deportivas avanzadas; algunas funciones
-    requieren Fitbit Premium.
-  brand: Google
-  caracteristicas:
-  - Pantalla AMOLED táctil a color
-  - Seguimiento continuo del estrés, sueño y FC
-  - Diseño fino y muy cómodo
-  - Hasta 10 días de autonomía
-  - Compatible con app Fitbit + Google Fit
-  descripcion: 'La Inspire 3 me ha parecido una pulsera sencilla pero con datos de
-    salud bastante precisos. Tiene un diseño fino y muy ligero, y lo que más me gustó
-    fue su enfoque en el bienestar: estrés, sueño, frecuencia cardíaca y niveles de
-    actividad. La batería me duró fácilmente más de una semana, y su pantalla AMOLED
-    pequeña pero nítida permite ver lo esencial sin distracciones.'
-  enlace: https://amzn.to/3HMEnlj
-  imagen: images/Fitbit-Inspire-3.webp
-  lo_mejor: Buena precisión en los datos de salud y excelente para quienes priorizan
-    el bienestar y el descanso.
-  nombre: Google Fitbit Inspire 3
-  valoracion: 4.2
-- ASIN: B0CHBMLYLL
-  a_tener_en_cuenta: No incluye GPS; algunas funciones requieren app Mi Fitness.
-  brand: Xiaomi
-  caracteristicas:
-  - Pantalla AMOLED 1,62″ con 600 nits
-  - Modos deportivos con análisis profesional
-  - Sensor de pulso, SpO₂, estrés y sueño
-  - 'Diseño adaptable: muñeca o zapatilla'
-  - Hasta 16 días de batería
-  descripcion: 'La Mi Smart Band 8 me ha sorprendido por su versatilidad. No solo
-    puedes llevarla en la muñeca, también incluye accesorios para usarla como clip
-    en la zapatilla y registrar carrera de forma más precisa. La pantalla AMOLED de
-    1,62″ es muy brillante, y tiene sensores de salud completos. Lo mejor: la autonomía
-    ronda las dos semanas incluso con notificaciones activas.'
-  enlace: https://amzn.to/3HI6SRg
-  imagen: images/Xiaomi-Smart-Band-8.webp
-  lo_mejor: Versátil y precisa, ideal si corres o haces deporte y te gusta monitorizar
-    el rendimiento.
-  nombre: Xiaomi Smart Band 8
-  valoracion: 4.4
-- ASIN: B0C4LLK48F
-  a_tener_en_cuenta: Sin GPS; algunas funciones avanzadas requieren app Huawei Health.
-  brand: Huawei
-  caracteristicas:
-  - Pantalla AMOLED de 1,47″ sin bordes
-  - Seguimiento de SpO₂, pulso, sueño y estrés
-  - Carga rápida (100% en 45 min)
-  - Resistencia al agua 5 ATM
-  - Hasta 14 días de batería
-  descripcion: 'La HUAWEI Band 8 tiene un diseño que parece de gama alta: delgada,
-    ligera y con pantalla AMOLED de gran calidad. Me gustó su precisión al medir sueño,
-    frecuencia cardíaca y saturación de oxígeno. Incluye funciones interesantes como
-    ejercicios de respiración, y la autonomía supera los 10 días sin despeinarse.'
-  enlace: https://amzn.to/40az45s
-  imagen: images/Huawei-band-8.webp
-  lo_mejor: Elegante y muy completa. La mejor opción si quieres estilo sin renunciar
-    a sensores fiables.
-  nombre: HUAWEI Band 8
-  valoracion: 4.6
-- ASIN: B0DY1JKTRD
-  a_tener_en_cuenta: No tiene GPS ni NFC, y requiere app de Huawei para estadísticas
-    detalladas.
-  brand: Huawei
-  caracteristicas:
-  - Pantalla AMOLED de 1,52″
-  - Más de 100 modos deportivos
-  - Sensor TruSeen 5.5 para FC y SpO₂
-  - Carga rápida en 45 minutos
-  - Autonomía de hasta 14 días
-  descripcion: 'Probé la Band 10 y lo primero que destaca es su diseño rectangular
-    ultrafino y pantalla AMOLED clara incluso en exteriores. Tiene más de 100 modos
-    deportivos, medición de estrés, sueño y salud cardíaca bastante precisa. Y lo
-    mejor: se carga al 100 % en solo 45 minutos.'
-  enlace: https://amzn.to/45nH4nj
-  imagen: images/HUAWEI-Band-10.webp
-  lo_mejor: Diseño moderno, datos de salud precisos y batería muy duradera. Se siente
-    como un smartwatch.
-  nombre: HUAWEI Band 10
-  valoracion: 4.6
-- ASIN: B0CVN3NK42
-  a_tener_en_cuenta: No tiene GPS ni NFC; requiere Samsung Health para seguimiento
-    completo.
-  brand: Samsung
-  caracteristicas:
-  - Pantalla AMOLED de 1,6″
-  - Más de 100 modos de entrenamiento
-  - Seguimiento de sueño, pulso y estrés
-  - Control de notificaciones y llamadas
-  - Hasta 13 días de autonomía
-  descripcion: La Galaxy Fit3 es una de las pulseras más completas que he probado.
-    Su pantalla AMOLED de 1,6″ es amplia y muy cómoda de usar. Incluye sensores de
-    salud (pulso, estrés, sueño), más de 100 modos de ejercicio y una batería que
-    aguanta hasta 13 días. Además, permite controlar llamadas y notificaciones fácilmente
-    desde la muñeca.
-  enlace: https://amzn.to/3Tr4WPz
-  imagen: images/galaxy-fit3.webp
-  lo_mejor: Pantalla grande y fluida, funciones de smartwatch y excelente batería
-    para uso diario.
-  nombre: Samsung Galaxy Fit3
-  valoracion: 4.4
+  - ASIN: B0F339PBV2
+    a_tener_en_cuenta: No tiene GPS ni NFC, y para algunas funciones necesitas la app Mi Fitness.
+    brand: NK
+    caracteristicas:
+      - Pantalla AMOLED 1,62″, 60 Hz y hasta 1200 nits
+      - 'Seguimiento: pulso, SpO₂, estrés, sueño y ciclo'
+      - Más de 150 modos deportivos
+      - Resistencia al agua 5 ATM
+      - Autonomía de hasta 21 días
+    descripcion: >-
+      Probé la Xiaomi Smart Band 9 y me sorprendió lo ligera y completa que es. La pantalla AMOLED de 1,62″ se ve genial
+      incluso bajo el sol, y todo fluye con su tasa de 60 Hz. Tiene seguimiento continuo de salud (pulso, SpO₂, estrés,
+      sueño), más de 150 modos deportivos y una batería que me duró casi tres semanas. Ideal si buscas una pulsera
+      potente, cómoda y sin complicaciones.
+    enlace: https://amzn.to/4jVdXeD
+    imagen: https://m.media-amazon.com/images/I/41nI66MToqL._SL500_.jpg
+    lo_mejor: Pantalla muy brillante y fluida, gran autonomía y funciones completas de salud en un diseño súper ligero.
+    nombre: Xiaomi Smart Band 9
+    valoracion: 4.4
+    precio: "41,48\_€"
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/315kdMJUzOL._SL500_.jpg
+        width: 163
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41tqXz9juDL._SL500_.jpg
+        width: 389
+        height: 500
+      - url: https://m.media-amazon.com/images/I/21aw4C++SDL._SL500_.jpg
+        width: 163
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 384
+  - ASIN: B0DK6ZC5ZC
+    a_tener_en_cuenta: No tiene pantalla AMOLED ni GPS; algunos datos de salud no son tan precisos como en gamas más altas.
+    brand: Xiaomi
+    caracteristicas:
+      - Pantalla TFT de 1,47″, 60 Hz
+      - 'Muy ligera: solo 16,2 g'
+      - Seguimiento de pulso, SpO₂ y sueño
+      - Más de 50 modos deportivos
+      - Hasta 18 días de autonomía
+    descripcion: >-
+      Esta versión Active de la Smart Band 9 me ha parecido ideal si buscas una pulsera económica pero muy completa.
+      Tiene una pantalla TFT de 1,47″ que se ve nítida, es muy ligera (solo 16,2 g) y la batería me ha aguantado unos
+      2 días con uso intenso, o más de 2 semanas en uso normal. Mantiene funciones clave como el seguimiento de sueño,
+      pulso y SpO₂, y su diseño cómodo la hace perfecta para llevarla todo el día sin darte cuenta.
+    enlace: https://amzn.to/3SXn8QJ
+    imagen: https://m.media-amazon.com/images/I/41G8nr4ACOL._SL500_.jpg
+    lo_mejor: Comodísima para uso diario, con buena autonomía y funciones básicas de salud que cumplen bien.
+    nombre: Xiaomi Smart Band 9 Active
+    valoracion: 4.3
+    precio: "19,99\_€"
+    precioOriginal: "24,99\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/5179hYalu-L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41Ga3RnIW+L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41AtpA8OEXL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41g8KL07wIL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41Hr+gYTKrL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41IAjaGI4pL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41CvE7hNkKL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41MsGlDcrVL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/415UfmGEWVL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/31Ph50p8T9L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/319tc6-kIAL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/316uigjTwjL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - ASIN: B0B6WRFY5S
+    a_tener_en_cuenta: No tiene GPS ni funciones deportivas avanzadas; algunas funciones requieren Fitbit Premium.
+    brand: Fitbit
+    caracteristicas:
+      - Pantalla AMOLED táctil a color
+      - Seguimiento continuo del estrés, sueño y FC
+      - Diseño fino y muy cómodo
+      - Hasta 10 días de autonomía
+      - Compatible con app Fitbit + Google Fit
+    descripcion: >-
+      La Inspire 3 me ha parecido una pulsera sencilla pero con datos de salud bastante precisos. Tiene un diseño fino y
+      muy ligero, y lo que más me gustó fue su enfoque en el bienestar: estrés, sueño, frecuencia cardíaca y niveles de
+      actividad. La batería me duró fácilmente más de una semana, y su pantalla AMOLED pequeña pero nítida permite ver
+      lo esencial sin distracciones.
+    enlace: https://amzn.to/3HMEnlj
+    imagen: https://m.media-amazon.com/images/I/31wwOV2YnzL._SL500_.jpg
+    lo_mejor: Buena precisión en los datos de salud y excelente para quienes priorizan el bienestar y el descanso.
+    nombre: Google Fitbit Inspire 3
+    valoracion: 4.2
+    precio: "96,81\_€"
+    precioOriginal: "99,95\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41q8FlO+7qL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41bkMfQTkXL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51sofwyMoKL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51amszT+KHL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41GeKTZ4tyL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51BqkKxffpL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41AAW+rek5L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51G5SPefvzL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - ASIN: B0CHBMLYLL
+    a_tener_en_cuenta: No incluye GPS; algunas funciones requieren app Mi Fitness.
+    brand: NK
+    caracteristicas:
+      - Pantalla AMOLED 1,62″ con 600 nits
+      - Modos deportivos con análisis profesional
+      - Sensor de pulso, SpO₂, estrés y sueño
+      - 'Diseño adaptable: muñeca o zapatilla'
+      - Hasta 16 días de batería
+    descripcion: >-
+      La Mi Smart Band 8 me ha sorprendido por su versatilidad. No solo puedes llevarla en la muñeca, también incluye
+      accesorios para usarla como clip en la zapatilla y registrar carrera de forma más precisa. La pantalla AMOLED de
+      1,62″ es muy brillante, y tiene sensores de salud completos. Lo mejor: la autonomía ronda las dos semanas incluso
+      con notificaciones activas.
+    enlace: https://amzn.to/3HI6SRg
+    imagen: https://m.media-amazon.com/images/I/510cXpMvn1L._SL500_.jpg
+    lo_mejor: Versátil y precisa, ideal si corres o haces deporte y te gusta monitorizar el rendimiento.
+    nombre: Xiaomi Smart Band 8
+    valoracion: 4.4
+    precio: Sin precio
+    precioOriginal: No especificado
+    disponibilidad: Sin info
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41-kSISEoyL._SL500_.jpg
+        width: 162
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41jbcRGyBWL._SL500_.jpg
+        width: 466
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41kI4S92CcL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51xs6n4INHL._SL500_.jpg
+        width: 493
+        height: 500
+      - url: https://m.media-amazon.com/images/I/4133X8lmcRL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41xdmxsqMvL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41Iq9HNMAgL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41JWlZ720dL._SL500_.jpg
+        width: 500
+        height: 477
+    imagenHeight: 500
+    imagenWidth: 383
+  - ASIN: B0C4LLK48F
+    a_tener_en_cuenta: Sin GPS; algunas funciones avanzadas requieren app Huawei Health.
+    brand: HUAWEI
+    caracteristicas:
+      - Pantalla AMOLED de 1,47″ sin bordes
+      - Seguimiento de SpO₂, pulso, sueño y estrés
+      - Carga rápida (100% en 45 min)
+      - Resistencia al agua 5 ATM
+      - Hasta 14 días de batería
+    descripcion: >-
+      La HUAWEI Band 8 tiene un diseño que parece de gama alta: delgada, ligera y con pantalla AMOLED de gran calidad.
+      Me gustó su precisión al medir sueño, frecuencia cardíaca y saturación de oxígeno. Incluye funciones interesantes
+      como ejercicios de respiración, y la autonomía supera los 10 días sin despeinarse.
+    enlace: https://amzn.to/40az45s
+    imagen: https://m.media-amazon.com/images/I/41c9pNRgJjL._SL500_.jpg
+    lo_mejor: Elegante y muy completa. La mejor opción si quieres estilo sin renunciar a sensores fiables.
+    nombre: HUAWEI Band 8
+    valoracion: 4.6
+    precio: "21,08\_€"
+    precioOriginal: "59,00\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41H8fEgtXKL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41aNuV0XMML._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41lpzh+vNwL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51GS6AtnTVL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41AvNmfdskL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41cnDuxBgDL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51IN1z7E-0L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Uuw6rzA4L._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - ASIN: B0DY1JKTRD
+    a_tener_en_cuenta: No tiene GPS ni NFC, y requiere app de Huawei para estadísticas detalladas.
+    brand: HUAWEI
+    caracteristicas:
+      - Pantalla AMOLED de 1,52″
+      - Más de 100 modos deportivos
+      - Sensor TruSeen 5.5 para FC y SpO₂
+      - Carga rápida en 45 minutos
+      - Autonomía de hasta 14 días
+    descripcion: >-
+      Probé la Band 10 y lo primero que destaca es su diseño rectangular ultrafino y pantalla AMOLED clara incluso en
+      exteriores. Tiene más de 100 modos deportivos, medición de estrés, sueño y salud cardíaca bastante precisa. Y lo
+      mejor: se carga al 100 % en solo 45 minutos.
+    enlace: https://amzn.to/45nH4nj
+    imagen: https://m.media-amazon.com/images/I/41ohpU0jbXL._SL500_.jpg
+    lo_mejor: Diseño moderno, datos de salud precisos y batería muy duradera. Se siente como un smartwatch.
+    nombre: HUAWEI Band 10
+    valoracion: 4.6
+    precio: "39,00\_€"
+    precioOriginal: "49,00\_€"
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
+  - ASIN: B0CVN3NK42
+    a_tener_en_cuenta: No tiene GPS ni NFC; requiere Samsung Health para seguimiento completo.
+    brand: Samsung
+    caracteristicas:
+      - Pantalla AMOLED de 1,6″
+      - Más de 100 modos de entrenamiento
+      - Seguimiento de sueño, pulso y estrés
+      - Control de notificaciones y llamadas
+      - Hasta 13 días de autonomía
+    descripcion: >-
+      La Galaxy Fit3 es una de las pulseras más completas que he probado. Su pantalla AMOLED de 1,6″ es amplia y muy
+      cómoda de usar. Incluye sensores de salud (pulso, estrés, sueño), más de 100 modos de ejercicio y una batería que
+      aguanta hasta 13 días. Además, permite controlar llamadas y notificaciones fácilmente desde la muñeca.
+    enlace: https://amzn.to/3Tr4WPz
+    imagen: https://m.media-amazon.com/images/I/41PpJFtiHZL._SL500_.jpg
+    lo_mejor: Pantalla grande y fluida, funciones de smartwatch y excelente batería para uso diario.
+    nombre: Samsung Galaxy Fit3
+    valoracion: 4.4
+    precio: "49,89\_€"
+    precioOriginal: No especificado
+    disponibilidad: En stock
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/31OE7t1SPiL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41QTQ4IwyRL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/4192W2NMDqL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41f93qwNRqL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/510gidJSUTL._SL500_.jpg
+        width: 500
+        height: 500
+    imagenHeight: 500
+    imagenWidth: 500
