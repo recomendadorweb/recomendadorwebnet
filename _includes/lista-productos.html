@@ -167,6 +167,7 @@ function seleccionarMiniatura(imgElement) {
       width="{{ producto.imagenWidth }}"
       height="{{ producto.imagenHeight }}"
       alt="{{ producto.nombre }}"
+      loading="lazy"
     />
   </a>
 </div>
@@ -182,6 +183,7 @@ function seleccionarMiniatura(imgElement) {
       width="{{ producto.imagenWidth }}"
       height="{{ producto.imagenHeight }}"
       alt="Imagen principal de {{ producto.nombre }}"
+      loading="lazy"
     />
     <!-- Variantes -->
     {% for variante in producto.imagenesVariantes %}
@@ -192,6 +194,7 @@ function seleccionarMiniatura(imgElement) {
         width="{{ variante.width }}"
         height="{{ variante.height }}"
         alt="Variante de {{ producto.nombre }}"
+        loading="lazy"
       />
     {% endfor %}
   </div>
