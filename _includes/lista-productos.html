@@ -25,10 +25,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -204,19 +205,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: {{ producto.valoracion }}/5</p>
-    {% if producto.precio %}
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          {{ producto.precio }}
-        </span>
-        {% if producto.precioOriginal and producto.precioOriginal != "No especificado" %}
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: {{ producto.precioOriginal }}
-          </span>
-        {% endif %}
-      </p>
+{% if producto.precio %}
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      {{ producto.precio }}
+    </span>
+    {% if producto.precioOriginal and producto.precioOriginal != "No especificado" %}
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: {{ producto.precioOriginal }}
+      </span>
     {% endif %}
+  </p>
+{% endif %}
+
 
 
       <p class="descripcion-review">{{ producto.descripcion | markdownify }}</p>
