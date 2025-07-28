@@ -582,10 +582,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -751,7 +752,8 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
-    
+
+
 
 
       <p class="descripcion-review"><p>8 pilas AAA de 1100mAh con baja autodescarga y estuche incluido. Compatibles con todo tipo de dispositivos domésticos.</p>
@@ -823,7 +825,8 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.7/5</p>
-    
+
+
 
 
       <p class="descripcion-review"><p>8 pilas AA de 2800mAh, alta capacidad y larga vida útil. Con carcasa segura y tecnología ProCyco.</p>

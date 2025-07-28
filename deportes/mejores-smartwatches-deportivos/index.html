@@ -706,10 +706,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -925,19 +926,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      159,20 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          159,20 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 199,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 199,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Garmin Forerunner 55 es el reloj ideal para quienes se inician en el running y buscan fiabilidad sin complicaciones. Durante mis entrenamientos urbanos y alguna tirada larga, me convenció por su rapidez de conexión al GPS y su comodidad. No tiene métricas avanzadas, pero cumple con nota en lo esencial. Su interfaz es clara, y la batería aguanta perfectamente varias sesiones por semana. Un modelo perfecto para empezar sin renunciar a calidad.</p>
@@ -1069,19 +1073,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      203,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          203,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 349,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 349,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Probé el Forerunner 255 mientras preparaba una media maratón y fue como tener un entrenador en la muñeca. El GPS multibanda clava los recorridos, incluso en zonas difíciles, y las métricas de recuperación y carga de entrenamiento me ayudaron a ajustar las sesiones. La autonomía es sobresaliente y la experiencia general, redonda. Un modelo versátil y potente para corredores comprometidos.</p>
@@ -1213,19 +1220,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      299,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          299,00 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 329,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 329,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este reloj destaca por su pantalla AMOLED, que se ve increíble tanto en interior como a pleno sol. Lo estuve usando en sesiones mixtas de ciudad y montaña, y el GPS se mantuvo estable. Tiene lo justo y necesario para corredores que quieren algo más que lo básico pero sin irse a modelos premium. La navegación por menús es muy fluida gracias a la pantalla táctil.</p>
@@ -1387,19 +1397,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      368,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          368,00 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 399,00 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 399,00 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El SUUNTO Race está claramente orientado a deportistas que hacen entrenamientos largos y variados. Lo llevé en una ruta de montaña de 20 km con bastante desnivel y el GPS clavó cada tramo. Las métricas de altitud y esfuerzo son muy precisas, y la batería aguantó sin problema. Eso sí, la interfaz es algo menos intuitiva que en Garmin, pero si estás acostumbrado al ecosistema Suunto, te encantará.</p>
@@ -1571,19 +1584,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      259,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          259,00 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 349,00 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 349,00 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El SUUNTO 9 Peak combina estética y resistencia como pocos. Lo llevé durante una semana completa y aún me sobraba batería. Es muy fino y ligero, pero aguanta entrenamientos duros con solvencia. Ideal si haces tanto trail como deporte urbano y no quieres ir cambiando de reloj.</p>
@@ -1695,15 +1711,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 3/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      149,90 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          149,90 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Polar M430 ya lleva años en el mercado, pero sigue siendo una opción sólida para quienes no necesitan florituras. Lo he usado en sesiones básicas de running y su GPS y sensor óptico cumplen con nota. La pantalla no es la más moderna, pero es muy legible. Lo mejor, sin duda, es su fiabilidad y sencillez. Perfecto si solo quieres salir a correr y registrar bien tus datos sin pagar de más.</p>
@@ -1845,15 +1862,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      249,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          249,00 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El COROS Pace 3 es uno de los relojes más sorprendentes del último año. Lo usé en pista y en trail, y la precisión de su GPS multibanda es sencillamente increíble. Es muy ligero, intuitivo y con una batería que aguanta lo que le eches. Además, su app es de las más claras y completas del mercado. Por el precio que tiene, es una auténtica joya.</p>

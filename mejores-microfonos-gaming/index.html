@@ -778,10 +778,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -1057,15 +1058,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      219,34 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          219,34 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este es el micrófono que más he usado en grabaciones profesionales. Viene con una interfaz XLR integrada, así que no necesitas comprar nada más para empezar. Suena como los micros de estudio: la voz sale cálida, redonda y con gran profundidad. He grabado podcast completos, intros de vídeo, narraciones y también directos en Twitch con él, y en todos los casos la calidad ha sido de primera. Me encanta lo sencillo que es de configurar y el control que ofrece. Si tu prioridad es sonar profesional desde casa, este es tu mejor aliado.</p>
@@ -1257,19 +1259,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      116,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          116,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 139,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 139,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Un clásico que nunca pasa de moda, y con razón. El Blue Yeti lleva años siendo el preferido de muchos creadores por su versatilidad. Yo lo he usado para entrevistas, tutoriales y grabaciones de cursos, y siempre cumple. Suena limpio, con cuerpo, y los distintos patrones de captación lo hacen útil tanto si grabas solo como si entrevistas a alguien más. Además, tiene controles físicos (ganancia, mute y patrón) que ayudan mucho durante la grabación. No necesitas saber de sonido para sacarle partido.</p>
@@ -1451,19 +1456,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      156,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          156,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 169,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 169,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>He probado muchos micros USB, pero pocos suenan tan bien como este. El Elgato Wave:3 tiene un sonido sorprendentemente limpio y detallado, perfecto para podcasting y grabaciones vocales. Además, su sistema anti-clipping evita que la voz sature cuando subes el tono, lo cual es clave si haces directos o grabas con énfasis. El software Wave Link es ideal si mezclas varias fuentes (como voz, música, Discord…). Para creadores que hacen de todo, es una opción comodísima y eficaz.</p>
@@ -1625,19 +1633,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      76,90 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          76,90 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 119,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 119,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este es mi opción de confianza cuando grabo en sitios con ruido de fondo. Es un micrófono dinámico con conexión XLR, lo que significa que capta solo lo que tienes justo delante. He grabado con él incluso con ventiladores encendidos o en habitaciones sin tratamiento acústico, y los resultados son impresionantes. La voz suena rica, con cuerpo y cero interferencias. Eso sí, necesitas una interfaz de audio, pero si ya la tienes o estás dispuesto a invertir, vale muchísimo la pena.</p>
@@ -1779,15 +1790,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      79,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          79,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Visualmente atractivo, sí, pero lo mejor es cómo suena. Este micrófono es muy versátil, y eso me ha permitido usarlo tanto en grabaciones de voz para podcast como en charlas por Zoom o Twitch. Tiene varios patrones de captación, lo que lo hace ideal si a veces grabas solo y otras en grupo. Su base antivibración es robusta y evita ruidos molestos al mover la mesa. El control de ganancia es muy accesible y la luz LED te indica si estás en mute. Una opción muy completa sin necesidad de interfaz.</p>
@@ -1949,19 +1961,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      179,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          179,00 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 229,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 229,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este micro es perfecto si no quieres complicarte con configuraciones avanzadas. Funciona por USB-C y suena muy bien directamente al conectarlo. Lo he usado para grabar entrevistas, sesiones de formación online y también directos, y siempre ha entregado un audio claro, con cuerpo y sin distorsiones. El software de control que incluye te permite ajustar la ganancia o ecualizar según tus necesidades, pero si no quieres tocar nada, también puedes usarlo tal cual. Su diseño discreto hace que quede bien en cualquier setup.</p>
@@ -2093,19 +2108,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      124,49 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          124,49 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 159,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 159,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Lo que más me gusta de este micro es su cancelación activa de ruido, que de verdad funciona. Lo probé en una habitación con ventilador y teclado mecánico, y el resultado fue una voz limpia, sin ruidos molestos. Suena claro, moderno y con buena presencia, ideal para quienes hacen directos o graban contenido desde casa sin tratamiento acústico. El diseño es compacto y los controles físicos te permiten ajustar el volumen al vuelo. Para grabaciones rápidas y limpias, es una opción excelente.</p>
@@ -2257,15 +2275,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      115,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          115,00 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Aunque llama la atención por su iluminación RGB, lo que me sorprendió es lo bien que capta la voz. Lo he usado para grabar locuciones y clips para redes sociales, y su sonido es más que correcto. La captación cardioide hace un buen trabajo centrando el audio en tu voz y reduciendo lo que hay alrededor. El botón de mute táctil es muy útil durante sesiones en directo. No será el más natural para podcast largos, pero para contenido corto y visualmente atractivo, es una buena herramienta.</p>
@@ -2417,15 +2436,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      39,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          39,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este micro ha sido mi recomendación habitual para quienes se inician en la creación de contenido. Es compacto, fácil de usar y suena mucho mejor que cualquier micro integrado o auricular. Lo conectas por USB y listo. He grabado pruebas de voz, intros de vídeo y hasta clases online con él, sin problemas. No tiene controles avanzados, pero eso también lo hace sencillo. Su patrón cardioide ayuda bastante a eliminar ruidos de fondo. Por su precio, es difícil encontrar algo mejor.</p>
@@ -2537,15 +2557,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      89,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          89,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este kit me ha parecido una opción ideal para empezar bien desde el principio. Incluye el micrófono, brazo articulado, filtro pop y amortiguador, todo lo necesario para un entorno de grabación básico. Lo he probado en podcasts caseros y directos sencillos, y cumple perfectamente. La voz se escucha nítida, sin ruidos extraños, y con buena presencia. Es una opción que recomiendo mucho si tienes presupuesto limitado pero quieres sonar con calidad desde el primer día.</p>

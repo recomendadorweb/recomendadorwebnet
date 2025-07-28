@@ -703,10 +703,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -902,15 +903,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      41,48 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          41,48 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Probé la Xiaomi Smart Band 9 y me sorprendió lo ligera y completa que es. La pantalla AMOLED de 1,62″ se ve genial incluso bajo el sol, y todo fluye con su tasa de 60 Hz. Tiene seguimiento continuo de salud (pulso, SpO₂, estrés, sueño), más de 150 modos deportivos y una batería que me duró casi tres semanas. Ideal si buscas una pulsera potente, cómoda y sin complicaciones.</p>
@@ -1102,19 +1104,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.3/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      19,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          19,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 24,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 24,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Esta versión Active de la Smart Band 9 me ha parecido ideal si buscas una pulsera económica pero muy completa. Tiene una pantalla TFT de 1,47″ que se ve nítida, es muy ligera (solo 16,2 g) y la batería me ha aguantado unos 2 días con uso intenso, o más de 2 semanas en uso normal. Mantiene funciones clave como el seguimiento de sueño, pulso y SpO₂, y su diseño cómodo la hace perfecta para llevarla todo el día sin darte cuenta.</p>
@@ -1266,19 +1271,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.2/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      96,81 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          96,81 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 99,95 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 99,95 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>La Inspire 3 me ha parecido una pulsera sencilla pero con datos de salud bastante precisos. Tiene un diseño fino y muy ligero, y lo que más me gustó fue su enfoque en el bienestar: estrés, sueño, frecuencia cardíaca y niveles de actividad. La batería me duró fácilmente más de una semana, y su pantalla AMOLED pequeña pero nítida permite ver lo esencial sin distracciones.</p>
@@ -1430,15 +1438,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      Sin precio
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          Sin precio
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>La Mi Smart Band 8 me ha sorprendido por su versatilidad. No solo puedes llevarla en la muñeca, también incluye accesorios para usarla como clip en la zapatilla y registrar carrera de forma más precisa. La pantalla AMOLED de 1,62″ es muy brillante, y tiene sensores de salud completos. Lo mejor: la autonomía ronda las dos semanas incluso con notificaciones activas.</p>
@@ -1590,19 +1599,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      21,08 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          21,08 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 59,00 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 59,00 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>La HUAWEI Band 8 tiene un diseño que parece de gama alta: delgada, ligera y con pantalla AMOLED de gran calidad. Me gustó su precisión al medir sueño, frecuencia cardíaca y saturación de oxígeno. Incluye funciones interesantes como ejercicios de respiración, y la autonomía supera los 10 días sin despeinarse.</p>
@@ -1744,19 +1756,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      39,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          39,00 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 49,00 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 49,00 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Probé la Band 10 y lo primero que destaca es su diseño rectangular ultrafino y pantalla AMOLED clara incluso en exteriores. Tiene más de 100 modos deportivos, medición de estrés, sueño y salud cardíaca bastante precisa. Y lo mejor: se carga al 100 % en solo 45 minutos.</p>
@@ -1878,15 +1893,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      49,89 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          49,89 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>La Galaxy Fit3 es una de las pulseras más completas que he probado. Su pantalla AMOLED de 1,6″ es amplia y muy cómoda de usar. Incluye sensores de salud (pulso, estrés, sueño), más de 100 modos de ejercicio y una batería que aguanta hasta 13 días. Además, permite controlar llamadas y notificaciones fácilmente desde la muñeca.</p>

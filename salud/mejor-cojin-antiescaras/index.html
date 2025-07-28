@@ -831,10 +831,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -1060,15 +1061,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      Sin precio
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          Sin precio
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este cojín me ha parecido ideal para quienes buscan comodidad y suavidad desde el primer momento. El material viscoelástico se adapta bien sin hundirse, y la funda transpirable es un plus si vas a estar muchas horas sentado. Lo he usado en silla de escritorio y sillón, y en ambas se nota el alivio en la base. No lo recomendaría para personas con mucho peso, ya que puede parecer demasiado blando, pero para uso diario es muy agradable.</p>
@@ -1200,19 +1202,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      35,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          35,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 39,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 39,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este modelo es compacto, antideslizante y cómodo para sesiones no muy largas. Me ha parecido muy práctico para llevar de una silla a otra, aunque algo estrecho si tienes una complexión grande. El acabado de la funda es muy bueno, y no se mueve fácilmente al sentarse. Para uso diario moderado o como cojín de prevención, va muy bien.</p>
@@ -1334,19 +1339,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      24,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          24,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 27,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 27,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este cojín es uno de los más equilibrados de la gama media. Buena altura, densidad correcta y sensación cómoda al apoyar. Lo he probado durante días en silla rígida y de oficina, y no se ha hundido ni ha generado calor. La funda no es impermeable, pero sí transpirable y resistente. Para personas que buscan un buen cojín sin gastar demasiado, lo veo ideal.</p>
@@ -1468,15 +1476,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      25,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          25,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este cojín combina firmeza y adaptación. La capa superior de viscoelástica se nota mullida, pero por debajo la espuma Viscoelástica aporta soporte. Lo he usado en silla de ruedas y en una butaca durante 3 días completos, y no se ha deformado ni recalentado. Me parece una opción excelente para quienes buscan confort sin renunciar a soporte firme.</p>
@@ -1598,15 +1607,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      26,95 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          26,95 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este modelo está claramente pensado para aliviar presión en el coxis o el área sacra. La forma con hueco central se nota al sentarse y ayuda a quienes tienen molestias al apoyar. Lo he probado en una silla estándar y en una silla de oficina, y funciona mejor en superficies estables.</p>
@@ -1758,19 +1768,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      24,90 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          24,90 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 31,90 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 31,90 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este cojín tiene una forma en U clásica, con la parte trasera recortada para liberar presión en el coxis. Es una solución sencilla pero efectiva. Ideal para llevar a la oficina o usar en casa en silla rígida. No es el más acolchado, pero su forma alivia bastante.</p>
@@ -1912,19 +1925,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      26,90 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          26,90 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 31,90 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 31,90 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este cojín tiene un diseño envolvente que ayuda a repartir el peso y mantener el cuerpo centrado. Me ha parecido cómodo para personas que necesitan un poco más de guía postural, pero sin ser rígido. Similar a un cojín de viaje anatómico, pero para sillas.</p>
@@ -2066,19 +2082,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      26,90 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          26,90 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 31,90 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 31,90 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Tiene canales longitudinales en la espuma que ayudan a distribuir la presión y mejorar la ventilación. Me ha parecido firme pero confortable. Es ideal para quienes pasan muchas horas sentados sin querer algo muy blando.</p>
@@ -2200,15 +2219,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      49,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          49,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Tiene una combinación de espuma técnica con viscoelástica, y se nota más firme que otros modelos. Me ha parecido especialmente útil para personas que pasan muchas horas al día en silla de ruedas. Es estable y fiable, aunque puede parecer duro al principio.</p>
@@ -2330,15 +2350,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      31,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          31,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Modelo simple pero efectivo. Su espuma Viscoelástica es firme, resistente y no se hunde. Me parece una gran opción si priorizas la durabilidad. Para quienes buscan soporte sólido sin florituras, este es un cojín fiable y muy estable incluso tras largas horas de uso.</p>
@@ -2460,19 +2481,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      26,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          26,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 29,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 29,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Mismo modelo que el anterior pero con una espuma menos firme. Su espuma Viscoelástica es resistente y no se hunde pero no aguanta tanto peso como el anterior.</p>
@@ -2602,19 +2626,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      49,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          49,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 54,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 54,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este cojín está bien construido, con buena densidad y grosor. Me ha sorprendido por su rigidez inicial, pero tras unos minutos se adapta al cuerpo. Lo destacaría para personas que quieren una base firme pero que no sea dura. Su punto débil es que no tiene cremallera en la funda.</p>

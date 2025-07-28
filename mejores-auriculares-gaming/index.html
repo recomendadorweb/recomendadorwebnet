@@ -773,10 +773,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -1102,19 +1103,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      127,89 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          127,89 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 149,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 149,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este modelo ha sido mi favorito durante las pruebas más intensas. El Razer BlackShark V2 HyperSpeed ofrece un sonido tan limpio y posicional que me dio ventaja real en partidas de Valorant. No noté latencia en ningún momento, y el aislamiento de ruido me permitió centrarme completamente en el juego. La batería supera fácilmente las 40 horas, y el diseño es tan ligero que a veces olvidaba que lo llevaba puesto. Es el auricular que yo usaría para competir.</p>
@@ -1286,19 +1290,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      46,40 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          46,40 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este auricular me acompañó durante varias sesiones largas y me dejó una impresión excelente. El Razer BlackShark V2 X ofrece una calidad de audio sorprendente para su precio. Se nota que está pensado para eSports, con un diseño cómodo, ligero y gran aislamiento. El micrófono recoge la voz con claridad, incluso en habitaciones con ruido. Lo recomendaría como la mejor opción por debajo de los 70 euros.</p>
@@ -1470,19 +1477,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      74,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          74,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 119,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 119,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Llevo usando los Razer Barracuda X desde hace semanas y son mi elección favorita para jugar en portátil o consola. Pesan poquísimo, casi ni los notas puestos, y la conexión es instantánea. Me encanta cómo pasan de la Steam Deck al móvil sin perder calidad. El sonido es más limpio de lo que esperaba para su precio y el micrófono desmontable me viene genial para usarlos también como auriculares normales. Si buscas algo todo en uno, estos cumplen con nota.</p>
@@ -1624,15 +1634,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      149,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          149,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Corsair HS80 me encantó desde que lo saqué de la caja. Tiene un diseño premium, con diadema flotante muy cómoda y sonido Dolby Atmos que me sumergió completamente en juegos como Cyberpunk 2077. La conexión inalámbrica no tiene cortes y el RGB es espectacular si te gusta cuidar la estética del setup. El micrófono también me pareció muy sólido. Lo usaría como opción principal sin dudarlo.</p>
@@ -1784,15 +1795,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      89,95 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          89,95 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este modelo es uno de los más profesionales que he usado. Desde el primer momento se nota que el Logitech G PRO X está diseñado para eSports: el sonido es súper detallado y el micrófono Blue VO!CE marca una diferencia brutal en las comunicaciones. Me gusta que puedas personalizar tanto el audio como la ecualización del micro con el software de Logitech. Además, su construcción en metal inspira durabilidad. Una apuesta segura para jugadores exigentes.</p>
@@ -2014,19 +2026,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      121,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          121,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 139,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 139,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>He probado los SteelSeries Arctis Nova 5 durante varias sesiones maratonianas y me han convencido totalmente. Lo que más me sorprendió fue la precisión del audio espacial, algo esencial en juegos competitivos. Además, pude personalizar los perfiles de audio fácilmente desde su app, lo cual me permitió adaptarlos a cada tipo de juego. La comodidad es otro punto fuerte: incluso después de horas, no sentí fatiga. La batería dura días sin necesidad de cargarlos, lo que es un plus si juegas a diario.</p>
@@ -2158,19 +2173,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      50,39 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          50,39 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 52,90 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 52,90 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Logitech G432 fue uno de los primeros modelos que probé, y para su precio me sorprendió muchísimo. El sonido 7.1 realmente mejora la experiencia en shooters como Warzone o Apex, permitiéndome detectar pasos y disparos con precisión. La comodidad es adecuada, aunque tras muchas horas puede notarse algo caluroso. El micrófono capta bien la voz y se puede silenciar con solo subirlo. Es un auricular ideal si no quieres gastar mucho pero aún así disfrutar de sonido envolvente.</p>
@@ -2302,19 +2320,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      99,90 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          99,90 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 109,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 109,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>He jugado varias noches con los Corsair VOID RGB ELITE y me gustó mucho su potencia de sonido. La experiencia es inmersiva, con bajos profundos y buena separación de canales. Aunque el diseño es algo voluminoso, resulta cómodo y su estilo RGB es llamativo para setups con iluminación. El micrófono funciona bien y la función para silenciarlo al levantarlo es muy práctica. Lo recomendaría a quien busque estética sin renunciar a calidad sonora.</p>
@@ -2446,15 +2467,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      64,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          64,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>He probado todos los HyperX desde el Cloud Alpha y puedo decir que este Cloud III es el mejor hasta ahora. El sonido es cálido, nítido y con graves bien equilibrados, perfecto para todo tipo de juegos. El micrófono se escucha con una claridad brutal, y el diseño sigue siendo muy cómodo incluso después de 4 o 5 horas. Me gustó que venga con DAC incluido, algo que mejora bastante el audio en PC. Es un auricular redondo.</p>
@@ -2556,19 +2578,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      69,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          69,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este auricular fue una grata sorpresa. El Corsair HS55 Surround combina ligereza con una buena calidad de sonido 7.1. Lo probé en sesiones largas y no me molestó en absoluto. El micrófono capta bien la voz, aunque sin florituras. Para ser un modelo económico, me gustó que venga con adaptador USB para activar el surround en PC. Si buscas algo sencillo pero eficaz, es ideal.</p>

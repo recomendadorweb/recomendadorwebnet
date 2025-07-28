@@ -773,10 +773,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -942,19 +943,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      49,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          49,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 92,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 92,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>He usado el Logitech G502 HERO durante varias sesiones intensas y destaca por su precisión extrema y ergonomía perfecta para manos grandes. Su peso ajustable y botones configurables lo hacen ideal para shooters. Algo que me encantó es la respuesta táctil de los clics, muy definidos y con una sensación mecánica muy satisfactoria. Además, su rueda con dos modos (libre o por pasos) es muy útil tanto para jugar como para tareas de oficina. Un ratón muy completo que se adapta a cualquier situación.</p>
@@ -1136,19 +1140,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      59,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          59,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Probé este ratón inalámbrico y me sorprendió su rendimiento: sin lags perceptibles y una batería de larga duración. La comodidad y los botones laterales lo convierten en mi favorito para juegos tipo MOBA y RPG. Lo mejor es que puedes cambiar entre Bluetooth e HyperSpeed según el dispositivo o necesidad, lo que te da una gran versatilidad. Su forma se adapta bien a diferentes tamaños de mano y los clics tienen buena respuesta. Ideal si buscas movilidad sin perder rendimiento.</p>
@@ -1320,19 +1327,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      54,85 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          54,85 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>En mis pruebas con el Basilisk V3, noté una gran mejora en velocidad de respuesta y personalización. Su rueda inteligente y efectos RGB avanzados son un plus tanto para estética como funcionalidad. Es especialmente útil para juegos donde alternas entre tareas de precisión y desplazamientos rápidos. El software Synapse permite configurar perfiles, macros y ajustar cada aspecto del ratón al detalle. Muy recomendable para jugadores que disfrutan afinando su setup al máximo.</p>
@@ -1464,19 +1474,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      56,49 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          56,49 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este ratón me pareció ideal para quienes buscan un diseño simple pero con grandes prestaciones. Su sensor es extremadamente preciso, y su comodidad me permitió jugar horas sin molestias. Es más ligero que otros modelos, lo que lo hace muy adecuado para quienes prefieren movimientos rápidos. A nivel estético es más sobrio, pero su rendimiento no decepciona. Una opción sólida para quien busca calidad sin artificios.</p>
@@ -1618,19 +1631,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      131,04 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          131,04 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 136,98 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 136,98 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Tras probarlo, el SPATHA X me impresionó por su robustez, conectividad dual y sus 12 botones programables. Es un ratón premium ideal para juegos MMO o cualquier configuración avanzada. Lo utilicé en títulos como Final Fantasy XIV y World of Warcraft, donde tener accesos rápidos es crucial. Su base de carga magnética es cómoda y elegante, y el diseño, aunque grande, se siente sólido y cómodo. Si necesitas funcionalidad máxima, este es de los más completos.</p>
@@ -1762,15 +1778,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      43,27 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          43,27 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este ratón me ha sorprendido por su increíble velocidad de respuesta, ideal para shooters como CS2. Su sensor Fusion Engine es muy preciso incluso con movimientos rápidos, y se nota especialmente en partidas intensas. Su diseño ergonómico es cómodo para largas sesiones y sus botones están bien ubicados para accesos rápidos. Aunque no tiene RGB llamativo, su rendimiento compensa. Lo recomiendo para quien busca rendimiento puro sin lujos.</p>
@@ -2002,15 +2019,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      99,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          99,00 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Al probar el Aerox 5 Wireless, lo que más me impresionó fue su ligereza: apenas notas que lo tienes en la mano. Está diseñado para ofrecer velocidad y precisión en juegos rápidos. Su sensor es de alta gama y no tiene lag apreciable gracias a su conexión inalámbrica fiable. Me ha resultado muy cómodo y su diseño perforado ayuda a mantener la mano fresca durante sesiones intensas. Ideal para jugadores competitivos que valoran agilidad y ergonomía.</p>
@@ -2252,19 +2270,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      73,96 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          73,96 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Viper V3 HyperSpeed me ha encantado por su ligereza y precisión extrema. Su sensor de 30.000 DPI se nota especialmente en juegos donde cada movimiento cuenta, como Valorant o Apex. Me impresionó la rapidez con la que responde y la comodidad del diseño ambidiestro. Además, la batería dura muchísimo y puedes olvidarte del cable durante días. Un ratón perfecto si buscas velocidad y portabilidad sin comprometer el rendimiento.</p>
@@ -2416,19 +2437,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      74,81 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          74,81 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Corsair NIGHTSWORD es una bestia pensada para quienes quieren ajustar su experiencia al milímetro. Su sistema de pesas permite modificar el centro de gravedad y el peso total según tu estilo. Lo probé tanto en shooters como en MOBAs, y se adaptó perfectamente. Además, su sensor es ultra preciso y el diseño ergonómico ayuda en sesiones largas. Un ratón robusto, con muchas opciones y muy orientado al rendimiento.</p>
@@ -2600,19 +2624,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      57,95 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          57,95 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El DeathAdder V3 me ha parecido una auténtica joya para shooters. Es tan ligero que parece flotar sobre la alfombrilla, y el sensor Focus Pro 30K responde con una precisión quirúrgica. Además, los clics son rapidísimos gracias a los switches ópticos de tercera generación. Lo he probado en Valorant y Apex, y la diferencia se nota en cada flick y cada movimiento rápido. Es sin duda uno de los mejores ratones competitivos del momento.</p>

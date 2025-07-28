@@ -775,10 +775,11 @@
 }
 .galeria-miniaturas {
   display: grid;
-  grid-template-columns: repeat(2, 50px);
-  grid-auto-rows: 50px;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 50px);
   gap: 8px;
 }
+
 .galeria-miniaturas img {
   width: 50px;
   height: 50px;
@@ -1004,19 +1005,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      254,09 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          254,09 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 269,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 269,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Huntsman V2 Analog es un teclado brutal si buscas lo mejor en tecnología y precisión. Sus switches ópticos-analógicos permiten programar dos funciones por tecla según la presión, algo espectacular en juegos o edición avanzada. La construcción es impecable: aluminio, cable trenzado y retroiluminación RGB impresionante. Lo he usado con shooters, MOBAs y productividad y siempre me ha respondido al máximo nivel. Viene con reposamuñecas y se nota que es un teclado pensado para pros.</p>
@@ -1178,19 +1182,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      119,00 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          119,00 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 123,34 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 123,34 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Este teclado combina rendimiento, diseño y funcionalidades avanzadas. Sus switches Green son táctiles y muy responsivos, ideales para juegos competitivos o escribir con rapidez. Destaco la rueda multifunción y las teclas multimedia dedicadas, perfectas para controlar el volumen y música sin salir del juego. El RGB por tecla es brillante y se configura fácilmente desde Synapse. Un teclado robusto y personalizable sin llegar al precio extremo del V4 Pro.</p>
@@ -1322,19 +1329,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 3.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      39,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          39,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 49,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 49,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Ornata V3 X es ideal para quienes buscan un teclado económico pero con estilo gamer. Su perfil bajo y membrana silenciosa lo hacen perfecto para oficina o juegos tranquilos. Me gustó su diseño fino, con teclas planas que se sienten suaves y cómodas. Además, es resistente a líquidos, algo muy útil en entornos compartidos. No es mecánico, pero cumple bien en navegación y juegos casuales. Buena elección por un precio muy reducido.</p>
@@ -1466,19 +1476,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      63,98 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          63,98 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 79,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 79,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Lo que más me gustó del Apex 3 es lo silencioso que es. Las teclas son suaves, ideales para trabajar o jugar sin molestar a nadie. A pesar de ser de membrana, su construcción se nota cuidada. Incluye controles multimedia dedicados y reposamuñecas. Además, es resistente al agua (IP32), algo poco común. Su iluminación RGB por zonas también le da un toque atractivo al setup. Muy recomendable si buscas algo silencioso y bien hecho sin romper el presupuesto.</p>
@@ -1600,15 +1613,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      40,89 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          40,89 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El MKPRO es una de las mejores sorpresas de gama baja. Tiene switches mecánicos OUTEMU que, si bien no están al nivel de los Cherry o Razer, ofrecen una buena experiencia de tecleo. Me sorprendió su construcción en aluminio, que lo hace muy robusto para su precio. Además, cuenta con iluminación RGB y un reposamuñecas desmontable. Es ideal si quieres un teclado mecánico sin gastar demasiado y sin renunciar a estética ni funcionalidades básicas.</p>
@@ -1740,15 +1754,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 3.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      53,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          53,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El G213 es un teclado que ha resistido bien el paso del tiempo. Aunque no es mecánico, su membrana ofrece una buena respuesta y es bastante silenciosa. Lo he usado tanto para juegos como para escribir y me ha dado resultados sólidos. La iluminación RGB por zonas se ve muy bien y se puede configurar con Logitech G Hub. Incluye un reposamuñecas integrado muy cómodo. Ideal para presupuestos ajustados o setups híbridos.</p>
@@ -1910,15 +1925,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      64,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          64,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Uno de los teclados más completos por su precio. Me sorprendió la cantidad de funciones: tiene teclas dedicadas para macros, multimedia y controles rápidos. La iluminación RGB por zonas es bastante llamativa y el software iCUE permite personalizar todo. El diseño es sobrio pero robusto, y cuenta con certificación IP42 contra derrames. Me ha funcionado genial para MMO y productividad. Muy recomendable si no necesitas switches mecánicos.</p>
@@ -2070,19 +2086,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      89,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          89,99 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 119,99 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 119,99 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>Probé este teclado durante sesiones intensivas en juegos como Valorant, Apex y StarCraft II, y su rendimiento fue impecable. Sus switches Green ofrecen ese clic táctil satisfactorio que te da control absoluto sobre cada acción. Al ser TKL, me dejó mucho más espacio para mover el ratón, lo cual es una ventaja clara en FPS. El RGB individual por tecla se ve espectacular. El chasis es sólido y resistente. Si buscas precisión y diseño compacto, este teclado no falla.</p>
@@ -2224,19 +2243,22 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      95,54 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          95,54 €
-        </span>
-        
-          <span class="precio-original" style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b; text-decoration: line-through;">
-            Antes: 139,00 €
-          </span>
-        
-      </p>
+      <span class="precio-original"
+            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                   text-decoration: line-through; white-space: nowrap;">
+        Antes: 139,00 €
+      </span>
     
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>El Logitech G512 me ha sorprendido por su tacto preciso y construcción sólida. Utiliza switches GX mecánicos (puedes elegir entre Brown, Red o Blue), muy estables y con buen recorrido. El chasis de aluminio le da un acabado premium y muy resistente. El RGB por tecla se ve espectacular, y es totalmente personalizable con Logitech G HUB. Perfecto para quienes buscan un teclado mecánico fiable y elegante sin complicarse con florituras innecesarias.</p>
@@ -2388,15 +2410,16 @@ function seleccionarMiniatura(imgElement) {
 
 
     <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4/5</p>
+
+  <p class="precio-producto" style="margin-top: 6px;">
+    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+      61,99 €
+    </span>
     
-      <p class="precio-producto" style="margin-top: 6px;">
-        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          61,99 €
-        </span>
-        
-      </p>
-    
+  </p>
+
+
 
 
       <p class="descripcion-review"><p>La versión TKL del G413 mantiene todo lo bueno del modelo grande, pero con un tamaño más compacto. Perfecto para jugadores que quieren más espacio para mover el ratón. Es robusto, con carcasa de aluminio y switches táctiles de buena respuesta. No tiene RGB, solo luz blanca, pero es muy visible y elegante. Me ha resultado muy cómodo en juegos como Apex y Warzone. Cumple con lo esencial sin florituras.</p>
