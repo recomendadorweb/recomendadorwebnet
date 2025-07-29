@@ -188,7 +188,7 @@ Entradas en la categoría: Tecnologia | Recomendador.net
 <div id="overlay" class="overlay" style="display: none;"></div>
 <nav id="mobile-menu" class="menu" style="left: -100%;">
   <div class="mobile-header" style="border-bottom: 1px solid #ddd; padding-bottom: 0.5rem; background-color: #ffffff; position: sticky; top: 0; z-index: 10;">
-    <h2>📂 Categorías</h2>
+    <h2>📂 Recomendador.net</h2>
     <button id="menu-close" class="close">&times;</button>
   </div>
   <ul>
@@ -295,13 +295,28 @@ Entradas en la categoría: Tecnologia | Recomendador.net
     margin: 0;
     color: #222;
   }
-  .close {
-    font-size: 2rem; font-weight: bold; font-size: 1rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #ff4c4c;
-  }
+.close {
+  font-size: 2.4rem;
+  font-weight: bold;
+  width: 2.8rem;
+  height: 2.8rem;
+  line-height: 2.4rem;
+  background: #ffecec;
+  border: 2px solid #ff4c4c;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #ff4c4c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.close:hover {
+  background: #ff4c4c;
+  color: white;
+}
   #mobile-menu ul {
     list-style: none;
     padding: 0;
