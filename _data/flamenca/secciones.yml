@@ -1,11 +1,18 @@
-secciones:
-- titulo: Comparativa de trajes de flamenca
-  descripcion: Hemos realizado una comparativa detallada de varios trajes de flamenca,
-    analizando aspectos importantes como diseño, calidad, comodidad, y precio. Destacamos
-    modelos como el clásico vestido de lunares, los conjuntos profesionales y opciones
-    infantiles.
-- titulo: Consejos para elegir un buen traje de flamenca
-  descripcion: Al elegir tu traje de flamenca, considera aspectos como el tipo de
-    evento (feria, espectáculo o práctica de baile), la comodidad del tejido, la facilidad
-    de lavado y los complementos incluidos. También es importante verificar bien las
-    medidas para asegurar un ajuste perfecto.
+---
+- titulo: Trajes de flamenca baratos que sí merecen la pena
+  id: trajes-baratos
+  texto: Si estás buscando **trajes de flamenca baratos**, no hace falta que sacrifiques el estilo ni la calidad. Hoy en día puedes encontrar vestidos muy completos, con volantes y detalles cuidados, por menos de lo que imaginas. En esta comparativa he incluido varias opciones asequibles que he visto en ferias y sesiones de fotos, y que destacan por su relación calidad-precio.
+  modelos: Traje Profesional 2 Piezas Volante en Manga, Traje de Flamenca Mujer Verde, Traje de Flamenca Mujer Rojo
+- titulo: 'Vestido de flamenca para niñas: cómodo, bonito y con volantes'
+  id: flamenca-ninas
+  texto: Un **vestido flamenca para niñas** debe ser cómodo, ligero y seguro para que puedan disfrutar bailando sin molestias. He seleccionado algunos modelos que destacan por su tejido transpirable, cierres seguros y diseños muy vistosos. Son ideales para romerías, colegios o como parte de su primer traje de feria. Además, hay tallas para todas las edades.
+  modelos: Vestido Flamenca con Flor (Infantil), Vestido Flamenco Rojo Lunares Negro (Infantil)
+- titulo: 'Falda flamenca: la mejor opción para ensayos y romerías'
+  id: falda-flamenca
+  bullets:
+    - " **🩰 Comodidad ante todo:** Las faldas permiten libertad de movimiento para ensayar sin restricciones."
+    - " **🎒 Ligereza:** Más frescas y fáciles de transportar que un vestido completo."
+    - " **🛍️ Opciones económicas:** Hay alguna **falda flamenca barata** muy completa en Amazon."
+    - " **🎨 Variedad de estilos:** Lisos, con lunares, con volantes o combinadas con blusas."
+    - " **🩱 Ideal para combinar:** Perfectas con maillot o top ajustado para clases de baile."
+  modelos: Traje Profesional 2 Piezas Volante en Manga
