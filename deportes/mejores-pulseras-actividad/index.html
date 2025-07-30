@@ -241,7 +241,7 @@
         <li><a href="/hogar/mejores-pilas-recargables/">🔋 Mejores Pilas Recargables</a></li>
       </ul>
     </li>
-        <li>
+        <li style="margin-bottom: 20px;">
        <a href="/contacto/">📬 ¡Contacta con nosotros!</a>
     </li>
   </ul>
@@ -284,7 +284,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    min-height: 20px; /* asegura una altura base */
+    padding: 0.5rem;
   }
   .mobile-header h2 {
     font-size: 1.2rem;
@@ -294,8 +295,8 @@
 .close {
   font-size: 2.4rem;
   font-weight: bold;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 2.2rem;
+  height: 2.2rem;
   line-height: 2.4rem;
   background: #ffecec;
   border: 2px solid #ff4c4c;
@@ -2468,6 +2469,15 @@ function seleccionarMiniatura(imgElement) {
 <style>
 .menu-abierto .boton-flotante {
   display: none !important;
+}
+@media (max-width: 767px) {
+  .boton-flotante {
+    width: 80%;
+    font-size: 14px;
+    padding: 8px 14px;
+    bottom: 12px;
+    right: 12px;
+  }
 }
 </style><a class="boton-flotante" href="#mi-eleccion">🎯 Ver pulseras recomendadas</a>
 
