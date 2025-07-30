@@ -812,7 +812,8 @@ img {
         {% assign autor = site.data.autor.autores[post.autor] %}
         <img src="{{ autor.avatar }}" loading="lazy" width="28" height="28" alt="{{ autor.nombre }}">
         <span style="font-size: 0.85rem; color: #666;">
-          Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }}</a> • {% include date_es.html date=post.date %}
+          Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }} </a> 
+          <span style="white-space: nowrap;">• {% include date_es.html date=post.date %}</span>
         </span>
       </div>
     </div>
