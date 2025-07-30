@@ -4,4 +4,13 @@
 .menu-abierto .boton-flotante {
   display: none !important;
 }
+@media (max-width: 767px) {
+  .boton-flotante {
+    width: 80%;
+    font-size: 14px;
+    padding: 8px 14px;
+    bottom: 12px;
+    right: 12px;
+  }
+}
 </style><a class="boton-flotante" href="#mi-eleccion">🎯 Ver {{ datos.literal }}</a>
