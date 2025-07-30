@@ -626,7 +626,7 @@ img {
   .tarjeta-thumb,
   .tarjeta-thumb img {
     width: 100% !important;
-    height: auto !important;
+    height: 200px !important;
   }
   .tarjeta-info {
     margin-left: 0;
@@ -679,6 +679,17 @@ img {
   color: #595959;
   margin: 4px 10px 10px;
 }
+@media (max-width: 768px) {
+  .main-post {
+    height: 300px !important;
+  }
+
+  .side-post:nth-of-type(2),
+  .side-post:nth-of-type(3) {
+    height: 250px !important;
+  }
+}
+
 </style>
 
 {% include estiloazul.html %}
@@ -702,10 +713,6 @@ img {
   <a href="{{ principal.url | relative_url }}" style="display: block; height: 100%;">
 <img fetchpriority="high"
   src="{{ principal.image | replace: '.webp', '-768w.webp' }}" 
-  srcset="{{ principal.image | replace: '.webp', '-480w.webp' }} 480w,
-          {{ principal.image | replace: '.webp', '-768w.webp' }} 768w,
-          {{ principal.image | replace: '.webp', '-1200w.webp' }} 1200w"
-  sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 50vw"
   alt="{{ principal.excerpt }}"
   width="660"
   height="310" />
@@ -728,11 +735,7 @@ img {
       {% endif %}
   <a href="{{ secundario2.url | relative_url }}" style="display: block; height: 100%;">
 <img fetchpriority="high"
-  src="{{ secundario2.image | replace: '.webp', '-768w.webp' }}" 
-  srcset="{{ secundario2.image | replace: '.webp', '-480w.webp' }} 480w,
-          {{ secundario2.image | replace: '.webp', '-768w.webp' }} 768w,
-          {{ secundario2.image | replace: '.webp', '-1200w.webp' }} 1200w"
-  sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+  src="{{ secundario2.image | replace: '.webp', '-480w.webp' }}" 
   alt="{{ secundario2.excerpt }}"
   width="400"
   height="225" />
@@ -752,11 +755,7 @@ img {
       {% endif %}
       <a href="{{ secundario3.url | relative_url }}" style="display: block; height: 100%;">
 <img fetchpriority="high"
-  src="{{ secundario3.image | replace: '.webp', '-768w.webp' | relative_url }}" 
-  srcset="{{ secundario3.image | replace: '.webp', '-480w.webp' | relative_url }} 480w,
-          {{ secundario3.image | replace: '.webp', '-768w.webp' | relative_url }} 768w,
-          {{ secundario3.image | replace: '.webp', '-1200w.webp' | relative_url }} 1200w"
-  sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 33vw"
+  src="{{ secundario3.image | replace: '.webp', '-480w.webp' | relative_url }}" 
   alt="{{ secundario3.excerpt }}"
   width="400"
   height="225" />
@@ -787,11 +786,7 @@ img {
   <div class="tarjeta-thumb" style="position: relative;">
     <a href="{{ post.url | relative_url }}">
 <img 
-  src="{{ post.image | replace: '.webp', '-768w.webp' }}" 
-  srcset="{{ post.image | replace: '.webp', '-480w.webp' }} 480w,
-          {{ post.image | replace: '.webp', '-768w.webp' }} 768w,
-          {{ post.image | replace: '.webp', '-1200w.webp' }} 1200w"
-  sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, 200px"
+  src="{{ post.image | replace: '.webp', '-480w.webp' }}" 
   alt="{{ post.title }}"
   width="200"
   height="160"
