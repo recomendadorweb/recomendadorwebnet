@@ -18,8 +18,16 @@
             <img alt="{{ producto.nombre }}" src="{{ producto.imagen }}" style="height: auto; max-height: 60px; width: auto; max-width: 100%;" />
           </td>
           <td style="padding: 0.6em; text-align: center;"><strong>{{ producto.nombre }}</strong></td>
-          <td style="padding: 0.6em;">{{ producto.lo_mejor }}</td>
-          <td style="padding: 0.6em;">{{ producto.a_tener_en_cuenta }}</td>
+          <td style="padding: 0.6em;">
+            {% if producto.lo_mejor and producto.lo_mejor.size > 0 %}
+              {% for item in producto.lo_mejor %}
+                {{ item }}<br>
+              {% endfor %}
+            {% else %}
+              {{ producto.lo_mejor }}
+            {% endif %}
+          </td>
+         <td style="padding: 0.6em;">{{ producto.a_tener_en_cuenta }}</td>
           <td style="padding: 0.6em; text-align: center;">
             <a href="{{ producto.enlace }}" target="_blank" rel="nofollow sponsored" style="display: inline-block; color: #fff; background-color: #004aad; padding: 0.4em 0.8em; border-radius: 5px; font-size: 0.9em; text-decoration: none;">Ver en Amazon</a>
           </td>

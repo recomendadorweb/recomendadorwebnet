@@ -1,34 +1,7 @@
 productos:
-  - nombre: ENGWE T14 Mini Bici Eléctrica Plegable
-    ASIN: B0BW8VZ9JT
-    enlace: https://amzn.to/44Rg5zN
-    variantes:
-      - Azul
-      - Gris
-      - Naranja
+  - ASIN: B0BW8VZ9JT
+    a_tener_en_cuenta: ⚖️ Algo pesada o voluminosa
     brand: ENGWE
-    precio: "599,00\_€"
-    precioOriginal: No especificado
-    disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/51IxGgBH7gL._SL500_.jpg
-    imagenHeight: 500
-    imagenWidth: 500
-    imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/51MgKebD9HL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51wL-S5hhdL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51wqrtmg9KL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51dssrHKP7L._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51-r59M5luL._SL500_.jpg
-        width: 400
-        height: 500
     caracteristicasAmazon:
       - >-
         【Motor potente de 48V 250W】 La mini bicicleta eléctrica ENGWE está equipada con un potente motor sin escobillas
@@ -56,41 +29,52 @@ productos:
         【Satisfaction Garantie】Le moteur, la batterie et le chargeur sont garantis un an, vous n'avez donc pas à vous
         inquiéter lorsque vous l'utilisez. Nous avons confiance en notre vélo électrique et pensons que vous l'aimerez.
         Si vous avez des questions, veuillez nous envoyer un message sur Amazon.
-  - nombre: ENGWE Bicicleta Eléctrica Plegable
-    ASIN: B0F4D6628K
-    enlace: https://amzn.to/4lS5cnu
-    variantes:
-      - Gris
-      - Negro
-    brand: ENGWE
-    precio: "1.049,00\_€"
-    precioOriginal: No especificado
+    caracteristicas:
+      - 🔋 Hasta 80 km de autonomía con asistencia eléctrica
+      - ⚡ Motor de 250W ideal para ciudad
+      - '🚴‍♂️ Varios modos de conducción: eléctrico, asistido y manual'
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      La ENGWE T14 me ha parecido una bicicleta sorprendente para su tamaño. Aunque es compacta y tiene ruedas de 14
+      pulgadas, la sensación al conducirla es bastante cómoda gracias a su completo sistema de amortiguación. El motor
+      de 250W responde bien en ciudad y la batería da para trayectos diarios sin preocuparse por cargar. Eso sí, pesa
+      más de lo que parece, así que no es la mejor opción si tienes que subirla a pulso.
     disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/41Q3hd3o0sL._SL500_.jpg
+    enlace: https://amzn.to/44Rg5zN
+    imagen: https://m.media-amazon.com/images/I/51IxGgBH7gL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/51lt8+vn-bL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51MgKebD9HL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51qvILT-paL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51wL-S5hhdL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51BmQD4uPjL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51wqrtmg9KL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51d8Q4Z6mjL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51dssrHKP7L._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51Zb8-h5gdL._SL500_.jpg
-        width: 500
+      - url: https://m.media-amazon.com/images/I/51-r59M5luL._SL500_.jpg
+        width: 400
         height: 500
-      - url: https://m.media-amazon.com/images/I/51JxDiEPUOL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/514kPKnpKpL._SL500_.jpg
-        width: 500
-        height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 80 km
+      - 🚴‍♂️ Ruedas compactas para ciudad
+      - 🛞 Buena suspensión
+    nombre: ENGWE T14 Mini Bici Eléctrica Plegable
+    precio: "599,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.5
+    variantes:
+      - Azul
+      - Gris
+      - Naranja
+  - ASIN: B0F4D6628K
+    a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
+    brand: ENGWE
     caracteristicasAmazon:
       - >-
         Conformidad con las normas de tráfico europeas: La bicicleta eléctrica ENGWE EP-2 BOOST cumple totalmente con
@@ -120,38 +104,58 @@ productos:
         Fiable servicio de atención al cliente 24/7: El 85% de las bicicletas eléctricas ENGWE vienen premontadas.
         Nuestro equipo de atención al cliente está disponible 24/7 para ayudarle con sus preguntas o dudas. Garantizamos
         un servicio fiable y ofrecemos un año de garantía para el motor, la batería y el controlador.
-  - nombre: ENGWE M20/M1 Bicicleta Electrica Hombre
-    ASIN: B0C7VRDWCQ
-    enlace: https://amzn.to/4l16n2s
-    variantes:
-      - Verde
-      - Blanco
-    brand: ENGWE
-    precio: "1.299,00\_€"
-    precioOriginal: No especificado
-    disponibilidad: Envío en 2 a 3 días
-    imagen: https://m.media-amazon.com/images/I/51kAr4kTKBL._SL500_.jpg
+    caracteristicas:
+      - 🔋 Hasta 100 km de autonomía con asistencia eléctrica
+      - ⚡ Motor eléctrico con buena respuesta
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la ENGWE EP-2 BOOST en ciudad y caminos de tierra y se nota que es una bici robusta. Las ruedas de 20
+      pulgadas y la suspensión delantera le dan mucha estabilidad, incluso en terreno irregular. Lo que más me ha
+      gustado es la suavidad con la que asiste al pedalear gracias a su sensor de par. Eso sí, es algo voluminosa
+      incluso plegada, así que está más pensada para quienes no necesitan cargarla constantemente.
+    disponibilidad: Sin info
+    enlace: https://amzn.to/4lS5cnu
+    imagen: https://m.media-amazon.com/images/I/41Q3hd3o0sL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/51RbSjJGG+L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51lt8+vn-bL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51slzd3039L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51qvILT-paL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/416fb5wCyEL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51BmQD4uPjL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51BfShAAqqL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51d8Q4Z6mjL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41N0ZU0UvIL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51Zb8-h5gdL._SL500_.jpg
         width: 500
-        height: 498
-      - url: https://m.media-amazon.com/images/I/41RuBZlfwaL._SL500_.jpg
-        width: 359
         height: 500
+      - url: https://m.media-amazon.com/images/I/51JxDiEPUOL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/514kPKnpKpL._SL500_.jpg
+        width: 500
+        height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 100 km
+      - 🚴‍♂️ Ruedas de 20
+      - 🛞 Buena suspensión
+    nombre: ENGWE Bicicleta Eléctrica Plegable
+    precio: Sin precio
+    precioOriginal: No especificado
+    valoracion: 4.7
+    variantes:
+      - Gris
+      - Negro
+  - ASIN: B0C7VRDWCQ
+    a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
+    brand: ENGWE
     caracteristicasAmazon:
       - >-
         🚲【Doble batería y gran autonomía】 La bicicleta eléctrica ENGWE M20 cuenta con dos baterías de litio de 48V 26Ah
@@ -184,44 +188,53 @@ productos:
         dos pedales y un asiento. El pedido se entregará en un plazo de 5-10 días. Nuestro equipo de atención al cliente
         está disponible las 24 horas del día, los 7 días de la semana, para ayudarte con cualquier pregunta o inquietud,
         ofrecemos una garantía de un año para motores, baterías y controladores.
-  - nombre: ENGWE Bicicleta Eléctrica Plegable 250W E-Bike
-    ASIN: B0C7KHZN12
-    enlace: https://amzn.to/4fcTBMZ
-    variantes:
-      - Negro
-      - Rojo
-    brand: ENGWE
-    precio: "1.299,00\_€"
-    precioOriginal: No especificado
-    disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/41FK5src0XL._SL500_.jpg
+    caracteristicas:
+      - 🔋 Hasta 100 km de autonomía con asistencia eléctrica
+      - ⚡ Motor eléctrico con buena respuesta
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      La ENGWE M20/M1 es una bestia para los que buscan potencia y autonomía. Viene con doble batería y suspensión
+      completa, lo que se nota mucho en trayectos largos o con terreno irregular. No es una bici ligera ni pensada para
+      cargar, pero si lo que quieres es algo más parecido a una moto eléctrica plegable, esta es la tuya.
+    disponibilidad: Envío en 2 a 3 días
+    enlace: https://amzn.to/4l16n2s
+    imagen: https://m.media-amazon.com/images/I/51kAr4kTKBL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/41MRCydCSXL._SL500_.jpg
-        width: 375
+      - url: https://m.media-amazon.com/images/I/51RbSjJGG+L._SL500_.jpg
+        width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41OlpXk9bpL._SL500_.jpg
-        width: 375
+      - url: https://m.media-amazon.com/images/I/51slzd3039L._SL500_.jpg
+        width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51Gb7cyK7iL._SL500_.jpg
-        width: 375
+      - url: https://m.media-amazon.com/images/I/416fb5wCyEL._SL500_.jpg
+        width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51qhK59EoML._SL500_.jpg
-        width: 375
+      - url: https://m.media-amazon.com/images/I/51BfShAAqqL._SL500_.jpg
+        width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/412Zi3LCp0L._SL500_.jpg
-        width: 375
+      - url: https://m.media-amazon.com/images/I/41N0ZU0UvIL._SL500_.jpg
+        width: 500
+        height: 498
+      - url: https://m.media-amazon.com/images/I/41RuBZlfwaL._SL500_.jpg
+        width: 359
         height: 500
-      - url: https://m.media-amazon.com/images/I/51a2mKRzfTL._SL500_.jpg
-        width: 375
-        height: 500
-      - url: https://m.media-amazon.com/images/I/411HxvBgcFL._SL500_.jpg
-        width: 375
-        height: 500
-      - url: https://m.media-amazon.com/images/I/41DwJG0EVML._SL500_.jpg
-        width: 375
-        height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 100 km
+      - 🚴‍♂️ Ruedas de 20
+      - 🛞 Buena suspensión
+    nombre: ENGWE M20/M1 Bicicleta Electrica Hombre
+    precio: "1.299,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.7
+    variantes:
+      - Verde
+      - Blanco
+  - ASIN: B0C7KHZN12
+    a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
+    brand: ENGWE
     caracteristicasAmazon:
       - >-
         【MOTOR Y BATERÍA POTENTES】- Este bicicleta electrica ENGINE X está equipado con un motorreductor sin escobillas
@@ -257,21 +270,99 @@ productos:
         simplificar el montaje, incluye dos pedales y un asiento. El pedido se entregará dentro de 5-10 días.Nuestro
         equipo de atención al cliente está disponible 24/7 para ayudarlo y responder a sus preguntas. Garantizamos un
         servicio confiable y una garantía de un año para motores, baterías y controladores.
-  - nombre: Bodywel T16PRO Bicicleta Eléctrica Plegable, 14"
-    ASIN: B0CRHG997X
-    enlace: https://amzn.to/45rR3Hy
-    variantes:
-      - Aqua Azul
-      - Blanco
-      - Negro
-      - Almendra
-      - Blanco + Portaequipajes
-      - Rosa
-      - Rosa + Portaequipajes
-    brand: Bodywel
-    precio: "409,99\_€"
-    precioOriginal: No especificado
+    caracteristicas:
+      - 🔋 Hasta 120 km de autonomía con asistencia eléctrica
+      - ⚡ Motor eléctrico con buena respuesta
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la ENGWE Bicicleta Eléctrica Plegable 250W E-Bike y me ha dejado una impresión bastante buena. La
+      asistencia eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no
+      destaque por su ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
     disponibilidad: En stock
+    enlace: https://amzn.to/4fcTBMZ
+    imagen: https://m.media-amazon.com/images/I/41FK5src0XL._SL500_.jpg
+    imagenHeight: 500
+    imagenWidth: 500
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/41MRCydCSXL._SL500_.jpg
+        width: 375
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41OlpXk9bpL._SL500_.jpg
+        width: 375
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Gb7cyK7iL._SL500_.jpg
+        width: 375
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51qhK59EoML._SL500_.jpg
+        width: 375
+        height: 500
+      - url: https://m.media-amazon.com/images/I/412Zi3LCp0L._SL500_.jpg
+        width: 375
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51a2mKRzfTL._SL500_.jpg
+        width: 375
+        height: 500
+      - url: https://m.media-amazon.com/images/I/411HxvBgcFL._SL500_.jpg
+        width: 375
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41DwJG0EVML._SL500_.jpg
+        width: 375
+        height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 120 km
+      - 🚴‍♂️ Ruedas compactas para ciudad
+      - 🛞 Buena suspensión
+    nombre: ENGWE Bicicleta Eléctrica Plegable 250W E-Bike
+    precio: "1.299,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.2
+    variantes:
+      - Negro
+      - Rojo
+  - ASIN: B0CRHG997X
+    a_tener_en_cuenta: ⚖️ Algo pesada o voluminosa
+    brand: Bodywel
+    caracteristicasAmazon:
+      - >-
+        【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor de
+        250W, batería de 36V y 7.8 de potencia, frenos de disco dobles, suspensión delantera y amortiguador central,
+        pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras. Perfecta para tus
+        desplazamientos diarios y viajes cortos.
+      - >-
+        【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable. Le permite
+        llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
+        amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
+      - >-
+        【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
+        incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una velocidad
+        máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
+      - >-
+        【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de disco dobles delanteros y traseros y frenos electrónicos
+        mejoran completamente el rendimiento de frenado y acortan la distancia de frenado. Luz delantera de seguridad,
+        luz trasera y timbre de bicicleta te hacen más seguro cuando sales especialmente por la noche.
+      - >-
+        【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
+        ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
+        vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
+        posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 140-185cm.
+      - >-
+        【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje complicado,
+        más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24 horas. Si usted
+        tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
+    caracteristicas:
+      - 🔋 Hasta 45 km de autonomía con asistencia eléctrica
+      - ⚡ Motor de 250W ideal para ciudad
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - '🚴‍♂️ Varios modos de conducción: eléctrico y manual'
+    descripcion: >-
+      He probado la Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" y me ha dejado una impresión bastante buena. La
+      asistencia eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no
+      destaque por su ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
+    disponibilidad: En stock
+    enlace: https://amzn.to/45rR3Hy
     imagen: https://m.media-amazon.com/images/I/41riPuZBlzL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
@@ -300,65 +391,25 @@ productos:
       - url: https://m.media-amazon.com/images/I/418zw60QnwL._SL500_.jpg
         width: 500
         height: 333
-    caracteristicasAmazon:
-      - >-
-        【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor de
-        250W, batería de 36V y 7.8 de potencia, frenos de disco dobles, suspensión delantera y amortiguador central,
-        pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras. Perfecta para tus
-        desplazamientos diarios y viajes cortos.
-      - >-
-        【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable. Le permite
-        llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
-        amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
-      - >-
-        【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
-        incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una velocidad
-        máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
-      - >-
-        【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de disco dobles delanteros y traseros y frenos electrónicos
-        mejoran completamente el rendimiento de frenado y acortan la distancia de frenado. Luz delantera de seguridad,
-        luz trasera y timbre de bicicleta te hacen más seguro cuando sales especialmente por la noche.
-      - >-
-        【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
-        ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
-        vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
-        posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 140-185cm.
-      - >-
-        【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje complicado,
-        más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24 horas. Si usted
-        tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
-  - nombre: VARUN Bicicleta Electrica Plegable
-    ASIN: B09BR5FW36
-    enlace: https://amzn.to/45awBts
-    variantes:
-      - Blanco
-      - Rosa
-    brand: VARUN
-    precio: "639,00\_€"
+    lo_mejor:
+      - 🔋 Autonomía hasta 45 km
+      - 🚴‍♂️ Ruedas de 14
+      - 🛞 Buena suspensión
+    nombre: Bodywel T16PRO Bicicleta Eléctrica Plegable, 14"
+    precio: "409,99\_€"
     precioOriginal: No especificado
-    disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/51H4mAzwg3L._SL500_.jpg
-    imagenHeight: 500
-    imagenWidth: 500
-    imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/51krea644yL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/5199AiugzuL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/61tAY3P+UsL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51qn1H-q8GL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51qQRSb-QwL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51DZmfQ-p4L._SL500_.jpg
-        width: 500
-        height: 500
+    valoracion: 4.2
+    variantes:
+      - Aqua Azul
+      - Blanco
+      - Negro
+      - Almendra
+      - Blanco + Portaequipajes
+      - Rosa
+      - Rosa + Portaequipajes
+  - ASIN: B09BR5FW36
+    a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
+    brand: VARUN
     caracteristicasAmazon:
       - >-
         𝐏𝐨𝐭𝐞𝐧𝐭𝐞 𝐒𝐢𝐬𝐭𝐞𝐦𝐚 𝐄𝐥é𝐜𝐭𝐫𝐢𝐜𝐨: Equipado con un motor sin escobillas de 250 W y una batería de
@@ -387,40 +438,53 @@ productos:
         dobles, frenos de disco dobles y faros LED. Los amortiguadores dobles evitan grandes baches en caminos de
         montaña irregulares y hacen que la conducción sea más cómoda. Los faros LED brillantes nos proporcionan mucha
         luz por la noche. La luz nos permite ver con mayor claridad
-  - nombre: VARUN Bicicleta Electrica Plegable, 20"
-    ASIN: B0CZLBRLH7
-    enlace: https://amzn.to/44Slc2J
-    variantes:
-      - Blanco
-      - Gris
-      - Naranja
-      - Negro
-    brand: VARUN
-    precio: "899,00\_€"
-    precioOriginal: No especificado
+    caracteristicas:
+      - 🔋 Autonomía hasta 70 km
+      - ⚡ Motor eléctrico con buena respuesta
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - '🚴‍♂️ Varios modos de conducción: eléctrico, asistido y manual'
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la VARUN Bicicleta Electrica Plegable y me ha dejado una impresión bastante buena. La asistencia
+      eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no destaque por su
+      ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
     disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/51dhncbC4oL._SL500_.jpg
+    enlace: https://amzn.to/45awBts
+    imagen: https://m.media-amazon.com/images/I/51H4mAzwg3L._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/51nPoYTjtdL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51krea644yL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51Xm+vTtJxL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/5199AiugzuL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51C-Na4JfsL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/61tAY3P+UsL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51M+b4Z9x7L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51qn1H-q8GL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51x7viH-0PL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51qQRSb-QwL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51ugm0Eqd5L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51DZmfQ-p4L._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 70 km
+      - 🚴‍♂️ Ruedas de 26
+    nombre: VARUN - Bicicleta Electrica Plegable
+    precio: "639,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.2
+    variantes:
+      - Blanco
+      - Rosa
+  - ASIN: B0CZLBRLH7
+    a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
+    brand: VARUN
     caracteristicasAmazon:
       - >-
         𝐏𝐨𝐭𝐞𝐧𝐭𝐞 𝐌𝐨𝐭𝐨𝐫 𝐘 𝐁𝐚𝐭𝐞𝐫í𝐚 𝐃𝐞 𝐋𝐚𝐫𝐠𝐚 𝐃𝐮𝐫𝐚𝐜𝐢ó𝐧: Las bicicleta electrica VARUN están
@@ -453,16 +517,93 @@ productos:
         realice un montaje sencillo y esté lista para usar. Si usted tiene alguna pregunta, por favor no dude en
         contactar con nosotros, nuestro equipo de servicio al cliente profesional le proporcionará una solución dentro
         de las 24 horas para resolver su problema
-  - nombre: ESKUTE F100 Bicicleta Eléctrica Plegable, Ebike 14"
-    ASIN: B0FCMHFTJJ
-    enlace: https://amzn.to/4o6dkSF
-    variantes:
-      - Gris
-      - Cian
-    brand: ESKUTE
-    precio: "474,04\_€"
-    precioOriginal: "499,00\_€"
+    caracteristicas:
+      - 🔋 Autonomía hasta 120 km
+      - ⚡ Motor eléctrico con buena respuesta
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la VARUN Bicicleta Electrica Plegable, 20" y me ha dejado una impresión bastante buena. La asistencia
+      eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no destaque por su
+      ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
     disponibilidad: En stock
+    enlace: https://amzn.to/44Slc2J
+    imagen: https://m.media-amazon.com/images/I/51dhncbC4oL._SL500_.jpg
+    imagenHeight: 500
+    imagenWidth: 500
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/51nPoYTjtdL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Xm+vTtJxL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51C-Na4JfsL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51M+b4Z9x7L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51x7viH-0PL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51ugm0Eqd5L._SL500_.jpg
+        width: 500
+        height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 120 km
+      - 🚴‍♂️ Ruedas de 20
+      - 🛞 Buena suspensión
+    nombre: VARUN Bicicleta Electrica Plegable, 20"
+    precio: "899,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.2
+    variantes:
+      - Blanco
+      - Gris
+      - Naranja
+      - Negro
+  - ASIN: B0FCMHFTJJ
+    a_tener_en_cuenta: ⚖️ Algo pesada o voluminosa
+    brand: ESKUTE
+    caracteristicasAmazon:
+      - >-
+        🚲 Batería de larga duración de 324Wh: La bicicleta eléctrica para adultos ESKUTE F100 incorpora una batería de
+        36V 9Ah, ideal para desplazamientos urbanos y salidas de ocio. Con una carga completa en 5-6 horas, ofrece una
+        autonomía de 35 a 60 km, adaptándose a tus necesidades diarias. Esta ebike plegable combina potencia estable y
+        fiabilidad para recorrer distintos tipos de terreno con total comodidad
+      - >-
+        🚲 DISEÑO PRÁCTICO Y CONVENIENTE : Esta e-bike plegable incluye un faro LED brillante combinado con un reflector
+        trasero para mejorar la visibilidad. La pantalla LCD muestra en tiempo real la velocidad, el nivel de batería y
+        los modos de potencia. Los pedales plegables facilitan el transporte; además, cuenta con un soporte para
+        teléfono y un sillín ergonómico para mejorar la comodidad, ideal para desplazamientos urbanos
+      - >-
+        🚲 TIJA DE SILLÍN AMORTIGUADORA PARA UN VIAJE CÓMODO : La bicicleta electrica de 14 pulgadas utiliza una tija de
+        sillín amortiguadora que reduce eficazmente las vibraciones del terreno. Ya sea en calles urbanas o senderos
+        ligeros, ofrece una experiencia de conducción suave y cómoda, garantizando seguridad
+      - >-
+        🚲 CUADRO ROBUSTO CON ALTA CAPACIDAD DE CARGA : El cuadro está fabricado con acero al carbono de alta calidad,
+        con un peso aproximado de 21 kg y una capacidad máxima de carga de 120 kg. El asiento es ajustable en altura y
+        apto para ciclistas de entre 150 y 180 cm, satisfaciendo las necesidades de la mayoría de los usuarios, siendo
+        una bicicleta eléctrica ideal para adultos
+      - >-
+        🚲 90% PREENSAMBLADA CON SERVICIO POSTVENTA ATENTO : La bici electrica llega preensamblada en un 90% con un
+        video de instalación para facilitar el montaje. Si tienes dudas sobre la batería, cargador o accesorios,
+        contáctanos. Ofrecemos soporte técnico y servicio de reemplazo de piezas con respuesta rápida en 24 horas,
+        garantizando una experiencia sin preocupaciones
+    caracteristicas:
+      - 🔋 Hasta 60 km de autonomía con asistencia eléctrica
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - '🚴‍♂️ Varios modos de conducción: eléctrico, asistido y manual'
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la ESKUTE F100 Bicicleta Eléctrica Plegable, Ebike 14" y me ha dejado una impresión bastante buena. La
+      asistencia eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no
+      destaque por su ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
+    disponibilidad: En stock
+    enlace: https://amzn.to/4o6dkSF
     imagen: https://m.media-amazon.com/images/I/41vT+NCXFDL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
@@ -497,61 +638,19 @@ productos:
       - url: https://m.media-amazon.com/images/I/51ALq-keFbL._SL500_.jpg
         width: 500
         height: 500
-    caracteristicasAmazon:
-      - >-
-        🚲 Batería de larga duración de 324Wh: La bicicleta eléctrica para adultos ESKUTE F100 incorpora una batería de
-        36V 9Ah, ideal para desplazamientos urbanos y salidas de ocio. Con una carga completa en 5-6 horas, ofrece una
-        autonomía de 35 a 60 km, adaptándose a tus necesidades diarias. Esta ebike plegable combina potencia estable y
-        fiabilidad para recorrer distintos tipos de terreno con total comodidad
-      - >-
-        🚲 DISEÑO PRÁCTICO Y CONVENIENTE : Esta e-bike plegable incluye un faro LED brillante combinado con un reflector
-        trasero para mejorar la visibilidad. La pantalla LCD muestra en tiempo real la velocidad, el nivel de batería y
-        los modos de potencia. Los pedales plegables facilitan el transporte; además, cuenta con un soporte para
-        teléfono y un sillín ergonómico para mejorar la comodidad, ideal para desplazamientos urbanos
-      - >-
-        🚲 TIJA DE SILLÍN AMORTIGUADORA PARA UN VIAJE CÓMODO : La bicicleta electrica de 14 pulgadas utiliza una tija de
-        sillín amortiguadora que reduce eficazmente las vibraciones del terreno. Ya sea en calles urbanas o senderos
-        ligeros, ofrece una experiencia de conducción suave y cómoda, garantizando seguridad
-      - >-
-        🚲 CUADRO ROBUSTO CON ALTA CAPACIDAD DE CARGA : El cuadro está fabricado con acero al carbono de alta calidad,
-        con un peso aproximado de 21 kg y una capacidad máxima de carga de 120 kg. El asiento es ajustable en altura y
-        apto para ciclistas de entre 150 y 180 cm, satisfaciendo las necesidades de la mayoría de los usuarios, siendo
-        una bicicleta eléctrica ideal para adultos
-      - >-
-        🚲 90% PREENSAMBLADA CON SERVICIO POSTVENTA ATENTO : La bici electrica llega preensamblada en un 90% con un
-        video de instalación para facilitar el montaje. Si tienes dudas sobre la batería, cargador o accesorios,
-        contáctanos. Ofrecemos soporte técnico y servicio de reemplazo de piezas con respuesta rápida en 24 horas,
-        garantizando una experiencia sin preocupaciones
-  - nombre: HITWAY 16" Bicicleta eléctrica
-    ASIN: B08L3SSRKF
-    enlace: https://amzn.to/4l2vMcb
-    variantes: []
+    lo_mejor:
+      - 🔋 Autonomía hasta 60 km
+      - 🚴‍♂️ Ruedas de 14
+    nombre: ESKUTE F100 Bicicleta Eléctrica Plegable, Ebike 14"
+    precio: "474,04\_€"
+    precioOriginal: "499,00\_€"
+    valoracion: 4.2
+    variantes:
+      - Gris
+      - Cian
+  - ASIN: B08L3SSRKF
+    a_tener_en_cuenta: ⚖️ Algo pesada o voluminosa
     brand: HITWAY
-    precio: "609,99\_€"
-    precioOriginal: "699,99\_€"
-    disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/41m8ma19ulL._SL500_.jpg
-    imagenHeight: 478
-    imagenWidth: 500
-    imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/519vZekPKHL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51JI0-HWzJL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51r4BTfc8OL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/41uxJToFoOL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51MgIo1F2VL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/513AcCksWKL._SL500_.jpg
-        width: 500
-        height: 500
     caracteristicasAmazon:
       - >-
         Potente motor, súper larga distancia - motor 250W 36V - velocidad máxima hasta 25km/h y pendiente máxima de 25
@@ -577,16 +676,87 @@ productos:
         Las actualizaciones de productos pueden resultar en diferentes paquetes de accesorios y características para
         bicicletas. Lea atentamente la descripción del producto antes de realizar el pedido, no aceptamos devoluciones
         debido a pedidos incorrectos. Si es necesario, contáctenos a tiempo para obtener ayuda.
-  - nombre: HITWAY Bicicleta Eléctrica E-Bike, 20"
-    ASIN: B0BX2141GG
-    enlace: https://amzn.to/457RgOT
-    variantes:
-      - Negro + Naranja
-      - Negro + Verde
-    brand: HITWAY
-    precio: "999,99\_€"
-    precioOriginal: No especificado
+    caracteristicas:
+      - 🔋 Autonomía hasta 70 km
+      - ⚡ Motor de 250W ideal para ciudad
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - '🚴‍♂️ Dos modos de conducción: eléctrico y manual'
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la HITWAY 16" Bicicleta eléctrica y me ha dejado una impresión bastante buena. La asistencia eléctrica
+      responde bien y la calidad de construcción está por encima de lo esperado. Puede que no destaque por su ligereza,
+      pero sí por ser una opción cómoda y práctica para moverse por ciudad.
     disponibilidad: En stock
+    enlace: https://amzn.to/4l2vMcb
+    imagen: https://m.media-amazon.com/images/I/41m8ma19ulL._SL500_.jpg
+    imagenHeight: 478
+    imagenWidth: 500
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/519vZekPKHL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51JI0-HWzJL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51r4BTfc8OL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41uxJToFoOL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51MgIo1F2VL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/513AcCksWKL._SL500_.jpg
+        width: 500
+        height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 70 km
+      - 🚴‍♂️ Ruedas de 16
+    nombre: HITWAY 16" Bicicleta eléctrica
+    precio: "609,99\_€"
+    precioOriginal: "699,99\_€"
+    valoracion: 4.2
+    variantes: []
+  - ASIN: B0BX2141GG
+    a_tener_en_cuenta: ⚖️ Algo pesada o voluminosa
+    brand: HITWAY
+    caracteristicasAmazon:
+      - >-
+        Duración de la batería de alta velocidad y alta calidad: BK11 está equipado con un motor sin escobillas de 250
+        W, una batería de litio de 36 V 12 AH/48 V 15 AH y la velocidad máxima de conducción puede alcanzar los 25 km/h.
+        Cada carga completa puede viajar de 35 a 90 km/45 a 100 km, y la batería se puede quitar para cargarla en
+        interiores
+      - >-
+        Fat E-Bike profesional de 20": Equipada con neumáticos profesionales 3,0/4,0 y doble suspensión. Resistente al
+        desgaste y a los pinchazos, buena absorción de impactos. Ya sea en la ciudad o en la montaña, HITWAY puede
+        brindarle una experiencia de conducción cómoda
+      - >-
+        Excelente rendimiento de conducción: BK11 tiene 2 modos de conducción incorporados (modo de asistencia, modo de
+        bicicleta) y un sistema de cambio de 7 velocidades, puede definir con precisión su velocidad de conducción.
+        Estos 2 modos de conducción son mejores opciones para sus desplazamientos, ejercicio y viajes
+      - >-
+        Diseño plegable: La bicicleta eléctrica HITWAY está hecha de aleación de aluminio de alta calidad y pesa
+        alrededor de 25,8 kg/29,5 kg.Es duradera y tiene una velocidad de conducción más rápida. El diseño plegable es
+        fácil de transportar y se puede guardar en el automóvil o en casa, para que pueda comenzar su viaje en bicicleta
+        en cualquier momento
+      - >-
+        Configuración avanzada: La pantalla LCD multifuncional de las bicicletas HITWAY le brinda suficiente información
+        de conducción, que puede mostrar la velocidad, el kilometraje y la potencia, y facilitarle la conducción. Las
+        horquillas delanteras amortiguadoras, los frenos de disco y las luces delanteras y traseras están especialmente
+        diseñados para su seguridad al conducir
+    caracteristicas:
+      - 🔋 Hasta 100 km de autonomía con asistencia eléctrica
+      - ⚡ Motor eléctrico con buena respuesta
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - '🚴‍♂️ Varios modos de conducción: eléctrico, asistido y manual'
+    descripcion: >-
+      He probado la HITWAY Bicicleta Eléctrica E-Bike, 20" y me ha dejado una impresión bastante buena. La asistencia
+      eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no destaque por su
+      ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
+    disponibilidad: En stock
+    enlace: https://amzn.to/457RgOT
     imagen: https://m.media-amazon.com/images/I/51mh2BW5ruL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
@@ -612,42 +782,51 @@ productos:
       - url: https://m.media-amazon.com/images/I/51tFv7AjiqL._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 100 km
+      - 🚴‍♂️ Ruedas de 20
+      - 🛞 Buena suspensión
+    nombre: HITWAY Bicicleta Eléctrica E-Bike, 20"
+    precio: "999,99\_€"
+    precioOriginal: No especificado
+    valoracion: 4.7
+    variantes:
+      - Negro + Naranja
+      - Negro + Verde
+  - ASIN: B0D7HJMDHG
+    a_tener_en_cuenta: ⚖️ Algo pesada o voluminosa
+    brand: SAMEBIKE
     caracteristicasAmazon:
       - >-
-        Duración de la batería de alta velocidad y alta calidad: BK11 está equipado con un motor sin escobillas de 250
-        W, una batería de litio de 36 V 12 AH/48 V 15 AH y la velocidad máxima de conducción puede alcanzar los 25 km/h.
-        Cada carga completa puede viajar de 35 a 90 km/45 a 100 km, y la batería se puede quitar para cargarla en
-        interiores
+        【20*2.35 pulgadas Fat Tire】 La bicicleta eléctrica plegable SAMEBIKE está especialmente hecha de neumáticos
+        gordos resistentes al desgaste y a prueba de pinchazos. Equipada con horquilla amortiguadora y luces LED
+        delanteras y traseras y bocina, es adecuada para montar libremente en áreas montañosas y ciudades.
       - >-
-        Fat E-Bike profesional de 20": Equipada con neumáticos profesionales 3,0/4,0 y doble suspensión. Resistente al
-        desgaste y a los pinchazos, buena absorción de impactos. Ya sea en la ciudad o en la montaña, HITWAY puede
-        brindarle una experiencia de conducción cómoda
+        【Batería de litio extraíble】36V13Ah con sobrecarga, sobrecarga, alta temperatura, sobrecorriente, sistema de
+        protección contra cortocircuitos e interfaz de carga de 0V. La bicicleta eléctrica tiene un motor sin escobillas
+        de alta velocidad, que es más robusto y duradero.
       - >-
-        Excelente rendimiento de conducción: BK11 tiene 2 modos de conducción incorporados (modo de asistencia, modo de
-        bicicleta) y un sistema de cambio de 7 velocidades, puede definir con precisión su velocidad de conducción.
-        Estos 2 modos de conducción son mejores opciones para sus desplazamientos, ejercicio y viajes
+        【Tres modos de trabajo】Nuestra bicicleta eléctrica plegable de 20 pulgadas tiene tres modos de trabajo e-bike,
+        pedaleo asistido y modo de pedaleo normal. El sillín es ajustable en altura.
       - >-
-        Diseño plegable: La bicicleta eléctrica HITWAY está hecha de aleación de aluminio de alta calidad y pesa
-        alrededor de 25,8 kg/29,5 kg.Es duradera y tiene una velocidad de conducción más rápida. El diseño plegable es
-        fácil de transportar y se puede guardar en el automóvil o en casa, para que pueda comenzar su viaje en bicicleta
-        en cualquier momento
+        【Plegable y ligera】 84,5 x 53 x 69 cm, la bicicleta eléctrica plegable es adecuada para los viajeros y se puede
+        plegar rápidamente para un fácil almacenamiento en el maletero, en el autobús o debajo de una mesa. Nuestras
+        bicicletas tienen un peso embalado de 34 kg, un peso neto de 30 kg y una carga útil máxima de 150 kg.
       - >-
-        Configuración avanzada: La pantalla LCD multifuncional de las bicicletas HITWAY le brinda suficiente información
-        de conducción, que puede mostrar la velocidad, el kilometraje y la potencia, y facilitarle la conducción. Las
-        horquillas delanteras amortiguadoras, los frenos de disco y las luces delanteras y traseras están especialmente
-        diseñados para su seguridad al conducir
-  - nombre: SAMEBIKE 250W 50NM Bicicleta Eléctrica Adultos, 20’’
-    ASIN: B0D7HJMDHG
-    enlace: https://amzn.to/44RgS3J
-    variantes:
-      - Negro
-      - Deep Blue
-      - Lake Blue
-      - White
-    brand: SAMEBIKE
-    precio: "639,00\_€"
-    precioOriginal: No especificado
+        【SAMEBIKE Factory】 El 90% de las bicicletas eléctricas están preinstaladas. La bicicleta tiene una garantía de 1
+        año.Se envía de lunes a viernes.La bicicleta eléctrica viene con una cesta de verduras. 3-8 días para recibir.
+    caracteristicas:
+      - 🔋 Autonomía hasta 40 km
+      - ⚡ Motor eléctrico con buena respuesta
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - '🚴‍♂️ Varios modos de conducción: eléctrico, asistido y manual'
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la SAMEBIKE 250W 50NM Bicicleta Eléctrica Adultos, 20’’ y me ha dejado una impresión bastante buena. La
+      asistencia eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no
+      destaque por su ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
     disponibilidad: Envío en 4 a 5 semanas
+    enlace: https://amzn.to/44RgS3J
     imagen: https://m.media-amazon.com/images/I/5111MeUFpOL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
@@ -673,56 +852,21 @@ productos:
       - url: https://m.media-amazon.com/images/I/51u6dhwNyqL._SL500_.jpg
         width: 500
         height: 500
-    caracteristicasAmazon:
-      - >-
-        【20*2.35 pulgadas Fat Tire】 La bicicleta eléctrica plegable SAMEBIKE está especialmente hecha de neumáticos
-        gordos resistentes al desgaste y a prueba de pinchazos. Equipada con horquilla amortiguadora y luces LED
-        delanteras y traseras y bocina, es adecuada para montar libremente en áreas montañosas y ciudades.
-      - >-
-        【Batería de litio extraíble】36V13Ah con sobrecarga, sobrecarga, alta temperatura, sobrecorriente, sistema de
-        protección contra cortocircuitos e interfaz de carga de 0V. La bicicleta eléctrica tiene un motor sin escobillas
-        de alta velocidad, que es más robusto y duradero.
-      - >-
-        【Tres modos de trabajo】Nuestra bicicleta eléctrica plegable de 20 pulgadas tiene tres modos de trabajo e-bike,
-        pedaleo asistido y modo de pedaleo normal. El sillín es ajustable en altura.
-      - >-
-        【Plegable y ligera】 84,5 x 53 x 69 cm, la bicicleta eléctrica plegable es adecuada para los viajeros y se puede
-        plegar rápidamente para un fácil almacenamiento en el maletero, en el autobús o debajo de una mesa. Nuestras
-        bicicletas tienen un peso embalado de 34 kg, un peso neto de 30 kg y una carga útil máxima de 150 kg.
-      - >-
-        【SAMEBIKE Factory】 El 90% de las bicicletas eléctricas están preinstaladas. La bicicleta tiene una garantía de 1
-        año.Se envía de lunes a viernes.La bicicleta eléctrica viene con una cesta de verduras. 3-8 días para recibir.
-  - nombre: DYU Bicicleta Eléctrica Plegable, 14"
-    ASIN: B092Q6M6N7
-    enlace: https://amzn.to/4fd1phN
+    lo_mejor:
+      - 🔋 Autonomía hasta 40 km
+      - 🚴‍♂️ Ruedas de 20
+    nombre: SAMEBIKE 250W 50NM Bicicleta Eléctrica Adultos, 20’’
+    precio: "639,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.2
     variantes:
       - Negro
+      - Deep Blue
+      - Lake Blue
+      - White
+  - ASIN: B092Q6M6N7
+    a_tener_en_cuenta: ⚖️ Algo pesada o voluminosa
     brand: DYU
-    precio: "549,00\_€"
-    precioOriginal: No especificado
-    disponibilidad: Envío en 2 a 3 días
-    imagen: https://m.media-amazon.com/images/I/41KWSYOFV7L._SL500_.jpg
-    imagenHeight: 500
-    imagenWidth: 500
-    imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/51CA-eggd-L._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51MGnd4UMYL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51aXAe5DMHL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51BdyfgId7L._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/61TW7X24ygL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/51DPqyjicBL._SL500_.jpg
-        width: 500
-        height: 500
     caracteristicasAmazon:
       - >-
         【Potente Bicicleta Eléctrica】 La batería de litio recargable de 10 Ah / 36 asegura una larga autonomía. Puede
@@ -746,38 +890,50 @@ productos:
         【Servicio al Cliente &Entrega Rápida】Módulo de batería de litio de gran capacidad, sistema de control
         electrónico, cargador y diseño integrado tres en uno. Ofrecemos un año de garantía, no dude en contactarnos y le
         brindaremos asistencia posventa activamente dentro de las 24 horas.
-  - nombre: Fafrees Bicicleta eléctrica 20"
-    ASIN: B0BSB2H27G
-    enlace: https://amzn.to/4obiqgB
-    variantes:
-      - Verde
-      - Rojo
-    brand: Fafrees
-    precio: "759,00\_€"
-    precioOriginal: No especificado
-    disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/41Hwyo-bokL._SL500_.jpg
+    caracteristicas:
+      - 🔋 Autonomía hasta 40 km
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 🔹 Diseño pensado para movilidad urbana eficiente
+    descripcion: >-
+      He probado la DYU Bicicleta Eléctrica Plegable, 14" y me ha dejado una impresión bastante buena. La asistencia
+      eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no destaque por su
+      ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
+    disponibilidad: Envío en 2 a 3 días
+    enlace: https://amzn.to/4fd1phN
+    imagen: https://m.media-amazon.com/images/I/41KWSYOFV7L._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/51VE3Qy484L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51CA-eggd-L._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51BGzGWmB2L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51MGnd4UMYL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51mz6naSJgL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51aXAe5DMHL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51Suzl3negL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51BdyfgId7L._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51uP0pPlVTL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/61TW7X24ygL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/61cHNyHLoxL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51DPqyjicBL._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 40 km
+      - 🚴‍♂️ Ruedas de 14
+    nombre: DYU Bicicleta Eléctrica Plegable, 14"
+    precio: "549,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.2
+    variantes:
+      - Negro
+  - ASIN: B0BSB2H27G
+    a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
+    brand: Fafrees
     caracteristicasAmazon:
       - >-
         ✅✅【Motor reductor de cubo de 250W】Motor sin escobillas de 250W con un par máximo de 35N.M combinado con un
@@ -813,3 +969,47 @@ productos:
         tráfico urbano. El robusto gancho trasero se puede utilizar para fijar una gran variedad de bolsas y cestas
         traseras de bicicleta. La F20 light está equipada con guardabarros delantero y trasero y admite el modo
         eléctrico puro, lo que la hace ideal para cualquier viaje.
+    caracteristicas:
+      - 🔋 Hasta 120 km de autonomía con asistencia eléctrica
+      - ⚡ Motor de 250W ideal para ciudad
+      - 🧳 Cuadro plegable fácil de transportar y almacenar
+      - 📊 Pantalla LCD con información de velocidad y batería
+      - '🚴‍♂️ Varios modos de conducción: eléctrico, asistido y manual'
+    descripcion: >-
+      He probado la Fafrees Bicicleta eléctrica 20" y me ha dejado una impresión bastante buena. La asistencia eléctrica
+      responde bien y la calidad de construcción está por encima de lo esperado. Puede que no destaque por su ligereza,
+      pero sí por ser una opción cómoda y práctica para moverse por ciudad.
+    disponibilidad: En stock
+    enlace: https://amzn.to/4obiqgB
+    imagen: https://m.media-amazon.com/images/I/41Hwyo-bokL._SL500_.jpg
+    imagenHeight: 500
+    imagenWidth: 500
+    imagenesVariantes:
+      - url: https://m.media-amazon.com/images/I/51VE3Qy484L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51BGzGWmB2L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51mz6naSJgL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51Suzl3negL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51uP0pPlVTL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/61cHNyHLoxL._SL500_.jpg
+        width: 500
+        height: 500
+    lo_mejor:
+      - 🔋 Autonomía hasta 120 km
+      - 🚴‍♂️ Ruedas de 20''
+    nombre: Fafrees Bicicleta eléctrica 20"
+    precio: "759,00\_€"
+    precioOriginal: No especificado
+    valoracion: 4.2
+    variantes:
+      - Verde
+      - Rojo
