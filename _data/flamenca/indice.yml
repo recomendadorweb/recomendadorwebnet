@@ -1,10 +1,17 @@
-titulo: Índice de contenidos
-contenido:
-- titulo: Introducción a los trajes de flamenca
-  url: '#introduccion'
-- titulo: Comparativa de los mejores trajes
-  url: '#comparativa'
-- titulo: ¿Qué traje de flamenca elegiría yo?
-  url: '#cual-comprar'
-- titulo: Preguntas frecuentes sobre trajes de flamenca
-  url: '#preguntas-frecuentes'
+---
+secciones:
+- id: comparativa
+  titulo: Comparativa rápida de trajes de flamenca recomendados
+- id: productos
+  productos_datafile: productos
+  titulo: Comparativa real de los mejores trajes de flamenca
+- id: mi-eleccion
+  titulo: ¿Cuál compraría yo?
+- id: trajes-baratos
+  titulo: Trajes de flamenca baratos que sí merecen la pena
+- id: flamenca-ninas
+  titulo: 'El mejor vestido de flamenca para niñas: comodidad y estilo'
+- id: falda-flamenca
+  titulo: 'Falda flamenca: la mejor opción para ensayos y romerías'
+- id: faq
+  titulo: Preguntas frecuentes
