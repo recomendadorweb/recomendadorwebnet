@@ -1,0 +1,31 @@
+---
+secciones:
+- id: comparativa-1
+  titulo: 'Comparativa rápida: La mejor moto eléctrica para niños de hasta 3 años'
+- id: comparativa-2
+  titulo: 'Comparativa rápida: Motos eléctricas para niños de 3 a 5 años'
+- id: comparativa-3
+  titulo: 'Comparativa rápida: La mejor moto eléctrica para niños de 3 a 6 años'
+- id: comparativa-4
+  titulo: 'Comparativa rápida: La mejor moto eléctrica para niños de hasta 8 años'
+- id: comparativa-5
+  titulo: 'Comparativa rápida: Las mejores motos eléctricas para niños de 6 a 12 años'
+- id: productos-1
+  titulo: 'La mejor moto eléctrica para niños de hasta 3 años'
+  productos_datafile: productos-bloque-1
+- id: productos-2
+  titulo: 'La mejor moto eléctrica para niños de 3 a 5 años'
+  productos_datafile: productos-bloque-2
+- id: productos-3
+  titulo: 'La mejor moto eléctrica para niños de 3 a 6 años'
+  productos_datafile: productos-bloque-3
+- id: productos-4
+  titulo: 'La mejor moto eléctrica para niños de hasta 8 años'
+  productos_datafile: productos-bloque-4
+- id: productos-5
+  titulo: 'Las mejores motos eléctricas para niños de 6 a 12 años'
+  productos_datafile: productos-bloque-5
+- id: mi-eleccion
+  titulo: ¿Cuál compraría yo? La mejor moto eléctrica infantil según la edad
+- id: faq
+  titulo: Preguntas frecuentes

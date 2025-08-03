@@ -56,9 +56,13 @@ productos:
       - url: https://m.media-amazon.com/images/I/4125M8rJaAL._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - Licencia oficial VESPA
+      - Autonomía destacada
     nombre: HOMCOM Moto Eléctrica Vespa
     precio: "82,99\_€"
     precioOriginal: "87,99\_€"
+    valoracion: 4.4
   - ASIN: B07MT59Z1D
     a_tener_en_cuenta: 1 a 3 años
     brand: HOMCOM
@@ -115,9 +119,13 @@ productos:
       - url: https://m.media-amazon.com/images/I/41BxrtuTXlL._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - Licencia oficial BMW
+      - Autonomía destacada
     nombre: HOMCOM Moto Eléctrica para Niños
     precio: "71,99\_€"
     precioOriginal: "78,99\_€"
+    valoracion: 4.4
   - ASIN: B08J82PGH6
     a_tener_en_cuenta: A partir de 2 años
     brand: TURBO CHALLENGE
@@ -173,9 +181,13 @@ productos:
       - url: https://m.media-amazon.com/images/I/51vGgKMhz7L._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - Licencia oficial VESPA
+      - Buena batería
     nombre: TURBO CHALLENGE Baby Driver Vespa GTS
     precio: "99,90\_€"
     precioOriginal: No especificado
+    valoracion: 4.3
   - ASIN: B0BJDKDV86
     a_tener_en_cuenta: A partir de 2 años
     brand: HOMCOM
@@ -236,9 +248,13 @@ productos:
       - url: https://m.media-amazon.com/images/I/51jvS5w8j6L._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - Autonomía destacada
+      - Con música
     nombre: HOMCOM Moto Eléctrica BMW HP4
     precio: "99,99\_€"
     precioOriginal: "103,99\_€"
+    valoracion: 4.3
   - ASIN: B0DJM8FKMR
     a_tener_en_cuenta: A partir de 2 años
     brand: AIYAPLAY
@@ -298,7 +314,11 @@ productos:
       - url: https://m.media-amazon.com/images/I/41OJZME66nL._SL500_.jpg
         width: 500
         height: 500
+    lo_mejor:
+      - Buena batería
+      - Con música
     nombre: AIYAPLAY Moto Eléctrica para Niños
     precio: "48,75\_€"
     precioOriginal: "52,69\_€"
+    valoracion: 4.3
 titulo_a_tener_en_cuenta: Edad recomendada

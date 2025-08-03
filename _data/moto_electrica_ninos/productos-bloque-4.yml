@@ -51,9 +51,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/51gNeRshtAL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Autonomía destacada
+  - Hasta 25 km/h
   nombre: RCB R9X Pro Moto Eléctrica
   precio: 299,99 €
   precioOriginal: 369,99 €
+  valoracion: 4.4
 - ASIN: B0DXVB4MCB
   a_tener_en_cuenta: hasta 7 años
   brand: EVERCROSS
@@ -112,9 +116,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/51B+DTLubhL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Hasta 16 km/h
+  - Ruedas EVA
   nombre: EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12''
   precio: 299,99 €
   precioOriginal: No especificado
+  valoracion: 4.4
 - ASIN: B0F8BHG12S
   a_tener_en_cuenta: hasta 8 años
   brand: RCB
@@ -161,9 +169,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/514fjjzQaLL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Buena batería
+  - 4 km/h
   nombre: RCB Moto Eléctrica Niños
   precio: 169,99 €
   precioOriginal: 219,99 €
+  valoracion: 4.4
 - ASIN: B0F9KN8762
   a_tener_en_cuenta: hasta 8 años
   brand: RCB
@@ -217,9 +229,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/51gBUg1mHpL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Hasta 8 km/h
+  - Asiento cómodo
   nombre: RCB 12V Moto Eléctrica Niños
   precio: 209,99 €
   precioOriginal: 279,99 €
+  valoracion: 4.2
 - ASIN: B0C9J4RJTF
   a_tener_en_cuenta: hasta 8 años
   brand: RELAX4LIFE
@@ -273,6 +289,10 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/41hm++oVELL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Buena batería
+  - 6 km/h
   nombre: RELAX4LIFE 12V Aprilia Moto Eléctrica Niños
   precio: 169,99 €
   precioOriginal: No especificado
+  valoracion: 4.3

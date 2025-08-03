@@ -47,9 +47,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/51MRrVZDB6L._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Hasta 25 km/h
+  - Buena batería
   nombre: RCB TECH R9X Moto Eléctrica Infantil
   precio: 299,99 €
   precioOriginal: 339,99 €
+  valoracion: 4.4
 - ASIN: B0CQYMNKTC
   a_tener_en_cuenta: hasta 12 años
   brand: RCB
@@ -101,9 +105,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/51XiLib8SdL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Hasta 25 km/h
+  - Buena batería
   nombre: RCB R9X Moto Eléctrica Infantil
   precio: 299,99 €
   precioOriginal: 369,99 €
+  valoracion: 4.5
 - ASIN: B0BTM3GDC4
   a_tener_en_cuenta: hasta 12 años
   brand: EVERCROSS
@@ -155,9 +163,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/61WbnA3yXyL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Buena batería
+  - Hasta 25 km/h
   nombre: EVERCROSS EV12M Motocicleta Eléctrica Niños
   precio: 299,99 €
   precioOriginal: No especificado
+  valoracion: 4.4
 - ASIN: B0D4QS35W1
   a_tener_en_cuenta: hasta 12 años
   brand: EVERCROSS
@@ -214,9 +226,13 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/51PrReazkKL._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Autonomía destacada
+  - Hasta 16 km/h
   nombre: EVERCROSS EV08M Motocicleta Eléctrica para Niños
   precio: 229,99 €
   precioOriginal: No especificado
+  valoracion: 4.3
 - ASIN: B0CS2WQKRX
   a_tener_en_cuenta: hasta 12 años
   brand: EVERCROSS
@@ -278,6 +294,10 @@ productos:
   - height: 500
     url: https://m.media-amazon.com/images/I/51LgfwSUA1L._SL500_.jpg
     width: 500
+  lo_mejor:
+  - Hasta 16 km/h
+  - Buena batería
   nombre: EVERCROSS EV05M Moto Eléctrica para Niños
   precio: 207,57 €
   precioOriginal: 218,49 €
+  valoracion: 4.4
