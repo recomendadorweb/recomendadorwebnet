@@ -15,7 +15,21 @@
         <section class="paso-barro" id="{{ paso1.id }}" style="padding:0.7em;background:#faf5fb;border-left:6px solid #b39ddb;border-radius:10px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
           <h3>{{ paso1.icono }} {{ paso1.titulo }}</h3>
           <p>{{ paso1.descripcion }}</p>
-          <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" />
+          {% if paso1.id == "paso1" %}
+            <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" width="506" height="451" />
+          {% elsif paso1.id == "paso2" %}
+            <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" width="503" height="447" />
+          {% elsif paso1.id == "paso3" %}
+            <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" width="506" height="441" />
+          {% elsif paso1.id == "paso4" %}
+            <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" width="502" height="444" />
+          {% elsif paso1.id == "paso5" %}
+            <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" width="509" height="384" />
+          {% elsif paso1.id == "paso6" %}
+            <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" width="443" height="384" />
+          {% else %}
+            <img alt="{{ paso1.alt }}" loading="lazy" src="{{ paso1.imagen }}" />
+          {% endif %}
         </section>
       </div>
 
@@ -26,7 +40,21 @@
           <section class="paso-barro" id="{{ paso2.id }}" style="padding:0.7em;background:#faf5fb;border-left:6px solid #b39ddb;border-radius:10px;height:100%;display:flex;flex-direction:column;justify-content:space-between;">
             <h3>{{ paso2.icono }} {{ paso2.titulo }}</h3>
             <p>{{ paso2.descripcion }}</p>
-            <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" />
+            {% if paso2.id == "paso1" %}
+              <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" width="506" height="451" />
+            {% elsif paso2.id == "paso2" %}
+              <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" width="503" height="447" />
+            {% elsif paso2.id == "paso3" %}
+              <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" width="506" height="441" />
+            {% elsif paso2.id == "paso4" %}
+              <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" width="502" height="444" />
+            {% elsif paso2.id == "paso5" %}
+              <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" width="509" height="384" />
+            {% elsif paso2.id == "paso6" %}
+              <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" width="443" height="384" />
+            {% else %}
+              <img alt="{{ paso2.alt }}" loading="lazy" src="{{ paso2.imagen }}" />
+            {% endif %}
           </section>
         </div>
       {% endif %}
