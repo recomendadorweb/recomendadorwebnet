@@ -176,6 +176,7 @@
             <li><a href="/hogar/mejores-alarmas-sin-cuotas/">🚨 Mejores Alarmas Sin Cuotas</a></li>
             <li><a href="/hogar/mejores-colchones/">🛏 Mejores Colchones</a></li>
             <li><a href="/hogar/mejores-pilas-recargables/">🔋 Mejores Pilas Recargables</a></li>
+            <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
           </ul>
         </li>
         <li><a href="/contacto/">📬 Contacto</a></li>
@@ -242,6 +243,7 @@
         <li><a href="/hogar/mejores-alarmas-sin-cuotas/">🚨 Mejores Alarmas Sin Cuotas</a></li>
         <li><a href="/hogar/mejores-colchones/">🛏 Mejores Colchones</a></li>
         <li><a href="/hogar/mejores-pilas-recargables/">🔋 Mejores Pilas Recargables</a></li>
+        <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
       </ul>
     </li>
         <li style="margin-bottom: 20px;">
@@ -622,16 +624,71 @@ body {
 </style>
 
 <div class="container">
+<style>
 
-<img 
-  alt="Ilustración de trajes de flamenca"
-  sizes="(max-width: 768px) 600px, 600px"
-  src="/global/images/trajes-de-flamenca.webp"
-  srcset="/global/images/trajes-de-flamenca.webp 600w, /global/images/trajes-de-flamenca.webp 1024w"
-  style="width:100%;max-height:200px;object-fit:cover;border-radius:10px;"
-  width="600" />
-<h1 id="titulo-principal">Mejores trajes de flamenca 2025</h1>
+  .cabecera-contenedor {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0em auto;
+  border-radius: 6px;   /* el radio vive aquí */
+  overflow: hidden;     /* recorta overlay y mantiene bordes */
+  line-height: 0;       /* elimina gap fantasma bajo la imagen */
+}
 
+.cabecera-imagen {
+  display: block;
+  height: auto;
+  width:100%;
+  max-height:200px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.cabecera-titulo {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0,0,0,0.6);
+  border-radius: 4px;
+  line-height: 1.2;
+  z-index: 1;
+  max-width: calc(100% - 24px); /* evita desbordes en móvil */
+}
+
+@media (max-width: 768px) {
+  .cabecera-titulo {
+    font-size: clamp(1rem, 6vw, 1rem);
+    padding: 0px 0px 0px 0px;
+    bottom: 0px;
+    left: 10px;
+    max-width: calc(100% - 20px);
+  }
+}
+
+
+
+</style>
+
+
+
+<div class="cabecera-contenedor">
+  <img 
+    alt="Ilustración de trajes de flamenca"
+    sizes="(max-width: 768px) 100vw, 1000px"
+    src="/global/images/trajes-de-flamenca.webp"
+    srcset="/global/images/trajes-de-flamenca.webp 600w, /global/images/trajes-de-flamenca.webp 1024w"
+    class="cabecera-imagen" />
+
+  <h1 id="titulo-principal" class="cabecera-titulo">
+    Mejores trajes de flamenca 2025
+  </h1>
+</div>
 
 <div class="autor">
   <a href="/sobre-nosotros/#laura" style="text-decoration: none; color: inherit;" target="_blank">
