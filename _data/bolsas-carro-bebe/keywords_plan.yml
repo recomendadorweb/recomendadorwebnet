@@ -1,0 +1,98 @@
+cabecera:
+  # KW_ATACADA: bolso carro bebe | VOL: 5400
+  principal: bolso para carro de bebé
+  meta:
+    vol: 5400
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: bolso carro bebe | VOL: 5400
+  - bolso para carro de bebé
+  # KW_ATACADA: bolso carrito bebe | VOL: 2400
+  - bolso para carrito de bebé
+  # KW_ATACADA: bolsa carro bebe | VOL: 1900
+  - bolsa para carro de bebé
+  # KW_ATACADA: bolso carro | VOL: 1600
+  - bolso para carro
+secciones:
+  - kw: bolso carrito bebe
+    # KW_ATACADA: bolso carrito bebe | VOL: 2400
+    titulo: bolso para carrito de bebé
+    id: bolso-para-carrito-de-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2400
+    diff: 0
+    intent: I
+  - kw: bolsa carro bebe
+    # KW_ATACADA: bolsa carro bebe | VOL: 1900
+    titulo: bolsa para carro de bebé
+    id: bolsa-para-carro-de-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1900
+    diff: 0
+    intent: I
+  - kw: bolso carro
+    # KW_ATACADA: bolso carro | VOL: 1600
+    titulo: bolso para carro
+    id: bolso-para-carro
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1600
+    diff: 0
+    intent: I
+  - kw: mochila carro bebe
+    # KW_ATACADA: mochila carro bebe | VOL: 1600
+    titulo: mochila para carro de bebé
+    id: mochila-para-carro-de-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1600
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: bolso carro bebe | VOL: 5400
+  - bolso para carro de bebé
+  # KW_ATACADA: bolso carrito bebe | VOL: 2400
+  - bolso para carrito de bebé
+  # KW_ATACADA: bolsa carro bebe | VOL: 1900
+  - bolsa para carro de bebé
+  # KW_ATACADA: bolso carro | VOL: 1600
+  - bolso para carro
+  # KW_ATACADA: mochila carro bebe | VOL: 1600
+  - mochila para carro de bebé
+  # KW_ATACADA: bolso para carro bebe | VOL: 1300
+  - bolso para carro de bebé
+  # KW_ATACADA: bolsas para carritos bebe | VOL: 1300
+  - bolsas para carritos de bebé
+  # KW_ATACADA: bolsos carro bebe | VOL: 1000
+  - bolsos para carro de bebé
+  # KW_ATACADA: bolsa carrito bebe | VOL: 1000
+  - bolsa para carrito de bebé
+  # KW_ATACADA: bolsos carrito bebe | VOL: 880
+  - bolsos para carrito de bebé
+  # KW_ATACADA: bolso cochecito bebe | VOL: 590
+  - bolso para cochecito de bebé
+  # KW_ATACADA: bolsa de carrito bebe | VOL: 480
+  - bolsa de carrito de bebé
+html_map:
+  h1: bolso para carro de bebé
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - bolso para carrito de bebé
+  - bolsa para carro de bebé
+  - bolso para carro
+  - mochila para carro de bebé
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 21
+  total_brands_detected: 36
