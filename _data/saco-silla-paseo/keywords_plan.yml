@@ -1,0 +1,98 @@
+cabecera:
+  # KW_ATACADA: saco silla paseo | VOL: 2400
+  principal: saco para silla de paseo
+  meta:
+    vol: 2400
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: saco silla paseo | VOL: 2400
+  - saco para silla de paseo
+    # KW_ATACADA: saco capazo invierno | VOL: 2400
+  - saco para capazo de invierno
+  # KW_ATACADA: sacos carritos bebe | VOL: 2400
+  - sacos para carritos de bebé
+  # KW_ATACADA: saco carro bebe | VOL: 1900
+  - saco para carro de bebé
+secciones:
+  - kw: saco silla paseo
+    # KW_ATACADA: saco silla paseo | VOL: 2400
+    titulo: saco para silla de paseo
+    id: saco-para-silla-de-paseo
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2400
+    diff: 0
+    intent: I
+  - kw: sacos carritos bebe
+    # KW_ATACADA: sacos carritos bebe | VOL: 2400
+    titulo: sacos para carritos de bebé
+    id: sacos-para-carritos-de-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2400
+    diff: 0
+    intent: I
+  - kw: saco carro bebe
+    # KW_ATACADA: saco carro bebe | VOL: 1900
+    titulo: saco para carro de bebé
+    id: saco-para-carro-de-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1900
+    diff: 0
+    intent: I
+  - kw: saco capazo
+    # KW_ATACADA: saco capazo | VOL: 1600
+    titulo: saco para capazo
+    id: saco-para-capazo
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1600
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: saco capazo invierno | VOL: 2400
+  - saco para capazo de invierno
+  # KW_ATACADA: saco silla paseo | VOL: 2400
+  - saco para silla de paseo
+  # KW_ATACADA: sacos carritos bebe | VOL: 2400
+  - sacos para carritos de bebé
+  # KW_ATACADA: saco carro bebe | VOL: 1900
+  - saco para carro de bebé
+  # KW_ATACADA: saco capazo | VOL: 1600
+  - saco para capazo
+  # KW_ATACADA: bolso saco | VOL: 1300
+  - bolso saco
+  # KW_ATACADA: saco invierno silla paseo | VOL: 1000
+  - saco de invierno para silla de paseo
+  # KW_ATACADA: saco universal silla paseo | VOL: 1000
+  - saco universal para silla de paseo
+  # KW_ATACADA: saco silla paseo universal | VOL: 880
+  - saco universal para silla de paseo
+  # KW_ATACADA: saco capazo bebe | VOL: 720
+  - saco para capazo de bebé
+  # KW_ATACADA: saco entretiempo silla paseo | VOL: 720
+  - saco de entretiempo para silla de paseo
+  # KW_ATACADA: saco silla invierno | VOL: 720
+  - saco de invierno para silla de paseo
+html_map:
+  h1: saco para capazo de invierno
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - saco para silla de paseo
+  - sacos para carritos de bebé
+  - saco para carro de bebé
+  - saco para capazo
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 22
+  total_brands_detected: 31
