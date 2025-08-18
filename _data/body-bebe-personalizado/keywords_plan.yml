@@ -1,0 +1,87 @@
+cabecera:
+  # KW_ATACADA: body bebe personalizado | VOL: 1000
+  principal: body para bebé personalizado
+  meta:
+    vol: 1000
+    diff: 0
+    intent: C
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: body bebe personalizado | VOL: 1000
+  - body para bebé personalizado
+  # KW_ATACADA: body personalizado bebe | VOL: 1000
+  - body personalizado para bebé
+  # KW_ATACADA: bodys bebe personalizados | VOL: 720
+  - bodys para bebé personalizados
+  # KW_ATACADA: bodys personalizados bebe | VOL: 590
+  - bodys personalizados para bebé
+secciones:
+  - kw: body personalizado bebe
+    # KW_ATACADA: body personalizado bebe | VOL: 1000
+    titulo: body personalizado para bebé
+    id: body-personalizado-para-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1000
+    diff: 0
+    intent: C
+  - kw: bodys bebe personalizados
+    # KW_ATACADA: bodys bebe personalizados | VOL: 720
+    titulo: bodys para bebe personalizados
+    id: bodys-personalizados-para-bebes
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 720
+    diff: 0
+    intent: C
+  - kw: bodys personalizados bebe
+    # KW_ATACADA: bodys personalizados bebe | VOL: 590
+    titulo: bodys personalizados para bebé
+    id: bodys-personalizados-para-bebes
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 590
+    diff: 0
+    intent: C
+  - kw: personalizar body bebe
+    # KW_ATACADA: personalizar body bebe | VOL: 260
+    titulo: personalizar body para bebé
+    id: personalizar-body-para-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 260
+    diff: 0
+    intent: C
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+    # KW_ATACADA: body bebe personalizado | VOL: 1000
+  - body para bebé personalizado
+  # KW_ATACADA: body personalizado bebe | VOL: 1000
+  - body personalizado para bebé
+  # KW_ATACADA: bodys bebe personalizados | VOL: 720
+  - bodys para bebé personalizados
+  # KW_ATACADA: bodys personalizados bebe | VOL: 590
+  - bodys personalizados para bebé
+  # KW_ATACADA: personalizar body bebe | VOL: 260
+  - personalizar body para bebé
+  # KW_ATACADA: bodys personalizados para bebes | VOL: 170
+  - bodys personalizados para bebés
+  - body para bebe personalizado
+html_map:
+  h1: body personalizado para bebé
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - body personalizado para bebé
+  - bodys personalizados para bebés
+  - bodys personalizados para bebés
+  - personalizar body para bebé
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 8
+  total_brands_detected: 27
