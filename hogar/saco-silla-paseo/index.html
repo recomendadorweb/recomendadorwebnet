@@ -1222,129 +1222,84 @@ Además son prácticos para el día a día: <strong>fáciles de montar y lavable
   margin: 1.5em 0;
   opacity: 0.5;
 }
-.ficha-teclado img {
-  position: relative;
-  object-fit: contain;
-}
+.ficha-teclado img { position: relative; object-fit: contain; }
 .imagen-con-miniaturas {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* ✅ Alinea verticalmente al centro */
-  gap: 1.5em;
-  margin-bottom: 1em;
-  flex-wrap: wrap;
+  display: flex; justify-content: center; align-items: center; gap: 1.5em;
+  margin-bottom: 1em; flex-wrap: wrap;
 }
-.imagen-con-miniaturas .principal {
-  max-height: 350px;
-  width: auto;
-}
+.imagen-con-miniaturas .principal { max-height: 350px; width: auto; }
 .galeria-miniaturas {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(5, 50px);
-  gap: 8px;
+  display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, 50px); gap: 8px;
 }
-
 .galeria-miniaturas img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border 0.3s;
+  width: 50px; height: 50px; object-fit: cover; cursor: pointer;
+  border: 1px solid #ccc; border-radius: 4px; transition: border 0.3s;
 }
-.galeria-miniaturas img:hover {
-  border: 2px solid #0073e6;
-}
-.galeria-miniaturas img.activa {
-  border: 2px solid #0073e6 !important;
-}
+.galeria-miniaturas img:hover { border: 2px solid #0073e6; }
+.galeria-miniaturas img.activa { border: 2px solid #0073e6 !important; }
+
 @media (max-width: 768px) {
   .galeria-miniaturas {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    margin-top: 10px;
+    display: flex; flex-direction: row; gap: 8px; overflow-x: auto;
+    padding-bottom: 10px; margin-top: 10px; scroll-snap-type: x mandatory;
   }
-
-  .galeria-miniaturas img {
-    flex: 0 0 auto;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
+  .galeria-miniaturas img { flex: 0 0 auto; width: 60px; height: 60px; object-fit: cover; border-radius: 4px; scroll-snap-align: start; }
 }
 
-.lupa-amazon-container {
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
-  position: relative;
-}
-
-.lupa-imagen {
-  position: relative;
-}
-.lupa-imagen img {
-  display: block;
-  max-height: 350px;
-  cursor: zoom-in;
-}
+/* Lupa/zoom por producto (no global) */
+.lupa-amazon-container { display: flex; justify-content: center; gap: 1.5em; position: relative; }
+.lupa-imagen { position: relative; }
+.lupa-imagen img { display: block; max-height: 350px; cursor: zoom-in; }
 .zoom-flotante {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border: 2px solid #0073e6;
-  background-repeat: no-repeat;
-  background-size: 300%;
-  display: none;
-  z-index: 9999;
-  pointer-events: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: absolute; width: 400px; height: 400px; border: 2px solid #0073e6;
+  background-repeat: no-repeat; background-size: 300%; display: none;
+  z-index: 9999; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+/* Selector de variantes */
+.selector-variantes {
+  display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin: .5rem 0 1rem;
+}
+.selector-variantes .var-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
+  cursor: pointer; background: #fff; font-size: .9rem;
+}
+.selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
+.selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
+.selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
 </style>
 
 <script>
+/* === LUPA / ZOOM por producto === */
 function mostrarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   const img = container.querySelector('img');
   const srcZoom = img.getAttribute('data-zoom') || img.src;
   zoom.style.display = 'block';
   zoom.style.backgroundImage = `url('${srcZoom}')`;
 }
-
-function ocultarZoomFlotante() {
+function ocultarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   zoom.style.display = 'none';
 }
-
 function moverZoomFlotante(e, container) {
   if (window.innerWidth < 768) return;
   const img = container.querySelector('img');
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
+  zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  const percentX = (x / rect.width) * 100;
-  const percentY = (y / rect.height) * 100;
-
-  zoom.style.backgroundPosition = `${percentX}% ${percentY}%`;
-
-  // Posiciona el zoom junto al cursor
   zoom.style.left = `${e.pageX + 20}px`;
-  zoom.style.top = `${e.pageY - 150}px`; // ajusta para centrar verticalmente
+  zoom.style.top = `${e.pageY - 150}px`;
 }
 
-
+/* === MINIATURAS === */
 function seleccionarMiniatura(imgElement) {
   const nuevaSrc = imgElement.getAttribute("data-src");
   const contenedor = imgElement.closest(".ficha-teclado");
@@ -1353,94 +1308,166 @@ function seleccionarMiniatura(imgElement) {
   principal.src = nuevaSrc;
   principal.setAttribute('data-zoom', nuevaSrc);
 
-  const zoom = document.getElementById("zoom-flotante");
+  const zoom = contenedor.querySelector(".zoom-flotante");
   zoom.style.backgroundImage = `url('${nuevaSrc}')`;
 
   const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
   miniaturas.forEach(img => img.classList.remove("activa"));
   imgElement.classList.add("activa");
 }
+
+/* === VARIANTES === */
+function onVariantClick(btn) {
+  const ficha = btn.closest('.ficha-teclado');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+
+  const vImg = btn.dataset.imagen;
+  const vEnlace = btn.dataset.enlace;
+  const vPrecio = btn.dataset.precio || '';
+  const vPrecioOriginal = btn.dataset.precioOriginal || '';
+
+  // 1) imagen principal + zoom
+  const principal = ficha.querySelector('.lupa-imagen img');
+  if (vImg) {
+    principal.src = vImg;
+    principal.setAttribute('data-zoom', vImg);
+  }
+
+  // 2) ENLACES: botón de compra + enlace de la imagen principal
+  const boton = ficha.querySelector('.boton-compra');
+  if (boton && vEnlace) boton.href = vEnlace;
+
+  const linkImg = ficha.querySelector('.lupa-imagen a');
+  if (linkImg && vEnlace) linkImg.href = vEnlace;
+
+  // 3) precios
+  const precioActual = ficha.querySelector('.precio-actual');
+  if (precioActual) precioActual.textContent = vPrecio || '';
+
+  const precioOriginal = ficha.querySelector('.precio-original');
+  if (precioOriginal) {
+    if (vPrecioOriginal && vPrecioOriginal !== 'No especificado') {
+      precioOriginal.style.display = '';
+      precioOriginal.textContent = `Antes: ${vPrecioOriginal}`;
+    } else {
+      precioOriginal.style.display = 'none';
+    }
+  }
+
+  // 4) galería de miniaturas
+  const galeria = ficha.querySelector('.galeria-miniaturas');
+  const imagenesJson = btn.dataset.imagenes || '';
+  if (galeria && imagenesJson) {
+    try {
+      const imagenes = JSON.parse(imagenesJson);
+      galeria.innerHTML = '';
+      const mini = document.createElement('img');
+      mini.src = vImg;
+      mini.setAttribute('data-src', vImg);
+      mini.className = 'activa';
+      mini.alt = 'Imagen principal';
+      mini.loading = 'lazy';
+      mini.onclick = function(){ seleccionarMiniatura(this); };
+      galeria.appendChild(mini);
+
+      imagenes.forEach(iv=>{
+        const m = document.createElement('img');
+        m.src = iv.url;
+        m.setAttribute('data-src', iv.url);
+        m.alt = 'Variante';
+        m.loading = 'lazy';
+        m.onclick = function(){ seleccionarMiniatura(this); };
+        galeria.appendChild(m);
+      });
+    } catch(e) { /* silencio intencional */ }
+  }
+}
+
+/* Accesibilidad con teclado en variantes */
+document.addEventListener('keydown', function(e){
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const tgt = e.target;
+  if (tgt.classList && tgt.classList.contains('var-btn')) {
+    e.preventDefault();
+    onVariantClick(tgt);
+  }
+});
 </script>
-
-
-
-<div id="zoom-flotante" class="zoom-flotante"></div>
 
 <div class="bloque-productos">
   
-    <div class="ficha-teclado">
-      <h3 id="Walking Mum Saco Universal para Silla I Love Vichy Verde">Walking Mum Saco Universal para Silla I Love Vichy Verde</h3>
+    <article class="ficha-teclado">
+      <h3 id="Walking Mum Saco Universal para Silla I Love Vichy Verde">Walking Mum Saco Universal para Silla I Love Vichy Verde</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B09RGDBMMK?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-1"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Walking Mum Saco Universal para Silla I Love Vichy Verde"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B09RGDBMMK?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-1"
-      src="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Walking Mum Saco Universal para Silla I Love Vichy Verde"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Walking Mum Saco Universal para Silla I Love Vichy Verde"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41h+5VySz0L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41h+5VySz0L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Saco Universal para Silla I Love Vichy Verde"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31saS58fOxL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31saS58fOxL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Saco Universal para Silla I Love Vichy Verde"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/31v+hBm3XGL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Walking Mum Saco Universal para Silla I Love Vichy Verde"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41h+5VySz0L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41h+5VySz0L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Saco Universal para Silla I Love Vichy Verde"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31saS58fOxL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31saS58fOxL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Saco Universal para Silla I Love Vichy Verde"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      74,34 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          74,34 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>La compré para los paseos de otoño e invierno y desde el primer uso noté que mantiene bien el calor gracias al acolchado. Además, la textura es muy suave y la funda exterior impermeable protege del viento y la humedad. El montaje es sencillo: se adapta al borde del cochecito y a los ojales del arnés, así que encaja con la mayoría de sillas. Me tranquiliza que los tejidos estén libres de colorantes azoicos y sustancias nocivas, se nota la buena confección. En cuanto al mantenimiento, la he lavado a mano y en lavadora a 30 °C con detergente suave sin problemas y sin deformarse. En resumen, es un saco práctico y cálido en color verde, fácil de usar y duradero para la temporada fría.</p>
 </p>
@@ -1462,66 +1489,300 @@ function seleccionarMiniatura(imgElement) {
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B09RGDBMMK?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B09RGDBMMK?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="mibebestore Saco Silla Paseo Universal Cactus Verde">mibebestore Saco Silla Paseo Universal Cactus Verde</h3>
+    <article class="ficha-teclado">
+      <h3 id="mibebestore Saco Silla Paseo Universal Cactus Verde">mibebestore Saco Silla Paseo Universal Cactus Verde</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-2"
-      src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="mibebestore Saco Silla Paseo Universal Cactus Verde"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Modelo principal"
+          data-title="Modelo principal"
+          data-imagen="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="34,90 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+          
+          <span class="var-label">Modelo principal</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Animales"
+            data-title="Animales"
+            data-imagen="https://m.media-amazon.com/images/I/41MWxXXKVZL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08JQBNC7C?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HuAUJBTiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41I3YMRKzFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-CudqzimL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41e8zM1Ag1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:456},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31KAbgsI5aL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41m5EowpuTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41MWxXXKVZL._SL500_.jpg" alt="Animales" loading="lazy" />
+            
+            <span class="var-label">Animales</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Liso Rojo"
+            data-title="Liso Rojo"
+            data-imagen="https://m.media-amazon.com/images/I/41H5CEZ-amL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08K53VMDC?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41H5CEZ-amL._SL500_.jpg&quot;,&quot;width&quot;:253,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41t0eKVIpsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:456},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/519hSIBo+DL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ILPa00GWL._SL500_.jpg&quot;,&quot;width&quot;:456,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41H5CEZ-amL._SL500_.jpg" alt="Liso Rojo" loading="lazy" />
+            
+            <span class="var-label">Liso Rojo</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Maquillaje Liso"
+            data-title="Maquillaje Liso"
+            data-imagen="https://m.media-amazon.com/images/I/41UEsQ41gQL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BHDBFJKD?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/410Ljmv6+GL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21OXKkkdCHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31xOeXRCLOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41VoAz3-n-L._SL500_.jpg&quot;,&quot;width&quot;:397,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41UEsQ41gQL._SL500_.jpg" alt="Maquillaje Liso" loading="lazy" />
+            
+            <span class="var-label">Maquillaje Liso</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Panda Gris"
+            data-title="Panda Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41H48QaRyCL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BHDP32ZX?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,90 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51oXs4DR1BL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:478},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Ej1IFyrnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Bi-M52u-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41io8lDSmhL._SL500_.jpg&quot;,&quot;width&quot;:333,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41odw2eIW8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41H48QaRyCL._SL500_.jpg" alt="Panda Gris" loading="lazy" />
+            
+            <span class="var-label">Panda Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Cabaña Rojo"
+            data-title="Cabaña Rojo"
+            data-imagen="https://m.media-amazon.com/images/I/41XKz6bQuQL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0755JMQV6?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/413FJh4Nr4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41t+zFHjn1L._SL500_.jpg&quot;,&quot;width&quot;:333,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41w8RLnaCQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41UlNOibkuL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416Bt36XlGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-vdy07i3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41nfUcEFIPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41XKz6bQuQL._SL500_.jpg" alt="Cabaña Rojo" loading="lazy" />
+            
+            <span class="var-label">Cabaña Rojo</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Leã³n Gris"
+            data-title="Leã³n Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41kFeMFiEzL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BHDLMJ7Q?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,90 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31HJCM6YS5L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41aCa+0+8CL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31rKp6e-z9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41JuJu2VnfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41eWmm9lB6L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Hn4ejbldL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vO7vFnGKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41kFeMFiEzL._SL500_.jpg" alt="Leã³n Gris" loading="lazy" />
+            
+            <span class="var-label">Leã³n Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="0 - Modelo 1"
+            data-title="0 - Modelo 1"
+            data-imagen="https://m.media-amazon.com/images/I/51GhJRAkFlL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09RV7QJ4J?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,90 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41n1NtNpyPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41LGj7z8oeL._SL500_.jpg&quot;,&quot;width&quot;:333,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/517fJzV1E8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41io8lDSmhL._SL500_.jpg&quot;,&quot;width&quot;:333,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31pkbZtC4kL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51GhJRAkFlL._SL500_.jpg" alt="0 - Modelo 1" loading="lazy" />
+            
+            <span class="var-label">0 - Modelo 1</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Paracaidas Azul"
+            data-title="Paracaidas Azul"
+            data-imagen="https://m.media-amazon.com/images/I/41C1R-Bo47L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BHDNR5BZ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31CS3zJRymL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31i5Jvz7yiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41yWmXXnpFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/314c-tCya9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41C1R-Bo47L._SL500_.jpg" alt="Paracaidas Azul" loading="lazy" />
+            
+            <span class="var-label">Paracaidas Azul</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Liso Fucsia"
+            data-title="Liso Fucsia"
+            data-imagen="https://m.media-amazon.com/images/I/4179KyZYNbL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08K54NGVK?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41eqQGz-Z9L._SL500_.jpg&quot;,&quot;width&quot;:313,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41t0eKVIpsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:456},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/519hSIBo+DL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ILPa00GWL._SL500_.jpg&quot;,&quot;width&quot;:456,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/4179KyZYNbL._SL500_.jpg" alt="Liso Fucsia" loading="lazy" />
+            
+            <span class="var-label">Liso Fucsia</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Unicornio Maquillaje"
+            data-title="Unicornio Maquillaje"
+            data-imagen="https://m.media-amazon.com/images/I/41tNWkO0shL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BHDLKVK3?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,90 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31oiuGv0NUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31WKQWIFLlL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dQu8+XebL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/312mhObKJRL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31z6CsE3iJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GnCoFgemL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41lJM31YRyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HYV+Ar6oL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41tNWkO0shL._SL500_.jpg" alt="Unicornio Maquillaje" loading="lazy" />
+            
+            <span class="var-label">Unicornio Maquillaje</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-2"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="mibebestore Saco Silla Paseo Universal Cactus Verde"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de mibebestore Saco Silla Paseo Universal Cactus Verde"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de mibebestore Saco Silla Paseo Universal Cactus Verde"
+            loading="lazy"
+          />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.9/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.9/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      34,90 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          34,90 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Lo compré para los paseos de invierno y desde el primer uso noté que el interior de microfibra es suave y mantiene el calor sin agobiar, además de regular bien la temperatura. El tejido exterior impermeable me dio tranquilidad en días húmedos y la parte trasera antideslizante mantiene el saco en su sitio.
 Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño, y el cabezal ajustable facilita acomodarlo según su tamaño. Es adaptable a la mayoría de las sillas, aunque comprobé que no sirve para Jané. Para limpiarlo es muy cómodo: se desmonta con facilidad y las cremalleras permiten lavarlo en la lavadora, así que en general me parece una opción práctica y fácil de mantener.</p>
@@ -1544,136 +1805,202 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Interbaby Saco Silla Paseo Universal Minnie Blossoms">Interbaby Saco Silla Paseo Universal Minnie Blossoms</h3>
+    <article class="ficha-teclado">
+      <h3 id="Interbaby Saco Silla Paseo Universal Minnie Blossoms">Interbaby Saco Silla Paseo Universal Minnie Blossoms</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B08MKWGRHQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-3"
-      src="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Minnie Blossons"
+          data-title="Minnie Blossons"
+          data-imagen="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B08MKWGRHQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="39,99 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41U0sTpmqTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41uqmHc9lbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41PWH3HXMKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41BLRkrjngL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zAa5c60IL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/311C9aJxezL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg" alt="Minnie Blossons" loading="lazy" />
+          
+          <span class="var-label">Minnie Blossons</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Mickey Topos"
+            data-title="Mickey Topos"
+            data-imagen="https://m.media-amazon.com/images/I/41h7CjULcvL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09GKQBT4W?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="37,44 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41D3TeApNDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KktrDGa9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41olSjuD-fL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ztGRuXHzL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31SVnVekkBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31FKBo2+YQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31bA9gvnFQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41H+FYMhGnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41h7CjULcvL._SL500_.jpg" alt="Mickey Topos" loading="lazy" />
+            
+            <span class="var-label">Mickey Topos</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Minnie Topos"
+            data-title="Minnie Topos"
+            data-imagen="https://m.media-amazon.com/images/I/41x9Lx92P0L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09GKNJ9DP?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="38,00 €"
+            data-precio-original="41,14 €"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bO8rXhcoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KktrDGa9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ANqP18SEL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Bzanpkb8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ChiCQROgL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31pzxGVXuPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31fJiDaDLLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41hVlmRCrlL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41x9Lx92P0L._SL500_.jpg" alt="Minnie Topos" loading="lazy" />
+            
+            <span class="var-label">Minnie Topos</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B08MKWGRHQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-3"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41U0sTpmqTL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41U0sTpmqTL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41uqmHc9lbL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41uqmHc9lbL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41PWH3HXMKL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41PWH3HXMKL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41BLRkrjngL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41BLRkrjngL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41zAa5c60IL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41zAa5c60IL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/311C9aJxezL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/311C9aJxezL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41In2sgNY4L._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41U0sTpmqTL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41U0sTpmqTL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41uqmHc9lbL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41uqmHc9lbL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41PWH3HXMKL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41PWH3HXMKL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41BLRkrjngL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41BLRkrjngL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41zAa5c60IL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41zAa5c60IL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/311C9aJxezL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/311C9aJxezL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal Minnie Blossoms"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      39,99 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          39,99 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Lo he usado en varios paseos y me gusta que sea compatible con la mayoría de los carros, porque se instala con facilidad y la base antideslizante ayuda a que no se mueva. Además, el interior afelpado y transpirable resulta agradable al tacto y mantiene al bebé calentito sin sensación de sudoración, mientras que el exterior impermeable protege del viento y la lluvia.</p>
 
@@ -1697,136 +2024,349 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B08MKWGRHQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B08MKWGRHQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="variouss Saco Polar Universal Polipiel Beige 98x50 cm">variouss Saco Polar Universal Polipiel Beige 98x50 cm</h3>
+    <article class="ficha-teclado">
+      <h3 id="variouss Saco Polar Universal Polipiel Beige 98x50 cm">variouss Saco Polar Universal Polipiel Beige 98x50 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0CLZZ2NY9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-4"
-      src="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Polipiel Beige"
+          data-title="Polipiel Beige"
+          data-imagen="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0CLZZ2NY9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="49,99 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/316eCxmwzSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31e+eEYPqWL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zeseKk4YL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41rA6GsId3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg" alt="Polipiel Beige" loading="lazy" />
+          
+          <span class="var-label">Polipiel Beige</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Vichy Negro"
+            data-title="Vichy Negro"
+            data-imagen="https://m.media-amazon.com/images/I/414P36qpzNL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CLZYGHKB?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="49,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xaxg52BOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GSqhJYGSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41UMfX2MgfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+yUtvpn1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41MAAhr1jEL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41prFap-a4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZjHIQWChL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41i0lkRSeML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bA0Y0Sk9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41PEU5hES+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41O1BqgAfZL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/414P36qpzNL._SL500_.jpg" alt="Vichy Negro" loading="lazy" />
+            
+            <span class="var-label">Vichy Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Premium Rosa"
+            data-title="Premium Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/41qv6WRYEoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CLZYHFW7?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="48,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41aoeb6F1FL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GSqhJYGSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ckET3SZOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41kGD+hDilL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31grVC2pMoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+O9ACGlqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Im5i4Mp5L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31yp7e1i+dL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31rsUDc57lL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41qv6WRYEoL._SL500_.jpg" alt="Premium Rosa" loading="lazy" />
+            
+            <span class="var-label">Premium Rosa</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Premium Gris"
+            data-title="Premium Gris"
+            data-imagen="https://m.media-amazon.com/images/I/317SnR4Z1SL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CLZZ14XZ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="48,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41emIa7qKyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GSqhJYGSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ot8-c+AML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41j6brPiBmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xo8sVDVvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41TNthiBEcL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31QXOoqANzL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31aR64tYYUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31NCR6MBIsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31u-aoBiTUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/317SnR4Z1SL._SL500_.jpg" alt="Premium Gris" loading="lazy" />
+            
+            <span class="var-label">Premium Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Polipiel Rosa"
+            data-title="Polipiel Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/31bNc+UsnmL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CLZXS3RJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="49,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ZrAf6MgsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31LfPjc65fL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mL++MPliL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Gs2R2IBKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31bNc+UsnmL._SL500_.jpg" alt="Polipiel Rosa" loading="lazy" />
+            
+            <span class="var-label">Polipiel Rosa</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Polipiel Gris"
+            data-title="Polipiel Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41eT7If+WlL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CM1188T3?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="49,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41t-6e9y9HL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/318OBj8+I4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/413CtufAZ+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41LMbClKfnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Slhx2WPJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41eT7If+WlL._SL500_.jpg" alt="Polipiel Gris" loading="lazy" />
+            
+            <span class="var-label">Polipiel Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Premium Negro"
+            data-title="Premium Negro"
+            data-imagen="https://m.media-amazon.com/images/I/41BTjn4oYyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CM1145H6?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="48,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41k9gQ4-jiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GSqhJYGSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/415lTeRJ8OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/411D07fI7hL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416TC+fQPnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Zfk0mF1VL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41U+Omu90FL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31d0HfPGTiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31SKEFVbiLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31vF3SZqOEL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31Ww8p-Kx0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41BTjn4oYyL._SL500_.jpg" alt="Premium Negro" loading="lazy" />
+            
+            <span class="var-label">Premium Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Vichy Verde"
+            data-title="Vichy Verde"
+            data-imagen="https://m.media-amazon.com/images/I/41KzOZh9cwL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CM11WVN2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="49,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41cjeu3AQdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GSqhJYGSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ttQftVYjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41T4eDp0XcL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41YJizllUhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41LTJgZapmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41AW7JmpBVL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41DgtE3DeuL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51LoUt66+7L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41OPxB7ZlRL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41TJxRevJ3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41YqFtJnGSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41KzOZh9cwL._SL500_.jpg" alt="Vichy Verde" loading="lazy" />
+            
+            <span class="var-label">Vichy Verde</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Premium Azul"
+            data-title="Premium Azul"
+            data-imagen="https://m.media-amazon.com/images/I/41PYeAQi26L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CM1138ZP?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="48,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41P9HQPq5fL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GSqhJYGSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41apBmBzvTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41kPvp7Jt1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41l-+oSjguL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41CC+7szHYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41hOIkFcrDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41yhLvcsolL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41R4U5mZ3UL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dZyF5gtxL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31zON5A5M+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31rr8GXAK-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41PYeAQi26L._SL500_.jpg" alt="Premium Azul" loading="lazy" />
+            
+            <span class="var-label">Premium Azul</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Polipiel Negro"
+            data-title="Polipiel Negro"
+            data-imagen="https://m.media-amazon.com/images/I/311sxRFdpjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CLZZ4K3J?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="49,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31kiK9WPf5L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31I43iVqBDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QNKvYuJLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Btqy6Bv2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41fOreoOm+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/311sxRFdpjL._SL500_.jpg" alt="Polipiel Negro" loading="lazy" />
+            
+            <span class="var-label">Polipiel Negro</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0CLZZ2NY9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-4"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/316eCxmwzSL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/316eCxmwzSL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31e+eEYPqWL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31e+eEYPqWL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41zeseKk4YL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41zeseKk4YL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41rA6GsId3L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41rA6GsId3L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41YF8AdmDxL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/316eCxmwzSL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/316eCxmwzSL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31e+eEYPqWL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31e+eEYPqWL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41zeseKk4YL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41zeseKk4YL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41GM0ImEItL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41rA6GsId3L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41rA6GsId3L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/416y8hjDznL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/314R-HkKRyL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Saco Polar Universal Polipiel Beige 98x50 cm"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      49,99 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          49,99 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Lo he usado en paseos fríos y lo que más me llamó la atención fue el tacto suave del forro de coralina y el aspecto cuidado de la polipiel beige; además, al colocarlo noté que las aberturas para arneses facilitan un ajuste seguro en la mayoría de sillas. En mi caso la medida universal (98×50 cm) encaja bien en distintos carritos y la sensación para el bebé es de confort y abrigo desde el primer uso.</p>
 
@@ -1850,106 +2390,193 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0CLZZ2NY9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0CLZZ2NY9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5">molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5</h3>
+    <article class="ficha-teclado">
+      <h3 id="molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5">molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0CYM4FVVY?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-5"
-      src="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Ines Ii - Primavera/Otoño"
+          data-title="Ines Ii - Primavera/Otoño"
+          data-imagen="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0CYM4FVVY?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="32,95 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41kmCgwNmgL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51lO8foGIIL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51bspvFwVnL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Zg0vfX7XL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg" alt="Ines Ii - Primavera/Otoño" loading="lazy" />
+          
+          <span class="var-label">Ines Ii - Primavera/Otoño</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Lotus - Primavera/Otoño"
+            data-title="Lotus - Primavera/Otoño"
+            data-imagen="https://m.media-amazon.com/images/I/41Qt2zanJHL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CYM5NP1F?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="32,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/310Z9Bd8x+L._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41XVB8FNHdL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/410cRklHRoL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/415NUV6elVL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41Qt2zanJHL._SL500_.jpg" alt="Lotus - Primavera/Otoño" loading="lazy" />
+            
+            <span class="var-label">Lotus - Primavera/Otoño</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Teddy - Primavera/Otoño"
+            data-title="Teddy - Primavera/Otoño"
+            data-imagen="https://m.media-amazon.com/images/I/31k3W0xuZxL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F848L74T?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="32,95 €"
+            data-precio-original="33,95 €"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31jpRBZ56AL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41wyLjTbG5L._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mBddY2J8L._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41uBG5zXPTL._SL500_.jpg&quot;,&quot;width&quot;:401,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31k3W0xuZxL._SL500_.jpg" alt="Teddy - Primavera/Otoño" loading="lazy" />
+            
+            <span class="var-label">Teddy - Primavera/Otoño</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Blue Garden - Invierno"
+            data-title="Blue Garden - Invierno"
+            data-imagen="https://m.media-amazon.com/images/I/51gX+kNidcL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CL71JTS5?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="36,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51gX+kNidcL._SL500_.jpg" alt="Blue Garden - Invierno" loading="lazy" />
+            
+            <span class="var-label">Blue Garden - Invierno</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0CYM4FVVY?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-5"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41kmCgwNmgL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41kmCgwNmgL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="401"
-        height="500"
-        alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51lO8foGIIL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51lO8foGIIL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="401"
-        height="500"
-        alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51bspvFwVnL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51bspvFwVnL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="401"
-        height="500"
-        alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51Zg0vfX7XL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51Zg0vfX7XL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="401"
-        height="500"
-        alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41DV0z8ZKcL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41kmCgwNmgL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41kmCgwNmgL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="401"
+              height="500"
+              alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51lO8foGIIL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51lO8foGIIL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="401"
+              height="500"
+              alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51bspvFwVnL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51bspvFwVnL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="401"
+              height="500"
+              alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51Zg0vfX7XL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51Zg0vfX7XL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="401"
+              height="500"
+              alt="Variante de molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      32,95 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          32,95 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré este saco Inés II para usarlo en el capazo y desde el primer paseo noté lo fácil que es montarlo y lo acogedor que resulta para el bebé. Además del tacto suave del algodón, el relleno ligero mantiene la temperatura indicada (21–23 °C) y protege bien del viento gracias a su confección y los lazos laterales. En mi caso valoré especialmente la abertura con cremallera inferior, que facilita meter y sacar al pequeño sin complicaciones. También me tranquiliza saber que el tejido es OEKO‑TEX y parte de Better Cotton, y tras varios lavados a 30º sigue manteniendo su forma y suavidad. En resumen, cómodo y práctico para los paseos de entretiempo.</p>
 </p>
@@ -1971,142 +2598,183 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0CYM4FVVY?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0CYM4FVVY?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Vicloon Saco para Silla de Paseo Universal — Negro">Vicloon Saco para Silla de Paseo Universal — Negro</h3>
+    <article class="ficha-teclado">
+      <h3 id="Vicloon Saco para Silla de Paseo Universal — Negro">Vicloon Saco para Silla de Paseo Universal — Negro</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0DBLX4S7N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-6"
-      src="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Vicloon Saco para Silla de Paseo Universal — Negro"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Negro"
+          data-title="Negro"
+          data-imagen="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0DBLX4S7N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="11,89 €"
+          data-precio-original="13,99 €"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31HFFjPQgyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WU9zKbKQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51SVanx+fYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/4102IWbj4HL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41C6WuRpi8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31Fj3sqsypL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41K1wIQ1l4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg" alt="Negro" loading="lazy" />
+          
+          <span class="var-label">Negro</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="gris"
+            data-title="gris"
+            data-imagen="https://m.media-amazon.com/images/I/41jjpoXOlrL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DBLSRHSP?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="16,99 €"
+            data-precio-original="19,99 €"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/417beBLBh4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513KD9tLu-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51qiTOijMKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41VbENPZa+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ywnmF2vJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Tmou3TthL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31fy70qTyjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GCZwDmO0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41jjpoXOlrL._SL500_.jpg" alt="gris" loading="lazy" />
+            
+            <span class="var-label">gris</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0DBLX4S7N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-6"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Vicloon Saco para Silla de Paseo Universal — Negro"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31HFFjPQgyL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31HFFjPQgyL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41WU9zKbKQL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41WU9zKbKQL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51SVanx+fYL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51SVanx+fYL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/4102IWbj4HL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/4102IWbj4HL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41C6WuRpi8L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41C6WuRpi8L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31Fj3sqsypL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31Fj3sqsypL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41K1wIQ1l4L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41K1wIQ1l4L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Vicloon Saco para Silla de Paseo Universal — Negro"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31HFFjPQgyL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31HFFjPQgyL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41WU9zKbKQL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41WU9zKbKQL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51SVanx+fYL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51SVanx+fYL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/4102IWbj4HL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/4102IWbj4HL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41C6WuRpi8L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41C6WuRpi8L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31Fj3sqsypL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31Fj3sqsypL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41K1wIQ1l4L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41K1wIQ1l4L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Vicloon Saco para Silla de Paseo Universal — Negro"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.5/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      11,89 €
-    </span>
-    
-      <span class="precio-original"
-            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
-                   text-decoration: line-through; white-space: nowrap;">
-        Antes: 13,99 €
-      </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          11,89 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; ;">
+          
+            Antes: 13,99 €
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Probé el saco en varios paseos y me gustó que encaja con los arneses de 3 y 5 puntos, así que ponerlo y quitarlo fue sencillo. El tejido aguantó el viento y la lluvia ligera, manteniendo a mi bebé abrigado, y la cremallera permite ventilar rápido cuando sube la temperatura. Además, el interior absorbente se siente agradable al tacto y ayuda a regular la humedad durante el paseo. Se desmonta con facilidad y la limpieza es cómoda, por lo que no supone un problema tras las salidas. En general me pareció práctico para viajar con el bebé y una buena opción como regalo para nuevos padres.</p>
 </p>
@@ -2128,116 +2796,350 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0DBLX4S7N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0DBLX4S7N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm">Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm</h3>
+    <article class="ficha-teclado">
+      <h3 id="Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm">Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0F32PDWWQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-7"
-      src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Modelo principal"
+          data-title="Modelo principal"
+          data-imagen="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0F32PDWWQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="39,99 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31Ehf6sgubL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41G+IMPFsQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:325}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+          
+          <span class="var-label">Modelo principal</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Búho Gris Claro - El verano"
+            data-title="Búho Gris Claro - El verano"
+            data-imagen="https://m.media-amazon.com/images/I/31F0LUCeajL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08W98GPGW?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="25,48 €"
+            data-precio-original="27,69 €"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31GVcA-OiUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WXuve3frL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51h6g-FXpjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51cAbVdxVJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vavtP5GDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31F0LUCeajL._SL500_.jpg" alt="Búho Gris Claro - El verano" loading="lazy" />
+            
+            <span class="var-label">Búho Gris Claro - El verano</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="África Marrón - Todo el año"
+            data-title="África Marrón - Todo el año"
+            data-imagen="https://m.media-amazon.com/images/I/41s1cA+y3kL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BCKK3WG4?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/413RhQHyChL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31tET4AgPSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41dyaZg-hTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51BZJGMd2iL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5145VCch5EL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41VULNQskJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41s1cA+y3kL._SL500_.jpg" alt="África Marrón - Todo el año" loading="lazy" />
+            
+            <span class="var-label">África Marrón - Todo el año</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Ciervo Gris Claro - Invierno"
+            data-title="Ciervo Gris Claro - Invierno"
+            data-imagen="https://m.media-amazon.com/images/I/41igJXwOI1L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BHMWJM5W?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="40,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41rN5c5XjbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41dyaZg-hTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51+d8wHbNgL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51tTFpip7uL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Fb2misXML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41igJXwOI1L._SL500_.jpg" alt="Ciervo Gris Claro - Invierno" loading="lazy" />
+            
+            <span class="var-label">Ciervo Gris Claro - Invierno</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Ciervo Gris Claro - El verano"
+            data-title="Ciervo Gris Claro - El verano"
+            data-imagen="https://m.media-amazon.com/images/I/41+m6cOUj3L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0B2P7DXHH?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FKoSrIkeL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41dyaZg-hTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51dj3sPJFAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51MjME9P88L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Fb2misXML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41+m6cOUj3L._SL500_.jpg" alt="Ciervo Gris Claro - El verano" loading="lazy" />
+            
+            <span class="var-label">Ciervo Gris Claro - El verano</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Ciervo Gris Claro - Todo el año"
+            data-title="Ciervo Gris Claro - Todo el año"
+            data-imagen="https://m.media-amazon.com/images/I/41vgQMrOM2L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09N9M9761?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="30,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41lY41t0MDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41dyaZg-hTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51nUrbpyQcL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51o0ON+Y5ML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Fb2misXML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41vgQMrOM2L._SL500_.jpg" alt="Ciervo Gris Claro - Todo el año" loading="lazy" />
+            
+            <span class="var-label">Ciervo Gris Claro - Todo el año</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Beige Con Estrellas Blancas - Todo el año"
+            data-title="Beige Con Estrellas Blancas - Todo el año"
+            data-imagen="https://m.media-amazon.com/images/I/412CayH9ZKL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DK3NVY6L?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="37,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41EHK9GXGNL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41o-ygkXmOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:325}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/412CayH9ZKL._SL500_.jpg" alt="Beige Con Estrellas Blancas - Todo el año" loading="lazy" />
+            
+            <span class="var-label">Beige Con Estrellas Blancas - Todo el año</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Rosa Gris Claro - Todo el año"
+            data-title="Rosa Gris Claro - Todo el año"
+            data-imagen="https://m.media-amazon.com/images/I/418tiEcdRHL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08W8LTBPP?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="24,16 €"
+            data-precio-original="29,94 €"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+3zDaEc9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41pUQ5YPXOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51bvWkmiT7L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51VJweHmG2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51kAfOcEmhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/418tiEcdRHL._SL500_.jpg" alt="Rosa Gris Claro - Todo el año" loading="lazy" />
+            
+            <span class="var-label">Rosa Gris Claro - Todo el año</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Conejo - Invierno"
+            data-title="Conejo - Invierno"
+            data-imagen="https://m.media-amazon.com/images/I/31Ak2TypFbL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DNQP52XW?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="41,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41faX2kMraL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41DvHKpjM1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bylh+oa1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31Ak2TypFbL._SL500_.jpg" alt="Conejo - Invierno" loading="lazy" />
+            
+            <span class="var-label">Conejo - Invierno</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Rosa Gris Claro - El verano"
+            data-title="Rosa Gris Claro - El verano"
+            data-imagen="https://m.media-amazon.com/images/I/41DAW2uw2jL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08W8NPYH1?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="29,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41tEt90kf+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412kydMHkaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41pUQ5YPXOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51HIBDoYIpL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41oaPo6sgdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51W4v6KcFmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41DAW2uw2jL._SL500_.jpg" alt="Rosa Gris Claro - El verano" loading="lazy" />
+            
+            <span class="var-label">Rosa Gris Claro - El verano</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Conejo - Todo el año"
+            data-title="Conejo - Todo el año"
+            data-imagen="https://m.media-amazon.com/images/I/31Ak2TypFbL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DNQMPCF6?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="41,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41faX2kMraL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bylh+oa1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31Ak2TypFbL._SL500_.jpg" alt="Conejo - Todo el año" loading="lazy" />
+            
+            <span class="var-label">Conejo - Todo el año</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0F32PDWWQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-7"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31Ehf6sgubL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31Ehf6sgubL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41G+IMPFsQL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41G+IMPFsQL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="325"
-        alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31Ehf6sgubL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31Ehf6sgubL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41G+IMPFsQL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41G+IMPFsQL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="325"
+              alt="Variante de Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.3/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.3/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      39,99 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          39,99 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Empecé a usar esta manta como saco en el carrito y también la coloqué en el capazo; además la capucha reversible resulta práctica según el clima.
 Se fija con facilidad al arnés de 3 y 5 puntos, por eso me da seguridad en los desplazamientos.
@@ -2261,156 +3163,264 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0F32PDWWQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0F32PDWWQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Interbaby Saco Universal Silla Paseo Perritos Azul">Interbaby Saco Universal Silla Paseo Perritos Azul</h3>
+    <article class="ficha-teclado">
+      <h3 id="Interbaby Saco Universal Silla Paseo Perritos Azul">Interbaby Saco Universal Silla Paseo Perritos Azul</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0B7BDSL1N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-8"
-      src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Interbaby Saco Universal Silla Paseo Perritos Azul"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Perritos Azul"
+          data-title="Perritos Azul"
+          data-imagen="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0B7BDSL1N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="33,99 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZNuwFxf2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41YqiMyfn0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41K4T1HQFfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FEkTAFBzL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513ggolUqKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ybV6AchvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31skKVYmITL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31+fZyHENGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg" alt="Perritos Azul" loading="lazy" />
+          
+          <span class="var-label">Perritos Azul</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Animalitos Gris"
+            data-title="Animalitos Gris"
+            data-imagen="https://m.media-amazon.com/images/I/417HfLf2cyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07X3D362C?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KZ7UYzR8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41nV0nasMiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ep2t1vWdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5135F2Mn5IL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41I3YMRKzFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31KAbgsI5aL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41pXOOaI6cL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-CudqzimL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/417HfLf2cyL._SL500_.jpg" alt="Animalitos Gris" loading="lazy" />
+            
+            <span class="var-label">Animalitos Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Marino Rosa"
+            data-title="Marino Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09GKMGTV9?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,75 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51MbNm+NSoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KIGvp5pQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51aiTjGLw4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51MdwLB7E9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41iNtGLzU9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31+KQ9G2zkL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31-BbcSL4AL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41onQhT27HL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg" alt="Marino Rosa" loading="lazy" />
+            
+            <span class="var-label">Marino Rosa</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Marino Gris"
+            data-title="Marino Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41AgiXAeAAL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09GKMW2RC?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41s997Ld2+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/4179uvic8+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51M8fmEQoOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5161QFrUz0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41F8lbTq-9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HPrFrnexL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31LTz+w21EL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41NLXxQ-qLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WW24rmKFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41sAeTACrUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41AgiXAeAAL._SL500_.jpg" alt="Marino Gris" loading="lazy" />
+            
+            <span class="var-label">Marino Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Cactus Gris"
+            data-title="Cactus Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41ZxvTlL5UL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0B7BB7682?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,80 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41P1t7z7yZL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Yc7wMt4eL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/414oXZfAirL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51uG89Q-30L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+ceXy5nOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31GXHuAF5uL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41BjL5OMqbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41VkvcxfvrL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41ZxvTlL5UL._SL500_.jpg" alt="Cactus Gris" loading="lazy" />
+            
+            <span class="var-label">Cactus Gris</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0B7BDSL1N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-8"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Interbaby Saco Universal Silla Paseo Perritos Azul"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41ZNuwFxf2L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41ZNuwFxf2L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41YqiMyfn0L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41YqiMyfn0L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41K4T1HQFfL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41K4T1HQFfL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41FEkTAFBzL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41FEkTAFBzL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/513ggolUqKL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/513ggolUqKL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31ybV6AchvL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31ybV6AchvL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31skKVYmITL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31skKVYmITL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31+fZyHENGL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31+fZyHENGL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Interbaby Saco Universal Silla Paseo Perritos Azul"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41ZNuwFxf2L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41ZNuwFxf2L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41YqiMyfn0L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41YqiMyfn0L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41K4T1HQFfL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41K4T1HQFfL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41FEkTAFBzL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41FEkTAFBzL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/513ggolUqKL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/513ggolUqKL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31ybV6AchvL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31ybV6AchvL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31skKVYmITL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31skKVYmITL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31+fZyHENGL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31+fZyHENGL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Universal Silla Paseo Perritos Azul"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.3/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.3/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      33,99 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          33,99 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Lo he usado en paseos con mi bebé y encaja bien en distintos carritos, cumpliendo la promesa de compatibilidad; el interior afelpado resulta muy cómodo y mantiene el calor sin generar exceso de sudor gracias al tejido técnico transpirable. Además, la parte exterior impermeable y la trasera antideslizante me han dado seguridad en días de viento o lluvia, y las cremalleras dobles facilitan el acceso y la ventilación cuando hace más calor.</p>
 
@@ -2432,156 +3442,264 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0B7BDSL1N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0B7BDSL1N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable">Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable</h3>
+    <article class="ficha-teclado">
+      <h3 id="Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable">Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B09GKMGTV9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-9"
-      src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Marino Rosa"
+          data-title="Marino Rosa"
+          data-imagen="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B09GKMGTV9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="33,75 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51MbNm+NSoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KIGvp5pQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51aiTjGLw4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51MdwLB7E9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41iNtGLzU9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31+KQ9G2zkL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31-BbcSL4AL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41onQhT27HL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg" alt="Marino Rosa" loading="lazy" />
+          
+          <span class="var-label">Marino Rosa</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Animalitos Gris"
+            data-title="Animalitos Gris"
+            data-imagen="https://m.media-amazon.com/images/I/417HfLf2cyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07X3D362C?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KZ7UYzR8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41nV0nasMiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ep2t1vWdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5135F2Mn5IL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41I3YMRKzFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31KAbgsI5aL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41pXOOaI6cL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-CudqzimL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/417HfLf2cyL._SL500_.jpg" alt="Animalitos Gris" loading="lazy" />
+            
+            <span class="var-label">Animalitos Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Marino Gris"
+            data-title="Marino Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41AgiXAeAAL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09GKMW2RC?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41s997Ld2+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/4179uvic8+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51M8fmEQoOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5161QFrUz0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41F8lbTq-9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HPrFrnexL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31LTz+w21EL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41NLXxQ-qLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WW24rmKFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41sAeTACrUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41AgiXAeAAL._SL500_.jpg" alt="Marino Gris" loading="lazy" />
+            
+            <span class="var-label">Marino Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Cactus Gris"
+            data-title="Cactus Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41ZxvTlL5UL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0B7BB7682?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,80 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41P1t7z7yZL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Yc7wMt4eL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/414oXZfAirL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51uG89Q-30L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+ceXy5nOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31GXHuAF5uL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41BjL5OMqbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41VkvcxfvrL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41ZxvTlL5UL._SL500_.jpg" alt="Cactus Gris" loading="lazy" />
+            
+            <span class="var-label">Cactus Gris</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Perritos Azul"
+            data-title="Perritos Azul"
+            data-imagen="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0B7BDSL1N?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZNuwFxf2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41YqiMyfn0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41K4T1HQFfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FEkTAFBzL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513ggolUqKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ybV6AchvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31skKVYmITL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31+fZyHENGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41yAZ5O-IPL._SL500_.jpg" alt="Perritos Azul" loading="lazy" />
+            
+            <span class="var-label">Perritos Azul</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B09GKMGTV9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-9"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51MbNm+NSoL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51MbNm+NSoL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41KIGvp5pQL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41KIGvp5pQL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51aiTjGLw4L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51aiTjGLw4L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51MdwLB7E9L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51MdwLB7E9L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41iNtGLzU9L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41iNtGLzU9L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31+KQ9G2zkL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31+KQ9G2zkL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31-BbcSL4AL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31-BbcSL4AL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41onQhT27HL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41onQhT27HL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41-Viy7YjLL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51MbNm+NSoL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51MbNm+NSoL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41KIGvp5pQL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41KIGvp5pQL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31dYz9LP5OL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51aiTjGLw4L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51aiTjGLw4L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51MdwLB7E9L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51MdwLB7E9L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41iNtGLzU9L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41iNtGLzU9L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31+KQ9G2zkL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31+KQ9G2zkL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31-BbcSL4AL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31-BbcSL4AL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41onQhT27HL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41onQhT27HL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.3/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.3/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      33,75 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          33,75 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Lo uso a diario con el carro y me sorprendió lo cómodo que está el bebé; el interior afelpado resulta muy acogedor y, además, la parte exterior impermeable nos ha protegido en paseos lluviosos. La trasera antideslizante mantiene el saco en su sitio y la instalación es sencilla gracias al diseño universal, por eso no tuve problemas al cambiarlo entre distintos coches.</p>
 
@@ -2605,86 +3723,84 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B09GKMGTV9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B09GKMGTV9?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)">Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)</h3>
+    <article class="ficha-teclado">
+      <h3 id="Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)">Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B09RG8CLPV?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-10"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B09RG8CLPV?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-10"
-      src="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41PfTSUEbuL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41PfTSUEbuL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="440"
+              height="500"
+              alt="Variante de Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31VAkIhzLuL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31VAkIhzLuL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/31mW6Zg9Y5L._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41PfTSUEbuL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41PfTSUEbuL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="440"
-        height="500"
-        alt="Variante de Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31VAkIhzLuL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31VAkIhzLuL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      74,34 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          74,34 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Probé el saco en varios paseos y me sorprendió lo cálido y agradable que resulta al contacto; además, el tejido es suave y ofrece buena protección contra el viento, por eso lo usé mucho en mañanas frías. El montaje es sencillo y las aperturas para el arnés facilitan fijarlo en distintos modelos de silla, así que no tuve problema de ajuste.</p>
 
@@ -2708,8 +3824,8 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B09RG8CLPV?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B09RG8CLPV?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👶 Ver oferta actual en Amazon</a>
+    </article>
 
     
   

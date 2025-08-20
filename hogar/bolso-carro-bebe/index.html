@@ -614,7 +614,7 @@
         
           <tr style="background-color: #f9f9f9; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
           <td style="border: 1px solid #ddd;">
-            <img alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru" src="https://m.media-amazon.com/images/I/515yGKUYioL._SL500_.jpg" style="height: auto; max-height: 60px; width: auto; max-width: 100%;" />
+            <img alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru" src="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg" style="height: auto; max-height: 60px; width: auto; max-width: 100%;" />
           </td>
           <td style="padding: 0.6em; text-align: center;"><strong>MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru</strong></td>
           <td style="padding: 0.6em;">
@@ -901,7 +901,7 @@
     </div>
     
     <div class="ficha-teclado" style="margin-bottom: 1em; padding: 1em; border: 1px solid #ddd; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-      <img alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru" src="https://m.media-amazon.com/images/I/515yGKUYioL._SL500_.jpg" style="max-width: 100%; height: auto; max-height: 120px; width: auto;" />
+      <img alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru" src="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg" style="max-width: 100%; height: auto; max-height: 120px; width: auto;" />
       <h3 style="text-align: center;font-size: 1.1em; margin-top: 0.6em;">MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru</h3>
       <p>
         <strong>Lo mejor</strong><br>
@@ -1215,129 +1215,84 @@ Como experto, busco que combine <strong>organización eficiente</strong> y <stro
   margin: 1.5em 0;
   opacity: 0.5;
 }
-.ficha-teclado img {
-  position: relative;
-  object-fit: contain;
-}
+.ficha-teclado img { position: relative; object-fit: contain; }
 .imagen-con-miniaturas {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* ✅ Alinea verticalmente al centro */
-  gap: 1.5em;
-  margin-bottom: 1em;
-  flex-wrap: wrap;
+  display: flex; justify-content: center; align-items: center; gap: 1.5em;
+  margin-bottom: 1em; flex-wrap: wrap;
 }
-.imagen-con-miniaturas .principal {
-  max-height: 350px;
-  width: auto;
-}
+.imagen-con-miniaturas .principal { max-height: 350px; width: auto; }
 .galeria-miniaturas {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(5, 50px);
-  gap: 8px;
+  display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, 50px); gap: 8px;
 }
-
 .galeria-miniaturas img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border 0.3s;
+  width: 50px; height: 50px; object-fit: cover; cursor: pointer;
+  border: 1px solid #ccc; border-radius: 4px; transition: border 0.3s;
 }
-.galeria-miniaturas img:hover {
-  border: 2px solid #0073e6;
-}
-.galeria-miniaturas img.activa {
-  border: 2px solid #0073e6 !important;
-}
+.galeria-miniaturas img:hover { border: 2px solid #0073e6; }
+.galeria-miniaturas img.activa { border: 2px solid #0073e6 !important; }
+
 @media (max-width: 768px) {
   .galeria-miniaturas {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    margin-top: 10px;
+    display: flex; flex-direction: row; gap: 8px; overflow-x: auto;
+    padding-bottom: 10px; margin-top: 10px; scroll-snap-type: x mandatory;
   }
-
-  .galeria-miniaturas img {
-    flex: 0 0 auto;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
+  .galeria-miniaturas img { flex: 0 0 auto; width: 60px; height: 60px; object-fit: cover; border-radius: 4px; scroll-snap-align: start; }
 }
 
-.lupa-amazon-container {
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
-  position: relative;
-}
-
-.lupa-imagen {
-  position: relative;
-}
-.lupa-imagen img {
-  display: block;
-  max-height: 350px;
-  cursor: zoom-in;
-}
+/* Lupa/zoom por producto (no global) */
+.lupa-amazon-container { display: flex; justify-content: center; gap: 1.5em; position: relative; }
+.lupa-imagen { position: relative; }
+.lupa-imagen img { display: block; max-height: 350px; cursor: zoom-in; }
 .zoom-flotante {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border: 2px solid #0073e6;
-  background-repeat: no-repeat;
-  background-size: 300%;
-  display: none;
-  z-index: 9999;
-  pointer-events: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: absolute; width: 400px; height: 400px; border: 2px solid #0073e6;
+  background-repeat: no-repeat; background-size: 300%; display: none;
+  z-index: 9999; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+/* Selector de variantes */
+.selector-variantes {
+  display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin: .5rem 0 1rem;
+}
+.selector-variantes .var-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
+  cursor: pointer; background: #fff; font-size: .9rem;
+}
+.selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
+.selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
+.selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
 </style>
 
 <script>
+/* === LUPA / ZOOM por producto === */
 function mostrarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   const img = container.querySelector('img');
   const srcZoom = img.getAttribute('data-zoom') || img.src;
   zoom.style.display = 'block';
   zoom.style.backgroundImage = `url('${srcZoom}')`;
 }
-
-function ocultarZoomFlotante() {
+function ocultarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   zoom.style.display = 'none';
 }
-
 function moverZoomFlotante(e, container) {
   if (window.innerWidth < 768) return;
   const img = container.querySelector('img');
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
+  zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  const percentX = (x / rect.width) * 100;
-  const percentY = (y / rect.height) * 100;
-
-  zoom.style.backgroundPosition = `${percentX}% ${percentY}%`;
-
-  // Posiciona el zoom junto al cursor
   zoom.style.left = `${e.pageX + 20}px`;
-  zoom.style.top = `${e.pageY - 150}px`; // ajusta para centrar verticalmente
+  zoom.style.top = `${e.pageY - 150}px`;
 }
 
-
+/* === MINIATURAS === */
 function seleccionarMiniatura(imgElement) {
   const nuevaSrc = imgElement.getAttribute("data-src");
   const contenedor = imgElement.closest(".ficha-teclado");
@@ -1346,130 +1301,198 @@ function seleccionarMiniatura(imgElement) {
   principal.src = nuevaSrc;
   principal.setAttribute('data-zoom', nuevaSrc);
 
-  const zoom = document.getElementById("zoom-flotante");
+  const zoom = contenedor.querySelector(".zoom-flotante");
   zoom.style.backgroundImage = `url('${nuevaSrc}')`;
 
   const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
   miniaturas.forEach(img => img.classList.remove("activa"));
   imgElement.classList.add("activa");
 }
+
+/* === VARIANTES === */
+function onVariantClick(btn) {
+  const ficha = btn.closest('.ficha-teclado');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+
+  const vImg = btn.dataset.imagen;
+  const vEnlace = btn.dataset.enlace;
+  const vPrecio = btn.dataset.precio || '';
+  const vPrecioOriginal = btn.dataset.precioOriginal || '';
+
+  // 1) imagen principal + zoom
+  const principal = ficha.querySelector('.lupa-imagen img');
+  if (vImg) {
+    principal.src = vImg;
+    principal.setAttribute('data-zoom', vImg);
+  }
+
+  // 2) ENLACES: botón de compra + enlace de la imagen principal
+  const boton = ficha.querySelector('.boton-compra');
+  if (boton && vEnlace) boton.href = vEnlace;
+
+  const linkImg = ficha.querySelector('.lupa-imagen a');
+  if (linkImg && vEnlace) linkImg.href = vEnlace;
+
+  // 3) precios
+  const precioActual = ficha.querySelector('.precio-actual');
+  if (precioActual) precioActual.textContent = vPrecio || '';
+
+  const precioOriginal = ficha.querySelector('.precio-original');
+  if (precioOriginal) {
+    if (vPrecioOriginal && vPrecioOriginal !== 'No especificado') {
+      precioOriginal.style.display = '';
+      precioOriginal.textContent = `Antes: ${vPrecioOriginal}`;
+    } else {
+      precioOriginal.style.display = 'none';
+    }
+  }
+
+  // 4) galería de miniaturas
+  const galeria = ficha.querySelector('.galeria-miniaturas');
+  const imagenesJson = btn.dataset.imagenes || '';
+  if (galeria && imagenesJson) {
+    try {
+      const imagenes = JSON.parse(imagenesJson);
+      galeria.innerHTML = '';
+      const mini = document.createElement('img');
+      mini.src = vImg;
+      mini.setAttribute('data-src', vImg);
+      mini.className = 'activa';
+      mini.alt = 'Imagen principal';
+      mini.loading = 'lazy';
+      mini.onclick = function(){ seleccionarMiniatura(this); };
+      galeria.appendChild(mini);
+
+      imagenes.forEach(iv=>{
+        const m = document.createElement('img');
+        m.src = iv.url;
+        m.setAttribute('data-src', iv.url);
+        m.alt = 'Variante';
+        m.loading = 'lazy';
+        m.onclick = function(){ seleccionarMiniatura(this); };
+        galeria.appendChild(m);
+      });
+    } catch(e) { /* silencio intencional */ }
+  }
+}
+
+/* Accesibilidad con teclado en variantes */
+document.addEventListener('keydown', function(e){
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const tgt = e.target;
+  if (tgt.classList && tgt.classList.contains('var-btn')) {
+    e.preventDefault();
+    onVariantClick(tgt);
+  }
+});
 </script>
-
-
-
-<div id="zoom-flotante" class="zoom-flotante"></div>
 
 <div class="bloque-productos">
   
-    <div class="ficha-teclado">
-      <h3 id="Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm">Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm</h3>
+    <article class="ficha-teclado">
+      <h3 id="Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm">Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-1"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-1"
-      src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31-rlxkmT9L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31-rlxkmT9L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41uYy-q8whL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41uYy-q8whL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31T+Km4CbuL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31T+Km4CbuL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41cxM7tmvaL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41cxM7tmvaL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31-rlxkmT9L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31-rlxkmT9L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41uYy-q8whL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41uYy-q8whL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31T+Km4CbuL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31T+Km4CbuL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41cxM7tmvaL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41cxM7tmvaL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 5/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      19,00 €
-    </span>
-    
-      <span class="precio-original"
-            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
-                   text-decoration: line-through; white-space: nowrap;">
-        Antes: 28,90 €
-      </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          19,00 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; ;">
+          
+            Antes: 28,90 €
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré este bolso para usar con el carrito y me ha resultado muy práctico en los paseos con el bebé. Tiene buen espacio y los distintos bolsillos facilitan mantener biberón, pañales y móvil siempre a mano.
 Las asas cortas permiten fijarlo cómodamente al cochecito y la cremallera ofrece un cierre seguro. El tejido plastificado da sensación de solidez y protege el interior.
@@ -1491,126 +1514,213 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="TENDS Bolso para Carrito y Maternidad 37x34 cm">TENDS Bolso para Carrito y Maternidad 37x34 cm</h3>
+    <article class="ficha-teclado">
+      <h3 id="TENDS Bolso para Carrito y Maternidad 37x34 cm">TENDS Bolso para Carrito y Maternidad 37x34 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0DBRMMD33?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-2"
-      src="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="TENDS Bolso para Carrito y Maternidad 37x34 cm"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Grey"
+          data-title="Grey"
+          data-imagen="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0DBRMMD33?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="19,99 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Qr+XSk2CL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41lcRk+LVGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51B3aJQtr2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31gkpkoolSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51oENRInweL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51TKkF5rmQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg" alt="Grey" loading="lazy" />
+          
+          <span class="var-label">Grey</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Crema"
+            data-title="Crema"
+            data-imagen="https://m.media-amazon.com/images/I/41Zdkg7zu8L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DBRPS1T8?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51ejA-K4oqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/510emj-fzmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31TPNam82UL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41SZtaQJqPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31MVrRhQjgL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51IfcDrImdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31m1rq1nDoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41Zdkg7zu8L._SL500_.jpg" alt="Crema" loading="lazy" />
+            
+            <span class="var-label">Crema</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Negro"
+            data-title="Negro"
+            data-imagen="https://m.media-amazon.com/images/I/51qzsqh3fnL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CQHX79ZF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51M64dYWwgL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/519mQ-npJnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zu0yJm+xL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41tpsLvvUsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:293},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41UPikwiZjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vhzEfzh9L._SL500_.jpg&quot;,&quot;width&quot;:333,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51GgMuG3pBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51qzsqh3fnL._SL500_.jpg" alt="Negro" loading="lazy" />
+            
+            <span class="var-label">Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Gris"
+            data-title="Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41jNh1Nn4pL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CQHX1NGD?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41f0WxUviyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/517mZSCuajL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41OrgwKx8VL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41442yCVsGL._SL500_.jpg&quot;,&quot;width&quot;:334,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51nD14moCoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419H849n3eL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41jNh1Nn4pL._SL500_.jpg" alt="Gris" loading="lazy" />
+            
+            <span class="var-label">Gris</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0DBRMMD33?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-2"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="TENDS Bolso para Carrito y Maternidad 37x34 cm"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de TENDS Bolso para Carrito y Maternidad 37x34 cm"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51Qr+XSk2CL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51Qr+XSk2CL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41lcRk+LVGL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41lcRk+LVGL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="369"
-        alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51B3aJQtr2L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51B3aJQtr2L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31gkpkoolSL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31gkpkoolSL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="369"
-        alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51oENRInweL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51oENRInweL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51TKkF5rmQL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51TKkF5rmQL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41fuW4qItML._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de TENDS Bolso para Carrito y Maternidad 37x34 cm"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51Qr+XSk2CL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51Qr+XSk2CL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41lcRk+LVGL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41lcRk+LVGL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="369"
+              alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51B3aJQtr2L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51B3aJQtr2L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31gkpkoolSL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31gkpkoolSL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="369"
+              alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51oENRInweL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51oENRInweL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51TKkF5rmQL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51TKkF5rmQL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de TENDS Bolso para Carrito y Maternidad 37x34 cm"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.9/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.9/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      19,99 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          19,99 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Lo uso en los paseos y me resulta muy práctico: la tela oxford transmite solidez sin añadir peso y las medidas permiten llevar lo esencial sin exceso de volumen.
 Se fija al carrito con facilidad y el compartimento principal facilita encontrar chupetes, juguetes o pañales rápidamente.
@@ -1633,146 +1743,256 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0DBRMMD33?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0DBRMMD33?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru">MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru</h3>
+    <article class="ficha-teclado">
+      <h3 id="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru">MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0C6M58RZQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-3"
-      src="https://m.media-amazon.com/images/I/515yGKUYioL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/515yGKUYioL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Ecru - M"
+          data-title="Ecru - M"
+          data-imagen="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0C6M58RZQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="34,95 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41IdZ-8pAfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ftq2sofJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bmEEVapFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/415T5ELlcJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg" alt="Ecru - M" loading="lazy" />
+          
+          <span class="var-label">Ecru - M</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Pearl Avenue"
+            data-title="Pearl Avenue"
+            data-imagen="https://m.media-amazon.com/images/I/31fkB1m3aJL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CL7D65C5?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41aWzF1fjyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51oj7nBt86L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41S8S+7tTKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41MowAEIfbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41E8y2alSXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41UDZmI-Z3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41sjTxatUNL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41b-6QPR44L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31fkB1m3aJL._SL500_.jpg" alt="Pearl Avenue" loading="lazy" />
+            
+            <span class="var-label">Pearl Avenue</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Green Avenue"
+            data-title="Green Avenue"
+            data-imagen="https://m.media-amazon.com/images/I/311gNB-tcqL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CL7DXGZM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="35,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41BH0pBB3rL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41CJikKsypL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41aKAftA4OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ULy1KS4SL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+B68-gbYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zZSB5A8dL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41TzsvNW7oL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/418MR6DwjHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/311gNB-tcqL._SL500_.jpg" alt="Green Avenue" loading="lazy" />
+            
+            <span class="var-label">Green Avenue</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Mint"
+            data-title="Mint"
+            data-imagen="https://m.media-amazon.com/images/I/31AJnHbawnL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D7J5YHFQ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41DfRf2fCaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41gsiGAY3tL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/411sLRrKDLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KAzK+HjvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5133W+x4r6L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41L1dtdpitL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41CzVWMIkfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31AJnHbawnL._SL500_.jpg" alt="Mint" loading="lazy" />
+            
+            <span class="var-label">Mint</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Blossom"
+            data-title="Blossom"
+            data-imagen="https://m.media-amazon.com/images/I/317UW823c8L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F4DDBS5K?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419EHqmGpqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-T1WZxCFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31zmcP0broL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31mTP1qR6fL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41z9CYqSToL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412mdd6PCyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41wJWQVxvDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/317UW823c8L._SL500_.jpg" alt="Blossom" loading="lazy" />
+            
+            <span class="var-label">Blossom</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Dessert Avenue"
+            data-title="Dessert Avenue"
+            data-imagen="https://m.media-amazon.com/images/I/31OyrtS-83L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F4DJ3RNL?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Vu0rblDSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HIWIdrUdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mx2RTcHhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419u9nM7jrL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qa+hLBQTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Jv1WXymbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41OMYv4+HaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WogN9LNvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31OyrtS-83L._SL500_.jpg" alt="Dessert Avenue" loading="lazy" />
+            
+            <span class="var-label">Dessert Avenue</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Leaf"
+            data-title="Leaf"
+            data-imagen="https://m.media-amazon.com/images/I/41XqxGW4tUL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D7J7LRNX?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41sf-BgAtHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51RNmqK0p2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41N1r4C4xWL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/417G8ggdslL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412H9nAnA8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41i14TNkSCL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41YWi1tH7OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41XqxGW4tUL._SL500_.jpg" alt="Leaf" loading="lazy" />
+            
+            <span class="var-label">Leaf</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0C6M58RZQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-3"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/515yGKUYioL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/515yGKUYioL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51fyyn+6HvL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51fyyn+6HvL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41WR0BBaUOL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41WR0BBaUOL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51o-CZ-okgL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51o-CZ-okgL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41sQgnB7CNL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41sQgnB7CNL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41CQG++JQoL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41CQG++JQoL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51D0IFxDjfL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51D0IFxDjfL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51tWjqbcbHL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51tWjqbcbHL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41LvpDrLXOL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41LvpDrLXOL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41IdZ-8pAfL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41IdZ-8pAfL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="333"
+              alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41ftq2sofJL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41ftq2sofJL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41bmEEVapFL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41bmEEVapFL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="333"
+              alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/415T5ELlcJL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/415T5ELlcJL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.8/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.8/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      34,95 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          34,95 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré este bolso panera para usar en el carrito y me ha resultado muy práctico y con estilo. 
 Los dos compartimentos facilitan mantener separados pañales y biberones, y la cremallera asegura todo durante el paseo. 
@@ -1796,136 +2016,202 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0C6M58RZQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0C6M58RZQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm">Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm</h3>
+    <article class="ficha-teclado">
+      <h3 id="Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm">Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B09R21T6G5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-4"
-      src="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
-      width="500"
-      height="333"
-      alt="Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Moderno"
+          data-title="Moderno"
+          data-imagen="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B09R21T6G5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="45,78 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg" alt="Moderno" loading="lazy" />
+          
+          <span class="var-label">Moderno</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Casual"
+            data-title="Casual"
+            data-imagen="https://m.media-amazon.com/images/I/41J8LsqqQ+L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09R225P26?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="25,00 €"
+            data-precio-original="31,50 €"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41voit13GhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41D7gGJrvBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41J8LsqqQ+L._SL500_.jpg" alt="Casual" loading="lazy" />
+            
+            <span class="var-label">Casual</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Contemporáneo"
+            data-title="Contemporáneo"
+            data-imagen="https://m.media-amazon.com/images/I/41Qpf80NdSL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09R239X4H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="45,98 €"
+            data-precio-original="54,50 €"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HYcssna+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31DLvF6BU5L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/410D5TyS9pL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31BKYqjjifL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41m4URro4+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41I-2prdXIL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41q4zHzOU9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41Qpf80NdSL._SL500_.jpg" alt="Contemporáneo" loading="lazy" />
+            
+            <span class="var-label">Contemporáneo</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B09R21T6G5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-4"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
+              width="500"
+              height="333"
+              alt="Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="333"
-      alt="Imagen principal de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="333"
+            alt="Imagen principal de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.7/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.7/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      45,78 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          45,78 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré este bolso para los paseos y lo encuentro muy práctico y versátil. Me gusta poder colgarlo al hombro o sujetarlo al carrito según la ocasión.
 Tiene gran capacidad y una distribución con muchos bolsillos que permite llevar todo organizado; además incluye el cambiador.
@@ -1948,146 +2234,144 @@ Su estilo neutro y urbano lo hace apto para padres y madres, y las asas cortas y
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B09R21T6G5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B09R21T6G5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Danielstore Bolso Maternidad Personalizado Rosa">Danielstore Bolso Maternidad Personalizado Rosa</h3>
+    <article class="ficha-teclado">
+      <h3 id="Danielstore Bolso Maternidad Personalizado Rosa">Danielstore Bolso Maternidad Personalizado Rosa</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0777JB9R5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-5"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
+              width="321"
+              height="500"
+              alt="Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0777JB9R5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-5"
-      src="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
-      width="321"
-      height="500"
-      alt="Danielstore Bolso Maternidad Personalizado Rosa"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="321"
+            height="500"
+            alt="Imagen principal de Danielstore Bolso Maternidad Personalizado Rosa"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41-ac-Rr6wL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41-ac-Rr6wL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="480"
+              height="500"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51hPAg8So5L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51hPAg8So5L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31LWm0OLBpL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31LWm0OLBpL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="422"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/51fleqod4AL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/51fleqod4AL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="447"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31skF+GiOmL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31skF+GiOmL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="238"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41C8VPd+JCL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41C8VPd+JCL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="443"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41gTwijER7L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41gTwijER7L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="499"
+              height="500"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41Ln72Mz+dL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41Ln72Mz+dL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="447"
+              alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41X29MYtjNL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="321"
-      height="500"
-      alt="Imagen principal de Danielstore Bolso Maternidad Personalizado Rosa"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41-ac-Rr6wL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41-ac-Rr6wL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="480"
-        height="500"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51hPAg8So5L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51hPAg8So5L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31LWm0OLBpL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31LWm0OLBpL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="422"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/51fleqod4AL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/51fleqod4AL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="447"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31skF+GiOmL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31skF+GiOmL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="238"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41C8VPd+JCL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41C8VPd+JCL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="443"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41gTwijER7L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41gTwijER7L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="499"
-        height="500"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41Ln72Mz+dL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41Ln72Mz+dL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="447"
-        alt="Variante de Danielstore Bolso Maternidad Personalizado Rosa"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      Sin precio
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          Sin precio
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré este bolso para salir con mi bebé y me gustó su combinación de estilo y practicidad.
 El bordado con el nombre le da un toque personal que hace cada salida más especial.
@@ -2114,152 +2398,146 @@ En general es un organizador cómodo y funcional para el día a día.</p>
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0777JB9R5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0777JB9R5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Walking Mum Bolsa Crossbody Mimosa Rosa (floral)">Walking Mum Bolsa Crossbody Mimosa Rosa (floral)</h3>
+    <article class="ficha-teclado">
+      <h3 id="Walking Mum Bolsa Crossbody Mimosa Rosa (floral)">Walking Mum Bolsa Crossbody Mimosa Rosa (floral)</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0DM97L5JL?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-6"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0DM97L5JL?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-6"
-      src="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41OHQIu3YTL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41OHQIu3YTL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/3156qGtWRiL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/3156qGtWRiL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41DpcqAIOEL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41DpcqAIOEL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31Evrxrt9VL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31Evrxrt9VL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41kisacNJgL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41kisacNJgL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41eOY2LYq-L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41eOY2LYq-L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/4144OHAi98L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/4144OHAi98L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31BeRo9vpUL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31BeRo9vpUL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.4/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41qYLc2l+XL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41OHQIu3YTL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41OHQIu3YTL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/3156qGtWRiL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/3156qGtWRiL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41DpcqAIOEL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41DpcqAIOEL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31Evrxrt9VL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31Evrxrt9VL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41kisacNJgL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41kisacNJgL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41eOY2LYq-L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41eOY2LYq-L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/4144OHAi98L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/4144OHAi98L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31BeRo9vpUL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31BeRo9vpUL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.4/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      31,34 €
-    </span>
-    
-      <span class="precio-original"
-            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
-                   text-decoration: line-through; white-space: nowrap;">
-        Antes: 38,00 €
-      </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          31,35 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; ;">
+          
+            Antes: 38,00 €
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré la bolsa crossbody Mimosa de Walking Mum y me llamó la atención su estampado floral en tonos rosa. El formato cruzado resulta cómodo para llevar lo esencial manteniendo las manos libres, y aporta un toque femenino a mis looks diarios.
 La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para conservar el estampado recomiendo evitar el contacto con superficies ásperas; en general es una opción práctica y con estilo para el día a día.</p>
@@ -2280,106 +2558,172 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0DM97L5JL?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0DM97L5JL?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)">mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)</h3>
+    <article class="ficha-teclado">
+      <h3 id="mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)">mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B07PJS8QX6?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-7"
-      src="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Talega Polipiel"
+          data-title="Talega Polipiel"
+          data-imagen="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B07PJS8QX6?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="29,95 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31of-qS7I5L._SL500_.jpg&quot;,&quot;width&quot;:374,&quot;height&quot;:348},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HkvUEYiTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41k6n1FOolL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/414Y6poDkML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg" alt="Talega Polipiel" loading="lazy" />
+          
+          <span class="var-label">Talega Polipiel</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Bolso Kona"
+            data-title="Bolso Kona"
+            data-imagen="https://m.media-amazon.com/images/I/31ssuCmasDL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07PT6NLNY?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="35,90 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412wKbKti2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Z-HuMdiXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31ssuCmasDL._SL500_.jpg" alt="Bolso Kona" loading="lazy" />
+            
+            <span class="var-label">Bolso Kona</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Bolso Polipiel"
+            data-title="Bolso Polipiel"
+            data-imagen="https://m.media-amazon.com/images/I/41Dqftd+TgL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07H2JS63P?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="32,90 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qWFPkrReL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WyoGNxmcL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41kmmBuqFvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41J8HhyxoXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41iDGiPvTTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QOZZJPx+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ecxBW1VIL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QNR+jSPTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41Dqftd+TgL._SL500_.jpg" alt="Bolso Polipiel" loading="lazy" />
+            
+            <span class="var-label">Bolso Polipiel</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B07PJS8QX6?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-7"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31of-qS7I5L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31of-qS7I5L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="374"
-        height="348"
-        alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41HkvUEYiTL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41HkvUEYiTL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41k6n1FOolL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41k6n1FOolL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/414Y6poDkML._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/414Y6poDkML._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41odGtQMTeL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31of-qS7I5L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31of-qS7I5L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="374"
+              height="348"
+              alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41HkvUEYiTL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41HkvUEYiTL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41k6n1FOolL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41k6n1FOolL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/414Y6poDkML._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/414Y6poDkML._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.4/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.4/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      29,95 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          29,95 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré esta talega para llevar lo esencial del bebé en los paseos y me convenció su personalización con el nombre bordado, que queda muy bonito.
 La polipiel facilita mucho la limpieza y el cierre con cremallera aporta seguridad al transportar los objetos.
@@ -2403,126 +2747,213 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B07PJS8QX6?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B07PJS8QX6?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="variouss Bolso Talega Lactancia Polipiel Blanco/Azul">variouss Bolso Talega Lactancia Polipiel Blanco/Azul</h3>
+    <article class="ficha-teclado">
+      <h3 id="variouss Bolso Talega Lactancia Polipiel Blanco/Azul">variouss Bolso Talega Lactancia Polipiel Blanco/Azul</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B0D295GR5F?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-8"
-      src="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
-      width="500"
-      height="500"
-      alt="variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Blanco/Azul"
+          data-title="Blanco/Azul"
+          data-imagen="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0D295GR5F?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="35,99 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ZWnaAzoEL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31EyBKKr+KL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31w92f37yYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41cKORKe1sL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21669IuZk0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31mcFOVYmSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg" alt="Blanco/Azul" loading="lazy" />
+          
+          <span class="var-label">Blanco/Azul</span>
+        </button>
 
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Blanco/Rosa"
+            data-title="Blanco/Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/31Q+JOb218L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D2982P5L?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="35,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31De+5CNLwL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31pPMEs435L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ybX1L0QrL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41s9L8ai-cL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21Y8LHFXaUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31EjPC+V-xL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31Q+JOb218L._SL500_.jpg" alt="Blanco/Rosa" loading="lazy" />
+            
+            <span class="var-label">Blanco/Rosa</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Azul"
+            data-title="Azul"
+            data-imagen="https://m.media-amazon.com/images/I/4151mcje7JL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09CMK4VGC?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="33,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41CdscENlYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:473},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41teMQYm4mL._SL500_.jpg&quot;,&quot;width&quot;:494,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Nu3QyJ2jL._SL500_.jpg&quot;,&quot;width&quot;:433,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41NwlKkYFAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/514u58KpSHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/4151mcje7JL._SL500_.jpg" alt="Azul" loading="lazy" />
+            
+            <span class="var-label">Azul</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Rosa"
+            data-title="Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/419lrORRS1L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09CMKF6S8?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="35,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41is5Irum1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41F6doToIhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31011Ct9xFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Pehj0v4rL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/419lrORRS1L._SL500_.jpg" alt="Rosa" loading="lazy" />
+            
+            <span class="var-label">Rosa</span>
+          </button></div><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B0D295GR5F?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-8"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
+              width="500"
+              height="500"
+              alt="variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="500"
-      alt="Imagen principal de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31ZWnaAzoEL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31ZWnaAzoEL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31EyBKKr+KL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31EyBKKr+KL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31w92f37yYL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31w92f37yYL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41cKORKe1sL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41cKORKe1sL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/21669IuZk0L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/21669IuZk0L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31mcFOVYmSL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31mcFOVYmSL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/31ecs2R70VL._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="500"
+            alt="Imagen principal de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31ZWnaAzoEL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31ZWnaAzoEL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31EyBKKr+KL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31EyBKKr+KL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31w92f37yYL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31w92f37yYL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41cKORKe1sL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41cKORKe1sL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/21669IuZk0L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/21669IuZk0L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31mcFOVYmSL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31mcFOVYmSL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
 
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      35,99 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          35,99 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré este bolso talega para salir con el bebé y me ha resultado práctico y estiloso.
 El bordado con el nombre le da un toque personal y la polipiel se limpia con facilidad.
@@ -2548,142 +2979,136 @@ Se aprecia el acabado por estar fabricado y bordado en España.</p>
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B0D295GR5F?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B0D295GR5F?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm">Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm</h3>
+    <article class="ficha-teclado">
+      <h3 id="Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm">Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B09R23B6HQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-9"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
+              width="500"
+              height="333"
+              alt="Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B09R23B6HQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-9"
-      src="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
-      width="500"
-      height="333"
-      alt="Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="500"
+            height="333"
+            alt="Imagen principal de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41LhNmE+m7L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41LhNmE+m7L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41G13azXfZL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41G13azXfZL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/31OSmOExBQL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/31OSmOExBQL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41+di1Ny6tL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41+di1Ny6tL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41qxRiciNEL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41qxRiciNEL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/415KWDHYJ0L._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/415KWDHYJ0L._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41aPpJFgOUL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41aPpJFgOUL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="333"
+              height="500"
+              alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41TXg+ltv7L._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="500"
-      height="333"
-      alt="Imagen principal de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41LhNmE+m7L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41LhNmE+m7L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41G13azXfZL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41G13azXfZL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/31OSmOExBQL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/31OSmOExBQL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41+di1Ny6tL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41+di1Ny6tL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41qxRiciNEL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41qxRiciNEL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/415KWDHYJ0L._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/415KWDHYJ0L._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41aPpJFgOUL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41aPpJFgOUL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="333"
-        height="500"
-        alt="Variante de Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      31,00 €
-    </span>
-    
-      <span class="precio-original"
-            style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
-                   text-decoration: line-through; white-space: nowrap;">
-        Antes: 54,50 €
-      </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          30,99 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; ;">
+          
+            Antes: 54,50 €
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Como madre, me gusta que pueda usarse tanto colgado al hombro como fijado al carrito; así llevo lo necesario en cada paseo.
 El tejido 100% algodón plastificado da buena sensación de acabado y es reconfortante saber que está libre de colorantes azoicos y sustancias nocivas.
@@ -2708,106 +3133,104 @@ El diseño unisex en negro aporta un estilo urbano; para mí ha sido práctico y
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B09R23B6HQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B09R23B6HQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="mibebestore Bolso Polipiel Carrito Personalizado CELESTE">mibebestore Bolso Polipiel Carrito Personalizado CELESTE</h3>
+    <article class="ficha-teclado">
+      <h3 id="mibebestore Bolso Polipiel Carrito Personalizado CELESTE">mibebestore Bolso Polipiel Carrito Personalizado CELESTE</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://www.amazon.es/dp/B07HQFFXN8?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-10"
+              class="principal"
+              src="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
+              data-zoom="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
+              width="334"
+              height="442"
+              alt="mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://www.amazon.es/dp/B07HQFFXN8?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-10"
-      src="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
-      data-zoom="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
-      width="334"
-      height="442"
-      alt="mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
+            data-src="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width="334"
+            height="442"
+            alt="Imagen principal de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
+            loading="lazy"
+          />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41BcV47KbpL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41BcV47KbpL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="334"
+              height="442"
+              alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41NA9zWrRdL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41NA9zWrRdL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="334"
+              height="442"
+              alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41FSV7ngtGL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41FSV7ngtGL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="334"
+              height="442"
+              alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
+              loading="lazy"
+            />
+          
+            <img
+              src="https://m.media-amazon.com/images/I/41ecxBW1VIL._SL500_.jpg"
+              data-src="https://m.media-amazon.com/images/I/41ecxBW1VIL._SL500_.jpg"
+              onclick="seleccionarMiniatura(this)"
+              width="500"
+              height="500"
+              alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
+              loading="lazy"
+            />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
-      data-src="https://m.media-amazon.com/images/I/41ztNgrfm2L._SL500_.jpg"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width="334"
-      height="442"
-      alt="Imagen principal de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41BcV47KbpL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41BcV47KbpL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="334"
-        height="442"
-        alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41NA9zWrRdL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41NA9zWrRdL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="334"
-        height="442"
-        alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41FSV7ngtGL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41FSV7ngtGL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="334"
-        height="442"
-        alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-        loading="lazy"
-      />
-    
-      <img
-        src="https://m.media-amazon.com/images/I/41ecxBW1VIL._SL500_.jpg"
-        data-src="https://m.media-amazon.com/images/I/41ecxBW1VIL._SL500_.jpg"
-        onclick="seleccionarMiniatura(this)"
-        width="500"
-        height="500"
-        alt="Variante de mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-        loading="lazy"
-      />
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.1/5</p>
-
-  <p class="precio-producto" style="margin-top: 6px;">
-    <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
-    <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-      35,90 €
-    </span>
-    
-  </p>
-
-
-
+      
+      <p class="precio-producto" style="margin-top: 6px;">
+        <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
+        <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
+          35,90 €
+        </span>
+        <span class="precio-original"
+              style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
+                     text-decoration: line-through; white-space: nowrap; display:none;">
+          
+        </span>
+      </p>
+      
 
       <p class="descripcion-review"><p>Compré este bolso para el carrito y me ha gustado la calidad de la polipiel y el bordado con el nombre del bebé.
 Las medidas (40 x 27 x 20 cm) son ideales: tiene buena capacidad sin resultar voluminoso.
@@ -2831,8 +3254,8 @@ Como es un producto hecho a medida, conviene revisar el nombre antes de encargar
         </ul>
       
 
-        <a class="boton" href="https://www.amazon.es/dp/B07HQFFXN8?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://www.amazon.es/dp/B07HQFFXN8?tag=recomendadorn-21&linkCode=osi&th=1&psc=1" style="min-height:44px" target="_blank" rel="nofollow sponsored">👜 Ver oferta actual en Amazon</a>
+    </article>
 
     
   
@@ -3586,7 +4009,7 @@ Como es un producto hecho a medida, conviene revisar el nombre antes de encargar
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru",
-  "image": "https://m.media-amazon.com/images/I/515yGKUYioL._SL500_.jpg",
+  "image": "https://m.media-amazon.com/images/I/41o9tAUII2L._SL500_.jpg",
   "url": "https://www.amazon.es/dp/B0C6M58RZQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1",
   "brand": {
     "@type": "Brand",

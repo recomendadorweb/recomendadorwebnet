@@ -741,129 +741,84 @@
   margin: 1.5em 0;
   opacity: 0.5;
 }
-.ficha-teclado img {
-  position: relative;
-  object-fit: contain;
-}
+.ficha-teclado img { position: relative; object-fit: contain; }
 .imagen-con-miniaturas {
-  display: flex;
-  justify-content: center;
-  align-items: center; /* ✅ Alinea verticalmente al centro */
-  gap: 1.5em;
-  margin-bottom: 1em;
-  flex-wrap: wrap;
+  display: flex; justify-content: center; align-items: center; gap: 1.5em;
+  margin-bottom: 1em; flex-wrap: wrap;
 }
-.imagen-con-miniaturas .principal {
-  max-height: 350px;
-  width: auto;
-}
+.imagen-con-miniaturas .principal { max-height: 350px; width: auto; }
 .galeria-miniaturas {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(5, 50px);
-  gap: 8px;
+  display: grid; grid-auto-flow: column; grid-template-rows: repeat(5, 50px); gap: 8px;
 }
-
 .galeria-miniaturas img {
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  cursor: pointer;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border 0.3s;
+  width: 50px; height: 50px; object-fit: cover; cursor: pointer;
+  border: 1px solid #ccc; border-radius: 4px; transition: border 0.3s;
 }
-.galeria-miniaturas img:hover {
-  border: 2px solid #0073e6;
-}
-.galeria-miniaturas img.activa {
-  border: 2px solid #0073e6 !important;
-}
+.galeria-miniaturas img:hover { border: 2px solid #0073e6; }
+.galeria-miniaturas img.activa { border: 2px solid #0073e6 !important; }
+
 @media (max-width: 768px) {
   .galeria-miniaturas {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 10px;
-    margin-top: 10px;
+    display: flex; flex-direction: row; gap: 8px; overflow-x: auto;
+    padding-bottom: 10px; margin-top: 10px; scroll-snap-type: x mandatory;
   }
-
-  .galeria-miniaturas img {
-    flex: 0 0 auto;
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
+  .galeria-miniaturas img { flex: 0 0 auto; width: 60px; height: 60px; object-fit: cover; border-radius: 4px; scroll-snap-align: start; }
 }
 
-.lupa-amazon-container {
-  display: flex;
-  justify-content: center;
-  gap: 1.5em;
-  position: relative;
-}
-
-.lupa-imagen {
-  position: relative;
-}
-.lupa-imagen img {
-  display: block;
-  max-height: 350px;
-  cursor: zoom-in;
-}
+/* Lupa/zoom por producto (no global) */
+.lupa-amazon-container { display: flex; justify-content: center; gap: 1.5em; position: relative; }
+.lupa-imagen { position: relative; }
+.lupa-imagen img { display: block; max-height: 350px; cursor: zoom-in; }
 .zoom-flotante {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border: 2px solid #0073e6;
-  background-repeat: no-repeat;
-  background-size: 300%;
-  display: none;
-  z-index: 9999;
-  pointer-events: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  position: absolute; width: 400px; height: 400px; border: 2px solid #0073e6;
+  background-repeat: no-repeat; background-size: 300%; display: none;
+  z-index: 9999; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+/* Selector de variantes */
+.selector-variantes {
+  display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; margin: .5rem 0 1rem;
+}
+.selector-variantes .var-btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
+  cursor: pointer; background: #fff; font-size: .9rem;
+}
+.selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
+.selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
+.selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
 </style>
 
 <script>
+/* === LUPA / ZOOM por producto === */
 function mostrarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   const img = container.querySelector('img');
   const srcZoom = img.getAttribute('data-zoom') || img.src;
   zoom.style.display = 'block';
   zoom.style.backgroundImage = `url('${srcZoom}')`;
 }
-
-function ocultarZoomFlotante() {
+function ocultarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   zoom.style.display = 'none';
 }
-
 function moverZoomFlotante(e, container) {
   if (window.innerWidth < 768) return;
   const img = container.querySelector('img');
-  const zoom = document.getElementById('zoom-flotante');
+  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
+  zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  const percentX = (x / rect.width) * 100;
-  const percentY = (y / rect.height) * 100;
-
-  zoom.style.backgroundPosition = `${percentX}% ${percentY}%`;
-
-  // Posiciona el zoom junto al cursor
   zoom.style.left = `${e.pageX + 20}px`;
-  zoom.style.top = `${e.pageY - 150}px`; // ajusta para centrar verticalmente
+  zoom.style.top = `${e.pageY - 150}px`;
 }
 
-
+/* === MINIATURAS === */
 function seleccionarMiniatura(imgElement) {
   const nuevaSrc = imgElement.getAttribute("data-src");
   const contenedor = imgElement.closest(".ficha-teclado");
@@ -872,66 +827,134 @@ function seleccionarMiniatura(imgElement) {
   principal.src = nuevaSrc;
   principal.setAttribute('data-zoom', nuevaSrc);
 
-  const zoom = document.getElementById("zoom-flotante");
+  const zoom = contenedor.querySelector(".zoom-flotante");
   zoom.style.backgroundImage = `url('${nuevaSrc}')`;
 
   const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
   miniaturas.forEach(img => img.classList.remove("activa"));
   imgElement.classList.add("activa");
 }
+
+/* === VARIANTES === */
+function onVariantClick(btn) {
+  const ficha = btn.closest('.ficha-teclado');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
+  btn.setAttribute('aria-pressed','true');
+
+  const vImg = btn.dataset.imagen;
+  const vEnlace = btn.dataset.enlace;
+  const vPrecio = btn.dataset.precio || '';
+  const vPrecioOriginal = btn.dataset.precioOriginal || '';
+
+  // 1) imagen principal + zoom
+  const principal = ficha.querySelector('.lupa-imagen img');
+  if (vImg) {
+    principal.src = vImg;
+    principal.setAttribute('data-zoom', vImg);
+  }
+
+  // 2) ENLACES: botón de compra + enlace de la imagen principal
+  const boton = ficha.querySelector('.boton-compra');
+  if (boton && vEnlace) boton.href = vEnlace;
+
+  const linkImg = ficha.querySelector('.lupa-imagen a');
+  if (linkImg && vEnlace) linkImg.href = vEnlace;
+
+  // 3) precios
+  const precioActual = ficha.querySelector('.precio-actual');
+  if (precioActual) precioActual.textContent = vPrecio || '';
+
+  const precioOriginal = ficha.querySelector('.precio-original');
+  if (precioOriginal) {
+    if (vPrecioOriginal && vPrecioOriginal !== 'No especificado') {
+      precioOriginal.style.display = '';
+      precioOriginal.textContent = `Antes: ${vPrecioOriginal}`;
+    } else {
+      precioOriginal.style.display = 'none';
+    }
+  }
+
+  // 4) galería de miniaturas
+  const galeria = ficha.querySelector('.galeria-miniaturas');
+  const imagenesJson = btn.dataset.imagenes || '';
+  if (galeria && imagenesJson) {
+    try {
+      const imagenes = JSON.parse(imagenesJson);
+      galeria.innerHTML = '';
+      const mini = document.createElement('img');
+      mini.src = vImg;
+      mini.setAttribute('data-src', vImg);
+      mini.className = 'activa';
+      mini.alt = 'Imagen principal';
+      mini.loading = 'lazy';
+      mini.onclick = function(){ seleccionarMiniatura(this); };
+      galeria.appendChild(mini);
+
+      imagenes.forEach(iv=>{
+        const m = document.createElement('img');
+        m.src = iv.url;
+        m.setAttribute('data-src', iv.url);
+        m.alt = 'Variante';
+        m.loading = 'lazy';
+        m.onclick = function(){ seleccionarMiniatura(this); };
+        galeria.appendChild(m);
+      });
+    } catch(e) { /* silencio intencional */ }
+  }
+}
+
+/* Accesibilidad con teclado en variantes */
+document.addEventListener('keydown', function(e){
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  const tgt = e.target;
+  if (tgt.classList && tgt.classList.contains('var-btn')) {
+    e.preventDefault();
+    onVariantClick(tgt);
+  }
+});
 </script>
-
-
-
-<div id="zoom-flotante" class="zoom-flotante"></div>
 
 <div class="bloque-productos">
   
-    <div class="ficha-teclado">
-      <h3 id="EBL Pack de 8 pilas AAA 1100mAh">EBL Pack de 8 pilas AAA 1100mAh</h3>
+    <article class="ficha-teclado">
+      <h3 id="EBL Pack de 8 pilas AAA 1100mAh">EBL Pack de 8 pilas AAA 1100mAh</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://amzn.to/4m8fvTZ" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-1"
+              class="principal"
+              src="images/pilas-recargables-aaa.webp"
+              data-zoom="images/pilas-recargables-aaa.webp"
+              width=""
+              height=""
+              alt="EBL Pack de 8 pilas AAA 1100mAh"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://amzn.to/4m8fvTZ" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-1"
-      src="images/pilas-recargables-aaa.webp"
-      data-zoom="images/pilas-recargables-aaa.webp"
-      width=""
-      height=""
-      alt="EBL Pack de 8 pilas AAA 1100mAh"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="images/pilas-recargables-aaa.webp"
+            data-src="images/pilas-recargables-aaa.webp"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width=""
+            height=""
+            alt="Imagen principal de EBL Pack de 8 pilas AAA 1100mAh"
+            loading="lazy"
+          />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="images/pilas-recargables-aaa.webp"
-      data-src="images/pilas-recargables-aaa.webp"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width=""
-      height=""
-      alt="Imagen principal de EBL Pack de 8 pilas AAA 1100mAh"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.6/5</p>
-
-
-
+      
 
       <p class="descripcion-review"><p>8 pilas AAA de 1100mAh con baja autodescarga y estuche incluido. Compatibles con todo tipo de dispositivos domésticos.</p>
 </p>
@@ -953,58 +976,52 @@ function seleccionarMiniatura(imgElement) {
         </ul>
       
 
-        <a class="boton" href="https://amzn.to/4m8fvTZ" style="min-height:44px" target="_blank" rel="nofollow sponsored">🔋 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://amzn.to/4m8fvTZ" style="min-height:44px" target="_blank" rel="nofollow sponsored">🔋 Ver oferta actual en Amazon</a>
+    </article>
 
     
       <div class="separador-producto"></div>
     
   
-    <div class="ficha-teclado">
-      <h3 id="EBL Pack de 8 pilas AA 2800mAh">EBL Pack de 8 pilas AA 2800mAh</h3>
+    <article class="ficha-teclado">
+      <h3 id="EBL Pack de 8 pilas AA 2800mAh">EBL Pack de 8 pilas AA 2800mAh</h3><div class="imagen-con-miniaturas">
+        <div class="lupa-imagen"
+          onmousemove="moverZoomFlotante(event, this)"
+          onmouseenter="mostrarZoomFlotante(this)"
+          onmouseleave="ocultarZoomFlotante(this)">
+          <a href="https://amzn.to/4kUgfLk" target="_blank" rel="nofollow sponsored">
+            <img
+              id="imagen-principal-2"
+              class="principal"
+              src="images/pilas-recargables-aa.webp"
+              data-zoom="images/pilas-recargables-aa.webp"
+              width=""
+              height=""
+              alt="EBL Pack de 8 pilas AA 2800mAh"
+              loading="lazy"
+            />
+          </a>
+          <div class="zoom-flotante"></div>
+        </div>
 
-<div class="imagen-con-miniaturas">
-<div class="lupa-imagen"
-     onmousemove="moverZoomFlotante(event, this)"
-     onmouseenter="mostrarZoomFlotante(this)"
-     onmouseleave="ocultarZoomFlotante(this)">
-  <a href="https://amzn.to/4kUgfLk" target="_blank" rel="nofollow sponsored">
-    <img
-      id="imagen-principal-2"
-      src="images/pilas-recargables-aa.webp"
-      data-zoom="images/pilas-recargables-aa.webp"
-      width=""
-      height=""
-      alt="EBL Pack de 8 pilas AA 2800mAh"
-      loading="lazy"
-    />
-  </a>
-</div>
+        <div class="galeria-miniaturas">
+          <img
+            src="images/pilas-recargables-aa.webp"
+            data-src="images/pilas-recargables-aa.webp"
+            class="activa"
+            onclick="seleccionarMiniatura(this)"
+            width=""
+            height=""
+            alt="Imagen principal de EBL Pack de 8 pilas AA 2800mAh"
+            loading="lazy"
+          />
+          
+        </div>
+      </div>
 
+      <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.7/5</p>
 
-  <div class="galeria-miniaturas">
-    <!-- Imagen principal como miniatura -->
-    <img
-      src="images/pilas-recargables-aa.webp"
-      data-src="images/pilas-recargables-aa.webp"
-      class="activa"
-      onclick="seleccionarMiniatura(this)"
-      width=""
-      height=""
-      alt="Imagen principal de EBL Pack de 8 pilas AA 2800mAh"
-      loading="lazy"
-    />
-    <!-- Variantes -->
-    
-  </div>
-</div>
-
-
-
-    <p class="valoracion-html" style="font-weight: bold; color: #e67e22;">⭐ Valoración del experto: 4.7/5</p>
-
-
-
+      
 
       <p class="descripcion-review"><p>8 pilas AA de 2800mAh, alta capacidad y larga vida útil. Con carcasa segura y tecnología ProCyco.</p>
 </p>
@@ -1026,8 +1043,8 @@ function seleccionarMiniatura(imgElement) {
         </ul>
       
 
-        <a class="boton" href="https://amzn.to/4kUgfLk" style="min-height:44px" target="_blank" rel="nofollow sponsored">🔋 Ver oferta actual en Amazon</a>
-    </div>
+      <a class="boton boton-compra" href="https://amzn.to/4kUgfLk" style="min-height:44px" target="_blank" rel="nofollow sponsored">🔋 Ver oferta actual en Amazon</a>
+    </article>
 
     
   
