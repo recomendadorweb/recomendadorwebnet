@@ -1247,6 +1247,7 @@ Como experto, busco que combine <strong>organización eficiente</strong> y <stro
   position: absolute; width: 400px; height: 400px; border: 2px solid #0073e6;
   background-repeat: no-repeat; background-size: 300%; display: none;
   z-index: 9999; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: left .06s linear, top .06s linear;
 }
 
 /* Selector de variantes */
@@ -1267,7 +1268,7 @@ Como experto, busco que combine <strong>organización eficiente</strong> y <stro
 /* === LUPA / ZOOM por producto === */
 function mostrarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   const img = container.querySelector('img');
   const srcZoom = img.getAttribute('data-zoom') || img.src;
   zoom.style.display = 'block';
@@ -1275,21 +1276,27 @@ function mostrarZoomFlotante(container) {
 }
 function ocultarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   zoom.style.display = 'none';
 }
 function moverZoomFlotante(e, container) {
   if (window.innerWidth < 768) return;
   const img = container.querySelector('img');
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
+  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
+
+  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  zoom.style.left = `${e.pageX + 20}px`;
-  zoom.style.top = `${e.pageY - 150}px`;
+  // Posicionar el cuadro de zoom respecto al contenedor localmente
+  const localLeft = x + 20; // 20px a la derecha del cursor
+  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  zoom.style.left = `${localLeft}px`;
+  zoom.style.top  = `${localTop}px`;
 }
 
 /* === MINIATURAS === */
@@ -1302,7 +1309,7 @@ function seleccionarMiniatura(imgElement) {
   principal.setAttribute('data-zoom', nuevaSrc);
 
   const zoom = contenedor.querySelector(".zoom-flotante");
-  zoom.style.backgroundImage = `url('${nuevaSrc}')`;
+  if (zoom) zoom.style.backgroundImage = `url('${nuevaSrc}')`;
 
   const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
   miniaturas.forEach(img => img.classList.remove("activa"));
@@ -1322,9 +1329,11 @@ function onVariantClick(btn) {
 
   // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
+  const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
     principal.src = vImg;
     principal.setAttribute('data-zoom', vImg);
+    if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
   // 2) ENLACES: botón de compra + enlace de la imagen principal
@@ -1350,25 +1359,30 @@ function onVariantClick(btn) {
 
   // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
-  const imagenesJson = btn.dataset.imagenes || '';
-  if (galeria && imagenesJson) {
+  const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
+  if (galeria) {
     try {
-      const imagenes = JSON.parse(imagenesJson);
+      const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
-      const mini = document.createElement('img');
-      mini.src = vImg;
-      mini.setAttribute('data-src', vImg);
-      mini.className = 'activa';
-      mini.alt = 'Imagen principal';
-      mini.loading = 'lazy';
-      mini.onclick = function(){ seleccionarMiniatura(this); };
-      galeria.appendChild(mini);
 
+      // miniatura principal
+      if (vImg) {
+        const mini = document.createElement('img');
+        mini.src = vImg;
+        mini.setAttribute('data-src', vImg);
+        mini.className = 'activa';
+        mini.alt = 'Imagen principal';
+        mini.loading = 'lazy';
+        mini.onclick = function(){ seleccionarMiniatura(this); };
+        galeria.appendChild(mini);
+      }
+
+      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
         m.setAttribute('data-src', iv.url);
-        m.alt = 'Variante';
+        m.alt = iv.alt || 'Variante';
         m.loading = 'lazy';
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
@@ -1405,7 +1419,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -1539,7 +1554,7 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
           data-precio="19,99 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Qr+XSk2CL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41lcRk+LVGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51B3aJQtr2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31gkpkoolSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51oENRInweL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51TKkF5rmQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Qr+XSk2CL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41lcRk+LVGL._SL500_.jpg","width":500,"height":369},{"url":"https://m.media-amazon.com/images/I/51B3aJQtr2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31gkpkoolSL._SL500_.jpg","width":500,"height":369},{"url":"https://m.media-amazon.com/images/I/51oENRInweL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51TKkF5rmQL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -1562,7 +1577,7 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
             data-precio="21,99 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51ejA-K4oqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/510emj-fzmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31TPNam82UL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41SZtaQJqPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31MVrRhQjgL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51IfcDrImdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31m1rq1nDoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:369}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51ejA-K4oqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/510emj-fzmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31TPNam82UL._SL500_.jpg","width":500,"height":369},{"url":"https://m.media-amazon.com/images/I/41SZtaQJqPL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31MVrRhQjgL._SL500_.jpg","width":500,"height":369},{"url":"https://m.media-amazon.com/images/I/51IfcDrImdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31m1rq1nDoL._SL500_.jpg","width":500,"height":369}]'
             
           >
             
@@ -1583,7 +1598,7 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
             data-precio="19,99 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51M64dYWwgL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/519mQ-npJnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zu0yJm+xL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41tpsLvvUsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:293},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41UPikwiZjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vhzEfzh9L._SL500_.jpg&quot;,&quot;width&quot;:333,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51GgMuG3pBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:331}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51M64dYWwgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/519mQ-npJnL._SL500_.jpg","width":500,"height":331},{"url":"https://m.media-amazon.com/images/I/41zu0yJm+xL._SL500_.jpg","width":500,"height":331},{"url":"https://m.media-amazon.com/images/I/41tpsLvvUsL._SL500_.jpg","width":500,"height":293},{"url":"https://m.media-amazon.com/images/I/41UPikwiZjL._SL500_.jpg","width":500,"height":331},{"url":"https://m.media-amazon.com/images/I/41vhzEfzh9L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51GgMuG3pBL._SL500_.jpg","width":500,"height":331}]'
             
           >
             
@@ -1604,7 +1619,7 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
             data-precio="17,99 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41f0WxUviyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/517mZSCuajL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41OrgwKx8VL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41442yCVsGL._SL500_.jpg&quot;,&quot;width&quot;:334,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51nD14moCoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419H849n3eL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:334}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41f0WxUviyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/517mZSCuajL._SL500_.jpg","width":500,"height":334},{"url":"https://m.media-amazon.com/images/I/41OrgwKx8VL._SL500_.jpg","width":500,"height":334},{"url":"https://m.media-amazon.com/images/I/41442yCVsGL._SL500_.jpg","width":334,"height":500},{"url":"https://m.media-amazon.com/images/I/51nD14moCoL._SL500_.jpg","width":500,"height":334},{"url":"https://m.media-amazon.com/images/I/419H849n3eL._SL500_.jpg","width":500,"height":334}]'
             
           >
             
@@ -1625,7 +1640,8 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
               width="500"
               height="500"
               alt="TENDS Bolso para Carrito y Maternidad 37x34 cm"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -1768,7 +1784,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
           data-precio="34,95 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41IdZ-8pAfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ftq2sofJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bmEEVapFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/415T5ELlcJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41IdZ-8pAfL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/41ftq2sofJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41bmEEVapFL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/415T5ELlcJL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -1791,7 +1807,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
             data-precio="34,95 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41aWzF1fjyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51oj7nBt86L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41S8S+7tTKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41MowAEIfbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41E8y2alSXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41UDZmI-Z3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41sjTxatUNL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41b-6QPR44L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41aWzF1fjyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51oj7nBt86L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41S8S+7tTKL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41MowAEIfbL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41E8y2alSXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41UDZmI-Z3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41sjTxatUNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41b-6QPR44L._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1812,7 +1828,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
             data-precio="35,95 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41BH0pBB3rL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41CJikKsypL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41aKAftA4OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ULy1KS4SL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+B68-gbYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zZSB5A8dL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41TzsvNW7oL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/418MR6DwjHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41BH0pBB3rL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41CJikKsypL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41aKAftA4OL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ULy1KS4SL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+B68-gbYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zZSB5A8dL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41TzsvNW7oL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/418MR6DwjHL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1833,7 +1849,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
             data-precio="34,95 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41DfRf2fCaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41gsiGAY3tL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/411sLRrKDLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41KAzK+HjvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5133W+x4r6L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41L1dtdpitL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41CzVWMIkfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41DfRf2fCaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gsiGAY3tL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/411sLRrKDLL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41KAzK+HjvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/5133W+x4r6L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41L1dtdpitL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41CzVWMIkfL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1854,7 +1870,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
             data-precio="34,95 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419EHqmGpqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-T1WZxCFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31zmcP0broL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31mTP1qR6fL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41z9CYqSToL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412mdd6PCyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41wJWQVxvDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/419EHqmGpqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-T1WZxCFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31zmcP0broL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31mTP1qR6fL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41z9CYqSToL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/412mdd6PCyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41wJWQVxvDL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1875,7 +1891,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
             data-precio="34,95 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Vu0rblDSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HIWIdrUdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mx2RTcHhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419u9nM7jrL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qa+hLBQTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Jv1WXymbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41OMYv4+HaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WogN9LNvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Vu0rblDSL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41HIWIdrUdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41mx2RTcHhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/419u9nM7jrL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41qa+hLBQTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Jv1WXymbL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41OMYv4+HaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41WogN9LNvL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1896,7 +1912,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
             data-precio="34,95 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41sf-BgAtHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51RNmqK0p2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41N1r4C4xWL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/417G8ggdslL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412H9nAnA8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41i14TNkSCL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41YWi1tH7OL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41sf-BgAtHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51RNmqK0p2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41N1r4C4xWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/417G8ggdslL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/412H9nAnA8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41i14TNkSCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41YWi1tH7OL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1917,7 +1933,8 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
               width="500"
               height="500"
               alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2041,7 +2058,7 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
           data-precio="45,78 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -2064,7 +2081,7 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
             data-precio="25,00 €"
             data-precio-original="31,50 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41voit13GhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41D7gGJrvBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41voit13GhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41D7gGJrvBL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2085,7 +2102,7 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
             data-precio="45,98 €"
             data-precio-original="54,50 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HYcssna+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31DLvF6BU5L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/410D5TyS9pL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31BKYqjjifL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41m4URro4+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41I-2prdXIL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41q4zHzOU9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HYcssna+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31DLvF6BU5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/410D5TyS9pL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31BKYqjjifL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41m4URro4+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41I-2prdXIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41q4zHzOU9L._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2106,7 +2123,8 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
               width="500"
               height="333"
               alt="Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2256,7 +2274,8 @@ Su estilo neutro y urbano lo hace apto para padres y madres, y las asas cortas y
               width="321"
               height="500"
               alt="Danielstore Bolso Maternidad Personalizado Rosa"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2420,7 +2439,8 @@ En general es un organizador cómodo y funcional para el día a día.</p>
               width="500"
               height="500"
               alt="Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2583,7 +2603,7 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
           data-precio="29,95 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31of-qS7I5L._SL500_.jpg&quot;,&quot;width&quot;:374,&quot;height&quot;:348},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41HkvUEYiTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41k6n1FOolL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/414Y6poDkML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31of-qS7I5L._SL500_.jpg","width":374,"height":348},{"url":"https://m.media-amazon.com/images/I/41HkvUEYiTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41k6n1FOolL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/414Y6poDkML._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -2606,7 +2626,7 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
             data-precio="35,90 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412wKbKti2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Z-HuMdiXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/412wKbKti2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z-HuMdiXL._SL500_.jpg","width":500,"height":423}]'
             
           >
             
@@ -2627,7 +2647,7 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
             data-precio="32,90 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qWFPkrReL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WyoGNxmcL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41kmmBuqFvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41J8HhyxoXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41iDGiPvTTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QOZZJPx+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ecxBW1VIL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QNR+jSPTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41qWFPkrReL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41WyoGNxmcL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41kmmBuqFvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41J8HhyxoXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41iDGiPvTTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41QOZZJPx+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ecxBW1VIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41QNR+jSPTL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2648,7 +2668,8 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
               width="500"
               height="500"
               alt="mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2772,7 +2793,7 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
           data-precio="35,99 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ZWnaAzoEL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31EyBKKr+KL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31w92f37yYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41cKORKe1sL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21669IuZk0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31mcFOVYmSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31ZWnaAzoEL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31EyBKKr+KL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31w92f37yYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41cKORKe1sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21669IuZk0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31mcFOVYmSL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -2795,7 +2816,7 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
             data-precio="35,99 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31De+5CNLwL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31pPMEs435L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ybX1L0QrL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41s9L8ai-cL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21Y8LHFXaUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31EjPC+V-xL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31De+5CNLwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31pPMEs435L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31ybX1L0QrL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41s9L8ai-cL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21Y8LHFXaUL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31EjPC+V-xL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2816,7 +2837,7 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
             data-precio="33,99 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41CdscENlYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:473},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41teMQYm4mL._SL500_.jpg&quot;,&quot;width&quot;:494,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Nu3QyJ2jL._SL500_.jpg&quot;,&quot;width&quot;:433,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41NwlKkYFAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/514u58KpSHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41CdscENlYL._SL500_.jpg","width":500,"height":473},{"url":"https://m.media-amazon.com/images/I/41teMQYm4mL._SL500_.jpg","width":494,"height":500},{"url":"https://m.media-amazon.com/images/I/41Nu3QyJ2jL._SL500_.jpg","width":433,"height":500},{"url":"https://m.media-amazon.com/images/I/41NwlKkYFAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/514u58KpSHL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2837,7 +2858,7 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
             data-precio="35,99 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41is5Irum1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41F6doToIhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31011Ct9xFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Pehj0v4rL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41is5Irum1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41F6doToIhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31011Ct9xFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Pehj0v4rL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2858,7 +2879,8 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
               width="500"
               height="500"
               alt="variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -3001,7 +3023,8 @@ Se aprecia el acabado por estar fabricado y bordado en España.</p>
               width="500"
               height="333"
               alt="Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -3155,7 +3178,8 @@ El diseño unisex en negro aporta un estilo urbano; para mí ha sido práctico y
               width="334"
               height="442"
               alt="mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>

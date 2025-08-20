@@ -1169,6 +1169,7 @@
   position: absolute; width: 400px; height: 400px; border: 2px solid #0073e6;
   background-repeat: no-repeat; background-size: 300%; display: none;
   z-index: 9999; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: left .06s linear, top .06s linear;
 }
 
 /* Selector de variantes */
@@ -1189,7 +1190,7 @@
 /* === LUPA / ZOOM por producto === */
 function mostrarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   const img = container.querySelector('img');
   const srcZoom = img.getAttribute('data-zoom') || img.src;
   zoom.style.display = 'block';
@@ -1197,21 +1198,27 @@ function mostrarZoomFlotante(container) {
 }
 function ocultarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   zoom.style.display = 'none';
 }
 function moverZoomFlotante(e, container) {
   if (window.innerWidth < 768) return;
   const img = container.querySelector('img');
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
+  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
+
+  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  zoom.style.left = `${e.pageX + 20}px`;
-  zoom.style.top = `${e.pageY - 150}px`;
+  // Posicionar el cuadro de zoom respecto al contenedor localmente
+  const localLeft = x + 20; // 20px a la derecha del cursor
+  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  zoom.style.left = `${localLeft}px`;
+  zoom.style.top  = `${localTop}px`;
 }
 
 /* === MINIATURAS === */
@@ -1224,7 +1231,7 @@ function seleccionarMiniatura(imgElement) {
   principal.setAttribute('data-zoom', nuevaSrc);
 
   const zoom = contenedor.querySelector(".zoom-flotante");
-  zoom.style.backgroundImage = `url('${nuevaSrc}')`;
+  if (zoom) zoom.style.backgroundImage = `url('${nuevaSrc}')`;
 
   const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
   miniaturas.forEach(img => img.classList.remove("activa"));
@@ -1244,9 +1251,11 @@ function onVariantClick(btn) {
 
   // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
+  const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
     principal.src = vImg;
     principal.setAttribute('data-zoom', vImg);
+    if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
   // 2) ENLACES: botón de compra + enlace de la imagen principal
@@ -1272,25 +1281,30 @@ function onVariantClick(btn) {
 
   // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
-  const imagenesJson = btn.dataset.imagenes || '';
-  if (galeria && imagenesJson) {
+  const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
+  if (galeria) {
     try {
-      const imagenes = JSON.parse(imagenesJson);
+      const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
-      const mini = document.createElement('img');
-      mini.src = vImg;
-      mini.setAttribute('data-src', vImg);
-      mini.className = 'activa';
-      mini.alt = 'Imagen principal';
-      mini.loading = 'lazy';
-      mini.onclick = function(){ seleccionarMiniatura(this); };
-      galeria.appendChild(mini);
 
+      // miniatura principal
+      if (vImg) {
+        const mini = document.createElement('img');
+        mini.src = vImg;
+        mini.setAttribute('data-src', vImg);
+        mini.className = 'activa';
+        mini.alt = 'Imagen principal';
+        mini.loading = 'lazy';
+        mini.onclick = function(){ seleccionarMiniatura(this); };
+        galeria.appendChild(mini);
+      }
+
+      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
         m.setAttribute('data-src', iv.url);
-        m.alt = 'Variante';
+        m.alt = iv.alt || 'Variante';
         m.loading = 'lazy';
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
@@ -1330,7 +1344,7 @@ document.addEventListener('keydown', function(e){
           data-precio="223,84 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vTwM0Wf4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51UK4iBqcQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51hMEVg0TKL._SL500_.jpg&quot;,&quot;width&quot;:426,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/4177vcaH7mL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41t0kd0M2sL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Z6EmhDCRL._SL500_.jpg&quot;,&quot;width&quot;:392,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Z0YKB+UPL._SL500_.jpg&quot;,&quot;width&quot;:393,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41JLQgbSV+L._SL500_.jpg&quot;,&quot;width&quot;:335,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/411j3fO+FaL._SL500_.jpg&quot;,&quot;width&quot;:335,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41vTwM0Wf4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51UK4iBqcQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51hMEVg0TKL._SL500_.jpg","width":426,"height":500},{"url":"https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4177vcaH7mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41t0kd0M2sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z6EmhDCRL._SL500_.jpg","width":392,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z0YKB+UPL._SL500_.jpg","width":393,"height":500},{"url":"https://m.media-amazon.com/images/I/41JLQgbSV+L._SL500_.jpg","width":335,"height":500},{"url":"https://m.media-amazon.com/images/I/411j3fO+FaL._SL500_.jpg","width":335,"height":500}]'
           
         >
           
@@ -1353,7 +1367,7 @@ document.addEventListener('keydown', function(e){
             data-precio="159,00 €"
             data-precio-original="179,00 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41XIiU7xvjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Z9KFpp+SL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FHflbg6uL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Ym5fgFuYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41JfI6wkW4L._SL500_.jpg&quot;,&quot;width&quot;:295,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41TwUW03J2L._SL500_.jpg&quot;,&quot;width&quot;:227,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qhFx+KfCL._SL500_.jpg&quot;,&quot;width&quot;:294,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41XIiU7xvjL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Z9KFpp+SL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41FHflbg6uL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Ym5fgFuYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41JfI6wkW4L._SL500_.jpg","width":295,"height":500},{"url":"https://m.media-amazon.com/images/I/41TwUW03J2L._SL500_.jpg","width":227,"height":500},{"url":"https://m.media-amazon.com/images/I/41qhFx+KfCL._SL500_.jpg","width":294,"height":500}]'
             
           >
             
@@ -1374,7 +1388,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="SteelSeries Alias Pro Kit"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -1566,7 +1581,7 @@ document.addEventListener('keydown', function(e){
           data-precio="109,00 €"
           data-precio-original="116,99 €"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/410clzhBvGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Ujv1jsR4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51xrSCNFsZL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WnBRKgy7L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51iYFPa-R7L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41cY5GZELoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vORIhEU4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51galDYuEvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41NU7DdbBuL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41E5+DlDM1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51CEvTUmhAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/410clzhBvGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Ujv1jsR4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51xrSCNFsZL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41WnBRKgy7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51iYFPa-R7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41cY5GZELoL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vORIhEU4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51galDYuEvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41NU7DdbBuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41E5+DlDM1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51CEvTUmhAL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -1589,7 +1604,7 @@ document.addEventListener('keydown', function(e){
             data-precio="112,99 €"
             data-precio-original="119,90 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41xflG1FFtL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Vji7zA5lL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416O6n9fCYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41OaIq6snVL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51L2mIiHbzL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/510tE9+fEAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mAD3hJKyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41B5vAsRRrL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51WXzaSo-fL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41-XFbZP+QL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+O-wxQ4yL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51WnI8IK3ML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41xflG1FFtL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Vji7zA5lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/416O6n9fCYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41OaIq6snVL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51L2mIiHbzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/510tE9+fEAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41mAD3hJKyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41B5vAsRRrL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51WXzaSo-fL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-XFbZP+QL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+O-wxQ4yL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51WnI8IK3ML._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1610,7 +1625,7 @@ document.addEventListener('keydown', function(e){
             data-precio="168,99 €"
             data-precio-original="254,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41S7coeJTdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41kXfcfMMeL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41fVly72xlL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51fN88W-IPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41S7coeJTdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41kXfcfMMeL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41fVly72xlL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51fN88W-IPL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1631,7 +1646,7 @@ document.addEventListener('keydown', function(e){
             data-precio="211,98 €"
             data-precio-original="323,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zNTQP4yxL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51tGhq-BEkL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51lBogjXUeL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51fCNSBavXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41zNTQP4yxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51tGhq-BEkL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51lBogjXUeL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51fCNSBavXL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1652,7 +1667,7 @@ document.addEventListener('keydown', function(e){
             data-precio="76,99 €"
             data-precio-original="119,00 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51j1+laf17L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Q1MM5tUmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41rL9qwTwYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/514FY6ZU-UL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51VHUToLmAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41A9OmXd7xL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mjoEWX+5L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51aPnO40WqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41MONmC2JML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41G0J3iiUfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51WnI8IK3ML._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51j1+laf17L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Q1MM5tUmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41rL9qwTwYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/514FY6ZU-UL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51VHUToLmAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41A9OmXd7xL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41mjoEWX+5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51aPnO40WqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41MONmC2JML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41G0J3iiUfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51WnI8IK3ML._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1673,7 +1688,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Logitech for Creators Blue Yeti"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -1867,7 +1883,7 @@ document.addEventListener('keydown', function(e){
           data-precio="129,99 €"
           data-precio-original="143,17 €"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bCiAzVVLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41QRa5xIRwL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51pm3xNmFyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/5184omHwkRL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41hN55znJ3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Bfm79bM3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51NFvLCmAlL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Xm15l7r2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51CkI8AB62L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51mBnFiUFQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41bJkhmbYOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41bCiAzVVLL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/41QRa5xIRwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51pm3xNmFyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/5184omHwkRL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hN55znJ3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Bfm79bM3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51NFvLCmAlL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Xm15l7r2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51CkI8AB62L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mBnFiUFQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41bJkhmbYOL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -1890,7 +1906,7 @@ document.addEventListener('keydown', function(e){
             data-precio="128,95 €"
             data-precio-original="156,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51TEOa6e-1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51CZa5UugAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51YB+A+fbHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51FWvJWXJ9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41aRKVIgTBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51EmqZoAd8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51wWeTILUmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Gg+lcgrqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51hj47YsyNL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41puf3ztq-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51TEOa6e-1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51CZa5UugAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51YB+A+fbHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51FWvJWXJ9L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41aRKVIgTBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EmqZoAd8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51wWeTILUmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Gg+lcgrqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51hj47YsyNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41puf3ztq-L._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1911,7 +1927,7 @@ document.addEventListener('keydown', function(e){
             data-precio="196,93 €"
             data-precio-original="239,97 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51MWa6LdIsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51uwfqR7eAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51uyZidppTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51XdhUupJOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51PkZeY+LxL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51gyX17AkBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51MWa6LdIsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51uwfqR7eAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51uyZidppTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51XdhUupJOL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51PkZeY+LxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51gyX17AkBL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -1932,7 +1948,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Elgato Wave:3"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2126,7 +2143,7 @@ document.addEventListener('keydown', function(e){
           data-precio="99,99 €"
           data-precio-original="119,99 €"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51dAKlfBY3L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41VdtvL7+RL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41EJZ-gJyfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51hqP1OakUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51xshPTlR7L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41XASKbZyZL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51iBSrfXjfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mzdvGScsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+x+kg01pL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51dAKlfBY3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41VdtvL7+RL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41EJZ-gJyfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51hqP1OakUL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51xshPTlR7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41XASKbZyZL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51iBSrfXjfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41mzdvGScsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+x+kg01pL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -2149,7 +2166,7 @@ document.addEventListener('keydown', function(e){
             data-precio="135,66 €"
             data-precio-original="144,98 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51NWqxNdSQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51CAAZr1kFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31-BcX188+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41m-JFHc1XL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419CE6hlVkL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41lcuAwpX9L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41OnGKOtyaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51NWqxNdSQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51CAAZr1kFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31-BcX188+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41m-JFHc1XL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/419CE6hlVkL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41lcuAwpX9L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41OnGKOtyaL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2170,7 +2187,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Elgato Wave DX"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2344,7 +2362,7 @@ document.addEventListener('keydown', function(e){
           data-precio="67,99 €"
           data-precio-original="79,99 €"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Dl88stjXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41P7O3QZLJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51y15glY3kL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/412bBsy3IbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/414+UKymXuL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41roj9-4T2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vaIaa-aoL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Dl88stjXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41P7O3QZLJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51y15glY3kL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/412bBsy3IbL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/414+UKymXuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41roj9-4T2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vaIaa-aoL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -2367,7 +2385,7 @@ document.addEventListener('keydown', function(e){
             data-precio="133,00 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51YfAlyuQRL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51TN4xEE+lL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41URDQ5lB1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41+8hBPs3YL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51mFWM5Ti6L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Xtr7pDybL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41JqfBRym0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51YfAlyuQRL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51TN4xEE+lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41URDQ5lB1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+8hBPs3YL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mFWM5Ti6L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Xtr7pDybL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41JqfBRym0L._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2388,7 +2406,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HyperX QuadCast"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2542,7 +2561,7 @@ document.addEventListener('keydown', function(e){
           data-precio="159,00 €"
           data-precio-original="179,00 €"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41XIiU7xvjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Z9KFpp+SL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FHflbg6uL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Ym5fgFuYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41JfI6wkW4L._SL500_.jpg&quot;,&quot;width&quot;:295,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41TwUW03J2L._SL500_.jpg&quot;,&quot;width&quot;:227,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qhFx+KfCL._SL500_.jpg&quot;,&quot;width&quot;:294,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41XIiU7xvjL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Z9KFpp+SL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41FHflbg6uL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Ym5fgFuYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41JfI6wkW4L._SL500_.jpg","width":295,"height":500},{"url":"https://m.media-amazon.com/images/I/41TwUW03J2L._SL500_.jpg","width":227,"height":500},{"url":"https://m.media-amazon.com/images/I/41qhFx+KfCL._SL500_.jpg","width":294,"height":500}]'
           
         >
           
@@ -2565,7 +2584,7 @@ document.addEventListener('keydown', function(e){
             data-precio="223,84 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41vTwM0Wf4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51UK4iBqcQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51hMEVg0TKL._SL500_.jpg&quot;,&quot;width&quot;:426,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/4177vcaH7mL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41t0kd0M2sL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Z6EmhDCRL._SL500_.jpg&quot;,&quot;width&quot;:392,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Z0YKB+UPL._SL500_.jpg&quot;,&quot;width&quot;:393,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41JLQgbSV+L._SL500_.jpg&quot;,&quot;width&quot;:335,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/411j3fO+FaL._SL500_.jpg&quot;,&quot;width&quot;:335,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41vTwM0Wf4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51UK4iBqcQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51hMEVg0TKL._SL500_.jpg","width":426,"height":500},{"url":"https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4177vcaH7mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41t0kd0M2sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z6EmhDCRL._SL500_.jpg","width":392,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z0YKB+UPL._SL500_.jpg","width":393,"height":500},{"url":"https://m.media-amazon.com/images/I/41JLQgbSV+L._SL500_.jpg","width":335,"height":500},{"url":"https://m.media-amazon.com/images/I/411j3fO+FaL._SL500_.jpg","width":335,"height":500}]'
             
           >
             
@@ -2586,7 +2605,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="SteelSeries Alias"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2760,7 +2780,7 @@ document.addEventListener('keydown', function(e){
           data-precio="127,80 €"
           data-precio-original="159,99 €"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41fnm9QLuhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41j1z9kl3wL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41X1cl-ycaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41gV4j3DpNL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41cN0ttIpAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/313nKFebWXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41fnm9QLuhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41j1z9kl3wL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41X1cl-ycaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gV4j3DpNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41cN0ttIpAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/313nKFebWXL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -2783,7 +2803,7 @@ document.addEventListener('keydown', function(e){
             data-precio="173,82 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qJE5aykxL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/418SeyKQlAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/419wcRdFQKL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Dzec86tcL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51mYfjXnCTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51cLbksi+zL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41qJE5aykxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/418SeyKQlAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/419wcRdFQKL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Dzec86tcL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mYfjXnCTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51cLbksi+zL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -2804,7 +2824,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Logitech G Yeti GX"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -2948,7 +2969,7 @@ document.addEventListener('keydown', function(e){
           data-precio="123,65 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41BzAV4oHfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41gKw2iscEL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41kXAGKqNjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/410ea98buvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51o9BWCWHfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41MYsv0feHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31RfBjKG-JL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31T7nIp6XlL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41BzAV4oHfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gKw2iscEL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41kXAGKqNjL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/410ea98buvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51o9BWCWHfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41MYsv0feHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31RfBjKG-JL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T7nIp6XlL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -2971,7 +2992,7 @@ document.addEventListener('keydown', function(e){
             data-precio="47,88 €"
             data-precio-original="59,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21CEhAdtMoS._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21oT9sDE9VS._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WH9fPSYlS._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/21CEhAdtMoS._SL500_.jpg","width":500,"height":423},{"url":"https://m.media-amazon.com/images/I/21oT9sDE9VS._SL500_.jpg","width":500,"height":423},{"url":"https://m.media-amazon.com/images/I/41WH9fPSYlS._SL500_.jpg","width":500,"height":333}]'
             
           >
             
@@ -2992,7 +3013,7 @@ document.addEventListener('keydown', function(e){
             data-precio="80,74 €"
             data-precio-original="84,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51PWeCiwDAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41C4fObFiqL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51Zaq-mcVBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FGkqd9snL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51C8mSRJ9fL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/4163Hx+JWnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51rzPyj7omL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51PWeCiwDAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41C4fObFiqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Zaq-mcVBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41FGkqd9snL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51C8mSRJ9fL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4163Hx+JWnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rzPyj7omL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3013,7 +3034,7 @@ document.addEventListener('keydown', function(e){
             data-precio="44,99 €"
             data-precio-original="49,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Bv3UydnsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZycoG0dCL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51UdeesfmHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/513WeA89DhL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51NYrw7se7L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/417w0eWgINL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31pQVsqXO5L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31YtdoRrJvL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Bv3UydnsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZycoG0dCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51UdeesfmHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/513WeA89DhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51NYrw7se7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/417w0eWgINL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31pQVsqXO5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31YtdoRrJvL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3034,7 +3055,7 @@ document.addEventListener('keydown', function(e){
             data-precio="44,99 €"
             data-precio-original="49,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41UeAa42sWL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51go8eEHA1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41G4rzsq2GL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41GTjF2PuYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51FsrGNGrmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/411-7-pxZFL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31Uuz91ZZRL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31LWguazJdL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41UeAa42sWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51go8eEHA1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41G4rzsq2GL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41GTjF2PuYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51FsrGNGrmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/411-7-pxZFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Uuz91ZZRL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31LWguazJdL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3055,7 +3076,7 @@ document.addEventListener('keydown', function(e){
             data-precio="118,98 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51j2pO3Pc1L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51v-q-lxxxL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51xbGQr-goL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41F3p24tK-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51QbUvzJYHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZgyrNejgL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31Rcj29HkGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41uDLa8FBBL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51j2pO3Pc1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51v-q-lxxxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51xbGQr-goL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41F3p24tK-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51QbUvzJYHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZgyrNejgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Rcj29HkGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41uDLa8FBBL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3076,7 +3097,7 @@ document.addEventListener('keydown', function(e){
             data-precio="43,10 €"
             data-precio-original="59,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Ct0IRH0cL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ylGCo8-nL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Fg5On-LQL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31Qwwj7hqsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FW45UE2mL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31+6vfEo2-L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/210vc0xSumL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31yDvRi7hPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Ct0IRH0cL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31ylGCo8-nL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Fg5On-LQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Qwwj7hqsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41FW45UE2mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31+6vfEo2-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/210vc0xSumL._SL500_.jpg","width":500,"height":423},{"url":"https://m.media-amazon.com/images/I/31yDvRi7hPL._SL500_.jpg","width":500,"height":423}]'
             
           >
             
@@ -3097,7 +3118,7 @@ document.addEventListener('keydown', function(e){
             data-precio="36,99 €"
             data-precio-original="59,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31CxjWC2AjL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dCxnfiHLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:423},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WH9fPSYlS._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:333}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31CxjWC2AjL._SL500_.jpg","width":500,"height":423},{"url":"https://m.media-amazon.com/images/I/31dCxnfiHLL._SL500_.jpg","width":500,"height":423},{"url":"https://m.media-amazon.com/images/I/41WH9fPSYlS._SL500_.jpg","width":500,"height":333}]'
             
           >
             
@@ -3118,7 +3139,7 @@ document.addEventListener('keydown', function(e){
             data-precio="58,35 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51ZZeB9XSLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41dg5gyRVJL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41EG+aYRuLL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Z482HIcDL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41oQnMQYvnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41ZffmdZy0L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51kwGfjslUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51ZZeB9XSLL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41dg5gyRVJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41EG+aYRuLL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z482HIcDL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41oQnMQYvnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZffmdZy0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51kwGfjslUL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3139,7 +3160,7 @@ document.addEventListener('keydown', function(e){
             data-precio="107,49 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41K5mjSAZZL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41zP4ogwAtL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41iVaQ+SohL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41PCiPPAPaL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/514+HNu7QUL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41NMWWZ6tOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31ZGWFKZXHL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/4144t0OLxSL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41K5mjSAZZL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zP4ogwAtL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41iVaQ+SohL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41PCiPPAPaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/514+HNu7QUL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41NMWWZ6tOL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31ZGWFKZXHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4144t0OLxSL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3160,7 +3181,7 @@ document.addEventListener('keydown', function(e){
             data-precio="44,99 €"
             data-precio-original="49,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41iFkjWonZL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51H1kgCVbXL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/417YwA1++FL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41FHMA3IFVL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51VqVu7wfsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/414GIAmKyiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/316ZN7fWYiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31H3i03WVeL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41iFkjWonZL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H1kgCVbXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/417YwA1++FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41FHMA3IFVL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51VqVu7wfsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/414GIAmKyiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/316ZN7fWYiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31H3i03WVeL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3181,7 +3202,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer Seiren V3 Chroma"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -3343,7 +3365,7 @@ document.addEventListener('keydown', function(e){
           data-precio="46,98 €"
           data-precio-original="No especificado"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31dS9T5zjsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/318tRBd9hCL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31xxXaxt-KL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/416iTqiQwTL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31FL+DXsctL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31PAGZasHGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/314SRu-GENL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41WesbWSU8L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31dS9T5zjsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/318tRBd9hCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31xxXaxt-KL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/416iTqiQwTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FL+DXsctL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31PAGZasHGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/314SRu-GENL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41WesbWSU8L._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -3366,7 +3388,7 @@ document.addEventListener('keydown', function(e){
             data-precio="149,99 €"
             data-precio-original="199,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51B+6yY0aeL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41Gib3JQ8NL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/517Fk1eS9wL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51wKu7KeqnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51VPDe6E5xL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41eUZ3KIxWL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31QNy3ZjO4L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51B+6yY0aeL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Gib3JQ8NL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/517Fk1eS9wL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51wKu7KeqnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51VPDe6E5xL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41eUZ3KIxWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31QNy3ZjO4L._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3387,7 +3409,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HyperX SoloCast"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
@@ -3549,7 +3572,7 @@ document.addEventListener('keydown', function(e){
           data-precio="79,99 €"
           data-precio-original="89,99 €"
           
-            data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31mcu3VIYOL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/31zryHdCx+L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21LfKwYfvYL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/21+QH4F3WuL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31mcu3VIYOL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31zryHdCx+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21LfKwYfvYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21+QH4F3WuL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
@@ -3572,7 +3595,7 @@ document.addEventListener('keydown', function(e){
             data-precio="119,99 €"
             data-precio-original="129,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41mB07ksdPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41skpLfYHiL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51qSGhdoBPL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41b1QMp1RwL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41lnLFbqFcL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41qIrgG7j6L._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:315}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41mB07ksdPL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41skpLfYHiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51qSGhdoBPL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41b1QMp1RwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41lnLFbqFcL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41qIrgG7j6L._SL500_.jpg","width":500,"height":315}]'
             
           >
             
@@ -3593,7 +3616,7 @@ document.addEventListener('keydown', function(e){
             data-precio="48,12 €"
             data-precio-original="49,99 €"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/612EJMb70UL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:375},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/61P+AptvJfL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:375},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/61KArGy+qlL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:375},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/61REZq940pL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/61RoSSD4cGL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/61C3Gq9kZWL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/612EJMb70UL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/61P+AptvJfL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/61KArGy+qlL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/61REZq940pL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/61RoSSD4cGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/61C3Gq9kZWL._SL500_.jpg","width":500,"height":500}]'
             
           >
             
@@ -3614,7 +3637,7 @@ document.addEventListener('keydown', function(e){
             data-precio="76,97 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41o-F3uPyoL._SL500_.jpg&quot;,&quot;width&quot;:350,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51oEOBB7jAL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51tZFUgEHyL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51++xGAxHnL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:464},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/519d7ljJEaL._SL500_.jpg&quot;,&quot;width&quot;:387,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51plSWseNxL._SL500_.jpg&quot;,&quot;width&quot;:387,&quot;height&quot;:500},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/41t57gHmWsL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:340},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/517ab8loHmL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:486},{&quot;url&quot;:&quot;https://m.media-amazon.com/images/I/51zcdugzgbL._SL500_.jpg&quot;,&quot;width&quot;:500,&quot;height&quot;:475}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41o-F3uPyoL._SL500_.jpg","width":350,"height":500},{"url":"https://m.media-amazon.com/images/I/51oEOBB7jAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51tZFUgEHyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51++xGAxHnL._SL500_.jpg","width":500,"height":464},{"url":"https://m.media-amazon.com/images/I/519d7ljJEaL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/51plSWseNxL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41t57gHmWsL._SL500_.jpg","width":500,"height":340},{"url":"https://m.media-amazon.com/images/I/517ab8loHmL._SL500_.jpg","width":500,"height":486},{"url":"https://m.media-amazon.com/images/I/51zcdugzgbL._SL500_.jpg","width":500,"height":475}]'
             
           >
             
@@ -3635,7 +3658,8 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Trust Gaming GXT 252 Emita Plus"
-              loading="lazy"
+              
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
