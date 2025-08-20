@@ -39,6 +39,7 @@
   position: absolute; width: 400px; height: 400px; border: 2px solid #0073e6;
   background-repeat: no-repeat; background-size: 300%; display: none;
   z-index: 9999; pointer-events: none; box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: left .06s linear, top .06s linear;
 }
 
 /* Selector de variantes */
@@ -59,7 +60,7 @@
 /* === LUPA / ZOOM por producto === */
 function mostrarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   const img = container.querySelector('img');
   const srcZoom = img.getAttribute('data-zoom') || img.src;
   zoom.style.display = 'block';
@@ -67,21 +68,27 @@ function mostrarZoomFlotante(container) {
 }
 function ocultarZoomFlotante(container) {
   if (window.innerWidth < 768) return;
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   zoom.style.display = 'none';
 }
 function moverZoomFlotante(e, container) {
   if (window.innerWidth < 768) return;
   const img = container.querySelector('img');
-  const zoom = container.closest('.ficha-teclado').querySelector('.zoom-flotante');
+  const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
+  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
+
+  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  zoom.style.left = `${e.pageX + 20}px`;
-  zoom.style.top = `${e.pageY - 150}px`;
+  // Posicionar el cuadro de zoom respecto al contenedor localmente
+  const localLeft = x + 20; // 20px a la derecha del cursor
+  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  zoom.style.left = `${localLeft}px`;
+  zoom.style.top  = `${localTop}px`;
 }
 
 /* === MINIATURAS === */
@@ -94,7 +101,7 @@ function seleccionarMiniatura(imgElement) {
   principal.setAttribute('data-zoom', nuevaSrc);
 
   const zoom = contenedor.querySelector(".zoom-flotante");
-  zoom.style.backgroundImage = `url('${nuevaSrc}')`;
+  if (zoom) zoom.style.backgroundImage = `url('${nuevaSrc}')`;
 
   const miniaturas = contenedor.querySelectorAll(".galeria-miniaturas img");
   miniaturas.forEach(img => img.classList.remove("activa"));
@@ -114,9 +121,11 @@ function onVariantClick(btn) {
 
   // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
+  const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
     principal.src = vImg;
     principal.setAttribute('data-zoom', vImg);
+    if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
   // 2) ENLACES: botón de compra + enlace de la imagen principal
@@ -142,25 +151,30 @@ function onVariantClick(btn) {
 
   // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
-  const imagenesJson = btn.dataset.imagenes || '';
-  if (galeria && imagenesJson) {
+  const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
+  if (galeria) {
     try {
-      const imagenes = JSON.parse(imagenesJson);
+      const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
-      const mini = document.createElement('img');
-      mini.src = vImg;
-      mini.setAttribute('data-src', vImg);
-      mini.className = 'activa';
-      mini.alt = 'Imagen principal';
-      mini.loading = 'lazy';
-      mini.onclick = function(){ seleccionarMiniatura(this); };
-      galeria.appendChild(mini);
 
+      // miniatura principal
+      if (vImg) {
+        const mini = document.createElement('img');
+        mini.src = vImg;
+        mini.setAttribute('data-src', vImg);
+        mini.className = 'activa';
+        mini.alt = 'Imagen principal';
+        mini.loading = 'lazy';
+        mini.onclick = function(){ seleccionarMiniatura(this); };
+        galeria.appendChild(mini);
+      }
+
+      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
         m.setAttribute('data-src', iv.url);
-        m.alt = 'Variante';
+        m.alt = iv.alt || 'Variante';
         m.loading = 'lazy';
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
@@ -220,7 +234,7 @@ document.addEventListener('keydown', function(e){
           data-precio="{{ producto.precio | default: '' }}"
           data-precio-original="{{ producto.precioOriginal | default: '' }}"
           {% if producto.imagenesVariantes %}
-            data-imagenes='{{ producto.imagenesVariantes | jsonify | escape }}'
+            data-imagenes='{{ producto.imagenesVariantes | jsonify | replace: "'", "&#39;" }}'
           {% endif %}
         >
           {% if producto.imagen %}
@@ -255,7 +269,7 @@ document.addEventListener('keydown', function(e){
             data-precio="{{ v.precio | default: '' }}"
             data-precio-original="{{ v.precioOriginal | default: '' }}"
             {% if v.imagenesVariantes %}
-              data-imagenes='{{ v.imagenesVariantes | jsonify | escape }}'
+              data-imagenes='{{ v.imagenesVariantes | jsonify | replace: "'", "&#39;" }}'
             {% endif %}
           >
             {% if v.imagen %}
@@ -281,7 +295,10 @@ document.addEventListener('keydown', function(e){
               width="{{ producto.imagenWidth }}"
               height="{{ producto.imagenHeight }}"
               alt="{{ producto.nombre }}"
-              loading="lazy"
+              {% comment %}
+              Para que el zoom esté listo inmediatamente, puedes quitar lazy en la principal si lo prefieres:
+              {% endcomment %}
+              loading="eager"
             />
           </a>
           <div class="zoom-flotante"></div>
