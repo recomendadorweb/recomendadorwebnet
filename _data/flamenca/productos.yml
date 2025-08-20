@@ -2,7 +2,7 @@ productos:
   - ASIN: B0F2L6JTH9
     nombre: Vestido profesional de Flamenca de Lunares
     brand: Genérico
-    enlace: https://amzn.to/40G8YYu
+    enlace: https://amzn.to/40G8YYu?tag=recomendadorn-21&th=1
     valoracion: 5
     descripcion: >-
       Vestido de flamenca rojo con lunares negros, confeccionado en poliéster y elastano. Ajuste cómodo y favorecedor,
@@ -36,10 +36,44 @@ productos:
         height: 500
     caracteristicasAmazon:
       - Diseño color rojo con lunares negros
+    title: Genérico Vestido de Flamenca de Lunares (FR/ES, Letras, M, Regular, Regular, Rojo con Lunares Negros)
+    variantes:
+      - ASIN: B0F2MNWKXM
+        title: Genérico Vestido de Flamenca de Lunares (FR/ES, Letras, S, Regular, Regular, Rojo con Lunares Negros)
+        brand: Genérico
+        precio: "75,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 4 a 5 días
+        imagen: https://m.media-amazon.com/images/I/51R3DAdCS2L._SL500_.jpg
+        imagenWidth: 249
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51AcTQvPFVL._SL500_.jpg
+            width: 241
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51fw1rEs9eL._SL500_.jpg
+            width: 306
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51SEhxtin2L._SL500_.jpg
+            width: 241
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51KVo-cViAL._SL500_.jpg
+            width: 375
+            height: 500
+        enlace: https://www.amazon.es/dp/B0F2MNWKXM?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño color rojo con lunares negros
+        variationAttributes:
+          - name: size_name
+            value: S
+          - name: color_name
+            value: Rojo Con Lunares Negros
+        ParentASIN: B0F2KYCDD7
+    ParentASIN: B0F2KYCDD7
   - ASIN: B0F5BWR1DM
     nombre: Vestido Flamenco Mujer con Volantes
     brand: AMARU SANCHESU
-    enlace: https://amzn.to/46vrh6l
+    enlace: https://amzn.to/46vrh6l?tag=recomendadorn-21&th=1
     valoracion: 4.7
     descripcion: >-
       Vestido entallado con escote cuadrado, mangas 3/4 de encaje y cuatro volantes en la falda. El tejido elástico se
@@ -70,10 +104,309 @@ productos:
         height: 258
     caracteristicasAmazon:
       - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+    title: >-
+      Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral (FR/ES,
+      Letras, M, Regular, Regular, Negro Multicolor)
+    variantes:
+      - ASIN: B0F5BQ74QX
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, XL, Grande, Regular, Negro Multicolor)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg
+        imagenWidth: 344
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31gBrUrCK1L._SL500_.jpg
+            width: 337
+            height: 500
+          - url: https://m.media-amazon.com/images/I/310LVwrjPsL._SL500_.jpg
+            width: 394
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BQ74QX?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: XL Grande
+          - name: color_name
+            value: Negro Multicolor
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BPXXGV
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, M, Regular, Regular, Rosa Negro)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31fOuil37ZL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31iQpKaCj4L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31ohd3S3VYL._SL500_.jpg
+            width: 302
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31E2fcsOMfL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BPXXGV?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Rosa Negro
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BQTBPY
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, S, Regular, Regular, Negro Multicolor)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg
+        imagenWidth: 344
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31gBrUrCK1L._SL500_.jpg
+            width: 337
+            height: 500
+          - url: https://m.media-amazon.com/images/I/310LVwrjPsL._SL500_.jpg
+            width: 394
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BQTBPY?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: S
+          - name: color_name
+            value: Negro Multicolor
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BRYT3H
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, XXL, Grande, Regular, Negro Multicolor)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg
+        imagenWidth: 344
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31gBrUrCK1L._SL500_.jpg
+            width: 337
+            height: 500
+          - url: https://m.media-amazon.com/images/I/310LVwrjPsL._SL500_.jpg
+            width: 394
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BRYT3H?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: XXL Grande
+          - name: color_name
+            value: Negro Multicolor
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BRRNCW
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, XXL, Grande, Regular, Blanco Multicolor)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41wwH1+slaL._SL500_.jpg
+        imagenWidth: 417
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31k9GHOnQ9L._SL500_.jpg
+            width: 331
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BRRNCW?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: XXL Grande
+          - name: color_name
+            value: Blanco Multicolor
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BPFBSP
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, XXL, Grande, Regular, Rosa Blanco)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/3104g3JKlPL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/3191irzmUsL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BPFBSP?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: XXL Grande
+          - name: color_name
+            value: Rosa Blanco
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BV17M1
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, XL, Grande, Regular, Blanco Multicolor)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41wwH1+slaL._SL500_.jpg
+        imagenWidth: 417
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31k9GHOnQ9L._SL500_.jpg
+            width: 331
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BV17M1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: XL Grande
+          - name: color_name
+            value: Blanco Multicolor
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BV2GV4
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, L, Regular, Regular, Negro Multicolor)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg
+        imagenWidth: 344
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31gBrUrCK1L._SL500_.jpg
+            width: 337
+            height: 500
+          - url: https://m.media-amazon.com/images/I/310LVwrjPsL._SL500_.jpg
+            width: 394
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BV2GV4?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: L
+          - name: color_name
+            value: Negro Multicolor
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BS25S9
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, M, Regular, Regular, Lila Blanco)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/316ShEeSbsL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31OQ1Wkw0sL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31f8hjoWbeL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31PD9tTAkeL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BS25S9?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Lila Blanco
+        ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BTDJVT
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, S, Regular, Regular, Blanco Multicolor)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41wwH1+slaL._SL500_.jpg
+        imagenWidth: 417
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31k9GHOnQ9L._SL500_.jpg
+            width: 331
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BTDJVT?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: S
+          - name: color_name
+            value: Blanco Multicolor
+        ParentASIN: B0F5BVQZX5
+    ParentASIN: B0F5BVQZX5
   - ASIN: B08BDDT63M
     nombre: Traje Profesional 2 Piezas Lunares Gojoy Shop
     brand: Gojoy shop
-    enlace: https://amzn.to/41a4Yj2
+    enlace: https://amzn.to/41a4Yj2?tag=recomendadorn-21&th=1
     valoracion: 4.5
     descripcion: >-
       Conjunto de body con mangas de volante y falda de lunares. Pensado para bailar sevillanas o flamenco. Disponible
@@ -117,10 +450,425 @@ productos:
       - '<br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o quitarse.'
       - Este artículo cumple las normas vigentes de la C.E..
       - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+    title: >-
+      Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con Doble
+      Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (M, Rojo)
+    variantes:
+      - ASIN: B08BDBXBM6
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (L, Naranja)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/410UhnNCxGL._SL500_.jpg
+        imagenWidth: 320
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41c4flXolpL._SL500_.jpg
+            width: 500
+            height: 444
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/410UhnNCxGL._SL500_.jpg
+            width: 320
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDBXBM6?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: L
+          - name: color_name
+            value: Naranja
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDHHSZJ
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares.) (XL, Blanco)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41zkAU8xtvL._SL500_.jpg
+        imagenWidth: 282
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41GiVU1jhiL._SL500_.jpg
+            width: 457
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41zkAU8xtvL._SL500_.jpg
+            width: 282
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDHHSZJ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: XL
+          - name: color_name
+            value: Blanco
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDDSJZQ
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (S, Blanco)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41zkAU8xtvL._SL500_.jpg
+        imagenWidth: 282
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41GiVU1jhiL._SL500_.jpg
+            width: 457
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41zkAU8xtvL._SL500_.jpg
+            width: 282
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDDSJZQ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: S
+          - name: color_name
+            value: Blanco
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDJSGNQ
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (M, Rosa)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41DF3N3Ge5L._SL500_.jpg
+        imagenWidth: 321
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41s6FwdUmVL._SL500_.jpg
+            width: 401
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41DF3N3Ge5L._SL500_.jpg
+            width: 321
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDJSGNQ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Rosa
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDFM89L
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (S, Verde)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/418mahkpwRL._SL500_.jpg
+        imagenWidth: 316
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/519bdVh52+L._SL500_.jpg
+            width: 378
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/418mahkpwRL._SL500_.jpg
+            width: 316
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDFM89L?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: S
+          - name: color_name
+            value: Verde
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDJQYKL
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (L, Azul)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg
+        imagenWidth: 361
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41dCyzxZM0L._SL500_.jpg
+            width: 500
+            height: 447
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg
+            width: 361
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDJQYKL?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: L
+          - name: color_name
+            value: Azul
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDHGR2M
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (M, Blanco)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41zkAU8xtvL._SL500_.jpg
+        imagenWidth: 282
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41GiVU1jhiL._SL500_.jpg
+            width: 457
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41zkAU8xtvL._SL500_.jpg
+            width: 282
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDHGR2M?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Blanco
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDG1V7L
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares.) (XXL, Azul)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg
+        imagenWidth: 361
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41dCyzxZM0L._SL500_.jpg
+            width: 500
+            height: 447
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg
+            width: 361
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDG1V7L?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: XXL
+          - name: color_name
+            value: Azul
+        ParentASIN: B08BDPFZ76
+      - ASIN: B08BDHZPY2
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares.) (XXL, Naranja)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/410UhnNCxGL._SL500_.jpg
+        imagenWidth: 320
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41c4flXolpL._SL500_.jpg
+            width: 500
+            height: 444
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/410UhnNCxGL._SL500_.jpg
+            width: 320
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BDHZPY2?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: XXL
+          - name: color_name
+            value: Naranja
+        ParentASIN: B08BDPFZ76
+    ParentASIN: B08BDPFZ76
+    variationAttributes:
+      - name: size_name
+        value: M
+      - name: color_name
+        value: Rojo
   - ASIN: B0829SK8LN
     nombre: Vestido Flamenco Rojo Lunares Negro (Niñas)
     brand: Flamifeel
-    enlace: https://amzn.to/4o9Hswp
+    enlace: https://amzn.to/4o9Hswp?tag=recomendadorn-21&th=1
     valoracion: 4.6
     descripcion: >-
       Vestido flamenco infantil rojo con lunares, mangas con volantes y escote en V. Parte superior elástica para mayor
@@ -155,10 +903,145 @@ productos:
       - El fondo en 3 volantes decorados con una tira de raso
       - La parte superior del vestido es elástica para adaptarse mejor al cuerpo
       - Escote en V
+    title: Flamifeel Vestido Flamenco Rojo Lunares Negro, rojo, 6 años
+    variantes:
+      - ASIN: B0829SD47D
+        title: Flamifeel Vestido Flamenco Rojo Lunares Negro, rojo, 10 años
+        brand: Flamifeel
+        precio: "37,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41za+f2JwiL._SL500_.jpg
+        imagenWidth: 322
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41ALx8feomL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41HQJer5WBL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31lXhncsJTL._SL500_.jpg
+            width: 500
+            height: 424
+        enlace: https://www.amazon.es/dp/B0829SD47D?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Vestido de sevillano infantil económico para disfraz
+          - Mango con dos volantes
+          - La parte inferior en 3 volantes decorados con una banda de satén
+          - La parte superior del vestido es elástica para adaptarse mejor al cuerpo
+          - Cuello en V
+        variationAttributes:
+          - name: size_name
+            value: 10 años
+          - name: color_name
+            value: Rojo
+        ParentASIN: B082GHBVJY
+      - ASIN: B0829QJ4D8
+        title: Flamifeel Vestido Flamenco Rojo Lunares Negro, rojo, 4 años
+        brand: Flamifeel
+        precio: "33,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41za+f2JwiL._SL500_.jpg
+        imagenWidth: 322
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41ALx8feomL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41HQJer5WBL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31lXhncsJTL._SL500_.jpg
+            width: 500
+            height: 424
+        enlace: https://www.amazon.es/dp/B0829QJ4D8?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Vestido de sevillano infantil económico para disfraz
+          - Mango con dos volantes
+          - La parte inferior en 3 volantes decorados con una banda de satén
+          - La parte superior del vestido es elástica para adaptarse mejor al cuerpo
+          - Cuello en V
+        variationAttributes:
+          - name: size_name
+            value: 4 años
+          - name: color_name
+            value: Rojo
+        ParentASIN: B082GHBVJY
+      - ASIN: B0829RS4ML
+        title: Flamifeel Vestido flamenco rojo con lunares negros, rosso, 12 años
+        brand: Flamifeel
+        precio: "37,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41za+f2JwiL._SL500_.jpg
+        imagenWidth: 322
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41ALx8feomL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41HQJer5WBL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31lXhncsJTL._SL500_.jpg
+            width: 500
+            height: 424
+        enlace: https://www.amazon.es/dp/B0829RS4ML?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Disfraz de Sevilla para niños
+          - Asa con dos volantes
+          - La parte inferior tiene 3 volantes decorados con una banda de satén
+          - La parte superior del vestido es elástica para adaptarse mejor al cuerpo
+          - Cuello en V
+        variationAttributes:
+          - name: size_name
+            value: 12 años
+          - name: color_name
+            value: Rojo
+        ParentASIN: B082GHBVJY
+      - ASIN: B0829S2LL3
+        title: Flamifeel Vestido Flamenco Rojo Lunares Negro, rojo, 8 años
+        brand: Flamifeel
+        precio: "37,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41za+f2JwiL._SL500_.jpg
+        imagenWidth: 322
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41ALx8feomL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41HQJer5WBL._SL500_.jpg
+            width: 434
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31lXhncsJTL._SL500_.jpg
+            width: 500
+            height: 424
+        enlace: https://www.amazon.es/dp/B0829S2LL3?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Vestido de sevillano infantil económico para disfraz
+          - Mango con dos volantes
+          - La parte inferior en 3 volantes decorados con una banda de satén
+          - La parte superior del vestido es elástica para adaptarse mejor al cuerpo
+        variationAttributes:
+          - name: size_name
+            value: 8 años
+          - name: color_name
+            value: Rojo
+        ParentASIN: B082GHBVJY
+    ParentASIN: B082GHBVJY
+    variationAttributes:
+      - name: size_name
+        value: 6 años
+      - name: color_name
+        value: Rojo
   - ASIN: B0CKM95RTP
     nombre: Vestido Flamenca con Flor (Niñas)
     brand: ReliBeauty
-    enlace: https://amzn.to/4fenahp
+    enlace: https://amzn.to/4fenahp?tag=recomendadorn-21&th=1
     valoracion: 4.6
     descripcion: >-
       Traje de flamenca para niña con tocado de flor incluido. Diseño clásico rojo y negro. Material suave y resistente,
@@ -210,10 +1093,275 @@ productos:
         Calidad: Material de alta calidad, suave y cómodo. Relibeauty siempre se centra en la calidad del producto, por
         favor, estar seguro de ordenar.
       - 'Atención: Por favor, compruebe la tabla de tallas en la imagen antes de realizar un pedido.'
+    title: >-
+      ReliBeauty Disfraz Flamenca Niña Vestido Sevillana Traje Flamenca con Tocado de Flor Carnaval Feria de Abril, 5-6
+      años(110cm)
+    variantes:
+      - ASIN: B0CKM8D9QP
+        title: >-
+          ReliBeauty Disfraz Flamenca Niña Vestido Sevillana Traje Flamenca con Tocado de Flor Carnaval Feria de Abril,
+          7-8 años(120cm)
+        brand: ReliBeauty
+        precio: "33,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41tpY1vI4UL._SL500_.jpg
+        imagenWidth: 398
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41KXo5RGY8L._SL500_.jpg
+            width: 398
+            height: 500
+          - url: https://m.media-amazon.com/images/I/510KTKEs6BL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417N1QbfnaL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41Vv2xfBf8L._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/31rDnnZafwL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41MLz5to9wL._SL500_.jpg
+            width: 500
+            height: 334
+        enlace: https://www.amazon.es/dp/B0CKM8D9QP?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'El paquete incluye: Un vestido de flamenca y un tocado de flor.'
+          - >-
+            Diseño exclusivo: Traje de baile flamenco clásico en una bonita combinación de colores rojo y negro. Diseño
+            único con tocado a juego, ideal para interpretar a bailarinas sevillanas y estimular el interés de las niñas
+            por el baile flamenco.
+          - >-
+            Ocasiones: Adecuado para todos los eventos, actuaciones, fiestas de cumpleaños, fiestas de baile, Navidad,
+            Halloween, carnaval, Feria de Abril, cosplay, fiestas temáticas, etc. Ideal para regalos de cumpleaños y
+            Navidad.
+          - >-
+            Calidad: Material de alta calidad, suave y cómodo. Relibeauty siempre se centra en la calidad del producto,
+            por favor, estar seguro de ordenar.
+          - 'Atención: Por favor, compruebe la tabla de tallas en la imagen antes de realizar un pedido.'
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: 7-8 años(120cm)
+        ParentASIN: B0CPY3BDN9
+      - ASIN: B0CKM5DTX5
+        title: >-
+          ReliBeauty Disfraz Flamenca Niña Vestido Sevillana Traje Flamenca con Tocado de Flor Carnaval Feria de Abril,
+          10 años(140cm)
+        brand: ReliBeauty
+        precio: "33,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41tpY1vI4UL._SL500_.jpg
+        imagenWidth: 398
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41KXo5RGY8L._SL500_.jpg
+            width: 398
+            height: 500
+          - url: https://m.media-amazon.com/images/I/510KTKEs6BL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417N1QbfnaL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41Vv2xfBf8L._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/31rDnnZafwL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41MLz5to9wL._SL500_.jpg
+            width: 500
+            height: 334
+        enlace: https://www.amazon.es/dp/B0CKM5DTX5?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'El paquete incluye: Un vestido de flamenca y un tocado de flor.'
+          - >-
+            Diseño exclusivo: Traje de baile flamenco clásico en una bonita combinación de colores rojo y negro. Diseño
+            único con tocado a juego, ideal para interpretar a bailarinas sevillanas y estimular el interés de las niñas
+            por el baile flamenco.
+          - >-
+            Ocasiones: Adecuado para todos los eventos, actuaciones, fiestas de cumpleaños, fiestas de baile, Navidad,
+            Halloween, carnaval, Feria de Abril, cosplay, fiestas temáticas, etc. Ideal para regalos de cumpleaños y
+            Navidad.
+          - >-
+            Calidad: Material de alta calidad, suave y cómodo. Relibeauty siempre se centra en la calidad del producto,
+            por favor, estar seguro de ordenar.
+          - 'Atención: Por favor, compruebe la tabla de tallas en la imagen antes de realizar un pedido.'
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: 10 años(140cm)
+        ParentASIN: B0CPY3BDN9
+      - ASIN: B0CKM7ZJL1
+        title: >-
+          ReliBeauty Disfraz Flamenca Niña Vestido Sevillana Traje Flamenca con Tocado de Flor Carnaval Feria de Abril,
+          9 años(130cm)
+        brand: ReliBeauty
+        precio: "34,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41tpY1vI4UL._SL500_.jpg
+        imagenWidth: 398
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41KXo5RGY8L._SL500_.jpg
+            width: 398
+            height: 500
+          - url: https://m.media-amazon.com/images/I/510KTKEs6BL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417N1QbfnaL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41Vv2xfBf8L._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/31rDnnZafwL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41MLz5to9wL._SL500_.jpg
+            width: 500
+            height: 334
+        enlace: https://www.amazon.es/dp/B0CKM7ZJL1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'El paquete incluye: Un vestido de flamenca y un tocado de flor.'
+          - >-
+            Diseño exclusivo: Traje de baile flamenco clásico en una bonita combinación de colores rojo y negro. Diseño
+            único con tocado a juego, ideal para interpretar a bailarinas sevillanas y estimular el interés de las niñas
+            por el baile flamenco.
+          - >-
+            Ocasiones: Adecuado para todos los eventos, actuaciones, fiestas de cumpleaños, fiestas de baile, Navidad,
+            Halloween, carnaval, Feria de Abril, cosplay, fiestas temáticas, etc. Ideal para regalos de cumpleaños y
+            Navidad.
+          - >-
+            Calidad: Material de alta calidad, suave y cómodo. Relibeauty siempre se centra en la calidad del producto,
+            por favor, estar seguro de ordenar.
+          - 'Atención: Por favor, compruebe la tabla de tallas en la imagen antes de realizar un pedido.'
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: 9 años(130cm)
+        ParentASIN: B0CPY3BDN9
+      - ASIN: B0CKM8XZ32
+        title: >-
+          ReliBeauty Disfraz Flamenca Niña Vestido Sevillana Traje Flamenca con Tocado de Flor Carnaval Feria de Abril,
+          3-4 años(100cm)
+        brand: ReliBeauty
+        precio: "33,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41tpY1vI4UL._SL500_.jpg
+        imagenWidth: 398
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41KXo5RGY8L._SL500_.jpg
+            width: 398
+            height: 500
+          - url: https://m.media-amazon.com/images/I/510KTKEs6BL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417N1QbfnaL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41Vv2xfBf8L._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/31rDnnZafwL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41MLz5to9wL._SL500_.jpg
+            width: 500
+            height: 334
+        enlace: https://www.amazon.es/dp/B0CKM8XZ32?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'El paquete incluye: Un vestido de flamenca y un tocado de flor.'
+          - >-
+            Diseño exclusivo: Traje de baile flamenco clásico en una bonita combinación de colores rojo y negro. Diseño
+            único con tocado a juego, ideal para interpretar a bailarinas sevillanas y estimular el interés de las niñas
+            por el baile flamenco.
+          - >-
+            Ocasiones: Adecuado para todos los eventos, actuaciones, fiestas de cumpleaños, fiestas de baile, Navidad,
+            Halloween, carnaval, Feria de Abril, cosplay, fiestas temáticas, etc. Ideal para regalos de cumpleaños y
+            Navidad.
+          - >-
+            Calidad: Material de alta calidad, suave y cómodo. Relibeauty siempre se centra en la calidad del producto,
+            por favor, estar seguro de ordenar.
+          - 'Atención: Por favor, compruebe la tabla de tallas en la imagen antes de realizar un pedido.'
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: 3-4 años(100cm)
+        ParentASIN: B0CPY3BDN9
+      - ASIN: B0CKM94S54
+        title: >-
+          ReliBeauty Disfraz Flamenca Niña Vestido Sevillana Traje Flamenca con Tocado de Flor Carnaval Feria de Abril,
+          11-12 años(150cm)
+        brand: ReliBeauty
+        precio: "33,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41tpY1vI4UL._SL500_.jpg
+        imagenWidth: 398
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41KXo5RGY8L._SL500_.jpg
+            width: 398
+            height: 500
+          - url: https://m.media-amazon.com/images/I/510KTKEs6BL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417N1QbfnaL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41Vv2xfBf8L._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/31rDnnZafwL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41MLz5to9wL._SL500_.jpg
+            width: 500
+            height: 334
+        enlace: https://www.amazon.es/dp/B0CKM94S54?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'El paquete incluye: Un vestido de flamenca y un tocado de flor.'
+          - >-
+            Diseño exclusivo: Traje de baile flamenco clásico en una bonita combinación de colores rojo y negro. Diseño
+            único con tocado a juego, ideal para interpretar a bailarinas sevillanas y estimular el interés de las niñas
+            por el baile flamenco.
+          - >-
+            Ocasiones: Adecuado para todos los eventos, actuaciones, fiestas de cumpleaños, fiestas de baile, Navidad,
+            Halloween, carnaval, Feria de Abril, cosplay, fiestas temáticas, etc. Ideal para regalos de cumpleaños y
+            Navidad.
+          - >-
+            Calidad: Material de alta calidad, suave y cómodo. Relibeauty siempre se centra en la calidad del producto,
+            por favor, estar seguro de ordenar.
+          - 'Atención: Por favor, compruebe la tabla de tallas en la imagen antes de realizar un pedido.'
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: 11-12 años(150cm)
+        ParentASIN: B0CPY3BDN9
+    ParentASIN: B0CPY3BDN9
+    variationAttributes:
+      - name: color_name
+        value: Negro
+      - name: size_name
+        value: 5-6 años(110cm)
   - ASIN: B08BCS4PG4
     nombre: Traje Profesional 2 Piezas Volante en Manga
     brand: Gojoy shop
-    enlace: https://amzn.to/4o7CJeM
+    enlace: https://amzn.to/4o7CJeM?tag=recomendadorn-21&th=1
     valoracion: 4.8
     descripcion: >-
       Conjunto profesional de flamenca con body y falda de volantes. Muy cómodo gracias al tejido elástico. Disponible
@@ -257,10 +1405,468 @@ productos:
       - '<br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o quitarse.'
       - Este artículo cumple las normas vigentes de la C.E..
       - Contiene Body y Falda con Doble Volante en Manga.
+    title: >-
+      Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con Doble
+      Volante en Manga y Falda en 6 Colores Disponibles) (Rojo, M)
+    variantes:
+      - ASIN: B08BCRQ5M8
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Rojo, S)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41L1JcvjGVL._SL500_.jpg
+        imagenWidth: 281
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41908l5QWnL._SL500_.jpg
+            width: 365
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L1JcvjGVL._SL500_.jpg
+            width: 281
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417FjOQ1uLL._SL500_.jpg
+            width: 369
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BCRQ5M8?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Rojo
+          - name: size_name
+            value: S
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BCRJ1CQ
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Verde, S)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41qRPxnwwrL._SL500_.jpg
+        imagenWidth: 341
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41CtXNmELUL._SL500_.jpg
+            width: 500
+            height: 359
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ez5AKpnJL._SL500_.jpg
+            width: 500
+            height: 449
+          - url: https://m.media-amazon.com/images/I/41qRPxnwwrL._SL500_.jpg
+            width: 341
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ndKcH0GfL._SL500_.jpg
+            width: 500
+            height: 302
+        enlace: https://www.amazon.es/dp/B08BCRJ1CQ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Verde
+          - name: size_name
+            value: S
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BBPPDCR
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Blanco, XL)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41ZIaqz91PL._SL500_.jpg
+        imagenWidth: 300
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/4184vImN08L._SL500_.jpg
+            width: 500
+            height: 439
+          - url: https://m.media-amazon.com/images/I/41ZIaqz91PL._SL500_.jpg
+            width: 300
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417FjOQ1uLL._SL500_.jpg
+            width: 369
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BBPPDCR?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Blanco
+          - name: size_name
+            value: XL
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BBX5R9N
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Blanco, XXL)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41ZIaqz91PL._SL500_.jpg
+        imagenWidth: 300
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/4184vImN08L._SL500_.jpg
+            width: 500
+            height: 439
+          - url: https://m.media-amazon.com/images/I/41ZIaqz91PL._SL500_.jpg
+            width: 300
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417FjOQ1uLL._SL500_.jpg
+            width: 369
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BBX5R9N?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Blanco
+          - name: size_name
+            value: XXL
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BCRJG45
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Negro, M)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31GBpiVE4FL._SL500_.jpg
+        imagenWidth: 255
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41x7yxhfeSL._SL500_.jpg
+            width: 439
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31GBpiVE4FL._SL500_.jpg
+            width: 255
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417FjOQ1uLL._SL500_.jpg
+            width: 369
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BCRJG45?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: M
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BCRFM1Y
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Naranja, S)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41EEcmOeaSL._SL500_.jpg
+        imagenWidth: 322
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41EEcmOeaSL._SL500_.jpg
+            width: 322
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ndKcH0GfL._SL500_.jpg
+            width: 500
+            height: 302
+        enlace: https://www.amazon.es/dp/B08BCRFM1Y?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Naranja
+          - name: size_name
+            value: S
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BCRVLRM
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Negro, XL)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31GBpiVE4FL._SL500_.jpg
+        imagenWidth: 255
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41x7yxhfeSL._SL500_.jpg
+            width: 439
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31GBpiVE4FL._SL500_.jpg
+            width: 255
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417FjOQ1uLL._SL500_.jpg
+            width: 369
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BCRVLRM?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: XL
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BCRRJGL
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Blanco, M)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41ZIaqz91PL._SL500_.jpg
+        imagenWidth: 300
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/4184vImN08L._SL500_.jpg
+            width: 500
+            height: 439
+          - url: https://m.media-amazon.com/images/I/41ZIaqz91PL._SL500_.jpg
+            width: 300
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417FjOQ1uLL._SL500_.jpg
+            width: 369
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BCRRJGL?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Blanco
+          - name: size_name
+            value: M
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BCRNX5C
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Verde, M)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41qRPxnwwrL._SL500_.jpg
+        imagenWidth: 341
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41CtXNmELUL._SL500_.jpg
+            width: 500
+            height: 359
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ez5AKpnJL._SL500_.jpg
+            width: 500
+            height: 449
+          - url: https://m.media-amazon.com/images/I/41qRPxnwwrL._SL500_.jpg
+            width: 341
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ndKcH0GfL._SL500_.jpg
+            width: 500
+            height: 302
+        enlace: https://www.amazon.es/dp/B08BCRNX5C?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Verde
+          - name: size_name
+            value: M
+        ParentASIN: B08BCS8P33
+      - ASIN: B08BCQTTMZ
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volante en Manga y Falda en 6 Colores Disponibles) (Rosa, S)
+        brand: Gojoy shop
+        precio: "29,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/418tHE3R8lL._SL500_.jpg
+        imagenWidth: 348
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41NU+nKeeBL._SL500_.jpg
+            width: 500
+            height: 417
+          - url: https://m.media-amazon.com/images/I/418tHE3R8lL._SL500_.jpg
+            width: 348
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417FjOQ1uLL._SL500_.jpg
+            width: 369
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BCQTTMZ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volante en Manga y Falda Ideal para Baile Danza Flamenco o Sevillanas
+            para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body y Falda con Doble Volante en Manga.
+        variationAttributes:
+          - name: color_name
+            value: Rosa
+          - name: size_name
+            value: S
+        ParentASIN: B08BCS8P33
+    ParentASIN: B08BCS8P33
   - ASIN: B09YT8TL7J
     nombre: Vestido de Flamenco Largo y Elegante
     brand: Tandada
-    enlace: https://amzn.to/40H13dw
+    enlace: https://amzn.to/40H13dw?tag=recomendadorn-21&th=1
     valoracion: 4.7
     descripcion: >-
       Vestido largo para danza con vuelo de 360°, tela suave y transpirable. Ideal para ballet moderno, flamenco o
@@ -317,10 +1923,515 @@ productos:
         [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La satisfacción
         del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro equipo de posventa
         si tiene alguna pregunta o inquietud.
+    title: >-
+      Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+      Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Red,M)
+    variantes:
+      - ASIN: B09YSW3YH4
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Blue,S)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/41hQCINE1WL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41aRPEhuPPL._SL500_.jpg
+            width: 500
+            height: 491
+          - url: https://m.media-amazon.com/images/I/41j8CDQHKvL._SL500_.jpg
+            width: 396
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41iVhnsj++L._SL500_.jpg
+            width: 366
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg
+            width: 457
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+        enlace: https://www.amazon.es/dp/B09YSW3YH4?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Blue
+          - name: size_name
+            value: S
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YT37LZ5
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Red,L)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/41vz4uEAzpL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/416osuWnXuL._SL500_.jpg
+            width: 364
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41U9XW9XjoL._SL500_.jpg
+            width: 366
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WVQFHvPrL._SL500_.jpg
+            width: 500
+            height: 491
+          - url: https://m.media-amazon.com/images/I/410Eonf1TsL._SL500_.jpg
+            width: 490
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+          - url: https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg
+            width: 385
+            height: 500
+        enlace: https://www.amazon.es/dp/B09YT37LZ5?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Red
+          - name: size_name
+            value: L
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YT9T57L
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Blue,XXL)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/41hQCINE1WL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41aRPEhuPPL._SL500_.jpg
+            width: 500
+            height: 491
+          - url: https://m.media-amazon.com/images/I/41j8CDQHKvL._SL500_.jpg
+            width: 396
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41iVhnsj++L._SL500_.jpg
+            width: 366
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg
+            width: 457
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+        enlace: https://www.amazon.es/dp/B09YT9T57L?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Blue
+          - name: size_name
+            value: XXL
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YT7MGZX
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Red,S)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/41vz4uEAzpL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/416osuWnXuL._SL500_.jpg
+            width: 364
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41U9XW9XjoL._SL500_.jpg
+            width: 366
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WVQFHvPrL._SL500_.jpg
+            width: 500
+            height: 491
+          - url: https://m.media-amazon.com/images/I/410Eonf1TsL._SL500_.jpg
+            width: 490
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+          - url: https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg
+            width: 385
+            height: 500
+        enlace: https://www.amazon.es/dp/B09YT7MGZX?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Red
+          - name: size_name
+            value: S
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YT9KQ1B
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Blue,XL)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/41hQCINE1WL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41aRPEhuPPL._SL500_.jpg
+            width: 500
+            height: 491
+          - url: https://m.media-amazon.com/images/I/41j8CDQHKvL._SL500_.jpg
+            width: 396
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41iVhnsj++L._SL500_.jpg
+            width: 366
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg
+            width: 457
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+        enlace: https://www.amazon.es/dp/B09YT9KQ1B?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Blue
+          - name: size_name
+            value: XL
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YT5SVK2
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Black,S)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/3151RxjZHPL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31UdW4KrdwL._SL500_.jpg
+            width: 335
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51bC92B83-L._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/31GRAe73NOL._SL500_.jpg
+            width: 406
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+          - url: https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg
+            width: 457
+            height: 500
+        enlace: https://www.amazon.es/dp/B09YT5SVK2?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: S
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YSYVKQQ
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Black,L)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/3151RxjZHPL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31UdW4KrdwL._SL500_.jpg
+            width: 335
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51bC92B83-L._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/31GRAe73NOL._SL500_.jpg
+            width: 406
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+          - url: https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg
+            width: 457
+            height: 500
+        enlace: https://www.amazon.es/dp/B09YSYVKQQ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: L
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YTBXRGG
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Red,XXL)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/41vz4uEAzpL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/416osuWnXuL._SL500_.jpg
+            width: 364
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41U9XW9XjoL._SL500_.jpg
+            width: 366
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WVQFHvPrL._SL500_.jpg
+            width: 500
+            height: 491
+          - url: https://m.media-amazon.com/images/I/410Eonf1TsL._SL500_.jpg
+            width: 490
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+          - url: https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg
+            width: 385
+            height: 500
+        enlace: https://www.amazon.es/dp/B09YTBXRGG?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Red
+          - name: size_name
+            value: XXL
+        ParentASIN: B09YTHZ8W2
+      - ASIN: B09YT9FWXS
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Black,XXL)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/3151RxjZHPL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31UdW4KrdwL._SL500_.jpg
+            width: 335
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51bC92B83-L._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/31GRAe73NOL._SL500_.jpg
+            width: 406
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+          - url: https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg
+            width: 457
+            height: 500
+        enlace: https://www.amazon.es/dp/B09YT9FWXS?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: size_name
+            value: XXL
+        ParentASIN: B09YTHZ8W2
+    ParentASIN: B09YTHZ8W2
+    variationAttributes:
+      - name: color_name
+        value: Red
+      - name: size_name
+        value: M
   - ASIN: B0DZ75Y8TJ
     nombre: Traje de Flamenca Mujer Verde
     brand: Partilandia
-    enlace: https://amzn.to/41hItbZ
+    enlace: https://amzn.to/41hItbZ?tag=recomendadorn-21&th=1
     valoracion: 4.2
     descripcion: Disfraz de flamenca en color verde con lunares blancos. Corte clásico de vestido de sevillana.
     precio: "24,48\_€"
@@ -342,10 +2453,66 @@ productos:
       - ✅ Incluye Vestido
       - ❌ No incluye Resto de complementos
       - ⭐ Muy demandado para Carnaval 🤴👸🧚‍♀️💃
+    title: Partilandia | Disfraz de Sevillana verde con lunares blancos para mujer (Talla M)
+    variantes:
+      - ASIN: B0DZ7724F4
+        title: Partilandia | Disfraz de Sevillana verde con lunares blancos para mujer (Talla L)
+        brand: Partilandia
+        precio: "27,60\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51a0Do1t-DL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 454
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41XBNkeg3vL._SL500_.jpg
+            width: 250
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51dDK9J0uEL._SL500_.jpg
+            width: 500
+            height: 454
+        enlace: https://www.amazon.es/dp/B0DZ7724F4?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - ✅ Incluye Vestido
+          - ❌ No incluye Resto de complementos
+          - ⭐ Muy demandado para Carnaval 🤴👸🧚‍♀️💃
+        variationAttributes:
+          - name: size_name
+            value: L
+        ParentASIN: B0DZ76J1YB
+      - ASIN: B0DZ74VCWJ
+        title: Partilandia | Disfraz de Sevillana verde con lunares blancos para mujer (Talla XL)
+        brand: Partilandia
+        precio: "24,48\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51a0Do1t-DL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 454
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41XBNkeg3vL._SL500_.jpg
+            width: 250
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51dDK9J0uEL._SL500_.jpg
+            width: 500
+            height: 454
+        enlace: https://www.amazon.es/dp/B0DZ74VCWJ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - ✅ Incluye Vestido
+          - ❌ No incluye Resto de complementos
+          - ⭐ Muy demandado para Carnaval 🤴👸🧚‍♀️💃
+        variationAttributes:
+          - name: size_name
+            value: XL
+        ParentASIN: B0DZ76J1YB
+    ParentASIN: B0DZ76J1YB
+    variationAttributes:
+      - name: size_name
+        value: M
   - ASIN: B019A3UAI4
     nombre: Traje de Flamenca Mujer Rojo
     brand: FIESTAS GUIRCA
-    enlace: https://amzn.to/4lJZgwF
+    enlace: https://amzn.to/4lJZgwF?tag=recomendadorn-21&th=1
     valoracion: 4.2
     descripcion: Disfraz de flamenca en color rojo con lunares blancos. Corte clásico de vestido de sevillana.
     precio: "23,04\_€"
@@ -384,3 +2551,93 @@ productos:
       - 'MEDIDAS DEL DISFRAZ APROX: Busto 93 - 96 cm, cintura 73 - 75 cm, caderas 99,5 - 102 cm'
       - Este disfráz está hecho de Poliester y cumple con los estándares de seguridad
       - 'FIESTAS GUIRCA Disfraces de mujer adulto: una gran elección para tu fiesta temática.'
+    title: Guirca - Disfraz adulta flamenca, Talla 38-40 (80629.0)
+    variantes:
+      - ASIN: B074X3FCD2
+        title: Guirca 84728 - Flamenca Adulta Talla L 42-44
+        brand: FIESTAS GUIRCA
+        precio: "23,44\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41efHDWplLL._SL500_.jpg
+        imagenWidth: 177
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Ot9fsZhQL._SL500_.jpg
+            width: 273
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+            width: 500
+            height: 441
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41RHy6MycfL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+        enlace: https://www.amazon.es/dp/B074X3FCD2?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Contenido del disfraz de bailarina de flamenco española: Vestido. NO_INCLUIDO: Accesorios'
+          - 'GUÍA DE TALLAS DE DISFRAZ: Mujer L 42-44'
+          - 'MEDIDAS DEL DISFRAZ APROX: Busto 99.5 - 103 cm, Cintura 80 - 84 cm, Caderas 106 - 110 cm'
+          - Este disfráz está hecho de Poliester y cumple con los estándares de seguridad
+          - 'FIESTAS GUIRCA Disfraces de mujer adulto: una gran elección para tu fiesta temática.'
+        variationAttributes:
+          - name: size_name
+            value: L
+        ParentASIN: B074KR7WWP
+      - ASIN: B0DGGVV5FK
+        title: FIESTAS GUIRCA - Disfraz de Sevillana - Traje de Flamenca Mujer Talla XL
+        brand: FIESTAS GUIRCA
+        precio: "23,94\_€"
+        precioOriginal: "25,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41efHDWplLL._SL500_.jpg
+        imagenWidth: 177
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Ot9fsZhQL._SL500_.jpg
+            width: 273
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+            width: 500
+            height: 441
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41RHy6MycfL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+        enlace: https://www.amazon.es/dp/B0DGGVV5FK?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Contenido del disfraz de bailarina de flamenco española: Vestido. NO_INCLUIDO: Accesorios'
+          - 'GUÍA DE TALLAS DE DISFRAZ: Mujer XL 46-48'
+          - 'MEDIDAS DEL DISFRAZ APROX: Busto 108-115cm, Cintura 91-100cm, Caderas 110-125cm'
+          - Este disfráz está hecho de Poliester y cumple con los estándares de seguridad
+          - 'FIESTAS GUIRCA Disfraces de mujer adulto: una gran elección para tu fiesta temática.'
+        variationAttributes:
+          - name: size_name
+            value: XL
+        ParentASIN: B074KR7WWP
+    ParentASIN: B074KR7WWP
+    variationAttributes:
+      - name: size_name
+        value: 38-40
