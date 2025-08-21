@@ -82,8 +82,8 @@ productos:
     lo_mejor: Viscoelástica + capa de gel
     nombre: SILKORA® Premium
     valoracion: 5
-    precio: "39,99\_€"
-    precioOriginal: No especificado
+    precio: "34,99\_€"
+    precioOriginal: "39,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51pWbJhnLwL._SL500_.jpg
@@ -659,6 +659,58 @@ productos:
       KMINA Cojín Antiescaras para Silla de Ruedas (41x41x7 cm), Viscoelástico de Alta Densidad, Negro - Fabricado en
       España
     variantes:
+      - ASIN: B08R43VMRN
+        title: >-
+          KMINA - Cojín Antiescaras para Silla de Ruedas, Cojín Antiescaras Viscoelástico, Cojín Negro, Espuma
+          Viscoelásatica - Fabricado en España (Densidad Media)
+        brand: KMINA
+        precio: "29,99\_€"
+        precioOriginal: "49,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31-YrarpFRL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 408
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/21SWTj79sAL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/414sYN1uMQL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/21OG35vc56L._SL500_.jpg
+            width: 500
+            height: 336
+          - url: https://m.media-amazon.com/images/I/31Ml8uhytLL._SL500_.jpg
+            width: 500
+            height: 336
+          - url: https://m.media-amazon.com/images/I/31m2RvMjefL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41N9YjkiOtL._SL500_.jpg
+            width: 500
+            height: 374
+        enlace: https://www.amazon.es/dp/B08R43VMRN?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            ♥ FUNCIONAL: Cojín antiescaras de 7 cm de espuma visco elástica que disminuye la presión y previene la
+            aparición de úlceras y escaras. Gracias a su material así como a su mayor densidad, el cojín con espuma de
+            memoria se adapta perfectamente al contorno y peso del usuario.
+          - >-
+            ♥ DISEÑO: Cojín antiescaras fabricado con una capa textil de 100% poliestireno y una membrana de
+            poliuretano, cuenta con el certificado OEKO-TEX STANDARD 100.
+          - >-
+            ♥ LAVABLE: La funda del cojín antiescaras está hecha con tejido 3D y es suave, lavable, transpirable,
+            impermeable y antideslizante. Además, es antiolor, antibacterias, antihongos, antichinches y antiácaros.
+          - >-
+            ♥ CÓMODO: Además de prevenir las escaras, el cojín ortopédico mejora el descanso del usuario en la silla de
+            ruedas ofreciendo siempre un confort máximo.
+          - >-
+            ✔ RECOMENDADO PARA: Personas mayores, mujeres embarazadas o personas que permanecen inmóviles durante un
+            largo periodo de tiempo ya sea por enfermedades o postoperaciones. Peso máximo del usuario: 100 kg.
+        variationAttributes:
+          - name: color_name
+            value: Negro
+        ParentASIN: B0DV8ZQG4L
       - ASIN: B08R43PXK6
         title: >-
           KMINA Cojín Antiescaras para Silla de Ruedas (42x42x8 cm), Viscoelástico + PU, Cojín Postural Mayores -
@@ -713,58 +765,6 @@ productos:
         variationAttributes:
           - name: color_name
             value: Densidad Baja
-        ParentASIN: B0DV8ZQG4L
-      - ASIN: B08R43VMRN
-        title: >-
-          KMINA - Cojín Antiescaras para Silla de Ruedas, Cojín Antiescaras Viscoelástico, Cojín Negro, Espuma
-          Viscoelásatica - Fabricado en España (Densidad Media)
-        brand: KMINA
-        precio: "29,99\_€"
-        precioOriginal: "49,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31-YrarpFRL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 408
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/21SWTj79sAL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/414sYN1uMQL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/21OG35vc56L._SL500_.jpg
-            width: 500
-            height: 336
-          - url: https://m.media-amazon.com/images/I/31Ml8uhytLL._SL500_.jpg
-            width: 500
-            height: 336
-          - url: https://m.media-amazon.com/images/I/31m2RvMjefL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/41N9YjkiOtL._SL500_.jpg
-            width: 500
-            height: 374
-        enlace: https://www.amazon.es/dp/B08R43VMRN?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            ♥ FUNCIONAL: Cojín antiescaras de 7 cm de espuma visco elástica que disminuye la presión y previene la
-            aparición de úlceras y escaras. Gracias a su material así como a su mayor densidad, el cojín con espuma de
-            memoria se adapta perfectamente al contorno y peso del usuario.
-          - >-
-            ♥ DISEÑO: Cojín antiescaras fabricado con una capa textil de 100% poliestireno y una membrana de
-            poliuretano, cuenta con el certificado OEKO-TEX STANDARD 100.
-          - >-
-            ♥ LAVABLE: La funda del cojín antiescaras está hecha con tejido 3D y es suave, lavable, transpirable,
-            impermeable y antideslizante. Además, es antiolor, antibacterias, antihongos, antichinches y antiácaros.
-          - >-
-            ♥ CÓMODO: Además de prevenir las escaras, el cojín ortopédico mejora el descanso del usuario en la silla de
-            ruedas ofreciendo siempre un confort máximo.
-          - >-
-            ✔ RECOMENDADO PARA: Personas mayores, mujeres embarazadas o personas que permanecen inmóviles durante un
-            largo periodo de tiempo ya sea por enfermedades o postoperaciones. Peso máximo del usuario: 100 kg.
-        variationAttributes:
-          - name: color_name
-            value: Negro
         ParentASIN: B0DV8ZQG4L
     ParentASIN: B0DV8ZQG4L
     variationAttributes:

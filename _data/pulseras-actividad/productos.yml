@@ -105,7 +105,7 @@ productos:
           de 60 Hz, Sensor de Frecuencia Cardíaca, Azul
         brand: NK
         precio: "39,26\_€"
-        precioOriginal: No especificado
+        precioOriginal: "44,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41T3PEmJPyL._SL500_.jpg
         imagenWidth: 384
@@ -188,51 +188,6 @@ productos:
         variationAttributes:
           - name: color_name
             value: Silver
-        ParentASIN: B0F4M74PS5
-      - ASIN: B0F33M6MHV
-        title: >-
-          Xiaomi Smart Band 9 - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED con tasa de refresco
-          de 60 Hz, Sensor de Frecuencia Cardíaca, Gris
-        brand: NK
-        precio: "29,42\_€"
-        precioOriginal: "39,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41s3vAvrxqL._SL500_.jpg
-        imagenWidth: 384
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31ESbI-SnSL._SL500_.jpg
-            width: 163
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417K2BryLPL._SL500_.jpg
-            width: 500
-            height: 386
-          - url: https://m.media-amazon.com/images/I/41vn5WUhSAL._SL500_.jpg
-            width: 476
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F33M6MHV?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Elegancia y Color en tu Muñeca. Disfruta de un diseño metálico y vibrante con un marco de aleación de
-            aluminio que aporta un toque sofisticado a tu estilo. Disponible en cuatro deslumbrantes opciones de color,
-            su estructura de liberación rápida permite cambiar las correas fácilmente para adaptarse a cualquier
-            ocasión.
-          - >-
-            Tecnología de Precisión Avanzada. Experimenta una medición más precisa con la configuración de doble canal
-            PPG. Equipado con un sensor PPG de 2 canales, este dispositivo mejora la exactitud en la monitorización de
-            la frecuencia cardíaca y SpO2, ofreciendo un seguimiento hasta un 10% más preciso que su versión anterior.
-          - >-
-            Batería de Larga Duración. Olvídate de las recargas constantes. Con hasta 21 días de batería en uso diario
-            normal, este dispositivo supera en un 30% a su predecesor. Además, disfruta de la conveniencia de la carga
-            rápida, que completa la carga en solo una hora.
-          - >-
-            Monitoreo Integral de la Salud. Mantente en sintonía con tu bienestar a través de un sistema avanzado de
-            monitoreo de la salud. Desde la frecuencia cardíaca y SpO2 hasta el sueño y los niveles de estrés, este
-            dispositivo te proporciona puntuaciones detalladas del sueño y recomendaciones para mejorar tus hábitos
-            diarios.
-        variationAttributes:
-          - name: color_name
-            value: Grey
         ParentASIN: B0F4M74PS5
     ParentASIN: B0F4M74PS5
     variationAttributes:
@@ -483,7 +438,7 @@ productos:
     lo_mejor: Buena precisión en los datos de salud y excelente para quienes priorizan el bienestar y el descanso.
     nombre: Google Fitbit Inspire 3
     valoracion: 4.2
-    precio: "95,65\_€"
+    precio: "95,44\_€"
     precioOriginal: "99,95\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -1006,325 +961,6 @@ productos:
       HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional, VFC
       Promedio Durante el Sueño y Datos sobre el Sueño, 14 Días, iOS & Android
     variantes:
-      - ASIN: B0CYCCXKNW
-        title: >-
-          HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
-          medición,Altamente compatible,100 modos de entrenamiento diferentes,Negro
-        brand: HUAWEI
-        precio: "29,00\_€"
-        precioOriginal: "59,00\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41g89ZnUTdL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41UspN6yqPL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417CcrjdBiL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YxZnMYyRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/419c4K7puFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41h-ejBAwbL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41q9scnVvWL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0CYCCXKNW?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Uso confortable 24/7】Correa de fluoroelastómero nueva y mejorada. Ligera como el aire con 14 gramos y
-            finísima con 8,99 mm. Suave, agradable a la piel y hecha para durar. Diseño perforado que absorbe el sudor.
-            Dos hebillas, para un ajuste ceñido y un aspecto limpio.
-          - >-
-            【HUAWEI TruSleep 4.0, Monitoreo profesional de la salud】Mantenga un registro de su frecuencia cardíaca,
-            SpO2, frecuencia respiratoria y cualquier respiración anormal mientras está dormitando, para estar tranquilo
-            todo el tiempo.
-          - >-
-            【Seguimiento mejorado de signos vitales】HUAWEI TruSeen 5.5 monitoreo de salud y análisis de arritmia de onda
-            de pulso. Manténgase al tanto del ritmo, incluso cuando esté corriendo o haciendo ejercicio, y obtenga
-            mejores lecturas de frecuencia cardíaca, todo gracias al rendimiento y la estabilidad mejorados reforzados
-            por nuestro mejor módulo multicanal y algoritmo de fusión inteligente. Y las mediciones de SpO2 son más
-            estables y rápidas.
-          - >-
-            【100 modos de entrenamiento diferentes】Anillos de actividad de última generación, para hacer de la vida
-            saludable tu realidad diaria. Modo de natación de nivel profesional, con un sensor de nueve ejes totalmente
-            nuevo y un algoritmo innovador que identifica con precisión las cuatro brazadas. Sumérgete en tus
-            actividades favoritas y benefíciate de las evaluaciones de entrenamiento basadas en datos, con 100 modos de
-            entrenamiento entre los que elegir y detección automática para cuatro ejercicios comunes.
-          - >-
-            【Carga rápida y batería duradera】Carga durante cinco minutos y úsalo durante dos días, o carga durante los
-            45 minutos completos para llenar tu banda hasta el borde, ¡y úsalo hasta dos semanas seguidas!14 días de uso
-            máximo, 9 días de uso típico.
-        variationAttributes:
-          - name: style_name
-            value: Band 9
-          - name: color_name
-            value: Negro Polímeros
-        ParentASIN: B0F2J23SQ7
-      - ASIN: B0CYCDKR2S
-        title: >-
-          HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
-          medición,Altamente Compatible,100 Modos de Entrenamiento Diferentes,Azul【Exclusivo Amazon】
-        brand: HUAWEI
-        precio: "29,00\_€"
-        precioOriginal: "59,00\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41uIg6IlDaL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/417CcrjdBiL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YxZnMYyRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/419c4K7puFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41h-ejBAwbL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41q9scnVvWL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0CYCDKR2S?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Uso confortable 24/7】Correa de fluoroelastómero nueva y mejorada. Ligera como el aire con 14 gramos y
-            finísima con 8,99 mm. Suave, agradable a la piel y hecha para durar. Diseño perforado que absorbe el sudor.
-            Dos hebillas, para un ajuste ceñido y un aspecto limpio.
-          - >-
-            【HUAWEI TruSleep 4.0, Monitoreo profesional de la salud】Mantenga un registro de su frecuencia cardíaca,
-            SpO2, frecuencia respiratoria y cualquier respiración anormal mientras está dormitando, para estar tranquilo
-            todo el tiempo.
-          - >-
-            【Seguimiento mejorado de signos vitales】HUAWEI TruSeen 5.5 monitoreo de salud y análisis de arritmia de onda
-            de pulso. Manténgase al tanto del ritmo, incluso cuando esté corriendo o haciendo ejercicio, y obtenga
-            mejores lecturas de frecuencia cardíaca, todo gracias al rendimiento y la estabilidad mejorados reforzados
-            por nuestro mejor módulo multicanal y algoritmo de fusión inteligente. Y las mediciones de SpO2 son más
-            estables y rápidas.
-          - >-
-            【100 modos de entrenamiento diferentes】Anillos de actividad de última generación, para hacer de la vida
-            saludable tu realidad diaria. Modo de natación de nivel profesional, con un sensor de nueve ejes totalmente
-            nuevo y un algoritmo innovador que identifica con precisión las cuatro brazadas. Sumérgete en tus
-            actividades favoritas y benefíciate de las evaluaciones de entrenamiento basadas en datos, con 100 modos de
-            entrenamiento entre los que elegir y detección automática para cuatro ejercicios comunes.
-          - >-
-            【Carga rápida y batería duradera】Carga durante cinco minutos y úsalo durante dos días, o carga durante los
-            45 minutos completos para llenar tu banda hasta el borde, ¡y úsalo hasta dos semanas seguidas!14 días de uso
-            máximo, 9 días de uso típico.
-        variationAttributes:
-          - name: style_name
-            value: Band 9
-          - name: color_name
-            value: Azul Polímeros
-        ParentASIN: B0F2J23SQ7
-      - ASIN: B0DY1LR73D
-        title: >-
-          HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
-          VFC Promedio Durante el Sueño, 14 Días, Carcasa de Aleación de Aluminio, iOS & Android
-        brand: HUAWEI
-        precio: "39,00\_€"
-        precioOriginal: "44,00\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41HgW1fxmZL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/415hUPUnfUL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0DY1LR73D?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Carcasa de aleación de aluminio: Siente las superficies texturizadas y los impresionantes detalles de una
-            carcasa de aleación de aluminio elaborada a mano, pulida mediante procesos de corte y perforación CNC para
-            lucir un aspecto maravilloso
-          - >-
-            Cómoda de usar durante todo el día: Ultrafina 8,99 mm, Ultraligera 15 g, Diseñada para un ajuste no apretado
-            y combinada con correas de fluoroelastómero respetuosas con la piel, HUAWEI Band 10 se puede usar a todas
-            horas sin molestias, ya estés en activo o descansando
-          - >-
-            Análisis del sueño a nivel profesional: Controla tu frecuencia cardíaca, la saturación de oxígeno en sangre
-            SpO2, la frecuencia respiratoria e irregularidades en la respiración mientras duermes, para que tu mente se
-            mantenga tranquila todo el tiempo
-          - >-
-            Monitorización de actividad física con IA: Generados por un sensor avanzado de nueve ejes y tecnología de
-            identificación de brazada mejorada con IA, HUAWEI Band 10 ofrece una sensación de ligereza, gestión
-            científica del sueño y 100 modos deportivos
-          - >-
-            Batería de larga duración: ¡Carga tu pulsera durante cinco minutos y úsala durante hasta dos días, o bien
-            cárgala al máximo durante 45 minutos y úsala hasta nueve días seguidos! Disfruta de hasta 8 días de duración
-            de batería con un uso típico y hasta 14 días cuando más lo necesites
-        variationAttributes:
-          - name: style_name
-            value: Band 10
-          - name: color_name
-            value: Morado Aleación de Aluminio
-        ParentASIN: B0F2J23SQ7
-      - ASIN: B0DY1M95KG
-        title: >-
-          HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
-          VFC Promedio Durante el Sueño, 14 Días, Carcasa de Aleación de Aluminio, iOS & Android
-        brand: HUAWEI
-        precio: "39,00\_€"
-        precioOriginal: "59,00\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31jH+tnnftL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/415hUPUnfUL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0DY1M95KG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Carcasa de aleación de aluminio: Siente las superficies texturizadas y los impresionantes detalles de una
-            carcasa de aleación de aluminio elaborada a mano, pulida mediante procesos de corte y perforación CNC para
-            lucir un aspecto maravilloso
-          - >-
-            Cómoda de usar durante todo el día: Ultrafina 8,99 mm, Ultraligera 15 g, Diseñada para un ajuste no apretado
-            y combinada con correas de fluoroelastómero respetuosas con la piel, HUAWEI Band 10 se puede usar a todas
-            horas sin molestias, ya estés en activo o descansando
-          - >-
-            Análisis del sueño a nivel profesional: Controla tu frecuencia cardíaca, la saturación de oxígeno en sangre
-            SpO2, la frecuencia respiratoria e irregularidades en la respiración mientras duermes, para que tu mente se
-            mantenga tranquila todo el tiempo
-          - >-
-            Monitorización de actividad física con IA: Generados por un sensor avanzado de nueve ejes y tecnología de
-            identificación de brazada mejorada con IA, HUAWEI Band 10 ofrece una sensación de ligereza, gestión
-            científica del sueño y 100 modos deportivos
-          - >-
-            Batería de larga duración: ¡Carga tu pulsera durante cinco minutos y úsala durante hasta dos días, o bien
-            cárgala al máximo durante 45 minutos y úsala hasta nueve días seguidos! Disfruta de hasta 8 días de duración
-            de batería con un uso típico y hasta 14 días cuando más lo necesites
-        variationAttributes:
-          - name: style_name
-            value: Band 10
-          - name: color_name
-            value: Blanco Aleación de Aluminio
-        ParentASIN: B0F2J23SQ7
-      - ASIN: B0DY1P85GK
-        title: >-
-          HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
-          VFC Promedio Durante el Sueño y Datos sobre el Sueño, 14 Días, iOS & Android
-        brand: HUAWEI
-        precio: "37,00\_€"
-        precioOriginal: "49,00\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41Ej0LMUAGL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0DY1P85GK?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Cómoda de usar durante todo el día: Ultrafina 8,99 mm, Ultraligera 15 g, Diseñada para un ajuste no apretado
-            y combinada con correas de fluoroelastómero respetuosas con la piel, HUAWEI Band 10 se puede usar a todas
-            horas sin molestias, ya estés en activo o descansando
-          - >-
-            Análisis del sueño a nivel profesional: Controla tu frecuencia cardíaca, la saturación de oxígeno en sangre
-            SpO2, la frecuencia respiratoria e irregularidades en la respiración mientras duermes, para que tu mente se
-            mantenga tranquila todo el tiempo
-          - >-
-            Monitorización de actividad física con IA: Generados por un sensor avanzado de nueve ejes y tecnología de
-            identificación de brazada mejorada con IA, HUAWEI Band 10 ofrece una sensación de ligereza, gestión
-            científica del sueño y 100 modos deportivos
-          - >-
-            Batería de larga duración: ¡Carga tu pulsera durante cinco minutos y úsala durante hasta dos días, o bien
-            cárgala al máximo durante 45 minutos y úsala hasta nueve días seguidos! Disfruta de hasta 8 días de duración
-            de batería con un uso típico y hasta 14 días cuando más lo necesites
-          - >-
-            Infinidad de Colores, unas Correas que te Encantarán: La elegante HUAWEI Band 10 ofrece una amplia gama de
-            colores, rosa y negro (Carcasa duradera de polímeros reforzados con fibra), o verde, azul, morado,
-            blanco(Carcasa de aleación de aluminio)
-        variationAttributes:
-          - name: style_name
-            value: Band 10
-          - name: color_name
-            value: Rosa Polímeros
-        ParentASIN: B0F2J23SQ7
       - ASIN: B0CYCCTP5Y
         title: >-
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
@@ -1390,6 +1026,326 @@ productos:
           - name: color_name
             value: Rosa Polímeros
         ParentASIN: B0F2J23SQ7
+      - ASIN: B0CYCCXKNW
+        title: >-
+          HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
+          medición,Altamente compatible,100 modos de entrenamiento diferentes,Negro
+        brand: HUAWEI
+        precio: "29,00\_€"
+        precioOriginal: "59,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41g89ZnUTdL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41UspN6yqPL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417CcrjdBiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41YxZnMYyRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/419c4K7puFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41h-ejBAwbL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41q9scnVvWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0CYCCXKNW?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【Uso confortable 24/7】Correa de fluoroelastómero nueva y mejorada. Ligera como el aire con 14 gramos y
+            finísima con 8,99 mm. Suave, agradable a la piel y hecha para durar. Diseño perforado que absorbe el sudor.
+            Dos hebillas, para un ajuste ceñido y un aspecto limpio.
+          - >-
+            【HUAWEI TruSleep 4.0, Monitoreo profesional de la salud】Mantenga un registro de su frecuencia cardíaca,
+            SpO2, frecuencia respiratoria y cualquier respiración anormal mientras está dormitando, para estar tranquilo
+            todo el tiempo.
+          - >-
+            【Seguimiento mejorado de signos vitales】HUAWEI TruSeen 5.5 monitoreo de salud y análisis de arritmia de onda
+            de pulso. Manténgase al tanto del ritmo, incluso cuando esté corriendo o haciendo ejercicio, y obtenga
+            mejores lecturas de frecuencia cardíaca, todo gracias al rendimiento y la estabilidad mejorados reforzados
+            por nuestro mejor módulo multicanal y algoritmo de fusión inteligente. Y las mediciones de SpO2 son más
+            estables y rápidas.
+          - >-
+            【100 modos de entrenamiento diferentes】Anillos de actividad de última generación, para hacer de la vida
+            saludable tu realidad diaria. Modo de natación de nivel profesional, con un sensor de nueve ejes totalmente
+            nuevo y un algoritmo innovador que identifica con precisión las cuatro brazadas. Sumérgete en tus
+            actividades favoritas y benefíciate de las evaluaciones de entrenamiento basadas en datos, con 100 modos de
+            entrenamiento entre los que elegir y detección automática para cuatro ejercicios comunes.
+          - >-
+            【Carga rápida y batería duradera】Carga durante cinco minutos y úsalo durante dos días, o carga durante los
+            45 minutos completos para llenar tu banda hasta el borde, ¡y úsalo hasta dos semanas seguidas!14 días de uso
+            máximo, 9 días de uso típico.
+        variationAttributes:
+          - name: style_name
+            value: Band 9
+          - name: color_name
+            value: Negro Polímeros
+        ParentASIN: B0F2J23SQ7
+      - ASIN: B0DY1LR73D
+        title: >-
+          HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
+          VFC Promedio Durante el Sueño, 14 Días, Carcasa de Aleación de Aluminio, iOS & Android
+        brand: HUAWEI
+        precio: "39,00\_€"
+        precioOriginal: "44,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41HgW1fxmZL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/415hUPUnfUL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0DY1LR73D?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Carcasa de aleación de aluminio: Siente las superficies texturizadas y los impresionantes detalles de una
+            carcasa de aleación de aluminio elaborada a mano, pulida mediante procesos de corte y perforación CNC para
+            lucir un aspecto maravilloso
+          - >-
+            Cómoda de usar durante todo el día: Ultrafina 8,99 mm, Ultraligera 15 g, Diseñada para un ajuste no apretado
+            y combinada con correas de fluoroelastómero respetuosas con la piel, HUAWEI Band 10 se puede usar a todas
+            horas sin molestias, ya estés en activo o descansando
+          - >-
+            Análisis del sueño a nivel profesional: Controla tu frecuencia cardíaca, la saturación de oxígeno en sangre
+            SpO2, la frecuencia respiratoria e irregularidades en la respiración mientras duermes, para que tu mente se
+            mantenga tranquila todo el tiempo
+          - >-
+            Monitorización de actividad física con IA: Generados por un sensor avanzado de nueve ejes y tecnología de
+            identificación de brazada mejorada con IA, HUAWEI Band 10 ofrece una sensación de ligereza, gestión
+            científica del sueño y 100 modos deportivos
+          - >-
+            Batería de larga duración: ¡Carga tu pulsera durante cinco minutos y úsala durante hasta dos días, o bien
+            cárgala al máximo durante 45 minutos y úsala hasta nueve días seguidos! Disfruta de hasta 8 días de duración
+            de batería con un uso típico y hasta 14 días cuando más lo necesites
+        variationAttributes:
+          - name: style_name
+            value: Band 10
+          - name: color_name
+            value: Morado Aleación de Aluminio
+        ParentASIN: B0F2J23SQ7
+      - ASIN: B0CYCDKR2S
+        title: >-
+          HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
+          medición,Altamente Compatible,100 Modos de Entrenamiento Diferentes,Azul【Exclusivo Amazon】
+        brand: HUAWEI
+        precio: "29,00\_€"
+        precioOriginal: "59,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41uIg6IlDaL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/417CcrjdBiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41YxZnMYyRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/419c4K7puFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41h-ejBAwbL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41q9scnVvWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0CYCDKR2S?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【Uso confortable 24/7】Correa de fluoroelastómero nueva y mejorada. Ligera como el aire con 14 gramos y
+            finísima con 8,99 mm. Suave, agradable a la piel y hecha para durar. Diseño perforado que absorbe el sudor.
+            Dos hebillas, para un ajuste ceñido y un aspecto limpio.
+          - >-
+            【HUAWEI TruSleep 4.0, Monitoreo profesional de la salud】Mantenga un registro de su frecuencia cardíaca,
+            SpO2, frecuencia respiratoria y cualquier respiración anormal mientras está dormitando, para estar tranquilo
+            todo el tiempo.
+          - >-
+            【Seguimiento mejorado de signos vitales】HUAWEI TruSeen 5.5 monitoreo de salud y análisis de arritmia de onda
+            de pulso. Manténgase al tanto del ritmo, incluso cuando esté corriendo o haciendo ejercicio, y obtenga
+            mejores lecturas de frecuencia cardíaca, todo gracias al rendimiento y la estabilidad mejorados reforzados
+            por nuestro mejor módulo multicanal y algoritmo de fusión inteligente. Y las mediciones de SpO2 son más
+            estables y rápidas.
+          - >-
+            【100 modos de entrenamiento diferentes】Anillos de actividad de última generación, para hacer de la vida
+            saludable tu realidad diaria. Modo de natación de nivel profesional, con un sensor de nueve ejes totalmente
+            nuevo y un algoritmo innovador que identifica con precisión las cuatro brazadas. Sumérgete en tus
+            actividades favoritas y benefíciate de las evaluaciones de entrenamiento basadas en datos, con 100 modos de
+            entrenamiento entre los que elegir y detección automática para cuatro ejercicios comunes.
+          - >-
+            【Carga rápida y batería duradera】Carga durante cinco minutos y úsalo durante dos días, o carga durante los
+            45 minutos completos para llenar tu banda hasta el borde, ¡y úsalo hasta dos semanas seguidas!14 días de uso
+            máximo, 9 días de uso típico.
+        variationAttributes:
+          - name: style_name
+            value: Band 9
+          - name: color_name
+            value: Azul Polímeros
+        ParentASIN: B0F2J23SQ7
+      - ASIN: B0CYCDKXSW
+        title: >-
+          HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
+          medición,Altamente compatible,100 modos de entrenamiento diferentes,Blanco
+        brand: HUAWEI
+        precio: "38,65\_€"
+        precioOriginal: "59,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41CmuwEMV7L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41UspN6yqPL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417CcrjdBiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41YxZnMYyRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/419c4K7puFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41h-ejBAwbL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41q9scnVvWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0CYCDKXSW?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【Uso confortable 24/7】Correa de fluoroelastómero nueva y mejorada. Ligera como el aire con 14 gramos y
+            finísima con 8,99 mm. Suave, agradable a la piel y hecha para durar. Diseño perforado que absorbe el sudor.
+            Dos hebillas, para un ajuste ceñido y un aspecto limpio.
+          - >-
+            【HUAWEI TruSleep 4.0, Monitoreo profesional de la salud】Mantenga un registro de su frecuencia cardíaca,
+            SpO2, frecuencia respiratoria y cualquier respiración anormal mientras está dormitando, para estar tranquilo
+            todo el tiempo.
+          - >-
+            【Seguimiento mejorado de signos vitales】HUAWEI TruSeen 5.5 monitoreo de salud y análisis de arritmia de onda
+            de pulso. Manténgase al tanto del ritmo, incluso cuando esté corriendo o haciendo ejercicio, y obtenga
+            mejores lecturas de frecuencia cardíaca, todo gracias al rendimiento y la estabilidad mejorados reforzados
+            por nuestro mejor módulo multicanal y algoritmo de fusión inteligente. Y las mediciones de SpO2 son más
+            estables y rápidas.
+          - >-
+            【100 modos de entrenamiento diferentes】Anillos de actividad de última generación, para hacer de la vida
+            saludable tu realidad diaria. Modo de natación de nivel profesional, con un sensor de nueve ejes totalmente
+            nuevo y un algoritmo innovador que identifica con precisión las cuatro brazadas. Sumérgete en tus
+            actividades favoritas y benefíciate de las evaluaciones de entrenamiento basadas en datos, con 100 modos de
+            entrenamiento entre los que elegir y detección automática para cuatro ejercicios comunes.
+          - >-
+            【Carga rápida y batería duradera】Carga durante cinco minutos y úsalo durante dos días, o carga durante los
+            45 minutos completos para llenar tu banda hasta el borde, ¡y úsalo hasta dos semanas seguidas!14 días de uso
+            máximo, 9 días de uso típico.
+        variationAttributes:
+          - name: style_name
+            value: Band 9
+          - name: color_name
+            value: Blanco Polímeros
+        ParentASIN: B0F2J23SQ7
+      - ASIN: B0DY1M95KG
+        title: >-
+          HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
+          VFC Promedio Durante el Sueño, 14 Días, Carcasa de Aleación de Aluminio, iOS & Android
+        brand: HUAWEI
+        precio: "39,00\_€"
+        precioOriginal: "59,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31jH+tnnftL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/415hUPUnfUL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0DY1M95KG?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Carcasa de aleación de aluminio: Siente las superficies texturizadas y los impresionantes detalles de una
+            carcasa de aleación de aluminio elaborada a mano, pulida mediante procesos de corte y perforación CNC para
+            lucir un aspecto maravilloso
+          - >-
+            Cómoda de usar durante todo el día: Ultrafina 8,99 mm, Ultraligera 15 g, Diseñada para un ajuste no apretado
+            y combinada con correas de fluoroelastómero respetuosas con la piel, HUAWEI Band 10 se puede usar a todas
+            horas sin molestias, ya estés en activo o descansando
+          - >-
+            Análisis del sueño a nivel profesional: Controla tu frecuencia cardíaca, la saturación de oxígeno en sangre
+            SpO2, la frecuencia respiratoria e irregularidades en la respiración mientras duermes, para que tu mente se
+            mantenga tranquila todo el tiempo
+          - >-
+            Monitorización de actividad física con IA: Generados por un sensor avanzado de nueve ejes y tecnología de
+            identificación de brazada mejorada con IA, HUAWEI Band 10 ofrece una sensación de ligereza, gestión
+            científica del sueño y 100 modos deportivos
+          - >-
+            Batería de larga duración: ¡Carga tu pulsera durante cinco minutos y úsala durante hasta dos días, o bien
+            cárgala al máximo durante 45 minutos y úsala hasta nueve días seguidos! Disfruta de hasta 8 días de duración
+            de batería con un uso típico y hasta 14 días cuando más lo necesites
+        variationAttributes:
+          - name: style_name
+            value: Band 10
+          - name: color_name
+            value: Blanco Aleación de Aluminio
+        ParentASIN: B0F2J23SQ7
       - ASIN: B0DY1M967M
         title: >-
           HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
@@ -1454,12 +1410,76 @@ productos:
           - name: color_name
             value: Azul Aleación de Aluminio
         ParentASIN: B0F2J23SQ7
+      - ASIN: B0DY1P85GK
+        title: >-
+          HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
+          VFC Promedio Durante el Sueño y Datos sobre el Sueño, 14 Días, iOS & Android
+        brand: HUAWEI
+        precio: "37,00\_€"
+        precioOriginal: "49,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41Ej0LMUAGL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0DY1P85GK?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Cómoda de usar durante todo el día: Ultrafina 8,99 mm, Ultraligera 15 g, Diseñada para un ajuste no apretado
+            y combinada con correas de fluoroelastómero respetuosas con la piel, HUAWEI Band 10 se puede usar a todas
+            horas sin molestias, ya estés en activo o descansando
+          - >-
+            Análisis del sueño a nivel profesional: Controla tu frecuencia cardíaca, la saturación de oxígeno en sangre
+            SpO2, la frecuencia respiratoria e irregularidades en la respiración mientras duermes, para que tu mente se
+            mantenga tranquila todo el tiempo
+          - >-
+            Monitorización de actividad física con IA: Generados por un sensor avanzado de nueve ejes y tecnología de
+            identificación de brazada mejorada con IA, HUAWEI Band 10 ofrece una sensación de ligereza, gestión
+            científica del sueño y 100 modos deportivos
+          - >-
+            Batería de larga duración: ¡Carga tu pulsera durante cinco minutos y úsala durante hasta dos días, o bien
+            cárgala al máximo durante 45 minutos y úsala hasta nueve días seguidos! Disfruta de hasta 8 días de duración
+            de batería con un uso típico y hasta 14 días cuando más lo necesites
+          - >-
+            Infinidad de Colores, unas Correas que te Encantarán: La elegante HUAWEI Band 10 ofrece una amplia gama de
+            colores, rosa y negro (Carcasa duradera de polímeros reforzados con fibra), o verde, azul, morado,
+            blanco(Carcasa de aleación de aluminio)
+        variationAttributes:
+          - name: style_name
+            value: Band 10
+          - name: color_name
+            value: Rosa Polímeros
+        ParentASIN: B0F2J23SQ7
       - ASIN: B0CYQ1HC8B
         title: >-
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
           medición,Altamente Compatible,100 Modos de Entrenamiento Diferentes,Amarillo【Exclusivo Amazon】
         brand: HUAWEI
-        precio: "28,88\_€"
+        precio: "28,20\_€"
         precioOriginal: "59,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41neh2SJ4rL._SL500_.jpg
@@ -1515,71 +1535,6 @@ productos:
             value: Band 9
           - name: color_name
             value: Amarillo Polímeros
-        ParentASIN: B0F2J23SQ7
-      - ASIN: B0CYCDKXSW
-        title: >-
-          HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
-          medición,Altamente compatible,100 modos de entrenamiento diferentes,Blanco
-        brand: HUAWEI
-        precio: "36,26\_€"
-        precioOriginal: "59,00\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41CmuwEMV7L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41UspN6yqPL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417CcrjdBiL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YxZnMYyRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/419c4K7puFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41h-ejBAwbL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41q9scnVvWL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0CYCDKXSW?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Uso confortable 24/7】Correa de fluoroelastómero nueva y mejorada. Ligera como el aire con 14 gramos y
-            finísima con 8,99 mm. Suave, agradable a la piel y hecha para durar. Diseño perforado que absorbe el sudor.
-            Dos hebillas, para un ajuste ceñido y un aspecto limpio.
-          - >-
-            【HUAWEI TruSleep 4.0, Monitoreo profesional de la salud】Mantenga un registro de su frecuencia cardíaca,
-            SpO2, frecuencia respiratoria y cualquier respiración anormal mientras está dormitando, para estar tranquilo
-            todo el tiempo.
-          - >-
-            【Seguimiento mejorado de signos vitales】HUAWEI TruSeen 5.5 monitoreo de salud y análisis de arritmia de onda
-            de pulso. Manténgase al tanto del ritmo, incluso cuando esté corriendo o haciendo ejercicio, y obtenga
-            mejores lecturas de frecuencia cardíaca, todo gracias al rendimiento y la estabilidad mejorados reforzados
-            por nuestro mejor módulo multicanal y algoritmo de fusión inteligente. Y las mediciones de SpO2 son más
-            estables y rápidas.
-          - >-
-            【100 modos de entrenamiento diferentes】Anillos de actividad de última generación, para hacer de la vida
-            saludable tu realidad diaria. Modo de natación de nivel profesional, con un sensor de nueve ejes totalmente
-            nuevo y un algoritmo innovador que identifica con precisión las cuatro brazadas. Sumérgete en tus
-            actividades favoritas y benefíciate de las evaluaciones de entrenamiento basadas en datos, con 100 modos de
-            entrenamiento entre los que elegir y detección automática para cuatro ejercicios comunes.
-          - >-
-            【Carga rápida y batería duradera】Carga durante cinco minutos y úsalo durante dos días, o carga durante los
-            45 minutos completos para llenar tu banda hasta el borde, ¡y úsalo hasta dos semanas seguidas!14 días de uso
-            máximo, 9 días de uso típico.
-        variationAttributes:
-          - name: style_name
-            value: Band 9
-          - name: color_name
-            value: Blanco Polímeros
         ParentASIN: B0F2J23SQ7
     ParentASIN: B0F2J23SQ7
     variationAttributes:
@@ -1676,7 +1631,7 @@ productos:
           Samsung Galaxy Fit3 - Reloj inteligente con pantalla AMOLED de 40 mm, cuerpo de aluminio, seguimiento completo
           de la actividad física y la salud, batería hasta 13 días, carga rápida, 5 ATM, plateado
         brand: Samsung
-        precio: "45,66\_€"
+        precio: "48,40\_€"
         precioOriginal: "47,27\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31IE9aBsjtL._SL500_.jpg
