@@ -69,12 +69,51 @@ productos:
       Razer Huntsman V2 Analog - Teclado Premium para juegos con interruptores ópticos analógicos (reposamuñecas,
       control giratorio digital, 4 teclas multimedia, Chroma RGB) Teclado Español - Negro
     variantes:
+      - ASIN: B07V5VDXW1
+        title: >-
+          Razer Huntsman Tournament Edition (Interruptor Rojo) - Teclado para Juegos sin Llave (Teclas Ópticas-Mecánicas
+          Lineales, Teclas PBT de Doble Disparo) Intl. Diseño US (ISO) | Negro
+        brand: Razer
+        precio: "99,99\_€"
+        precioOriginal: "147,35\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41oO-6N59QL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 268
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/313XL1loheL._SL500_.jpg
+            width: 500
+            height: 332
+          - url: https://m.media-amazon.com/images/I/51ETwItKMqL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/4180g+jPJCL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41XyS6RXXnL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B07V5VDXW1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Switches ópticos lineales Razer para unas pulsaciones más rápidas y sensibles
+          - Teclas de PBT de doble inyección para un acabado robusto y con textura mate
+          - Memoria integrada para llevar tus ajustes a todas partes
+          - Diseño compacto para mayor comodidad y movilidad
+          - Cable tipo C desmontable para instalar y guardar tu teclado fácilmente
+        variationAttributes:
+          - name: style_name
+            value: Huntsman Tournament Ed.
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Rojo Linear
+        ParentASIN: B0F9Q1MJLF
       - ASIN: B089SP45YC
         title: >-
           Razer Huntsman Mini (Interruptor Rojo) - 60% Teclado Compacto para Juegos (Interruptores Óptico-Mecánicos
           Lineales, Teclas PBT de Doble Disparo, Cable USB-C Desmontable) Diseño US | Negro
         brand: Razer
-        precio: "100,81\_€"
+        precio: "102,18\_€"
         precioOriginal: "139,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -130,175 +169,6 @@ productos:
             value: Diseño US
           - name: color_name
             value: Interruptor Rojo Linear
-        ParentASIN: B0F9Q1MJLF
-      - ASIN: B08BZDLVNN
-        title: >-
-          Razer Huntsman Mini (Interruptor Morado) - 60% Teclado Compacto para Juegos (Interruptores Óptico-Mecánicos
-          Clicky, Teclas PBT Doubleshot, Cable USB-C Desmontable) Diseño US| Blanco Mercury
-        brand: Razer
-        precio: "76,99\_€"
-        precioOriginal: "127,77\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41m8BNuVVXL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51QMFIxQR+L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51oiQAqwxyL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51FBqctLpxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51glYStg94L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ocnrSdu6L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31D9nPcpArL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417kgwXqALL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41I9mqeDpRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41jRIPnwyHL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/514Qb0PjWEL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B08BZDLVNN?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Teclas de PBT de doble inyección con funciones secundarias impresas en el lateral
-          - Memoria integrada y preajustes de iluminación
-          - Diseño compacto 60% para una experiencia de juego portátil y sencilla
-          - Estructura de aluminio para una durabilidad óptima
-        variationAttributes:
-          - name: style_name
-            value: Huntsman Mini Mercury Ed.
-          - name: size_name
-            value: Diseño US
-          - name: color_name
-            value: Interruptor Morado Clicky
-        ParentASIN: B0F9Q1MJLF
-      - ASIN: B08GM91TCC
-        title: >-
-          Razer Huntsman Mini (Purple Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores
-          opto-mecánicos (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
-        brand: Razer
-        precio: "99,84\_€"
-        precioOriginal: "129,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 308
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51REl2pSzaL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/511TzLIInxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51E6rgZg01L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51QMGlY9QOL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51IFghoZW9L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51QMFIxQR+L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B08GM91TCC?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Switches ópticos Razer: Ofrece un accionamiento rápido, ligero y fluido que los switches mecánicos, así como
-            óptima durabilidad ya que necesita menos piezas móviles que funcionan con menos fricción; Disponible en dos
-            variantes: lineal y con sonido click
-          - >-
-            Teclas de PBT de doble inyección con funciones secundarias impresas en el lateral: Diseñado para una óptima
-            durabilidad, no se va a deteriorar nunca con un acabado brillante ni se van a desgastar las etiquetas por el
-            uso intenso; Funciones secundarias impresas en el lateral para facilitar la referencia
-          - >-
-            Memoria integrada y preajustes de iluminación: Guarda y activa hasta 5 perfiles de teclado sin necesidad de
-            software, mientras lo personalizas más con un paquete de efectos de iluminación
-          - >-
-            Diseño compacto 60 %: óptimo para escritorios pequeños o minimalistas en los que el espacio es primordial;
-            Su diseño compacto significa que te lo puedes llevar sin problemas y es fácil de colocar para jugar, lo que
-            te permite que juegues con comodidad
-          - >-
-            Cable tipo C desmontable: Conecta tu teclado y juega al instante sin líos para tus LAN parties y torneos; Un
-            cierre de seguridad mantiene el cable conectado durante toda la partida
-        variationAttributes:
-          - name: style_name
-            value: Huntsman Mini
-          - name: size_name
-            value: Diseño ES
-          - name: color_name
-            value: Interruptor Morado Clicky
-        ParentASIN: B0F9Q1MJLF
-      - ASIN: B097F2KHX4
-        title: >-
-          Razer Huntsman V2 Tenkeyless (Interruptor Morado) - Teclado Óptico para Juegos (Interruptores Ópticos Clicky,
-          Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
-        brand: Razer
-        precio: "145,56\_€"
-        precioOriginal: No especificado
-        disponibilidad: Envío en 3 a 4 días
-        imagen: https://m.media-amazon.com/images/I/41AyGvdnS9L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51fL1u9++qL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51NwexIXHrL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41XDO2b2ovL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51txWQi1bxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41R5K3goT7L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B097F2KHX4?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Switches ópticos con sonido de click Razer: Disfruta de un tecleo rápido y energético con un sonido
-            satisfactorio y una sensación más ligera que los switches mecánicos tradicionales, con una tasa de sondeo de
-            hasta 8000 Hz para una latencia de entrada más baja.
-          - >-
-            Teclas de PBT de doble inyección: Gracias al proceso de moldeado de doble inyección, estas teclas más
-            rígidas y duraderas que las teclas tradicionales no se desgastan ni terminan con un acabado brillante y
-            cuentan con etiquetas que no se borran.
-          - >-
-            Espuma amortiguadora del sonido: El Razer Huntsman V2 TKL tiene fundas con interior de espuma especial,
-            añadida para una acústica mejorada, que absorbe todos los sonidos metálicos que puedan producirse al pulsar
-            a fondo las teclas.
-          - >-
-            Cable tipo C desmontable: Conecta tu teclado y juega al instante sin molestias en tus LAN parties y torneos,
-            gracias al cierre de seguridad que mantiene el cable conectado durante toda la partida.
-          - >-
-            Reposamuñecas ergonómico: El apoyo robusto se alinea a la perfección al teclado para descargar la presión de
-            las muñecas, de forma que te sientas menos cansado cuando juegas durante mucho tiempo.
-        variationAttributes:
-          - name: style_name
-            value: Huntsman V2 TKL
-          - name: size_name
-            value: Diseño US
-          - name: color_name
-            value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
@@ -401,44 +271,61 @@ productos:
           - name: color_name
             value: Interruptor Rojo Linear
         ParentASIN: B0F9Q1MJLF
-      - ASIN: B07V5VDXW1
+      - ASIN: B08BZDLVNN
         title: >-
-          Razer Huntsman Tournament Edition (Interruptor Rojo) - Teclado para Juegos sin Llave (Teclas Ópticas-Mecánicas
-          Lineales, Teclas PBT de Doble Disparo) Intl. Diseño US (ISO) | Negro
+          Razer Huntsman Mini (Interruptor Morado) - 60% Teclado Compacto para Juegos (Interruptores Óptico-Mecánicos
+          Clicky, Teclas PBT Doubleshot, Cable USB-C Desmontable) Diseño US| Blanco Mercury
         brand: Razer
-        precio: "99,99\_€"
-        precioOriginal: "147,35\_€"
+        precio: "76,99\_€"
+        precioOriginal: "127,77\_€"
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41oO-6N59QL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/41m8BNuVVXL._SL500_.jpg
         imagenWidth: 500
-        imagenHeight: 268
+        imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/313XL1loheL._SL500_.jpg
-            width: 500
-            height: 332
-          - url: https://m.media-amazon.com/images/I/51ETwItKMqL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51QMFIxQR+L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/4180g+jPJCL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51oiQAqwxyL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41XyS6RXXnL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51FBqctLpxL._SL500_.jpg
             width: 500
             height: 500
-        enlace: https://www.amazon.es/dp/B07V5VDXW1?tag=recomendadorn-21&th=1&psc=1
+          - url: https://m.media-amazon.com/images/I/51glYStg94L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ocnrSdu6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31D9nPcpArL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417kgwXqALL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41I9mqeDpRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41jRIPnwyHL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/514Qb0PjWEL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BZDLVNN?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
-          - Switches ópticos lineales Razer para unas pulsaciones más rápidas y sensibles
-          - Teclas de PBT de doble inyección para un acabado robusto y con textura mate
-          - Memoria integrada para llevar tus ajustes a todas partes
-          - Diseño compacto para mayor comodidad y movilidad
-          - Cable tipo C desmontable para instalar y guardar tu teclado fácilmente
+          - Teclas de PBT de doble inyección con funciones secundarias impresas en el lateral
+          - Memoria integrada y preajustes de iluminación
+          - Diseño compacto 60% para una experiencia de juego portátil y sencilla
+          - Estructura de aluminio para una durabilidad óptima
         variationAttributes:
           - name: style_name
-            value: Huntsman Tournament Ed.
+            value: Huntsman Mini Mercury Ed.
           - name: size_name
             value: Diseño US
           - name: color_name
-            value: Interruptor Rojo Linear
+            value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
       - ASIN: B097F14PZJ
         title: >-
@@ -503,12 +390,70 @@ productos:
           - name: color_name
             value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
+      - ASIN: B08GM91TCC
+        title: >-
+          Razer Huntsman Mini (Purple Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores
+          opto-mecánicos (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
+        brand: Razer
+        precio: "99,84\_€"
+        precioOriginal: "129,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 308
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51REl2pSzaL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/511TzLIInxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51E6rgZg01L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QMGlY9QOL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51IFghoZW9L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QMFIxQR+L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B08GM91TCC?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Switches ópticos Razer: Ofrece un accionamiento rápido, ligero y fluido que los switches mecánicos, así como
+            óptima durabilidad ya que necesita menos piezas móviles que funcionan con menos fricción; Disponible en dos
+            variantes: lineal y con sonido click
+          - >-
+            Teclas de PBT de doble inyección con funciones secundarias impresas en el lateral: Diseñado para una óptima
+            durabilidad, no se va a deteriorar nunca con un acabado brillante ni se van a desgastar las etiquetas por el
+            uso intenso; Funciones secundarias impresas en el lateral para facilitar la referencia
+          - >-
+            Memoria integrada y preajustes de iluminación: Guarda y activa hasta 5 perfiles de teclado sin necesidad de
+            software, mientras lo personalizas más con un paquete de efectos de iluminación
+          - >-
+            Diseño compacto 60 %: óptimo para escritorios pequeños o minimalistas en los que el espacio es primordial;
+            Su diseño compacto significa que te lo puedes llevar sin problemas y es fácil de colocar para jugar, lo que
+            te permite que juegues con comodidad
+          - >-
+            Cable tipo C desmontable: Conecta tu teclado y juega al instante sin líos para tus LAN parties y torneos; Un
+            cierre de seguridad mantiene el cable conectado durante toda la partida
+        variationAttributes:
+          - name: style_name
+            value: Huntsman Mini
+          - name: size_name
+            value: Diseño ES
+          - name: color_name
+            value: Interruptor Morado Clicky
+        ParentASIN: B0F9Q1MJLF
       - ASIN: B08P54ZK97
         title: >-
           Razer Huntsman V2 (Interruptor Analógico) - Teclado Óptico para Juegos con Latencia de Entrada Casi Nula
           (Interruptores Óptico-Mecánicos Analógicos, Teclas PBT) Diseño US | Negro
         brand: Razer
-        precio: "151,79\_€"
+        precio: "151,78\_€"
         precioOriginal: "269,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41n6ygqqkOL._SL500_.jpg
@@ -588,6 +533,61 @@ productos:
           - name: color_name
             value: Interruptor Analog Optical
         ParentASIN: B0F9Q1MJLF
+      - ASIN: B097F2KHX4
+        title: >-
+          Razer Huntsman V2 Tenkeyless (Interruptor Morado) - Teclado Óptico para Juegos (Interruptores Ópticos Clicky,
+          Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
+        brand: Razer
+        precio: "145,56\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 3 a 4 días
+        imagen: https://m.media-amazon.com/images/I/41AyGvdnS9L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51fL1u9++qL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51NwexIXHrL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41XDO2b2ovL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51txWQi1bxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41R5K3goT7L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B097F2KHX4?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Switches ópticos con sonido de click Razer: Disfruta de un tecleo rápido y energético con un sonido
+            satisfactorio y una sensación más ligera que los switches mecánicos tradicionales, con una tasa de sondeo de
+            hasta 8000 Hz para una latencia de entrada más baja.
+          - >-
+            Teclas de PBT de doble inyección: Gracias al proceso de moldeado de doble inyección, estas teclas más
+            rígidas y duraderas que las teclas tradicionales no se desgastan ni terminan con un acabado brillante y
+            cuentan con etiquetas que no se borran.
+          - >-
+            Espuma amortiguadora del sonido: El Razer Huntsman V2 TKL tiene fundas con interior de espuma especial,
+            añadida para una acústica mejorada, que absorbe todos los sonidos metálicos que puedan producirse al pulsar
+            a fondo las teclas.
+          - >-
+            Cable tipo C desmontable: Conecta tu teclado y juega al instante sin molestias en tus LAN parties y torneos,
+            gracias al cierre de seguridad que mantiene el cable conectado durante toda la partida.
+          - >-
+            Reposamuñecas ergonómico: El apoyo robusto se alinea a la perfección al teclado para descargar la presión de
+            las muñecas, de forma que te sientas menos cansado cuando juegas durante mucho tiempo.
+        variationAttributes:
+          - name: style_name
+            value: Huntsman V2 TKL
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Morado Clicky
+        ParentASIN: B0F9Q1MJLF
     ParentASIN: B0F9Q1MJLF
     variationAttributes:
       - name: style_name
@@ -596,6 +596,9 @@ productos:
         value: Diseño ES
       - name: color_name
         value: Interruptor Analog Optical
+    nombreCompleto: >-
+      Razer Huntsman V2 Analog - Teclado Premium para juegos con interruptores ópticos analógicos (reposamuñecas,
+      control giratorio digital, 4 teclas multimedia, Chroma RGB) Teclado Español - Negro
   - nombre: Razer BlackWidow V4 X
     lo_mejor: Switches mecánicos Green muy responsivos, RGB por tecla, rueda multifunción, teclas multimedia dedicadas
     a_tener_en_cuenta: No incluye reposamuñecas, pero excelente calidad-precio dentro de gama media-alta
@@ -714,6 +717,49 @@ productos:
         variationAttributes:
           - name: style_name
             value: BlackWidow V3 TKL
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Vierde Clicky
+        ParentASIN: B0DPC8X1VJ
+      - ASIN: B08G577XZF
+        title: >-
+          Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
+          Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño US | Negro
+        brand: Razer
+        precio: "107,79\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/417P8E43+gL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 284
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51Ey+WRpUDL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ydEYbY8UL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31x51m7AJ2L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ICb-iu6sL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41JVytGmyyL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41zBNGNOw8L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B08G577XZF?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño clásico que ofrece actuación optimizada y puntos de reinicio para un rendimiento óptimo al jugar
+          - Carcasa de interruptor transparente
+          - Rodillo digital multifunción y tecla multimedia
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3
           - name: size_name
             value: Diseño US
           - name: color_name
@@ -1020,50 +1066,74 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
-      - ASIN: B08G577XZF
+      - ASIN: B08G5BG648
         title: >-
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
-          Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño US | Negro
+          Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño ES | Negro
         brand: Razer
         precio: "107,79\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/417P8E43+gL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/41nvSdlw2dL._SL500_.jpg
         imagenWidth: 500
-        imagenHeight: 284
+        imagenHeight: 375
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51Ey+WRpUDL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51EFsZBHGHL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/51ydEYbY8UL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51B46wba1ML._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/31x51m7AJ2L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/11xs+zKniGL._SL500_.jpg
+            width: 500
+            height: 281
+          - url: https://m.media-amazon.com/images/I/416+qwJxnbL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41ICb-iu6sL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41NCq-36dwL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41JVytGmyyL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41eaiy-TpRL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41zBNGNOw8L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51ooG+FqurL._SL500_.jpg
             width: 500
             height: 500
-        enlace: https://www.amazon.es/dp/B08G577XZF?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B08G5BG648?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
-          - Diseño clásico que ofrece actuación optimizada y puntos de reinicio para un rendimiento óptimo al jugar
-          - Carcasa de interruptor transparente
-          - Rodillo digital multifunción y tecla multimedia
+          - >-
+            Switches mecánicos verdes Razer para una ejecución precisa con una sensación de click al tacto: Siente y oye
+            la respuesta de cada pulsación de tecla, con un diseño clásico que ofrece un accionamiento optimizado y
+            puntos de reinicio para disfrutar de un mejor rendimiento al jugar.
+          - >-
+            Switch con armazón transparente para una iluminación Razer Chroma RGB más brillante: Su diseño totalmente
+            transparente permite mostrar la verdadera luminosidad de lo que Razer Chroma RGB es capaz de hacer: desde
+            personalizaciones de luz intensa hasta una mayor inmersión, gracias a su reacción dinámica a más de 150
+            juegos integrados.
+          - >-
+            Teclas de ABS de doble inyección para resistir el uso intenso: Gracias al proceso de moldeado de doble
+            inyección para garantizar que no se desgasten las etiquetas, las teclas también cuentan con paredes
+            extragruesas capaces de soportar un uso constante.
+          - >-
+            Rueda digital multifunción y tecla multimedia para un control práctico: Configúralas para pausar,
+            reproducir, saltar y retocar todo, desde el brillo hasta el volumen: la comodidad definitiva para que
+            disfrutes del entretenimiento.
+          - >-
+            Reposamuñecas ergonómico para disfrutar de una comodidad duradera mientras juegas: El apoyo robusto se
+            alinea a la perfección para descargar la presión de las muñecas, de forma que te sientas menos cansado
+            cuando juegas durante mucho tiempo.
         variationAttributes:
           - name: style_name
             value: BlackWidow V3
           - name: size_name
-            value: Diseño US
+            value: Diseño ES
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
     ParentASIN: B0DPC8X1VJ
+    nombreCompleto: >-
+      Razer BlackWidow V4 X, Teclado gaming con Razer Chroma RGB (Switches mecánicos amarillos , 6 teclas macro
+      dedicadas de ABS de doble inyección) ES-Layout, Negro
   - nombre: Razer Ornata V3 X
     lo_mejor: Membrana silenciosa, diseño fino y cómodo, teclas planas y resistentes al agua, ideal para trabajar y jugar
     a_tener_en_cuenta: Buena opción económica si no necesitas un teclado mecánico
@@ -1197,6 +1267,9 @@ productos:
         value: Ornata V3 X
       - name: style_name
         value: Diseño ES
+    nombreCompleto: >-
+      Razer Ornata V3 X - Teclado para Juegos de Bajo Perfil (Interruptores de Membrana Silenciosos, Teclas Recubiertas
+      de rayos UV, Diseño Duradero y Resistente a Derrames) Diseño ES, Negro
   - nombre: Razer Apex 3
     lo_mejor: Teclado silencioso con resistencia IP32 al agua, RGB por zonas y controles multimedia dedicados
     a_tener_en_cuenta: Perfecto para setups compartidos o nocturnos; sin iluminación por tecla
@@ -1304,6 +1377,9 @@ productos:
     variationAttributes:
       - name: style_name
         value: QWERTY español
+    nombreCompleto: >-
+      SteelSeries Apex 3 - Teclado Gaming - Iluminación RGB de 10 zonas - Resistencia al agua IP32 - Reposamuñecas
+      magnético superior - Teclado QWERTY Español
   - nombre: Mars Gaming MKPRO
     lo_mejor: Switches mecánicos OUTEMU, chasis de aluminio, RGB completo y reposamuñecas desmontable
     a_tener_en_cuenta: Excelente para empezar en mecánicos sin gastar mucho
@@ -1323,7 +1399,7 @@ productos:
       - Formato completo con anti-ghosting
     brand: Mars Gaming
     ASIN: B0F383W18C
-    precio: "42,17\_€"
+    precio: "41,92\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -1373,58 +1449,6 @@ productos:
       Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
       de Control, Software Avanzado, Multiplataforma, Switch Silent, Español, Negro
     variantes:
-      - ASIN: B07WFGYJ6R
-        title: Mars Gaming MKXTKL, teclado mecánico switch azul, LED 5 colores 10 efectos, ES
-        brand: Mars Gaming
-        precio: "22,90\_€"
-        precioOriginal: "24,90\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51+QYTGvEFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41UbVTckQZL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41HgcgkQquL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51exvEgzzzL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/515eMbBV9uL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41FNhRrWQTL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41sGNd+swXL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            TECLADO MECÁNICO: Teclado gaming ultracompacto TKL mecánico con switches azules OUTEMU SQ, con un nuevo
-            diseño SQUARE, ofreciéndote una libertad total de movimiento; Layout Español
-          - >-
-            DISEÑO ERGONÓMICO: Reposamuñecas ergonómico extraíble y y pies de goma antideslizante con cómodo sistema de
-            montaje
-          - >-
-            ILUMINACIÓN RGB: El MKXTKL está equipado con un sistema de retroiluminación a 5 colores y 10 perfiles de luz
-            RGB predefinidos que ofrecerán un look espectacular a tu escritorio
-          - >-
-            TECNOLOGÍA PREMIUM: Las teclas del MKXTKL cuentan con una carcasa especial diseñada con tecnología de
-            inyección dual, que extiende su vida útil y refuerza su estructura al máximo; Pulsación firme y duradera
-          - >-
-            COMPATIBILIDAD MULTIPLATAFORMA: Compatible con Windows, Linux, Mac, PS4, PS5, XBOX ONE, XBOX SERIES X-S,
-            Nintendo Switch
-        variationAttributes:
-          - name: style_name
-            value: MKXTKLBES
-        ParentASIN: B0DZ752MKH
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -1557,7 +1581,102 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+      - ASIN: B076Q7YL68
+        title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
+        brand: Mars Gaming
+        precio: "28,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41fxHBru+hL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415AaHgZUoL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51O6zE4vU0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51YYkX5nLEL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B076Q7YL68?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TECLADO GAMING RGB: El MRK0 es un teclado Gaming que te ofrece unas prestaciones de gran calidad y te
+            permite jugar sin límites, proporcionándote una gran comodidad y ergonomía; teclas con pulsación y altura
+            optimizada para gaming, además de contar con 15 teclas extra de función para que tengas control total sobre
+            tus partidas
+          - >-
+            ILUMINACIÓN RGB RAINBOW: Cuenta con iluminación RGB Rainbow con 3 modods de iluminación multicolores
+            diferentes, efectos de respiración y control de intensidad
+          - >-
+            TECNOLOGÍA GAMING: Procesador GAMING de última generación con velocidad de respuesta customizable, Chipset
+            Gaming Profesional con frecuencia de sondeo ultra rápida y capacidad anti-ghosting; Layout Español
+          - 'COMPATIBILIDAD MULTIPLATAFORMA: Compatible con Windows, Linux, Mac, PS4, PS5, XBOX ONE, XBOX SERIES X-S'
+        variationAttributes:
+          - name: style_name
+            value: MRK0
+        ParentASIN: B0DZ752MKH
+      - ASIN: B07WFGYJ6R
+        title: Mars Gaming MKXTKL, teclado mecánico switch azul, LED 5 colores 10 efectos, ES
+        brand: Mars Gaming
+        precio: "22,90\_€"
+        precioOriginal: "24,90\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51+QYTGvEFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41UbVTckQZL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41HgcgkQquL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51exvEgzzzL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/515eMbBV9uL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41FNhRrWQTL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41sGNd+swXL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TECLADO MECÁNICO: Teclado gaming ultracompacto TKL mecánico con switches azules OUTEMU SQ, con un nuevo
+            diseño SQUARE, ofreciéndote una libertad total de movimiento; Layout Español
+          - >-
+            DISEÑO ERGONÓMICO: Reposamuñecas ergonómico extraíble y y pies de goma antideslizante con cómodo sistema de
+            montaje
+          - >-
+            ILUMINACIÓN RGB: El MKXTKL está equipado con un sistema de retroiluminación a 5 colores y 10 perfiles de luz
+            RGB predefinidos que ofrecerán un look espectacular a tu escritorio
+          - >-
+            TECNOLOGÍA PREMIUM: Las teclas del MKXTKL cuentan con una carcasa especial diseñada con tecnología de
+            inyección dual, que extiende su vida útil y refuerza su estructura al máximo; Pulsación firme y duradera
+          - >-
+            COMPATIBILIDAD MULTIPLATAFORMA: Compatible con Windows, Linux, Mac, PS4, PS5, XBOX ONE, XBOX SERIES X-S,
+            Nintendo Switch
+        variationAttributes:
+          - name: style_name
+            value: MKXTKLBES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
+    nombreCompleto: >-
+      Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
+      de Control, Software Avanzado, Multiplataforma, Switch Silent, Español, Negro
   - nombre: Logitech G213 Prodigy
     lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado, resistente a líquidos
     a_tener_en_cuenta: Alternativa silenciosa y cómoda si no necesitas mecánico
@@ -1628,6 +1747,9 @@ productos:
     variationAttributes:
       - name: style_name
         value: Disposición QWERTY Español
+    nombreCompleto: >-
+      Logitech G213 Prodigy Teclado Gaming con Reposamuñecas, RGB LIGHTSYNC, Teclas Retroiluminadas y Personalizables,
+      Resistente a Salpicaduras, Controles Multimedia Dedicados, Disposición QWERTY ES
   - nombre: Corsair K55 RGB PRO
     lo_mejor: Teclas macro y multimedia dedicadas, resistencia IP42, RGB por zonas y compatible con iCUE
     a_tener_en_cuenta: Ideal para productividad y MMO si no necesitas switches mecánicos
@@ -1648,7 +1770,7 @@ productos:
     brand: Corsair
     ASIN: B08YDJ6DKN
     precio: "49,99\_€"
-    precioOriginal: "64,99\_€"
+    precioOriginal: "59,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/414Jru+H5RL._SL500_.jpg
@@ -1707,6 +1829,9 @@ productos:
     variationAttributes:
       - name: style_name
         value: K55 RGB PRO
+    nombreCompleto: >-
+      Corsair K55 RGB PRO Teclado para Juegos con Teclas de Membrana, Retroiluminación RGB Dinámica, 6 Teclas Macro con
+      Integración el Software Elgato, Resistencia al Polvo y los Derrames, QWERTY, Negro
   - nombre: Razer BlackWidow V3 TKL
     valoracion: 5
     caracteristicas:
@@ -1783,6 +1908,70 @@ productos:
       Razer BlackWidow V3 Tenkeyless (Yellow Switch) - Teclado compacto para juegos con interruptores mecánicos (teclas
       ABS, iluminación RGB Chroma) Teclado Español - Negro
     variantes:
+      - ASIN: B08G5BG648
+        title: >-
+          Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
+          Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño ES | Negro
+        brand: Razer
+        precio: "107,79\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41nvSdlw2dL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 375
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51EFsZBHGHL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51B46wba1ML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/11xs+zKniGL._SL500_.jpg
+            width: 500
+            height: 281
+          - url: https://m.media-amazon.com/images/I/416+qwJxnbL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41NCq-36dwL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41eaiy-TpRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ooG+FqurL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B08G5BG648?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Switches mecánicos verdes Razer para una ejecución precisa con una sensación de click al tacto: Siente y oye
+            la respuesta de cada pulsación de tecla, con un diseño clásico que ofrece un accionamiento optimizado y
+            puntos de reinicio para disfrutar de un mejor rendimiento al jugar.
+          - >-
+            Switch con armazón transparente para una iluminación Razer Chroma RGB más brillante: Su diseño totalmente
+            transparente permite mostrar la verdadera luminosidad de lo que Razer Chroma RGB es capaz de hacer: desde
+            personalizaciones de luz intensa hasta una mayor inmersión, gracias a su reacción dinámica a más de 150
+            juegos integrados.
+          - >-
+            Teclas de ABS de doble inyección para resistir el uso intenso: Gracias al proceso de moldeado de doble
+            inyección para garantizar que no se desgasten las etiquetas, las teclas también cuentan con paredes
+            extragruesas capaces de soportar un uso constante.
+          - >-
+            Rueda digital multifunción y tecla multimedia para un control práctico: Configúralas para pausar,
+            reproducir, saltar y retocar todo, desde el brillo hasta el volumen: la comodidad definitiva para que
+            disfrutes del entretenimiento.
+          - >-
+            Reposamuñecas ergonómico para disfrutar de una comodidad duradera mientras juegas: El apoyo robusto se
+            alinea a la perfección para descargar la presión de las muñecas, de forma que te sientas menos cansado
+            cuando juegas durante mucho tiempo.
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3
+          - name: size_name
+            value: Diseño ES
+          - name: color_name
+            value: Interruptor Vierde Clicky
+        ParentASIN: B0DPC8X1VJ
       - ASIN: B08G577XZF
         title: >-
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
@@ -1938,65 +2127,6 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
-      - ASIN: B08GCSQRZW
-        title: >-
-          Razer BlackWidow V3 Pro (Interruptor Vierde) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
-          (Interruptores Mecánicos Clicky, Iluminación de Croma RGB, Reposamuñecas) Diseño US| Negro
-        brand: Razer
-        precio: "149,99\_€"
-        precioOriginal: "222,49\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/419H20c2TPL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 293
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51-s4lKsvRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Ca80CHGYL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51biHywpSGL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51sQcCrlDVS._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/3109WG6gtZS._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41s7+wzDcYL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B08GCSQRZW?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Tecnología Razer HyperSpeed Wireless: Elige el rendimiento inalámbrico optimo para juegos o conecta hasta 3
-            dispositivos por Bluetooth y pasa de una opción a otra de manera fluida con tan solo una tecla. Incluye un
-            cable USB-C desmontable para cargarlo durante el uso.
-          - >-
-            Switches mecánicos verdes Razer: Escucha y siente la satisfacción en cada pulsación gracias al accionamiento
-            optimizado para juegos: con teclas clásicas de altura completa que no ponen en riesgo la experiencia de
-            tecleado.
-          - >-
-            Switch con armazón transparente: Su diseño totalmente transparente permite mostrar la verdadera luminosidad
-            que Razer Chroma RGB es capaz de hacer: desde personalizaciones de luz intensa hasta una mayor inmersión,
-            gracias a su reacción dinámica a más de 150 juegos integrados.
-          - >-
-            Dial digital multifunción y 4 teclas multimedia: Configúralas para pausar, reproducir, saltar y retocar
-            todo, desde el brillo hasta el volumen: la comodidad definitiva para que disfrutes del entretenimiento.
-          - >-
-            Teclas de ABS de doble inyección: Gracias al proceso de moldeado de doble inyección para garantizar que no
-            se desgasten las etiquetas, las teclas también cuentan con paredes extragruesas capaces de soportar un uso
-            constante.
-        variationAttributes:
-          - name: style_name
-            value: BlackWidow V3 Pro
-          - name: size_name
-            value: Diseño US
-          - name: color_name
-            value: Interruptor Vierde Clicky
-        ParentASIN: B0DPC8X1VJ
       - ASIN: B08H5LW86P
         title: >-
           Razer BlackWidow V3 Tenkeyless (Interruptor Amarillo) - Teclado Mecánico Compacto para Juegos (Interruptores
@@ -2060,6 +2190,65 @@ productos:
             value: Diseño US
           - name: color_name
             value: Interruptor Amarillo Silent
+        ParentASIN: B0DPC8X1VJ
+      - ASIN: B08GCSQRZW
+        title: >-
+          Razer BlackWidow V3 Pro (Interruptor Vierde) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
+          (Interruptores Mecánicos Clicky, Iluminación de Croma RGB, Reposamuñecas) Diseño US| Negro
+        brand: Razer
+        precio: "149,99\_€"
+        precioOriginal: "222,49\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/419H20c2TPL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 293
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51-s4lKsvRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ca80CHGYL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51biHywpSGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51sQcCrlDVS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/3109WG6gtZS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41s7+wzDcYL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B08GCSQRZW?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Tecnología Razer HyperSpeed Wireless: Elige el rendimiento inalámbrico optimo para juegos o conecta hasta 3
+            dispositivos por Bluetooth y pasa de una opción a otra de manera fluida con tan solo una tecla. Incluye un
+            cable USB-C desmontable para cargarlo durante el uso.
+          - >-
+            Switches mecánicos verdes Razer: Escucha y siente la satisfacción en cada pulsación gracias al accionamiento
+            optimizado para juegos: con teclas clásicas de altura completa que no ponen en riesgo la experiencia de
+            tecleado.
+          - >-
+            Switch con armazón transparente: Su diseño totalmente transparente permite mostrar la verdadera luminosidad
+            que Razer Chroma RGB es capaz de hacer: desde personalizaciones de luz intensa hasta una mayor inmersión,
+            gracias a su reacción dinámica a más de 150 juegos integrados.
+          - >-
+            Dial digital multifunción y 4 teclas multimedia: Configúralas para pausar, reproducir, saltar y retocar
+            todo, desde el brillo hasta el volumen: la comodidad definitiva para que disfrutes del entretenimiento.
+          - >-
+            Teclas de ABS de doble inyección: Gracias al proceso de moldeado de doble inyección para garantizar que no
+            se desgasten las etiquetas, las teclas también cuentan con paredes extragruesas capaces de soportar un uso
+            constante.
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3 Pro
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
       - ASIN: B08Z8JZMDQ
         title: >-
@@ -2166,6 +2355,9 @@ productos:
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
     ParentASIN: B0DPC8X1VJ
+    nombreCompleto: >-
+      Razer BlackWidow V3 Tenkeyless (Yellow Switch) - Teclado compacto para juegos con interruptores mecánicos (teclas
+      ABS, iluminación RGB Chroma) Teclado Español - Negro
   - nombre: Logitech G512
     lo_mejor: Switches GX (Brown, Red o Blue), chasis de aluminio, RGB por tecla y puerto USB integrado
     a_tener_en_cuenta: Equilibrio perfecto entre calidad, rendimiento y estética
@@ -2233,6 +2425,9 @@ productos:
       Logitech G512 Teclado Gaming Mecánico, RGB LIGHTSYNC, Teclas retroiluminadas, GX-Táctil Marrón, Aleación de
       Aluminio, Teclas F Personalizables, Paso de USB, Disposición QWERTY ES - Carbón/Negro
     variantes: []
+    nombreCompleto: >-
+      Logitech G512 Teclado Gaming Mecánico, RGB LIGHTSYNC, Teclas retroiluminadas, GX-Táctil Marrón, Aleación de
+      Aluminio, Teclas F Personalizables, Paso de USB, Disposición QWERTY ES - Carbón/Negro
   - nombre: Logitech G413 TKL SE
     lo_mejor: Diseño TKL compacto, retroiluminación blanca clara, carcasa de aluminio y switches táctiles
     a_tener_en_cuenta: Diseño limpio y resistente para setups minimalistas
@@ -2309,3 +2504,6 @@ productos:
       Logitech G413 TKL SE Teclado Mecánico Gaming - Teclado Compacto Retroiluminado con Interruptores Mecánicos
       Táctiles, Anti-Ghosting, Compatible con Windows, macOS, Disposición QWERTY Español - Negro
     variantes: []
+    nombreCompleto: >-
+      Logitech G413 TKL SE Teclado Mecánico Gaming - Teclado Compacto Retroiluminado con Interruptores Mecánicos
+      Táctiles, Anti-Ghosting, Compatible con Windows, macOS, Disposición QWERTY Español - Negro

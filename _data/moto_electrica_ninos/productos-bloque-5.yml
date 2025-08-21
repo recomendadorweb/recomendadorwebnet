@@ -170,6 +170,9 @@ productos:
     variationAttributes:
       - name: color_name
         value: Negro-azul
+    nombreCompleto: >-
+      RCB TECH R9X Moto Eléctrica Infantil,3 Modos de Velocidad, máx 25km/h, Autonomía máxima 15KM, Neumáticos de 12
+      Pulgadas, Bicicleta de Motocross para niños de 3-12 años
   - ASIN: B0CQYMNKTC
     a_tener_en_cuenta: hasta 12 años
     brand: RCB
@@ -347,6 +350,9 @@ productos:
     variationAttributes:
       - name: color_name
         value: Noir Rouge
+    nombreCompleto: >-
+      RCB R9X Moto Eléctrica Infantil, Neumáticos de 12 Pulgadas, Potente Motor, 3 Modos 8/12/25KMH, Autonomía máxima
+      15KM, Motocross para niños de 3-12 años
   - ASIN: B0BTM3GDC4
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -409,66 +415,6 @@ productos:
       EVERCROSS EV12M Motocicleta Eléctrica Niños, Moto Eléctrica con Motor de 300 W, Modos de Velocidad de 8/12/25 KMH,
       15 km de Largo Alcance, Neumático de 12'', Moto Cross para niños de 3 a 12 años
     variantes:
-      - ASIN: B0BTM3LS4S
-        title: >-
-          EVERCROSS EV12M Motocicleta Eléctrica Niños, Moto Eléctrica con Motor de 300 W, Modos de Velocidad de 8/12/25
-          KMH, 15 km de Largo Alcance, Neumático de 12'', Moto Cross para niños de 3 a 12 años
-        brand: EVERCROSS
-        precio: "299,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51BOMZTF1vL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51TGwQoK-9L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51IYQy-OTtL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51uGPo3s8ML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5108SK0cDnL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/61H3r05e7ML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41QhFbOdvNL._SL500_.jpg
-            width: 500
-            height: 406
-        enlace: https://www.amazon.es/dp/B0BTM3LS4S?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            AVISO: Esta Moto Eléctrica es pesada, así que asegúrese de que la instalen dos adultos con cuidado.
-            ¡Verifique que el vehículo esté correctamente montado antes de conducir! El motor produce una onda de sonido
-            que imita un rugido, lo que se suma al placer de conducir.
-          - >-
-            POTENTE MOTOCICLETA: Diseñada para niños de 3 a 12 años, esta Motocicleta para niños viene con una potente
-            potencia de 300 W que le permite alcanzar una velocidad máxima de 15,5 MPH (25 KM/H), y la capacidad de
-            carga máxima es de 65 kg. (Los datos pueden variar según factores como el modo de velocidad, la carga de
-            peso, la batería, la temperatura, las condiciones de la carretera, etc.)
-          - >-
-            VELOCIDAD DEL RAYO Y LARGO ALCANCE: La batería de 36V 4AH de la EVERCROSS EV12M Moto Eléctrica ofrece un
-            kilometraje completamente cargado de hasta 15KM. La motocicleta eléctrica también cuenta con tres modos de
-            velocidad ajustables: 8 KMH, 12 KMH y 25 KMH.
-          - >-
-            SUSPENSIÓN DE ALTO RENDIMIENTO: Equipada con un sistema de suspensión de alta elasticidad, la motocicleta
-            para niños tiene una gran capacidad de absorción de impactos que reduce el impacto de los baches en la
-            carretera sobre el conductor. Este sistema se utiliza junto con un sistema de freno de tambor, que es
-            duradero y potente para garantizar la seguridad de los niños.
-          - >-
-            DISEÑO CÓMODO: La Moto Eléctrica cuenta con ruedas de goma resistentes al desgaste de gran tamaño de 12 "que
-            brindan un agarre más fuerte. El asiento antideslizante de alta densidad se ajusta al diseño ergonómico y es
-            más suave y transpirable, lo que garantiza un cómodo y Experiencia de conducción extrema para niños.
-        variationAttributes:
-          - name: color_name
-            value: Rojo
-          - name: size_name
-            value: EV12M
-        ParentASIN: B0DF2SVG8Z
       - ASIN: B0DB874VBC
         title: >-
           EVERCROSS EV12M Pro Moto Cross Eléctrica, Motocicleta Eléctrica con Motor de 300W, 15KM de Largo Alcance,
@@ -539,6 +485,66 @@ productos:
             value: Azul
           - name: size_name
             value: EV12M PRO(Bluetooth)
+        ParentASIN: B0DF2SVG8Z
+      - ASIN: B0BTM3LS4S
+        title: >-
+          EVERCROSS EV12M Motocicleta Eléctrica Niños, Moto Eléctrica con Motor de 300 W, Modos de Velocidad de 8/12/25
+          KMH, 15 km de Largo Alcance, Neumático de 12'', Moto Cross para niños de 3 a 12 años
+        brand: EVERCROSS
+        precio: "299,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51BOMZTF1vL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51TGwQoK-9L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51IYQy-OTtL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51uGPo3s8ML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/5108SK0cDnL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/61H3r05e7ML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41QhFbOdvNL._SL500_.jpg
+            width: 500
+            height: 406
+        enlace: https://www.amazon.es/dp/B0BTM3LS4S?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            AVISO: Esta Moto Eléctrica es pesada, así que asegúrese de que la instalen dos adultos con cuidado.
+            ¡Verifique que el vehículo esté correctamente montado antes de conducir! El motor produce una onda de sonido
+            que imita un rugido, lo que se suma al placer de conducir.
+          - >-
+            POTENTE MOTOCICLETA: Diseñada para niños de 3 a 12 años, esta Motocicleta para niños viene con una potente
+            potencia de 300 W que le permite alcanzar una velocidad máxima de 15,5 MPH (25 KM/H), y la capacidad de
+            carga máxima es de 65 kg. (Los datos pueden variar según factores como el modo de velocidad, la carga de
+            peso, la batería, la temperatura, las condiciones de la carretera, etc.)
+          - >-
+            VELOCIDAD DEL RAYO Y LARGO ALCANCE: La batería de 36V 4AH de la EVERCROSS EV12M Moto Eléctrica ofrece un
+            kilometraje completamente cargado de hasta 15KM. La motocicleta eléctrica también cuenta con tres modos de
+            velocidad ajustables: 8 KMH, 12 KMH y 25 KMH.
+          - >-
+            SUSPENSIÓN DE ALTO RENDIMIENTO: Equipada con un sistema de suspensión de alta elasticidad, la motocicleta
+            para niños tiene una gran capacidad de absorción de impactos que reduce el impacto de los baches en la
+            carretera sobre el conductor. Este sistema se utiliza junto con un sistema de freno de tambor, que es
+            duradero y potente para garantizar la seguridad de los niños.
+          - >-
+            DISEÑO CÓMODO: La Moto Eléctrica cuenta con ruedas de goma resistentes al desgaste de gran tamaño de 12 "que
+            brindan un agarre más fuerte. El asiento antideslizante de alta densidad se ajusta al diseño ergonómico y es
+            más suave y transpirable, lo que garantiza un cómodo y Experiencia de conducción extrema para niños.
+        variationAttributes:
+          - name: color_name
+            value: Rojo
+          - name: size_name
+            value: EV12M
         ParentASIN: B0DF2SVG8Z
       - ASIN: B0DB87DJY4
         title: >-
@@ -617,6 +623,9 @@ productos:
         value: Azul
       - name: size_name
         value: EV12M
+    nombreCompleto: >-
+      EVERCROSS EV12M Motocicleta Eléctrica Niños, Moto Eléctrica con Motor de 300 W, Modos de Velocidad de 8/12/25 KMH,
+      15 km de Largo Alcance, Neumático de 12'', Moto Cross para niños de 3 a 12 años
   - ASIN: B0D4QS35W1
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -747,6 +756,9 @@ productos:
     variationAttributes:
       - name: color_name
         value: Negro
+    nombreCompleto: >-
+      EVERCROSS EV08M Motocicleta Eléctrica para Niños, Motobici Eléctrica con Motor 150W, Velocidad de 8/16km/h y
+      Autonomía 10km Moto Eléctrica, Neumáticas de 12’’, Motocross para Niños de 3 a 12 Años
   - ASIN: B0CS2WQKRX
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -818,72 +830,6 @@ productos:
       EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
       Cross para Niños de 3-12 Años
     variantes:
-      - ASIN: B0FHGTGZ3Y
-        title: >-
-          EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
-          Cross para Niños de 3-12 Años
-        brand: EVERCROSS
-        precio: "207,57\_€"
-        precioOriginal: "279,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41dCBpAa+UL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/514cJHSPiGL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51rQBAnQ+cL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41K9f-PxTDL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Lr4GsQfoL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qcvxfNwAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/515hKi90ISL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51LgfwSUA1L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Jck118S6L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0FHGTGZ3Y?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Nota: Esta motocicleta eléctrica para niños es pesada y debe ser instalada cuidadosamente por dos adultos.
-            Asegúrese de que el vehículo está instalado correctamente antes de conducirlo. El motor eléctrico genera
-            ondas sonoras que imitan un rugido, lo que contribuye a aumentar el placer de conducir.
-          - >-
-            POTENTE: La motocicleta eléctrica EVERCROSS está equipada con un motor de alta potencia de 150 vatios, con
-            una capacidad de carga máxima de 40 kg, adecuada para niños de 3 a 12 años. (Los datos pueden variar en
-            función del modo de velocidad, el peso de la carga, la batería, la temperatura, las condiciones de la
-            carretera, etc.)
-          - >-
-            MÚLTIPLES VELOCIDADES Y LARGA DISTANCIA: La batería de 14,4 V y 5.2 Ah de la EVERCROSS EV05M tiene una
-            autonomía extra larga de hasta 10 kilómetros (6,2 millas). La motocicleta eléctrica también dispone de dos
-            modos de velocidad ajustables: 8 km/h y 16 km/h.
-          - >-
-            DISEÑO PERFECTO: La moto todoterreno para niños está equipada con grandes ruedas de goma de 12 pulgadas
-            resistentes al desgaste para proporcionar un agarre más fuerte. El asiento antideslizante de alta densidad
-            tiene un diseño ergonómico, es más suave y transpirable, lo que garantiza una conducción cómoda para los
-            niños.
-          - >-
-            SEGURIDAD: La bicicleta eléctrica para niños se apoya en un sólido armazón de hierro, que es más resistente
-            y duradero. Se utiliza junto con el sistema de freno de sujeción para garantizar la seguridad de los niños.
-          - >-
-            EL MEJOR REGALO: Regale a sus hijos esta motocicleta eléctrica para cultivar su valor, su pasión por la
-            exploración y la aventura a través de una conducción excelente y bajo la protección de la seguridad.
-        variationAttributes:
-          - name: color_name
-            value: Azul
-        ParentASIN: B0FHK5CFL5
       - ASIN: B0CS2J5YB2
         title: >-
           EVERCROSS EV05M Moto Eléctrica Niños, Moto Eléctrica 150W, 8/16 km/h Modo Velocidad y 10 km Largo Alcance Moto
@@ -950,7 +896,76 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FHK5CFL5
+      - ASIN: B0FHGTGZ3Y
+        title: >-
+          EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
+          Cross para Niños de 3-12 Años
+        brand: EVERCROSS
+        precio: "207,57\_€"
+        precioOriginal: "279,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41dCBpAa+UL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/514cJHSPiGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51rQBAnQ+cL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41K9f-PxTDL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Lr4GsQfoL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51qcvxfNwAL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/515hKi90ISL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51LgfwSUA1L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Jck118S6L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0FHGTGZ3Y?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nota: Esta motocicleta eléctrica para niños es pesada y debe ser instalada cuidadosamente por dos adultos.
+            Asegúrese de que el vehículo está instalado correctamente antes de conducirlo. El motor eléctrico genera
+            ondas sonoras que imitan un rugido, lo que contribuye a aumentar el placer de conducir.
+          - >-
+            POTENTE: La motocicleta eléctrica EVERCROSS está equipada con un motor de alta potencia de 150 vatios, con
+            una capacidad de carga máxima de 40 kg, adecuada para niños de 3 a 12 años. (Los datos pueden variar en
+            función del modo de velocidad, el peso de la carga, la batería, la temperatura, las condiciones de la
+            carretera, etc.)
+          - >-
+            MÚLTIPLES VELOCIDADES Y LARGA DISTANCIA: La batería de 14,4 V y 5.2 Ah de la EVERCROSS EV05M tiene una
+            autonomía extra larga de hasta 10 kilómetros (6,2 millas). La motocicleta eléctrica también dispone de dos
+            modos de velocidad ajustables: 8 km/h y 16 km/h.
+          - >-
+            DISEÑO PERFECTO: La moto todoterreno para niños está equipada con grandes ruedas de goma de 12 pulgadas
+            resistentes al desgaste para proporcionar un agarre más fuerte. El asiento antideslizante de alta densidad
+            tiene un diseño ergonómico, es más suave y transpirable, lo que garantiza una conducción cómoda para los
+            niños.
+          - >-
+            SEGURIDAD: La bicicleta eléctrica para niños se apoya en un sólido armazón de hierro, que es más resistente
+            y duradero. Se utiliza junto con el sistema de freno de sujeción para garantizar la seguridad de los niños.
+          - >-
+            EL MEJOR REGALO: Regale a sus hijos esta motocicleta eléctrica para cultivar su valor, su pasión por la
+            exploración y la aventura a través de una conducción excelente y bajo la protección de la seguridad.
+        variationAttributes:
+          - name: color_name
+            value: Azul
+        ParentASIN: B0FHK5CFL5
     ParentASIN: B0FHK5CFL5
     variationAttributes:
       - name: color_name
         value: Negro
+    nombreCompleto: >-
+      EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
+      Cross para Niños de 3-12 Años

@@ -1,0 +1,87 @@
+cabecera:
+  # KW_ATACADA: vestidos fiesta tallas grandes | VOL: 2900
+  principal: vestidos de fiesta tallas grandes
+  meta:
+    vol: 2900
+    diff: 0
+    intent: C
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: vestidos fiesta tallas grandes | VOL: 2900
+  - vestidos de fiesta tallas grandes
+  # KW_ATACADA: vestidos de fiesta tallas grandes juveniles | VOL: 1900
+  - vestidos de fiesta tallas grandes juveniles
+  # KW_ATACADA: vestidos de fiesta tallas grandes | VOL: 1000
+  - vestidos de fiesta tallas grandes
+  # KW_ATACADA: vestidos fiesta talla grande | VOL: 720
+  - vestidos de fiesta talla grande
+secciones:
+  - kw: vestidos de fiesta tallas grandes juveniles
+    # KW_ATACADA: vestidos de fiesta tallas grandes juveniles | VOL: 1900
+    titulo: vestidos de fiesta tallas grandes juveniles
+    id: vestidos-de-fiesta-juveniles-tallas-grandes
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1900
+    diff: 0
+    intent: C
+  - kw: vestidos de fiesta tallas grandes
+    # KW_ATACADA: vestidos de fiesta tallas grandes | VOL: 1000
+    titulo: vestidos de fiesta tallas grandes
+    id: vestidos-de-fiesta-tallas-grandes
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1000
+    diff: 0
+    intent: C
+  - kw: vestidos fiesta talla grande
+    # KW_ATACADA: vestidos fiesta talla grande | VOL: 720
+    titulo: vestidos de fiesta talla grande
+    id: vestidos-de-fiesta-talla-grande
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 720
+    diff: 0
+    intent: C
+  - kw: vestidos tallas grandes fiesta
+    # KW_ATACADA: vestidos tallas grandes fiesta | VOL: 590
+    titulo: vestidos de fiesta tallas grandes
+    id: vestidos-de-fiesta-tallas-grandes
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 590
+    diff: 0
+    intent: C
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  - vestidos fiesta tallas grandes
+  - vestidos de fiesta tallas grandes juveniles
+  - vestidos de fiesta tallas grandes
+  - vestidos fiesta talla grande
+  - vestidos tallas grandes fiesta
+  # KW_ATACADA: vestido fiesta talla grande | VOL: 390
+  - vestido de fiesta talla grande
+  # KW_ATACADA: vestidos talla grande fiesta | VOL: 390
+  - vestidos de fiesta talla grande
+  # KW_ATACADA: vestidos de fiesta talla grande | VOL: 320
+  - vestidos de fiesta talla grande
+  # KW_ATACADA: vestidos fiestas tallas grandes | VOL: 320
+  - vestidos de fiesta tallas grandes
+html_map:
+  h1: vestidos de fiesta tallas grandes
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - vestidos de fiesta juveniles tallas grandes
+  - vestidos de fiesta tallas grandes
+  - vestidos de fiesta talla grande
+  - vestidos de fiesta tallas grandes
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 9
+  total_brands_detected: 63

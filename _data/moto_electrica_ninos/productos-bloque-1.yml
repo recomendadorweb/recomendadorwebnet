@@ -254,6 +254,9 @@ productos:
     variationAttributes:
       - name: color_name
         value: Blanco
+    nombreCompleto: >-
+      HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas Motocicleta
+      Infantil con Licencia 66,5x38x52 cm Blanco
   - ASIN: B07MT59Z1D
     a_tener_en_cuenta: 1 a 3 años
     brand: HOMCOM
@@ -321,64 +324,6 @@ productos:
       HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto Infantil
       con Música Carga 20 kg Rojo
     variantes:
-      - ASIN: B0F2GKCDWD
-        title: >-
-          HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto
-          Infantil con Música Carga 20 kg Azul
-        brand: HOMCOM
-        precio: "68,99\_€"
-        precioOriginal: "71,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41vR8uKmB8L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51CW1wEvxtL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/512aaW3uCcL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51iimHPCzGL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51BzyU-1VxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51pCl6VN0KL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51E3ZYSFDWL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51bCIQ3Li5L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41tE+aVqnjL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F2GKCDWD?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            CON LICENCIA BMW: Esta moto infantil tiene licencia oficial BMW, concretamente del modelo S1000RR, y es
-            ideal para niños de entre 18 y 36 meses. Además, incorpora música y faros para una conducción más realista
-          - >-
-            FÁCIL DE MANEJAR Y SEGURA: Esta moto eléctrica para niños es muy fácil de conducir. Solo necesitas pulsar el
-            botón de arranque/parada y pisar el pedal para acelerar. Además, tiene ruedas extra anchas y una velocidad
-            máxima de 2,5 km/h
-          - >-
-            FUNCIONES DE MÚSICA Y FAROS: Esta motocicleta de 3 ruedas cuenta con música integrada y faros, lo que la
-            hace más realista y ofrece a tu pequeño momentos emocionantes y divertidos mientras juega
-          - >-
-            AUTONOMÍA: Después de una carga completa (normalmente de 8 a 12 horas, 4 a 6 horas la primera vez), esta
-            moto eléctrica infantil tiene una autonomía aproximada de 45 minutos (dependiendo del tipo de uso)
-          - >-
-            MEDIDAS TOTALES: 66x37x44 cm (LxANxAL). Peso máximo soportado: 20 kg. Edad recomendada: 18-36 meses. Cumple
-            con: EN71-1,2,3,EMC,EN62115 y CE RoHS. Requiere montaje
-        variationAttributes:
-          - name: color_name
-            value: Azul
-        ParentASIN: B0F24HBFY5
       - ASIN: B07MT7XWDM
         title: >-
           HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto
@@ -437,10 +382,71 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0F24HBFY5
+      - ASIN: B0F2GKCDWD
+        title: >-
+          HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto
+          Infantil con Música Carga 20 kg Azul
+        brand: HOMCOM
+        precio: "68,99\_€"
+        precioOriginal: "71,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41vR8uKmB8L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51CW1wEvxtL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/512aaW3uCcL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51iimHPCzGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BzyU-1VxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51pCl6VN0KL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51E3ZYSFDWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51bCIQ3Li5L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41tE+aVqnjL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0F2GKCDWD?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            CON LICENCIA BMW: Esta moto infantil tiene licencia oficial BMW, concretamente del modelo S1000RR, y es
+            ideal para niños de entre 18 y 36 meses. Además, incorpora música y faros para una conducción más realista
+          - >-
+            FÁCIL DE MANEJAR Y SEGURA: Esta moto eléctrica para niños es muy fácil de conducir. Solo necesitas pulsar el
+            botón de arranque/parada y pisar el pedal para acelerar. Además, tiene ruedas extra anchas y una velocidad
+            máxima de 2,5 km/h
+          - >-
+            FUNCIONES DE MÚSICA Y FAROS: Esta motocicleta de 3 ruedas cuenta con música integrada y faros, lo que la
+            hace más realista y ofrece a tu pequeño momentos emocionantes y divertidos mientras juega
+          - >-
+            AUTONOMÍA: Después de una carga completa (normalmente de 8 a 12 horas, 4 a 6 horas la primera vez), esta
+            moto eléctrica infantil tiene una autonomía aproximada de 45 minutos (dependiendo del tipo de uso)
+          - >-
+            MEDIDAS TOTALES: 66x37x44 cm (LxANxAL). Peso máximo soportado: 20 kg. Edad recomendada: 18-36 meses. Cumple
+            con: EN71-1,2,3,EMC,EN62115 y CE RoHS. Requiere montaje
+        variationAttributes:
+          - name: color_name
+            value: Azul
+        ParentASIN: B0F24HBFY5
     ParentASIN: B0F24HBFY5
     variationAttributes:
       - name: color_name
         value: Rojo
+    nombreCompleto: >-
+      HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto Infantil
+      con Música Carga 20 kg Rojo
   - ASIN: B08J82PGH6
     a_tener_en_cuenta: A partir de 2 años
     brand: TURBO CHALLENGE
@@ -505,6 +511,7 @@ productos:
     valoracion: 4.3
     title: TURBO CHALLENGE Baby Driver Vespa GTS, Color Verde Aguamarina, Large (MGM 119151)
     variantes: []
+    nombreCompleto: TURBO CHALLENGE Baby Driver Vespa GTS, Color Verde Aguamarina, Large (MGM 119151)
   - ASIN: B0BJDKDV86
     a_tener_en_cuenta: A partir de 2 años
     brand: HOMCOM
@@ -641,6 +648,9 @@ productos:
     variationAttributes:
       - name: color_name
         value: Azul
+    nombreCompleto: >-
+      HOMCOM Moto Eléctrica BMW HP4 para Niños de +18 Meses Motocicleta de Batería 6V con Música USB Velocidad 2,5 km/h
+      Avance y Retroceso Carga 30 kg 82,5x42x54 cm Azul
   - ASIN: B0DJM8FKMR
     a_tener_en_cuenta: A partir de 2 años
     brand: AIYAPLAY
@@ -776,4 +786,7 @@ productos:
     variationAttributes:
       - name: color_name
         value: Negro Y Verde
+    nombreCompleto: >-
+      AIYAPLAY Moto Eléctrica para Niños de +2 Años Moto de Batería para Niños 6V con Función de Soplar Burbujas Faros
+      Música Velocidad 3 km/h Carga 30 kg Verde
 titulo_a_tener_en_cuenta: Edad recomendada
