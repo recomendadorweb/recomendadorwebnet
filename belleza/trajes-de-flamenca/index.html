@@ -411,7 +411,7 @@ h1{ font-size:2.4em;margin-bottom:0.5em;}
 h2{ margin-top:2em;font-size:1.8em;}
 h3{ margin-top:1.5em;font-size:1.4em;}
 img{ width:100%;max-width:600px;height:auto;display:block;margin:1em auto;}
-.autor{ display:flex;justify-content:flex-start;margin:1em 0 2em 0;}
+.autor{ display:flex;justify-content:flex-start;margin:1em 0 1em 0;}
 .bloque-autor{ display:flex;align-items:center;background:#ffffff;border:1px solid #e1cde9;box-shadow:0px 4px 10px rgba(0,0,0,0.04);border-radius:10px;padding:0.5em 0.8em;max-width:280px;}
 .avatar{ width:48px;height:48px;border-radius:50%;object-fit:cover;margin-right:0.8em;}
 .info-autor{ display:flex;flex-direction:column;justify-content:center;}
@@ -582,9 +582,11 @@ body {
 }
 @media (max-width: 600px) {
   h3.producto-titulo {
-    flex-direction: column;
+    margin-top: 0em;
+    flex-direction: column; /* ahora la chapa queda arriba del título */
     align-items: flex-start;
     gap: 0.3em;
+    margin-bottom: 1em !important;
   }
 }
 .menu.show {
@@ -625,6 +627,65 @@ body {
   .faq-item h3 { font-size: 1em; }
   .paso-barro { margin-bottom: 1em; }
 }
+/* ===== Autor compacto en móvil (estilo morado) ===== */
+@media (max-width: 600px) {
+  .bloque-autor {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.5em;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0.4em 0.6em;
+  }
+
+  .bloque-autor img.avatar {
+    width: 26px !important;
+    height: 26px !important;
+    margin: 0 6px 0 0 !important;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 26px;
+  }
+
+  .info-autor {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    gap: 4px;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    line-height: 1;
+  }
+
+  .nombre-autor {
+    margin: 0;
+    font-weight: 600;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9em;
+  }
+
+  .rol-autor {
+    margin: 0;
+    flex: 0 0 auto;
+    font-size: 0.85em;
+    color: #666;
+    white-space: nowrap;
+  }
+  .rol-autor::before {
+    content: "— ";
+  }
+
+  /* 🔥 En pantallas muy estrechas ocultamos el rol */
+  @media (max-width: 360px) {
+    .rol-autor { display: none; }
+  }
+}
+
 </style>
 
 <div class="container">
