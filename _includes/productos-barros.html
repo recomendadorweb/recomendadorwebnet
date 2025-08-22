@@ -13,17 +13,19 @@
     <h4>{{ bloque.subtitulo }}</h4>
     <p>{{ bloque.texto }}</p>
   {% endfor %}
+  
+{% if barro.colores %}
+  <h4>🌈 Colores disponibles en Amazon:</h4>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1em;margin-top:1em;">
+    {% for color in barro.colores %}
+      <a href="{{ color.link }}" rel="nofollow sponsored" target="_blank"
+         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
+        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:{{ color.color }};border:1px solid #aaa;"></span>
+        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">{{ color.nombre }}</span>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
 
-  {% if barro.colores %}
-    <h4>🌈 Colores disponibles en Amazon:</h4>
-    <div style="display:flex;flex-wrap:wrap;gap:1em;margin-top:1em;">
-      {% for color in barro.colores %}
-        <div style="flex:1 1 calc(33.333% - 1em);display:flex;align-items:center;">
-          <span style="display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:{{ color.color }};margin-right:0.4em;border:1px solid #aaa;"></span>
-          <a href="{{ color.link }}" rel="nofollow sponsored" style="color:#7b4b94;text-decoration:none;font-weight:500;" target="_blank">{{ color.nombre }}</a>
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
 </section>
 {% endfor %}
