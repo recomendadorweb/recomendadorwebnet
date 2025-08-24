@@ -1,6 +1,6 @@
 {% assign datos = site.data[tipo].productos-barros %}
 
-  {% for barro in datos %}
+{% for barro in datos %}
 <section style="margin-bottom:3em;padding:1.5em;background:#faf7fc;border-left:6px solid #b39ddb;border-radius:10px;">
   <h3 class="producto-titulo" style="display:flex;justify-content:space-between;align-items:center;">
     {{ barro.emoji }} {{ barro.titulo }}
@@ -13,16 +13,116 @@
     <h4>{{ bloque.subtitulo }}</h4>
     <p>{{ bloque.texto }}</p>
   {% endfor %}
-  
-{% if barro.colores %}
-  <h4>🌈 Colores disponibles en Amazon:</h4>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1em;margin-top:1em;">
+
+{% if barro.colores and barro.colores.size > 0 %}
+
+  {%- if forloop.first -%}
+  <style>
+    /* === Grid más contenido === */
+    .tonos-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(135px,1fr));
+      gap:.6rem;
+      margin-top:1rem;
+    }
+
+    /* === Tarjeta compacta: altura contenida === */
+    .tono-card{
+      display:flex;flex-direction:column;
+      padding:.55rem;background:#fff;border:1px solid #ece7f6;border-radius:10px;
+      text-decoration:none;color:#4a3b57;
+      height:clamp(170px, 22vw, 200px);
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      box-shadow:0 1px 2px rgba(0,0,0,.03);
+    }
+    .tono-card:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(24,12,61,.08);border-color:#b39ddb}
+
+    /* === La miniatura ocupa la mayor parte de la tarjeta === */
+    .tono-thumb{
+      flex:1 1 auto;
+      min-height:0;
+      aspect-ratio:3/4;
+      display:grid;place-items:center;
+      background:#faf7fc;border-radius:8px;overflow:hidden;
+      margin:0;
+    }
+    .tono-thumb img{
+      width:100%;height:100%;
+      object-fit:contain;object-position:center;
+      display:block;
+      transform:scale(1.65);          /* llena más porcentaje sin deformar */
+      transition:transform .12s ease;
+    }
+    .tono-card:hover .tono-thumb img{ transform:scale(1.72); }
+
+    /* === Título discreto en 1–2 líneas === */
+    .tono-titulo{
+      margin-top:.35rem;
+      text-align: center;
+      font-size:.84rem;line-height:1.15;font-weight:700;color:#7b4b94;
+      display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    }
+
+    /* Más densidad en móvil */
+    @media (max-width:540px){
+      .tonos-grid{ grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); }
+      .tono-card{ height:clamp(165px, 36vw, 190px); }
+    }
+  </style>
+  {%- endif -%}
+
+  <h4>🌈 Tonos disponibles en Amazon:</h4>
+  <div class="tonos-grid">
+    {% assign var_idx1 = barro.tonos_variante | default: 0 %}
+    {% assign var_idx0 = var_idx1 | minus: 1 %}
+
     {% for color in barro.colores %}
-      <a href="{{ color.link }}" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:{{ color.color }};border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">{{ color.nombre }}</span>
-      </a>
+      {% unless color.hide %}
+        {%- assign img_url = nil -%}
+
+        {%- comment -%}
+          1) Si el bloque define `tonos_variante` (>0) y esa variante existe, usarla.
+        {%- endcomment -%}
+        {%- if var_idx1 > 0
+              and color.imagenesVariantes
+              and color.imagenesVariantes.size >= var_idx1
+              and color.imagenesVariantes[var_idx0]
+              and color.imagenesVariantes[var_idx0].url -%}
+          {%- assign img_url = color.imagenesVariantes[var_idx0].url -%}
+        {%- endif -%}
+
+        {%- comment -%}
+          2) Si no hay variante válida, usar `color.imagen` (principal).
+        {%- endcomment -%}
+        {%- if img_url == nil or img_url == '' -%}
+          {%- if color.imagen and color.imagen != '' -%}
+            {%- assign img_url = color.imagen -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- comment -%}
+          3) Fallback final: primera variante disponible.
+        {%- endcomment -%}
+        {%- if (img_url == nil or img_url == '') and color.imagenesVariantes and color.imagenesVariantes.size > 0 and color.imagenesVariantes[0].url -%}
+          {%- assign img_url = color.imagenesVariantes[0].url -%}
+        {%- endif -%}
+
+        <a class="tono-card"
+           href="{{ color.link }}"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="{{ color.titulo | escape }}"
+           aria-label="Ver {{ color.titulo }} en Amazon">
+          <figure class="tono-thumb">
+            <img src="{{ img_url }}"
+                 alt="{{ color.titulo | escape }}"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">{{ color.titulo }}</span>
+        </a>
+      {% endunless %}
     {% endfor %}
   </div>
 {% endif %}

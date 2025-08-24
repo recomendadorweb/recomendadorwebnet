@@ -1,271 +1,2201 @@
 - bloques:
-  - subtitulo: ✔️ ¿Por qué recomiendo Khadi?
-    texto: Es una de las marcas que más uso en mi centro de belleza. Funciona especialmente
-      bien en mujeres que vienen de años usando tintes químicos y buscan pasarse a
-      lo natural.
-  - subtitulo: 🌿 Ingredientes y fórmula ayurvédica
-    texto: Sus barros combinan henna, índigo, cassia y plantas revitalizantes como
-      amla o neem, con una base 100% vegetal y sin aditivos.
-  - subtitulo: 👩‍🔬 Mi experiencia profesional
-    texto: He visto cómo incluso cabellos dañados o sin brillo recuperan fuerza y
-      color natural tras varias aplicaciones. Me encanta el tono Castaño Medio, pero
-      el Cobre también deja reflejos preciosos.
+    - tonos_variante: 2
+    - subtitulo: ✔️ ¿Por qué recomiendo Khadi?
+      texto: >-
+        Es una de las marcas que más uso en mi centro de belleza. Funciona especialmente bien en mujeres que vienen de
+        años usando tintes químicos y buscan pasarse a lo natural.
+    - subtitulo: 🌿 Ingredientes y fórmula ayurvédica
+      texto: >-
+        Sus barros combinan henna, índigo, cassia y plantas revitalizantes como amla o neem, con una base 100% vegetal y
+        sin aditivos.
+    - subtitulo: 👩‍🔬 Mi experiencia profesional
+      texto: >-
+        He visto cómo incluso cabellos dañados o sin brillo recuperan fuerza y color natural tras varias aplicaciones.
+        Me encanta el tono Castaño Medio, pero el Cobre también deja reflejos preciosos.
   colores:
-  - ASIN: B00SGZ8JSQ
-    color: '#f5e083'
-    link: https://amzn.to/43llhdj
-    nombre: Rubio toque dorado
-  - ASIN: B00AFAYQ3W
-    color: '#dddddd'
-    link: https://amzn.to/4j6VZoX
-    nombre: Neutral, sin color
-  - ASIN: B07ZRCRS8D
-    color: '#b87333'
-    link: https://amzn.to/3SKojmg
-    nombre: Cobre
-  - ASIN: B003TNOSXK
-    color: '#cccccc'
-    link: https://amzn.to/3YQtp40
-    nombre: Rojizo
-  - ASIN: B07G5BZYD4
-    color: '#f0c14b'
-    link: https://amzn.to/4k2GNKM
-    nombre: Castaño dorado
-  - ASIN: B00SGZHQSA
-    color: '#f5e083'
-    link: https://amzn.to/4mn7N9x
-    nombre: Rubio Claro
-  - ASIN: B07G56NP3M
-    color: '#a8753f'
-    link: https://amzn.to/3FgeeKS
-    nombre: Castaño Medio
-  - ASIN: B003TNR1WK
-    color: '#e6d3a3'
-    link: https://amzn.to/3SGPiiD
-    nombre: Castaño Claro
-  - ASIN: B01AT9FI80
-    color: '#8b5d33'
-    link: https://amzn.to/3H21nfW
-    nombre: Castaño Avellana
-  - ASIN: B01676KZCS
-    color: '#8b5d33'
-    link: https://amzn.to/4dnxgvz
-    nombre: Castaño Oscuro
-  - ASIN: B0773GQPDK
-    color: '#f5e083'
-    link: https://amzn.to/4kuYK4L
-    nombre: Rubio Oscuro Ceniza
-  - ASIN: B07G58NBMG
-    color: '#8b5d33'
-    link: https://amzn.to/3ZfaEYn
-    nombre: Castaño Ceniza
-  - ASIN: B00Q6S2DYQ
-    color: '#3f51b5'
-    link: https://amzn.to/4mijjTv
-    nombre: Indigo Puro
-  - ASIN: B003TNR1U2
-    color: '#1c1c1c'
-    link: https://amzn.to/43sSjZ1
-    nombre: Negro
-  - ASIN: B003TNIWPU
-    color: '#c0392b'
-    link: https://amzn.to/4kqpao0
-    nombre: Rojo Puro
-  - ASIN: B07GYN7RFR
-    color: '#f5e083'
-    link: https://amzn.to/3FgGexW
-    nombre: Rubio Miel Amanecer
-  - ASIN: B00SGZCXRO
-    color: '#f5e083'
-    link: https://amzn.to/45iRZ1o
-    nombre: Rubio Medio
-  - ASIN: B0C4T9CCCN
-    color: '#a52a2a'
-    link: https://amzn.to/4j6WEXp
-    nombre: Caoba
-  - ASIN: B097BQV4LD
-    color: '#a0c4ff'
-    link: https://amzn.to/4jdG8oG
-    nombre: Color prep
+    - ASIN: B00SGZ8JSQ
+      color: '#f5e083'
+      link: https://amzn.to/43llhdj
+      nombre: 'Brillo dorado: de rubio dorado a cobre brillante'
+      brand: Khadi
+      tituloAmazon: >-
+        khadi RUBIO TOQUE DORADO Tinte vegetal para el cabello - tinte para un brillo dorado, desde rubio dorado hasta
+        cobre brillante - 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41PnausHGwL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31-QhVGgF1L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41W0AsEj-QL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31almE3sswL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41mGL1pappL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          TONO SUAVE Y NATURAL: Aporta a tu cabello un brillo dorado resplandeciente, ideal para reflejos cálidos en
+          cabellos claros o grises, así como para dar brillo a cabellos oscuros. El color semitransparente se va lavando
+          con el tiempo hasta desaparecer casi por completo.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Rubio Toque Dorado
+    - ASIN: B07ZRCRS8D
+      color: '#b87333'
+      link: https://amzn.to/3SKojmg
+      nombre: De un dorado cobrizo radiante a un rojo cobrizo ardiente
+      brand: Khadi
+      tituloAmazon: >-
+        khadi COBRE Tinte vegetal para el cabello - Color de cabello cobre dorado a rojo cobrizo - Tinte natural 100%
+        vegetal y natural - Cosmética natural certificada - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41EMFUam0LL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41Ql79KeRuL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41xVxzBh7UL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31by9eeY5lL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51GDsKX3WbL._SL500_.jpg
+          width: 400
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61kr5TXhRdL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN NATURAL DEL CABELLO: Fortalece y acondiciona el cabello sin ingredientes sintéticos como
+          tensioactivos, silicatos, parabenos y siliconas. Certificado COSMOS Natural.
+        - >-
+          COLORACIÓN DURADERA: Coloración del cabello con intensidad de color natural, desde un radiante dorado cobrizo
+          hasta un rojo cobrizo ardiente.
+        - 'ALTA COBERTURA DE GRISES: Khadi Copper tiene una cobertura muy alta incluso en cabellos grises.'
+        - >-
+          CABELLO SANO: La coloración natural de Khadi nutre y fortalece el cabello y el cuero cabelludo y aporta un
+          brillo cálido y una gran resistencia.
+        - >-
+          CUIDADO RICO: Los pigmentos vegetales forman un esmalte nutritivo alrededor de cada cabello y fortalecen la
+          estructura capilar.
+      esKhadi: true
+      titulo: Cobre
+    - ASIN: B003TNOSXK
+      color: '#cccccc'
+      link: https://amzn.to/3YQtp40
+      nombre: De un rojo intenso y oscuro a un caoba intenso y llamativo.
+      brand: Khadi
+      tituloAmazon: >-
+        khadi HENNA CON AMLA Y JATROPHA Tinte vegetal para el cabello - tinte para un color rojo intenso y oscuro hasta
+        un llamativo y rico caoba - Cosmética natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41f2HwSSbyL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/4116fMmfWTL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/413PvtCr0YL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31SsopQjOUL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41t5WTVU90L._SL500_.jpg
+          width: 400
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61lCniC6LNL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un intenso rojo oscuro hasta un tono caoba intenso y
+          profundo. Ideal para cambios de color expresivos con brillo natural.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Rojo Oscuro
+    - ASIN: B07G5BZYD4
+      color: '#f0c14b'
+      link: https://amzn.to/4k2GNKM
+      nombre: De ámbar iridiscente a castaño dorado aterciopelado brillante
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CASTANO DORADO Tinte vegetal para el cabello - Tinte para un cabello con reflejos ámbar brillante y un
+        tono marrón dorado aterciopelado - 100 % vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41GC3kWdx2L._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41pFkwaR4GL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41633XctTDL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31d9LW34djL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61w3Dt4PJ3L._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN NATURAL DEL CABELLO: Fortalece y acondiciona el cabello sin ingredientes sintéticos como
+          tensioactivos, silicatos, parabenos y siliconas.
+        - >-
+          COLOR ARTESANAL: el castaño dorado khadi tiñe tu cabello de un aterciopelado y brillante castaño dorado y le
+          proporciona un color duradero con una intensidad de color natural.
+        - >-
+          ALTA COBERTURA DE GRISES: el castaño dorado khadi tiene un poder cubriente muy elevado incluso sobre las
+          canas.
+        - >-
+          CABELLO SANO: la coloración natural khadi nutre y fortalece el cabello y el cuero cabelludo y aporta un brillo
+          radiante y una gran resistencia.
+        - >-
+          CUIDADO RICO: Los pigmentos vegetales forman un esmalte nutritivo alrededor de cada cabello y fortalecen la
+          estructura capilar.
+      esKhadi: true
+      titulo: Castaño Dorado
+    - ASIN: B00SGZHQSA
+      color: '#f5e083'
+      link: https://amzn.to/4mn7N9x
+      nombre: Dorado
+      brand: Khadi
+      tituloAmazon: >-
+        khadi RUBIO CLARO Tinte vegetal para el cabello - Tinte para un rubio trigo radiante hasta un rubio miel cálido
+        y dorado - 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/31i1LJDEvPL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/314v0TWXaTL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41oi5jKjbDL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/318-Ufs+20L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/419txQPicwL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un rubio trigo radiante hasta un cálido rubio miel dorado.
+          Perfecto para un look soleado y natural con reflejos dorados.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Rubio Claro
+    - ASIN: B07G56NP3M
+      color: '#a8753f'
+      link: https://amzn.to/3FgeeKS
+      nombre: Marrón canela vivo y cálido a marrón medio fuerte y profundo
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CASTANO MEDIO Tinte vegetal para el cabello - tinte para un color castaño canela vivo y cálido hasta un
+        castaño medio intenso y profundo - 100% vegetal - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41mp0SFvkgL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41iDc21w5PL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416uzLYDADL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31Jpt4tXGYL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51uTzPgZ3IL._SL500_.jpg
+          width: 400
+          height: 500
+        - url: https://m.media-amazon.com/images/I/610Bu+7s8fL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un cálido y vivo tono castaño canela hasta un intenso y
+          profundo castaño medio. Ideal para un look natural con suaves tonos rojizos y una profundidad de color
+          armoniosa.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Castaño Medio
+    - ASIN: B003TNR1WK
+      color: '#e6d3a3'
+      link: https://amzn.to/3SGPiiD
+      nombre: Marrón claro, leonado cálido con reflejos vivos y rojizos
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CASTANO CLARO Tinte vegetal para el cabello - Tinte para un color marrón claro y cálido con reflejos
+        rojizos vivos - 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/412-0vp6SzL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41qeCo1-rgL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41fEqqfbEWL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31A1hz-ekOL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61nTnTEQygL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un castaño rojizo claro y cálido con reflejos rojizos
+          vivos. Ideal para un look natural y suave con una calidez armoniosa y sutiles tonos rojizos.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Castaño Claro
+    - ASIN: B01AT9FI80
+      color: '#8b5d33'
+      link: https://amzn.to/3H21nfW
+      nombre: Marrón nuez brillante a marrón chocolate intenso
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CASTANO AVELLANA Tinte vegetal para el cabello - Tinte para un cabello brillante con un intenso color
+        chocolate - Tinte natural 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/419Ows4FFjL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41m28czYJnL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41Gmk9vFdvL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31jo9MTIKxL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61kxdqCYlVL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un brillante a un intenso color marrón chocolate. Ideal
+          para un look cálido y elegante con una profundidad de color intensa y un brillo natural.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Castaño Avellana
+    - ASIN: B01676KZCS
+      color: '#8b5d33'
+      link: https://amzn.to/4dnxgvz
+      nombre: Marrón oscuro profundo y brillante a marrón negro fuerte
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CASTANO OSCURO Tinte vegetal para el cabello - Tinte para un color marrón oscuro intenso y brillante hasta
+        un marrón negro intenso - 100% vegetal y natural - 100 g
+      precio: "15,89\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41VYkwchoVL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41ioa3hIp-L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41I4JxjbhlL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31twk9D+GzL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/619Nbf8TAuL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un castaño oscuro intenso y brillante hasta un castaño
+          negro intenso. Ideal para obtener resultados elegantes e intensos con brillo y profundidad naturales.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Castaño Oscuro
+    - ASIN: B0773GQPDK
+      color: '#f5e083'
+      link: https://amzn.to/4kuYK4L
+      nombre: Mate, de rubio ceniza medio a rubio oscuro intenso, sin reflejos rojizos.
+      brand: Khadi
+      tituloAmazon: >-
+        khadi RUBIO OSCURO CENIZA Tinte vegetal para el cabello - tinte para cabellos rubios ceniza mate medio hasta
+        rubios oscuros intensos - 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41B5lgBmIJL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/4129sgfBnoL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41nTK4BjYbL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31zSGxxjkSL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/615DW9qVH5L._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Aporta a tu cabello el toque urbano y desenfadado de un rubio oscuro frío y
+          ceniza. Perfecto para un cambio de color permanente o para cubrir las raíces.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Rubio Oscuro Ceniza
+    - ASIN: B07G58NBMG
+      color: '#8b5d33'
+      link: https://amzn.to/3ZfaEYn
+      nombre: Mate, marrón ceniza medio a marrón café intenso - sin reflejos rojizos
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CASTANO CENIZA Tinte vegetal para el cabello - Cosmética natural - para cabello mate y castaño medio -
+        Tinte 100% vegetal - natural y vegano - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41r2KOfO-yL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41cLHJKYRrL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41iC81iqRqL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31OZc8NHAZL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41n9sO4bkKL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un delicado marrón ceniza frío con reflejos vivos.
+          Perfecto para un cambio de color duradero o para cubrir las raíces.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Castaño Ceniza
+    - ASIN: B00Q6S2DYQ
+      color: '#3f51b5'
+      link: https://amzn.to/4mijjTv
+      nombre: Misterioso Negro Profundo Hasta Azul Brillante Negro
+      brand: Khadi
+      tituloAmazon: Khadi Indigo Puro, 100g, Pack de 1
+      precio: "14,82\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Amazon.es
+      imagen: https://m.media-amazon.com/images/I/41YJ2op1YiL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41cbZo9vd2L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41LdqN4monL._SL500_.jpg
+          width: 376
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31C5B2KzHqL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61eRjazLOkL._SL500_.jpg
+          width: 336
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41PHiTIWNCL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - Indigo Puro 100Gr.
+        - Los mejores productos de higiene y belleza para tu día a día.
+        - Cuidarse y sentirse bien nunca ha sido tan fácil.
+      esKhadi: true
+      titulo: Índigo Puro
+    - ASIN: B003TNR1U2
+      color: '#1c1c1c'
+      link: https://amzn.to/43sSjZ1
+      nombre: Negro
+      brand: Khadi
+      tituloAmazon: >-
+        khadi NEGRO Tinte vegetal para el cabello - Tiñe tu cabello de un misterioso negro intenso sin reflejos azulados
+        - 100% vegetal, natural y vegano - 100 g
+      precio: "16,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/415P0K+z-0L._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41QZn536etL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41u5UIF1A9L._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31O-9jkxjoL._SL500_.jpg
+          width: 375
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un negro intenso y misterioso sin reflejos azulados. Ideal
+          para un look elegante e intenso con brillo natural.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Negro
+    - ASIN: B003TNIWPU
+      color: '#c0392b'
+      link: https://amzn.to/4kqpao0
+      nombre: Rojo anaranjado excitante a rojo llama intensamente luminoso
+      brand: Khadi
+      tituloAmazon: >-
+        khadi HENNA PURA Tinte vegetal para el cabello - Tinte capilar para un emocionante rojo anaranjado hasta un rojo
+        fuego intenso y brillante - 100% vegetal - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41n0J21NlTL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41crhmzuqLL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416dYshd-jL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/312h+kBhT+L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51heBdt3aiL._SL500_.jpg
+          width: 400
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61l2ax43WJL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: tiñe tu cabello de un emocionante rojo anaranjado. Ideal para dar toques de
+          color a la última, looks llamativos o reflejos elegantes con efecto sorpresa. Perfecto para un cambio de color
+          permanente o para retocar las raíces.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Rojo
+    - ASIN: B07GYN7RFR
+      color: '#f5e083'
+      link: https://amzn.to/3FgGexW
+      nombre: Rubio Miel Amanecer
+      brand: Khadi
+      tituloAmazon: >-
+        khadi RUBIO MIEL AMANECER Tinte vegetal para el cabello - tinte para un rubio miel brillante o un rubio
+        veraniego - 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41UAawk2umL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31-oUNNbScL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51m9d8dQ1xL._SL500_.jpg
+          width: 376
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31hE0U-8jhL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41rdZvnn6mL._SL500_.jpg
+          width: 336
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51qJNOfxKGL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un rubio miel brillante hasta un rubio veraniego. Ideal
+          para un look cálido y radiante con reflejos naturales.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna y senna/cassia de la mejor
+          calidad. Las plantas se muelen tan finamente que sus pigmentos de color se desarrollan de forma óptima y se
+          adhieren al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Rubio Miel Amanecer
+    - ASIN: B00SGZCXRO
+      color: '#f5e083'
+      link: https://amzn.to/45iRZ1o
+      nombre: Rubio medio vibrante a rubio rojizo brillante potente
+      brand: Khadi
+      tituloAmazon: >-
+        khadi RUBIO MEDIO Tinte vegetal para el cabello - Sumerge tu cabello en un cálido rubio medio con reflejos
+        aterciopelados - 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/31MTAYOlpTL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31IjrxtZNBL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41ESBbZjhXL._SL500_.jpg
+          width: 376
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31bbTXVk6-L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61NGtfellVL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Sumerge tu cabello en un cálido rubio medio con reflejos aterciopelados.
+          Ideal para un look natural y suave con un toque elegante.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL: sin colorantes, perfumes ni conservantes sintéticos, peróxidos, amoniaco ni otros aditivos
+          químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Nuestro tono rubio medio obtiene su profundidad de color única gracias a la
+          galas (Quercus Infectoria), un fruto natural de la madera conocido por sus valiosas propiedades en la medicina
+          natural.
+      esKhadi: true
+      titulo: Rubio Medio
+    - ASIN: B0C4T9CCCN
+      color: '#a52a2a'
+      link: https://amzn.to/4j6WEXp
+      nombre: caoba
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CAOBA Tinte vegetal para el cabello - tinte para un color rojo aterciopelado y terroso hasta un rojo
+        oscuro intenso - 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41XlI24L0UL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41QSkg6MybL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41LCbQfpAOL._SL500_.jpg
+          width: 375
+          height: 499
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31frS49kEWL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51AiitKsMVL._SL500_.jpg
+          width: 336
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: Tiñe tu cabello de un rojo aterciopelado y terroso hasta un rojo oscuro
+          intenso. Perfecto para un look cálido y natural con reflejos profundos y vivos.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Caoba
+    - nombre: Misterioso negro profundo a negro azulado brillante
+      ASIN: B07W2XG77G
+      brand: Khadi
+      tituloAmazon: >-
+        khadi INDIGO PURO Tinte vegetal para el cabello - Da a tu cabello un misterioso y profundo color azul negro -
+        100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/41cbZo9vd2L._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/41YJ2op1YiL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41LdqN4monL._SL500_.jpg
+          width: 376
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31C5B2KzHqL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61eRjazLOkL._SL500_.jpg
+          width: 336
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41PHiTIWNCL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          COLORACIÓN PERMANENTE Y NATURAL: aporta a tu cabello un misterioso y profundo tono azul negro. Ideal para un
+          look expresivo con elegancia fresca y un intenso juego de colores.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      link: https://www.amazon.es/dp/B07W2XG77G?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
+      esKhadi: true
+      titulo: Índigo Puro
+      hide: true
+    - nombre: Rubio medio vivo a rubio rojizo brillante potente
+      ASIN: B01GG19MQE
+      brand: Khadi
+      tituloAmazon: >-
+        khadi RUBIO MEDIO tinte natural, coloración del cabello desde rubio medio brillante hasta rubio rojizo intenso
+        brillante, 100% vegetal, color natural, cosmética natural certificada, 100g
+      precio: "26,85\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: OneBioShop
+      imagen: https://m.media-amazon.com/images/I/31yGorRb92L._SL500_.jpg
+      imagenWidth: 373
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31z3rWub2NL._SL500_.jpg
+          width: 373
+          height: 500
+        - url: https://m.media-amazon.com/images/I/511IdNVxJpL._SL500_.jpg
+          width: 329
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41xxa81m3NL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51bq0khkykL._SL500_.jpg
+          width: 354
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41Sd8pXXpyL._SL500_.jpg
+          width: 329
+          height: 500
+        - url: https://m.media-amazon.com/images/I/417wHIcSVgL._SL500_.jpg
+          width: 329
+          height: 500
+      caracteristicasAmazon:
+        - tiñe tu cabello de un rubio medio frío sin aclararlo
+        - Alta cobertura, incluso con canas
+        - fortalece y cuida tu cabello
+        - 100 % natural
+      link: https://www.amazon.es/dp/B01GG19MQE?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
+      esKhadi: true
+      titulo: Rubio Medio
+    - nombre: De rubio claro intenso a un rubio miel cálido
+      ASIN: B01ATB48CU
+      brand: Khadi
+      tituloAmazon: >-
+        khadi LIGHT BLONDE tinte natural, coloración capilar de rubio intenso y claro a rubio miel cálido, color natural
+        100% vegetales, naturales y vegano, cosmética natural certificada, 100g
+      precio: "22,50\_€"
+      precioOriginal: No especificado
+      disponibilidad: Envío en 4 a 5 días
+      vendedorAmazon: PROSER PHARMA
+      imagen: https://m.media-amazon.com/images/I/318-y-nCZkL._SL500_.jpg
+      imagenWidth: 373
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/314+3aOM7PL._SL500_.jpg
+          width: 373
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51NBMCApkiL._SL500_.jpg
+          width: 329
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51HyCZOF9pL._SL500_.jpg
+          width: 354
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41xxa81m3NL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31dov4NekSL._SL500_.jpg
+          width: 329
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41KZM+42VJL._SL500_.jpg
+          width: 329
+          height: 500
+      caracteristicasAmazon:
+        - Proporciona a tu cabello un rubio claro y fresco hasta un rubio miel cálido
+        - fortalece y nutre el cabello
+        - 100% natural y vegano, sin ingredientes sintéticos
+        - El resultado del color se diseña individualmente y depende de tu color original
+        - No decolora el pelo
+      link: https://www.amazon.es/dp/B01ATB48CU?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
+      esKhadi: true
+      titulo: Rubio Claro
+    - nombre: 'Brillo dorado: del rubio dorado al cobrizo brillante'
+      ASIN: B083ZWR71L
+      brand: Khadi
+      tituloAmazon: >-
+        khadi HINT OF GOLD tinte natural, coloración capilar con brillo dorado - de rubio dorado a cobrizo brillante,
+        color natural 100% vegetales, naturales y vegano, cosmética natural certificada, 100g
+      precio: "26,85\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: OneBioShop
+      imagen: https://m.media-amazon.com/images/I/41bS+tvLEnL._SL500_.jpg
+      imagenWidth: 373
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31z-Q3+NSlL._SL500_.jpg
+          width: 373
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51tYyzbB1RL._SL500_.jpg
+          width: 329
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41xxa81m3NL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51bq0khkykL._SL500_.jpg
+          width: 354
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31w9+Cqpt0L._SL500_.jpg
+          width: 329
+          height: 500
+        - url: https://m.media-amazon.com/images/I/417wHIcSVgL._SL500_.jpg
+          width: 329
+          height: 500
+      caracteristicasAmazon:
+        - tiñe tu cabello de un sutil tono dorado sin aclararlo
+        - da a otros colores de pelo khadi un brillo dorado
+        - fortalece y cuida el cabello
+        - 100 % natural y vegana
+        - sin ingredientes sintéticos
+      link: https://www.amazon.es/dp/B083ZWR71L?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
+      esKhadi: true
+      titulo: Rubio Dorado
+    - ASIN: B00AFAYQ3W
+      color: '#dddddd'
+      link: https://amzn.to/4j6VZoX
+      nombre: Cuidado intensivo incoloro para brillo, volumen y elasticidad
+      brand: Khadi
+      tituloAmazon: >-
+        khadi CASSIA HENNA NEUTRAL Tinte vegetal para el cabello - Cuidado intensivo incoloro para brillo, volumen y
+        elasticidad - Tinte natural 100% vegetal y natural - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/31Z5-XNCFPL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31PbMT-ANDL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51tCWapFp2L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41bytj4D3aL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51F0jZmJCrL._SL500_.jpg
+          width: 301
+          height: 500
+        - url: https://m.media-amazon.com/images/I/311qAZumv3L._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41ijzjK6kRL._SL500_.jpg
+          width: 400
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          TRATAMIENTO INTENSIVO NEUTRA - SIN COLOR: khadi Senna/Cassia es un tinte vegetal incoloro que aporta a tu
+          cabello un brillo intenso, volumen y elasticidad, ideal para mantener el color natural del cabello y cuidarlo
+          al mismo tiempo.
+        - >-
+          REPARA Y FORTALECE: El tratamiento intensivo incoloro fortalece y regenera la estructura capilar, repara los
+          pequeños daños y fortalece tu cabello con cada aplicación. Especialmente indicado para cabellos secos,
+          castigados o decolorados.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para Senna Cassia utilizamos exclusivamente senna de la más alta calidad. Las
+          plantas se muelen tan finamente que sus pigmentos se desarrollan de forma óptima y se adhieren al cabello de
+          manera especialmente uniforme.
+      esKhadi: true
+      titulo: Cassia
+      hide: true
+    - ASIN: B097BQV4LD
+      color: '#a0c4ff'
+      link: https://amzn.to/4jdG8oG
+      nombre: Pre-pigmentazione per un risultato di colore intenso e preparazione alla colorazione naturale
+      brand: Khadi
+      tituloAmazon: >-
+        khadi COLOR PREP Tinte vegetal para el cabello - Tinte para pre-pigmentación para un resultado intenso y
+        preparación para la coloración - 100 g
+      precio: "15,90\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Khadi Naturprodukte
+      imagen: https://m.media-amazon.com/images/I/31SELg19yvL._SL500_.jpg
+      imagenWidth: 375
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31m1YFJ+TbL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41xxa81m3NL._SL500_.jpg
+          width: 333
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51HyCZOF9pL._SL500_.jpg
+          width: 354
+          height: 500
+        - url: https://m.media-amazon.com/images/I/416O8PD9HVL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31agcso8SXL._SL500_.jpg
+          width: 375
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51lbW4yHKJL._SL500_.jpg
+          width: 375
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          PIGMENTACIÓN INTENSIVA: Prepara tu cabello perfectamente para la coloración y garantiza un resultado intenso.
+          Ideal para optimizar la absorción del color y conseguir un resultado uniforme y duradero.
+        - >-
+          ALTA COBERTURA DE CANAS: Cubre de forma fiable las canas y el cabello blanco y proporciona un color intenso y
+          natural. Los pigmentos vegetales puros envuelven el cabello protegiéndolo, en lugar de dañarlo.
+        - >-
+          BRILLO INTENSO Y VOLUMEN GRACIAS AL AYURVEDA: Para un cabello visiblemente brillante. Los pigmentos colorantes
+          puramente vegetales envuelven cada cabello como un velo protector y proporcionan un brillo radiante y natural,
+          así como una gran elasticidad.
+        - >-
+          100 % NATURAL Y VEGANO: sin colorantes, fragancias ni conservantes sintéticos, peróxidos, amoniaco ni otros
+          aditivos químicos. Puro poder vegetal para un tinte suave y respetuoso con el cabello.
+        - >-
+          COSMÉTICA NATURAL AYURVÉDICA: Para los tintes capilares khadi solo utilizamos henna e índigo de la mejor
+          calidad. Las plantas se muelen muy finamente para que los pigmentos de color se desarrollen de forma óptima y
+          se adhieran al cabello de manera especialmente uniforme.
+      esKhadi: true
+      titulo: Color Prep
   emoji: 🌿
   recomendado: true
   titulo: 'Khadi: Coloración Ayurvédica 100% Vegetal'
 - bloques:
-  - subtitulo: ✔️ ¿Por qué la recomiendo?
-    texto: Es una marca veterana y muy versátil. Tiene tonos cálidos y fríos que se
-      adaptan a diferentes bases de cabello. Mis clientas suelen elegirla cuando quieren
-      algo natural, pero con variedad.
-  - subtitulo: 🧪 Mezcla equilibrada de plantas
-    texto: Sus fórmulas combinan henna con cassia, amla y otras plantas. No engrasan,
-      no resecan y son aptas para cuero cabelludo sensible.
-  - subtitulo: 💬 Experiencia con clientas
-    texto: Los tonos Castaño Cobrizo y Caoba Oscuro son ideales en mujeres de piel
-      clara. Dejan el pelo suelto, con un color natural y sin residuos.
-  - subtitulo: ⏱️ Tiempo recomendado
-    texto: Al menos una hora de exposición para fijar bien el pigmento. Se nota mucho
-      la diferencia si se respeta el tiempo.
+    - subtitulo: ✔️ ¿Por qué la recomiendo?
+      texto: >-
+        Es una marca veterana y muy versátil. Tiene tonos cálidos y fríos que se adaptan a diferentes bases de cabello.
+        Mis clientas suelen elegirla cuando quieren algo natural, pero con variedad.
+    - subtitulo: 🧪 Mezcla equilibrada de plantas
+      texto: >-
+        Sus fórmulas combinan henna con cassia, amla y otras plantas. No engrasan, no resecan y son aptas para cuero
+        cabelludo sensible.
+    - subtitulo: 💬 Experiencia con clientas
+      texto: >-
+        Los tonos Castaño Cobrizo y Caoba Oscuro son ideales en mujeres de piel clara. Dejan el pelo suelto, con un
+        color natural y sin residuos.
+    - subtitulo: ⏱️ Tiempo recomendado
+      texto: >-
+        Al menos una hora de exposición para fijar bien el pigmento. Se nota mucho la diferencia si se respeta el
+        tiempo.
   colores:
-  - ASIN: B00V6AFQPM
-    color: '#a52a2a'
-    link: https://amzn.to/43noMzE
-    nombre: Super Caoba Oscuro
-  - ASIN: B00DN9F7BW
-    color: '#e6d3a3'
-    link: https://amzn.to/43ri63H
-    nombre: Castaño Claro
-  - ASIN: B00DN9F8K2
-    color: '#8b5d33'
-    link: https://amzn.to/44MEtmE
-    nombre: Castaño Oscuro
-  - ASIN: B01HSPUOYG
-    color: '#f5e083'
-    link: https://amzn.to/4jg4GgR
-    nombre: Rubio Intenso
-  - ASIN: B00DN9FBFY
-    color: '#1c1c1c'
-    link: https://amzn.to/4329gdQ
-    nombre: Negro
-  - ASIN: B00LJ4052Y
-    color: '#a8753f'
-    link: https://amzn.to/3ZfbPqL
-    nombre: Castaño Medio
-  - ASIN: B00DN9FEQA
-    color: '#f5e083'
-    link: https://amzn.to/4kw9kbH
-    nombre: Rubio Ceniza
-  - ASIN: B00DN9N64M
-    color: '#8b5d33'
-    link: https://amzn.to/4k6SKiI
-    nombre: Castaño Caoba
-  - ASIN: B079DQ4N6Y
-    color: '#8b5d33'
-    link: https://amzn.to/4drXzRl
-    nombre: Castaño Cobrizo
-  - ASIN: B00DN9F6AE
-    color: '#a52a2a'
-    link: https://amzn.to/3FgfNbI
-    nombre: Caoba Oscuro
-  - ASIN: B0CRRZ5GJ5
-    color: '#cccccc'
-    link: https://amzn.to/43mdMml
-    nombre: Chocolate
-  - ASIN: B0CRS36BK2
-    color: '#c0392b'
-    link: https://amzn.to/43oNpMI
-    nombre: Rojo Burdeos
-  - ASIN: B00DN9F5A0
-    color: '#a52a2a'
-    link: https://amzn.to/4msYzbW
-    nombre: Super Caoba Luminoso
-  - ASIN: B00V6AHO4I
-    color: '#8b5d33'
-    link: https://amzn.to/3Znub8M
-    nombre: Castaño Intenso
-  - ASIN: B00DN9FHCQ
-    color: '#f5e083'
-    link: https://amzn.to/4mlKv3F
-    nombre: Rubio Dorado
-  - ASIN: B00V6AHKLU
-    color: '#3f51b5'
-    link: https://amzn.to/432t8xo
-    nombre: Indigo
-  - ASIN: B0CRS1MSBT
-    color: '#a52a2a'
-    link: https://amzn.to/3SGpjI2
-    nombre: Caoba Intenso
-  - ASIN: B0CRS21KQ3
-    color: '#a52a2a'
-    link: https://amzn.to/3H05Hw6
-    nombre: Caoba Natural
-  - ASIN: B07Z6NNNKX
-    color: '#e6e6e6'
-    link: https://amzn.to/4ktVVRq
-    nombre: Sidr Tratamiento Capilar Natural
-  - ASIN: B07Z6NDKN9
-    color: '#e6e6e6'
-    link: https://amzn.to/4ko59OO
-    nombre: Manjistha Tratamiento Capilar Natural
-  - ASIN: B07Z6NDVPJ
-    color: '#e6e6e6'
-    link: https://amzn.to/3EZJwpn
-    nombre: Brahmi Tratamiento Capilar Natural
-  - ASIN: B00DN9I534
-    color: '#aed581'
-    link: https://amzn.to/4dswcXd
-    nombre: Tratamiento Capilar Ayurvédico Amla
-  - ASIN: B00DN9FDVG
-    color: '#b2dfdb'
-    link: https://amzn.to/3GZRTSl
-    nombre: Fortalecedor de Cabello
+    - ASIN: B00DN9F7BW
+      color: '#e6d3a3'
+      link: https://amzn.to/43ri63H
+      nombre: Henna Radhe Shyam Castaño Claro Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Castaño Claro Polvo
+      precio: "9,91\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: La Botica de Amalia
+      imagen: https://m.media-amazon.com/images/I/411rG3YEe2L._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - Aporta brillo y volumen al pelo
+      esKhadi: false
+      titulo: Castaño Claro
+    - ASIN: B00DN9FBFY
+      color: '#1c1c1c'
+      link: https://amzn.to/4329gdQ
+      nombre: Henna Radhe Shyam Negro Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Negro Polvo
+      precio: "8,52\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: La Botica de Amalia
+      imagen: https://m.media-amazon.com/images/I/41OcDN9+1LL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - 'Marca: radhe shyam'
+        - Elección cuidadosa para las necesidades diarias
+        - Para una sensación de bienestar
+        - Producto de alta calidad
+      esKhadi: false
+      titulo: Negro
+    - ASIN: B00LJ4052Y
+      color: '#a8753f'
+      link: https://amzn.to/3ZfbPqL
+      nombre: Henna Radhe Shyam Castaño Medio Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Castaño Medio Polvo
+      precio: "9,99\_€ (999,00\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41dl+JbXyYL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon: []
+      esKhadi: false
+      titulo: Castaño Medio
+    - ASIN: B00DN9FEQA
+      color: '#f5e083'
+      link: https://amzn.to/4kw9kbH
+      nombre: Henna Radhe Shyam Rubio Ceniza Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Rubio Ceniza Polvo
+      precio: "8,70\_€ (870,00\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41BbczTZNmL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - 'Marca: RADHE SHYAM 250ML'
+      esKhadi: false
+      titulo: Rubio Ceniza
+    - ASIN: B00DN9N64M
+      color: '#8b5d33'
+      link: https://amzn.to/4k6SKiI
+      nombre: Henna Radhe Shyam Castaño Caoba Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Castaño Caoba Polvo
+      precio: "8,31\_€ (831,00\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41zZpn5jVYL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - 'Marca: Radhe Shyam'
+      esKhadi: false
+      titulo: Castaño Caoba
+    - ASIN: B079DQ4N6Y
+      color: '#8b5d33'
+      link: https://amzn.to/4drXzRl
+      nombre: Henna Radhe Shyam Castaño Cobrizo Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Castaño Cobrizo Polvo
+      precio: "5,93\_€ (59,30\_€ / kg)"
+      precioOriginal: "8,42\_€ (84,20\_€ / kg)"
+      disponibilidad: En stock
+      vendedorAmazon: NATUCLICK
+      imagen: https://m.media-amazon.com/images/I/41WUeqCrC7L._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - Henna Radhe Castaño Cobrizo Polvo 100 Gr Henna Radhe Envase 100 Gr
+        - Productos alimenticios para llevar una dieta saludable.
+        - Productos naturales para nuestro propio bienestar.
+      esKhadi: false
+      titulo: Castaño Cobrizo
+    - ASIN: B00DN9F6AE
+      color: '#a52a2a'
+      link: https://amzn.to/3FgfNbI
+      nombre: Henna Radhe Shyam Caoba Oscuro Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Caoba Oscuro Polvo
+      precio: "5,69\_€ (22,76\_€ / l)"
+      precioOriginal: "8,59\_€ (34,36\_€ / l)"
+      disponibilidad: En stock
+      vendedorAmazon: Parafarmaciamarket
+      imagen: https://m.media-amazon.com/images/I/41405y+WIYL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - 'Marca: radhe shyam 250 ml'
+        - Elección cuidadosa para las necesidades diarias
+        - Producto de alta calidad
+        - Para una sensación de bienestar
+      esKhadi: false
+      titulo: Caoba Oscuro
+    - ASIN: B0CRRZ5GJ5
+      color: '#cccccc'
+      link: https://amzn.to/43mdMml
+      nombre: Radhe Shyam Henna Polvo Botanicals Chocolate 100Gr
+      brand: Radhe Shyam
+      tituloAmazon: Radhe Shyam Henna Polvo Botanicals Chocolate 100Gr
+      precio: "9,92\_€ (9.920,00\_€ / kg)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41lGLHAqYeL._SL500_.jpg
+      imagenWidth: 330
+      imagenHeight: 330
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31nmzHUZYRL._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon: []
+      esKhadi: false
+      titulo: Chocolate
+    - ASIN: B0CRS36BK2
+      color: '#c0392b'
+      link: https://amzn.to/43oNpMI
+      nombre: Radhe Shyam Henna Polvo Botanicals Rojo Burdeos 100Gr.
+      brand: Radhe Shyam
+      tituloAmazon: Radhe Shyam Henna Polvo Botanicals Rojo Burdeos 100Gr.
+      precio: "9,68\_€ (968,00\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41clJhE4KVL._SL500_.jpg
+      imagenWidth: 330
+      imagenHeight: 330
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31nmzHUZYRL._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon: []
+      esKhadi: false
+      titulo: Rojo Burdeos
+    - ASIN: B00DN9F5A0
+      color: '#a52a2a'
+      link: https://amzn.to/4msYzbW
+      nombre: Henna Radhe Shyam Super Caoba Luminoso Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Super Caoba Luminoso Polvo
+      precio: "8,68\_€ (868,00\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/4127pkWiJOL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 449
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - Henna
+        - 'Ingredientes: Cassia Obovata, Lawsonia Inermis, Sodium Picramate'
+        - Alta calidad
+        - Marca reconocida
+      esKhadi: false
+      titulo: Caoba Luminoso
+    - ASIN: B00V6AHO4I
+      color: '#8b5d33'
+      link: https://amzn.to/3Znub8M
+      nombre: Henna Radhe Shyam Castaño Intenso Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Castaño Intenso Polvo
+      precio: "8,78\_€ (87,80\_€ / kg)"
+      precioOriginal: "9,18\_€ (91,80\_€ / kg)"
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41tQdw94GxL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - 'marca: radhe shyam'
+        - producto que combina tradición e innovación
+        - producto útil y práctico
+        - producto de alta calidad
+        - 'Unidades: 100.0'
+        - 'Unidad de medida: gramo'
+      esKhadi: false
+      titulo: Castaño Intenso
+    - ASIN: B00DN9FHCQ
+      color: '#f5e083'
+      link: https://amzn.to/4mlKv3F
+      nombre: Henna Radhe Shyam Rubio Dorado Polvo
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Rubio Dorado Polvo
+      precio: "5,09\_€ (50,90\_€ / kg)"
+      precioOriginal: "8,71\_€ (87,10\_€ / kg)"
+      disponibilidad: En stock
+      vendedorAmazon: Parafarmaciamarket
+      imagen: https://m.media-amazon.com/images/I/41SnWucdauL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - 'Marca: RADHE SHYAM'
+      esKhadi: false
+      titulo: Rubio Dorado
+    - ASIN: B0CRS1MSBT
+      color: '#a52a2a'
+      link: https://amzn.to/3SGpjI2
+      nombre: Radhe Shyam Henna Polvo Botanicals Caoba Intenso 100Gr.
+      brand: Radhe Shyam
+      tituloAmazon: Radhe Shyam Henna Polvo Botanicals Caoba Intenso 100Gr.
+      precio: "9,99\_€ (9.990,00\_€ / kg)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41s3ycfTQ+L._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/51C8ywh3IgL._SL500_.jpg
+          width: 498
+          height: 500
+      caracteristicasAmazon: []
+      esKhadi: false
+      titulo: Caoba Intenso
+    - ASIN: B0CRS21KQ3
+      color: '#a52a2a'
+      link: https://amzn.to/3H05Hw6
+      nombre: Radhe Shyam Henna Polvo Botanicals Caoba Natural 100Gr.
+      brand: Radhe Shyam
+      tituloAmazon: Radhe Shyam Henna Polvo Botanicals Caoba Natural 100Gr.
+      precio: "9,60\_€ (9.600,00\_€ / kg)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/414FHtx89uL._SL500_.jpg
+      imagenWidth: 330
+      imagenHeight: 330
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/31nmzHUZYRL._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon: []
+      esKhadi: false
+      titulo: Caoba Natural
+    - nombre: Henna Radhe Shyam Neutro Polvo
+      ASIN: B00DN9FCM6
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Neutro Polvo
+      precio: "4,08\_€ (40,80\_€ / kg)"
+      precioOriginal: "7,49\_€ (74,90\_€ / kg)"
+      disponibilidad: En stock
+      vendedorAmazon: NATUCLICK
+      imagen: https://m.media-amazon.com/images/I/41tSNaT+poL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - 'Marca: RADHE SHYAM'
+      link: https://www.amazon.es/dp/B00DN9FCM6?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
+      esKhadi: false
+      titulo: Neutro
+    - nombre: False Radhe Shyam Henna En Polvo Super Caoba Luminoso 100G, Negro
+      ASIN: B08KHZL44C
+      brand: Radhe Shyam
+      tituloAmazon: False Radhe Shyam Henna En Polvo Super Caoba Luminoso 100G, Negro
+      precio: "10,00\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41i6ewiakAL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 333
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - Radhe Shyam Henna En Polvo Super Caoba Luminoso 100G
+        - 'Tipo de fábrica: No Aplica'
+        - 'Paqueteage Weight: 150.0 grams'
+        - 'Paqueteage Dimensiones: 15.0 L x 15.0 H x 15.0 W (centimeters)'
+      link: https://www.amazon.es/dp/B08KHZL44C?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
+      esKhadi: false
+      titulo: 'Caoba Luminoso'
+      hide: true
+    - nombre: Henna Radhe Shyam Castaño Oscuro Profundo Tratamiento Polvo
+      ASIN: B00V6B5502
+      brand: Radhe Shyam
+      tituloAmazon: Henna Radhe Shyam Castaño Oscuro Profundo Tratamiento Polvo
+      precio: "9,99\_€ (999,00\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41PUT6NAuoL._SL500_.jpg
+      imagenWidth: 498
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon: []
+      link: https://www.amazon.es/dp/B00V6B5502?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
+      esKhadi: false
+      titulo: Castaño Oscuro
+    - nombre: Henna Rubio Dorado Polvo 100 Gr de Spiritual Sky
+      ASIN: B01COYA9GE
+      brand: SPIRITUAL SKY
+      tituloAmazon: Henna Rubio Dorado Polvo 100 Gr de Spiritual Sky
+      precio: "10,60\_€ (106,00\_€ / kg)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: La Botica de Amalia
+      imagen: https://m.media-amazon.com/images/I/41i3i1hOhQL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - Polvo de Henna Rubio Dorado 100 Gr de Spiritual Sky
+        - PINTURA CORPORAL
+        - Oro
+      link: https://www.amazon.es/dp/B01COYA9GE?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
+      esKhadi: false
+      hide: true
+      titulo: Rubio Dorado
+    - nombre: 'Radhe Katha Mascarilla Capilar Natural Ayurvedico Envase De 100 Gr En Polvo 200 '
+      ASIN: B08152PF5R
+      brand: Radhe Shyam
+      tituloAmazon: Radhe Katha Mascarilla Capilar Natural Ayurvedico Envase De 100 Gr En Polvo 200 g
+      precio: "9,40\_€"
+      precioOriginal: No especificado
+      disponibilidad: Envío en 4 a 5 días
+      vendedorAmazon: Naturitas
+      imagen: https://m.media-amazon.com/images/I/41FetEBv8bL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 481
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - Katha Mascarilla Capilar Natural Ayurvedico Envase De 100 Gr En Polvo.
+        - Producto de la marca RADHE
+        - El mejor producto para el cuidado y bienestar de tu cuerpo
+      link: https://www.amazon.es/dp/B08152PF5R?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
+      esKhadi: false
+      titulo: Radhe Katha Mascarilla
+      hide: true
+    - nombre: Radhe Henna Castaño Medio Polvo Radhe 100 Gr Henna Polvo Radhe Shyam 100 ml
+      ASIN: B01COYFIYW
+      brand: Radhe Shyam
+      tituloAmazon: Radhe Henna Castaño Medio Polvo Radhe 100 Gr Henna Polvo Radhe Shyam 100 ml
+      precio: "7,66\_€ (76,60\_€ / kg)"
+      precioOriginal: "8,81\_€ (88,10\_€ / kg)"
+      disponibilidad: En stock
+      vendedorAmazon: ECOCASH
+      imagen: https://m.media-amazon.com/images/I/41VJk9lIodL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes: []
+      caracteristicasAmazon:
+        - Henna Castaño Medio Polvo Radhe 100 Gr Henna Polvo Radhe Shyam
+        - Productos alimenticios para llevar una dieta saludable.
+        - Productos naturales para nuestro propio bienestar.
+      link: https://www.amazon.es/dp/B01COYFIYW?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
+      esKhadi: false
+      titulo: Castaño Medio
   emoji: 🌺
   recomendado: true
   titulo: 'Radhe Shyam: Coloración 100% Natural con Tradición'
 - bloques:
-  - subtitulo: ✔️ ¿Qué ofrece esta marca?
-    texto: Es una opción económica pero eficaz. Perfecta para quienes quieren iniciarse
-      en el mundo de los pigmentos naturales sin gastar mucho, pero sin renunciar
-      a resultados visibles.
-  - subtitulo: 🌿 Ingredientes y textura
-    texto: Contiene henna, índigo y amla. Tiene una textura muy fina, fácil de aplicar
-      y de aclarar, lo cual agradecen mucho las clientas con cabello seco.
-  - subtitulo: 💬 Opinión tras probarla
-    texto: El tono Caoba es muy versátil para bases castañas que quieren un toque
-      rojizo elegante. Además, el índigo de esta marca funciona muy bien para cubrir
-      canas en dos pasos.
-  - subtitulo: 💡 Ideal para...
-    texto: Personas con cuero cabelludo sensible que quieren una solución sencilla,
-      sin perfumes ni químicos, pero con buenos resultados.
+    - subtitulo: ✔️ ¿Qué ofrece esta marca?
+      texto: >-
+        Es una opción económica pero eficaz. Perfecta para quienes quieren iniciarse en el mundo de los pigmentos
+        naturales sin gastar mucho, pero sin renunciar a resultados visibles.
+    - subtitulo: 🌿 Ingredientes y textura
+      texto: >-
+        Contiene henna, índigo y amla. Tiene una textura muy fina, fácil de aplicar y de aclarar, lo cual agradecen
+        mucho las clientas con cabello seco.
+    - subtitulo: 💬 Opinión tras probarla
+      texto: >-
+        El tono Caoba es muy versátil para bases castañas que quieren un toque rojizo elegante. Además, el índigo de
+        esta marca funciona muy bien para cubrir canas en dos pasos.
+    - subtitulo: 💡 Ideal para...
+      texto: >-
+        Personas con cuero cabelludo sensible que quieren una solución sencilla, sin perfumes ni químicos, pero con
+        buenos resultados.
   colores:
-  - ASIN: B0BYGVSTVN
-    color: '#a52a2a'
-    link: https://amzn.to/44FnFxL
-    nombre: Caoba
-  - ASIN: B0BYGKV6G5
-    color: '#8b5d33'
-    link: https://amzn.to/3SIg8H7
-    nombre: Castaño Oscuro
-  - ASIN: B08ZYG5H29
-    color: '#cccccc'
-    link: https://amzn.to/4drWMjl
-    nombre: Índigo
+    - ASIN: B0BYGVSTVN
+      color: '#a52a2a'
+      link: https://amzn.to/44FnFxL
+      nombre: Caoba
+      brand: Real Earth Stories
+      tituloAmazon: >-
+        Real Earth - Burgundy Henna - Tinte de Henna - 100% orgánica y natural - Barros para teñir el pelo - Cabellos
+        color caoba - Coloración Natural - Cosmética ayurvédica - Vegana - Sin amoniacos - 250gr
+      precio: "21,80\_€ (8,72\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Real Earth Stories S.L.
+      imagen: https://m.media-amazon.com/images/I/31tVdGgNwUL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/51MY2gO9v8L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/418JVZLnFsL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51ta7JlwM6L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51PkGXILNcL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41UYycFu08L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51ONgHuEjsL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/418bFgPUPnL._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          Color caoba vibrante: Burgundy Henna combina ingredientes naturales para lograr un hermoso tono caoba en tu
+          cabello de manera segura.
+        - 'Fortaleza y acondicionamiento: La henna fortalece y acondiciona el cabello, mejorando su salud y textura.'
+        - >-
+          Rejuvenecimiento del cuero cabelludo: La manjistha revitaliza el cuero cabelludo, promoviendo un entorno
+          saludable para el crecimiento capilar.
+        - 'Nutrición y protección: El katha nutre y protege el cabello, manteniéndolo fuerte y resistente.'
+        - >-
+          Brillo y crecimiento: El amla añade brillo al tiempo que estimula el crecimiento del cabello, resultando en un
+          color vibrante y una melena más saludable con Burgundy Henna.
+      titulo: Burgundy
+    - ASIN: B0BYGKV6G5
+      color: '#8b5d33'
+      link: https://amzn.to/3SIg8H7
+      nombre: Castaño Oscuro
+      brand: Real Earth Stories
+      tituloAmazon: >-
+        Real Earth - Brown Henna - Tinte de Henna - 100% orgánica y natural - Barros para teñir el pelo - Cabellos
+        castaños oscuros - Coloración Natural - Cosmética ayurvédica - Vegana - Sin amoniacos - 250gr
+      precio: "21,80\_€ (8,72\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: Sin info
+      vendedorAmazon: Real Earth Stories S.L.
+      imagen: https://m.media-amazon.com/images/I/314FDQ70lwL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/418bFgPUPnL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41-JCG7OUfL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41ymYASYcoL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51cPbGT5BoL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41trp0Ro3PL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51nzclTkRGL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51Om8pjqGBL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41bRSj+oAfL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51MqpGChOQL._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          Color castaño oscuro natural: Nuestra Brown Henna, compuesta de Henna, Índigo y Amla, ofrece un hermoso tono
+          castaño oscuro de forma natural y segura.
+        - >-
+          Cobertura de canas: Cubre las canas de manera efectiva, proporcionando un aspecto vibrante y sin químicos
+          agresivos.
+        - 'Fortalecimiento capilar: Fortalece y mejora la salud del cabello, promoviendo un cuero cabelludo saludable.'
+        - 'Nutrición y brillo: La fórmula única nutre y acondiciona el cabello, mejorando su textura y brillo natural.'
+        - >-
+          Sin químicos dañinos: Libre de químicos agresivos, la Brown Henna es una opción segura para quienes buscan un
+          cabello hermoso y saludable sin los efectos negativos de los tintes convencionales. Añade un toque de color
+          natural y cuidado a tu melena con nuestra Brown Henna.
+      titulo: Brown
+    - ASIN: B08ZYG5H29
+      color: '#cccccc'
+      link: https://amzn.to/4drWMjl
+      nombre: Índigo
+      brand: Real Earth Stories
+      tituloAmazon: >-
+        Real Earth - Índigo - 100% orgánica y natural - Tinte natural para el pelo - Barros para teñir el pelo -
+        Coloración Natural - Cosmética ayurvédica - Vegana - Tinte Sin amoniacos - 250gr
+      precio: "21,80\_€ (8,72\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Real Earth Stories S.L.
+      imagen: https://m.media-amazon.com/images/I/31anJV-Hb8L._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/418bFgPUPnL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41-JCG7OUfL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41ymYASYcoL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51GW+17Jl7L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41hWn42motL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41N-PsbzTqL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51P03jQtAmL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41Imj5EuZ2L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51CTbRFBFnL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/418bFgPUPnL._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          Tinte vegetal natural: El Índigo proviene de la planta Indigofera tinctoria y se mezcla con otras hierbas como
+          la Henna para obtener tintes capilares naturales y seguros.
+        - >-
+          Brillo y fortaleza: Además de teñir, el Índigo aporta brillo y fortaleza al cabello, mejorando su salud y
+          apariencia.
+        - 'Mayor grosor y volumen: Aumenta el grosor de la fibra capilar, proporcionando volumen y fuerza a tu melena.'
+        - 'Textura sedosa: Deja el cabello con una textura sedosa y manejable, facilitando su peinado y cuidado.'
+        - >-
+          Tinte negro azulado: Tiñe el cabello en un tono negro azulado profundo, ofreciendo una alternativa segura y
+          permanente, libre de parabenos, siliconas y productos químicos. Además, para un castaño oscuro, se puede
+          mezclar con Henna en una proporción específica, proporcionando versatilidad en la elección de colores
+          naturales para tu cabello.
+      titulo: Índigo
   emoji: 🍃
   recomendado: false
   titulo: 'Real Earth: Barros Orgánicos para un Cabello Saludable'
 - bloques:
-  - subtitulo: ✔️ ¿Qué es?
-    texto: Este producto combina dos hierbas, la henna y el índigo, para proporcionar
-      un hermoso tono de cabello.
-  - subtitulo: 🌿 Cómo la utilizo en mi centro
-    texto: Muchas veces combinada con aceites esenciales para mejorar su fijación
-      y aroma. La aplico especialmente en cabellos débiles o con caída.
-  - subtitulo: ⏱️ Recomendaciones de uso
-    texto: Es importante dejarla actuar al menos una hora para que el pigmento se
-      fije bien. Cuanto más tiempo se deje, mayor será la intensidad del color.
+    - subtitulo: ✔️ ¿Qué es?
+      texto: Este producto combina dos hierbas, la henna y el índigo, para proporcionar un hermoso tono de cabello.
+    - subtitulo: 🌿 Cómo la utilizo en mi centro
+      texto: >-
+        Muchas veces combinada con aceites esenciales para mejorar su fijación y aroma. La aplico especialmente en
+        cabellos débiles o con caída.
+    - subtitulo: ⏱️ Recomendaciones de uso
+      texto: >-
+        Es importante dejarla actuar al menos una hora para que el pigmento se fije bien. Cuanto más tiempo se deje,
+        mayor será la intensidad del color.
   colores:
-  - ASIN: B09SZCTP7F
-    color: '#8b5d33'
-    link: https://amzn.to/3HgKD4r
-    nombre: Castaño Oscuro
-  - ASIN: B09SZBR8Z7
-    color: '#e6d3a3'
-    link: https://amzn.to/4kl9SS9
-    nombre: Castaño Claro
-  - ASIN: B09SZC4BH8
-    color: '#8b5d33'
-    link: https://amzn.to/4ko4e0O
-    nombre: Castaño
-  - ASIN: B09QD436MY
-    color: '#b87333'
-    link: https://amzn.to/4moBWFg
-    nombre: Rojo cobre
-  - ASIN: B0D6WJF6GL
-    color: '#f5e083'
-    link: https://amzn.to/4je8q2z
-    nombre: Rubio Natural
-  - ASIN: B0CHMR6MXX
-    color: '#cccccc'
-    link: https://amzn.to/4moe4BQ
-    nombre: Neutro
+    - ASIN: B09SZCTP7F
+      color: '#8b5d33'
+      link: https://amzn.to/3HgKD4r
+      nombre: Castaño Oscuro
+      brand: INDIAN NATURAL HAIR CARE
+      tituloAmazon: Henna y 3x índigo - Color castaño oscuro - Tinte natural para el cabello - En polvo… (200g)
+      precio: "15,49\_€ (7,74\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Indian Natural Hair Care EU
+      imagen: https://m.media-amazon.com/images/I/51Epd5sueNL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/411sSUI+d-L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51pMr0g0NBL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41SkxewWjIL._SL500_.jpg
+          width: 500
+          height: 411
+        - url: https://m.media-amazon.com/images/I/51jJ1-xmiRL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41bUCDAJYCL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61semquC3oL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31X7uUvgD3L._SL500_.jpg
+          width: 500
+          height: 500
+      titulo: Castaño Oscuro
+    - ASIN: B09SZBR8Z7
+      color: '#e6d3a3'
+      link: https://amzn.to/4kl9SS9
+      nombre: Castaño Claro
+      brand: INDIAN NATURAL HAIR CARE
+      tituloAmazon: Henna, índigo y amla - Color castaño claro - Tinte natural y tratamiento para el cabello - En polvo (200g)
+      precio: "15,49\_€ (7,74\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Indian Natural Hair Care EU
+      imagen: https://m.media-amazon.com/images/I/5102Lh2eZNL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/413wsqausfL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51rY9oTk5WL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51zgJm5MRTS._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51cdOBTvOIL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41+Zsg8nwgL._SL500_.jpg
+          width: 500
+          height: 420
+        - url: https://m.media-amazon.com/images/I/61semquC3oL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31X7uUvgD3L._SL500_.jpg
+          width: 500
+          height: 500
+      titulo: Castaño Claro
+    - ASIN: B09SZC4BH8
+      color: '#8b5d33'
+      link: https://amzn.to/4ko4e0O
+      nombre: Castaño
+      brand: INDIAN NATURAL HAIR CARE
+      tituloAmazon: Henna y índigo - Color castaño - 200g - Tinte natural y tratamiento para el cabello - En polvo (200g)
+      precio: "15,49\_€ (1,55\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Indian Natural Hair Care EU
+      imagen: https://m.media-amazon.com/images/I/51rVewBaCXL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/51oXJBx8Y4L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51QRhzn4IJL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51yAYmjd1DL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51JMPrJEDmL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41HkIH0l+xL._SL500_.jpg
+          width: 500
+          height: 412
+        - url: https://m.media-amazon.com/images/I/61semquC3oL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31X7uUvgD3L._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon:
+        - ✅ Tiñe el cabello en tonos marrón en función del pigmento del cabello. Cubre las canas.
+        - ✅ Tiene un efecto beneficioso sobre el cuero cabelludo y elimina la grasa del cabello.
+        - ✅ Suaviza el cabello y le da un brillo natural.
+        - ✅ Previene la caspa y otros problemas del cuero cabelludo.
+        - ✅ 100% natural y vegano, sin productos químicos. Siempre hierbas frescas.
+      titulo: Castaño
+    - ASIN: B09QD436MY
+      color: '#b87333'
+      link: https://amzn.to/4moBWFg
+      nombre: Rojo cobre
+      brand: INDIAN NATURAL HAIR CARE
+      tituloAmazon: Henna - Color cobre - Tinte natural y tratamiento para el cabello - En polvo (200g)
+      precio: "15,49\_€ (7,74\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Indian Natural Hair Care EU
+      imagen: https://m.media-amazon.com/images/I/51chceD2ScL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/51cNnFRjheL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41HcayLrLcL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51JSwG1677L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51vrLyn4VlL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51z3z9Ibk2L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41bAjbi+D3L._SL500_.jpg
+          width: 500
+          height: 420
+        - url: https://m.media-amazon.com/images/I/61semquC3oL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/31X7uUvgD3L._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon:
+        - ✅ Tiñe el cabello en tonos rojo cobrizo en función del pigmento del cabello. Cubre las canas.
+        - ✅ Tiene un efecto beneficioso sobre el cuero cabelludo y elimina la grasa del cabello.
+        - ✅ Suaviza el cabello y le da un brillo natural.
+        - ✅ Previene la caspa y otros problemas del cuero cabelludo.
+        - ✅ 100% natural y vegano, sin productos químicos. Siempre hierbas frescas.
+      titulo: Cobre
+    - ASIN: B0D6WJF6GL
+      color: '#f5e083'
+      link: https://amzn.to/4je8q2z
+      nombre: Rubio Natural
+      brand: virhea
+      tituloAmazon: VIRHEA - Henna rubio natural (100 g), coloración vegetal para el cabello, brillante, cuidado capilar natural
+      precio: "13,99\_€"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Eslab
+      imagen: https://m.media-amazon.com/images/I/51Vd+wYsnaL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/51p6vfulxFL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51rQUvo176L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51mRQSrXyjL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51Qc9Bbn93L._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61Y9FVQe07L._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          Coloración de cabello, tono rubio: Dale a tu cabello un hermoso tono rubio con nuestra henna rubia 100 %
+          natural y vegetal.
+        - 'Henna de tono rubio 100% natural: Luce un color rubio brillante y duradero sin productos químicos agresivos.'
+        - >-
+          Coloración del cabello: Elige una coloración vegetal suave y respetuosa con tu cuero cabelludo y el medio
+          ambiente.
+        - >-
+          Cuidado y protección: Nuestra henna rubia nutre, protege y fortalece tu cabello al tiempo que le da un color
+          sublime.
+        - >-
+          Compromiso con el medio ambiente: El 1 % del precio de venta de la henna de tono rubio se dona a nuestro
+          programa de reforestación con nuestra ONG asociada. Esto compensa las emisiones de carbono relacionadas con el
+          transporte de la henna y nos permite participar en la lucha contra la deforestación del pulmón de nuestro
+          hermoso planeta.
+      titulo: Rubio Natural
+    - ASIN: B0CHMR6MXX
+      color: '#cccccc'
+      link: https://amzn.to/4moe4BQ
+      nombre: Neutro
+      brand: virhea
+      tituloAmazon: >-
+        Henna Neutra 150g (Sin Color) Hace el Cabello más Brillante y Fuerte - Anti Piojos & Anticaspa | Mascarilla y
+        Exfoliante para Cuerpo & Rostro para hacer la Piel más Suave - Cuidados 100% Naturales
+      precio: "13,01\_€ (8,67\_€ / 100 g)"
+      precioOriginal: No especificado
+      disponibilidad: En stock
+      vendedorAmazon: Eslab
+      imagen: https://m.media-amazon.com/images/I/51b-qzKvMsL._SL500_.jpg
+      imagenWidth: 500
+      imagenHeight: 500
+      imagenesVariantes:
+        - url: https://m.media-amazon.com/images/I/418qYwfgleL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51Gt3TZW6RL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41nrFJfffEL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/51MTazw6sfL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/41R541iwXbL._SL500_.jpg
+          width: 500
+          height: 500
+        - url: https://m.media-amazon.com/images/I/61Y9FVQe07L._SL500_.jpg
+          width: 500
+          height: 500
+      caracteristicasAmazon:
+        - >-
+          🍃CABELLO MÁS HERMOSO: La Henna Neutra aporta volumen y brillo al cabello, también ayuda a tonificarlo. La
+          henna lucha contra la caída del cabello y estimula su crecimiento. La henna neutra no colorea el cabello ni el
+          cuero cabelludo.
+        - >-
+          🍃CABELLO MÁS SALUDABLE: Una mascarilla de cabello de Henna ayuda a regular el exceso de sebo y tiene un
+          efecto anti piojos, permite combatir la caspa y protege las longitudes y el cuero cabelludo.
+        - >-
+          🍃PIEL MÁS SUAVE Y LISA: Una mascarilla o un exfoliante con henna neutra exfolia y purifica la piel. El
+          cuidado con henna suaviza y alisa la piel, tiene un efecto antitranspirante y antiséptico.
+        - >-
+          🍃CUIDADO 100% NATURAL: Disfruta de un cuidado 100% natural para un cabello radiante y una piel de cuerpo y
+          rostro más hermosa, respetando el medio ambiente.
+        - >-
+          🌳COMPROMISO CON EL MEDIO AMBIENTE: El 1% del precio de venta de tu henna neutra se dona a nuestro PROGRAMA DE
+          REFORESTACIÓN con nuestra ONG asociada. Esto compensa las emisiones de carbono asociadas con el transporte de
+          tu henna y contribuye a la lucha contra la deforestación del pulmón de nuestro hermoso planeta 🌳
+      titulo: Neutra
   emoji: 🌸
   recomendado: false
   titulo: 'Henna y 3x Indigo: Tradición Natural para el Cuidado Capilar'
