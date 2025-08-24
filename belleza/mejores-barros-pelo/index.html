@@ -1050,7 +1050,7 @@ body {
 <h2 id="mi-eleccion">🎨 ¿Donde comprar barros para teñir el pelo? Descubre los mejores</h2>
 
 
-  
+
 <section style="margin-bottom:3em;padding:1.5em;background:#faf7fc;border-left:6px solid #b39ddb;border-radius:10px;">
   <h3 class="producto-titulo" style="display:flex;justify-content:space-between;align-items:center;">
     🌿 Khadi: Coloración Ayurvédica 100% Vegetal
@@ -1059,6 +1059,9 @@ body {
     
   </h3>
 
+  
+    <h4></h4>
+    <p></p>
   
     <h4>✔️ ¿Por qué recomiendo Khadi?</h4>
     <p>Es una de las marcas que más uso en mi centro de belleza. Funciona especialmente bien en mujeres que vienen de años usando tintes químicos y buscan pasarse a lo natural.</p>
@@ -1069,124 +1072,424 @@ body {
     <h4>👩‍🔬 Mi experiencia profesional</h4>
     <p>He visto cómo incluso cabellos dañados o sin brillo recuperan fuerza y color natural tras varias aplicaciones. Me encanta el tono Castaño Medio, pero el Cobre también deja reflejos preciosos.</p>
   
-  
 
-  <h4>🌈 Colores disponibles en Amazon:</h4>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1em;margin-top:1em;">
+<style>
+    /* === Grid más contenido === */
+    .tonos-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(135px,1fr));
+      gap:.6rem;
+      margin-top:1rem;
+    }
+
+    /* === Tarjeta compacta: altura contenida === */
+    .tono-card{
+      display:flex;flex-direction:column;
+      padding:.55rem;background:#fff;border:1px solid #ece7f6;border-radius:10px;
+      text-decoration:none;color:#4a3b57;
+      height:clamp(170px, 22vw, 200px);
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      box-shadow:0 1px 2px rgba(0,0,0,.03);
+    }
+    .tono-card:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(24,12,61,.08);border-color:#b39ddb}
+
+    /* === La miniatura ocupa la mayor parte de la tarjeta === */
+    .tono-thumb{
+      flex:1 1 auto;
+      min-height:0;
+      aspect-ratio:3/4;
+      display:grid;place-items:center;
+      background:#faf7fc;border-radius:8px;overflow:hidden;
+      margin:0;
+    }
+    .tono-thumb img{
+      width:100%;height:100%;
+      object-fit:contain;object-position:center;
+      display:block;
+      transform:scale(1.65);          /* llena más porcentaje sin deformar */
+      transition:transform .12s ease;
+    }
+    .tono-card:hover .tono-thumb img{ transform:scale(1.72); }
+
+    /* === Título discreto en 1–2 líneas === */
+    .tono-titulo{
+      margin-top:.35rem;
+      text-align: center;
+      font-size:.84rem;line-height:1.15;font-weight:700;color:#7b4b94;
+      display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+    }
+
+    /* Más densidad en móvil */
+    @media (max-width:540px){
+      .tonos-grid{ grid-template-columns:repeat(auto-fill,minmax(120px,1fr)); }
+      .tono-card{ height:clamp(165px, 36vw, 190px); }
+    }
+  </style><h4>🌈 Tonos disponibles en Amazon:</h4>
+  <div class="tonos-grid">
     
-      <a href="https://amzn.to/43llhdj" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio toque dorado</span>
-      </a>
     
-      <a href="https://amzn.to/4j6VZoX" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#dddddd;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Neutral, sin color</span>
-      </a>
+
     
-      <a href="https://amzn.to/3SKojmg" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#b87333;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Cobre</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/43llhdj"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Toque Dorado"
+           aria-label="Ver Rubio Toque Dorado en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41PnausHGwL._SL500_.jpg"
+                 alt="Rubio Toque Dorado"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Toque Dorado</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3YQtp40" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#cccccc;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rojizo</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3SKojmg"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Cobre"
+           aria-label="Ver Cobre en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41EMFUam0LL._SL500_.jpg"
+                 alt="Cobre"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Cobre</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4k2GNKM" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f0c14b;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño dorado</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3YQtp40"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rojo Oscuro"
+           aria-label="Ver Rojo Oscuro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41f2HwSSbyL._SL500_.jpg"
+                 alt="Rojo Oscuro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rojo Oscuro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4mn7N9x" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Claro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4k2GNKM"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Dorado"
+           aria-label="Ver Castaño Dorado en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41GC3kWdx2L._SL500_.jpg"
+                 alt="Castaño Dorado"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Dorado</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3FgeeKS" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a8753f;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Medio</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4mn7N9x"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Claro"
+           aria-label="Ver Rubio Claro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/31i1LJDEvPL._SL500_.jpg"
+                 alt="Rubio Claro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Claro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3SGPiiD" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#e6d3a3;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Claro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3FgeeKS"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Medio"
+           aria-label="Ver Castaño Medio en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41mp0SFvkgL._SL500_.jpg"
+                 alt="Castaño Medio"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Medio</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3H21nfW" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Avellana</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3SGPiiD"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Claro"
+           aria-label="Ver Castaño Claro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/412-0vp6SzL._SL500_.jpg"
+                 alt="Castaño Claro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Claro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4dnxgvz" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Oscuro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3H21nfW"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Avellana"
+           aria-label="Ver Castaño Avellana en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/419Ows4FFjL._SL500_.jpg"
+                 alt="Castaño Avellana"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Avellana</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4kuYK4L" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Oscuro Ceniza</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4dnxgvz"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Oscuro"
+           aria-label="Ver Castaño Oscuro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41VYkwchoVL._SL500_.jpg"
+                 alt="Castaño Oscuro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Oscuro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3ZfaEYn" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Ceniza</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4kuYK4L"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Oscuro Ceniza"
+           aria-label="Ver Rubio Oscuro Ceniza en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41B5lgBmIJL._SL500_.jpg"
+                 alt="Rubio Oscuro Ceniza"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Oscuro Ceniza</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4mijjTv" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#3f51b5;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Indigo Puro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3ZfaEYn"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Ceniza"
+           aria-label="Ver Castaño Ceniza en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41r2KOfO-yL._SL500_.jpg"
+                 alt="Castaño Ceniza"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Ceniza</span>
+        </a>
+      
     
-      <a href="https://amzn.to/43sSjZ1" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#1c1c1c;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Negro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4mijjTv"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Índigo Puro"
+           aria-label="Ver Índigo Puro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41YJ2op1YiL._SL500_.jpg"
+                 alt="Índigo Puro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Índigo Puro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4kqpao0" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#c0392b;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rojo Puro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/43sSjZ1"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Negro"
+           aria-label="Ver Negro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/415P0K+z-0L._SL500_.jpg"
+                 alt="Negro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Negro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3FgGexW" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Miel Amanecer</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4kqpao0"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rojo"
+           aria-label="Ver Rojo en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41n0J21NlTL._SL500_.jpg"
+                 alt="Rojo"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rojo</span>
+        </a>
+      
     
-      <a href="https://amzn.to/45iRZ1o" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Medio</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3FgGexW"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Miel Amanecer"
+           aria-label="Ver Rubio Miel Amanecer en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41UAawk2umL._SL500_.jpg"
+                 alt="Rubio Miel Amanecer"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Miel Amanecer</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4j6WEXp" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a52a2a;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Caoba</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/45iRZ1o"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Medio"
+           aria-label="Ver Rubio Medio en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/31MTAYOlpTL._SL500_.jpg"
+                 alt="Rubio Medio"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Medio</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4jdG8oG" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a0c4ff;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Color prep</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4j6WEXp"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Caoba"
+           aria-label="Ver Caoba en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41XlI24L0UL._SL500_.jpg"
+                 alt="Caoba"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Caoba</span>
+        </a>
+      
+    
+      
+    
+      <a class="tono-card"
+           href="https://www.amazon.es/dp/B01GG19MQE?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Medio"
+           aria-label="Ver Rubio Medio en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/31yGorRb92L._SL500_.jpg"
+                 alt="Rubio Medio"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Medio</span>
+        </a>
+      
+    
+      <a class="tono-card"
+           href="https://www.amazon.es/dp/B01ATB48CU?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Claro"
+           aria-label="Ver Rubio Claro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/318-y-nCZkL._SL500_.jpg"
+                 alt="Rubio Claro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Claro</span>
+        </a>
+      
+    
+      <a class="tono-card"
+           href="https://www.amazon.es/dp/B083ZWR71L?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Dorado"
+           aria-label="Ver Rubio Dorado en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41bS+tvLEnL._SL500_.jpg"
+                 alt="Rubio Dorado"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Dorado</span>
+        </a>
+      
+    
+      
+    
+      <a class="tono-card"
+           href="https://amzn.to/4jdG8oG"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Color Prep"
+           aria-label="Ver Color Prep en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/31SELg19yvL._SL500_.jpg"
+                 alt="Color Prep"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Color Prep</span>
+        </a>
+      
     
   </div>
 
@@ -1214,148 +1517,307 @@ body {
     <h4>⏱️ Tiempo recomendado</h4>
     <p>Al menos una hora de exposición para fijar bien el pigmento. Se nota mucho la diferencia si se respeta el tiempo.</p>
   
-  
 
-  <h4>🌈 Colores disponibles en Amazon:</h4>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1em;margin-top:1em;">
+<h4>🌈 Tonos disponibles en Amazon:</h4>
+  <div class="tonos-grid">
     
-      <a href="https://amzn.to/43noMzE" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a52a2a;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Super Caoba Oscuro</span>
-      </a>
     
-      <a href="https://amzn.to/43ri63H" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#e6d3a3;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Claro</span>
-      </a>
+
     
-      <a href="https://amzn.to/44MEtmE" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Oscuro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/43ri63H"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Claro"
+           aria-label="Ver Castaño Claro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/411rG3YEe2L._SL500_.jpg"
+                 alt="Castaño Claro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Claro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4jg4GgR" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Intenso</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4329gdQ"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Negro"
+           aria-label="Ver Negro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41OcDN9+1LL._SL500_.jpg"
+                 alt="Negro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Negro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4329gdQ" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#1c1c1c;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Negro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3ZfbPqL"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Medio"
+           aria-label="Ver Castaño Medio en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41dl+JbXyYL._SL500_.jpg"
+                 alt="Castaño Medio"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Medio</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3ZfbPqL" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a8753f;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Medio</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4kw9kbH"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Ceniza"
+           aria-label="Ver Rubio Ceniza en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41BbczTZNmL._SL500_.jpg"
+                 alt="Rubio Ceniza"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Ceniza</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4kw9kbH" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Ceniza</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4k6SKiI"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Caoba"
+           aria-label="Ver Castaño Caoba en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41zZpn5jVYL._SL500_.jpg"
+                 alt="Castaño Caoba"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Caoba</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4k6SKiI" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Caoba</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4drXzRl"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Cobrizo"
+           aria-label="Ver Castaño Cobrizo en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41WUeqCrC7L._SL500_.jpg"
+                 alt="Castaño Cobrizo"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Cobrizo</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4drXzRl" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Cobrizo</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3FgfNbI"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Caoba Oscuro"
+           aria-label="Ver Caoba Oscuro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41405y+WIYL._SL500_.jpg"
+                 alt="Caoba Oscuro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Caoba Oscuro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3FgfNbI" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a52a2a;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Caoba Oscuro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/43mdMml"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Chocolate"
+           aria-label="Ver Chocolate en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41lGLHAqYeL._SL500_.jpg"
+                 alt="Chocolate"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Chocolate</span>
+        </a>
+      
     
-      <a href="https://amzn.to/43mdMml" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#cccccc;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Chocolate</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/43oNpMI"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rojo Burdeos"
+           aria-label="Ver Rojo Burdeos en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41clJhE4KVL._SL500_.jpg"
+                 alt="Rojo Burdeos"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rojo Burdeos</span>
+        </a>
+      
     
-      <a href="https://amzn.to/43oNpMI" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#c0392b;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rojo Burdeos</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4msYzbW"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Caoba Luminoso"
+           aria-label="Ver Caoba Luminoso en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/4127pkWiJOL._SL500_.jpg"
+                 alt="Caoba Luminoso"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Caoba Luminoso</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4msYzbW" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a52a2a;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Super Caoba Luminoso</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3Znub8M"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Intenso"
+           aria-label="Ver Castaño Intenso en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41tQdw94GxL._SL500_.jpg"
+                 alt="Castaño Intenso"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Intenso</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3Znub8M" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Intenso</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4mlKv3F"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Dorado"
+           aria-label="Ver Rubio Dorado en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41SnWucdauL._SL500_.jpg"
+                 alt="Rubio Dorado"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Dorado</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4mlKv3F" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Dorado</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3SGpjI2"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Caoba Intenso"
+           aria-label="Ver Caoba Intenso en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41s3ycfTQ+L._SL500_.jpg"
+                 alt="Caoba Intenso"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Caoba Intenso</span>
+        </a>
+      
     
-      <a href="https://amzn.to/432t8xo" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#3f51b5;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Indigo</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3H05Hw6"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Caoba Natural"
+           aria-label="Ver Caoba Natural en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/414FHtx89uL._SL500_.jpg"
+                 alt="Caoba Natural"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Caoba Natural</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3SGpjI2" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a52a2a;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Caoba Intenso</span>
-      </a>
+      <a class="tono-card"
+           href="https://www.amazon.es/dp/B00DN9FCM6?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Neutro"
+           aria-label="Ver Neutro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41tSNaT+poL._SL500_.jpg"
+                 alt="Neutro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Neutro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/3H05Hw6" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a52a2a;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Caoba Natural</span>
-      </a>
+      
     
-      <a href="https://amzn.to/4ktVVRq" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#e6e6e6;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Sidr Tratamiento Capilar Natural</span>
-      </a>
+      <a class="tono-card"
+           href="https://www.amazon.es/dp/B00V6B5502?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Oscuro"
+           aria-label="Ver Castaño Oscuro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41PUT6NAuoL._SL500_.jpg"
+                 alt="Castaño Oscuro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Oscuro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4ko59OO" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#e6e6e6;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Manjistha Tratamiento Capilar Natural</span>
-      </a>
+      
     
-      <a href="https://amzn.to/3EZJwpn" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#e6e6e6;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Brahmi Tratamiento Capilar Natural</span>
-      </a>
+      
     
-      <a href="https://amzn.to/4dswcXd" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#aed581;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Tratamiento Capilar Ayurvédico Amla</span>
-      </a>
-    
-      <a href="https://amzn.to/3GZRTSl" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#b2dfdb;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Fortalecedor de Cabello</span>
-      </a>
+      <a class="tono-card"
+           href="https://www.amazon.es/dp/B01COYFIYW?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Medio"
+           aria-label="Ver Castaño Medio en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/41VJk9lIodL._SL500_.jpg"
+                 alt="Castaño Medio"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Medio</span>
+        </a>
+      
     
   </div>
 
@@ -1381,28 +1843,63 @@ body {
     <h4>💡 Ideal para...</h4>
     <p>Personas con cuero cabelludo sensible que quieren una solución sencilla, sin perfumes ni químicos, pero con buenos resultados.</p>
   
-  
 
-  <h4>🌈 Colores disponibles en Amazon:</h4>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1em;margin-top:1em;">
+<h4>🌈 Tonos disponibles en Amazon:</h4>
+  <div class="tonos-grid">
     
-      <a href="https://amzn.to/44FnFxL" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#a52a2a;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Caoba</span>
-      </a>
     
-      <a href="https://amzn.to/3SIg8H7" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Oscuro</span>
-      </a>
+
     
-      <a href="https://amzn.to/4drWMjl" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#cccccc;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Índigo</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/44FnFxL"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Burgundy"
+           aria-label="Ver Burgundy en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/31tVdGgNwUL._SL500_.jpg"
+                 alt="Burgundy"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Burgundy</span>
+        </a>
+      
+    
+      <a class="tono-card"
+           href="https://amzn.to/3SIg8H7"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Brown"
+           aria-label="Ver Brown en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/314FDQ70lwL._SL500_.jpg"
+                 alt="Brown"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Brown</span>
+        </a>
+      
+    
+      <a class="tono-card"
+           href="https://amzn.to/4drWMjl"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Índigo"
+           aria-label="Ver Índigo en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/31anJV-Hb8L._SL500_.jpg"
+                 alt="Índigo"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Índigo</span>
+        </a>
+      
     
   </div>
 
@@ -1425,46 +1922,114 @@ body {
     <h4>⏱️ Recomendaciones de uso</h4>
     <p>Es importante dejarla actuar al menos una hora para que el pigmento se fije bien. Cuanto más tiempo se deje, mayor será la intensidad del color.</p>
   
-  
 
-  <h4>🌈 Colores disponibles en Amazon:</h4>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1em;margin-top:1em;">
+<h4>🌈 Tonos disponibles en Amazon:</h4>
+  <div class="tonos-grid">
     
-      <a href="https://amzn.to/3HgKD4r" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Oscuro</span>
-      </a>
     
-      <a href="https://amzn.to/4kl9SS9" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#e6d3a3;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño Claro</span>
-      </a>
+
     
-      <a href="https://amzn.to/4ko4e0O" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#8b5d33;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Castaño</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/3HgKD4r"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Oscuro"
+           aria-label="Ver Castaño Oscuro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/51Epd5sueNL._SL500_.jpg"
+                 alt="Castaño Oscuro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Oscuro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4moBWFg" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#b87333;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rojo cobre</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4kl9SS9"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño Claro"
+           aria-label="Ver Castaño Claro en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/5102Lh2eZNL._SL500_.jpg"
+                 alt="Castaño Claro"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño Claro</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4je8q2z" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#f5e083;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Rubio Natural</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4ko4e0O"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Castaño"
+           aria-label="Ver Castaño en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/51rVewBaCXL._SL500_.jpg"
+                 alt="Castaño"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Castaño</span>
+        </a>
+      
     
-      <a href="https://amzn.to/4moe4BQ" rel="nofollow sponsored" target="_blank"
-         style="display:inline-flex;align-items:center;gap:0.5em;padding:0.4em 0.2em;text-decoration:none;color:#7b4b94;font-weight:500;min-width:0;">
-        <span style="flex:0 0 auto;display:inline-block;width:0.9em;height:0.9em;border-radius:50%;background:#cccccc;border:1px solid #aaa;"></span>
-        <span style="display:inline-block;min-width:0;word-break:break-word;line-height:1.2;">Neutro</span>
-      </a>
+      <a class="tono-card"
+           href="https://amzn.to/4moBWFg"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Cobre"
+           aria-label="Ver Cobre en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/51chceD2ScL._SL500_.jpg"
+                 alt="Cobre"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Cobre</span>
+        </a>
+      
+    
+      <a class="tono-card"
+           href="https://amzn.to/4je8q2z"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Rubio Natural"
+           aria-label="Ver Rubio Natural en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/51Vd+wYsnaL._SL500_.jpg"
+                 alt="Rubio Natural"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Rubio Natural</span>
+        </a>
+      
+    
+      <a class="tono-card"
+           href="https://amzn.to/4moe4BQ"
+           rel="nofollow sponsored noopener"
+           target="_blank"
+           title="Neutra"
+           aria-label="Ver Neutra en Amazon">
+          <figure class="tono-thumb">
+            <img src="https://m.media-amazon.com/images/I/51b-qzKvMsL._SL500_.jpg"
+                 alt="Neutra"
+                 loading="lazy"
+                 decoding="async"
+                 referrerpolicy="no-referrer">
+          </figure>
+          <span class="tono-titulo">Neutra</span>
+        </a>
+      
     
   </div>
 
