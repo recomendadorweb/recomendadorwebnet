@@ -586,7 +586,7 @@ productos:
           - name: color_name
             value: Azul Claro
         ParentASIN: B0CT935LS7
-    nombre: OBEEII Vestido gasa bordado Rosa Lotus 3XL
+    nombre: OBEEII Vestidos fiesta tallas grandes gasa bordado Rosa Lotus 3XL
     caracteristicas:
       - Gasa ligera, longitud media
       - Bordado floral en malla transparente
@@ -1129,7 +1129,7 @@ productos:
           - name: color_name
             value: Lavanda
         ParentASIN: B08Q1YSDHX
-    nombre: 72styles Vestido Infinito Convertible (Tallas 0–24)
+    nombre: 72styles Vestidos fiesta tallas grandes Infinito Convertible (Tallas 0–24)
     caracteristicas:
       - Vestido infinito convertible multiposición.
       - Tallas: única 0–16; talla grande 18–24.
@@ -1822,7 +1822,7 @@ productos:
           - name: color_name
             value: Grey
         ParentASIN: B0D3M1GV7C
-    nombre: Generic Vestido Madrina Talla Grande — Vestido Fiesta Elegante
+    nombre: Generic Vestido fiesta tallas grandes Madrina — Vestido Fiesta Elegante
     caracteristicas:
       - Diseñado para madrinas y madres de la novia en tallas grandes
       - Apto para ceremonias, cóctel y eventos de noche
@@ -1911,99 +1911,37 @@ productos:
       - name: size_name
         value: 54 Grande
     variantes:
-      - ASIN: B0DDSVZ6KR
-        title: >-
-          Hanna Nikole Vestido de cóctel de gasa de dos piezas para mujer, talla grande, con lentejuelas, elegante,
-          vestido de invitada de boda, acampanado, sin mangas, cuello redondo
-        brand: Hanna Nikole
-        precio: "34,69\_€"
-        precioOriginal: "67,23\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31OklbvmcjL._SL500_.jpg
-        imagenWidth: 313
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41IgeDCTFbL._SL500_.jpg
-            width: 464
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oTyoHBXLL._SL500_.jpg
-            width: 464
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ETHa-l+HL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/414XezT0vDL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg
-            width: 385
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41XDHV+sBxL._SL500_.jpg
-            width: 333
-            height: 500
-        enlace: https://www.amazon.es/dp/B0DDSVZ6KR?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Sobre las tallas: nuestras tallas son tallas de EE. UU., las tallas correspondientes del Reino Unido son las
-            siguientes: US 16 = UK 20, US 18 = UK 22, US 20 = UK 24, US 22 = UK 26, US 26 = UK 28.
-          - >-
-            Características: (1) El conjunto de vestido de gasa de dos piezas consta de un vestido sin mangas y un
-            cárdigan a juego. (2) Vestido: vestido de lentejuelas con cuello redondo y sin mangas. El material de gasa
-            fluido le da al vestido un toque elegante y femenino. Los adornos de lentejuelas están cuidadosamente
-            cosidos en la gasa y añaden un toque de brillo y glamour al vestido. (3) La chaqueta de gasa tiene un diseño
-            único, suelta y cómoda y te hace más elegante.
-          - >-
-            Material fino: tejido principal: 98% poliéster + 2% viscosa. Este vestido de cóctel de lentejuelas y cuello
-            redondo para mujer de talla grande está hecho de tela cómoda de alta calidad, se siente suave, fluido y
-            fácil de llevar.
-          - >-
-            Combinación: puedes usarlo solo para acentuar tu figura, o con el cárdigan de manga 3/4 para un aspecto
-            moderno en capas. Para un look moderno, puedes combinar un vestido de gasa con tacones elegantes y
-            accesorios brillantes. Para un look casual, también puedes combinarlo con sandalias planas y un bolso de
-            hombro ligero. Este cárdigan también se puede llevar solo con otras prendas para dar a tu look un aspecto
-            más sofisticado.
-          - >-
-            Ocasión: cárdigan de dos piezas con volantes, vestido acampanado para madre de la novia, perfecto para todas
-            las ocasiones: oficina, trabajo, fiesta, citas, vacaciones, boda, iglesia, salida nocturna, Navidad, fiesta
-            de baile, fiesta de disfraces, espectáculos, Año Nuevo, aniversario, discoteca, Halloween, etc. y uso diario
-            y adecuado tanto para ocasiones informales como de negocios.
-        variationAttributes:
-          - name: color_name
-            value: Morado
-          - name: size_name
-            value: 54 Grande
-        ParentASIN: B0DBXDT646
-      - ASIN: B0D736B3B3
+      - ASIN: B0D73FNY52
         title: >-
           Hanna Nikole Vestido de cóctel de dos piezas para mujer, de gasa, elegante, línea A, sin mangas, cuello
-          redondo, con volantes de tul, cardigan, rojo oscuro, 54 Grande
+          redondo, con volantes de tul, cardigan, azul claro, 46
         brand: Hanna Nikole
         precio: "67,34\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/317Bd9dxljL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31h8wZAkrlL._SL500_.jpg
         imagenWidth: 313
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41GE0j8us1L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41b6t9-njmL._SL500_.jpg
             width: 464
             height: 500
-          - url: https://m.media-amazon.com/images/I/41+dzn7alhL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41DatMge0dL._SL500_.jpg
             width: 464
             height: 500
-          - url: https://m.media-amazon.com/images/I/41188LtxkLL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41oeqjKti+L._SL500_.jpg
             width: 333
             height: 500
-          - url: https://m.media-amazon.com/images/I/41QbC6PvUCL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41FKMkjhrEL._SL500_.jpg
             width: 333
             height: 500
           - url: https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg
             width: 385
             height: 500
-          - url: https://m.media-amazon.com/images/I/411ZPg4fTIL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41K+YZBSR8L._SL500_.jpg
             width: 333
             height: 500
-        enlace: https://www.amazon.es/dp/B0D736B3B3?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B0D73FNY52?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
             Sobre la talla: nuestras tallas son tallas de EE. UU., las tallas correspondientes en alemán son las
@@ -2030,9 +1968,9 @@ productos:
             adecuado tanto para ocasiones casuales como comerciales.
         variationAttributes:
           - name: color_name
-            value: Rojo Oscuro
+            value: Azul Claro
           - name: size_name
-            value: 54 Grande
+            value: 48 Grande
         ParentASIN: B0DBXDT646
     nombre: Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)
     caracteristicas:
@@ -3147,7 +3085,7 @@ productos:
           - name: size_name
             value: 52 Grande
         ParentASIN: B0DXDZMP4C
-    nombre: Hanna Nikole Vestido De Gasa Plisado Azul Marino 22W
+    nombre: Hanna Nikole vestidos fiesta tallas grandes De Gasa Plisado Azul Marino 22W
     caracteristicas:
       - Corte holgado y cómodo
       - Escote redondo, diseño sencillo y elegante
@@ -4294,7 +4232,7 @@ productos:
         vestidos largos baratos vestido largo fiesta vestidos de fiesta mujer encaje vestidos cocktail vestido mujer
         tallas grandes vestido de lino
     variantes: []
-    nombre: Vectry Vestido de Fiesta Encaje Midi Azul - 5XL
+    nombre: Vectry Vestido de Fiesta de tallas grandes Encaje Midi Azul - 5XL
     caracteristicas:
       - 'Tallas asiáticas: revisar tabla y considerar subir 1–2 tallas'
       - Encaje con manga corta y largo midi
@@ -4921,7 +4859,7 @@ productos:
     nombreCompleto: >-
       Odizli Vestido de noche elegante de manga 3/4 para mujer, vestido de noche, vestido de fiesta de coctail, tallas
       grandes, azul oscuro, XXL
-    nombre: Odizli Vestido midi encaje manga 3/4 azul oscuro XXL
+    nombre: Odizli vestidos fiesta tallas grandes midi encaje manga 3/4 azul oscuro XXL
     caracteristicas:
       - Encaje floral con forro, sin transparencias
       - Manga 3/4 y largo hasta la rodilla
@@ -5412,6 +5350,65 @@ productos:
           - name: size_name
             value: 48 Grande
         ParentASIN: B0DCWXL61P
+      - ASIN: B0D7LSR62K
+        title: >-
+          Hanna Nikole Conjunto de traje de noche de gasa para mujer, talla grande, para cóctel, fiesta, elegante,
+          conjunto de 2 piezas, cuello redondo, mangas cortas y pantalones de cintura alta, traje de dos
+        brand: Hanna Nikole
+        precio: "77,49\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31-OBIZPDWL._SL500_.jpg
+        imagenWidth: 313
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31ihcxaXzlL._SL500_.jpg
+            width: 371
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31O8FfXHj6L._SL500_.jpg
+            width: 361
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31oASaIubGL._SL500_.jpg
+            width: 376
+            height: 500
+          - url: https://m.media-amazon.com/images/I/412EpGMI37L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31qk+ONWd9L._SL500_.jpg
+            width: 377
+            height: 500
+          - url: https://m.media-amazon.com/images/I/313WPIZ5e4L._SL500_.jpg
+            width: 371
+            height: 500
+        enlace: https://www.amazon.es/dp/B0D7LSR62K?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Sobre las tallas: nuestras tallas son tallas de EE. UU., las tallas correspondientes del Reino Unido son las
+            siguientes: US 16 = UK 20, US 18 = UK 22, US 20 = UK 24, US 22 = UK 26, US 26 = UK 28.
+          - >-
+            Características: cuello redondo de gasa, manga derecha con diseño de abertura, cintura alta, dobladillo
+            irregular, elegante, vintage, color sólido, traje de dos piezas, pantalones de traje de 2 piezas, trajes de
+            noche, pantalones de gasa para mujer, traje elegante de 2 piezas.
+          - >-
+            Material de alta calidad: tejido principal: 98% poliéster + 2% viscosa. Nuestras mangas cortas largas de
+            gasa para mujer son principalmente material de gasa, mano de obra de alta calidad, material suave y cómodo,
+            elegante de llevar, muestra tu noble imagen de mujer.
+          - >-
+            Combinación: los pantalones de cóctel de talla grande se pueden combinar con accesorios brillantes. Para un
+            look casual, también puedes combinarlo con sandalias planas y un bolso de hombro ligero.
+          - >-
+            Ocasión: perfecto como traje de madre de la novia, traje de boda, traje de noche, vestido de baile, vestido
+            de invitada de boda, vestido de fiesta, vestido de madre del novio, fiesta de graduación, vestido de
+            vacaciones, para ocasiones formales, etc.
+        variationAttributes:
+          - name: color_name
+            value: verde oscuro
+          - name: size_name
+            value: 52 Grande
+        ParentASIN: B0DCWXL61P
     nombreCompleto: >-
       Hanna Nikole Traje de noche de gasa para mujer, tallas grandes, conjuntos de cóctel, fiesta, festivo, elegante, 2
       piezas, cuello redondo, manga corta y cintura alta, traje de pantalón de dos piezas,
@@ -5873,6 +5870,50 @@ productos:
         variationAttributes:
           - name: size_name
             value: '38'
+          - name: color_name
+            value: Borgoña
+        ParentASIN: B07FKJ9SJY
+      - ASIN: B01HPODDSY
+        title: >-
+          Ever-Pretty Vestido Rojo A-línea Vestido Vestidos para Navidad de Fiesta Cuello en V Manga Corta Gasa Corte
+          Imperio para Mujer Borgoña 40
+        brand: Ever-Pretty
+        precio: "59,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/315vgF-ht+L._SL500_.jpg
+        imagenWidth: 375
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31SnEelfk4L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31npHSbeZxL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31obDs7Ei5L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41VkasNIooL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41fQBgrrULL._SL500_.jpg
+            width: 350
+            height: 500
+        enlace: https://www.amazon.es/dp/B01HPODDSY?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Confíe en la guía de tallas en las fotos, en lugar de su tamaño habitual.
+          - >-
+            Embalaje: nuestros vestidos están doblados para un envío más rápido. Utilice vapor para eliminar las arrugas
+            a su llegada.
+          - Cuello de pico, cintura alta, línea A, manga corta
+          - Sin almohadilla para el pecho, sin forro, cremallera trasera, inelástica
+          - >-
+            Ocasión adecuada para la noche, cóctel, fiesta de graduación, ocasión formal, regreso a casa, invitado a la
+            boda, graduación, ceremonia, banquete, dama de honor, compromiso, baile, ocasión especial, fiesta
+        variationAttributes:
+          - name: size_name
+            value: '40'
           - name: color_name
             value: Borgoña
         ParentASIN: B07FKJ9SJY
@@ -6449,7 +6490,7 @@ productos:
     nombreCompleto: >-
       Vestidos De Ceremonia Fiesta Largo para Mujer Manga Largas Boda Encaje Tallas Grandes Cuello Redondo Vestido Noche
       Coctel Plisada Negro 5XL
-    nombre: DianShaoA Vestido Ceremonia Largo Encaje Negro 5XL
+    nombre: DianShaoA vestidos fiesta tallas grandes Ceremonia Largo Encaje Negro 5XL
     caracteristicas:
       - Tallas grandes disponibles (ej. 5XL), largo total ≈150 cm
       - Mangas largas y cuerpo de encaje elegante
@@ -7028,7 +7069,7 @@ productos:
     nombreCompleto: >-
       Moon Wood Vestido Largo Verano Mujer Tallas Grandes Vestidos Casual Corto Manga de Primavera Vestido Playa de
       Fiesta Elegantes Negro 5XL
-    nombre: Moon Wood Vestido Largo Tallas Grandes — Negro 5XL
+    nombre: Moon Wood vestidos fiesta tallas grandes Largo — Negro 5XL
     caracteristicas:
       - '95% poliéster, 5% elastano: suave y elástico'
       - Disponible en tallas L–5XL y varios colores

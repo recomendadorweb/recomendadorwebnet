@@ -1,9 +1,10 @@
-titulo: 'Guía 2025: mejores vestidos de fiesta tallas grandes'
+titulo: 'Los mejores vestidos de fiesta de tallas grandes'
 imagen:
   alt: Vestidos de fiesta en tallas grandes
-  src: ''
-  srcset: ''
+  src: /global/images/vestidos-fiesta-tallas-grandes.webp
+  srcset: /global/images/vestidos-fiesta-tallas-grandes.webp 600w, /global/images/vestidos-fiesta-tallas-grandes.webp
+    1024w
   width: 600
   style: width:100%;max-height:200px;object-fit:cover;border-radius:10px;
-literal: Vestidos de fiesta tallas grandes recomendados
+literal: vestidos de fiesta tallas grandes recomendados
 emoji: 👗

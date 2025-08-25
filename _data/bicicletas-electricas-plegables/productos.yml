@@ -394,7 +394,83 @@ productos:
     precio: Sin precio
     precioOriginal: No especificado
     valoracion: 4.2
-    variantes: []
+    variantes:
+      - ASIN: B0C7KFSRT3
+        title: >-
+          ENGWE Bicicleta Eléctrica Plegable 250W E-Bike, 20×4.0 Inch Off-Road Fat Tire, Batería de 48V 13Ah Alcance
+          hasta 120km, 25KM/H 7 Velocidades Suspensión Completa Engine X
+        brand: ENGWE
+        precio: "1.299,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41mbc2KWQoL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41MRCydCSXL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41OlpXk9bpL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Gb7cyK7iL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51qhK59EoML._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/412Zi3LCp0L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411HxvBgcFL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51a2mKRzfTL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41DwJG0EVML._SL500_.jpg
+            width: 375
+            height: 500
+        enlace: https://www.amazon.es/dp/B0C7KFSRT3?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【MOTOR Y BATERÍA POTENTES】- Este bicicleta electrica ENGINE X está equipado con un motorreductor sin
+            escobillas de 250 W con una velocidad máxima de 25 kilómetros por hora y gran potencia. La batería de litio
+            extraíble de 48 V y 13 Ah tiene un alcance de crucero máximo de 120 km en modo impulso, lo que le permite
+            completar distancias cortas de forma fácil y libre sin preocuparse por la duración de la batería cuando está
+            fuera. Perfecto para sus desplazamientos cortos y necesidades diarias.
+          - >-
+            【SUSPENSIÓN Y NEUMÁTICOS ANCHOS PARA DIFERENTES TERRENOS】- Las bicicletas eléctricas plegables ENGWE están
+            diseñadas para abordar con éxito una variedad de terrenos. La horquilla de suspensión proporciona una
+            conducción cómoda en superficies irregulares, mientras que los neumáticos anchos de 20” x 4.0 garantizan
+            estabilidad y agarre sobre asfalto, grava, arena y nieve. Podrás explorar tanto el entorno urbano como el
+            todoterreno con confianza y seguridad.
+          - >-
+            【FRENOS PERFECTOS Y 7 VELOCIDADES】- La bici electrica plegable ENGWE está equipada con frenos de disco
+            mecánicos delanteros y traseros para una potente capacidad de frenado en cualquier condición, proporciona
+            seguridad para tu conducción. Además, el sistema de 7 velocidades ofrece múltiples opciones de velocidad
+            para que puedas encontrar la velocidad que mejor se adapte a ti o pedalear para un paseo rápido o fácil.
+          - >-
+            【DISEÑO HUMANIZADO Y CONSIDERADO】- La bicicleta eléctrica ENGWE te ofrece una comodidad excepcional durante
+            tus viajes en bicicleta, gracias al sillín de piel suave y a los neumáticos grasos. Además, el diseño
+            plegable hace que la bicicleta sea cómoda de llevar en el coche o en el camping. Para garantizar su
+            seguridad, la bicicleta está equipada con una pantalla LCD intuitiva, un faro luminoso y una luz trasera que
+            le permiten disfrutar de su pedaleo incluso por la noche, sin preocupaciones.
+          - >-
+            【COMODIDAD Y SEGURIDAD】- Además de un rendimiento potente, las bicicleta ENGINE X ofrecen un diseño
+            ergonómico y cómodo que alivia la fatiga al andar. El marco de aleación de aluminio 6061 garantiza una
+            construcción ligera pero duradera, haciendo que la bicicleta sea fácil de manejar. La horquilla de
+            suspensión mecánica absorbe los baches y las asperezas del camino, lo que reduce el riesgo de vuelco y
+            proporciona una conducción más suave y cómoda.
+          - >-
+            【ATENCIÓN AL CLIENTE 24/7 FIABLE Y PROFESIONAL】- La bicicleta eléctrica ENGWE está premontada al 85% para
+            simplificar el montaje, incluye dos pedales y un asiento. El pedido se entregará dentro de 5-10 días.Nuestro
+            equipo de atención al cliente está disponible 24/7 para ayudarlo y responder a sus preguntas. Garantizamos
+            un servicio confiable y una garantía de un año para motores, baterías y controladores.
+        variationAttributes:
+          - name: color_name
+            value: Rojo
+        ParentASIN: B0DMSP4QYQ
     title: >-
       ENGWE Bicicleta Eléctrica Plegable 250W E-Bike, 20×4.0 Inch Off-Road Fat Tire, Batería de 48V 13Ah Alcance hasta
       120km, 25KM/H 7 Velocidades Suspensión Completa Engine X
@@ -477,7 +553,7 @@ productos:
       - 🚴‍♂️ Ruedas de 14
       - 🛞 Buena suspensión
     nombre: Bodywel T16PRO Bicicleta Eléctrica Plegable, 14"
-    precio: Sin precio
+    precio: "419,99\_€"
     precioOriginal: No especificado
     valoracion: 4.2
     variantes:
@@ -549,75 +625,6 @@ productos:
         variationAttributes:
           - name: color_name
             value: rosa
-        ParentASIN: B0CRHBM699
-      - ASIN: B0F1MQTX77
-        title: >-
-          Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Portable E-Bike, City EBike con 4.5 Pulgadas Pantalla LED,
-          Batería 36V/7.8Ah, Frenos de Doble Disco y Suspensión Delantera (Blanco)
-        brand: Bodywel
-        precio: "409,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41kl+Jr2LLL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/517ckrX-xKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-Kvh5YE7L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51yv2lUCBAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/513EO-iV2WL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qkDoAS+sL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/418zw60QnwL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/413AOJFz2SL._SL500_.jpg
-            width: 500
-            height: 334
-          - url: https://m.media-amazon.com/images/I/5109jcbDPUL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F1MQTX77?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor
-            de 250W, batería de 36V y 7.8 de potencia, frenos de disco dobles, suspensión delantera y amortiguador
-            central, pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras.
-            Perfecta para tus desplazamientos diarios y viajes cortos.
-          - >-
-            【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable. Le permite
-            llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
-            amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
-          - >-
-            【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
-            incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una
-            velocidad máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
-          - >-
-            【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de disco dobles delanteros y traseros y frenos
-            electrónicos mejoran completamente el rendimiento de frenado y acortan la distancia de frenado. Luz
-            delantera de seguridad, luz trasera y timbre de bicicleta te hacen más seguro cuando sales especialmente por
-            la noche.
-          - >-
-            【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
-            ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
-            vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
-            posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 140-185cm.
-          - >-
-            【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje
-            complicado, más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24
-            horas. Si usted tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
-        variationAttributes:
-          - name: color_name
-            value: Blanco
         ParentASIN: B0CRHBM699
       - ASIN: B0F1SGTDK7
         title: >-
@@ -694,225 +701,6 @@ productos:
           - name: color_name
             value: rosa+Portaequipajes trasero
         ParentASIN: B0CRHBM699
-      - ASIN: B0F1MQXYB5
-        title: >-
-          Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Portable E-Bike, City EBike con 4.5 Pulgadas Pantalla LED,
-          Batería 36V/7.8Ah, Frenos de Doble Disco y Suspensión Delantera (Almendra)
-        brand: Bodywel
-        precio: "419,99\_€"
-        precioOriginal: "519,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41kUWH6lcsL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51-Kvh5YE7L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51yv2lUCBAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/513EO-iV2WL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/517ckrX-xKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qkDoAS+sL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/418zw60QnwL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/413AOJFz2SL._SL500_.jpg
-            width: 500
-            height: 334
-          - url: https://m.media-amazon.com/images/I/5109jcbDPUL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F1MQXYB5?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor
-            de 250W, batería de 36V y 7.8 de potencia, frenos de disco dobles, suspensión delantera y amortiguador
-            central, pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras.
-            Perfecta para tus desplazamientos diarios y viajes cortos.
-          - >-
-            【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable. Le permite
-            llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
-            amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
-          - >-
-            【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
-            incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una
-            velocidad máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
-          - >-
-            【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de disco dobles delanteros y traseros y frenos
-            electrónicos mejoran completamente el rendimiento de frenado y acortan la distancia de frenado. Luz
-            delantera de seguridad, luz trasera y timbre de bicicleta te hacen más seguro cuando sales especialmente por
-            la noche.
-          - >-
-            【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
-            ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
-            vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
-            posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 140-185cm.
-          - >-
-            【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje
-            complicado, más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24
-            horas. Si usted tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
-        variationAttributes:
-          - name: color_name
-            value: almendra
-        ParentASIN: B0CRHBM699
-      - ASIN: B0F1SL5J63
-        title: >-
-          Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Mini E-Bike, 4.5 Pulgadas Pantalla LED, Batería 36V/7.8Ah,
-          Frenos de Doble Disco y Suspensión Delantera (Almendra+Portaequipajes Trasero)
-        brand: Bodywel
-        precio: "479,99\_€"
-        precioOriginal: "579,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41-P84MM3pL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Hz-Rdw+cL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41MdXdoX3wL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-Kvh5YE7L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/517ckrX-xKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5109jcbDPUL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51yv2lUCBAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51VCN+L1LJL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-iAOWr58L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/61P5nfCSFdL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qkDoAS+sL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F1SL5J63?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor
-            de 250W, batería de 36V y 7.8 de potencia, frenos de disco dobles, suspensión delantera y amortiguador
-            central, pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras.
-            Perfecta para tus desplazamientos diarios y viajes cortos.
-          - >-
-            【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable. Le permite
-            llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
-            amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
-          - >-
-            【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
-            incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una
-            velocidad máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
-          - >-
-            【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de disco dobles delanteros y traseros y frenos
-            electrónicos mejoran completamente el rendimiento de frenado y acortan la distancia de frenado. Luz
-            delantera de seguridad, luz trasera y timbre de bicicleta te hacen más seguro cuando sales especialmente por
-            la noche.
-          - >-
-            【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
-            ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
-            vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
-            posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 140-185cm.
-          - >-
-            【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje
-            complicado, más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24
-            horas. Si usted tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
-        variationAttributes:
-          - name: color_name
-            value: almendra+Portaequipajes trasero
-        ParentASIN: B0CRHBM699
-      - ASIN: B0F1RQ4J2F
-        title: >-
-          Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Mini E-Bike, 4.5 Pulgadas Pantalla LED, Batería 36V/7.8Ah,
-          Frenos de Doble Disco y Suspensión Delantera (Blanco+Portaequipajes Trasero)
-        brand: Bodywel
-        precio: "479,99\_€"
-        precioOriginal: "579,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41k7q8SYosL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41C-VCK08vL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41MdXdoX3wL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-Kvh5YE7L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/517ckrX-xKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5109jcbDPUL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51yv2lUCBAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51VCN+L1LJL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-iAOWr58L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/61P5nfCSFdL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qkDoAS+sL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F1RQ4J2F?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor
-            de 250W, batería de 36V y 7.8 de potencia, frenos de disco dobles, suspensión delantera y amortiguador
-            central, pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras.
-            Perfecta para tus desplazamientos diarios y viajes cortos.
-          - >-
-            【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable. Le permite
-            llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
-            amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
-          - >-
-            【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
-            incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una
-            velocidad máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
-          - >-
-            【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de disco dobles delanteros y traseros y frenos
-            electrónicos mejoran completamente el rendimiento de frenado y acortan la distancia de frenado. Luz
-            delantera de seguridad, luz trasera y timbre de bicicleta te hacen más seguro cuando sales especialmente por
-            la noche.
-          - >-
-            【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
-            ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
-            vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
-            posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 140-185cm.
-          - >-
-            【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje
-            complicado, más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24
-            horas. Si usted tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
-        variationAttributes:
-          - name: color_name
-            value: blanco+Portaequipajes trasero
-        ParentASIN: B0CRHBM699
     title: >-
       Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Portable E-Bike, City EBike con 4.5 Pulgadas Pantalla LED,
       Batería 36V/7.8Ah, Frenos de Doble Disco y Suspensión Delantera, Unisex Adulto (Negro)
@@ -920,6 +708,9 @@ productos:
     nombreCompleto: >-
       Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Portable E-Bike, City EBike con 4.5 Pulgadas Pantalla LED,
       Batería 36V/7.8Ah, Frenos de Doble Disco y Suspensión Delantera, Unisex Adulto (Negro)
+    variationAttributes:
+      - name: color_name
+        value: Negro
   - ASIN: B09BR5FW36
     a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
     brand: VARUN
@@ -1390,75 +1181,7 @@ productos:
     precio: "609,99\_€"
     precioOriginal: "699,99\_€"
     valoracion: 4.2
-    variantes:
-      - ASIN: B08L3QLHG1
-        title: >-
-          HITWAY 16" Bicicleta eléctrica, E Bike 250W Plegable eléctrica, con Asistencia de Pedal, con batería de
-          7,8Ah/36V, sin Acelerador, para Adolescentes y Adultos
-        brand: HITWAY
-        precio: "699,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41SE7lDyZIL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41IGLhslRSL._SL500_.jpg
-            width: 500
-            height: 478
-          - url: https://m.media-amazon.com/images/I/41xSOmcfb5L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41qFnM4BzlL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51ORXkHhb1L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/4132v8LRcRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41P6c-GCoXL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51LD0ChICGL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Ke2MK9hqL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B08L3QLHG1?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Potente motor de larga duración – Motor de 250 W 36 V – Velocidad máxima de hasta 25 km/h y inclinación
-            máxima de 25 grados. Con la batería de litio extraíble de 7,8 Ah y 36 V, la duración de la batería de la
-            bicicleta puede aumentar la duración de la batería de la bicicleta en diferentes modos hasta un máximo de 35
-            a 70 kilómetros.
-          - >-
-            Calidad premium y diseño fácil de plegar. Tamaño plegado: 77 x 43 x 70 cm. Tamaño normal: 147 x 110 cm.
-            Cuerpo de aleación de aluminio y magnesio, de alta resistencia, ligero y fácil de llevar. (Peso neto de la
-            bicicleta: 22,31 kg). La carga máxima es de 120 kg. Neumático de aleación de aluminio integrado de 16
-            pulgadas. Amortiguación de la horquilla delantera y absorción de impactos media, lo que hace que la
-            conducción sea más cómoda y estable.
-          - >-
-            2 modos de trabajo y altura ajustable: puedes elegir entre el modo de pedal clásico y el modo de soporte de
-            pedal. Control de velocidad de tres niveles e indicador de medidor inteligente. Elevadores de sillín y
-            manillar ajustables para personas de diferentes tamaños para encontrar la posición perfecta para un viaje
-            cómodo. Adecuado para adolescentes y adultos.
-          - >-
-            Garantía de conducción segura: los frenos de disco delanteros y traseros de la bicicleta eléctrica HITWAY
-            BK2 ofrecen más protección al conducir. Luces LED de seguridad y claxon para mayor seguridad. Especialmente
-            por la noche. Porque los coches y los peatones lo verán y lo escucharán. La pantalla muestra una gran
-            cantidad de información, por lo que puede estar preparado y confiado en su viaje.
-          - >-
-            Las actualizaciones del producto pueden dar lugar a diferentes paquetes de accesorios y funciones para
-            bicicletas. Lea atentamente la descripción del producto antes de realizar el pedido, no aceptamos
-            devoluciones debido a pedidos incorrectos. Si es necesario, póngase en contacto con nosotros a tiempo para
-            obtener ayuda.
-        variationAttributes:
-          - name: color_name
-            value: Gris
-        ParentASIN: B08XNV2G7K
+    variantes: []
     title: >-
       HITWAY 16" Bicicleta eléctrica, E Bike 250W Plegable eléctrica, con Asistencia de Pedal, con batería de 7,8Ah/36V,
       sin Acelerador, para Adolescentes y Adultos
@@ -1770,7 +1493,7 @@ productos:
       He probado la SAMEBIKE 250W 50NM Bicicleta Eléctrica Adultos, 20’’ y me ha dejado una impresión bastante buena. La
       asistencia eléctrica responde bien y la calidad de construcción está por encima de lo esperado. Puede que no
       destaque por su ligereza, pero sí por ser una opción cómoda y práctica para moverse por ciudad.
-    disponibilidad: Envío en 4 a 5 semanas
+    disponibilidad: Envío en 4 a 5 días
     enlace: https://amzn.to/44RgS3J?tag=recomendadorn-21&th=1
     imagen: https://m.media-amazon.com/images/I/5111MeUFpOL._SL500_.jpg
     imagenHeight: 500
@@ -1812,7 +1535,7 @@ productos:
         brand: SAMEBIKE
         precio: "639,00\_€"
         precioOriginal: No especificado
-        disponibilidad: Envío en 4 a 5 semanas
+        disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/511zsOsEJYL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1868,7 +1591,7 @@ productos:
         brand: SAMEBIKE
         precio: "699,00\_€"
         precioOriginal: No especificado
-        disponibilidad: Envío en 4 a 5 semanas
+        disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/51g7V0Igd1L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
