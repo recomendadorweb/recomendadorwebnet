@@ -1,0 +1,92 @@
+cabecera:
+  # KW_ATACADA: camisetas padel personalizadas | VOL: 1000
+  principal: camisetas de pádel personalizadas
+  meta:
+    vol: 1000
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: camisetas padel personalizadas | VOL: 1000
+  - camisetas de pádel personalizadas
+  # KW_ATACADA: camiseta padel personalizada | VOL: 390
+  - camiseta de pádel personalizada
+  # KW_ATACADA: camisetas de padel personalizadas | VOL: 320
+  - camisetas de pádel personalizadas
+  # KW_ATACADA: camisetas personalizadas padel | VOL: 210
+  - camisetas personalizadas de pádel
+secciones:
+  - kw: camisetas padel personalizadas
+    # KW_ATACADA: camisetas padel personalizadas | VOL: 1000
+    titulo: camisetas de pádel personalizadas
+    id: camisetas-padel-personalizadas
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1000
+    diff: 0
+    intent: I
+  - kw: camiseta padel personalizada
+    # KW_ATACADA: camiseta padel personalizada | VOL: 390
+    titulo: camiseta de pádel personalizada
+    id: camiseta-padel-personalizada
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 390
+    diff: 0
+    intent: I
+  - kw: camisetas de padel personalizadas
+    # KW_ATACADA: camisetas de padel personalizadas | VOL: 320
+    titulo: camisetas de pádel personalizadas
+    id: camisetas-de-padel-personalizadas
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 320
+    diff: 0
+    intent: I
+  - kw: camisetas personalizadas padel
+    # KW_ATACADA: camisetas personalizadas padel | VOL: 210
+    titulo: camisetas personalizadas de pádel
+    id: camisetas-personalizadas-padel
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 210
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: camisetas padel personalizadas | VOL: 1000
+  - camisetas de pádel personalizadas
+  # KW_ATACADA: camiseta padel personalizada | VOL: 390
+  - camiseta de pádel personalizada
+  # KW_ATACADA: camisetas de padel personalizadas | VOL: 320
+  - camisetas de pádel personalizadas
+  # KW_ATACADA: camisetas personalizadas padel | VOL: 210
+  - camisetas personalizadas de pádel
+  # KW_ATACADA: camiseta de padel personalizada | VOL: 110
+  - camiseta de pádel personalizada
+  # KW_ATACADA: camiseta personalizada padel | VOL: 90
+  - camiseta personalizada de pádel
+  # KW_ATACADA: camiseta pádel personalizada | VOL: 90
+  - camiseta de pádel personalizada
+  # KW_ATACADA: camisetas pádel personalizadas | VOL: 90
+  - camisetas de pádel personalizadas
+  # KW_ATACADA: personalizar camisetas padel | VOL: 90
+  - personalizar camisetas de pádel
+html_map:
+  h1: camisetas de pádel personalizadas
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - camisetas de pádel personalizadas
+  - camiseta de pádel personalizada
+  - camisetas de pádel personalizadas
+  - camisetas personalizadas de pádel
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 9
+  total_brands_detected: 33

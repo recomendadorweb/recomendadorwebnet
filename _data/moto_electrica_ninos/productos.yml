@@ -726,7 +726,7 @@ productos:
           AIYAPLAY Moto Eléctrica para Niños de +2 Años Moto de Batería para Niños 6V con Función de Soplar Burbujas
           Faros Música Velocidad 3 km/h Carga 30 kg Rojo
         brand: AIYAPLAY
-        precio: "77,99\_€"
+        precio: "71,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41AcoPrZWtL._SL500_.jpg
@@ -1699,11 +1699,80 @@ productos:
     title: >-
       Moto eléctrica Infantil Honda CBR 1000 12V de Babycar - Moto eléctrica Infantil con Acelerador de pie y Acceso MP3
       - Moto Infantil con Luces y Sonidos Integrados (Rojo)
-    variantes: []
+    variantes:
+      - ASIN: B0B1JC5N6V
+        title: >-
+          Moto eléctrica Infantil Honda CBR 1000 12V de Babycar - Moto eléctrica Infantil con Acelerador de pie y Acceso
+          MP3 - Moto Infantil con Luces y Sonidos Integrados (Blanco)
+        brand: Babycar
+        precio: "179,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51szzlSl9GL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41KAaWbKcUL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41D7UDktNML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51uj8fEbd1L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51M1AiSoFhL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/419j1wSk7tL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51lxOeM9NfL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51C8t3U5U2L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51y+LbpJ3OL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41P2PAcVDbL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51dxJct-LfL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0B1JC5N6V?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            🏍️Honda CBR 1000 - Moto niño 3 años hasta 6 años con batería de 12V 3.5AH y 1 motor de 30W. Muy sencilla y
+            súper rápida de montar
+          - >-
+            📱Design - Esta mini moto presenta un diseño realista que copia a la perfección y al detalle la Honda
+            original. Disponible tanto en blanco como en rojo, esta moto también tiene ruedas para añadir según las
+            necesidades de tu pequeño piloto
+          - >-
+            🛠️Información técnica - moto bateria niño con carga inicial de 10 horas la primera vez. Mide 87,5 X 42,8 X
+            51,5 cm y soporta un peso de hasta 30 kg; con luces LED, entradas USB, Mp3 y sistema de arranque suave para
+            evitar arranques peligrosos
+          - >-
+            🏁Puedes montar en cualquier sitio: nuestra moto infantiles puede circular por cualquier terreno, tanto en
+            interiores como en exteriores, sobre grava, arena, tierra y hierba.
+          - >-
+            💯 ¿Por qué elegir BabyCar - concesionario de motos electricas infantiles entre los más grandes de Europa;
+            marca joven y dinámica de conducción realista con atención a la seguridad y servicio de asistencia al
+            cliente siempre disponible
+        variationAttributes:
+          - name: color_name
+            value: Blanco
+        ParentASIN: B0C7VXNXLW
     ParentASIN: B0C7VXNXLW
     nombreCompleto: >-
       Moto eléctrica Infantil Honda CBR 1000 12V de Babycar - Moto eléctrica Infantil con Acelerador de pie y Acceso MP3
       - Moto Infantil con Luces y Sonidos Integrados (Rojo)
+    variationAttributes:
+      - name: color_name
+        value: Rojo
   - ASIN: B0F9FH3DPP
     a_tener_en_cuenta: A partir de 4 años
     brand: RCB
