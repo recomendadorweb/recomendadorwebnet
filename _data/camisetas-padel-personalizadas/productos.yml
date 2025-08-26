@@ -7,6 +7,7 @@ productos:
     precio: "29,00\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
+    valoracion: 5
     imagen: https://m.media-amazon.com/images/I/31iPTzkB1cL._SL500_.jpg
     imagenWidth: 500
     imagenHeight: 500
@@ -525,6 +526,7 @@ productos:
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/3131f9oDn8L._SL500_.jpg
     imagenWidth: 500
+    valoracion: 5
     imagenHeight: 500
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/31dzG1-S5hL._SL500_.jpg
@@ -1279,6 +1281,7 @@ productos:
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/31Q7VWo06TL._SL500_.jpg
     imagenWidth: 500
+    valoracion: 5
     imagenHeight: 500
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41WUJgKajBL._SL500_.jpg
