@@ -15,9 +15,9 @@ productos:
       - Ajuste perfecto al cuerpo
       - Corte tradicional de flamenca
       - No destiñe ni se deforma al estirar
-    precio: Sin precio
+    precio: "75,00\_€"
     precioOriginal: No especificado
-    disponibilidad: Sin info
+    disponibilidad: Envío en 4 a 5 días
     imagen: https://m.media-amazon.com/images/I/51R3DAdCS2L._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 249
@@ -71,6 +71,11 @@ productos:
         ParentASIN: B0F2KYCDD7
     ParentASIN: B0F2KYCDD7
     nombreCompleto: Genérico Vestido de Flamenca de Lunares (FR/ES, Letras, M, Regular, Regular, Rojo con Lunares Negros)
+    variationAttributes:
+      - name: size_name
+        value: M
+      - name: color_name
+        value: Rojo Con Lunares Negros
   - ASIN: B0F5BWR1DM
     nombre: Vestido Flamenco Mujer con Volantes
     brand: AMARU SANCHESU
@@ -2545,17 +2550,17 @@ productos:
       - url: https://m.media-amazon.com/images/I/41Ot9fsZhQL._SL500_.jpg
         width: 273
         height: 500
-      - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
-        width: 320
-        height: 500
+      - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+        width: 500
+        height: 441
       - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
         width: 500
         height: 441
       - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
         width: 320
         height: 500
-      - url: https://m.media-amazon.com/images/I/41RHy6MycfL._SL500_.jpg
-        width: 320
+      - url: https://m.media-amazon.com/images/I/41wMRj4vnmL._SL500_.jpg
+        width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
         width: 320
@@ -2584,17 +2589,17 @@ productos:
           - url: https://m.media-amazon.com/images/I/41Ot9fsZhQL._SL500_.jpg
             width: 273
             height: 500
-          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
-            width: 320
-            height: 500
+          - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+            width: 500
+            height: 441
           - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
             width: 500
             height: 441
           - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
             width: 320
             height: 500
-          - url: https://m.media-amazon.com/images/I/41RHy6MycfL._SL500_.jpg
-            width: 320
+          - url: https://m.media-amazon.com/images/I/41wMRj4vnmL._SL500_.jpg
+            width: 500
             height: 500
           - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
             width: 320
@@ -2626,17 +2631,17 @@ productos:
           - url: https://m.media-amazon.com/images/I/41Ot9fsZhQL._SL500_.jpg
             width: 273
             height: 500
-          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
-            width: 320
-            height: 500
+          - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+            width: 500
+            height: 441
           - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
             width: 500
             height: 441
           - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
             width: 320
             height: 500
-          - url: https://m.media-amazon.com/images/I/41RHy6MycfL._SL500_.jpg
-            width: 320
+          - url: https://m.media-amazon.com/images/I/41wMRj4vnmL._SL500_.jpg
+            width: 500
             height: 500
           - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
             width: 320
