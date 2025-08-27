@@ -1,0 +1,92 @@
+cabecera:
+  # KW_ATACADA: cuellos de pelo | VOL: 2400
+  principal: cuellos de pelo
+  meta:
+    vol: 2400
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: cuellos de pelo | VOL: 2400
+  - cuellos de pelo
+  # KW_ATACADA: cuello pelo | VOL: 1900
+  - cuello de pelo
+  # KW_ATACADA: cuello de pelo | VOL: 1600
+  - cuello de pelo
+  # KW_ATACADA: cuellos pelo | VOL: 720
+  - cuellos de pelo
+secciones:
+  - kw: cuellos de pelo
+    # KW_ATACADA: cuellos de pelo | VOL: 2400
+    titulo: cuellos de pelo
+    id: cuellos-de-pelo
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2400
+    diff: 0
+    intent: I
+  - kw: cuello pelo
+    # KW_ATACADA: cuello pelo | VOL: 1900
+    titulo: cuello de pelo
+    id: cuello-pelo
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1900
+    diff: 0
+    intent: I
+  - kw: cuello de pelo
+    # KW_ATACADA: cuello de pelo | VOL: 1600
+    titulo: cuello de pelo
+    id: cuello-de-pelo
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1600
+    diff: 0
+    intent: I
+  - kw: cuellos pelo
+    # KW_ATACADA: cuellos pelo | VOL: 720
+    titulo: cuellos de pelo
+    id: cuellos-pelo
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 720
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: cuellos de pelo | VOL: 2400
+  - cuellos de pelo
+  # KW_ATACADA: cuello pelo | VOL: 1900
+  - cuello de pelo
+  # KW_ATACADA: cuello de pelo | VOL: 1600
+  - cuello de pelo
+  # KW_ATACADA: cuellos pelo | VOL: 720
+  - cuellos de pelo
+  # KW_ATACADA: cuello pelo sintetico | VOL: 480
+  - cuello de pelo sintético
+  # KW_ATACADA: cuello pelo natural | VOL: 390
+  - cuello de pelo natural
+  # KW_ATACADA: cuellos de pelo natural | VOL: 320
+  - cuellos de pelo natural
+  # KW_ATACADA: cuello de pelo sintetico | VOL: 170
+  - cuello de pelo sintético
+  # KW_ATACADA: cuellos de pelo sintetico | VOL: 170
+  - cuellos de pelo sintético
+html_map:
+  h1: cuellos de pelo
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - cuellos de pelo
+  - cuello de pelo
+  - cuello de pelo
+  - cuellos de pelo
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 9
+  total_brands_detected: 60
