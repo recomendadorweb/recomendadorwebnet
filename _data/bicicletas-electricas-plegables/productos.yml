@@ -268,7 +268,7 @@ productos:
       La ENGWE M20/M1 es una bestia para los que buscan potencia y autonomía. Viene con doble batería y suspensión
       completa, lo que se nota mucho en trayectos largos o con terreno irregular. No es una bici ligera ni pensada para
       cargar, pero si lo que quieres es algo más parecido a una moto eléctrica plegable, esta es la tuya.
-    disponibilidad: Sin info
+    disponibilidad: Envío en 2 a 3 días
     enlace: https://amzn.to/4l16n2s?tag=recomendadorn-21&th=1
     imagen: https://m.media-amazon.com/images/I/51kAr4kTKBL._SL500_.jpg
     imagenHeight: 500
@@ -297,7 +297,7 @@ productos:
       - 🚴‍♂️ Ruedas de 20
       - 🛞 Buena suspensión
     nombre: ENGWE M20/M1 Bicicleta Electrica Hombre
-    precio: Sin precio
+    precio: "1.299,00\_€"
     precioOriginal: No especificado
     valoracion: 4.7
     variantes: []
@@ -308,6 +308,11 @@ productos:
     nombreCompleto: >-
       ENGWE M20 Bicicleta Electrica Hombre | 20"×4.0 Fat Tire Bici Eléctrica | Autonomía máxima de 75 KM/150 KM con 48V
       13Ah/26Ah Batería | 7 Velocità | E-MTB Adultos Urbana ebike
+    variationAttributes:
+      - name: color_name
+        value: Verde
+      - name: style_name
+        value: Batería Doble
   - ASIN: B0C7KHZN12
     a_tener_en_cuenta: 📦 Tamaño y peso algo elevados al plegarla
     brand: ENGWE
@@ -1189,70 +1194,6 @@ productos:
     precioOriginal: No especificado
     valoracion: 4.7
     variantes:
-      - ASIN: B0BZ4FDQQH
-        title: >-
-          HITWAY Bicicleta eléctrica 20"*3,0/20"*4,0 Bicicleta Montaña Plegable Ebike Fatbike,36V 12Ah/48V 15Ah Batería,
-          250W Motor, 7 Vel, E-MTB, Pedal Assist Alcance 35-90KM/45-100KM
-        brand: HITWAY
-        precio: "999,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51k4MXdPBPL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51Dwg-O0kKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41mNz8CoMcL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/518RsgUTFhL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41UZ9Gzjq0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41JSl471hNL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/515O1vlkbDL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Rvti+pLbL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0BZ4FDQQH?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Duración de la batería de alta velocidad y alta calidad: BK11 está equipado con un motor sin escobillas de
-            250 W, una batería de litio de 36 V 12 AH/48 V 15 AH y la velocidad máxima de conducción puede alcanzar los
-            25 km/h. Cada carga completa puede viajar de 35 a 90 km/45 a 100 km, y la batería se puede quitar para
-            cargarla en interiores
-          - >-
-            Fat E-Bike profesional de 20": Equipada con neumáticos profesionales 3,0/4,0 y doble suspensión. Resistente
-            al desgaste y a los pinchazos, buena absorción de impactos. Ya sea en la ciudad o en la montaña, HITWAY
-            puede brindarle una experiencia de conducción cómoda
-          - >-
-            Excelente rendimiento de conducción: BK11 tiene 2 modos de conducción incorporados (modo de asistencia, modo
-            de bicicleta) y un sistema de cambio de 7 velocidades, puede definir con precisión su velocidad de
-            conducción. Estos 2 modos de conducción son mejores opciones para sus desplazamientos, ejercicio y viajes
-          - >-
-            Diseño plegable: La bicicleta eléctrica HITWAY está hecha de aleación de aluminio de alta calidad y pesa
-            alrededor de 25,8 kg/29,5 kg.Es duradera y tiene una velocidad de conducción más rápida. El diseño plegable
-            es fácil de transportar y se puede guardar en el automóvil o en casa, para que pueda comenzar su viaje en
-            bicicleta en cualquier momento
-          - >-
-            Configuración avanzada: La pantalla LCD multifuncional de las bicicletas HITWAY le brinda suficiente
-            información de conducción, que puede mostrar la velocidad, el kilometraje y la potencia, y facilitarle la
-            conducción. Las horquillas delanteras amortiguadoras, los frenos de disco y las luces delanteras y traseras
-            están especialmente diseñados para su seguridad al conducir
-        variationAttributes:
-          - name: color_name
-            value: Negro+verde
-          - name: style_name
-            value: 36V 12AH/3,0 Neumático
-        ParentASIN: B0FJ2WD5BL
       - ASIN: B0BZ4DP7T7
         title: >-
           HITWAY Bicicleta eléctrica 20"*3,0/20"*4,0 Bicicleta Montaña Plegable Ebike Fatbike,36V 12Ah/48V 15Ah Batería,
