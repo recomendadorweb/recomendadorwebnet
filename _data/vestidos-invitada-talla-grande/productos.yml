@@ -60,24 +60,30 @@ productos:
         precio: "63,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/313-TprxknL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/311WZAPhT8L._SL500_.jpg
         imagenWidth: 375
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31E7W2CaKuL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/31W+-fMQVKL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WRJV7Zl+L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31s1xf5TaJL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415ONBR7RtL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Y09mPtluL._SL500_.jpg
             width: 375
             height: 500
           - url: https://m.media-amazon.com/images/I/51O+cm4ZHXS._SL500_.jpg
             width: 351
             height: 500
-          - url: https://m.media-amazon.com/images/I/41BC9iSIRzL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ww2XT1NqL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31mlV4dP77L._SL500_.jpg
-            width: 375
+          - url: https://m.media-amazon.com/images/I/51O+cm4ZHXS._SL500_.jpg
+            width: 351
             height: 500
         enlace: https://www.amazon.es/dp/B07QVJBPD3?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
@@ -177,24 +183,30 @@ productos:
         precio: "63,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/313-TprxknL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/311WZAPhT8L._SL500_.jpg
         imagenWidth: 375
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31E7W2CaKuL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/31W+-fMQVKL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WRJV7Zl+L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31s1xf5TaJL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415ONBR7RtL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Y09mPtluL._SL500_.jpg
             width: 375
             height: 500
           - url: https://m.media-amazon.com/images/I/51O+cm4ZHXS._SL500_.jpg
             width: 351
             height: 500
-          - url: https://m.media-amazon.com/images/I/41BC9iSIRzL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ww2XT1NqL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31mlV4dP77L._SL500_.jpg
-            width: 375
+          - url: https://m.media-amazon.com/images/I/51O+cm4ZHXS._SL500_.jpg
+            width: 351
             height: 500
         enlace: https://www.amazon.es/dp/B07QVJCSH3?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
@@ -2048,68 +2060,7 @@ productos:
         value: Negro
       - name: size_name
         value: 54 Grande
-    variantes:
-      - ASIN: B0D73FNY52
-        title: >-
-          Hanna Nikole Vestido de cóctel de dos piezas para mujer, de gasa, elegante, línea A, sin mangas, cuello
-          redondo, con volantes de tul, cardigan, azul claro, 46
-        brand: Hanna Nikole
-        precio: "67,34\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31h8wZAkrlL._SL500_.jpg
-        imagenWidth: 313
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41b6t9-njmL._SL500_.jpg
-            width: 464
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41DatMge0dL._SL500_.jpg
-            width: 464
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oeqjKti+L._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41FKMkjhrEL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg
-            width: 385
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41K+YZBSR8L._SL500_.jpg
-            width: 333
-            height: 500
-        enlace: https://www.amazon.es/dp/B0D73FNY52?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Sobre la talla: nuestras tallas son tallas de EE. UU., las tallas correspondientes en alemán son las
-            siguientes: US 16 = DE 46, US 18 = DE 48, US 20 = ES 50, US 22 = ES 52, US 24 = 54.
-          - >-
-            Características: (1) El juego de vestido de gasa de dos piezas se compone de un vestido sin mangas y un
-            cárdigan a juego. (2)Vestido: vestido de lentejuelas sin mangas con cuello redondo. El material de gasa que
-            fluye le da al vestido un toque elegante y femenino. Los adornos de lentejuelas están cuidadosamente cosidos
-            en la gasa y le dan al vestido un toque de brillo y glamour. (3) La chaqueta de gasa tiene un diseño único,
-            suelto y cómodo y te hace más elegante.
-          - >-
-            Material fino: tejido principal: 98 % poliéster+2 % viscosa. Este vestido de cóctel de lentejuelas de cuello
-            redondo para mujer está hecho de tela cómoda de alta calidad, se siente suave, fluida y fácil de llevar.
-          - >-
-            Combinación: puedes usarlo solo para acentuar tu figura o con la chaqueta de punto de manga 3/4 para un
-            aspecto moderno. para un look moderno, puede combinar un vestido de gasa con elegantes tacones y accesorios
-            brillantes. para un look casual, también puedes combinarlo con sandalias planas y una bolsa de hombro
-            ligera. Este cárdigan también se puede usar solo con otras prendas para darle a tu look un aspecto más
-            sofisticado.
-          - >-
-            Ocasiones: Cardigan de dos piezas con volantes, vestidos de madres de novia perfectos para todas las
-            ocasiones: oficina, trabajo, fiesta, citas, vacaciones, boda, iglesia, salir, Navidad, fiesta de baile,
-            fiesta de disfraces, espectáculos, Año Nuevo, aniversario, discoteca, Halloween, etc. y para uso diario y es
-            adecuado tanto para ocasiones casuales como comerciales.
-        variationAttributes:
-          - name: color_name
-            value: Azul Claro
-          - name: size_name
-            value: 48 Grande
-        ParentASIN: B0DBXDT646
+    variantes: []
     nombre: Hanna Nikole vestido invitada boda talla grande gasa
     caracteristicas:
       - 'Conjunto de dos piezas: vestido sin mangas y cárdigan'

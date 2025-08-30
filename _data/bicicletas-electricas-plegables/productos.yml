@@ -399,7 +399,83 @@ productos:
     precio: Sin precio
     precioOriginal: No especificado
     valoracion: 4.2
-    variantes: []
+    variantes:
+      - ASIN: B0C7KFSRT3
+        title: >-
+          ENGWE Bicicleta Eléctrica Plegable 250W E-Bike, 20×4.0 Inch Off-Road Fat Tire, Batería de 48V 13Ah Alcance
+          hasta 120km, 25KM/H 7 Velocidades Suspensión Completa Engine X
+        brand: ENGWE
+        precio: "1.299,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41mbc2KWQoL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41MRCydCSXL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41OlpXk9bpL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Gb7cyK7iL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51qhK59EoML._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/412Zi3LCp0L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411HxvBgcFL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51a2mKRzfTL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41DwJG0EVML._SL500_.jpg
+            width: 375
+            height: 500
+        enlace: https://www.amazon.es/dp/B0C7KFSRT3?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【MOTOR Y BATERÍA POTENTES】- Este bicicleta electrica ENGINE X está equipado con un motorreductor sin
+            escobillas de 250 W con una velocidad máxima de 25 kilómetros por hora y gran potencia. La batería de litio
+            extraíble de 48 V y 13 Ah tiene un alcance de crucero máximo de 120 km en modo impulso, lo que le permite
+            completar distancias cortas de forma fácil y libre sin preocuparse por la duración de la batería cuando está
+            fuera. Perfecto para sus desplazamientos cortos y necesidades diarias.
+          - >-
+            【SUSPENSIÓN Y NEUMÁTICOS ANCHOS PARA DIFERENTES TERRENOS】- Las bicicletas eléctricas plegables ENGWE están
+            diseñadas para abordar con éxito una variedad de terrenos. La horquilla de suspensión proporciona una
+            conducción cómoda en superficies irregulares, mientras que los neumáticos anchos de 20” x 4.0 garantizan
+            estabilidad y agarre sobre asfalto, grava, arena y nieve. Podrás explorar tanto el entorno urbano como el
+            todoterreno con confianza y seguridad.
+          - >-
+            【FRENOS PERFECTOS Y 7 VELOCIDADES】- La bici electrica plegable ENGWE está equipada con frenos de disco
+            mecánicos delanteros y traseros para una potente capacidad de frenado en cualquier condición, proporciona
+            seguridad para tu conducción. Además, el sistema de 7 velocidades ofrece múltiples opciones de velocidad
+            para que puedas encontrar la velocidad que mejor se adapte a ti o pedalear para un paseo rápido o fácil.
+          - >-
+            【DISEÑO HUMANIZADO Y CONSIDERADO】- La bicicleta eléctrica ENGWE te ofrece una comodidad excepcional durante
+            tus viajes en bicicleta, gracias al sillín de piel suave y a los neumáticos grasos. Además, el diseño
+            plegable hace que la bicicleta sea cómoda de llevar en el coche o en el camping. Para garantizar su
+            seguridad, la bicicleta está equipada con una pantalla LCD intuitiva, un faro luminoso y una luz trasera que
+            le permiten disfrutar de su pedaleo incluso por la noche, sin preocupaciones.
+          - >-
+            【COMODIDAD Y SEGURIDAD】- Además de un rendimiento potente, las bicicleta ENGINE X ofrecen un diseño
+            ergonómico y cómodo que alivia la fatiga al andar. El marco de aleación de aluminio 6061 garantiza una
+            construcción ligera pero duradera, haciendo que la bicicleta sea fácil de manejar. La horquilla de
+            suspensión mecánica absorbe los baches y las asperezas del camino, lo que reduce el riesgo de vuelco y
+            proporciona una conducción más suave y cómoda.
+          - >-
+            【ATENCIÓN AL CLIENTE 24/7 FIABLE Y PROFESIONAL】- La bicicleta eléctrica ENGWE está premontada al 85% para
+            simplificar el montaje, incluye dos pedales y un asiento. El pedido se entregará dentro de 5-10 días.Nuestro
+            equipo de atención al cliente está disponible 24/7 para ayudarlo y responder a sus preguntas. Garantizamos
+            un servicio confiable y una garantía de un año para motores, baterías y controladores.
+        variationAttributes:
+          - name: color_name
+            value: Rojo
+        ParentASIN: B0DMSP4QYQ
     title: >-
       ENGWE Bicicleta Eléctrica Plegable 250W E-Bike, 20×4.0 Inch Off-Road Fat Tire, Batería de 48V 13Ah Alcance hasta
       120km, 25KM/H 7 Velocidades Suspensión Completa Engine X
@@ -712,71 +788,7 @@ productos:
     precio: "619,00\_€"
     precioOriginal: No especificado
     valoracion: 4.2
-    variantes:
-      - ASIN: B0D1XYL4GG
-        title: >-
-          VARUN E-Bike Plegable, Bicicleta Eléctrica de Montaña de 26 Pulgadas con Motor de 250W, Batería Reemplazable
-          de 48V /374.4Wh, Bici Eléctrica Doblable de 21 Velocidades
-        brand: VARUN
-        precio: "619,00\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51u7r1nXN3L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51bakgEl7VL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51O-Kt2Bj+L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/61f6ZG2bSzL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51xArDA8OZL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51v5KcvyHRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/513STSxje5L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0D1XYL4GG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            𝐏𝐨𝐭𝐞𝐧𝐭𝐞 𝐒𝐢𝐬𝐭𝐞𝐦𝐚 𝐄𝐥é𝐜𝐭𝐫𝐢𝐜𝐨: Equipado con un motor sin escobillas de 250 W y una batería
-            de iones de litio reemplazable de 48 V 374.4 Wh, el potente motor facilita el ciclismo cuesta arriba y el
-            sistema inteligente de almacenamiento de energía puede prolongar la vida útil de la batería cuesta abajo. La
-            velocidad máxima es de 25 km/h. La batería de gran capacidad puede cargarse por completo en 5 o 6 horas para
-            satisfacer las exigencias de los desplazamientos diarios
-          - >-
-            𝟒 𝐌𝐨𝐝𝐨𝐬 𝐝𝐞 𝐂𝐨𝐧𝐝𝐮𝐜𝐜𝐢ó𝐧+𝐁𝐨𝐨𝐬𝐭 𝐌𝐨𝐝𝐨: VARUN bicicleta eléctrica plegable tiene 4 modos
-            de conducción, puede cambiar los modos para obtener más diversión de conducción. Al mismo tiempo, la
-            bicicleta eléctrica de montaña también tiene un modo de refuerzo, mantenga pulsado el botón «-» en el
-            salpicadero durante 3 segundos para activar el modo de refuerzo, que puede ayudarle a empujar fácilmente la
-            bicicleta cuesta arriba, ahorrando tiempo y energía
-          - >-
-            𝐁𝐢𝐜𝐢𝐜𝐥𝐞𝐭𝐚 𝐏𝐥𝐞𝐠𝐚𝐛𝐥𝐞: La bicicleta eléctricaVARUN utiliza un cuadro plegable, que se puede
-            plegar rápidamente y almacenar fácilmente, y se puede utilizar fácilmente para viajar. Debido a su forma
-            plegable compacta, se puede almacenar fácilmente en el maletero del camión, y la llanta está hecha de
-            aleación de aluminio de doble pared, que puede proporcionar una vida útil más larga y una velocidad de
-            conducción más rápida con menos resistencia
-          - >-
-            𝟐𝟏 𝐕𝐞𝐥𝐨𝐜𝐢𝐝𝐚𝐝𝐞𝐬: La bicicleta eléctrica está equipada con un desviador delantero de 3
-            velocidades y un desviador trasero de 7 velocidades, que juntos forman un sistema de cambios de 21
-            velocidades. Déjate llevar a toda velocidad por la carretera y el bosque y disfruta de la pasión y el
-            desafío de la velocidadhoras
-          - >-
-            𝐒𝐞𝐠𝐮𝐫𝐢𝐝𝐚𝐝 𝐲 𝐂𝐨𝐦𝐨𝐝𝐢𝐝𝐚𝐝: La bicicleta de montaña plegable está equipada con amortiguadores
-            dobles, frenos de disco dobles y faros LED. Los amortiguadores dobles evitan grandes baches en caminos de
-            montaña irregulares y hacen que la conducción sea más cómoda. Los faros LED brillantes nos proporcionan
-            mucha luz por la noche. La luz nos permite ver con mayor claridad
-        variationAttributes:
-          - name: color_name
-            value: Rosa
-        ParentASIN: B0DH1ZHLRG
+    variantes: []
     title: >-
       VARUN E-Bike Plegable, Bicicleta Eléctrica de Montaña de 26 Pulgadas con Motor de 250W, Batería Reemplazable de
       48V /7,8Ah, Bici Eléctrica Doblable de 21 Velocidades
