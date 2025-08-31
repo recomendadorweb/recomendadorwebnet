@@ -6387,7 +6387,7 @@ productos:
         brand: Dormio
         precio: "159,99\_€"
         precioOriginal: "159,99\_€"
-        disponibilidad: En stock
+        disponibilidad: Envío en 1 a 3 meses
         imagen: https://m.media-amazon.com/images/I/21gUIv0DiyL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 333
@@ -7218,6 +7218,59 @@ productos:
             value: 20 cm
           - name: size_name
             value: 160 x 190 cm
+        ParentASIN: B0D9FQ4BKJ
+      - ASIN: B08BXPFCRL
+        title: >-
+          LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
+          100x200 cm
+        brand: LUCID
+        precio: "169,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 6 a 7 meses
+        imagen: https://m.media-amazon.com/images/I/41YFczsupqL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Lulmv-iyL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/418MnLlIOtL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/510khp6b7yL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/410ruwH1I5L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/515U8SQE43L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B08BXPFCRL?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            AJUSTE PERFECTO: Este colchon viscoelastico cuenta con una suave textura de 20 centímetros que es perfecta
+            para las personas que duermen de lado o boca arriba
+          - >-
+            INFUSIÓN DE GEL: La espuma viscoelástica con partículas de gel regula la temperatura y al mismo tiempo se
+            adapta al cuerpo para un confort óptimo durante toda la noche
+          - >-
+            REGULA LA TEMPERATURA: La capa de espuma viscoelástica transpirable cuenta con partículas de gel, por lo que
+            ofrece una experiencia más fresca durante el descanso que la espuma viscoelástica tradicional, ayudando a
+            regular la temperatura corporal
+          - >-
+            ESPUMA CON MEMORIA SUAVE: Una entrecapa de 2,5 cm de espuma viscoelástica se añade a una espuma de mayor
+            firmeza con partículas de carbón de bambú; El carbón de bambú elimina los olores y absorbe el exceso de
+            humedad
+          - >-
+            SEGURO Y DE LARGA DURACIÓN: Utilizamos únicamente espuma viscoelástica con la certificación OEKO-TEX y
+            CertiPUR US que garantiza la seguridad y la comodidad de nuestros clientes; 10 años de garantía limitada del
+            fabricante
+        variationAttributes:
+          - name: style_name
+            value: 20 cm
+          - name: size_name
+            value: 100 x 200 cm
         ParentASIN: B0D9FQ4BKJ
     ParentASIN: B0D9FQ4BKJ
     nombreCompleto: >-

@@ -430,7 +430,7 @@ productos:
           Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
           avanzadas, Garmin Pay, Autonomía de hasta 14 Días, Negro
         brand: Garmin
-        precio: "380,06\_€"
+        precio: "405,58\_€"
         precioOriginal: "399,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41wNe-M+lrL._SL500_.jpg
@@ -555,7 +555,7 @@ productos:
     valoracion: 4
     precio: "299,00\_€"
     precioOriginal: "329,99\_€"
-    disponibilidad: En stock
+    disponibilidad: Envío en 3 a 7 meses
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41rrE4czoiL._SL500_.jpg
         width: 500
@@ -843,6 +843,71 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CW13RWZH
+      - ASIN: B0CWB5JPSS
+        title: >-
+          Garmin Forerunner 165 Music, Reloj Inteligente para Correr con GPS, Pantalla Táctil AMOLED, Métricas
+          Optimizadas, Planes de Entrenamiento, Pay, Autonomía de 11 Días, Azul
+        brand: Garmin
+        precio: "326,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31phsVbUS5L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41rrE4czoiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41c1A5XG5GL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CT7kIAmAL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41r+Tllzb6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41foABJnOTL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41RfNwy+vRL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0CWB5JPSS?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Consulta todos tus datos en una brillante pantalla táctil AMOLED con control adicional por botones. Elegante
+            y ligero, con un tamaño de caja de 43 mm y diferentes opciones de colores.
+          - >-
+            Con el estado de entrenamiento, verás cómo repercuten tus entrenamientos en tu forma física y verás el
+            principal beneficio obtenido de tu entrenamiento. Alcanza tus objetivos con sugerencias de entrenamientos
+            diarios personalizados que se adaptan en función del rendimiento y la recuperación.
+          - >-
+            Nada más levantarte, obtén el Morning Report con una visión general de tus perspectivas de sueño,
+            recuperación y entrenamiento, junto con el tiempo y el estado de la variabilidad de frecuencia cardíaca.
+          - >-
+            Deja el dinero en efectivo y las tarjetas en casa, los pagos contactless de Garmin Pay te permiten pagar las
+            compras sobre la marcha.
+          - Consigue hasta 11 días de autonomía en modo smartwatch y hasta 19 horas en modo GPS.
+          - Descarga canciones y listas de reproducción para escucharlas sin teléfono con tus auriculares inalámbricos.
+          - >-
+            Descubre cuanto tiempo debes recuperarte antes de tu próximo entrenamiento en función de tu último
+            entrenamiento, así como del estrés general, el sueño y las actividades diarias fuera de los entrenamientos.
+          - >-
+            Obtén una comprensión más profunda de tu salud general, entrenamiento y recuperación a través de la
+            variabilidad de frecuencia cardíaca.
+          - >-
+            Inicia un seguimiento o registra automáticamente tus siestas para ver cómo benefician a tu cuerpo y cuál
+            debería ser la hora y duración ideales.
+          - >-
+            Si tu reloj detecta que se ha producido un incidente, enviará un mensaje con tu ubicación en directo. O si
+            te sientes inseguro, puedes hacerlo manualmente.
+        variationAttributes:
+          - name: configuration
+            value: Music
+          - name: color_name
+            value: Azul
+        ParentASIN: B0CW13RWZH
     ParentASIN: B0CW13RWZH
     variationAttributes:
       - name: configuration
@@ -937,7 +1002,7 @@ productos:
           SUUNTO Race Reloj Deportivo - Smartwatch Exteriores, Pantalla AMOLED Brillante De 1,43" Con Cristal De Zafiro,
           Corona Cómoda y Botones De Control, GPS De Doble Frecuencia, Larga Duración De La Batería
         brand: Suunto
-        precio: "396,83\_€"
+        precio: "393,73\_€"
         precioOriginal: "399,00\_€"
         disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/41LUmn4Gn7L._SL500_.jpg
@@ -1133,7 +1198,7 @@ productos:
           SUUNTO Race Reloj Deportivo - Smartwatch Exteriores, Pantalla AMOLED Brillante De 1,43" Con Cristal De Zafiro,
           Corona Cómoda y Botones De Control, GPS De Doble Frecuencia, Larga Duración De La Batería
         brand: Suunto
-        precio: "391,75\_€"
+        precio: "399,00\_€"
         precioOriginal: "399,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41n61dAXsPL._SL500_.jpg

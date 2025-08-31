@@ -1092,7 +1092,7 @@ productos:
         brand: Touroll
         precio: "569,00\_€"
         precioOriginal: No especificado
-        disponibilidad: Envío en 4 a 5 semanas
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51Jmq9nqp9L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 407
@@ -1190,7 +1190,7 @@ productos:
     valoracion: 5
     precio: "569,00\_€"
     precioOriginal: No especificado
-    disponibilidad: Envío en 4 a 5 semanas
+    disponibilidad: En stock
     imagenHeight: 407
     imagenWidth: 500
     imagenesVariantes:
@@ -1592,72 +1592,6 @@ productos:
       ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería de
       48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (Step-Thru, Gris)
     variantes:
-      - ASIN: B0CHW1F2BQ
-        title: >-
-          ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería
-          de 48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (High-Step, Azul Gema)
-        brand: ENGWE
-        precio: "1.499,00\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51QzK+V3wTL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg
-            width: 375
-            height: 500
-        enlace: https://www.amazon.es/dp/B0CHW1F2BQ?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Batería Extraíble de Alta Capacidad】: La ENGWE E26 cuenta con una batería de 48V 16Ah de iones de litio,
-            brindando una gran reserva de energía. Ofrece un alcance de hasta 60 km en modo eléctrico y hasta 140 km en
-            modo asistencia.
-          - >-
-            【Motor de 250W y 5 Modos】: Equipada con un motor sin escobillas de 250W que alcanza los 25KM/H, esta
-            bicicleta eléctrica tiene 5 niveles de asistencia, permitiendo un fácil desplazamiento sin necesidad de
-            pedalear.
-          - >-
-            【Comodidad y Seguridad】: Con neumáticos gruesos de 26x4 pulgadas, suspensión dual de alta resistencia, 7
-            velocidades, luces duales, pantalla LCD y frenos de disco mecánicos, esta bicicleta te ofrece comodidad y
-            seguridad en cualquier terreno.
-          - >-
-            【Manejo y Durabilidad】: ENGWE E26 combina neumáticos gruesos con un resistente marco de aluminio para un
-            manejo excepcional y durabilidad. Los neumáticos proporcionan tracción y el marco garantiza estabilidad en
-            tus aventuras.
-          - >-
-            【Pantalla LCD Inteligente】: La pantalla LCD muestra información en tiempo real, incluyendo estado de la
-            batería, velocidad, distancia, potencia y tiempo de viaje, además de detectar y reportar errores y controlar
-            la iluminación de la bicicleta para una experiencia segura y conveniente.
-          - >-
-            【Servicio de Atención al Cliente 24/7】: La bicicleta eléctrica ENGWE se entrega 85% preensamblada para
-            facilitar el montaje. Nuestro equipo de soporte está disponible las 24 horas del día, los 7 días de la
-            semana, para ayudarte con cualquier consulta. Garantizamos un servicio confiable y ofrecemos una garantía de
-            un año para motores, baterías y controladores.
-        variationAttributes:
-          - name: size_name
-            value: High-Step
-          - name: color_name
-            value: Azul Gema
-        ParentASIN: B0CN92LJC7
       - ASIN: B0CHW37P3H
         title: >-
           ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería
