@@ -430,7 +430,7 @@ productos:
           Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
           avanzadas, Garmin Pay, Autonomía de hasta 14 Días, Negro
         brand: Garmin
-        precio: "405,58\_€"
+        precio: "435,35\_€"
         precioOriginal: "399,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41wNe-M+lrL._SL500_.jpg
@@ -527,6 +527,49 @@ productos:
           - name: color_name
             value: Rosa Claro
         ParentASIN: B0BYJVH4JP
+      - ASIN: B0B46N96ST
+        title: Garmin Forerunner 255S, Reloj Inteligente para Correr con GPS, Garmin Pay, Autonomía de hasta 14 Días, Gris
+        brand: Garmin
+        precio: "601,65\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41oTO2kxiAL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51d7SESG-VL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51FOtcZg97L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/512q+5ObgsL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51jdzEpTLfL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Wh2nmoUKL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51+a4VgEx+L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0B46N96ST?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Obtendrás una visión general del sueño, el estado de VFC y la sesión de entrenamiento diaria con tu morning
+            report
+          - Desafía tus límites con la función de triatlón integrada y más de 30 perfiles de actividad
+          - >-
+            Planifica tu estrategia con sesiones de entrenamiento diarias recomendadas, detalles del trayecto y mucho
+            más en el widget de carrera
+        variationAttributes:
+          - name: style_name
+            value: Forerunner 255S
+          - name: color_name
+            value: Gris
+        ParentASIN: B0BYJVH4JP
     ParentASIN: B0BYJVH4JP
     variationAttributes:
       - name: style_name
@@ -614,7 +657,7 @@ productos:
           Garmin Forerunner 165 Reloj Inteligente para Correr con GPS, Pantalla Táctil AMOLED, Métricas Optimizadas,
           Planes de Entrenamiento, Garmin Pay, Autonomía de 11 Días, Negro
         brand: Garmin
-        precio: "222,49\_€"
+        precio: "238,00\_€"
         precioOriginal: "279,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31lO0J0XTaL._SL500_.jpg
@@ -796,7 +839,7 @@ productos:
           Garmin Forerunner 165 Reloj Inteligente para Correr con GPS, Pantalla Táctil AMOLED, Métricas Optimizadas,
           Planes de Entrenamiento, Garmin Pay, Autonomía de 11 Días, Blanco
         brand: Garmin
-        precio: "222,49\_€"
+        precio: "238,00\_€"
         precioOriginal: "279,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/310KX7Bm22L._SL500_.jpg
@@ -1002,7 +1045,7 @@ productos:
           SUUNTO Race Reloj Deportivo - Smartwatch Exteriores, Pantalla AMOLED Brillante De 1,43" Con Cristal De Zafiro,
           Corona Cómoda y Botones De Control, GPS De Doble Frecuencia, Larga Duración De La Batería
         brand: Suunto
-        precio: "393,73\_€"
+        precio: "392,28\_€"
         precioOriginal: "399,00\_€"
         disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/41LUmn4Gn7L._SL500_.jpg

@@ -173,7 +173,7 @@ productos:
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
-        precio: "99,18\_€"
+        precio: "116,37\_€"
         precioOriginal: "129,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -453,7 +453,7 @@ productos:
           Razer Huntsman V2 (Interruptor Analógico) - Teclado Óptico para Juegos con Latencia de Entrada Casi Nula
           (Interruptores Óptico-Mecánicos Analógicos, Teclas PBT) Diseño US | Negro
         brand: Razer
-        precio: "151,78\_€"
+        precio: "151,79\_€"
         precioOriginal: "269,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41n6ygqqkOL._SL500_.jpg
@@ -689,9 +689,9 @@ productos:
           Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
           mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
         brand: Razer
-        precio: "97,51\_€"
+        precio: "93,46\_€"
         precioOriginal: "119,99\_€"
-        disponibilidad: Envío en 6 a 7 meses
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -727,7 +727,7 @@ productos:
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
           Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño US | Negro
         brand: Razer
-        precio: "107,78\_€"
+        precio: "107,79\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/417P8E43+gL._SL500_.jpg
@@ -905,7 +905,7 @@ productos:
         brand: Razer
         precio: "119,00\_€"
         precioOriginal: "119,99\_€"
-        disponibilidad: Envío en 4 a 7 meses
+        disponibilidad: Envío en 6 a 7 meses
         imagen: https://m.media-amazon.com/images/I/41X5XeU+flL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1204,7 +1204,7 @@ productos:
           Razer Ornata V3 Tenkeyless - Teclado Gamer Compacto de bajo Perfil (interruptores Meca-Membrane, reposamuñecas
           magnéticas, Teclas ABS barnizadas a los Rayos UV) Teclado AZERTY | Negro
         brand: Razer
-        precio: "55,87\_€"
+        precio: "57,32\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41w5FflCi+L._SL500_.jpg
@@ -1638,7 +1638,7 @@ productos:
         brand: Mars Gaming
         precio: "18,65\_€"
         precioOriginal: No especificado
-        disponibilidad: Envío en 2 a 3 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1869,7 +1869,68 @@ productos:
     title: >-
       Corsair K55 RGB PRO Teclado para Juegos con Teclas de Membrana, Retroiluminación RGB Dinámica, 6 Teclas Macro con
       Integración el Software Elgato, Resistencia al Polvo y los Derrames, QWERTY, Negro
-    variantes: []
+    variantes:
+      - ASIN: B08YDJ5QZ2
+        title: Corsair K55 RGB PRO XT Teclado QWERTY
+        brand: Corsair
+        precio: "59,77\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41kvXhrYsYL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 289
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41OqD2WtWdL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41vsXLztFgL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41C0Av8aFxL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41yb73AoErL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41f94TpNn1L._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41qwp40ureL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41fLmVZj-2L._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41THlB5AovL._SL500_.jpg
+            width: 500
+            height: 355
+          - url: https://m.media-amazon.com/images/I/41logml9LkL._SL500_.jpg
+            width: 500
+            height: 197
+        enlace: https://www.amazon.es/dp/B08YDJ5QZ2?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Retroiluminación RGB dinámica en cada tecla: Ilumine su escritorio con diez efectos de iluminación
+            integrados o programe sus propios efectos de vibrante iluminación con el software CORSAIR iCUE
+          - >-
+            Seis teclas de macro dedicadas: Active funciones, atajos o pulsaciones de teclas de una sola vez con sus
+            seis teclas de macro exclusivas, de fácil configuración mediante el software CORSAIR iCUE
+          - >-
+            Diseño resistente al polvo y a los derrames: La protección IP42 contra el polvo y los derrames ayuda a
+            evitar accidentes para que nunca tenga que interrumpir el juego
+          - >-
+            Reposamuñecas extraíble: El reposamuñecas de goma suave reduce la presión en las muñecas, de modo que pueda
+            jugar cómodamente durante más tiempo
+          - >-
+            Teclas específicas de volumen y reproducción multimedia: Práctico control de reproducción multimedia y
+            ajuste de volumen de precisión sobre la marcha, sin tener que interrumpir el juego
+          - >-
+            El potente software CORSAIR iCUE: Ofrece un potente control de la iluminación RGB dinámica, con una
+            sofisticada programación de macros, la posibilidad de sincronizar toda la iluminación del sistema
+        variationAttributes:
+          - name: style_name
+            value: K55 RGB PRO XT
+        ParentASIN: B0922NNTQ2
     ParentASIN: B0922NNTQ2
     variationAttributes:
       - name: style_name
@@ -2022,7 +2083,7 @@ productos:
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
           Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño US | Negro
         brand: Razer
-        precio: "107,78\_€"
+        precio: "107,79\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/417P8E43+gL._SL500_.jpg
@@ -2065,9 +2126,9 @@ productos:
           Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
           mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
         brand: Razer
-        precio: "97,51\_€"
+        precio: "93,46\_€"
         precioOriginal: "119,99\_€"
-        disponibilidad: Envío en 6 a 7 meses
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -2179,7 +2240,7 @@ productos:
         brand: Razer
         precio: "119,00\_€"
         precioOriginal: "119,99\_€"
-        disponibilidad: Envío en 4 a 7 meses
+        disponibilidad: Envío en 6 a 7 meses
         imagen: https://m.media-amazon.com/images/I/41X5XeU+flL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
