@@ -1367,7 +1367,7 @@ productos:
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Quartz
         brand: Razer
-        precio: "73,35\_€"
+        precio: "73,07\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -2394,7 +2394,7 @@ productos:
           magnéticos de neodimio - Más de 100 preajustes - Batería de 60 horas - 2,4 GHz o BT - Micro Gen2.X
         brand: SteelSeries
         precio: "99,99\_€"
-        precioOriginal: "120,00\_€"
+        precioOriginal: "149,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31YiZCS1pgL._SL500_.jpg
         imagenWidth: 500
@@ -2471,7 +2471,7 @@ productos:
           neodimio - Más de 100 preajustes - Batería de 60 horas - 2,4 GHz o BT - Micro Gen2.X
         brand: SteelSeries
         precio: "99,99\_€"
-        precioOriginal: "120,00\_€"
+        precioOriginal: "139,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41o62mf3MjL._SL500_.jpg
         imagenWidth: 500
@@ -2554,7 +2554,7 @@ productos:
           neodimio - Más de 100 preajustes - Batería de 60 horas - 2,4 GHz o BT - Micro Gen2.X
         brand: SteelSeries
         precio: "99,99\_€"
-        precioOriginal: "120,00\_€"
+        precioOriginal: "139,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41MFJKfw5JL._SL500_.jpg
         imagenWidth: 500
@@ -2640,7 +2640,7 @@ productos:
           magnéticos de neodimio - Más de 100 preajustes - Batería de 60 horas - 2,4 GHz o BT - Micro Gen2.X
         brand: SteelSeries
         precio: "98,35\_€"
-        precioOriginal: "113,99\_€"
+        precioOriginal: "149,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31YiZCS1pgL._SL500_.jpg
         imagenWidth: 500
@@ -2717,7 +2717,7 @@ productos:
           magnéticos de neodimio - Más de 100 preajustes - Batería de 60h - 2,4 GHz o BT - Micro Gen2.X
         brand: SteelSeries
         precio: "99,99\_€"
-        precioOriginal: "113,38\_€"
+        precioOriginal: "149,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31KhPFkf3DL._SL500_.jpg
         imagenWidth: 500
@@ -3118,7 +3118,7 @@ productos:
       - ASIN: B00SAYCXWG
         title: HyperX KHX-HSCP-RD Cloud II - Cascos de Gaming para PC/PS4/Mac, Negro/Rojo
         brand: HyperX
-        precio: "81,97\_€"
+        precio: "82,18\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41SkA5j2l-L._SL500_.jpg
@@ -3305,58 +3305,6 @@ productos:
             value: Alámbrico
           - name: configuration
             value: Cloud II
-        ParentASIN: B0F6CRD2YL
-      - ASIN: B0CBQYKFR2
-        title: >-
-          HyperX Cloud III Wireless Auriculares Gaming para PC, PS5, PS4, batería hasta 120 horas, 2.4GHz, drivers 53mm,
-          Micrófono 10mm, Negro
-        brand: HyperX
-        precio: "152,51\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31gePlHzyTL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41z2ZcLWXaL._SL500_.jpg
-            width: 500
-            height: 250
-          - url: https://m.media-amazon.com/images/I/31-NE0FMAFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31i0lbnsc8L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/21gEI0kY0UL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31tbCE-0DpL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/218UGwICegL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41FpDzYhW4L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Mn1Hp214L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41q0rO2FO1L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0CBQYKFR2?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Auriculares de sonido
-          - Sonido nítido y limpio
-          - Auriculares de diadema Hyperx 77Z45AA
-        variationAttributes:
-          - name: color_name
-            value: Negro
-          - name: connectivity_technology
-            value: Inalámbrico
-          - name: configuration
-            value: Cloud III
         ParentASIN: B0F6CRD2YL
     ParentASIN: B0F6CRD2YL
     variationAttributes:

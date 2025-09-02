@@ -300,45 +300,6 @@ productos:
           - name: color_name
             value: Azul/Rojo
         ParentASIN: B0DYYM5XJ1
-      - ASIN: B0DYYM354C
-        title: >-
-          Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
-          de Flor (Blanco bordado liso)
-        brand: Yusons
-        precio: "17,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/315eDapxrIL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41v9xYCptIL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31g8S5lkTAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41chs+UY56L._SL500_.jpg
-            width: 496
-            height: 500
-          - url: https://m.media-amazon.com/images/I/312ToIadWYL._SL500_.jpg
-            width: 375
-            height: 500
-        enlace: https://www.amazon.es/dp/B0DYYM354C?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - 'Material: 100% poliéster. Mantón tradicional popular con estampado de flores.'
-          - 'Mantón de manilla de gran tamaño: Mira foto de medida de cada modelo, son medidas adultos.'
-          - Talla única, una variedad de colores para elegir, fucsia, negro, blanco, rojo......
-          - >-
-            Ligero y suave, úsalo como chal, ya sea sobre los hombros o la cabeza. Ideal para la fiesta de abril, baile
-            de flamenco español tradicional.
-          - >-
-            Regalo perfecto: esta gran bufanda se puede presentar como un regalo a tu familia, amigos e incluso a ti
-            mismo en Acción de Gracias, Navidad, cumpleaños, Día de la Madre o algunos días especiales.
-        variationAttributes:
-          - name: color_name
-            value: Blanco Bordado Liso
-        ParentASIN: B0DYYM5XJ1
       - ASIN: B0DYYM55J7
         title: >-
           Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
@@ -422,6 +383,48 @@ productos:
         variationAttributes:
           - name: color_name
             value: Rojo
+        ParentASIN: B0DYYM5XJ1
+      - ASIN: B0DYYM5HB1
+        title: >-
+          Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
+          de Flor (Crema)
+        brand: Yusons
+        precio: "13,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41wDZsBeezL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41la+4Yf7cL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ZcP6-5HTL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WSkUKcVkL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Fx8xvvKNL._SL500_.jpg
+            width: 500
+            height: 375
+          - url: https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg
+            width: 455
+            height: 500
+        enlace: https://www.amazon.es/dp/B0DYYM5HB1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Material: 100% poliéster. Mantón tradicional popular con estampado de flores.'
+          - 'Mantón de manilla de gran tamaño: Mira foto de medida de cada modelo, son medidas adultos.'
+          - Talla única, una variedad de colores para elegir, fucsia, negro, blanco, rojo......
+          - >-
+            Ligero y suave, úsalo como chal, ya sea sobre los hombros o la cabeza. Ideal para la fiesta de abril, baile
+            de flamenco español tradicional.
+          - >-
+            Regalo perfecto: esta gran bufanda se puede presentar como un regalo a tu familia, amigos e incluso a ti
+            mismo en Acción de Gracias, Navidad, cumpleaños, Día de la Madre o algunos días especiales.
+        variationAttributes:
+          - name: color_name
+            value: Crema
         ParentASIN: B0DYYM5XJ1
     ParentASIN: B0DYYM5XJ1
     nombreCompleto: >-
