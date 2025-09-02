@@ -428,7 +428,7 @@ productos:
           Razer BlackShark V2 X USB - Auriculares para Juegos Esports (Controlador TriForce de 50 mm, Cancelación de
           Ruido, Construcción ligera de 240 g, Sonido Envolvente 7.1) Negro
         brand: Razer
-        precio: "51,35\_€"
+        precio: "51,65\_€"
         precioOriginal: "79,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Ns24ra6oL._SL500_.jpg
@@ -497,9 +497,9 @@ productos:
           Razer BlackShark V2 (Edición Especial) -Auriculares Gaming (auriculares con cable con controladores de 50 mm
           para PC, Mac, PS4, Xbox One y Switch) Negro
         brand: Razer
-        precio: "80,29\_€"
+        precio: "211,33\_€"
         precioOriginal: No especificado
-        disponibilidad: En stock
+        disponibilidad: Envío en 2 a 3 días
         imagen: https://m.media-amazon.com/images/I/41fYZqPSaYL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1050,9 +1050,9 @@ productos:
           Razer BlackShark V2 (Edición Especial) -Auriculares Gaming (auriculares con cable con controladores de 50 mm
           para PC, Mac, PS4, Xbox One y Switch) Negro
         brand: Razer
-        precio: "80,29\_€"
+        precio: "211,33\_€"
         precioOriginal: No especificado
-        disponibilidad: En stock
+        disponibilidad: Envío en 2 a 3 días
         imagen: https://m.media-amazon.com/images/I/41fYZqPSaYL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1124,7 +1124,7 @@ productos:
           Razer BlackShark V2 X USB - Auriculares para Juegos Esports (Controlador TriForce de 50 mm, Cancelación de
           Ruido, Construcción ligera de 240 g, Sonido Envolvente 7.1) Negro
         brand: Razer
-        precio: "51,35\_€"
+        precio: "51,65\_€"
         precioOriginal: "79,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Ns24ra6oL._SL500_.jpg
@@ -1367,7 +1367,7 @@ productos:
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Quartz
         brand: Razer
-        precio: "73,34\_€"
+        precio: "73,35\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -1597,7 +1597,7 @@ productos:
           Razer Barracuda X - Auriculares Inalámbricos Multiplataforma para Juegos y Móviles, SmartSwitch Dual Wireless,
           Diseño Ergonómico de 250 g, TriForce 40mm, Micrófono Cardioide, Quartz
         brand: Razer
-        precio: "80,48\_€"
+        precio: "80,97\_€"
         precioOriginal: "119,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -1683,9 +1683,9 @@ productos:
           Razer Barracuda - Auriculares Inalámbricos para Móvil y Juegos Multiplataparama (Modos Inalámbricos Dobles
           SmartSwitch, Micrófonos con Cancelación de Ruido, TriForce Driver 50mm) Mercury Blanco
         brand: Razer
-        precio: "186,09\_€"
+        precio: "184,22\_€"
         precioOriginal: "189,99\_€"
-        disponibilidad: Envío en 3 a 4 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31sIN+VreaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1981,7 +1981,7 @@ productos:
           Corsair HS80 RGB WIRELESS Auriculares Inalámbricos para Juegos Multiplataforma RGB - Dolby Atmos - Micrófono
           Omnidireccional - Compatible con iCUE - PC, Mac, PS5, PS4 - Blanco
         brand: Corsair
-        precio: "119,95\_€"
+        precio: "148,00\_€"
         precioOriginal: "169,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31YLokEXRZL._SL500_.jpg
@@ -2939,7 +2939,7 @@ productos:
     lo_mejor: 🎧 Sonido 7.1 potente, 🌈 RGB llamativo, 🛋️ Almohadillas cómodas
     nombre: Corsair VOID RGB ELITE
     valoracion: 4
-    precio: "108,90\_€"
+    precio: "99,86\_€"
     precioOriginal: "109,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -3118,7 +3118,7 @@ productos:
       - ASIN: B00SAYCXWG
         title: HyperX KHX-HSCP-RD Cloud II - Cascos de Gaming para PC/PS4/Mac, Negro/Rojo
         brand: HyperX
-        precio: "79,81\_€"
+        precio: "81,97\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41SkA5j2l-L._SL500_.jpg
@@ -3305,6 +3305,58 @@ productos:
             value: Alámbrico
           - name: configuration
             value: Cloud II
+        ParentASIN: B0F6CRD2YL
+      - ASIN: B0CBQYKFR2
+        title: >-
+          HyperX Cloud III Wireless Auriculares Gaming para PC, PS5, PS4, batería hasta 120 horas, 2.4GHz, drivers 53mm,
+          Micrófono 10mm, Negro
+        brand: HyperX
+        precio: "152,51\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31gePlHzyTL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41z2ZcLWXaL._SL500_.jpg
+            width: 500
+            height: 250
+          - url: https://m.media-amazon.com/images/I/31-NE0FMAFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31i0lbnsc8L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/21gEI0kY0UL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31tbCE-0DpL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/218UGwICegL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41FpDzYhW4L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Mn1Hp214L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41q0rO2FO1L._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0CBQYKFR2?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Auriculares de sonido
+          - Sonido nítido y limpio
+          - Auriculares de diadema Hyperx 77Z45AA
+        variationAttributes:
+          - name: color_name
+            value: Negro
+          - name: connectivity_technology
+            value: Inalámbrico
+          - name: configuration
+            value: Cloud III
         ParentASIN: B0F6CRD2YL
     ParentASIN: B0F6CRD2YL
     variationAttributes:
