@@ -144,36 +144,6 @@ productos:
           - name: color_name
             value: Negro Multicolor
         ParentASIN: B0F5BVQZX5
-      - ASIN: B0F5BV2GV4
-        title: >-
-          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
-          (FR/ES, Letras, L, Regular, Regular, Negro Multicolor)
-        brand: AMARU SANCHESU
-        precio: "49,90\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg
-        imagenWidth: 344
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31gBrUrCK1L._SL500_.jpg
-            width: 337
-            height: 500
-          - url: https://m.media-amazon.com/images/I/310LVwrjPsL._SL500_.jpg
-            width: 394
-            height: 500
-          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
-            width: 500
-            height: 258
-        enlace: https://www.amazon.es/dp/B0F5BV2GV4?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
-        variationAttributes:
-          - name: size_name
-            value: L
-          - name: color_name
-            value: Negro Multicolor
-        ParentASIN: B0F5BVQZX5
       - ASIN: B0F5BQTBPY
         title: >-
           Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
@@ -233,33 +203,6 @@ productos:
             value: XXL Grande
           - name: color_name
             value: Negro Multicolor
-        ParentASIN: B0F5BVQZX5
-      - ASIN: B0F5BV17M1
-        title: >-
-          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
-          (FR/ES, Letras, XL, Grande, Regular, Blanco Multicolor)
-        brand: AMARU SANCHESU
-        precio: "49,90\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41wwH1+slaL._SL500_.jpg
-        imagenWidth: 417
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31k9GHOnQ9L._SL500_.jpg
-            width: 331
-            height: 500
-          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
-            width: 500
-            height: 258
-        enlace: https://www.amazon.es/dp/B0F5BV17M1?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
-        variationAttributes:
-          - name: size_name
-            value: XL Grande
-          - name: color_name
-            value: Blanco Multicolor
         ParentASIN: B0F5BVQZX5
       - ASIN: B0F5BPXXGV
         title: >-
@@ -381,32 +324,32 @@ productos:
           - name: color_name
             value: Rosa Blanco
         ParentASIN: B0F5BVQZX5
-      - ASIN: B0F5BTDJVT
+      - ASIN: B0F5BRWHT7
         title: >-
           Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
-          (FR/ES, Letras, S, Regular, Regular, Blanco Multicolor)
+          (FR/ES, Letras, S, Regular, Regular, Rosa Blanco)
         brand: AMARU SANCHESU
         precio: "49,90\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41wwH1+slaL._SL500_.jpg
-        imagenWidth: 417
+        imagen: https://m.media-amazon.com/images/I/3104g3JKlPL._SL500_.jpg
+        imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31k9GHOnQ9L._SL500_.jpg
-            width: 331
+          - url: https://m.media-amazon.com/images/I/3191irzmUsL._SL500_.jpg
+            width: 500
             height: 500
           - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
             width: 500
             height: 258
-        enlace: https://www.amazon.es/dp/B0F5BTDJVT?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B0F5BRWHT7?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
         variationAttributes:
           - name: size_name
             value: S
           - name: color_name
-            value: Blanco Multicolor
+            value: Rosa Blanco
         ParentASIN: B0F5BVQZX5
     ParentASIN: B0F5BVQZX5
     nombreCompleto: >-
@@ -2623,3 +2566,4 @@ productos:
       - name: size_name
         value: 38-40
     nombreCompleto: Guirca - Disfraz adulta flamenca, Talla 38-40 (80629.0)
+actualizacion: '2025-09-05'
