@@ -1,0 +1,187 @@
+{%- assign _title = include.title | default: "Sección" -%}
+{%- assign _see_all_label = include.see_all_label | default: "see all" -%}
+{%- assign _offset = include.offset | default: 0 -%}
+{%- assign _limit = include.limit | default: 4 -%}
+{%- assign _source = include.source | default: "posts" -%}
+
+{%- if _source == "pages" -%}
+  {%- assign base = site.pages -%}
+{%- else -%}
+  {%- assign base = include.collection | default: site.posts -%}
+{%- endif -%}
+
+{%- if include.category -%}
+  {%- assign base = base | where_exp: "p", "p.categories contains include.category" -%}
+{%- endif -%}
+{%- if include.tag -%}
+  {%- assign base = base | where_exp: "p", "p.tags contains include.tag" -%}
+{%- endif -%}
+{%- if include.require_keyword -%}
+  {%- assign base = base | where_exp: "p", "p.keywords" -%}
+{%- endif -%}
+{%- if include.contains_keyword -%}
+  {%- assign _kw = include.contains_keyword | downcase -%}
+  {%- assign filtered_kw = "" | split: "" -%}
+  {%- for p in base -%}
+    {%- assign k = p.keywords -%}
+    {%- assign k_str = k | join: ',' | default: k | downcase -%}
+    {%- if k_str and (k_str contains _kw) -%}
+      {%- assign filtered_kw = filtered_kw | push: p -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign base = filtered_kw -%}
+{%- endif -%}
+
+{%- assign base = base | where_exp: "p", "p.date" -%}
+{%- assign list_sorted = base | sort: "date" | reverse -%}
+
+{%- if include.exclude_urls and include.exclude_urls.size > 0 -%}
+  {%- assign filtered = "" | split: "" -%}
+  {%- for p in list_sorted -%}
+    {%- unless include.exclude_urls contains p.url -%}
+      {%- assign filtered = filtered | push: p -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- assign list_sorted = filtered -%}
+{%- endif -%}
+
+{%- assign list_offset = list_sorted | slice: _offset, 999 -%}
+{%- assign items = list_offset | slice: 0, _limit -%}
+{%- assign main = items | first -%}
+{%- assign subs = items | slice: 1, 3 -%}
+<div class="hero-divider"></div>
+
+<section class="split-feature" aria-label="{{ _title | escape }}">
+  <header class="sf-head">
+    <h2 class="sf-title">{{ _title }}</h2>
+    <nav class="sf-links">
+      {%- if include.see_all_url -%}
+        <a href="{{ include.see_all_url | relative_url }}">{{ _see_all_label }}</a>
+      {%- endif -%}
+    </nav>
+  </header>
+
+{%- if main -%}
+  <!-- Grid de medios: imagen principal a la izquierda, 3 thumbs a la derecha -->
+  <div class="sf-hero">
+    <a class="sf-media" href="{{ main.url | relative_url }}">
+      <img src="{{ main.imagen | default: main.image | default: '/global/images/placeholder.webp' }}" alt="{{ main.title | escape }}">
+    </a>
+
+    <div class="sf-side">
+      {%- for p in subs -%}
+      <article class="sf-item">
+        <a class="sf-thumb" href="{{ p.url | relative_url }}">
+          <img src="{{ p.imagen | default: p.image | default: '/global/images/placeholder.webp' }}" alt="{{ p.title | escape }}" loading="lazy">
+        </a>
+        <div class="sf-body">
+          <h3 class="sf-item-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+          {%- assign _when = p.last_modified_at | default: p.date -%}
+          <p class="sf-date">{% include date_es.html date=_when %}</p>
+          {%- assign _autor = site.data.autor.autores[p.autor] -%}
+          {%- if _autor -%}
+            <p class="sf-by">
+              <img src="{{ _autor.avatar }}" alt="{{ _autor.nombre }}" class="sf-avatar">
+              <a href="{{ _autor.enlaceBlog | default: '#' }}">{{ _autor.nombre }}</a>
+            </p>
+          {%- endif -%}
+        </div>
+      </article>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <!-- Texto del principal, cada dato en su línea -->
+  <h3 class="sf-main-title"><a href="{{ main.url | relative_url }}">{{ main.title }}</a></h3>
+  {%- assign _when_main = main.last_modified_at | default: main.date -%}
+  <p class="sf-date">{% include date_es.html date=_when_main %}</p>
+  {%- assign _autor_main = site.data.autor.autores[main.autor] -%}
+  {%- if _autor_main -%}
+    <p class="sf-by">
+      <img src="{{ _autor_main.avatar }}" alt="{{ _autor_main.nombre }}" class="sf-avatar">
+      <a href="{{ _autor_main.enlaceBlog | default: '#' }}">{{ _autor_main.nombre }}</a>
+    </p>
+  {%- endif -%}
+  <p class="sf-dek">
+    {%- if main.subtitle -%}{{ main.subtitle }}{%- else -%}{{ main.excerpt | strip_html | truncate: 180 }}{%- endif -%}
+  </p>
+{%- endif -%}
+</section>
+
+<style>
+/* Contenedor y cabecera */
+.split-feature{max-width:1200px;margin:0 auto 36px;padding:0 14px;}
+.sf-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;}
+.sf-title{margin:0;font-size:1.6rem;font-weight:900;}
+.sf-links a{color:#1a73e8;text-decoration:none;font-weight:600;font-size:.95rem;}
+.sf-links a:hover{text-decoration:underline}
+
+/* Grid de medios 50/50 (alturas iguales) */
+.sf-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;}
+.sf-media img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
+
+/* Columna derecha: reparte el alto de la izquierda en 3 filas */
+.sf-side{display:grid;grid-template-rows:repeat(3,1fr);gap:16px;height:100%;}
+.sf-item{display:grid;grid-template-columns:140px 1fr;gap:12px;height:100%;overflow:hidden;}
+.sf-thumb img{width:140px;height:100%;object-fit:cover;display:block;}
+.sf-body{display:flex;flex-direction:column;gap:6px;min-width:0;}
+
+/* Tipografía: cada dato en su línea */
+.sf-main-title{margin:10px 0 6px;font-size:1.5rem;font-weight:800;line-height:1.2;}
+.sf-main-title a{color:#0b5fdc;text-decoration:none;}
+.sf-main-title a:hover{text-decoration:underline;}
+.sf-item-title{margin:0;font-size:1.08rem;font-weight:800;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.sf-item-title a{color:#0b5fdc;text-decoration:none;}
+.sf-item-title a:hover{text-decoration:underline;}
+
+.sf-date{margin:0;color:#555;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.25px;}
+.sf-by{margin:0;display:inline-flex;align-items:center;gap:8px;color:#555;font-size:.9rem;}
+.sf-by .sf-avatar{width:24px;height:24px;border-radius:50%;object-fit:cover;display:inline-block;}
+
+.sf-dek{margin:8px 0 0;color:#444;line-height:1.5;}
+
+@media (max-width: 900px){
+  .sf-hero{grid-template-columns:1fr;gap:16px;}
+  .sf-side{grid-template-rows:none;display:flex;flex-direction:column;}
+  .sf-item{grid-template-columns:110px 1fr;height:auto;}
+  .sf-thumb img{width:110px;height:80px;}
+}
+/* ===== Fix SOLO para los autores de las 3 guías laterales ===== */
+.sf-side .sf-body{
+  display:grid;                 /* 3 líneas: título, fecha, autor */
+  grid-template-rows:auto auto auto;
+  row-gap:6px;
+  align-content:start;
+  min-width:0;
+}
+
+.sf-side .sf-by{
+  display:grid !important;      /* avatar + nombre en 2 columnas */
+  grid-template-columns: 22px 1fr;
+  align-items:center;
+  justify-items:start;
+  column-gap:8px;
+  margin:0;
+  line-height:1;
+}
+
+.sf-side .sf-by .sf-avatar{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+}
+
+.sf-side .sf-by a{
+  max-width:100%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  text-decoration:none;
+}
+
+.sf-side .sf-date{ margin:0; display:block; }
+.sf-side .sf-item-title{ margin:0; }
+
+</style>

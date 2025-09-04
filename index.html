@@ -8,1071 +8,337 @@ pagination:
   enabled: true
 date: 2025-08-05
 ---
-
 <style>
-:root {
-  --color-azul-profesional: #364e68;
-  --color-rosa-destacado: #B0032C;
-  --color-fondo-claro: #f5f5f5;
-  --color-texto-gris: #666;
-  --color-claro-hover: #dde7f0;
-  --color-fondo-widget: #f0f4f8;
-  --color-shadow: rgba(0, 0, 0, 0.1);
-  --hotpost-height: 150px;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-fondo-claro);
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-h2 {
-  text-align: center;
-  margin: 30px 0 10px;
-  font-size: 1.8em;
-  color: #333;
-}
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.hot-post,
-.hot-post-secundario {position: relative;
-  overflow: hidden;}
-.hot-post img,
-.hot-post-secundario img {display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;}
-.hot-post:hover img,
-.hot-post-secundario:hover img {transform: scale(1.05);
-  filter: brightness(0.8); /* oscurece la imagen al pasar el ratón */}
-  .grid-posts {
-  max-width: 1200px;
-  margin: 0 auto 50px;
-  padding: 0;
-}
-
-.hot-grid {
-  display: grid;
-  grid-template-areas:
-    "main side1"
-    "main side2";
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: var(--hotpost-height) var(--hotpost-height);
-  gap: 10px;
-}
-
-.main-post {
-  grid-area: main;
-  height: calc(var(--hotpost-height) * 2 + 20px);
-  content-visibility: auto;
-  contain-intrinsic-size: 340px;
-  min-height: 310px;
-}
-
-.side-post:nth-of-type(2) {
-  grid-area: side1;
-  height: var(--hotpost-height);
-}
-
-.side-post:nth-of-type(3) {
-  grid-area: side2;
-  height: var(--hotpost-height);
-}
-
-.post {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.post-category {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-rosa-destacado);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: 0 0 4px 0;
-  z-index: 3;
-  letter-spacing: 0.4px;
-}
-
-.post-category:hover {
-  background-color: #004aad;
-}
-
-.post-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px 15px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  color: #fff;
-  z-index: 2;
-}
-
-.post-title {margin: 0;
-  font-size: 1.2em;
-  font-weight: bold;
-  line-height: 1.3;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.comparativa-title {
-  font-size: 0.95em !important;
-  font-weight: 600;
-  color: #000000 !important;
-  text-decoration: none;
-  line-height: 1.3;
-  margin: 13px;
-}
-
-.post-subtitle {
-  margin: 5px 0 0;
-  font-size: 1em;
-  font-weight: normal;
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
-.grid-posts .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.grid-posts .post {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #000;
-  height: var(--hotpost-height);
-}
-
-.grid-posts .post-category {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: #e50914;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 20px;
-  z-index: 3;
-  letter-spacing: 0.5px;
-}
-
-.grid-posts .post-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 15px 12px 18px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 80%);
-  color: #fff;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.grid-posts h3 {
-  margin: 0;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-.grid-posts .post-subtitle {
-  margin: 0;
-  font-size: 0.85em;
-  opacity: 0.85;
-}
-.card-post {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 6px var(--color-shadow);
-}
-
-.card-post:hover img {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-}
-
-.card-post img {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.card-post.clasica {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px var(--color-shadow);
-  transition: transform 0.2s ease;
-}
-
-.card-post.clasica:hover {
-  transform: translateY(-2px);
-}
-
-.card-post.clasica img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-post.clasica .card-texto {
-  padding: 12px 15px;
-}
-
-.card-post.clasica .card-texto h4 {
-  margin: 0 0 6px;
-  font-size: 1em;
-  font-weight: bold;
-  color: #222;
-}
-
-.card-post.clasica .card-texto p {
-  margin: 0;
-  font-size: 0.9em;
-  color: var(--color-texto-gris);
-}
-.blog-tarjeta {
-  display: flex;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 24px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
-}
-
-.blog-tarjeta:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.tarjeta-thumb {
-  flex-shrink: 0;
-}
-
-.tarjeta-thumb img {
-  width: 200px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.tarjeta-info {
-  margin-left: 16px;
-  flex: 1;
-}
-
-.tarjeta-title {
-  font-size: 1.15rem;
-  margin: 0;
-  font-weight: bold;
-  color: #000;
-  text-align: left;
-}
-
-.tarjeta-title a {
-  color: #000 !important;
-}
-
-.tarjeta-title a:hover {
-  color: #1A73E8 !important;
-  text-decoration: underline;
-}
-
-.tarjeta-excerpt {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.4;
-  margin: 12px 0;
-}
-
-.entry-meta {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
-  margin: 0;
-}
-
-.entry-meta img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.entry-meta span {
-  font-size: 0.85rem;
-  color: #666;
-}
-.tarjeta-final {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px var(--color-shadow);
-  transition: transform 0.2s ease;
-  margin-bottom: 7px;
-}
-
-.tarjeta-final .contenedor-img {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-}
-
-.tarjeta-final .contenedor-img:hover img {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-}
-
-.tarjeta-final .info-texto {
-  padding: 12px 15px;
-}
-
-.tarjeta-final h4 {
-  margin: 0 0 6px;
-  font-size: 1em;
-  font-weight: bold;
-  color: #222;
-}
-
-.tarjeta-final .autor-fecha {
-  font-size: 0.8em;
-  color: #888;
-  margin: 0;
-}
-
-.tarjeta-final .descripcion {
-  margin: 6px 0 4px;
-  font-size: 0.9em;
-  color: #555;
-  line-height: 1.4;
-}
-.avatar-link {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  z-index: 4;
-  display: block;
-  width: 32px;
-  height: 32px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  transition: transform 0.2s ease;
-}
-
-.avatar-link:hover {
-  transform: scale(1.1);
-}
-.popular-box-widget {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.popular-box-header {
-  padding: 16px 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.popular-box-header h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #222;
-  margin: 0;
-}
-
-.popular-box-content {
-  padding: 16px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.popular-box-item {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.popular-thumb {
-  display: block;
-  width: 72px;
-  height: 72px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-  flex-shrink: 0;
-}
-
-.popular-thumb-guias {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 8px;
-}
-
-.popular-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.popular-title {
-  font-size: 0.95em;
-  font-weight: 600;
-  color: #000000 !important;
-  text-decoration: none;
-  line-height: 1.3;
-  margin-bottom: 4px;
-}
-
-.popular-title:hover {
-  color: #0073e6 !important;
-  text-decoration: underline;
-}
-
-.popular-date {
-  font-size: 0.8em;
-  color: #595959;
-}
-.load-more-container {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.load-more-button {
-  background-color: #004DCC;
-  color: white;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.load-more-button:hover {
-  background-color: #1a5ed8;
-}
-#back-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 42px;
-  height: 42px;
-  background-color: #007bff;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 42px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-#back-top.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#back-top:hover {
-  background-color: #0056b3;
-}
-.tag-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 11px;
-}
-.tag-box a {
-  display: inline-block;
-  padding: 3px 11px;
-  border: 1px solid #007bff;
-  border-radius: 15px;
-  color: #007bff;
-  text-decoration: none;
-  font-size: 13px;
-  white-space: nowrap;
-  transition: background 0.2s ease;
-}
-.tag-box a:hover {
-  background: #007bff;
-  color: white !important;
-}
-.popular-box-content.tag-box {
-  flex-direction: row !important;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-#results-container {
-  margin-top: 12px;
-  padding-left: 0;
-  overflow: visible;
-}
-
-#results-container li {
-  list-style: none;
-  margin-bottom: 6px;
-  padding: 6px 10px;
-  border: 1px solid #fc3c68;
-  border-radius: 5px;
-  font-size: 0.95rem;
-  background: #fff;
-  white-space: normal;
-  word-wrap: break-word;
-}
-.titulo-principal {
-  margin-top: 20px !important;
-  font-size: 1.4em;
-  color: #333;
-  text-align: left;
-  font-weight: bold;
-  margin: 0;
-}
-.author-post {
-
-  font-size: 0.95em;
-  font-weight: 600;
-  color: #000000 !important;
-  text-decoration: none;
-  line-height: 1.3;
-  margin-bottom: 4px;
-}
-
-.author-post:hover {
-  color: #0073e6 !important;
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .hot-grid {
-    grid-template-areas:
-      "main"
-      "side1"
-      "side2";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .main-post,
-  .side-post:nth-of-type(2),
-  .side-post:nth-of-type(3),
-  .grid-posts .post,
-  .popular-box-widget,
-  .widget.type-grid .grid-items {
-    height: auto;
-    width: 100% !important;
-    margin: 0 auto 20px;
-    grid-template-columns: 1fr !important;
-  }
-
-  .contenido-con-sidebar {
-    flex-direction: column;
-  }
-  .contenido-principal,
-  .barra-lateral {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-  }
-  .blog-tarjeta {
-    flex-direction: column;
-    align-items: center;
-  }
-  .tarjeta-thumb,
-  .tarjeta-thumb img {
-    width: 100% !important;
-    height: 200px !important;
-  }
-  .tarjeta-info {
-    margin-left: 0;
-    margin-top: 12px;
-  }
-}
-.widget.type-grid .grid-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-}
-
-.widget.type-grid .grid-item {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-  text-align: left;
-}
-
-.widget.type-grid .grid-item:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.widget.type-grid .grid-item img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.widget.type-grid .post-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #222;
-  margin: 8px 10px 0;
-  line-height: 1.3;
-}
-
-.widget.type-grid .post-title:hover {
-  color: #007bff;
-  text-decoration: underline;
-}
-
-.widget.type-grid .post-date {
-  font-size: 0.75rem;
-  color: #595959;
-  margin: 4px 10px 10px;
-}
-@media (max-width: 768px) {
-  .main-post {
-    height: 300px !important;
-  }
-
-  .side-post:nth-of-type(2),
-  .side-post:nth-of-type(3) {
-    height: 250px !important;
-  }
-}
-
+:root{
+  --color-azul-profesional:#364e68;
+  --color-rosa-destacado:#B0032C;
+  --color-fondo-claro:#f5f5f5;
+  --color-texto-gris:#666;
+  --color-claro-hover:#dde7f0;
+  --color-fondo-widget:#f0f4f8;
+  --color-shadow:rgba(0,0,0,.1);
+  --hotpost-height:150px;
+  --top-row-h:360px;
+}
+
+/* Base */
+body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--color-fondo-claro);}
+.home-landing a{color:inherit;text-decoration:none;}
+.home-landing h2{margin:0px 0px 10px;font-size:1.6em;text-align:center;color:#333;}
+.home-landing img{display:block;width:100%;height:auto;object-fit:cover;}
+
+/* ====== FILA SUPERIOR (3 columnas) ====== */
+.home-landing .homepage-top{
+  position:relative;z-index:1;max-width:1200px;margin:0 auto 20px;padding:14px;
+  display:grid;grid-template-columns:1.2fr 2.5fr 1fr;gap:14px;
+  background:#ffffffd9;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);
+  align-items:stretch;
+}
+.home-landing .homepage-top > *{min-height:0;height:100%;display:flex;flex-direction:column;}
+@media (max-width:1100px){.home-landing .homepage-top{grid-template-columns:240px 1fr 280px;}}
+@media (max-width:980px){.home-landing .homepage-top{grid-template-columns:1fr;}}
+
+/* ====== FILA INFERIOR (bloque ancho) ====== */
+.home-landing .homepage-below{max-width:1200px;margin:0 auto 30px;padding:0 20px;}
+.home-landing .homepage-below .wide-section{
+  background:#ffffffd9;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px;
+}
+.home-landing .homepage-below .wide-section h2{margin:0 0 16px;font-size:1.4rem;color:#111;text-align:left;}
+
+/* Columna izquierda: Últimos posts */
+.home-landing .latest-widget{border-radius:10px;overflow:hidden;}
+.home-landing .latest-widget .lw-header{padding:14px 16px 0 14px;}
+.home-landing .latest-widget .lw-header h3{margin:0;font-size:1rem;font-weight:700;color:#111;}
+.home-landing .latest-widget .lw-list{padding:8px 0;}
+.home-landing .latest-widget .lw-item{
+  display:flex;align-items:center;gap:10px;padding:10px 16px;border-left:3px solid transparent;
+}
+.home-landing .latest-widget .lw-item:hover{background:#fafafa;border-left-color:var(--color-rosa-destacado);}
+.home-landing .latest-widget .lw-thumb{width:58px;height:44px;flex-shrink:0;border-radius:6px;overflow:hidden;background:#eee;}
+.home-landing .latest-widget .lw-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.home-landing .latest-widget .lw-body{min-width:0;}
+.home-landing .latest-widget .lw-title{
+  font-size:.95rem;line-height:1.25;font-weight:600;color:#000;display:block;overflow:visible;white-space:normal;
+}
+.home-landing .latest-widget .lw-meta{margin-top:2px;font-size:.78rem;color:var(--color-texto-gris);}
+
+/* Columna central: HERO estilo home */
+.home-landing .hero{position:relative;z-index:2;display:flex;flex-direction:column;background:transparent;border-radius:0;box-shadow:none;overflow:visible;}
+.home-landing .hero .hero-media{position:relative;width:100%;aspect-ratio:auto;overflow:hidden;background:#ffffffd9;margin-bottom: 10px;}
+.home-landing .hero .hero-media img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease,filter .3s ease;}
+.home-landing .hero .hero-cat{
+  position:absolute;top:10px;left:10px;background:var(--color-rosa-destacado);color:#fff;font-size:12px;font-weight:700;padding:4px 8px;border-radius:4px;
+}
+.hero-divider{height:6px;background:#111;margin:10px 0 12px !important;}
+.home-landing .hero .hero-inner{display:block !important;margin:0 !important;padding:0 8px !important;max-width:780px !important;column-count:1 !important;gap:0 !important;}
+.home-landing .hero .hero-title{
+  margin:8px 0 8px !important;font-size:clamp(1.9rem,1.8vw + 1rem,2.4rem) !important;line-height:1.1;font-weight:900;letter-spacing:-.5px;color:#111 !important;
+}
+.home-landing .hero .hero-title a{color:#111 !important;text-decoration:none;}
+.home-landing .hero .hero-byline{margin:0 0 10px !important;font-size:.95rem;color:#444;}
+.home-landing .hero .hero-dek{margin:0 !important;max-width:60ch;line-height:1.6;color:#333;}
+.home-landing .hero h1,.home-landing .hero h1 a{color:#111 !important;text-transform:none !important;}
+.home-landing .hero,.home-landing .hero p{column-count:1 !important;}
+
+/* Columna derecha: widgets (sidebar) */
+.home-landing aside .popular-box-widget{border-radius:10px;padding:0;overflow:hidden;margin-bottom:15px;display:flex;flex-direction:column;height:100%;}
+.popular-box-header{padding:16px 20px 0 16px;}
+.popular-box-header h3{margin:0;font-size:1rem;font-weight:700;color:#222;}
+.popular-box-content{padding:16px 20px;display:flex;flex-direction:column;gap:14px;flex:0 0 auto;}
+.popular-box-item{display:flex;gap:12px;align-items:center;}
+.popular-thumb{display:block;width:72px;height:72px;background-size:cover;background-position:center;border-radius:6px;flex-shrink:0;}
+.popular-thumb-guias{display:block;width:100%;aspect-ratio:16/9;background-size:cover;background-position:center;border-radius:8px;}
+.popular-text{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.popular-title{font-size:.95em;font-weight:600;color:#000 !important;line-height:1.3;margin-bottom:4px;text-decoration:none;}
+.popular-title:hover{color:#0073e6 !important;text-decoration:underline;}
+.popular-date{font-size:.8em;color:#595959;}
+
+/* Grid inferior / tarjetas / listados */
+.hot-post,.hot-post-secundario{position:relative;overflow:hidden;}
+.hot-post img,.hot-post-secundario img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;}
+.hot-post:hover img,.hot-post-secundario:hover img{transform:scale(1.05);filter:brightness(.8);}
+.grid-posts{max-width:1200px;margin:0 auto 50px;padding:0;}
+.post-category{
+  position:absolute;top:0;left:0;background:var(--color-rosa-destacado);color:#fff;font-size:12px;font-weight:600;text-transform:uppercase;padding:3px 8px;border-radius:0 0 4px 0;z-index:3;letter-spacing:.4px;
+}
+.post-category:hover{background-color:#004aad;}
+.post-text{position:absolute;bottom:0;left:0;right:0;padding:20px 15px;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);color:#fff;z-index:2;}
+.post-title{margin:0;font-size:1.2em;font-weight:bold;line-height:1.3;color:#fff;text-shadow:1px 1px 2px rgba(0,0,0,.5);}
+.post-subtitle{margin:5px 0 0;font-size:1em;font-weight:400;color:rgba(255,255,255,.85);text-shadow:1px 1px 2px rgba(0,0,0,.4);}
+.card-post{position:relative;overflow:hidden;border-radius:8px;margin-bottom:15px;box-shadow:0 2px 6px var(--color-shadow);}
+.card-post img{transition:transform .3s ease,filter .3s ease;}
+.card-post:hover img{transform:scale(1.05);filter:brightness(.8);}
+
+/* Blog list */
+.blog-tarjeta{display:flex;border:1px solid #ddd;border-radius:12px;padding:16px;margin-bottom:24px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:box-shadow .3s ease;}
+.blog-tarjeta:hover{box-shadow:0 4px 16px rgba(0,0,0,.1);}
+.tarjeta-thumb{flex-shrink:0;}
+.tarjeta-thumb img{width:200px;height:160px;object-fit:cover;border-radius:8px;}
+.tarjeta-info{margin-left:16px;flex:1;}
+.tarjeta-title{margin:0;font-size:1.15rem;font-weight:bold;color:#000;text-align:left;}
+.tarjeta-title a{color:#000 !important;}
+.tarjeta-title a:hover{color:#1A73E8 !important;text-decoration:underline;}
+.tarjeta-excerpt{margin:12px 0;font-size:1rem;color:#555;line-height:1.4;}
+.entry-meta{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:0;}
+.entry-meta img{width:28px;height:28px;border-radius:50%;object-fit:cover;}
+.entry-meta span{font-size:.85rem;color:#666;}
+
+/* Widgets grid (guías) y tags */
+.widget.type-grid .grid-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
+.widget.type-grid .grid-item{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05);transition:transform .2s ease;text-align:left;}
+.widget.type-grid .grid-item:hover{box-shadow:0 4px 16px rgba(0,0,0,.1);}
+.widget.type-grid .grid-item img{width:100%;height:140px;object-fit:cover;display:block;border-top-left-radius:10px;border-top-right-radius:10px;}
+.widget.type-grid .post-title{margin:8px 10px 0;font-size:.95rem;font-weight:600;color:#222;}
+.widget.type-grid .post-title:hover{color:#007bff;text-decoration:underline;}
+.widget.type-grid .post-date{margin:4px 10px 10px;font-size:.75rem;color:#595959;}
+
+/* Utilidades */
+.load-more-container{text-align:center;margin:30px 0;}
+.load-more-button{background:#004DCC;color:#fff;border:0;padding:10px 24px;border-radius:6px;font-size:15px;font-weight:500;cursor:pointer;transition:background-color .2s ease;}
+.load-more-button:hover{background:#1a5ed8;}
+#back-top{
+  position:fixed;bottom:20px;right:20px;width:42px;height:42px;line-height:42px;background:#007bff;color:#fff;font-size:20px;font-weight:bold;text-align:center;border-radius:50%;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:999;opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+#back-top.visible{opacity:1;pointer-events:auto;}
+#back-top:hover{background:#0056b3;}
+#results-container{margin-top:12px;padding-left:0;overflow:visible;}
+#results-container li{list-style:none;margin-bottom:6px;padding:6px 10px;border:1px solid #fc3c68;border-radius:5px;font-size:.95rem;background:#fff;white-space:normal;word-wrap:break-word;}
+.site-footer,footer{position:relative;z-index:0;clear:both;}
+
+/* Responsive */
+@media (max-width:768px){
+  .blog-tarjeta{flex-direction:column;align-items:center;}
+  .tarjeta-thumb,.tarjeta-thumb img{width:100% !important;height:200px !important;}
+  .tarjeta-info{margin-left:0;margin-top:12px;}
+}
+
+/* ========= MODO CONTENEDOR ÚNICO ========= */
+.contenedor-unico{max-width:1200px;margin:0 auto;background:#fff;padding:14px;}
+.contenedor-unico .homepage-top,
+.contenedor-unico .homepage-home .home-section{margin:0 !important;padding:0 14px !important;background:transparent !important;border-radius:0 !important;box-shadow:none !important;}
+.contenedor-unico .hero-divider{margin:0 !important;}
+.contenedor-unico > *{box-shadow:none !important;border:none !important;border-radius:0 !important;}
+
+/* home */
+.homepage-home .home-section{
+  max-width:1200px;margin:0 auto 40px;padding:20px;background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);text-align:left;
+}
+.homepage-home h2{margin:0 0 10px;font-size:1.6em;text-align:left;}
+.homepage-home p{margin:0 0 20px;color:#666;}
+.home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.home-card{background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05);transition:transform .2s ease;text-align:left;}
+.home-card img{width:100%;height:160px;object-fit:cover;display:block;}
+.home-card h3{font-size:1rem;margin:10px;color:#000;font-weight:600;}
+.home-card a{text-decoration:none;color:inherit;display:block;}
+.home-card a:hover h3{color:#0073e6;}
 </style>
 
 {% include estiloazul.html %}
 {% include menu.html %}
+<div class="contenedor-unico">
 
+<div class="home-landing">
 
-<div class="container style=padding: 0; !important">
-<section class="hot-posts">
-  <div class="hot-grid">
-    {% assign principal = site.posts | where: "destacado", 1 | first %}
-    {% assign secundario2 = site.posts | where: "destacado", 2 | first %}
-    {% assign secundario3 = site.posts | where: "destacado", 3 | first %}
+<!-- ====== FILA 1: izquierda últimos posts, centro héroe, derecha widgets ====== -->
+<div class="homepage-top">
 
-{% if principal %}
-<article class="post hot-post main-post" style="position: relative;">
-  {% if principal.categories %}
-    <a href="/categoria/{{ principal.categories[0] | slugify }}/">
-      <span class="post-category">{{ principal.categories[0] }}</span>
-    </a>
-  {% endif %}
-  <a href="{{ principal.url | relative_url }}" style="display: block; height: 100%;">
-<img fetchpriority="high"
-  src="{{ principal.image | replace: '.webp', '-768w.webp' }}" 
-  alt="{{ principal.excerpt }}"
-  width="660"
-  height="310" />
-    <div class="post-text">
-      <h3 class="post-title">{{ principal.title }}</h3>
-      {% if principal.subtitle %}
-        <p class="post-subtitle">{{ principal.subtitle }}</p>
-      {% endif %}
+  <!-- IZQUIERDA: Últimos posts (lista) -->
+  <aside class="latest-widget" aria-label="Últimos posts">
+    <div class="lw-header">
+      <h3>Lo último ></h3>
+      <div class="hero-divider"></div>
     </div>
+    <div class="lw-list">
+{% assign latest_posts = site.posts | sort: "date" | reverse %}
+{% for post in latest_posts limit: 5 %}
+  <a class="lw-item" href="{{ post.url | relative_url }}">
+    <span class="lw-thumb">
+      <img
+        src="{{ post.image | default: '/global/images/placeholder.webp' }}"
+        alt="{{ post.title | escape }}"
+        width="116" height="88" loading="lazy">
+    </span>
+    <span class="lw-body">
+      <span class="lw-title">{{ post.title }}</span>
+      <span class="lw-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+    </span>
   </a>
-</article>
-{% endif %}
-
- {% if secundario2 %}
-    <article class="post hot-post-secundario side-post side1" style="position: relative;">
-      {% if secundario2.categories %}
-        <a href="/categoria/{{ secundario2.categories[0] | slugify }}/">
-          <span class="post-category">{{ secundario2.categories[0] }}</span>
-        </a>
-      {% endif %}
-  <a href="{{ secundario2.url | relative_url }}" style="display: block; height: 100%;">
-<img fetchpriority="high"
-  src="{{ secundario2.image | replace: '.webp', '-480w.webp' }}" 
-  alt="{{ secundario2.excerpt }}"
-  width="400"
-  height="225" />
-          <div class="post-text">
-          <h3 class="post-title">{{ secundario2.title }}</h3>
-        </div>
-      </a>
-    </article>
-    {% endif %}
-
-    {% if secundario3 %}
-    <article class="post hot-post-secundario side-post side2" style="position: relative;">
-      {% if secundario3.categories %}
-        <a href="/categoria/{{ secundario3.categories[0] | slugify }}/">
-          <span class="post-category">{{ secundario3.categories[0] }}</span>
-        </a>
-      {% endif %}
-      <a href="{{ secundario3.url | relative_url }}" style="display: block; height: 100%;">
-<img fetchpriority="high"
-  src="{{ secundario3.image | replace: '.webp', '-480w.webp' | relative_url }}" 
-  alt="{{ secundario3.excerpt }}"
-  width="400"
-  height="225" />
-          <div class="post-text">
-          <h3 class="post-title">{{ secundario3.title }}</h3>
-        </div>
-      </a>
-    </article>
-    {% endif %}
-  </div>
-</section>
-
-<div style="background-color: #fef6f8; padding: 12px 18px; margin: 10px auto 10px; max-width: 900px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 0.95rem; color: #444;">
-  Descubre la nueva sección de <strong>belleza</strong>, donde <strong>Sara Campos</strong> comparte su experiencia profesional en estética, tratamientos naturales y bienestar femenino.
-  <a href="/belleza/" style="color: #b03e6f; font-weight: bold; text-decoration: none; margin-left: 8px;">Visítala aquí →</a>
-</div>
-<div class="fila-titulo">
-  <h2 class="titulo-principal" style="margin-top: 10px !important">Últimos posts ></h2>
-</div>
-<div class="contenido-con-sidebar" style="display: flex; gap: 0px;">
-  <div class="contenido-principal" style="width: 75%;">
-<section style="max-width: 1200px; margin: auto;">
-  {% assign sorted_posts = site.posts | sort: "date" | reverse %}
-  {% for post in sorted_posts %}
-  {% unless post.categories contains "belleza" or post.destacado %}
-
-  <article class="blog-tarjeta hentry post-item" style="display: none;">
-  <div class="tarjeta-thumb" style="position: relative;">
-    <a href="{{ post.url | relative_url }}">
-<img 
-  src="{{ post.image | replace: '.webp', '-480w.webp' }}" 
-  alt="{{ post.title }}"
-  width="200"
-  height="160"
-  loading="lazy" />
-         {% if post.categories %}
-        <a href="/categoria/{{ post.categories[0] | slugify }}/">
-          <span class="post-category">
-            {{ post.categories[0] }}
-          </span>
-        </a>
-      {% endif %}
-    </a>
-  </div>
-  <div class="tarjeta-info">
-    <h2 class="tarjeta-title">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    <p class="tarjeta-excerpt">
-      {{ post.excerpt | strip_html | truncate: 140 }}
-    </p>
-    <div class="entry-meta">
-      <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
-        {% assign autor = site.data.autor.autores[post.autor] %}
-        <img src="{{ autor.avatar }}" loading="lazy" width="28" height="28" alt="{{ autor.nombre }}">
-        <span style="font-size: 0.85rem; color: #666;">
-          Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }} </a> 
-        </span>
-      </div>
-    </div>
-  </div>
-</article>
-  {% endunless %}
 {% endfor %}
-</section>
-  <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
-    <button class="load-more-button" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Cargar más ▼</button>
-  </div>
+    </div>
+  </aside>
 
-  <div id="enlace-final" style="display: none; margin-top: 2rem; text-align: center;margin-bottom: 2rem;">
-        <a href="/blog/2025/"><button class="load-more-button" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Ver todos los posts</button></a>
-  </div>
+  <!-- CENTRO: Héroe con destacado:1 -->
+  {% assign principal = site.posts | where: "destacado", 1 | first %}
+  <section class="hero" aria-label="Artículo destacado">
+    {% if principal %}
+      <a class="hero-media" href="{{ principal.url | relative_url }}">
+        {% if principal.categories %}
+          <span class="hero-cat">{{ principal.categories[0] }}</span>
+        {% endif %}
+        <img fetchpriority="high" src="{{ principal.image }}" alt="{{ principal.title }}">
+      </a>
 
-<div class="fila-titulo">
-  <h2 class="titulo-principal">Últimas guías de compra actualizadas ></h2>
-</div>
+      <div class="hero-divider"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          <a href="{{ principal.url | relative_url }}">{{ principal.title }}</a>
+        </h1>
 
-<div class="widget HTML is-visible type-grid" id="custom-grid-widget">
-  <div class="grid-items">
-{% assign guias_actualizadas = site.pages | sort: "date" | reverse %}
-{% assign count = 0 %}
-{% for guia in guias_actualizadas %}
-  {% if guia.date and guia.title and guia.path contains "index.html" and guia.path != "belleza/index.html" and guia.path != "index.html" %}
-    {% if guia.imagen %}
-      {% assign imagen_url = guia.imagen | relative_url %}
+        {% assign autor = site.data.autor.autores[principal.autor] %}
+        <p class="hero-byline">
+          {% if autor %}
+            Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }}</a>
+          {% else %}
+            Por {{ principal.autor | default: "Redacción" }}
+          {% endif %}
+          • {{ principal.date | date: "%d/%m/%Y" }}
+        </p>
+
+        <p class="hero-dek">
+          {% if principal.subtitle %}
+            {{ principal.subtitle }}
+          {% else %}
+            {{ principal.excerpt | strip_html | truncate: 220 }}
+          {% endif %}
+        </p>
+      </div>
     {% else %}
-      {% assign imagen_url = '/global/images/default.webp' %}
+      <div class="hero-media" style="background:#eaeaea;display:flex;align-items:center;justify-content:center;">
+        <span style="font-weight:700;color:#666;">Añade un post con <code>destacado: 1</code> en el front matter</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title">Tu hero aparecerá aquí</h1>
+        <p class="hero-byline">Por Redacción • {{ "now" | date: "%d/%m/%Y" }}</p>
+        <p class="hero-dek">Imagen amplia, línea negra, titular grande, autor y una bajada descriptiva.</p>
+      </div>
     {% endif %}
-    <div class="grid-item">
-      <a href="{{ guia.url | relative_url }}">
-        <img src="{{ guia.imagen | default: '/global/images/default.webp' }}" loading="lazy" alt="{{ guia.title }}">
-      </a>
-      <a href="{{ guia.url | relative_url }}">
-        <h3 class="comparativa-title">{{ guia.title }}</h3>
-      </a>
-      <p class="post-date">
-        {{ guia.date | date: "%d/%m/%Y" }}
-      </p>
-    </div>
-    {% assign count = count | plus: 1 %}
-    {% if count == 6 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
+  </section>
 
-
-  </div>
-</div>
-
-
-</div>
-<aside class="barra-lateral" style="width: 25%; margin-left: 15px;">
-
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Conoce al equipo ></h3>
-  </div>
-  <div class="popular-box-content">
-    
-    <!-- Carlos López -->
-    <div class="popular-box-item">
-      <a href="/sobre-nosotros/#carlos" class="popular-thumb" style="background-image:url(/global/images/avatarCarlos.webp);" aria-label="Ir al perfil de Carlos López"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#carlos" class="popular-title">Carlos López</a>
-        <div class="popular-date">Analista tech con 15 años de experiencia</div>
+  <!-- DERECHA: Widget único -->
+  <aside aria-label="Barra lateral">
+    <div class="popular-box-widget">
+      <div class="popular-box-header">
+        <h3>Guías populares ></h3>
+        <div class="hero-divider"></div>
+      </div>
+      <div class="popular-box-content">
+        {% assign top_posts = site.pages | where_exp: "post", "post.top" %}
+        {% assign sorted_top_posts = top_posts | sort: "top" %}
+        {% for post in sorted_top_posts limit:6 %}
+          <div class="popular-box-item">
+            <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block;width:80px;height:80px;flex-shrink:0;background-image:url({{ post.imagen }});background-size:cover;background-position:center center;border-radius:8px;" aria-label="{{ post.title }}"></a>
+            <div class="popular-text"><a href="{{ post.url }}" class="popular-title">{{ post.shortTitle | default: post.title }}</a></div>
+          </div>
+        {% endfor %}
       </div>
     </div>
-
-    <!-- Sara Martín -->
-    <div class="popular-box-item">
-      <a href="/sobre-nosotros/#sara" class="popular-thumb" style="background-image:url(/global/images/avatarSara.webp);" aria-label="Ir al perfil de Sara Martín"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#sara" class="popular-title">Sara Campos</a>
-        <div class="popular-date">Especialista en belleza y bienestar</div>
-      </div>
-    </div>
-
-        <div class="popular-box-item">
-      <a href="/sobre-nosotros/#david" class="popular-thumb" style="background-image:url(/global/images/avatarDavid.webp);" aria-label="Ir al perfil de David Jimenez"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#david" class="popular-title">David Jimenez</a>
-        <div class="popular-date">Analista deportivo con experiencia en guías y pruebas</div>
-      </div>
-    </div>
-
-            <div class="popular-box-item">
-      <a href="/sobre-nosotros/#laura" class="popular-thumb" style="background-image:url(/global/images/avatarLaura.webp);" aria-label="Ir al perfil de Laura"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#laura" class="popular-title">Laura García</a>
-        <div class="popular-date">Experta en moda y tendencias</div>
-      </div>
-    </div>
-        
-    <div style="text-align: center; margin-top: 12px;">
-      <a href="/sobre-nosotros/" style="font-size: 0.9em; font-weight: bold; color: var(--color-azul-profesional); text-decoration: none;">
-        Ver todo el equipo →
-      </a>
-    </div>
-  </div>
+  </aside>
 </div>
 
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Guías de compra Populares ></h3>
-  </div>
-<div class="popular-box-content">
-  {% assign top_posts = site.pages | where_exp: "post", "post.top" %}
-  {% assign sorted_top_posts = top_posts | sort: "top" %}
-  {% for post in sorted_top_posts limit:5 %}
-    <div class="popular-box-item">
-      <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block; width:80px; height:80px; flex-shrink:0; background-image:url({{ post.imagen }}); background-size:cover; background-position:center center; border-radius:8px;" aria-label="{{ post.title }}"></a>
-      <div class="popular-text">
-        <a href="{{ post.url }}" class="popular-title">{{ post.shortTitle }}</a>
-      </div>
-    </div>
-  {% endfor %}
-</div>
-
-</div>
-
-<style>
-.tag-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 11px;
-}
-
-.tag-box a {
-  display: inline-block;
-  padding: 3px 11px;
-  border: 1px solid #007bff;
-  border-radius: 15px;
-  color: #007bff;
-  text-decoration: none;
-  font-size: 13px;
-  white-space: nowrap;
-  transition: background 0.2s ease;
-}
-
-.tag-box a:hover {
-  background: #007bff;
-  color: white !important;
-}
-.popular-box-content.tag-box {
-  flex-direction: row !important;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-</style>
-
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Categorías ></h3>
-  </div>
-  <div class="popular-box-content tag-box">
-    {% assign sorted_categories = site.categories | sort %}
-    {% for category in sorted_categories %}
-      <a href="{{ site.baseurl }}/categoria/{{ category[0] | slugify }}/">
-        {{ category[0] | capitalize_each}}
-      </a>
-    {% endfor %}
-  </div>
-</div>
-
-<style>#results-container {
-  margin-top: 12px;
-  padding-left: 0;
-  overflow: visible;
-}
-
-#results-container li {
-  list-style: none;
-  margin-bottom: 6px;
-  padding: 6px 10px;
-  border: 1px solid #fc3c68;
-  border-radius: 5px;
-  font-size: 0.95rem;
-  background: #fff;
-  white-space: normal;
-  word-wrap: break-word;
-}
-
-</style>
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Búsqueda ></h3>
-  </div>
-<div class="popular-box-content">
-  <input type="text" id="search-input" placeholder="Escribe para buscar" style="width: 100%; padding: 8px 3px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;" />
-  <ul id="results-container" style="margin-top: 16px; list-style: none; padding: 0;"></ul>
-</div>
-</div>
+<!-- ====== FILA 2: bloque ANCHO debajo de las 3 columnas ====== -->
+{% include section_home.html %}
+{% include section_home2.html
+   title="Últimas guías"
+   source="pages"
+   require_keyword=true
+   see_all_url="/guias/"
+%}
 
 
-</aside>
-</div>
-
-
+</div> <!-- /.home-landing -->
 {% include footer.html %}
 
-</div>
+</div> <!-- /.contenedor-unico -->
+
+
 <a href="#" id="back-top" title="Volver arriba" role="button">↑</a>
 <script src="/assets/js/simple-jekyll-search.min.js" defer></script>
 
 <script>
+  // Mostrar posts progresivamente en el listado inferior (FILA 2)
   const posts = document.querySelectorAll('.post-item');
   const loadMoreButton = document.querySelector('.load-more-button');
   const enlaceFinal = document.getElementById('enlace-final');
   let visibleCount = 0;
   const postsPerClick = 5;
-
   function showNextPosts() {
     for (let i = visibleCount; i < visibleCount + postsPerClick; i++) {
-      if (posts[i]) {
-        posts[i].style.display = 'flex'; // usa 'block' si no usas Flexbox
-      }
+      if (posts[i]) { posts[i].style.display = 'flex'; }
     }
     visibleCount += postsPerClick;
-
     if (visibleCount >= posts.length) {
-      loadMoreButton.style.display = 'none';
-      enlaceFinal.style.display = 'block';
+      if (loadMoreButton) loadMoreButton.style.display = 'none';
+      if (enlaceFinal) enlaceFinal.style.display = 'block';
     }
   }
-
-  loadMoreButton.addEventListener('click', showNextPosts);
-  showNextPosts(); // Mostrar los primeros 5 al cargar
+  if (loadMoreButton) {
+    posts.forEach((p)=>{ p.style.display = 'none'; });
+    loadMoreButton.addEventListener('click', showNextPosts);
+    showNextPosts();
+  }
 </script>
+
 <script>
+  // Botón volver arriba
   const backTopBtn = document.getElementById('back-top');
-
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) {
-      backTopBtn.classList.add('visible');
-    } else {
-      backTopBtn.classList.remove('visible');
-    }
+    if (window.scrollY > 150) backTopBtn.classList.add('visible');
+    else backTopBtn.classList.remove('visible');
   });
-
   backTopBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+
 <script defer>
+  // Buscador diferido
   document.addEventListener("DOMContentLoaded", function () {
     const input = document.getElementById("search-input");
+    if (!input) return;
     let initialized = false;
-
     input.addEventListener("focus", function () {
       if (initialized) return;
-
       SimpleJekyllSearch({
         searchInput: input,
         resultsContainer: document.getElementById('results-container'),
@@ -1080,9 +346,7 @@ img {
         searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
         noResultsText: 'No se encontraron resultados',
       });
-
       initialized = true;
     });
   });
 </script>
-
