@@ -1,17 +1,89 @@
+{%- comment -%}
+Parámetros:
+- title        : Título H2 (ej: "Hogar")
+- description  : Texto bajo el H2
+- dirs         : Carpetas separadas por comas para filtrar (ej: "hogar, guias/hogar")
+- limit        : Nº de items a mostrar (por defecto 4)
+- sort_by      : Campo de ordenación (por defecto "date")
+- order        : "desc" | "asc" (por defecto "desc")
+- fallback_image: Imagen por defecto
+- tipo         : (opcional) nombre de la carpeta en _data (ej: "body-bebe-personalizado")
+
+“Actualizado” se resuelve en este orden:
+1) site.data[tipo].productos.actualizado
+2) site.data[tipo].actualizado
+3) site.data[tipo].meta.actualizado
+{%- endcomment -%}
+
+{%- assign title           = include.title | default: "Sección" -%}
+{%- assign description     = include.description | default: "" -%}
+{%- assign limit           = include.limit | default: 4 | plus: 0 -%}
+{%- assign sort_by         = include.sort_by | default: "date" -%}
+{%- assign order           = include.order | default: "desc" -%}
+{%- assign fallback_image  = include.fallback_image | default: "/global/images/placeholder.webp" -%}
+
+{%- assign dirs_param = include.dirs | default: "" -%}
+{%- assign has_dirs   = dirs_param | strip | size -%}
+{%- assign dirs       = dirs_param | split: "," -%}
+
+{%- assign pages_sorted = site.pages | sort: sort_by -%}
+{%- if order == "desc" -%}{%- assign pages_sorted = pages_sorted | reverse -%}{%- endif -%}
+
+{%- assign shown = 0 -%}
+
+{%- comment -%} === Resolver "Actualizado" desde _data/{{tipo}} === {%- endcomment -%}
+{%- assign tipo_key = include.tipo | default: tipo | default: "auriculares" -%}
+{%- assign actualizado = nil -%}
+{%- if tipo_key and tipo_key != "" -%}
+  {%- assign data_ns = site.data[tipo_key] -%} {# acceso con corchetes para claves con guión #}
+  {%- if data_ns -%}
+    {%- if data_ns.productos and data_ns.productos.actualizado -%}
+      {%- assign actualizado = data_ns.productos.actualizado -%}
+    {%- elsif data_ns.actualizado -%}
+      {%- assign actualizado = data_ns.actualizado -%}
+    {%- elsif data_ns.meta and data_ns.meta.actualizado -%}
+      {%- assign actualizado = data_ns.meta.actualizado -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endif -%}
+
 <div class="hero-divider"></div>
-<section class="homepage-home" aria-label="Home upgrades">
+<section class="homepage-home" aria-label="{{ title | escape }}">
   <div class="home-section">
-    <h2>Hogar</h2>
-    <p>Productos probados por Recomendador.net para mejorar tu hogar.</p>
+    <h2>{{ title }}</h2>
+    {%- if description != "" -%}<p>{{ description }}</p>{%- endif -%}
+    {%- if actualizado -%}<p class="home-updated"><small>Actualizado: {{ actualizado }}</small></p>{%- endif -%}
+
     <div class="home-grid">
-      {% for post in site.posts limit:4 offset:6 %}
-      <article class="home-card">
-        <a href="{{ post.url | relative_url }}">
-          <img src="{{ post.image | default: '/global/images/placeholder.webp' }}" alt="{{ post.title }}">
-          <h3>{{ post.title }}</h3>
-        </a>
-      </article>
-      {% endfor %}
+      {%- for p in pages_sorted -%}
+        {%- if shown >= limit -%}{% break %}{%- endif -%}
+
+        {%- unless p.path contains ".html" -%}{% continue %}{%- endunless -%}
+        {%- unless p.keywords -%}{% continue %}{%- endunless -%}
+
+        {%- assign matches_dir = true -%}
+        {%- if has_dirs > 0 -%}
+          {%- assign matches_dir = false -%}
+          {%- for raw in dirs -%}
+            {%- assign d = raw | strip -%}
+            {%- if d != "" and p.path contains d -%}
+              {%- assign matches_dir = true -%}{%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+        {%- unless matches_dir -%}{% continue %}{%- endunless -%}
+
+        {%- assign thumb = p.image | default: p.imagen | default: fallback_image -%}
+
+        <article class="home-card">
+          <a href="{{ p.url | relative_url }}">
+            <img loading="lazy" src="{{ thumb }}" alt="{{ p.title | escape }}">
+            <h3>{{ p.title }}</h3>
+          </a>
+        </article>
+
+        {%- assign shown = shown | plus: 1 -%}
+      {%- endfor -%}
     </div>
   </div>
 </section>

@@ -277,7 +277,17 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 </div>
 
 <!-- ====== FILA 2: bloque ANCHO debajo de las 3 columnas ====== -->
-{% include home_seccion_destacada.html %}
+
+{% include home_seccion_destacada.html
+   title="Halloween 2025"
+   description="Las mejores recomendaciones para celebrar un Halloween inolvidable."
+   dirs="hogar"
+   limit=4
+   sort_by="date"
+   order="desc"
+   fallback_image="/global/images/placeholder.webp"
+%}
+
 {% include home_seccion_alta.html
    title="Belleza"
    source="pages"
