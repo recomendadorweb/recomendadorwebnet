@@ -3,6 +3,7 @@
 {%- assign _offset = include.offset | default: 0 -%}
 {%- assign _limit = include.limit | default: 4 -%}
 {%- assign _source = include.source | default: "posts" -%}
+{%- assign _desc = include.description | default: include.descripcion | default: "" -%}
 
 {%- if _source == "pages" -%}
   {%- assign base = site.pages -%}
@@ -56,11 +57,13 @@
     <h2 class="sf-title">{{ _title }}</h2>
     <nav class="sf-links">
       {%- if include.see_all_url -%}
-        <a href="{{ include.see_all_url | relative_url }}">{{ _see_all_label }}</a>
+        <a href="{{ include.see_all_url | relative_url }}">Ver todo en {{ include.title | default: 'esta categoría' }}</a>
       {%- endif -%}
     </nav>
   </header>
-
+{%- if _desc != "" -%}
+  <p class="sf-desc">{{ _desc }}</p>
+{%- endif -%}
 {%- if main -%}
   <!-- Grid de medios: imagen principal a la izquierda, 3 thumbs a la derecha -->
   <div class="sf-hero">
@@ -77,7 +80,7 @@
         <div class="sf-body">
           <h3 class="sf-item-title"><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
           {%- assign _when = p.last_modified_at | default: p.date -%}
-          <p class="sf-date">{% include date_es.html date=_when %}</p>
+          <p class="sf-date">Actualizado: {% include date_es.html date=_when %}</p>
           {%- assign _autor = site.data.autor.autores[p.autor] -%}
           {%- if _autor -%}
             <p class="sf-by">
@@ -94,7 +97,7 @@
   <!-- Texto del principal, cada dato en su línea -->
   <h3 class="sf-main-title"><a href="{{ main.url | relative_url }}">{{ main.title }}</a></h3>
   {%- assign _when_main = main.last_modified_at | default: main.date -%}
-  <p class="sf-date">{% include date_es.html date=_when_main %}</p>
+  <p class="sf-date">Actualizado: {% include date_es.html date=_when_main %}</p>
   {%- assign _autor_main = site.data.autor.autores[main.autor] -%}
   {%- if _autor_main -%}
     <p class="sf-by">
@@ -110,32 +113,32 @@
 
 <style>
 /* Contenedor y cabecera */
-.split-feature{max-width:1200px;margin:10px auto 36px;padding:0 14px;}
-.sf-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px;}
+.split-feature{max-width:1200px;margin:0px auto 36px;padding:0px 14px;}
+.sf-head{display:flex;align-items:flex-end;justify-content:space-between;}
 .sf-title{margin:0;font-size:1.6rem;font-weight:900;}
-.sf-links a{color:#1a73e8;text-decoration:none;font-weight:600;font-size:.95rem;}
-.sf-links a:hover{text-decoration:underline}
+.sf-links a{color:#111 !important;font-size:1.1rem !important;white-space:nowrap;text-decoration:none;font-weight: bold !important;}
+.sf-links a:hover{color:#0073e6 !important;text-decoration:none}
 
 /* Grid de medios 50/50 (alturas iguales) */
-.sf-hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch;}
-.sf-media img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block;}
+.sf-hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;}
+.sf-media img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius: 10px;}
 
 /* Columna derecha: reparte el alto de la izquierda en 3 filas */
 .sf-side{display:grid;grid-template-rows:repeat(3,1fr);gap:16px;height:100%;}
 .sf-item{display:grid;grid-template-columns:140px 1fr;gap:12px;height:100%;overflow:hidden;}
-.sf-thumb img{width:140px;height:100%;object-fit:cover;display:block;}
+.sf-thumb img{width:140px;height:100%;object-fit:cover;display:block;border-radius: 10px;}
 .sf-body{display:flex;flex-direction:column;gap:6px;min-width:0;}
 
 /* Tipografía: cada dato en su línea */
-.sf-main-title{margin:10px 0 6px;font-size:1.5rem;font-weight:800;line-height:1.2;}
-.sf-main-title a{color:#0b5fdc;text-decoration:none;}
-.sf-main-title a:hover{text-decoration:underline;}
+.sf-main-title{margin:10px 0 6px;font-size:1.1rem;font-weight:800;line-height:1.2;}
+.sf-main-title a{color:#111 !important;text-decoration:none;font-weight: bold !important;}
+.sf-main-title a:hover{color:#0073e6 !important;text-decoration:none;font-weight: bold !important;}
 .sf-item-title{margin:0;font-size:1.08rem;font-weight:800;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-.sf-item-title a{color:#0b5fdc;text-decoration:none;}
-.sf-item-title a:hover{text-decoration:underline;}
+.sf-item-title a{color:#111 !important;text-decoration:none;font-weight: bold !important;}
+.sf-item-title a:hover{color:#0073e6 !important;text-decoration:none;font-weight: bold !important;}
 
-.sf-date{margin:0;color:#555;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:.25px;}
-.sf-by{margin:0;display:inline-flex;align-items:center;gap:8px;color:#555;font-size:.9rem;}
+.sf-date{margin:0;color:#666;font-size:.84rem;}
+.sf-by{color:#111 !important;margin:0;display:inline-flex;align-items:center;gap:8px;color:#555;font-size:.9rem;}
 .sf-by .sf-avatar{width:24px;height:24px;border-radius:50%;object-fit:cover;display:inline-block;}
 
 .sf-dek{margin:8px 0 0;color:#444;line-height:1.5;}
@@ -156,13 +159,14 @@
 }
 
 .sf-side .sf-by{
-  display:grid !important;      /* avatar + nombre en 2 columnas */
+  display:flex !important;      /* avatar + nombre en 2 columnas */
   grid-template-columns: 22px 1fr;
   align-items:center;
   justify-items:start;
   column-gap:8px;
   margin:0;
   line-height:1;
+  color:#111 !important;
 }
 
 .sf-side .sf-by .sf-avatar{
@@ -179,9 +183,189 @@
   white-space:nowrap;
   text-overflow:ellipsis;
   text-decoration:none;
+  color:#111 !important;
+  font-size: 0.95rem; /* aquí cambias el tamaño */
 }
+.sf-side .sf-by a:hover{
+  color: #1a73e8 !important;
+  font-size: 0.95rem; /* aquí cambias el tamaño */
+}
+
 
 .sf-side .sf-date{ margin:0; display:block; }
 .sf-side .sf-item-title{ margin:0; }
+/* Autor principal (bloque de la izquierda): forzar color del enlace */
+.split-feature .sf-by a,
+.split-feature .sf-by a:visited {
+  color: #111 !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.split-feature .sf-by a:hover {
+  color: #0073e6 !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+/* Autor: mismo estilo para principal y laterales */
+.sf-by{
+  display:flex !important;
+  align-items:center;          /* centra verticalmente avatar y texto */
+  justify-content:flex-start;  /* evita separarlos a los extremos */
+  gap:8px;
+  line-height:1;
+}
+
+.sf-by .sf-avatar{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  object-fit:cover;
+  flex:0 0 22px;               /* fija el ancho del avatar */
+}
+
+.sf-by a,
+.sf-by a:visited{
+  display:inline-block;
+  margin-left:0 !important;    /* cancela posibles estilos globales */
+  padding:0 !important;        /* quita el padding que lo bajaba */
+  text-decoration:none;
+  color:#111 !important;
+  font-size:.95rem;
+  text-align:left;
+}
+
+.sf-by a:hover{
+  color:#0073e6 !important;
+}
+/* ====== AUTOR (principal y laterales) ====== */
+.split-feature .sf-by{
+  display:inline-flex !important;   /* encoge al contenido, no ocupa todo el ancho */
+  align-items:center;               /* centra verticalmente avatar y texto */
+  gap:8px;
+  margin:0;
+  line-height:1;
+  text-align:left;
+}
+
+.split-feature .sf-by .sf-avatar{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  object-fit:cover;
+  flex:none;
+}
+
+.split-feature .sf-by a,
+.split-feature .sf-by a:visited{
+  display:inline-block;
+  margin:0 !important;              /* evita cualquier margin-left:auto heredado */
+  padding:0 !important;
+  text-decoration:none;
+  color:#111 !important;
+  font-size:.95rem;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:100%;
+}
+
+.split-feature .sf-by a:hover{
+  color:#0073e6 !important;
+}
+
+/* laterales: lo mismo */
+.split-feature .sf-side .sf-by{ display:inline-flex !important; }
+/* por si quedó algún resto de grid en .sf-by */
+.split-feature .sf-by{ grid-template-columns:unset; justify-content:flex-start; }
+/* ====== LADO DERECHO: autor alineado y pegado al avatar ====== */
+
+.split-feature .sf-side .sf-body{
+  justify-items:start;                 /* evita alineado a la derecha del grid */
+}
+
+.split-feature .sf-side .sf-by{
+  display:inline-flex !important;      /* que mida lo que ocupa el contenido */
+  align-items:center;
+  justify-content:flex-start;          /* sin separar avatar y nombre */
+  gap:8px;
+  line-height:1;
+  width:auto;
+}
+
+.split-feature .sf-side .sf-by > *{
+  flex:none;                           /* nada se estira */
+}
+
+.split-feature .sf-side .sf-by .sf-avatar{
+  width:22px; height:22px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.split-feature .sf-side .sf-by a,
+.split-feature .sf-side .sf-by a:visited{
+  display:inline-block;
+  margin:0 !important;                 /* cancela cualquier margin-left:auto heredado */
+  padding:0 !important;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  max-width:calc(100% - 30px);
+  text-decoration:none;
+  color:#111 !important;
+  font-size:.95rem;
+}
+
+.split-feature .sf-side .sf-by a:hover{
+  color:#0073e6 !important;
+}
+/* Restaura tamaño original de las imágenes laterales */
+.split-feature .sf-side .sf-thumb img {
+  width: 140px;        /* ancho fijo para las imágenes laterales */
+  height: 100%;        /* que ocupen todo el alto del contenedor */
+  object-fit: cover;   /* mantiene proporción y recorta si es necesario */
+  display: block;
+  border-radius: 10px;
+}
+
+/* Mantiene también el contenedor con altura fija para alinearlas bien */
+.split-feature .sf-side .sf-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: center; /* centra verticalmente imagen y texto */
+  height: 100%;
+}
+/* Que cada fila lateral estire sus celdas a la altura completa */
+.split-feature .sf-side .sf-item{
+  align-items: stretch !important;   /* en vez de center */
+}
+
+/* El contenedor del thumbnail debe medir toda la fila */
+.split-feature .sf-side .sf-thumb{
+  display: block;
+  height: 100%;
+}
+
+/* Imagen recortada al alto completo de la fila (como antes) */
+.split-feature .sf-side .sf-thumb img{
+  width: 140px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+/* Descripción opcional del bloque */
+.sf-desc{
+  margin: 6px 0 20px;
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  max-width: 75ch;         /* legibilidad */
+}
+@media (max-width: 900px){
+  .sf-desc{ margin-bottom: 12px; }
+}
 
 </style>
