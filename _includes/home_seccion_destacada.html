@@ -1,89 +1,102 @@
-{%- comment -%}
-Parámetros:
-- title        : Título H2 (ej: "Hogar")
-- description  : Texto bajo el H2
-- dirs         : Carpetas separadas por comas para filtrar (ej: "hogar, guias/hogar")
-- limit        : Nº de items a mostrar (por defecto 4)
-- sort_by      : Campo de ordenación (por defecto "date")
-- order        : "desc" | "asc" (por defecto "desc")
-- fallback_image: Imagen por defecto
-- tipo         : (opcional) nombre de la carpeta en _data (ej: "body-bebe-personalizado")
+<style>
+.home-card .card-meta{margin-top:.5rem;font-size:.95rem;color:#666;display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;margin:3px 10px 10px 10px;}
+.home-card .author-inline{display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;color:inherit}
+.home-card .author-inline:hover{text-decoration:underline}
+.home-card .author-avatar-xs{width:20px;height:20px;border-radius:9999px;object-fit:cover;flex:none}
+.home-card .sep{opacity:.5}
 
-“Actualizado” se resuelve en este orden:
-1) site.data[tipo].productos.actualizado
-2) site.data[tipo].actualizado
-3) site.data[tipo].meta.actualizado
-{%- endcomment -%}
+/* Cabecera de sección: H2 + enlace a la derecha */
+.home-section .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:.5rem}
+.home-section .section-head .see-all{font-size:.95rem;white-space:nowrap;text-decoration:none}
+.home-section .section-head .see-all:hover{text-decoration:underline}
 
-{%- assign title           = include.title | default: "Sección" -%}
-{%- assign description     = include.description | default: "" -%}
-{%- assign limit           = include.limit | default: 4 | plus: 0 -%}
-{%- assign sort_by         = include.sort_by | default: "date" -%}
-{%- assign order           = include.order | default: "desc" -%}
-{%- assign fallback_image  = include.fallback_image | default: "/global/images/placeholder.webp" -%}
-
-{%- assign dirs_param = include.dirs | default: "" -%}
-{%- assign has_dirs   = dirs_param | strip | size -%}
-{%- assign dirs       = dirs_param | split: "," -%}
-
-{%- assign pages_sorted = site.pages | sort: sort_by -%}
-{%- if order == "desc" -%}{%- assign pages_sorted = pages_sorted | reverse -%}{%- endif -%}
-
-{%- assign shown = 0 -%}
-
-{%- comment -%} === Resolver "Actualizado" desde _data/{{tipo}} === {%- endcomment -%}
-{%- assign tipo_key = include.tipo | default: tipo | default: "auriculares" -%}
-{%- assign actualizado = nil -%}
-{%- if tipo_key and tipo_key != "" -%}
-  {%- assign data_ns = site.data[tipo_key] -%} {# acceso con corchetes para claves con guión #}
-  {%- if data_ns -%}
-    {%- if data_ns.productos and data_ns.productos.actualizado -%}
-      {%- assign actualizado = data_ns.productos.actualizado -%}
-    {%- elsif data_ns.actualizado -%}
-      {%- assign actualizado = data_ns.actualizado -%}
-    {%- elsif data_ns.meta and data_ns.meta.actualizado -%}
-      {%- assign actualizado = data_ns.meta.actualizado -%}
-    {%- endif -%}
-  {%- endif -%}
-{%- endif -%}
+/* (opcional) margen homogéneo del H2 */
+.home-section .section-head h2{margin:.2rem 0;}
+</style>
 
 <div class="hero-divider"></div>
-<section class="homepage-home" aria-label="{{ title | escape }}">
+<section class="homepage-home" aria-label="Home upgrades">
   <div class="home-section">
-    <h2>{{ title }}</h2>
-    {%- if description != "" -%}<p>{{ description }}</p>{%- endif -%}
-    {%- if actualizado -%}<p class="home-updated"><small>Actualizado: {{ actualizado }}</small></p>{%- endif -%}
+
+    {% assign enlace_see_all = include.enlace_categoria | default: include.ver_todo %}
+    <div class="section-head">
+      <h2>{{ include.h2 | default: "Hogar" }}</h2>
+      {% if enlace_see_all %}
+        <a class="see-all" href="{{ enlace_see_all }}"
+           aria-label="Ver todas las guías de {{ include.h2 | default: 'esta categoría' }}">Ver todo</a>
+      {% endif %}
+    </div>
+
+    <p>{{ include.descripcion | default: "Productos probados por Recomendador.net para mejorar tu hogar." }}</p>
+
+    {% assign folder = include.carpeta | default: "" %}
+    {% assign limite = include.limite | default: 4 | plus: 0 %}
+
+    {% assign html_pages = site.html_pages
+      | where_exp: "p", "p.keywords != nil and p.date != nil" %}
+    {% if folder != "" %}
+      {% assign html_pages = html_pages
+        | where_exp: "p", "p.path contains include.carpeta or p.url contains include.carpeta" %}
+    {% endif %}
+
+    {% assign coll_docs = "" | split: "" %}
+    {% for coll in site.collections %}
+      {% assign coll_docs = coll_docs | concat: coll.docs %}
+    {% endfor %}
+    {% assign html_docs = coll_docs
+      | where_exp: "d", "d.extname == '.html' and d.keywords != nil and d.date != nil" %}
+    {% if folder != "" %}
+      {% assign html_docs = html_docs
+        | where_exp: "d", "d.path contains include.carpeta or d.url contains include.carpeta" %}
+    {% endif %}
+
+    {% assign items = html_pages | concat: html_docs %}
 
     <div class="home-grid">
-      {%- for p in pages_sorted -%}
-        {%- if shown >= limit -%}{% break %}{%- endif -%}
-
-        {%- unless p.path contains ".html" -%}{% continue %}{%- endunless -%}
-        {%- unless p.keywords -%}{% continue %}{%- endunless -%}
-
-        {%- assign matches_dir = true -%}
-        {%- if has_dirs > 0 -%}
-          {%- assign matches_dir = false -%}
-          {%- for raw in dirs -%}
-            {%- assign d = raw | strip -%}
-            {%- if d != "" and p.path contains d -%}
-              {%- assign matches_dir = true -%}{%- break -%}
-            {%- endif -%}
-          {%- endfor -%}
+      {% for item in items limit: limite %}
+        {%- comment -%} Fecha de actualización desde _data/<tipo>/productos.yml {%- endcomment -%}
+        {%- assign tipo_key = item.tipo -%}
+        {%- assign data_grupo = site.data[tipo_key] -%}
+        {%- if data_grupo == nil -%}
+          {%- assign tipo_key = item.tipo | slugify: 'pretty' | downcase -%}
+          {%- assign data_grupo = site.data[tipo_key] -%}
         {%- endif -%}
-        {%- unless matches_dir -%}{% continue %}{%- endunless -%}
+        {%- assign actualizado = nil -%}
+        {%- if data_grupo and data_grupo.productos and data_grupo.productos.actualizacion -%}
+          {%- assign actualizado = data_grupo.productos.actualizacion -%}
+        {%- endif -%}
 
-        {%- assign thumb = p.image | default: p.imagen | default: fallback_image -%}
+        {%- comment -%} Autor desde site.data.autor.autores {%- endcomment -%}
+        {%- assign autores = site.data.autor.autores -%}
+        {%- assign autor_key = item.autor -%}
+        {%- assign autor = autores[autor_key] -%}
+        {%- if autor == nil and autor_key -%}
+          {%- assign autor_key = autor_key | slugify: 'pretty' | downcase -%}
+          {%- assign autor = autores[autor_key] -%}
+        {%- endif -%}
 
         <article class="home-card">
-          <a href="{{ p.url | relative_url }}">
-            <img loading="lazy" src="{{ thumb }}" alt="{{ p.title | escape }}">
-            <h3>{{ p.title }}</h3>
+          <a class="card-image" href="{{ item.url | relative_url }}">
+            <img src="{{ item.image | default: item.imagen | default: '/global/images/placeholder.webp' }}" alt="{{ item.title | escape }}">
           </a>
-        </article>
 
-        {%- assign shown = shown | plus: 1 -%}
-      {%- endfor -%}
+          <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+
+          <div class="card-meta">
+            {% if autor %}
+              <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
+                <img class="author-avatar-xs" src="{{ autor.avatar }}" alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
+                <small class="author-name-xs">{{ autor.nombre }}</small>
+              </a>
+            {% endif %}
+            {% if actualizado %}
+              <small class="updated-inline">
+                Actualizado: {% include date_es.html date=actualizado %}
+              </small>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
     </div>
   </div>
 </section>
