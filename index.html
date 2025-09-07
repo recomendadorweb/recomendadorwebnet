@@ -280,11 +280,10 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 <!-- ====== FILA 2: bloque ANCHO debajo de las 3 columnas ====== -->
 
 {% include home_seccion_destacada.html
-   h2='Hogar'
-   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
+   h2='Otoño 2025'
+   descripcion='Las mejores recomendaciones para esta temporada.'
    carpeta='/hogar/'
-   limite=4
-   enlace_categoria='/guias/hogar/' %}
+   limite=4 %}
 
 {% include home_seccion_alta.html
   title="Tecnología"
@@ -300,40 +299,24 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
    carpeta='/hogar/'
    limite=4
    enlace_categoria='/guias/hogar/'
-   descripcion_extra=true %}
+   descripcion_extra=true
+   mostrar_autor=true %}
 
-   {% include home_seccion_destacada.html
-   h2='Hogar'
-   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
-   carpeta='/hogar/'
-   limite=3
-   enlace_categoria='/guias/hogar/'
-   descripcion_extra=true %}
-
-   {% include home_seccion_destacada.html
-   h2='Hogar'
-   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
-   carpeta='/hogar/'
-   limite=2
-   enlace_categoria='/guias/hogar/'
-   descripcion_extra=true %}
-
-   {% include home_seccion_destacada.html
-   h2='Hogar'
-   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
-   carpeta='/hogar/'
-   limite=1
-   enlace_categoria='/guias/hogar/'
-   descripcion_extra=true %}
-
-{% include home_seccion_ancha.html
-   titulo='Bebés & Niños'
-   descripcion='Guías de compra para bebés y niños, seleccionadas por expertos.'
-   rutas="/hogar/body-bebe-personalizado/,/hogar/bolso-carro-bebe/,/hogar/saco-silla-paseo/"
-   limit='3'
-   ver_todo_url='/guias/'
+   {% include home_seccion_alta.html
+  title="Belleza"
+  descripcion='Los mejores productos de belleza y cuidado personal recomendados por expertos.'
+  dirs="/belleza/"
+  limit=4
+  see_all_url="/mejores/"
 %}
 
+   {% include home_seccion_destacada.html
+   h2='Deportes'
+   descripcion='Productos probados por Recomendador.net para mejorar tu experiencia deportiva.'
+   carpeta='/deportes/'
+   limite=4
+   enlace_categoria='/guias/deportes/'
+   descripcion_extra=true %}
 
 </div> <!-- /.home-landing -->
 {% include footer.html %}

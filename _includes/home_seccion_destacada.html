@@ -16,7 +16,7 @@
   color: #000 !important;
   text-decoration: none;
   font-weight: bold !important;
-  font-size: 1.1rem !important;
+  font-size: 1.2rem !important;
 }
 
 /* Enlaces al hacer hover en azul */
@@ -25,7 +25,7 @@
   font-weight: bold !important;
 }
 .home-section .author-name-xs {
-  font-size: 0.95rem; /* aquí cambias el tamaño */
+  font-size: 0.95rem;
   font-weight: normal !important;
 }
 .home-section .author-inline:hover .author-name-xs {
@@ -34,25 +34,75 @@
 
 /* Descripción opcional bajo el título */
 .home-card .card-desc{
-  margin: .35rem 10px 0 10px;
-  font-size: .98rem;
+  margin: 0px 10px;
+  font-size: .9rem;
   line-height: 1.4;
   color: #444;
 }
+
+/* Meta de la tarjeta */
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* “Actualizado” en negrita y azul */
+.card-meta .updated-inline {
+  font-weight: bold;
+  color: #0073e6; /* azul */
+  font-size: 14px;
+}
+
+/* Bloque autor a la derecha */
+.card-meta .author-block {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto; /* Se empuja a la derecha */
+}
+
+/* “por” más discreto */
+.card-meta .author-block .by-label {
+  font-size: 0.95rem;
+  color: #666;
+}
+/* Aplica el estilo de 'Actualizado' en cualquier posición */
+.home-card .updated-inline {
+  font-weight: bold;
+  color: #0073e6; /* azul */
+  font-size: 14px;
+}
+
+/* Cuando 'Actualizado' va encima del texto, dale el mismo margen que la descripción */
+.home-card .updated-above {
+  display: block;
+  margin: 0 10px .25rem 10px;
+}
+
 </style>
 
 <div class="hero-divider"></div>
 <section class="homepage-home" aria-label="Home upgrades">
   <div class="home-section">
 
-    {% assign enlace_see_all = include.enlace_categoria | default: include.ver_todo %}
-    <div class="section-head">
-      <h2>{{ include.h2 | default: "Hogar" }}</h2>
-      {% if enlace_see_all %}
-        <a class="see-all" href="{{ enlace_see_all }}"
-           aria-label="Ver todas las guías de {{ include.h2 | default: 'esta categoría' }}">Ver todo en {{ include.h2 | default: 'esta categoría' }}</a>
-      {% endif %}
-    </div>
+{%- capture see_all_url -%}
+  {{ include.see_all_url | default: include.enlace_see_all | default: include.enlace_categoria }}
+{%- endcapture -%}
+{%- assign see_all_url = see_all_url | strip -%}
+
+<div class="section-head">
+  <h2>{{ include.h2 | default: "Hogar" }}</h2>
+  {%- unless see_all_url == "" or see_all_url == "true" or see_all_url == "false" -%}
+    <a class="see-all" href="{{ see_all_url }}"
+       aria-label="Ver todas las guías de {{ include.h2 | default: 'esta categoría' }}">
+       Ver todo en {{ include.h2 | default: 'esta categoría' }}
+    </a>
+  {%- endunless -%}
+</div>
+
+
 
     <p>{{ include.descripcion | default: "Productos probados por Recomendador.net para mejorar tu hogar." }}</p>
 
@@ -79,7 +129,6 @@
     {%- comment -%}
     2) Construir una lista ordenable con "YYYY-MM-DD|||<url>" para cada item,
        usando la fecha de _data/<tipo>/productos.yml -> productos.actualizacion.
-       Si no existe, ponemos "0000-00-00" para que queden al final.
     {%- endcomment -%}
     {% assign ordenables_str = "" %}
     {% for it in items %}
@@ -113,7 +162,7 @@
         {% assign url = parts[1] %}
         {% assign item = items | where_exp: "i", "i.url == url" | first %}
 
-        {%- comment -%} Recalcular autor y actualizado para este item (tu lógica original) {%- endcomment -%}
+        {%- comment -%} Recalcular autor y actualizado {%- endcomment -%}
         {%- assign tipo_key = item.tipo -%}
         {%- assign data_grupo = site.data[tipo_key] -%}
         {%- if data_grupo == nil -%}
@@ -133,6 +182,17 @@
           {%- assign autor = autores[autor_key] -%}
         {%- endif -%}
 
+        {%- comment -%}
+          Normalizamos flags por si llegan como "true", "1" o "yes"
+        {%- endcomment -%}
+        {% assign desc_flag = include.descripcion_extra | default: '' | downcase %}
+        {% assign autor_flag = include.mostrar_autor | default: '' | downcase %}
+
+        {%- comment -%}
+          Texto de descripción con fallback a otras claves comunes
+        {%- endcomment -%}
+        {% assign card_text = item.text | default: item.description | default: item.excerpt | default: item.resumen %}
+
         <article class="home-card">
           <a class="card-image" href="{{ item.url | relative_url }}">
             <img src="{{ item.image | default: item.imagen | default: '/global/images/placeholder.webp' }}" alt="{{ item.title | escape }}">
@@ -140,30 +200,56 @@
 
           <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
 
-          {%- comment -%}
-            NUEVO: Mostrar la descripción del front matter de la página
-            si se llama al include con descripcion_extra=true
-          {%- endcomment -%}
+{%- comment -%} Mostrar descripción solo si se pide y existe item.text {%- endcomment -%}
+{% assign desc_flag = include.descripcion_extra | default: '' | downcase %}
+{% assign show_desc = false %}
+{% if item.text and (include.descripcion_extra == true or desc_flag == 'true' or desc_flag == '1' or desc_flag == 'yes') %}
+  {% assign show_desc = true %}
+{% endif %}
+
+{%- comment -%} Si hay descripción y hay fecha, muestro la fecha encima del texto {%- endcomment -%}
+{% if show_desc and actualizado %}
+  <small class="updated-inline updated-above">
+    Actualizado: {% include date_es.html date=actualizado %}
+  </small>
+{% endif %}
+
+{% if show_desc %}
+  <p class="card-desc">{{ item.text }}</p>
+{% endif %}
+
+<div class="card-meta">
+  {%- comment -%} Si NO hay descripción (o no se pidió), pinto la fecha en la meta {%- endcomment -%}
+  {% unless show_desc %}
+    {% if actualizado %}
+      <small class="updated-inline">
+        Actualizado: {% include date_es.html date=actualizado %}
+      </small>
+    {% endif %}
+  {% endunless %}
+
+  {%- comment -%} Autor a la derecha (opcional) {%- endcomment -%}
+  {% assign autor_flag = include.mostrar_autor | default: '' | downcase %}
+  {% if include.mostrar_autor == true or autor_flag == 'true' or autor_flag == '1' or autor_flag == 'yes' %}
+    {% if autor %}
+      <span class="author-block">
+        <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
+          <img class="author-avatar-xs" src="{{ autor.avatar }}" alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
+          <small class="author-name-xs">{{ autor.nombre }}</small>
+        </a>
+      </span>
+    {% elsif item.autor %}
+      <span class="author-block">
+        <span class="author-inline">
+          <small class="author-name-xs">{{ item.autor }}</small>
+        </span>
+      </span>
+    {% endif %}
+  {% endif %}
+</div>
 
 
-          <div class="card-meta">
-            {% if actualizado %}
-              <small class="updated-inline">
-                Actualizado: {% include date_es.html date=actualizado %}
-              </small>
-            {% endif %}
 
-            {% if autor %}
-              <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
-                <img class="author-avatar-xs" src="{{ autor.avatar }}" alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
-                <small class="author-name-xs">{{ autor.nombre }}</small>
-              </a>
-            {% endif %}
-                                  
-          </div>
-          {% if include.descripcion_extra and item.text %}
-            <p class="card-desc">{{ item.text }}</p>
-          {% endif %}
         </article>
       {% endfor %}
     </div>
