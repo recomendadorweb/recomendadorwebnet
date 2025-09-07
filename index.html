@@ -287,20 +287,52 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
    enlace_categoria='/guias/hogar/' %}
 
 {% include home_seccion_alta.html
-   title="Belleza"
-   description="Productos probados por Recomendador.net para cuidar tu piel, cabello y maquillaje."
-   source="pages"
-   require_keyword=true
-   see_all_url="/belleza/"
+  title="Tecnología"
+  descripcion='Análisis y comparativas de los mejores gadgets y dispositivos tecnológicos.'
+  dirs="/mejores-auriculares-gaming/|/mejores-teclados-gaming/|/mejores-ratones-gaming/|/mejores-microfonos-gaming/"
+  limit=4
+  see_all_url="/mejores/"
 %}
 
+{% include home_seccion_destacada.html
+   h2='Hogar'
+   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
+   carpeta='/hogar/'
+   limite=4
+   enlace_categoria='/guias/hogar/'
+   descripcion_extra=true %}
+
+   {% include home_seccion_destacada.html
+   h2='Hogar'
+   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
+   carpeta='/hogar/'
+   limite=3
+   enlace_categoria='/guias/hogar/'
+   descripcion_extra=true %}
+
+   {% include home_seccion_destacada.html
+   h2='Hogar'
+   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
+   carpeta='/hogar/'
+   limite=2
+   enlace_categoria='/guias/hogar/'
+   descripcion_extra=true %}
+
+   {% include home_seccion_destacada.html
+   h2='Hogar'
+   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
+   carpeta='/hogar/'
+   limite=1
+   enlace_categoria='/guias/hogar/'
+   descripcion_extra=true %}
+
 {% include home_seccion_ancha.html
-   titulo='Gifts & Guías de compra'
-   descripcion='Lo último en juguetes STEM, material artístico y recomendaciones con pruebas reales.'
+   titulo='Bebés & Niños'
+   descripcion='Guías de compra para bebés y niños, seleccionadas por expertos.'
+   rutas="/hogar/body-bebe-personalizado/,/hogar/bolso-carro-bebe/,/hogar/saco-silla-paseo/"
    limit='3'
    ver_todo_url='/guias/'
 %}
-
 
 
 </div> <!-- /.home-landing -->

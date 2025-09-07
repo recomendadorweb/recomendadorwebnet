@@ -1,5 +1,5 @@
 <style>
-.home-card .card-meta{margin-top:.5rem;font-size:1rem;color:#666;display:flex;align-items:center;gap:.1rem;flex-wrap:wrap;margin:3px 10px 10px 10px;}
+.home-card .card-meta{margin-top:.5rem;font-size:1rem;color:#666;display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin:6px 10px 10px 10px;}
 .home-card .author-inline{display:inline-flex;align-items:center;gap:.4rem;text-decoration:none;color:inherit}
 .home-card .author-inline:hover{text-decoration:underline}
 .home-card .author-avatar-xs{width:20px;height:20px;border-radius:9999px;object-fit:cover;flex:none}
@@ -30,6 +30,14 @@
 }
 .home-section .author-inline:hover .author-name-xs {
   color: #0073e6;
+}
+
+/* Descripción opcional bajo el título */
+.home-card .card-desc{
+  margin: .35rem 10px 0 10px;
+  font-size: .98rem;
+  line-height: 1.4;
+  color: #444;
 }
 </style>
 
@@ -132,19 +140,30 @@
 
           <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
 
+          {%- comment -%}
+            NUEVO: Mostrar la descripción del front matter de la página
+            si se llama al include con descripcion_extra=true
+          {%- endcomment -%}
+
+
           <div class="card-meta">
             {% if actualizado %}
               <small class="updated-inline">
                 Actualizado: {% include date_es.html date=actualizado %}
               </small>
             {% endif %}
+
             {% if autor %}
               <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
                 <img class="author-avatar-xs" src="{{ autor.avatar }}" alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
                 <small class="author-name-xs">{{ autor.nombre }}</small>
               </a>
             {% endif %}
+                                  
           </div>
+          {% if include.descripcion_extra and item.text %}
+            <p class="card-desc">{{ item.text }}</p>
+          {% endif %}
         </article>
       {% endfor %}
     </div>

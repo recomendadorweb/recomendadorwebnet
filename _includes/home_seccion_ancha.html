@@ -11,78 +11,120 @@
       {% endif %}
     </header>
 
-    {%- assign items_base = site.pages -%}
-    {%- assign items_filtrados = items_base | where_exp: "p", "p.keywords and p.keywords != ''" -%}
-    {%- assign items = items_filtrados | sort: "date" | reverse -%}
-    {%- assign limite = include.limit | default: 3 -%}
+    {%- assign limite_raw = include.limit | default: 3 -%}
+    {%- assign limite_num = limite_raw | plus: 0 -%}
+    {%- assign rutas = include.rutas | default: '' -%}
+    {%- assign rutas = rutas | replace: '\r', '' -%}
+    {%- assign rutas_array = rutas | split: ',' -%}
+
+    {%- comment -%}
+      Base: páginas con 'keywords' (HTML o MD), ordenadas por fecha desc.
+    {%- endcomment -%}
+    {%- assign items_ordered = site.pages 
+      | where_exp: "p", "p.keywords" 
+      | sort: "date" 
+      | reverse -%}
+
+    {%- comment -%} DEBUG OPCIONAL {%- endcomment -%}
+    {% if include.debug %}
+      <div style="padding:10px; border:1px dashed #ccc; margin-bottom:16px;">
+        <strong>DEBUG — site.pages con keywords ({{ items_ordered | size }})</strong>
+        <ul>
+          {% for p in items_ordered %}
+            <li>
+              dir: <code>{{ p.dir }}</code> · url: <code>{{ p.url }}</code> · name: <code>{{ p.name }}</code>
+              — title: "{{ p.title }}" — keywords: <code>{{ p.keywords }}</code>
+            </li>
+          {% endfor %}
+        </ul>
+        {% if rutas != '' %}
+          <div>Rutas filtradas: <code>{{ rutas }}</code></div>
+        {% else %}
+          <div>Sin rutas: se mostrarán todas.</div>
+        {% endif %}
+        <div>Límite solicitado: <code>{{ limite_raw }}</code> → num: <code>{{ limite_num }}</code></div>
+      </div>
+    {% endif %}
 
     <div class="wc-grid">
-      {%- for page in items limit: limite -%}
-      <article class="wc-card">
-        <a class="wc-thumb" href="{{ page.url | relative_url }}" aria-label="{{ page.title | escape }}">
-          {%- assign img = page.imagen | default: "/assets/img/placeholder.webp" -%}
-          <img src="{{ img | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" loading="lazy">
-        </a>
+      {%- assign count = 0 -%}
+      {%- for p in items_ordered -%}
+        {%- assign match = false -%}
 
-        <div class="wc-body">
-          <h3 class="wc-card-title">
-            <a href="{{ page.url | relative_url }}">{{ page.title }}</a>
-          </h3>
+        {%- if rutas == '' -%}
+          {%- assign match = true -%}
+        {%- else -%}
+          {%- for ruta in rutas_array -%}
+            {%- assign ruta_norm = ruta | replace: '\r','' | strip -%}
+            {%- if ruta_norm != '' -%}
+              {%- if ruta_norm | slice: 0,1 != '/' -%}{%- assign ruta_norm = '/' | append: ruta_norm -%}{%- endif -%}
+              {%- if ruta_norm | slice: -1,1 != '/' -%}{%- assign ruta_norm = ruta_norm | append: '/' -%}{%- endif -%}
+              {%- assign ruta_norm = ruta_norm | replace: '//', '/' -%}
 
-          <p class="wc-updated">
-            {{ include.updated_label | default: "ACTUALIZADO" }} {{ page.date | date: "%-d de %B de %Y" | upcase }}
-          </p>
+              {%- if p.dir and p.dir contains ruta_norm -%}
+                {%- assign match = true -%}
+              {%- elsif p.url and p.url contains ruta_norm -%}
+                {%- assign match = true -%}
+              {%- endif -%}
 
-          <p class="wc-byline">
-            {%- assign autor = page.autor | default: "Redacción" -%}
-            por {{ autor }}
-          </p>
-
-          <p class="wc-excerpt">
-            {%- if page.excerpt -%}
-              {{ page.excerpt | strip_html | truncate: 190 }}
-            {%- else -%}
-              {{ page.content | strip_html | truncate: 190 }}
+              {%- if match -%}{%- break -%}{%- endif -%}
             {%- endif -%}
-          </p>
-        </div>
-      </article>
+          {%- endfor -%}
+        {%- endif -%}
+
+        {%- if match -%}
+          <article class="wc-card">
+            <a class="wc-thumb" href="{{ p.url | relative_url }}" aria-label="{{ p.title | escape }}">
+              {%- assign img = p.imagen | default: "/assets/img/placeholder.webp" -%}
+              <img src="{{ img | relative_url }}" alt="{{ p.image_alt | default: p.title | escape }}" loading="lazy">
+            </a>
+
+            <div class="wc-body">
+              <h3 class="wc-card-title">
+                <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+              </h3>
+
+              <p class="wc-updated">
+                {{ include.updated_label | default: "ACTUALIZADO" }} {{ p.date | date: "%-d de %B de %Y" | upcase }}
+              </p>
+
+              <p class="wc-byline">
+                {%- assign autor = p.autor | default: "Redacción" -%}
+                por {{ autor }}
+              </p>
+
+              <p class="wc-excerpt">
+                {%- if p.excerpt -%}
+                  {{ p.excerpt | strip_html | truncate: 190 }}
+                {%- else -%}
+                  {{ p.content | strip_html | truncate: 190 }}
+                {%- endif -%}
+              </p>
+            </div>
+          </article>
+
+          {%- assign count = count | plus: 1 -%}
+          {%- if count >= limite_num -%}{%- break -%}{%- endif -%}
+        {%- endif -%}
       {%- endfor -%}
+
+      {%- if count == 0 -%}
+        <article class="wc-card" style="border:1px dashed #d0d7de;">
+          <div class="wc-body">
+            <h3 class="wc-card-title">No hay guías que coincidan</h3>
+            <p class="wc-excerpt">
+              Revisa que las páginas tengan <code>keywords</code> y que su
+              <code>dir</code> o <code>url</code> empiece por alguna de estas rutas:
+              <code>{{ rutas }}</code>
+            </p>
+          </div>
+        </article>
+      {%- endif -%}
     </div>
   </div>
 </section>
 
-
 <style>
-    /* Sección Guías (estilo limpio tipo Wirecutter/Xataka) */
-.rc-section { padding: 2.5rem 0; }
-.rc-container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
-.rc-head { display:flex; align-items:baseline; gap: 12px; flex-wrap:wrap; margin-bottom: 1rem; }
-.rc-title { font-size: clamp(1.6rem, 2.2vw, 2.2rem); font-weight: 800; margin:0; }
-.rc-subtitle { color:#555; margin:0; }
-.rc-seeall { margin-left:auto; font-weight:600; text-decoration:none; border-bottom:2px solid currentColor; }
-.rc-grid {
-  display:grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-@media (min-width: 780px){ .rc-grid { grid-template-columns: repeat(3, 1fr); } }
-
-.rc-card {
-  background:#fff; border:1px solid #e9eef3; border-radius:14px; overflow:hidden;
-  display:flex; flex-direction:column; transition: box-shadow .2s ease;
-}
-.rc-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.08); }
-.rc-imgwrap { display:block; aspect-ratio: 16/9; background:#f4f7fb; }
-.rc-img { width:100%; height:100%; object-fit:cover; display:block; }
-
-.rc-body { padding: 14px 16px 18px; display:flex; flex-direction:column; gap:8px; }
-.rc-card-title { font-size:1.05rem; line-height:1.3; margin:0; }
-.rc-card-title a { color:inherit; text-decoration:none; }
-.rc-card-title a:hover { text-decoration:underline; }
-.rc-meta { color:#6a7785; font-size:.9rem; margin:0; }
-.rc-excerpt { margin:0; color:#222; }
-/* ===== Sección tipo Wirecutter ===== */
 .wc-section{padding:10px 0}
 .wc-container{max-width:1200px;margin:0 auto;padding:0px 14px}
 .wc-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:18px}
@@ -102,5 +144,4 @@
 .wc-updated{font-size:.82rem;font-weight:800;letter-spacing:.02em;color:#4360ff;margin:.1rem 0 .25rem}
 .wc-byline{font-size:.9rem;color:#2a2f36;margin:0 0 .5rem}
 .wc-excerpt{color:#111;margin:0}
-
 </style>
