@@ -351,6 +351,39 @@ productos:
           - name: color_name
             value: Rosa Blanco
         ParentASIN: B0F5BVQZX5
+      - ASIN: B0F5BT5K1V
+        title: >-
+          Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
+          (FR/ES, Letras, XL, Grande, Regular, Lila Blanco)
+        brand: AMARU SANCHESU
+        precio: "49,90\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/316ShEeSbsL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31OQ1Wkw0sL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31f8hjoWbeL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31PD9tTAkeL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
+            width: 500
+            height: 258
+        enlace: https://www.amazon.es/dp/B0F5BT5K1V?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
+        variationAttributes:
+          - name: size_name
+            value: XL Grande
+          - name: color_name
+            value: Lila Blanco
+        ParentASIN: B0F5BVQZX5
     ParentASIN: B0F5BVQZX5
     nombreCompleto: >-
       Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral (FR/ES,
@@ -2566,4 +2599,4 @@ productos:
       - name: size_name
         value: 38-40
     nombreCompleto: Guirca - Disfraz adulta flamenca, Talla 38-40 (80629.0)
-actualizacion: '2025-09-05'
+actualizacion: '2025-09-08'
