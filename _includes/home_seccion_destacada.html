@@ -81,6 +81,110 @@
   margin: 0 10px .25rem 10px;
 }
 
+/* La tarjeta reparte su contenido en columna */
+.home-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Título y texto: no crecen, sólo ocupan su contenido */
+.home-card h3,
+.home-card .card-desc,
+.home-card .updated-above{
+  flex: 0 0 auto;
+}
+
+/* Meta (fecha + autor) pegada al fondo SIEMPRE */
+.home-card .card-meta{
+  margin-top: auto;              /* empuja hacia abajo */
+  padding: 0 10px 10px 10px;     /* ajuste opcional */
+}
+
+/* Autor a la derecha dentro de la meta */
+.home-card .card-meta .author-block{
+  margin-left: auto;
+}
+
+/* (Opcional, para uniformar la altura de imágenes) */
+.home-card .card-image img{
+  width: 100%;
+  aspect-ratio: 16 / 9;          /* todas con la misma “caja” */
+  object-fit: cover;
+  display: block;
+}
+/* Tarjeta en columna y meta al fondo */
+.home-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1 1 0;        /* todas comparten ancho y se encogen si hace falta */
+  min-width: 0;       /* evita desbordes por contenido largo */
+}
+.home-card .card-meta{
+  margin-top: auto;      /* baja el bloque autor */
+  padding: 0 10px 10px;
+  display: flex;
+}
+.home-card .author-block{ margin-left: auto; }
+
+/* Fecha bajo el título */
+.home-card .under-title{
+  display: block;
+  margin: 4px 10px 6px 10px;
+}
+
+/* Imágenes uniformes (opcional) */
+.home-card .card-image img{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  display: block;
+}
+/* Forzar 4 columnas (o las que pases en --cols) en una sola fila */
+.home-section .home-grid{
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr)) !important;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Evita que el contenido fuerce ancho mínimo */
+.home-section .home-grid > .home-card{ min-width: 0; }
+.home-section .home-card h3,
+.home-section .home-card .card-desc{ min-width: 0; overflow-wrap: anywhere; }
+
+/* Asegura el meta al fondo y alinea verticalmente el autor */
+.home-card{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home-card .card-meta{
+  margin-top: auto;           /* pega al fondo */
+  padding: 0 10px 10px;
+  display: flex;
+  align-items: center;        /* centra avatar+nombre en su fila */
+  min-height: 28px;           /* asegura una línea constante */
+}
+
+.home-card .author-block{
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Evita saltos de línea y “bailes” por nombres largos */
+.home-card .author-name-xs{
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 140px;           /* ajusta si quieres más ancho */
+}
+
 </style>
 
 <div class="hero-divider"></div>
@@ -150,6 +254,61 @@
     {% assign items = html_pages | concat: html_docs %}
 
     {%- comment -%}
+      ==== FILTRO POR CATEGORÍA (front matter 'categoria' o 'categorias') ====
+      Permite:
+      - Param string simple: categorias="gaming"
+      - Param múltiple con comas/pipes: categorias="gaming, tecnologia | hogar"
+      - Param array desde front matter.
+      Y cada item puede llevar `categoria: gaming, tecnologia` (string) o un array.
+    {%- endcomment -%}
+    {%- assign _cats_param_raw = include.categoria | default: include.categorias | default: "" -%}
+    {%- assign cats_param_list = "" | split: "" -%}
+    {%- if _cats_param_raw != "" -%}
+      {%- assign tmp = _cats_param_raw -%}
+      {%- unless tmp.first -%}
+        {%- assign norm = _cats_param_raw
+            | replace: ", ", "," | replace: " ,", ","
+            | replace: " |", "|" | replace: "| ", "|"
+          -%}
+        {%- assign tmp = norm | split: "|" | join: "|" | split: "," | join: "|" | split: "|" -%}
+      {%- endunless -%}
+      {%- for c in tmp -%}
+        {%- assign c_norm = c | downcase | strip -%}
+        {%- if c_norm != "" -%}
+          {%- assign cats_param_list = cats_param_list | push: c_norm -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign cats_param_list = cats_param_list | uniq -%}
+    {%- endif -%}
+
+    {%- if cats_param_list != empty -%}
+      {%- assign items_by_cat = "" | split: "" -%}
+      {%- for it in items -%}
+        {%- assign has_cat = false -%}
+        {%- assign it_cat_raw = it.categoria | default: it.categorias -%}
+        {%- if it_cat_raw -%}
+          {%- assign it_cats = it_cat_raw -%}
+          {%- unless it_cats.first -%}
+            {%- assign it_norm = it_cat_raw
+                | replace: ", ", "," | replace: " ,", ","
+                | replace: " |", "|" | replace: "| ", "|"
+              -%}
+            {%- assign it_cats = it_norm | split: "|" | join: "|" | split: "," | join: "|" | split: "|" -%}
+          {%- endunless -%}
+          {%- for pc in it_cats -%}
+            {%- assign pc_norm = pc | downcase | strip -%}
+            {%- if cats_param_list contains pc_norm -%}
+              {%- assign has_cat = true -%}{% break %}{%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+        {%- if has_cat -%}
+          {%- assign items_by_cat = items_by_cat | push: it -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign items = items_by_cat -%}
+    {%- endif -%}
+
+    {%- comment -%}
     2) Construir una lista ordenable con "YYYY-MM-DD|||<url>" para cada item,
        usando la fecha de _data/<tipo>/productos.yml -> productos.actualizacion.
     {%- endcomment -%}
@@ -178,7 +337,7 @@
     {% assign ordenables = ordenables | sort | reverse %}
     {% assign ordenables_lim = ordenables | slice: 0, limite %}
 
-    <div class="home-grid">
+    <div class="home-grid" style="--cols: {{ limite }}">
       {%- comment -%} 3) Renderizar solo las X primeras tras ordenar {%- endcomment -%}
       {% for entry in ordenables_lim %}
         {% assign parts = entry | split: "|||" %}
@@ -220,56 +379,44 @@
           <a class="card-image" href="{{ item.url | relative_url }}">
             <img src="{{ item.image | default: item.imagen | default: '/global/images/placeholder.webp' }}" alt="{{ item.title | escape }}">
           </a>
+<h3><a href="{{ item.url | relative_url }}">{{ data_grupo.cabecera.titulo }}</a></h3>
 
-          <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
+{%- comment -%} Fecha SIEMPRE bajo el título {%- endcomment -%}
+{% if actualizado %}
+  <small class="updated-inline under-title">
+    Actualizado: {% include date_es.html date=actualizado %}
+  </small>
+{% endif %}
 
-{%- comment -%} Mostrar descripción solo si se pide y existe item.subtitle {%- endcomment -%}
+{%- comment -%} Descripción opcional {%- endcomment -%}
 {% assign desc_flag = include.descripcion_extra | default: '' | downcase %}
 {% assign show_desc = false %}
 {% if item.subtitle and (include.descripcion_extra == true or desc_flag == 'true' or desc_flag == '1' or desc_flag == 'yes') %}
   {% assign show_desc = true %}
 {% endif %}
-
-{%- comment -%} Si hay descripción y hay fecha, muestro la fecha encima del texto {%- endcomment -%}
-{% if show_desc and actualizado %}
-  <small class="updated-inline updated-above">
-    Actualizado: {% include date_es.html date=actualizado %}
-  </small>
-{% endif %}
-
 {% if show_desc %}
   <p class="card-desc">{{ item.subtitle }}</p>
 {% endif %}
 
 <div class="card-meta">
-  {%- comment -%} Si NO hay descripción (o no se pidió), pinto la fecha en la meta {%- endcomment -%}
-  {% unless show_desc %}
-    {% if actualizado %}
-      <small class="updated-inline">
-        Actualizado: {% include date_es.html date=actualizado %}
-      </small>
-    {% endif %}
-  {% endunless %}
-
-  {%- comment -%} Autor a la derecha (opcional) {%- endcomment -%}
+  {%- comment -%} SOLO autor (a la derecha) {%- endcomment -%}
   {% assign autor_flag = include.mostrar_autor | default: '' | downcase %}
   {% if include.mostrar_autor == true or autor_flag == 'true' or autor_flag == '1' or autor_flag == 'yes' %}
     {% if autor %}
       <span class="author-block">
-        <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
+        <a class="author-inline" href "{{ autor.enlace | default: '#' }}">
           <img class="author-avatar-xs" src="{{ autor.avatar }}" alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
           <small class="author-name-xs">{{ autor.nombre }}</small>
         </a>
       </span>
     {% elsif item.autor %}
       <span class="author-block">
-        <span class="author-inline">
-          <small class="author-name-xs">{{ item.autor }}</small>
-        </span>
+        <span class="author-inline"><small class="author-name-xs">{{ item.autor }}</small></span>
       </span>
     {% endif %}
   {% endif %}
 </div>
+
 
         </article>
       {% endfor %}

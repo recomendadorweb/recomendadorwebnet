@@ -69,7 +69,6 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 .home-landing .hero .hero-cat{
   position:absolute;top:10px;left:10px;background:var(--color-rosa-destacado);color:#fff;font-size:12px;font-weight:700;padding:4px 8px;border-radius:4px;
 }
-.hero-divider{height:6px;background:#111;margin:10px 0 12px !important;}
 .home-landing .hero .hero-inner{display:block !important;margin:0 !important;padding:0 8px !important;max-width:780px !important;column-count:1 !important;gap:0 !important;}
 .home-landing .hero .hero-title{
   margin:8px 0 8px !important;font-size:clamp(1.9rem,1.8vw + 1rem,2.4rem) !important;line-height:1.1;font-weight:900;letter-spacing:-.5px;color:#111 !important;
@@ -83,9 +82,9 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 
 /* Columna derecha: widgets (sidebar) */
 .home-landing aside .popular-box-widget{border-radius:10px;padding:0;overflow:hidden;margin-bottom:15px;display:flex;flex-direction:column;height:100%;}
-.popular-box-header{padding:16px 20px 0 16px;}
-.popular-box-header h3{margin:0;font-size:1rem;font-weight:700;color:#222;}
-.popular-box-content{padding:16px 20px;display:flex;flex-direction:column;gap:14px;flex:0 0 auto;}
+.popular-box-header{margin:14px 0px 0 16px;}
+.popular-box-header h3{margin: 0px;font-size:1rem;font-weight:700;color:#222;}
+.popular-box-content{padding:8px 0px;display:flex;flex-direction:column;gap:14px;flex:0 0 auto;}
 .popular-box-item{display:flex;gap:12px;align-items:center;}
 .popular-thumb{display:block;width:72px;height:72px;background-size:cover;background-position:center;border-radius:6px;flex-shrink:0;}
 .popular-thumb-guias{display:block;width:100%;aspect-ratio:16/9;background-size:cover;background-position:center;border-radius:8px;}
@@ -259,20 +258,7 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
   <!-- DERECHA: Widget único -->
   <aside aria-label="Barra lateral">
     <div class="popular-box-widget">
-      <div class="popular-box-header">
-        <h3>Guías populares ></h3>
-        <div class="hero-divider"></div>
-      </div>
-      <div class="popular-box-content">
-        {% assign top_posts = site.pages | where_exp: "post", "post.top" %}
-        {% assign sorted_top_posts = top_posts | sort: "top" %}
-        {% for post in sorted_top_posts limit:6 %}
-          <div class="popular-box-item">
-            <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block;width:80px;height:80px;flex-shrink:0;background-image:url({{ post.imagen }});background-size:cover;background-position:center center;border-radius:8px;" aria-label="{{ post.title }}"></a>
-            <div class="popular-text"><a href="{{ post.url }}" class="popular-title">{{ post.shortTitle | default: post.title }}</a></div>
-          </div>
-        {% endfor %}
-      </div>
+    {% include widget_ofertas.html %}
     </div>
   </aside>
 </div>
@@ -288,7 +274,7 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 {% include home_seccion_alta.html
   title="Gaming"
   descripcion='Los mejores productos de gaming recomendados por expertos.'
-  carpeta="/mejores-auriculares-gaming/,/mejores-teclados-gaming/,/mejores-ratones-gaming/,/mejores-microfonos-gaming/"
+  categorias="gaming"
   limit=4
   see_all_url="/mejores/"
 %}
@@ -296,9 +282,8 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 {% include home_seccion_destacada.html
    h2='Hogar'
    descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
-   carpeta="hogar,"
    limite=4
-   enlace_categoria='/guias/hogar/'
+   categorias="hogar"
    descripcion_extra=true
    mostrar_autor=true 
 %}
@@ -306,7 +291,7 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 {% include home_seccion_alta.html
   title="Belleza"
   descripcion='Los mejores productos de belleza y cuidado personal recomendados por expertos.'
-  carpeta="/belleza/"
+  categorias="belleza"
   limit=4
   see_all_url="/mejores/"
 %}
@@ -316,7 +301,7 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
    descripcion='Productos probados por Recomendador.net para mejorar tu experiencia deportiva.'
    carpeta='deportes,mejores-bicicletas-electricas,mejor-bicicleta-plegable'
    limite=4
-   enlace_categoria='/guias/deportes/'
+   categorias="deporte"
    descripcion_extra=true
    mostrar_autor=true
 %}
@@ -324,7 +309,7 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 {% include home_seccion_alta.html
   title="Tecnología"
   descripcion='Análisis y comparativas de los mejores gadgets y dispositivos tecnológicos.'
-  carpeta="/mejores-microfonos-gaming/"
+  categorias="tecnologia"
   limit=4
   see_all_url="/mejores/"
 %}
@@ -334,7 +319,7 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
    descripcion='Productos probados por Recomendador.net para mejorar la experiencia de los más pequeños.'
    carpeta='bolso-carro-bebe, saco-silla-paseo, body-bebe-personalizado'
    limite=3
-   enlace_categoria='/guias/bebe-y-ninos/'
+   categorias="bebe"
    descripcion_extra=true
    mostrar_autor=true
 %}
