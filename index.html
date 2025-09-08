@@ -286,9 +286,9 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
    limite=4 %}
 
 {% include home_seccion_alta.html
-  title="Tecnología"
-  descripcion='Análisis y comparativas de los mejores gadgets y dispositivos tecnológicos.'
-  dirs="/mejores-auriculares-gaming/|/mejores-teclados-gaming/|/mejores-ratones-gaming/|/mejores-microfonos-gaming/"
+  title="Gaming"
+  descripcion='Los mejores productos de gaming recomendados por expertos.'
+  carpeta="/mejores-auriculares-gaming/,/mejores-teclados-gaming/,/mejores-ratones-gaming/,/mejores-microfonos-gaming/"
   limit=4
   see_all_url="/mejores/"
 %}
@@ -296,29 +296,52 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 {% include home_seccion_destacada.html
    h2='Hogar'
    descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
-   carpeta='/hogar/'
+   carpeta="hogar,"
    limite=4
    enlace_categoria='/guias/hogar/'
    descripcion_extra=true
-   mostrar_autor=true %}
+   mostrar_autor=true 
+%}
 
-   {% include home_seccion_alta.html
+{% include home_seccion_alta.html
   title="Belleza"
   descripcion='Los mejores productos de belleza y cuidado personal recomendados por expertos.'
-  dirs="/belleza/"
+  carpeta="/belleza/"
   limit=4
   see_all_url="/mejores/"
 %}
 
-   {% include home_seccion_destacada.html
+{% include home_seccion_destacada.html
    h2='Deportes'
    descripcion='Productos probados por Recomendador.net para mejorar tu experiencia deportiva.'
-   carpeta='/deportes/'
+   carpeta='deportes,mejores-bicicletas-electricas,mejor-bicicleta-plegable'
    limite=4
    enlace_categoria='/guias/deportes/'
-   descripcion_extra=true %}
+   descripcion_extra=true
+   mostrar_autor=true
+%}
+
+{% include home_seccion_alta.html
+  title="Tecnología"
+  descripcion='Análisis y comparativas de los mejores gadgets y dispositivos tecnológicos.'
+  carpeta="/mejores-microfonos-gaming/"
+  limit=4
+  see_all_url="/mejores/"
+%}
+
+{% include home_seccion_destacada.html
+   h2='Bebé y niños'
+   descripcion='Productos probados por Recomendador.net para mejorar la experiencia de los más pequeños.'
+   carpeta='bolso-carro-bebe, saco-silla-paseo, body-bebe-personalizado'
+   limite=3
+   enlace_categoria='/guias/bebe-y-ninos/'
+   descripcion_extra=true
+   mostrar_autor=true
+%}
 
 </div> <!-- /.home-landing -->
+<div class="hero-divider"></div>
+
 {% include footer.html %}
 
 </div> <!-- /.contenedor-unico -->

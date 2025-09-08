@@ -29,23 +29,37 @@
   {%- assign base = filtered_kw -%}
 {%- endif -%}
 
-{%- comment -%} ==== FILTRO POR RUTAS (exactas o recursivas) ==== {%- endcomment -%}
-{%- assign _dirs = include.dirs -%}
-{%- assign _dirs_recursive = include.dirs_recursive | default: true -%}
-{%- if _dirs and _dirs != "" -%}
-  {%- assign dirs_list = _dirs -%}
-  {%- unless dirs_list.first -%}
-    {%- assign dirs_list = _dirs | split: "|" -%}
+{%- comment -%} ==== FILTRO POR RUTAS usando **carpeta** (exactas o recursivas) ==== {%- endcomment -%}
+{%- assign _carpeta_raw = include.carpeta | default: include.dirs -%}
+{%- assign _recursiva = include.carpeta_recursiva | default: include.dirs_recursive | default: true -%}
+
+{%- if _carpeta_raw and _carpeta_raw != "" -%}
+  {%- assign carpetas_list = _carpeta_raw -%}
+
+  {%- comment -%}
+    Si viene como string, admitimos comas y pipes:
+    "a, b | c ,d" → "a|b|c|d" → split:"|"
+    Si ya es array (p.ej. desde front matter), lo usamos tal cual.
+  {%- endcomment -%}
+  {%- unless carpetas_list.first -%}
+    {%- assign _norm = _carpeta_raw
+        | replace: ", ", ","
+        | replace: " ,", ","
+        | replace: " |", "|"
+        | replace: "| ", "|"
+        | replace: ",", "|"
+      -%}
+    {%- assign carpetas_list = _norm | split: "|" -%}
   {%- endunless -%}
 
-  {%- assign filtered_dirs = "" | split: "" -%}
+  {%- assign carpetas_list = carpetas_list | uniq -%}
+  {%- assign filtradas = "" | split: "" -%}
 
   {%- for p in base -%}
     {%- assign match_dir = false -%}
 
-    {%- comment -%} Tomamos dir preferentemente; si no, url {%- endcomment -%}
+    {%- comment -%} Preferimos p.dir; si no, p.url {%- endcomment -%}
     {%- assign path_base = p.dir | default: p.url | default: "" -%}
-
     {%- if path_base != "" -%}
       {%- assign path_norm = path_base -%}
       {%- assign first_char_pb = path_norm | slice: 0, 1 -%}
@@ -56,7 +70,7 @@
       {%- assign path_norm = "" -%}
     {%- endif -%}
 
-    {%- for d in dirs_list -%}
+    {%- for d in carpetas_list -%}
       {%- assign d_norm = d | strip -%}
       {%- if d_norm == "" -%}{% continue %}{%- endif -%}
       {%- assign first_char = d_norm | slice: 0, 1 -%}
@@ -64,8 +78,8 @@
       {%- assign last_char = d_norm | slice: -1, 1 -%}
       {%- if last_char != "/" -%}{%- assign d_norm = d_norm | append: "/" -%}{%- endif -%}
 
-      {%- if _dirs_recursive -%}
-        {%- comment -%} Coincidencia por prefijo (incluye subcarpetas) {%- endcomment -%}
+      {%- if _recursiva -%}
+        {%- comment -%} Prefijo = incluye subcarpetas {%- endcomment -%}
         {%- assign d_len = d_norm | size -%}
         {%- assign prefix = path_norm | slice: 0, d_len -%}
         {%- if prefix == d_norm -%}
@@ -82,11 +96,11 @@
     {%- endfor -%}
 
     {%- if match_dir -%}
-      {%- assign filtered_dirs = filtered_dirs | push: p -%}
+      {%- assign filtradas = filtradas | push: p -%}
     {%- endif -%}
   {%- endfor -%}
 
-  {%- assign base = filtered_dirs -%}
+  {%- assign base = filtradas -%}
 {%- endif -%}
 
 {%- assign base = base | where_exp: "p", "p.date" -%}
@@ -345,5 +359,4 @@
   font-size:14px;
   font-weight:700;      /* negrita */
 }
-
 </style>

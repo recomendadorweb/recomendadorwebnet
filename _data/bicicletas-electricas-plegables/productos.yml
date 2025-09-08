@@ -68,7 +68,73 @@ productos:
     precio: Sin precio
     precioOriginal: No especificado
     valoracion: 4.5
-    variantes: []
+    variantes:
+      - ASIN: B0CN8XQCQ3
+        title: >-
+          ENGWE T14 Mini Bici Eléctrica Plegable para Adultos o Adolescentes, Neumáticos de 14'', Motor de 250W, Batería
+          de 48V 10AH, Velocidad hasta 25KM/H, Bicicleta Urbana de Paseo (Gris) (Azul)
+        brand: ENGWE
+        precio: "599,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41P6V6e54WL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51MgKebD9HL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51wL-S5hhdL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51of9T0xPxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/517X5arUs1L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51AYOr6pBQL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41M-HdzMikL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41zJ5rWGdjL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0CN8XQCQ3?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【Motor potente de 48V 250W】 La mini bicicleta eléctrica ENGWE está equipada con un potente motor sin
+            escobillas de 250W, que proporciona una gran potencia y capacidad de ascenso de hasta 25km/h. El empuje
+            extra hace que la conducción sea más emocionante y agradable, y las características de confort hacen que la
+            conducción sea más lejos y más rápida que nunca.
+          - >-
+            【Batería extraíble 48V 10Ah】Equipado con una batería de litio extraíble de alta capacidad (48V 10Ah), este
+            vehículo eléctrico tiene una gran autonomía y puede recorrer hasta 80 km con una sola carga completa, lo que
+            es perfectamente adecuado para los desplazamientos diarios.
+          - >-
+            【Sistema de amortiguación de 360 grados】 La bicicleta eléctrica cuenta con un sistema de amortiguación
+            múltiple, estructura triangular profesional, amortiguador central, doble amortiguador trasero, amortiguador
+            de sillín, horquilla delantera de acero al carbono de alta resistencia, con amortiguadores de primera clase
+            para mejorar la comodidad de conducción.
+          - >-
+            【Léger】 Avec seulement 28 kg, i peut être déplacé facilement et peut même être soulevé par une femme. Ce
+            vélo électrique pliant se plie en 27,5 x 18,5 x 23,5 pouces et est conçu pour un voyage instantané. Ce vélo
+            électrique pliant pour adulte peut être rapidement plié et rangé dans le coffre de votre voiture ou à la
+            maison.
+          - >-
+            【Tres modos de conducción】Modo de pedaleo asistido moderado, modo totalmente eléctrico para obtener la
+            máxima potencia, o modo de pedaleo para una conducción tradicional. Personaliza tu conducción para disfrutar
+            de una experiencia cómoda y personalizada.
+          - >-
+            【Satisfaction Garantie】Le moteur, la batterie et le chargeur sont garantis un an, vous n'avez donc pas à
+            vous inquiéter lorsque vous l'utilisez. Nous avons confiance en notre vélo électrique et pensons que vous
+            l'aimerez. Si vous avez des questions, veuillez nous envoyer un message sur Amazon.
+        variationAttributes:
+          - name: color_name
+            value: Azul
+        ParentASIN: B0D5QHV9S6
     title: >-
       ENGWE T14 Mini Bici Eléctrica Plegable para Adultos o Adolescentes, Neumáticos de 14'', Motor de 250W, Batería de
       48V 10AH, Velocidad hasta 25KM/H, Bicicleta Urbana de Paseo (Gris) (Gris)
@@ -420,7 +486,7 @@ productos:
       - 🛞 Buena suspensión
     nombre: Bodywel T16PRO Bicicleta Eléctrica Plegable, 14"
     precio: "419,99\_€"
-    precioOriginal: No especificado
+    precioOriginal: "409,99\_€"
     valoracion: 4.2
     variantes:
       - ASIN: B0F1MRW89H
@@ -429,7 +495,7 @@ productos:
           Batería 36V/7.8Ah, Frenos de Doble Disco y Suspensión Delantera (Rosa)
         brand: Bodywel
         precio: "409,99\_€"
-        precioOriginal: No especificado
+        precioOriginal: "419,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41ry6xY8h5L._SL500_.jpg
         imagenWidth: 500
@@ -491,81 +557,6 @@ productos:
         variationAttributes:
           - name: color_name
             value: rosa
-        ParentASIN: B0CRHBM699
-      - ASIN: B0F1SGTDK7
-        title: >-
-          Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Mini E-Bike, 4.5 Pulgadas Pantalla LED, Batería 36V/7.8Ah,
-          Frenos de Doble Disco y Suspensión Delantera (Rosa+Portaequipajes Trasero)
-        brand: Bodywel
-        precio: "479,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41n9KwbGw6L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41C4ZT2sQ2L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41MdXdoX3wL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-Kvh5YE7L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/517ckrX-xKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5109jcbDPUL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51yv2lUCBAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51VCN+L1LJL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-iAOWr58L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/61P5nfCSFdL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qkDoAS+sL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F1SGTDK7?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor
-            de 250W, batería de 36V y 7.8 de potencia, frenos de disco dobles, suspensión delantera y amortiguador
-            central, pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras.
-            Perfecta para tus desplazamientos diarios y viajes cortos.
-          - >-
-            【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable. Le permite
-            llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
-            amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
-          - >-
-            【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
-            incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una
-            velocidad máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
-          - >-
-            【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de disco dobles delanteros y traseros y frenos
-            electrónicos mejoran completamente el rendimiento de frenado y acortan la distancia de frenado. Luz
-            delantera de seguridad, luz trasera y timbre de bicicleta te hacen más seguro cuando sales especialmente por
-            la noche.
-          - >-
-            【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
-            ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
-            vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
-            posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 140-185cm.
-          - >-
-            【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje
-            complicado, más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24
-            horas. Si usted tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
-        variationAttributes:
-          - name: color_name
-            value: rosa+Portaequipajes trasero
         ParentASIN: B0CRHBM699
     title: >-
       Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Portable E-Bike, City EBike con 4.5 Pulgadas Pantalla LED,
@@ -901,7 +892,7 @@ productos:
       - 🔋 Autonomía hasta 70 km
       - 🚴‍♂️ Ruedas de 16
     nombre: HITWAY 16" Bicicleta eléctrica
-    precio: "609,99\_€"
+    precio: "649,99\_€"
     precioOriginal: "699,99\_€"
     valoracion: 4.2
     variantes: []
@@ -1433,7 +1424,7 @@ productos:
       He probado la Fafrees Bicicleta eléctrica 20" y me ha dejado una impresión bastante buena. La asistencia eléctrica
       responde bien y la calidad de construcción está por encima de lo esperado. Puede que no destaque por su ligereza,
       pero sí por ser una opción cómoda y práctica para moverse por ciudad.
-    disponibilidad: Sin info
+    disponibilidad: En stock
     enlace: https://amzn.to/4obiqgB?tag=recomendadorn-21&th=1
     imagen: https://m.media-amazon.com/images/I/41Hwyo-bokL._SL500_.jpg
     imagenHeight: 500
@@ -1461,10 +1452,87 @@ productos:
       - 🔋 Autonomía hasta 120 km
       - 🚴‍♂️ Ruedas de 20''
     nombre: Fafrees Bicicleta eléctrica 20"
-    precio: Sin precio
+    precio: "759,00\_€"
     precioOriginal: No especificado
     valoracion: 4.2
-    variantes: []
+    variantes:
+      - ASIN: B0CP3B89TF
+        title: >-
+          Fafrees F20 Light Bicicleta eléctrica, 20" Bicicleta Urbana eléctrica Plegable, Motor 250W, 14.5AH/522WH
+          Batería extraíble, ebike de Asistencia de Pedal para Adultos, Alcance 55-110 km (Azul-1)
+        brand: Fafrees
+        precio: "759,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41VhcXGrR6L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51C1O3XvCHL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51OfjAr+hFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51NKGgIf7cL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51HwzVlQSyL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51e3tIbyEZL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51o4ysTa+fL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51uP0pPlVTL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51IFqUAHfzL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0CP3B89TF?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            ✅✅【Motor reductor de cubo de 250W】Motor sin escobillas de 250W con un par máximo de 35N.M combinado con un
+            controlador inteligente produce una velocidad máxima de 25KM/H. La potencia máxima puede llegar a 437W, que
+            fue diseñado internamente para ayudarle a ir más empinada a velocidades más bajas. El motor de tracción
+            trasera es más fácil de manejar, da mejor tracción y requiere menos mantenimiento.
+          - >-
+            ✅✅【Batería extraíble de 36V y 14,5Ah】La batería de alta capacidad de 14,5 Ah amplía la distancia recorrida
+            hasta 110 km con una sola carga en modo asistido. Llévatela a casa y recárgala cuando quieras con el diseño
+            de bloqueo. Puedes elegir entre tres modos de asistencia: eléctrica, asistida y manual.
+          - >-
+            ✅✅【Pantalla LCD impermeable】La pantalla LCD impermeable de gran tamaño muestra diversos datos como la
+            velocidad, la batería, el kilometraje y la marcha. Dispone de un modo de asistencia a la marcha y función de
+            control de crucero para ayudarle en su conducción siempre que lo necesite.
+          - >-
+            ✅✅【Cambio Shimano de 7 velocidades】El cambio y el desviador de 7 velocidades Shimano ofrecen un cambio
+            preciso y suave en toda su gama, lo que garantiza que su transmisión mantenga su capacidad de respuesta a lo
+            largo del tiempo.
+          - >-
+            ✅✅【Frenos de disco mecánicos】Las bicicletas de paseo necesitan una gran potencia de frenado. Por eso hemos
+            equipado esta bicicleta con manetas de freno Power-off combinadas con grandes rotores. Tendrás el control y
+            la confianza para detenerte exactamente cuando lo necesites.
+          - >-
+            ✅✅【Cuadro plegable】Se pliega en menos de 30 segundos. Con un cuadro escalonado, puedes pedalear cómodamente
+            y ponerte de pie sobre el cuadro. La construcción compacta hecha de componentes ligeros hace que sea fácil
+            compactar la e-bike en el medio de transporte y ocupar poco espacio en él. La barra elevadora ajustable le
+            permite personalizar su ajuste, con tubos de manillar y sillín que se mueven hacia dentro y hacia fuera para
+            mayor comodidad.
+          - >-
+            ✅✅【Seguridad en la conducción nocturna】Faro LED y luz de freno trasera que cumplen la normativa StVZO para
+            garantizar la seguridad de la conducción nocturna.
+          - >-
+            ✅✅【Diseño empático】Las ruedas de 20 pulgadas son flexibles y ágiles, lo que las hace cómodas en el ajetreado
+            tráfico urbano. El robusto gancho trasero se puede utilizar para fijar una gran variedad de bolsas y cestas
+            traseras de bicicleta. La F20 light está equipada con guardabarros delantero y trasero y admite el modo
+            eléctrico puro, lo que la hace ideal para cualquier viaje.
+        variationAttributes:
+          - name: color_name
+            value: Azul-1
+        ParentASIN: B0BSB1KWD3
     title: >-
       Fafrees Bicicleta Eléctrica F20 Light, 20" Bici Urbana Eléctrica Plegable, Motor 250W, 36V/16.75AH Batería
       Extraíble, Ebike de Asistencia de Pedal para Adultos, Alcance 120 KM, Verde
@@ -1472,3 +1540,7 @@ productos:
     nombreCompleto: >-
       Fafrees Bicicleta Eléctrica F20 Light, 20" Bici Urbana Eléctrica Plegable, Motor 250W, 36V/16.75AH Batería
       Extraíble, Ebike de Asistencia de Pedal para Adultos, Alcance 120 KM, Verde
+    variationAttributes:
+      - name: color_name
+        value: Verde
+actualizacion: '2025-09-08'

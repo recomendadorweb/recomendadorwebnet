@@ -102,27 +102,50 @@
   {%- endunless -%}
 </div>
 
-
-
     <p>{{ include.descripcion | default: "Productos probados por Recomendador.net para mejorar tu hogar." }}</p>
 
-    {% assign folder = include.carpeta | default: "" %}
     {% assign limite = include.limite | default: 4 | plus: 0 %}
+
+    {%- comment -%}
+      Normaliza y admite múltiples carpetas (coma-separadas) e incluye todas sus subcarpetas.
+      Ej.: carpeta="hogar,cocina/robotica,limpieza"
+    {%- endcomment -%}
+    {%- assign carpeta_param = include.carpeta | default: "" | strip
+       | replace: ", ", "," | replace: " ,", "," -%}
+    {%- assign carpetas = carpeta_param | split: "," -%}
 
     {%- comment -%} 1) Reunir candidatos {%- endcomment -%}
     {% assign html_pages = site.html_pages | where_exp: "p", "p.keywords != nil and p.date != nil" %}
-    {% if folder != "" %}
-      {% assign html_pages = html_pages | where_exp: "p", "p.path contains include.carpeta or p.url contains include.carpeta" %}
-    {% endif %}
+
+    {%- if carpetas != empty and carpetas.first != "" -%}
+      {% assign filtered_pages = "" | split: "" %}
+      {% for f in carpetas %}
+        {% assign f_norm = f | strip | replace: '//','/' | remove_first: '/' | remove: '/' %}
+        {% assign needle = '/' | append: f_norm | append: '/' %}
+        {% assign by_url  = html_pages | where_exp: "p", "p.url  contains needle" %}
+        {% assign by_path = html_pages | where_exp: "p", "p.path contains needle" %}
+        {% assign filtered_pages = filtered_pages | concat: by_url | concat: by_path %}
+      {% endfor %}
+      {% assign html_pages = filtered_pages | uniq %}
+    {%- endif -%}
 
     {% assign coll_docs = "" | split: "" %}
     {% for coll in site.collections %}
       {% assign coll_docs = coll_docs | concat: coll.docs %}
     {% endfor %}
     {% assign html_docs = coll_docs | where_exp: "d", "d.extname == '.html' and d.keywords != nil and d.date != nil" %}
-    {% if folder != "" %}
-      {% assign html_docs = html_docs | where_exp: "d", "d.path contains include.carpeta or d.url contains include.carpeta" %}
-    {% endif %}
+
+    {%- if carpetas != empty and carpetas.first != "" -%}
+      {% assign filtered_docs = "" | split: "" %}
+      {% for f in carpetas %}
+        {% assign f_norm = f | strip | replace: '//','/' | remove_first: '/' | remove: '/' %}
+        {% assign needle = '/' | append: f_norm | append: '/' %}
+        {% assign by_url  = html_docs | where_exp: "d", "d.url  contains needle" %}
+        {% assign by_path = html_docs | where_exp: "d", "d.path contains needle" %}
+        {% assign filtered_docs = filtered_docs | concat: by_url | concat: by_path %}
+      {% endfor %}
+      {% assign html_docs = filtered_docs | uniq %}
+    {%- endif -%}
 
     {% assign items = html_pages | concat: html_docs %}
 
@@ -191,7 +214,7 @@
         {%- comment -%}
           Texto de descripción con fallback a otras claves comunes
         {%- endcomment -%}
-        {% assign card_text = item.text | default: item.description | default: item.excerpt | default: item.resumen %}
+        {% assign card_text = item.subtitle %}
 
         <article class="home-card">
           <a class="card-image" href="{{ item.url | relative_url }}">
@@ -200,10 +223,10 @@
 
           <h3><a href="{{ item.url | relative_url }}">{{ item.title }}</a></h3>
 
-{%- comment -%} Mostrar descripción solo si se pide y existe item.text {%- endcomment -%}
+{%- comment -%} Mostrar descripción solo si se pide y existe item.subtitle {%- endcomment -%}
 {% assign desc_flag = include.descripcion_extra | default: '' | downcase %}
 {% assign show_desc = false %}
-{% if item.text and (include.descripcion_extra == true or desc_flag == 'true' or desc_flag == '1' or desc_flag == 'yes') %}
+{% if item.subtitle and (include.descripcion_extra == true or desc_flag == 'true' or desc_flag == '1' or desc_flag == 'yes') %}
   {% assign show_desc = true %}
 {% endif %}
 
@@ -215,7 +238,7 @@
 {% endif %}
 
 {% if show_desc %}
-  <p class="card-desc">{{ item.text }}</p>
+  <p class="card-desc">{{ item.subtitle }}</p>
 {% endif %}
 
 <div class="card-meta">
@@ -247,8 +270,6 @@
     {% endif %}
   {% endif %}
 </div>
-
-
 
         </article>
       {% endfor %}
