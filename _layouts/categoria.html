@@ -9,86 +9,6 @@ layout: default
   margin:8px 0 8px !important;font-size:clamp(1.9rem,1.8vw + 1rem,2.4rem) !important;line-height:1.1;font-weight:900;letter-spacing:-.5px;color:#111 !important;
 }
 .category-intro{font-size: 1.4rem; opacity:.95; margin-bottom: 40px}
-
-
-</style>
-<div class="container">
-<h1 class="hero-title">{{ page.title | capitalize }}</h1>
-<div class="hero-divider"></div>
-
-{% if page.intro %}
-  <div class="category-intro">
-    {{ page.intro | markdownify }}
-  </div>
-{% endif %}
-<div class="hero-divider"></div>
-{%- comment -%} Ordena por 'orden' y luego 'title' {%- endcomment -%}
-{%- assign items = page.items | sort: "title" -%}
-{%- assign items = items | sort: "orden" -%}
-
-<div class="home-grid" style="--cols: 3">
-  {%- for d in items -%}
-    {%- comment -%} === Resolver TIPO igual que en tu módulo === {%- endcomment -%}
-    {%- assign tipo_key = d.tipo -%}
-    {%- assign data_grupo = site.data[tipo_key] -%}
-    {%- if data_grupo == nil and d.tipo -%}
-      {%- assign tipo_key = d.tipo | slugify: 'pretty' | downcase -%}
-      {%- assign data_grupo = site.data[tipo_key] -%}
-    {%- endif -%}
-    <!-- DEBUG: tipo='{{ d.tipo }}' → key='{{ tipo_key }}' | pack?={% if data_grupo %}true{% else %}false{% endif %} -->
-
-    {%- assign cabecera  = data_grupo.cabecera -%}
-    {%- assign productos = data_grupo.productos -%}
-    {%- assign actualizado = productos.actualizacion -%}
-
-    {%- comment -%} Autor (con fallback de slug como en tu módulo) {%- endcomment -%}
-    {%- assign autores = site.data.autor.autores -%}
-    {%- assign autor_key = d.autor -%}
-    {%- assign autor = autores[autor_key] -%}
-    {%- if autor == nil and autor_key -%}
-      {%- assign autor_slug = autor_key | slugify: 'pretty' | downcase -%}
-      {%- assign autor = autores[autor_slug] -%}
-    {%- endif -%}
-
-    <article class="home-card">
-      <a class="card-image" href="{{ d.url | relative_url }}">
-        <img src="{{ d.image | default: d.imagen | default: '/global/images/placeholder.webp' }}"
-             alt="{{ cabecera.titulo | default: d.title | escape }}">
-      </a>
-
-      <h3><a href="{{ d.url | relative_url }}">{{ cabecera.titulo | default: d.title }}</a></h3>
-
-      {% if actualizado %}
-        <small class="updated-inline under-title">
-          Actualizado: {% include date_es.html date=actualizado %}
-        </small>
-      {% endif %}
-
-      {% if d.subtitle %}
-        <p class="card-desc">{{ d.subtitle }}</p>
-      {% endif %}
-
-      <div class="card-meta">
-        {% if autor %}
-          <span class="author-block">
-            <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
-              <img class="author-avatar-xs" src="{{ autor.avatar }}"
-                   alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
-              <small class="author-name-xs">{{ autor.nombre }}</small>
-            </a>
-          </span>
-        {% elsif d.autor %}
-          <span class="author-block">
-            <span class="author-inline"><small class="author-name-xs">{{ d.autor }}</small></span>
-          </span>
-        {% endif %}
-      </div>
-    </article>
-  {%- endfor -%}
-</div>
-
-
-<style>
 /* Grid y tarjetas básicas (ajusta a tu CSS) */
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin:0;padding:0;list-style:none}
 .card{background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:16px;overflow:hidden;transition:transform .2s,box-shadow .2s}
@@ -165,22 +85,32 @@ layout: default
 /* Alinear imagen y autor a la misma altura en cada fila */
 .home-grid{
   align-items: stretch; /* asegura que todas las cards de la fila tengan la misma altura */
+  gap: 24px 20px;
 }
 
-.home-card{
+.home-card {
   display: flex;
   flex-direction: column;
-  height: 100%; /* para ocupar todo el alto asignado por la grid */
+  height: 100%;
+  border: 1px solid rgba(0,0,0,0.05); /* borde más claro y fino */
+  border-radius: 14px;
+  background: #fff;
+  padding: 14px; /* espacio entre borde y contenido */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04); /* sombra suave opcional */
+  transition: transform .2s, box-shadow .2s;
 }
 
-.home-card .card-image{
-  flex: 0 0 auto; /* la imagen mantiene su altura fija por el aspect-ratio */
+.home-card .card-image {
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 10px; /* un poco más pequeño para respetar el padding */
+  background: #f4f6f8;
+  margin: -14px -14px 10px -14px; /* imagen se expande al borde, resto con padding */
 }
 
 .home-card .card-meta{
   margin-top: auto;     /* empuja el bloque de autor al fondo de la tarjeta */
-  padding-top: 8px;     /* separa un poco del contenido anterior */
-  min-height: 28px;     /* altura mínima estable por si falta avatar/texto */
 }
 
 /* (Opcional) limitar desbordes de títulos/descripciones para evitar saltos de fila muy altos */
@@ -192,7 +122,145 @@ layout: default
   display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
 }
 */
+/* Grid con separación vertical/horizontal bien definida */
+.home-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  row-gap:32px;     /* separación vertical clara */
+  column-gap:24px;  /* separación horizontal */
+  align-items:stretch;
+}
+@media (max-width:1024px){ .home-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:640px){  .home-grid{grid-template-columns:1fr} }
+
+/* Tarjeta: borde sutil, sin padding global (lo ponemos en el contenido) */
+.home-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:14px;
+  background:#fff;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+  transition:transform .2s, box-shadow .2s;
+  overflow:hidden; /* evita desbordes y respeta el gap */
+}
+
+/* Imagen arriba, sin márgenes negativos */
+.home-card .card-image{
+  flex:0 0 auto;
+  aspect-ratio:16 / 10;
+  overflow:hidden;
+  background:#f4f6f8;
+  margin:0;             /* clave: nada de márgenes negativos */
+  border-radius:0;      /* ya recorta el contenedor */
+}
+.home-card .card-image img{
+  width:100%;height:100%;object-fit:cover;transition:transform .25s ease;
+}
+
+/* Padding SOLO en el contenido */
+.home-card .updated-inline,
+.home-card h3,
+.home-card .card-desc,
+.home-card .card-meta{
+  padding:0 14px;
+}
+.home-card h3{color:#000;margin:12px 0 6px;font-size:1.3rem;}
+.home-card h3 a{text-decoration:none;color:#000 !important}
+.home-card h3 a:hover{color:#0073e6 !important}
+.home-card .card-desc{margin:6px 0 10px;color:#555}
+
+/* Autor al fondo con padding inferior extra para respirar */
+.home-card .card-meta{
+  margin-top:auto;
+}
+
+/* Autor: avatar + nombre */
+.author-block{display:inline-block}
+.author-inline{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:.9rem;line-height:1}
+.author-avatar-xs{width:20px;height:20px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+.author-name-xs{color:#000;font-size:1rem}
+.author-name-xs:hover{color:#0073e6}
+
+/* “Actualizado” azul y en negrita */
+.updated-inline{color:#0b5fff;font-weight:700}
+.under-title{display:inline-block;margin:2px 0 6px}
 
 </style>
+<div class="container">
+<h1 class="hero-title">{{ page.title | capitalize }}</h1>
+<div class="hero-divider"></div>
 
+{% if page.intro %}
+  <div class="category-intro">
+    {{ page.intro | markdownify }}
+  </div>
+{% endif %}
+<div class="hero-divider"></div>
+{%- comment -%} Ordena por 'orden' y luego 'title' {%- endcomment -%}
+{%- assign items = page.items | sort: "title" -%}
+{%- assign items = items | sort: "orden" -%}
+
+<div class="home-grid" style="--cols: 3">
+  {%- for d in items -%}
+    {%- comment -%} === Resolver TIPO igual que en tu módulo === {%- endcomment -%}
+    {%- assign tipo_key = d.tipo -%}
+    {%- assign data_grupo = site.data[tipo_key] -%}
+    {%- if data_grupo == nil and d.tipo -%}
+      {%- assign tipo_key = d.tipo | slugify: 'pretty' | downcase -%}
+      {%- assign data_grupo = site.data[tipo_key] -%}
+    {%- endif -%}
+    <!-- DEBUG: tipo='{{ d.tipo }}' → key='{{ tipo_key }}' | pack?={% if data_grupo %}true{% else %}false{% endif %} -->
+
+    {%- assign cabecera  = data_grupo.cabecera -%}
+    {%- assign productos = data_grupo.productos -%}
+    {%- assign actualizado = productos.actualizacion -%}
+
+    {%- comment -%} Autor (con fallback de slug como en tu módulo) {%- endcomment -%}
+    {%- assign autores = site.data.autor.autores -%}
+    {%- assign autor_key = d.autor -%}
+    {%- assign autor = autores[autor_key] -%}
+    {%- if autor == nil and autor_key -%}
+      {%- assign autor_slug = autor_key | slugify: 'pretty' | downcase -%}
+      {%- assign autor = autores[autor_slug] -%}
+    {%- endif -%}
+
+    <article class="home-card">
+      <a class="card-image" href="{{ d.url | relative_url }}">
+        <img src="{{ d.image | default: d.imagen | default: '/global/images/placeholder.webp' }}"
+             alt="{{ cabecera.titulo | default: d.title | escape }}">
+      </a>
+
+      <h3><a href="{{ d.url | relative_url }}">{{ cabecera.titulo | default: d.title }}</a></h3>
+
+      {% if actualizado %}
+        <small class="updated-inline under-title">
+          Actualizado: {% include date_es.html date=actualizado %}
+        </small>
+      {% endif %}
+
+      {% if d.subtitle %}
+        <p class="card-desc">{{ d.subtitle }}</p>
+      {% endif %}
+
+      <div class="card-meta">
+        {% if autor %}
+          <span class="author-block">
+            <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
+              <img class="author-avatar-xs" src="{{ autor.avatar }}"
+                   alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
+              <small class="author-name-xs">{{ autor.nombre }}</small>
+            </a>
+          </span>
+        {% elsif d.autor %}
+          <span class="author-block">
+            <span class="author-inline"><small class="author-name-xs">{{ d.autor }}</small></span>
+          </span>
+        {% endif %}
+      </div>
+    </article>
+  {%- endfor -%}
+</div>
+{% include footer.html %}
 </div>

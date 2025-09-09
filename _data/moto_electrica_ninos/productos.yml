@@ -4,21 +4,21 @@ productos:
     brand: HOMCOM
     caracteristicasAmazon:
       - >-
-        LICENCIA DE VESPA: Esta moto eléctrica cuenta con licencia oficial de VESPA y está recomendada para niños
-        mayores de 18 meses (bajo la supervisión de un adulto) y soporta un peso de hasta 25 kg. Perfecta para jugar
+        LICENCIA DE VESPA: Esta moto eléctrica Infantil cuenta con licencia oficial de VESPA y está recomendada para
+        niños de 18-36 meses (bajo la supervisión de un adulto) y soporta un peso de hasta 25 kg. Perfecta para jugar
         tanto en exteriores como en interiores
       - >-
-        FÁCIL DE USAR CON VELOCIDAD DE SEGURIDAD: Al ser una moto pensada para los más pequeños es muy fácil de manejar,
-        simplemente accionando el pedal irá hacia adelante con una velocidad máxima de 3 km/h
+        FÁCIL DE USAR CON VELOCIDAD DE SEGURIDAD: Al ser una moto pensada para los más pequeños, la moto de batería es
+        muy fácil de manejar, simplemente accionando el pedal irá hacia adelante con una velocidad máxima de 3 km/h
       - >-
-        SEGURA Y ESTABLE: Sus 4 ruedas, 2 anchas y 2 ruedines auxiliares, aseguran que tu bebé viaje de forma estable y
-        segura. Además, el asiento amplio de PP, es muy cómodo para su uso
+        SEGURA Y ESTABLE: Las 4 ruedas, 2 anchas y 2 ruedines auxiliares de esta moto de juguete eléctrica aseguran que
+        tu bebé viaje de forma estable y segura. Además, el asiento amplio de PU, es muy cómodo para su uso
       - >-
         CONDUCCIÓN REALISTA: Incluso los más peques de la casa pueden disfrutar de una conducción realista con esta moto
-        que tiene faro (delantero con luz real), manillar con bocina y pedal como las de verdad. El faro delantero se
-        ilumina al pisar el pedal
+        de batería que tiene faro (delantero con luz real), manillar con bocina y pedal como las de verdad. El faro
+        delantero se ilumina al pisar el pedal
       - >-
-        AUTONOMÍA DE 45 MINUTOS: Cuenta con una batería de 6 V que se recomienda cargar durante 9-10 horas la primera
+        AUTONOMÍA DE 45 MINUTOS: Cuenta con una batería de 6V que se recomienda cargar durante 9-10 horas la primera
         vez, y unas 8 horas las siguientes. De este modo (dependiendo del tipo de uso) puede tener una autonomía de
         hasta 45 minutos. Medidas totales: 66,5x38x52 cm (LxANxAL)
     descripcion: >-
@@ -28,11 +28,11 @@ productos:
       un toque muy realista. Ideal para dar sus primeros paseos con una sonrisa de oreja a oreja.
     disponibilidad: En stock
     enlace: https://amzn.to/4l4UVD2?tag=recomendadorn-21&th=1
-    imagen: https://m.media-amazon.com/images/I/41SaPf29KBL._SL500_.jpg
+    imagen: https://m.media-amazon.com/images/I/41NqQjIIkyL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/41JEEUOk34L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/41gC6F8iJuL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/511MhK-WicL._SL500_.jpg
@@ -41,13 +41,13 @@ productos:
       - url: https://m.media-amazon.com/images/I/41M8jRQ4diL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41m6R1rYwQL._SL500_.jpg
-        width: 500
-        height: 500
       - url: https://m.media-amazon.com/images/I/51dtQ471+SL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/41E3zsDlWXL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41m6R1rYwQL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/41KoKYONwVL._SL500_.jpg
@@ -332,7 +332,7 @@ productos:
         precio: "68,99\_€"
         precioOriginal: "71,99\_€"
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41vR8uKmB8L._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/414CEcYcsEL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
@@ -1292,7 +1292,7 @@ productos:
       - Ruedas EVA
       - Luces LED
     nombre: ATAA Aprilia Dorsoduro 12v Moto eléctrica Infantil
-    precio: "181,49\_€"
+    precio: "181,89\_€"
     precioOriginal: "229,99\_€"
     valoracion: 4.3
     title: >-
@@ -1411,7 +1411,7 @@ productos:
           Moto Eléctrica Niños 3 Años 4 Años 5 Años Honda Competición 12V – Moto a Batería para Niños con Ruedas de
           Entrenamiento - Luces y Sonidos - Licencia de Marca – INJUSA
         brand: INJUSA
-        precio: "259,99\_€"
+        precio: "259,95\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41HXPbRW94L._SL500_.jpg
@@ -3710,4 +3710,4 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
       Cross para Niños de 3-12 Años
-actualizacion: '2025-09-09'
+actualizacion: '2025-09-10'

@@ -248,23 +248,26 @@ productos:
           - name: size_name
             value: '120'
         ParentASIN: B01M03908M
-      - ASIN: B07GPFTCWK
-        title: soul young para bufandas De piel de zorro falso de Mujeres de invierno(80cm,Negro&Blanco)
+      - ASIN: B07W3MFHR1
+        title: soul young para bufandas De piel de zorro falso de Mujeres de invierno(80cm,Mapache)
         brand: soul young
         precio: "21,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41wHmuUcJEL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/414jbH60ibL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41xtBDnRSOL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/412-crY8aKL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41t+O-5XAHL._SL500_.jpg
             width: 385
             height: 500
-          - url: https://m.media-amazon.com/images/I/51SICzxRf8L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41RspIKBsFL._SL500_.jpg
             width: 500
-            height: 480
-        enlace: https://www.amazon.es/dp/B07GPFTCWK?tag=recomendadorn-21&th=1&psc=1
+            height: 500
+        enlace: https://www.amazon.es/dp/B07W3MFHR1?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - Tamaño:80cm*16cm
           - 'Material súper cálido: piel de zorro artificial, suave y no daña la piel'
@@ -275,7 +278,7 @@ productos:
           - Por favor, agitar o golpe con un secador de pelo para hacerlo mullido cuando usted recibe el articulo
         variationAttributes:
           - name: color_name
-            value: Negro&blanco,80cm
+            value: Mapache,80cm
           - name: size_name
             value: '80'
         ParentASIN: B01M03908M
@@ -3772,4 +3775,4 @@ productos:
 
       En mi caso el tejido y el acabado me parecieron de buena calidad, por eso fue un acierto para regalar. Comprar
       directo al consumidor y la posibilidad de cambiar o devolver me dieron tranquilidad.
-actualizacion: '2025-09-09'
+actualizacion: '2025-09-10'
