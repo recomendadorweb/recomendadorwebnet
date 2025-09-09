@@ -7,7 +7,7 @@ productos:
     salesrank: 533
     enlace: https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: Walking Mum
-    precio: "25,90\_€"
+    precio: "21,90\_€"
     precioOriginal: "28,90\_€"
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg
@@ -464,6 +464,8 @@ productos:
         variationAttributes:
           - name: color_name
             value: Pearl Avenue
+          - name: size_name
+            value: Talla única
         ParentASIN: B0CJMJ23WK
       - ASIN: B0F4DDBS5K
         title: >-
@@ -526,6 +528,8 @@ productos:
         variationAttributes:
           - name: color_name
             value: Blossom
+          - name: size_name
+            value: Talla única
         ParentASIN: B0CJMJ23WK
       - ASIN: B0D7J7LRNX
         title: >-
@@ -586,6 +590,8 @@ productos:
         variationAttributes:
           - name: color_name
             value: Leaf
+          - name: size_name
+            value: Talla única
         ParentASIN: B0CJMJ23WK
       - ASIN: B0F4DJ3RNL
         title: >-
@@ -653,6 +659,8 @@ productos:
         variationAttributes:
           - name: color_name
             value: Dessert Avenue
+          - name: size_name
+            value: Estándar
         ParentASIN: B0CJMJ23WK
     ParentASIN: B0CJMJ23WK
     variationAttributes:
@@ -1424,4 +1432,4 @@ productos:
       Mibebestore Bolso Polipiel CELESTE 40x27x20cm Carrito Bebé Personalizado Bordado Nombre Regalo Nacimiento
       Resistente Salpicaduras Organizador Hecho A Mano España Cochecito Cambiador Multiusos Paseo
     variantes: []
-actualizacion: '2025-09-08'
+actualizacion: '2025-09-09'

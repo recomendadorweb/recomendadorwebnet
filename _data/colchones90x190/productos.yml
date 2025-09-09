@@ -3080,9 +3080,9 @@ productos:
       - ASIN: B016AFQFY8
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 135 x 190 Altura 24 cm.
         brand: Dormio
-        precio: "310,16\_€"
+        precio: "171,99\_€"
         precioOriginal: No especificado
-        disponibilidad: Envío en 6 a 7 meses
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31HISKU4EpL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 312
@@ -4343,6 +4343,53 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+      - ASIN: B0B6P47461
+        title: >-
+          Cecotec Colchón Viscoelástico Flow PureVital 1900 200x200. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
+          Alta, Capa Viscoelástica VisComfort, Tejido SoftTex, Doble Cara Dual System
+        brand: Cecotec
+        precio: "194,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0B6P47461?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Colchón de firmeza alta y altura total de 21 cm con la medida ideal para tu descanso.
+          - Núcleo FoamVital de espuma HR de 23 Kg/m³ que aporta resistencia y firmeza al conjunto.
+          - >-
+            Compuesto por diferentes capas diseñadas para mejorar tu descanso, con Tejido SoftTex y doble cara Dual
+            System de descanso verano e Invierno con sistema de triple protección.
+          - >-
+            Capa viscoelástica VisComfort que se adaptará a las curvas de tu cuerpo., permitiendo que la columna
+            vertebral permanezca en una posición neutral.
+          - El colchón se entrega enrollado y envasado al vacío para transportar el colchón de la manera más cómoda.
+        variationAttributes:
+          - name: size_name
+            value: 200 x 200 cm
+          - name: color_name
+            value: Granate
+        ParentASIN: B0CS9KRNNK
     ParentASIN: B0CS9KRNNK
     nombreCompleto: >-
       Cecotec Colchón Viscoelástico Flow ViscoCare 1900 90x190cm.Multicapa, Altura 21 cm, Núcleo FoamTech, Firmeza Alta,
@@ -5554,4 +5601,4 @@ productos:
       Protección Higiénica Total, 90x190
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-08'
+actualizacion: '2025-09-09'
