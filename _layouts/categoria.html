@@ -35,7 +35,7 @@ layout: default
       {%- assign tipo_key = d.tipo | slugify: 'pretty' | downcase -%}
       {%- assign data_grupo = site.data[tipo_key] -%}
     {%- endif -%}
-    <!-- DEBUG: tipo='{{ d.tipo }}' → key='{{ tipo_key }}' | pack?={{ data_grupo != nil }} -->
+    <!-- DEBUG: tipo='{{ d.tipo }}' → key='{{ tipo_key }}' | pack?={% if data_grupo %}true{% else %}false{% endif %} -->
 
     {%- assign cabecera  = data_grupo.cabecera -%}
     {%- assign productos = data_grupo.productos -%}
@@ -46,7 +46,8 @@ layout: default
     {%- assign autor_key = d.autor -%}
     {%- assign autor = autores[autor_key] -%}
     {%- if autor == nil and autor_key -%}
-      {%- assign autor = autores[autor_key | slugify: 'pretty' | downcase] -%}
+      {%- assign autor_slug = autor_key | slugify: 'pretty' | downcase -%}
+      {%- assign autor = autores[autor_slug] -%}
     {%- endif -%}
 
     <article class="home-card">

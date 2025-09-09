@@ -377,7 +377,7 @@
 
         <article class="home-card">
           <a class="card-image" href="{{ item.url | relative_url }}">
-            <img src="{{ item.image | default: item.imagen | default: '/global/images/placeholder.webp' }}" alt="{{ item.title | escape }}">
+            <img src="{{ item.imagenhome | default: item.imagen | default: '/global/images/placeholder.webp' }}" alt="{{ item.title | escape }}">
           </a>
 <h3><a href="{{ item.url | relative_url }}">{{ data_grupo.cabecera.titulo }}</a></h3>
 

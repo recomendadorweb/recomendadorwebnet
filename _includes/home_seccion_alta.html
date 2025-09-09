@@ -188,7 +188,7 @@
   {%- if main -%}
     <div class="sf-hero">
       <a class="sf-media" href="{{ main.url | relative_url }}">
-        <img src="{{ main.imagen | default: main.image | default: '/global/images/placeholder.webp' }}" alt="{{ main.title | escape }}">
+        <img src="{{ main.imagenhome | default: main.image | default: '/global/images/placeholder.webp' }}" alt="{{ main.title | escape }}">
       </a>
 
       <div class="sf-side">
@@ -211,7 +211,7 @@
 
         <article class="sf-item">
           <a class="sf-thumb" href="{{ p.url | relative_url }}">
-            <img src="{{ p.imagen | default: p.image | default: '/global/images/placeholder.webp' }}" alt="{{ _titulo1 | escape }}" loading="lazy">
+            <img src="{{ p.imagenhome | default: p.image | default: '/global/images/placeholder.webp' }}" alt="{{ _titulo1 | escape }}" loading="lazy">
           </a>
           <div class="sf-body">
             <h3 class="sf-item-title"><a href="{{ p.url | relative_url }}">{{ _titulo1 }}</a></h3>
