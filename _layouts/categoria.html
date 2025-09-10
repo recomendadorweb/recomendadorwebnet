@@ -228,7 +228,7 @@ layout: default
 
     <article class="home-card">
       <a class="card-image" href="{{ d.url | relative_url }}">
-        <img src="{{ d.image | default: d.imagen | default: '/global/images/placeholder.webp' }}"
+        <img src="{{ d.imagenhome | default: d.imagen | default: '/global/images/placeholder.webp' }}"
              alt="{{ cabecera.titulo | default: d.title | escape }}">
       </a>
 
