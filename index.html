@@ -198,6 +198,327 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
   display:block;    /* elimina el baseline de la imagen */
 }
 
+/* mobile */
+/* ======= MOBILE-ONLY OVERRIDES ======= */
+@media (max-width: 980px){
+  /* Contenedor general: respiración y menos sombras */
+  .contenedor-unico{padding:10px;}
+  .home-landing .homepage-top{padding:10px;gap:10px;}
+  .homepage-home .home-section{margin:0 10px 24px 10px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+}
+
+/* Orden inteligente en columna (hero primero) */
+@media (max-width: 980px){
+  .home-landing .homepage-top{display:grid;grid-template-columns:1fr;}
+  .home-landing .latest-widget{order:2;}
+  .home-landing .hero{order:1;}
+  .home-landing aside{order:3;}
+}
+
+/* HERO: reservas de espacio para evitar CLS + tipografía fluida */
+@media (max-width: 768px){
+  .home-landing .hero .hero-media{aspect-ratio:16/9;border-radius:10px;}
+  .home-landing .hero .hero-title{
+    font-size:clamp(1.4rem, 4.5vw + .6rem, 1.9rem) !important;
+    margin:6px 0 6px !important;
+  }
+  .home-landing .hero .hero-byline{font-size:.9rem;}
+  .home-landing .hero .hero-dek{font-size:.98rem;line-height:1.6;}
+}
+
+/* Últimos posts: tap targets más grandes y thumbs consistentes */
+@media (max-width: 768px){
+  .latest-widget .lw-item{padding:12px 8px;gap:12px;}
+  .latest-widget .lw-thumb{width:76px;height:56px;border-radius:8px;}
+  .latest-widget .lw-title{font-size:1rem;line-height:1.3;}
+  .latest-widget .lw-meta{font-size:.8rem;}
+}
+
+/* Sidebar: bloque a ancho completo con mejor ritmo vertical */
+@media (max-width: 980px){
+  aside .popular-box-widget{margin-top:6px;padding:10px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+  .popular-box-content{gap:10px;}
+  .popular-thumb{width:64px;height:64px;border-radius:8px;}
+  .popular-title{font-size:1rem;}
+}
+
+/* Tarjetas / grids: 2 columnas en móviles medianos, 1 en móviles pequeños */
+@media (max-width: 980px){
+  .widget.type-grid .grid-items{grid-template-columns:repeat(2, minmax(0,1fr));gap:12px;}
+  .home-card img{height:140px;}
+}
+@media (max-width: 480px){
+  .widget.type-grid .grid-items{grid-template-columns:1fr;}
+  .home-card img{height:150px;}
+}
+
+/* Blog list: layout vertical limpio (ya casi listo, pulimos detalles) */
+@media (max-width: 768px){
+  .blog-tarjeta{padding:14px;border-radius:10px;}
+  .tarjeta-thumb img{height:180px !important;}
+  .tarjeta-title{font-size:1.05rem;}
+  .tarjeta-excerpt{font-size:.98rem;}
+}
+
+/* Hot posts / cards: reservar altura para evitar saltos */
+@media (max-width: 768px){
+  .card-post{border-radius:10px;overflow:hidden;/* reserva de relación para CLS */}
+  .card-post img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;}
+  .hot-post,.hot-post-secundario{aspect-ratio:16/9;}
+  .hot-post img,.hot-post-secundario img{height:auto;}
+}
+
+/* Secciones home (includes): espaciado compacto y tipografía */
+@media (max-width: 768px){
+  .homepage-home h2{font-size:1.35em;}
+  .homepage-home p{font-size:.98rem;line-height:1.6;margin-bottom:16px;}
+  .home-grid{gap:14px;}
+}
+
+/* Botón 'Cargar más' y 'Back to top': accesibles con el dedo */
+@media (max-width: 768px){
+  .load-more-button{padding:12px 20px;font-size:16px;border-radius:10px}
+  #back-top{width:48px;height:48px;line-height:48px;font-size:22px;bottom:14px;right:14px;}
+}
+
+/* Aviso de afiliados: mejor legibilidad en móvil */
+@media (max-width: 768px){
+  [style*="Bienvenido a"]{ /* tu caja de aviso inline */
+    max-width: 94% !important;
+    font-size:.98rem !important;
+    line-height:1.6 !important;
+    padding:12px 14px !important;
+  }
+}
+
+/* Buscador: resultados más respirados en móvil */
+@media (max-width: 600px){
+  #results-container li{font-size:1rem;padding:10px 12px;}
+}
+
+/* Pequeñas mejoras de contraste y clicabilidad */
+@media (hover:none){
+  .popular-title:hover,
+  .widget.type-grid .post-title:hover,
+  .home-card a:hover h3{color:inherit;text-decoration:none;}
+}
+/* ===== WIDGET LATERAL EN HORIZONTAL CON SCROLL-SNAP ===== */
+aside .popular-box-widget{
+  position:relative;
+  border-radius:10px;
+  overflow:hidden; /* recorta gradientes */
+}
+
+/* Contenedor deslizante */
+.popular-box-content{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:stretch;
+  gap:14px;
+  padding:12px 16px 16px 16px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* Tarjeta elemento */
+.popular-box-item{
+  flex:0 0 auto;
+  width:260px;               /* ancho visible por tarjeta */
+  min-height:88px;
+  border:0px solid #eee;
+  border-radius:10px;
+  background:#fff;
+  scroll-snap-align:start;   /* “ancla” al inicio */
+}
+
+/* Miniatura dentro de la tarjeta */
+.popular-thumb{width:72px;height:72px;border-radius:8px;flex-shrink:0;}
+.popular-text{min-width:0;}
+.popular-title{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+/* Scrollbar discreto (o escóndelo si prefieres) */
+.popular-box-content::-webkit-scrollbar{height:8px;}
+.popular-box-content::-webkit-scrollbar-track{background:#f1f1f1;border-radius:10px;}
+.popular-box-content::-webkit-scrollbar-thumb{background:#c9d6e2;border-radius:10px;}
+.popular-box-content{scrollbar-width:thin;scrollbar-color:#c9d6e2 #f1f1f1;}
+
+/* Bordes con degradado para indicar desplazamiento */
+.popular-box-widget::before,
+.popular-box-widget::after{
+  content:"";
+  position:absolute;top:0;bottom:0;width:24px;pointer-events:none;z-index:2;
+}
+.popular-box-widget::before{
+  left:0;background:linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+.popular-box-widget::after{
+  right:0;background:linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+/* En móvil, ligeramente más compactas */
+@media (max-width: 980px){
+  .popular-box-item{width:220px;}
+}
+
+/* Si usas el modo “contenedor único”, mantenlo horizontal igualmente */
+.contenedor-unico aside .popular-box-content{
+  display:flex !important; flex-direction:row !important; overflow-x:auto;
+}
+/* --- FIX: que el widget no fuerce altura completa --- */
+aside .popular-box-widget{
+  height:auto !important;     /* antes: height:100% */
+  overflow:hidden;            /* recorta cualquier desborde visual */
+}
+
+/* --- FIX: carril horizontal sin estirar verticalmente --- */
+.popular-box-content{
+  align-items:flex-start !important;   /* antes: stretch */
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+}
+
+/* --- FIX: tarjeta con tamaño propio y sin “crecer” raro --- */
+.popular-box-item{
+  flex:0 0 auto;
+  width:260px;                         /* ajusta 240–300px a gusto */
+  max-width:100%;
+  height:auto;                         /* evita estirar en vertical */
+  align-self:flex-start;               /* ignora un posible stretch */
+  box-sizing:border-box;
+}
+
+/* Evita que el contenido fuerce ancho/alto extra */
+.popular-text{min-width:0;}
+.popular-title{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width:100%;
+}
+/* 1) El widget no fuerza altura */
+.home-landing aside .popular-box-widget{
+  height:auto !important;
+  overflow:hidden;            /* recorta bordes/gradientes */
+  box-sizing:border-box;
+}
+
+/* 2) El carril SÍ debe poder encoger al ancho del aside */
+.home-landing aside .popular-box-widget .popular-box-content{
+  width:100% !important;
+  min-width:0 !important;     /* << la clave para que no se estire */
+  flex:1 1 auto !important;
+  align-items:flex-start !important;
+  overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  box-sizing:border-box;
+}
+
+/* 3) Cada tarjeta no puede “empujar” al contenedor */
+.home-landing aside .popular-box-widget .popular-box-item{
+  flex:0 0 auto;
+  inline-size:260px;          /* prueba 240–300px */
+  max-inline-size:100%;
+  block-size:auto;
+  align-self:flex-start;
+  box-sizing:border-box;
+}
+
+/* 4) Textos largos no fuerzan ancho extra */
+.home-landing aside .popular-box-widget .popular-text{min-width:0 !important;}
+.home-landing aside .popular-box-widget .popular-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* máximo 2 líneas */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* permitir saltos de línea */
+  max-width: 100%;
+}
+
+/* 5) Bordes-gradiente siguen dentro del aside */
+.home-landing aside .popular-box-widget::before,
+.home-landing aside .popular-box-widget::after{inset-block:0;inline-size:24px;pointer-events:none;}
+/* El aside (grid item) puede encoger dentro de la grid */
+.home-landing .homepage-top aside { min-width: 0 !important; }
+
+/* El contenedor del widget no se sale y ocupa el ancho disponible */
+.home-landing aside .popular-box-widget { width:100%; box-sizing:border-box; }
+
+/* El carril horizontal no “empuja” al padre */
+.home-landing aside .popular-box-widget .popular-box-content{
+  width:100%;
+  min-width:0;            /* clave para permitir encoger */
+  box-sizing:border-box;
+  overflow-x:auto;
+}
+
+/* Cada tarjeta mantiene su ancho sin forzar al carril */
+.home-landing aside .popular-box-widget .popular-box-item{
+  flex:0 0 260px;         /* o 240–300px a gusto */
+  max-width:260px;
+  box-sizing:border-box;
+}
+/* === RESTAURAR OFERTAS FLASH: vertical en desktop, horizontal solo en móvil === */
+
+/* Desktop (por defecto): columna vertical como antes */
+.home-landing aside .popular-box-widget .popular-box-content{
+  display:flex !important;
+  flex-direction:column !important;   /* << vertical otra vez */
+  gap:0px !important;
+  padding:8px 0px !important;
+  overflow:visible !important;
+  scroll-snap-type:none !important;
+}
+
+/* Las tarjetas ocupan el ancho del sidebar */
+.home-landing aside .popular-box-widget .popular-box-item{
+  flex:0 0 auto !important;
+  width:100% !important;
+  max-width:100% !important;
+  align-self:auto !important;
+  scroll-snap-align:unset !important;
+}
+
+/* Quitar gradientes laterales en desktop */
+.home-landing aside .popular-box-widget::before,
+.home-landing aside .popular-box-widget::after{
+  content:none !important;
+}
+
+/* MÓVIL: carrusel horizontal (el único sitio donde debe ser horizontal) */
+@media (max-width:980px){
+  .home-landing aside .popular-box-widget .popular-box-content{
+    flex-direction:row !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;
+    gap:14px !important;
+    padding:12px 16px 16px 16px !important;
+  }
+  .home-landing aside .popular-box-widget .popular-box-item{
+    width:220px !important;
+    max-width:220px !important;
+    scroll-snap-align:start;
+    align-self:flex-start;
+  }
+  .home-landing aside .popular-box-widget::before,
+  .home-landing aside .popular-box-widget::after{
+    content:"";
+    position:absolute; top:0; bottom:0; width:24px; pointer-events:none; z-index:2;
+  }
+  .home-landing aside .popular-box-widget::before{
+    left:0;  background:linear-gradient(to right, #fff, rgba(255,255,255,0));
+  }
+  .home-landing aside .popular-box-widget::after{
+    right:0; background:linear-gradient(to left,  #fff, rgba(255,255,255,0));
+  }
+}
+
 </style>
 
 {% include estiloazul.html %}
@@ -254,7 +575,7 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
         {% assign autor = site.data.autor.autores[principal.autor] %}
         <p class="hero-byline">
           {% if autor %}
-            Por <a class="author-post" href="{{ autor.enlaceBlog }}" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:inherit;">
+            Por <a class="author-post" href="{{ autor.enlace }}" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:inherit;">
               {% if autor.avatar %}
                 <img src="{{ autor.avatar }}" alt="{{ autor.nombre }}" style="width:22px;height:22px;border-radius:50%;object-fit:cover;">
               {% endif %}
@@ -312,11 +633,11 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
    limite=3 %}
 
 {% include home_seccion_alta.html
-  title="Gaming"
-  descripcion='Los mejores productos de gaming recomendados por expertos.'
-  categorias="gaming"
+  title="Tecnología"
+  descripcion='Los mejores productos de tecnología recomendados por expertos.'
+  categorias="tecnologia"
   limit=4
-  see_all_url="/categorias/gaming/"
+  see_all_url="/categorias/tecnologia/"
 %}
 
 {% include home_seccion_destacada.html

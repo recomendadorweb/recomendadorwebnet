@@ -184,6 +184,36 @@
   text-overflow: ellipsis;
   max-width: 140px;           /* ajusta si quieres más ancho */
 }
+/* ===== Mobile overrides (solo móviles) ===== */
+@media (max-width: 640px) {
+  /* 1 tarjeta por fila */
+  .home-section .home-grid{
+    grid-template-columns: 1fr !important; /* ignora --cols en inline */
+    gap: 14px;
+  }
+
+  /* Ajustes suaves de tipografía/espacios en móvil */
+  .home-section .section-head{ align-items: center; }
+  .home-section .section-head .see-all{ font-size: .95rem; }
+
+  .home-section a{ font-size: 1.05rem !important; }
+  .home-card h3{ font-size: 1.05rem; }
+
+  .home-card .card-meta{
+    padding: 0 8px 8px;
+    min-height: 28px;
+  }
+
+  .home-card .author-name-xs{
+    max-width: 120px; /* evita cortes raros en nombres largos */
+  }
+
+  /* Mantén imágenes consistentes */
+  .home-card .card-image img{
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+}
 
 </style>
 

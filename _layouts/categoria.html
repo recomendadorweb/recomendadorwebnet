@@ -186,6 +186,11 @@ layout: default
 /* “Actualizado” azul y en negrita */
 .updated-inline{color:#0b5fff;font-weight:700}
 .under-title{display:inline-block;margin:2px 0 6px}
+@media (max-width: 640px){
+  .home-grid{
+    grid-template-columns: 1fr !important; /* fuerza una tarjeta por fila en mobile */
+  }
+}
 
 </style>
 <div class="container">
