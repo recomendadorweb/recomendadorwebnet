@@ -171,6 +171,33 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
 .home-card h3{font-size:1rem;margin:10px 10px 0px 10px;color:#000;font-weight:600;}
 .home-card a{text-decoration:none;color:inherit;display:block;}
 .home-card a:hover h3{color:#0073e6;}
+.author-post{color:#000 !important;text-decoration:none;}
+.author-post:hover{color:#0073e6 !important;text-decoration:none;}
+.hero .hero-byline{
+  display:flex;
+  align-items:center;
+  gap:8px;          /* espacio entre elementos */
+  flex-wrap:wrap;   /* por si en móvil se parte en dos líneas */
+  line-height:1.2;  /* uniforme */
+}
+
+.author-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+  color:inherit;
+  line-height:1;    /* evita saltos verticales */
+}
+
+.author-avatar{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;    /* elimina el baseline de la imagen */
+}
+
 </style>
 
 {% include estiloazul.html %}
@@ -227,7 +254,13 @@ body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--
         {% assign autor = site.data.autor.autores[principal.autor] %}
         <p class="hero-byline">
           {% if autor %}
-            Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }}</a>
+            Por <a class="author-post" href="{{ autor.enlaceBlog }}" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:inherit;">
+              {% if autor.avatar %}
+                <img src="{{ autor.avatar }}" alt="{{ autor.nombre }}" style="width:22px;height:22px;border-radius:50%;object-fit:cover;">
+              {% endif %}
+              <span>{{ autor.nombre }}</span>
+            </a>
+
           {% else %}
             Por {{ principal.autor | default: "Redacción" }}
           {% endif %}

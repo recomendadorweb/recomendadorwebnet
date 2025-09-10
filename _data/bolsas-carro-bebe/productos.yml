@@ -7,7 +7,7 @@ productos:
     salesrank: 533
     enlace: https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: Walking Mum
-    precio: "21,90\_€"
+    precio: "25,90\_€"
     precioOriginal: "28,90\_€"
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg
@@ -323,20 +323,17 @@ productos:
         imagenWidth: 389
         imagenHeight: 500
         imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51UVu5SJ8ML._SL500_.jpg
+            width: 365
+            height: 500
           - url: https://m.media-amazon.com/images/I/41JbBn4uRDL._SL500_.jpg
             width: 389
             height: 500
-          - url: https://m.media-amazon.com/images/I/419efcncu+L._SL500_.jpg
-            width: 414
+          - url: https://m.media-amazon.com/images/I/41od1irh-cL._SL500_.jpg
+            width: 469
             height: 500
-          - url: https://m.media-amazon.com/images/I/41JSnXpR26L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31C1-ZZN1uL._SL500_.jpg
-            width: 500
-            height: 365
-          - url: https://m.media-amazon.com/images/I/41thTj8crmL._SL500_.jpg
-            width: 389
+          - url: https://m.media-amazon.com/images/I/514My7GXCEL._SL500_.jpg
+            width: 361
             height: 500
         enlace: https://www.amazon.es/dp/B0F7J68F6L?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
@@ -508,71 +505,7 @@ productos:
           - name: color_name
             value: Pearl Avenue
           - name: size_name
-            value: Talla única
-        ParentASIN: B0CJMJ23WK
-      - ASIN: B0F4DDBS5K
-        title: >-
-          MIMUSELINA | Bolso Carro Bebe con Diseño Práctico y Funcional | Cierre con Cremallera y Correa Ajustable |
-          Bolso Pañalera Bebe para los Paseos
-        brand: MIMUSELINA
-        precio: "34,95\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/317UW823c8L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/419EHqmGpqL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41-T1WZxCFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31zmcP0broL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31mTP1qR6fL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41z9CYqSToL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/412mdd6PCyL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41wJWQVxvDL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F4DDBS5K?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            ELEGANTE Y FUNCIONAL: Nuestro bolso carrito bebe combina diseño moderno con máxima practicidad. Fabricado
-            con un exterior de polipiel impermeable, es ideal para cualquier clima y fácil de limpiar. Sus
-            compartimentos separados y su amplio espacio interior te permiten organizar cómodamente todos los accesorios
-            del bebé en tu bolsa carro bebe, manteniéndolos siempre accesibles durante tus paseos.
-          - >-
-            CREMALLERA Y MÚLTIPLES ASAS: La bolsa carrito bebe Mimuselina cuenta con una cremallera y una correa que se
-            puede colgar con el asa doble con botones de presión, lo que la convierte en la bolsa perfecta para
-            transportar tus pertenencias de forma segura. Además, la cinta larga en espiga te permite llevarla sobre el
-            hombro mientras caminas con tu bebé.
-          - >-
-            AMPLIO ESPACIO DE ALMACENAMIENTO: Gracias a sus dos compartimentos, nuestro bolso panera carrito bebe ofrece
-            suficiente capacidad para llevar todo lo que tu bebé necesita en una bolsa: pañales, biberones, ropa de
-            repuesto, piezas de repuesto y otros accesorios esenciales para bebés.
-          - >-
-            DISEÑO VERSÁTIL Y CON ESTILO: Nuestro bolso bebe Mimuselina para cochecito se caracteriza por un diseño
-            elegante y versátil, perfecto para cualquier ocasión. Se puede utilizar como bolsa de pañales o bolso de
-            mano para colgar en el cochecito de tu bebé.
-          - >-
-            FÁCIL DE LIMPIAR Y DURADERO: Hecho de materiales certificados, nuestro bolso silla paseo bebe destaca por su
-            resistencia y practicidad. Puede limpiarse fácilmente con una toallita húmeda para el día a día, o lavarse a
-            mano o a máquina a 30 grados cuando lo necesites. Este bolso organizador carrito bebe es una opción
-            funcional y con estilo para padres que buscan comodidad sin complicaciones.
-        variationAttributes:
-          - name: color_name
-            value: Blossom
-          - name: size_name
-            value: Talla única
+            value: Estándar
         ParentASIN: B0CJMJ23WK
       - ASIN: B0D7J7LRNX
         title: >-
@@ -634,7 +567,7 @@ productos:
           - name: color_name
             value: Leaf
           - name: size_name
-            value: Talla única
+            value: Estándar
         ParentASIN: B0CJMJ23WK
       - ASIN: B0F4DJ3RNL
         title: >-
@@ -759,7 +692,7 @@ productos:
             value: Ecru
           - name: size_name
             value: Mini
-        ParentASIN: B0FN4PDZC7
+        ParentASIN: B0CJMJ23WK
       - ASIN: B0F4DGNJ1V
         title: >-
           MIMUSELINA | Bolso Carro Bebe con Diseño Práctico y Funcional | Cierre con Cremallera y Correa Ajustable |
