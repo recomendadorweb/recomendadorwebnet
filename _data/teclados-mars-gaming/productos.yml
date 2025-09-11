@@ -106,6 +106,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -158,6 +159,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -196,6 +198,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -236,6 +239,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -281,11 +285,13 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     variationAttributes:
       - name: style_name
         value: MKXTKLBES
     nombreCompleto: Mars Gaming MKXTKL, teclado mecánico switch azul, LED 5 colores 10 efectos, ES
+    condicion: new
   - ASIN: B09MJC4XL5
     a_tener_en_cuenta: Diseño compacto pero incluye teclado numérico; ideal para trabajo y juego
     brand: Mars Gaming
@@ -390,6 +396,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -442,6 +449,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -480,6 +488,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -520,6 +529,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -565,8 +575,10 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: Mars Gaming MKULTRA, Teclado Mecánico Negro RGB, Compacto 96%, Switch Outemu SQ Rojo, Español -US
+    condicion: new
   - ASIN: B0BGLKLRNP
     a_tener_en_cuenta: Buen rendimiento por el precio; sin reposamuñecas ni software de control
     brand: Mars Gaming
@@ -671,6 +683,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -709,6 +722,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -761,6 +775,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -801,6 +816,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -846,10 +862,12 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MK80, Teclado Gaming Mecánico TKL Compacto con Switch Azul, Iluminación Rainbow RGB, Teclas Doble
       Inyección, Modo Juego y Anti-Ghosting, Multiplataforma, Idioma Español, Negro
+    condicion: ''
   - ASIN: B0DHCNKM3C
     a_tener_en_cuenta: Ultracompacto, sin teclas F ni pad numérico; ideal para movilidad
     brand: Mars Gaming
@@ -957,6 +975,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -1009,6 +1028,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -1047,6 +1067,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -1087,6 +1108,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -1132,10 +1154,12 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKMINIPRO, Teclado Mecánico Ultra-Compacto 60%, Switches Mecánicos Hot-Swappable, Iluminación RGB
       Chroma, Teclado Gaming Antighosting, Multiplataforma, Switch Silencioso, Español, Negro
+    condicion: new
   - ASIN: B0F383W18C
     a_tener_en_cuenta: Una de las opciones más completas para gamers y profesionales exigentes
     brand: Mars Gaming
@@ -1156,7 +1180,7 @@ productos:
     lo_mejor: Switches hot-swap, RGB Chroma completo, chasis de aluminio y rueda de control multifunción
     nombre: Mars Gaming MKPRO
     valoracion: 5
-    precio: "43,94\_€"
+    precio: "43,59\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -1248,6 +1272,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -1286,6 +1311,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -1338,6 +1364,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -1378,6 +1405,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -1423,10 +1451,12 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
       de Control, Software Avanzado, Multiplataforma, Switch Silent, Español, Negro
+    condicion: new
   - ASIN: B0972ZH4KN
     a_tener_en_cuenta: No tiene teclas dedicadas ni pad numérico; pensado para setups reducidos
     brand: Mars Gaming
@@ -1525,6 +1555,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -1577,6 +1608,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -1615,6 +1647,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -1655,6 +1688,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -1700,10 +1734,12 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKMINIBES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Azul, Negro, Idioma
       Español
+    condicion: new
   - ASIN: B0BDFGWCMX
     a_tener_en_cuenta: Estilo visual moderno y limpio; sin funciones multimedia dedicadas
     brand: Mars Gaming
@@ -1816,6 +1852,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
@@ -1858,6 +1895,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -1896,6 +1934,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -1936,6 +1975,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -1981,8 +2021,10 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: Mars Gaming T. Mecanico MK60 Rainbow. White
+    condicion: new
   - ASIN: B09MJ7CGCL
     a_tener_en_cuenta: Ideal para usuarios que quieren estética clara sin perder funcionalidad
     brand: Mars Gaming
@@ -2096,6 +2138,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
@@ -2138,6 +2181,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -2176,6 +2220,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -2216,6 +2261,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -2261,8 +2307,10 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: Mars Gaming Teclado MECANICO MKULTRA Blanco - Switch Rojo
+    condicion: new
   - ASIN: B09SV594P2
     a_tener_en_cuenta: Conectividad inalámbrica muy cómoda; ideal para setups coloridos o portátiles
     brand: Mars Gaming
@@ -2363,6 +2411,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -2415,6 +2464,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -2453,6 +2503,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -2493,6 +2544,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -2538,10 +2590,12 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKCLOUDPRES, Teclado Mecánico Inalámbrico RGB Rosa, Ultra-Compacto 75%, Switch Outemu SQ Pro Rojo,
       Idioma Español+US
+    condicion: ''
   - ASIN: B0F3839TXY
     a_tener_en_cuenta: Una opción premium con estética clara y funcionalidades completas
     brand: Mars Gaming
@@ -2653,6 +2707,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -2705,6 +2760,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B08568XBVL
         title: >-
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
@@ -2743,6 +2799,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -2783,6 +2840,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -2828,8 +2886,10 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
       de Control, Software Avanzado, Multiplataforma, Switch Silent, Español, Blanco
+    condicion: new
 actualizacion: '2025-09-11'

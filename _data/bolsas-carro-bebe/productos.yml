@@ -7,7 +7,7 @@ productos:
     salesrank: 533
     enlace: https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: Walking Mum
-    precio: "25,90\_€"
+    precio: "21,90\_€"
     precioOriginal: "28,90\_€"
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg
@@ -70,6 +70,7 @@ productos:
       Walking Mum. Bolso organizador I Love Vichy. Bolsa de maternidad para silla de paseo. Asas cortas para fijar al
       carro. Color Negro. Medidas 31X17X12 cm.
     variantes: []
+    condicion: new
   - ASIN: B0DBRMMD33
     nombreCompleto: >-
       TENDS Bolso Carro Bebe espacioso - Bolsa panera Carrito Bebé con Función de Bolso Maternidad - Organizador Carrito
@@ -199,6 +200,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0DFV5WT2S
+        condicion: new
       - ASIN: B0CQHX79ZF
         title: >-
           TENDS Bolso Carro Bebe espacioso - Bolsa Carrito Bebe con Función de Bolso Maternidad -Organizador para Carro
@@ -253,6 +255,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0DFV5WT2S
+        condicion: new
       - ASIN: B0DBRPS1T8
         title: >-
           TENDS Bolso Carro Bebe espacioso - Bolsa panera Carrito Bebé con Función de Bolso Maternidad - Organizador
@@ -311,6 +314,7 @@ productos:
           - name: color_name
             value: Crema
         ParentASIN: B0DFV5WT2S
+        condicion: new
       - ASIN: B0F7J68F6L
         title: >-
           TENDS Bolso Carro Bebe espacioso - Bolsa panera Carrito Bebé con Función de maleta Maternidad - Organizador
@@ -360,10 +364,12 @@ productos:
           - name: color_name
             value: Noir
         ParentASIN: B0DFV5WT2S
+        condicion: new
     ParentASIN: B0DFV5WT2S
     variationAttributes:
       - name: color_name
         value: Grey
+    condicion: new
   - ASIN: B0C6M58RZQ
     nombreCompleto: >-
       MIMUSELINA Bolso Panera Bolso Carro Bebe Elegante y Funcional - Diseño Versátil con Gran Capacidad, Asas Múltiples
@@ -507,6 +513,7 @@ productos:
           - name: size_name
             value: Estándar
         ParentASIN: B0CJMJ23WK
+        condicion: new
       - ASIN: B0D7J7LRNX
         title: >-
           MIMUSELINA | Bolso Carro Bebe con Diseño Práctico y Funcional | Cierre con Cremallera y Correa Ajustable |
@@ -569,6 +576,7 @@ productos:
           - name: size_name
             value: Estándar
         ParentASIN: B0CJMJ23WK
+        condicion: new
       - ASIN: B0F4DJ3RNL
         title: >-
           MIMUSELINA | Bolso Panera Carrito Bebe | Bolso Carro Bebe con Diseño Práctico y Funcional | Cierre con
@@ -638,6 +646,7 @@ productos:
           - name: size_name
             value: Estándar
         ParentASIN: B0CJMJ23WK
+        condicion: new
       - ASIN: B0C6R5QRF7
         title: >-
           MIMUSELINA | Bolso Carro Bebe con Diseño Práctico y Funcional | Cierre con Cremallera y Correa Ajustable |
@@ -693,6 +702,7 @@ productos:
           - name: size_name
             value: Mini
         ParentASIN: B0CJMJ23WK
+        condicion: new
       - ASIN: B0F4DGNJ1V
         title: >-
           MIMUSELINA | Bolso Carro Bebe con Diseño Práctico y Funcional | Cierre con Cremallera y Correa Ajustable |
@@ -757,12 +767,14 @@ productos:
           - name: size_name
             value: Mini
         ParentASIN: B0CJMJ23WK
+        condicion: new
     ParentASIN: B0CJMJ23WK
     variationAttributes:
       - name: color_name
         value: Ecru
       - name: size_name
         value: M
+    condicion: new
   - ASIN: B09R21T6G5
     nombreCompleto: >-
       Walking Mum. Bolso Cambiador de Bebé I Love Vichy. Bolsa Canastilla para carro o para colgar al hombro. Color
@@ -899,6 +911,7 @@ productos:
           - name: style_name
             value: Contemporáneo
         ParentASIN: B0BGN9CFSW
+        condicion: new
       - ASIN: B09R225P26
         title: >-
           Walking Mum. Bolsa Isotérmica para Comida de bebé i Love Vichy. Gran Capacidad. Diseño versátil con asa Cortas
@@ -933,10 +946,12 @@ productos:
           - name: style_name
             value: Casual
         ParentASIN: B0BGN9CFSW
+        condicion: new
     ParentASIN: B0BGN9CFSW
     variationAttributes:
       - name: style_name
         value: Moderno
+    condicion: new
   - ASIN: B0777JB9R5
     nombreCompleto: >-
       Danielstore - Bolso Maternidad Personalizado | Organizador Pañales | Asa Colgar al Hombro | Compatible Carrito
@@ -1016,6 +1031,7 @@ productos:
       Danielstore - Bolso Maternidad Personalizado | Organizador Pañales | Asa Colgar al Hombro | Compatible Carrito
       Bebe | Fácil Limpieza, Rosa, 1 Unidad, Polipiel
     variantes: []
+    condicion: ''
   - ASIN: B0DM97L5JL
     nombreCompleto: Walking Mum BOLSA CROSSBODY MIMOSA ROSA
     valoracion: 4.4
@@ -1076,6 +1092,7 @@ productos:
       evitar el contacto con superficies ásperas; en general es una opción práctica y con estilo para el día a día.
     title: Walking Mum BOLSA CROSSBODY MIMOSA ROSA
     variantes: []
+    condicion: new
   - ASIN: B07PJS8QX6
     nombreCompleto: Bolso Talega Lactancia PERSONALIZADA Polipiel para carro silleta paseo Rosa - Nombre bebé bordado
     valoracion: 4.4
@@ -1179,10 +1196,12 @@ productos:
           - name: style_name
             value: Bolso Kona
         ParentASIN: B07PDMFKF8
+        condicion: new
     ParentASIN: B07PDMFKF8
     variationAttributes:
       - name: style_name
         value: Talega Polipiel
+    condicion: new
   - ASIN: B0D295GR5F
     nombreCompleto: >-
       Bolso talega Lactancia Personalizado, Bolso Polipiel con Nombre Bordado, Talega para Carro Silla de Paseo
@@ -1290,6 +1309,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B09CMJFG83
+        condicion: new
       - ASIN: B0D2982P5L
         title: >-
           Bolso talega Lactancia Personalizado, Bolso Polipiel con Nombre Bordado, Talega para Carro Silla de Paseo
@@ -1331,6 +1351,7 @@ productos:
           - name: color_name
             value: Blanco/Rosa
         ParentASIN: B09CMJFG83
+        condicion: new
       - ASIN: B09CMKF6S8
         title: >-
           Bolso talega Lactancia Personalizado, Bolso Polipiel con Nombre Bordado, Talega para Carro Silla de Paseo
@@ -1366,10 +1387,12 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B09CMJFG83
+        condicion: new
     ParentASIN: B09CMJFG83
     variationAttributes:
       - name: color_name
         value: Blanco/Azul
+    condicion: new
   - ASIN: B09R23B6HQ
     nombreCompleto: >-
       Walking Mum. Bolso Cambiador de Bebé I Love Vichy. Bolsa Canastilla para carro o para colgar al hombro. Color
@@ -1453,6 +1476,7 @@ productos:
       Walking Mum. Bolso Cambiador de Bebé I Love Vichy. Bolsa Canastilla para carro o para colgar al hombro. Color
       Negro. Medidas 42X36X13 cm.
     variantes: []
+    condicion: new
   - ASIN: B07HQFFXN8
     nombreCompleto: mibebestore - Bolso Polipiel Carrito Bebe Personalizado con nombre bordado CELESTE - Nombre bebé bordado
     valoracion: 4.1
@@ -1527,4 +1551,5 @@ productos:
       Mibebestore Bolso Polipiel CELESTE 40x27x20cm Carrito Bebé Personalizado Bordado Nombre Regalo Nacimiento
       Resistente Salpicaduras Organizador Hecho A Mano España Cochecito Cambiador Multiusos Paseo
     variantes: []
+    condicion: new
 actualizacion: '2025-09-11'

@@ -99,6 +99,7 @@ productos:
           - name: color_name
             value: Blue
         ParentASIN: B0F4M74PS5
+        condicion: new
       - ASIN: B0F33BRP2D
         title: >-
           Xiaomi Smart Band 9 - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED con tasa de refresco
@@ -144,6 +145,7 @@ productos:
           - name: color_name
             value: Rose
         ParentASIN: B0F4M74PS5
+        condicion: new
       - ASIN: B0F33993FX
         title: >-
           Xiaomi Smart Band 9 - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED con tasa de refresco
@@ -189,6 +191,7 @@ productos:
           - name: color_name
             value: Silver
         ParentASIN: B0F4M74PS5
+        condicion: new
     ParentASIN: B0F4M74PS5
     variationAttributes:
       - name: color_name
@@ -196,6 +199,7 @@ productos:
     nombreCompleto: >-
       Xiaomi Smart Band 9 - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED con tasa de refresco de 60
       Hz, Sensor de Frecuencia Cardíaca, Negro
+    condicion: new
   - ASIN: B0DK6ZC5ZC
     a_tener_en_cuenta: No tiene pantalla AMOLED ni GPS; algunos datos de salud no son tan precisos como en gamas más altas.
     brand: XIAOMI
@@ -215,7 +219,7 @@ productos:
     lo_mejor: Comodísima para uso diario, con buena autonomía y funciones básicas de salud que cumplen bien.
     nombre: Xiaomi Smart Band 9 Active
     valoracion: 4.3
-    precio: "19,00\_€"
+    precio: "19,99\_€"
     precioOriginal: "24,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -281,7 +285,7 @@ productos:
           XIAOMI Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa
           de refresco de 60 Hz, 5ATM, App Mi Fitness, Rosa (Versión ES)
         brand: XIAOMI
-        precio: "19,00\_€"
+        precio: "19,99\_€"
         precioOriginal: "24,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41oIV8UAacL._SL500_.jpg
@@ -344,6 +348,7 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FPXM34MP
+        condicion: new
       - ASIN: B0DKFM5S5R
         title: >-
           XIAOMI Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa
@@ -412,6 +417,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0FPXM34MP
+        condicion: new
       - ASIN: B08N4JWPTL
         title: >-
           XIAOMI Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa
@@ -480,6 +486,7 @@ productos:
           - name: color_name
             value: Purple
         ParentASIN: B0FPXM34MP
+        condicion: new
       - ASIN: B08N4ZBPSQ
         title: >-
           XIAOMI Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa
@@ -548,6 +555,7 @@ productos:
           - name: color_name
             value: Green
         ParentASIN: B0FPXM34MP
+        condicion: new
     ParentASIN: B0FPXM34MP
     variationAttributes:
       - name: style_name
@@ -557,6 +565,7 @@ productos:
     nombreCompleto: >-
       Xiaomi Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa de
       refresco de 60 Hz, 5ATM, App Mi Fitness, Negro (Versión ES)
+    condicion: new
   - ASIN: B0B6WRFY5S
     a_tener_en_cuenta: No tiene GPS ni funciones deportivas avanzadas; algunas funciones requieren Fitbit Premium.
     brand: Fitbit
@@ -696,6 +705,7 @@ productos:
           - name: color_name
             value: Lavanda
         ParentASIN: B0BB7RXDQZ
+        condicion: new
       - ASIN: B0B6WRTPNV
         title: >-
           Fitbit Inspire 3, la pulsera de salud y actividad física con hasta 10 días de batería y compatible con Android
@@ -760,6 +770,7 @@ productos:
           - name: color_name
             value: Amarillo ocre
         ParentASIN: B0BB7RXDQZ
+        condicion: new
     ParentASIN: B0BB7RXDQZ
     variationAttributes:
       - name: pattern_name
@@ -767,6 +778,7 @@ productos:
       - name: color_name
         value: Negro
     nombreCompleto: Fitbit Inspire 3,Black/Midnight Zen Activity Tracker, Unisex-Adult, Negro, One Size
+    condicion: new
   - ASIN: B0CHBMLYLL
     a_tener_en_cuenta: No incluye GPS; algunas funciones requieren app Mi Fitness.
     brand: NK
@@ -839,6 +851,7 @@ productos:
     nombreCompleto: >-
       Mi Smart Band 8 - Pulsera de Actividad, Pantalla AMOLED, Monitorización de Frecuencia Cardíaca, 190 MAh, 150+
       Modos Deportivos, hasta 16 Días de Autonomía, Negro
+    condicion: ''
   - ASIN: B0C4LLK48F
     a_tener_en_cuenta: Sin GPS; algunas funciones avanzadas requieren app Huawei Health.
     brand: HUAWEI
@@ -969,12 +982,13 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0F1DH6VSL
+        condicion: used
       - ASIN: B0C4LPY2H5
         title: >-
           HUAWEI Band 8 Smart Watch, Diseño fino, Seguimiento Preciso del Sueño, Batería de 14 días, Compatible con
           Android e iOS, para Salud y Bienestar,Versión Española, Rosa
         brand: Desconocida
-        precio: "32,32\_€"
+        precio: "34,04\_€"
         precioOriginal: "59,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/414K+G5a+TL._SL500_.jpg
@@ -1029,6 +1043,7 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0F1DH6VSL
+        condicion: used
     ParentASIN: B0F1DH6VSL
     variationAttributes:
       - name: color_name
@@ -1036,6 +1051,7 @@ productos:
     nombreCompleto: >-
       HUAWEI Band 8 Smart Watch, Diseño fino, Seguimiento Preciso del Sueño, Batería de 14 días, Compatible con Android
       e iOS, para Salud y Bienestar,Versión Española, Negro
+    condicion: used
   - ASIN: B0DY1JKTRD
     a_tener_en_cuenta: No tiene GPS ni NFC, y requiere app de Huawei para estadísticas detalladas.
     brand: HUAWEI
@@ -1171,6 +1187,7 @@ productos:
           - name: color_name
             value: Rosa Polímeros
         ParentASIN: B0F2J23SQ7
+        condicion: new
       - ASIN: B0CYCCXKNW
         title: >-
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
@@ -1236,6 +1253,7 @@ productos:
           - name: color_name
             value: Negro Polímeros
         ParentASIN: B0F2J23SQ7
+        condicion: new
       - ASIN: B0CYCDKXSW
         title: >-
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
@@ -1301,6 +1319,7 @@ productos:
           - name: color_name
             value: Blanco Polímeros
         ParentASIN: B0F2J23SQ7
+        condicion: used
       - ASIN: B0DY1M95KG
         title: >-
           HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
@@ -1365,6 +1384,7 @@ productos:
           - name: color_name
             value: Blanco Aleación de Aluminio
         ParentASIN: B0F2J23SQ7
+        condicion: new
       - ASIN: B0CYQ1HC8B
         title: >-
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
@@ -1427,6 +1447,7 @@ productos:
           - name: color_name
             value: Amarillo Polímeros
         ParentASIN: B0F2J23SQ7
+        condicion: new
       - ASIN: B0DY1M967M
         title: >-
           HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
@@ -1491,6 +1512,7 @@ productos:
           - name: color_name
             value: Azul Aleación de Aluminio
         ParentASIN: B0F2J23SQ7
+        condicion: new
       - ASIN: B0DY1P85GK
         title: >-
           HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
@@ -1555,6 +1577,7 @@ productos:
           - name: color_name
             value: Rosa Polímeros
         ParentASIN: B0F2J23SQ7
+        condicion: new
       - ASIN: B0DY1LR73D
         title: >-
           HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
@@ -1619,6 +1642,7 @@ productos:
           - name: color_name
             value: Morado Aleación de Aluminio
         ParentASIN: B0F2J23SQ7
+        condicion: new
       - ASIN: B0CYCDKR2S
         title: >-
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
@@ -1681,6 +1705,7 @@ productos:
           - name: color_name
             value: Azul Polímeros
         ParentASIN: B0F2J23SQ7
+        condicion: used
     ParentASIN: B0F2J23SQ7
     variationAttributes:
       - name: style_name
@@ -1690,6 +1715,7 @@ productos:
     nombreCompleto: >-
       HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional, VFC
       Promedio Durante el Sueño y Datos sobre el Sueño, 14 Días, iOS & Android
+    condicion: new
   - ASIN: B0CVN3NK42
     a_tener_en_cuenta: No tiene GPS ni NFC; requiere Samsung Health para seguimiento completo.
     brand: Samsung
@@ -1708,7 +1734,7 @@ productos:
     lo_mejor: Pantalla grande y fluida, funciones de smartwatch y excelente batería para uso diario.
     nombre: Samsung Galaxy Fit3
     valoracion: 4.4
-    precio: "53,99\_€"
+    precio: "47,99\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -1774,12 +1800,13 @@ productos:
           - name: color_name
             value: Oro rosa | Con oferta
         ParentASIN: B0CWF6FSNQ
+        condicion: used
       - ASIN: B0CVN3PBF8
         title: >-
           Samsung Galaxy Fit3 - Reloj inteligente con pantalla AMOLED de 40 mm, cuerpo de aluminio, seguimiento completo
           de la actividad física y la salud, batería hasta 13 días, carga rápida, 5 ATM, plateado
         brand: Samsung
-        precio: "49,85\_€"
+        precio: "49,89\_€"
         precioOriginal: "47,27\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31IE9aBsjtL._SL500_.jpg
@@ -1803,6 +1830,7 @@ productos:
           - name: color_name
             value: plateado
         ParentASIN: B0CWF6FSNQ
+        condicion: new
     ParentASIN: B0CWF6FSNQ
     variationAttributes:
       - name: color_name
@@ -1810,4 +1838,5 @@ productos:
     nombreCompleto: >-
       Samsung Galaxy Fit3 - Reloj inteligente con pantalla AMOLED de 40 mm, cuerpo de aluminio, seguimiento completo de
       la actividad física y la salud, batería hasta 13 días, carga rápida, 5 ATM, gris
+    condicion: new
 actualizacion: '2025-09-11'

@@ -120,6 +120,7 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0F9FQPDQY
+        condicion: new
       - ASIN: B0F9FKR47C
         title: >-
           RCB R9X Pro Moto Eléctrica Niños, Motocicleta Eléctrica con Motor 350W, Modos de Velocidad 10/15/25 km/h &
@@ -177,6 +178,7 @@ productos:
           - name: color_name
             value: Rouge
         ParentASIN: B0F9FQPDQY
+        condicion: new
     ParentASIN: B0F9FQPDQY
     variationAttributes:
       - name: color_name
@@ -184,6 +186,7 @@ productos:
     nombreCompleto: >-
       RCB R9X Pro Moto Eléctrica Niños, Motocicleta Eléctrica con Motor 350W, Modos de Velocidad 10/15/25 km/h & Alcance
       16KM, Iluminación Ambiental, Neumático 12" Moto para Infantil 4+ Años
+    condicion: new
   - ASIN: B0DXVB4MCB
     a_tener_en_cuenta: hasta 7 años
     brand: EVERCROSS
@@ -315,6 +318,7 @@ productos:
           - name: color_name
             value: 13m Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0CS2J5YB2
         title: >-
           EVERCROSS EV05M Moto Eléctrica Niños, Moto Eléctrica 150W, 8/16 km/h Modo Velocidad y 10 km Largo Alcance Moto
@@ -381,6 +385,7 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0CS2WQKRX
         title: >-
           EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
@@ -447,6 +452,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0FHGTGZ3Y
         title: >-
           EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
@@ -513,6 +519,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0FHK5CFL5
+        condicion: new
     ParentASIN: B0FHK5CFL5
     variationAttributes:
       - name: color_name
@@ -520,6 +527,7 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12'' de Ancho, Modos de Velocidad 8/16KM/H y Autonomía
       de 12KM, Sistema de Frenos de Disco, para Niños de 3 a 7 Años de Edad
+    condicion: new
   - ASIN: B0F8BHG12S
     a_tener_en_cuenta: hasta 8 años
     brand: RCB
@@ -586,6 +594,7 @@ productos:
     nombreCompleto: >-
       RCB Moto Eléctrica Niños 12V, electricas Infantiles con 2 Motores, Velocidad de 4 km/h, Luces LED, Múltiples Tipos
       de Música para Educación Temprana, la Mejor Moto Niños para Niños de 3 a 8 Años
+    condicion: new
   - ASIN: B0F9KN8762
     a_tener_en_cuenta: hasta 8 años
     brand: RCB
@@ -707,6 +716,7 @@ productos:
           - name: color_name
             value: Amarillo
         ParentASIN: B0F9JW7TKF
+        condicion: new
     ParentASIN: B0F9JW7TKF
     variationAttributes:
       - name: color_name
@@ -714,6 +724,7 @@ productos:
     nombreCompleto: >-
       RCB 12V Moto Eléctrica Niños, 2 Motores y 12" Pulgadas Motos Electricas Infantiles 3/8 km/h Modos de Velocidad,
       Multi-Música, Puerto USB, Moto Bateria Niño para 3-8 Niños
+    condicion: ''
   - ASIN: B0C9J4RJTF
     a_tener_en_cuenta: hasta 8 años
     brand: RELAX4LIFE
@@ -835,6 +846,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0CVKJFS25
+        condicion: new
     ParentASIN: B0CVKJFS25
     variationAttributes:
       - name: color_name
@@ -842,4 +854,5 @@ productos:
     nombreCompleto: >-
       RELAX4LIFE 12V Aprilia Moto Eléctrica Niños con 2 Ruedas Auxiliares, Velocidad 5,5-6KM/H, Moto Infantil con Luces,
       Música, Faros, Marcha Adelante, USB y MP3 para Niños 3-8 Años, Carga 25kg (Amarillo)
+    condicion: new
 actualizacion: '2025-09-11'

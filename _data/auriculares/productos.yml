@@ -19,9 +19,9 @@ productos:
     lo_mejor: 🔊 Sonido THX posicional, ⚡ Conexión HyperSpeed, 🔋 Batería 70h
     nombre: Razer BlackShark V2 HyperSpeed
     valoracion: 5
-    precio: "117,12\_€"
+    precio: "125,18\_€"
     precioOriginal: "149,99\_€"
-    disponibilidad: Envío en 3 a 4 días
+    disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51SJ-5TAOHL._SL500_.jpg
         width: 500
@@ -173,6 +173,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B089SSH6L6
         title: >-
           Razer BlackShark V2 - Auriculares Gaming con tarjeta de sonido USB,(cable de mando de 50 mm, reducción de
@@ -240,6 +241,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B09QFYNJMB
         title: >-
           Razer BlackShark V2 X - Auriculares Gaming con Cable Multiplataparama (Diafragmas 50mm, Micrófono Cardioide
@@ -287,6 +289,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B08DD7DDLP
         title: >-
           Razer BlackShark V2 Pro para PC - Auriculares Inalámbricos para Esports (Diafragmas de Titanio de 50 mm
@@ -346,6 +349,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
+        condicion: used
       - ASIN: B094YFSJT5
         title: >-
           Razer BlackShark V2 Pro - Auriculares Inalámbricos para Esports (Diafragmas de Titanio de 50 mm TriForce,
@@ -423,6 +427,7 @@ productos:
           - name: color_name
             value: Six Siege Special Ed.
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B0B5HB3F85
         title: >-
           Razer BlackShark V2 X USB - Auriculares para Juegos Esports (Controlador TriForce de 50 mm, Cancelación de
@@ -492,6 +497,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B091FBWFYF
         title: >-
           Razer BlackShark V2 (Edición Especial) -Auriculares Gaming (auriculares con cable con controladores de 50 mm
@@ -566,6 +572,7 @@ productos:
           - name: color_name
             value: Special
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B09BD75Y21
         title: >-
           Razer BlackShark V2 X - Auriculares Gaming (altavoces de titanio de 50 mm, micrófono cardioide, cancelación de
@@ -640,10 +647,12 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0D1FMKM76
+        condicion: new
     ParentASIN: B0D1FMKM76
     nombreCompleto: >-
       Razer BlackShark V2 HyperSpeed para PC - Auriculares para esports inalámbricos y ligeros (280 g, Micrófono
       HyperClear, Diafragmas TriForce de titanio de 50 mm, Bluetooth) Negro
+    condicion: new
   - ASIN: B089SSFV85
     a_tener_en_cuenta: 🎧 Ligero y cómodo, 🎤 Micrófono cardioide
     brand: Razer
@@ -768,6 +777,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B089SSH6L6
         title: >-
           Razer BlackShark V2 - Auriculares Gaming con tarjeta de sonido USB,(cable de mando de 50 mm, reducción de
@@ -835,6 +845,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B08DD7DDLP
         title: >-
           Razer BlackShark V2 Pro para PC - Auriculares Inalámbricos para Esports (Diafragmas de Titanio de 50 mm
@@ -894,6 +905,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
+        condicion: used
       - ASIN: B09BD75Y21
         title: >-
           Razer BlackShark V2 X - Auriculares Gaming (altavoces de titanio de 50 mm, micrófono cardioide, cancelación de
@@ -968,6 +980,7 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B094YFSJT5
         title: >-
           Razer BlackShark V2 Pro - Auriculares Inalámbricos para Esports (Diafragmas de Titanio de 50 mm TriForce,
@@ -1045,6 +1058,7 @@ productos:
           - name: color_name
             value: Six Siege Special Ed.
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B091FBWFYF
         title: >-
           Razer BlackShark V2 (Edición Especial) -Auriculares Gaming (auriculares con cable con controladores de 50 mm
@@ -1119,6 +1133,7 @@ productos:
           - name: color_name
             value: Special
         ParentASIN: B0D1FMKM76
+        condicion: new
       - ASIN: B0B5HB3F85
         title: >-
           Razer BlackShark V2 X USB - Auriculares para Juegos Esports (Controlador TriForce de 50 mm, Cancelación de
@@ -1188,6 +1203,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
+        condicion: new
     ParentASIN: B0D1FMKM76
     variationAttributes:
       - name: style_name
@@ -1197,6 +1213,7 @@ productos:
     nombreCompleto: >-
       Razer BlackShark V2 X - Auriculares Gaming (Auriculares con cable con controlador de 50 mm, supresión de ruido
       para PC, Mac, PS4, Xbox One y Switch) Negro
+    condicion: new
   - ASIN: B09X5G16ZM
     a_tener_en_cuenta: 🔋 Hasta 50h de batería, 👂 Peso ultraligero
     brand: Razer
@@ -1362,12 +1379,13 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0CSDTTZD3
+        condicion: used
       - ASIN: B09BD6DKL5
         title: >-
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Quartz
         brand: Razer
-        precio: "72,26\_€"
+        precio: "72,18\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -1447,6 +1465,7 @@ productos:
           - name: color_name
             value: Quartz Rosa
         ParentASIN: B0CSDTTZD3
+        condicion: new
       - ASIN: B09QFYYBWD
         title: >-
           Razer Barracuda Pro - Auriculares inalámbricos para juegos con ANC híbrido (Amplificador Audio Acromático THX,
@@ -1531,6 +1550,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0CSDTTZD3
+        condicion: new
       - ASIN: B09X5HTYZR
         title: >-
           Razer Barracuda X - Auriculares Inalámbricos Multiplataforma para Juegos y Móviles, SmartSwitch Dual Wireless,
@@ -1617,6 +1637,7 @@ productos:
           - name: color_name
             value: Quartz Rosa
         ParentASIN: B0CSDTTZD3
+        condicion: new
       - ASIN: B0B5LNYFZF
         title: >-
           Razer Barracuda - Auriculares Inalámbricos para Móvil y Juegos Multiplataparama (Modos Inalámbricos Dobles
@@ -1675,14 +1696,15 @@ productos:
           - name: color_name
             value: Mercury Blanco
         ParentASIN: B0CSDTTZD3
+        condicion: new
       - ASIN: B0BDRLCLWY
         title: >-
           Razer Barracuda - Auriculares Inalámbricos para Móvil y Juegos Multiplataparama (Modos Inalámbricos Dobles
           SmartSwitch, Micrófonos con Cancelación de Ruido, TriForce Driver 50mm) Quartz Rosa
         brand: Razer
-        precio: "131,37\_€"
+        precio: "126,99\_€"
         precioOriginal: "189,99\_€"
-        disponibilidad: Envío en 2 a 3 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41FLu0+tbIL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1733,6 +1755,7 @@ productos:
           - name: color_name
             value: Quartz Rosa
         ParentASIN: B0CSDTTZD3
+        condicion: new
       - ASIN: B09X5FSQDN
         title: Razer Barracuda X (2022) - Mercury White
         brand: Razer
@@ -1794,6 +1817,7 @@ productos:
           - name: color_name
             value: Mercury Blanco
         ParentASIN: B0CSDTTZD3
+        condicion: new
     ParentASIN: B0CSDTTZD3
     variationAttributes:
       - name: style_name
@@ -1803,6 +1827,7 @@ productos:
     nombreCompleto: >-
       Razer Barracuda X - Auriculares Inalámbricos Multiplataforma para Juegos y Móviles, SmartSwitch Dual Wireless,
       Diseño Ergonómico de 250 g, TriForce 40mm, Micrófono Cardioide, Negro
+    condicion: new
   - ASIN: B09B836TTQ
     a_tener_en_cuenta: 🔋 Buena autonomía, 💬 Micrófono abatible
     brand: Corsair
@@ -1915,6 +1940,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0DT4B3L8T
+        condicion: new
       - ASIN: B09TTMBTY5
         title: >-
           Corsair HS80 RGB WIRELESS Auriculares Inalámbricos para Juegos Multiplataforma RGB - Dolby Atmos - Micrófono
@@ -1974,6 +2000,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DT4B3L8T
+        condicion: new
       - ASIN: B0D5Z1XRK3
         title: >-
           Corsair HS80 MAX Wireless Auriculares para Juegos Multiplataforma con Bluetooth – Dolby Atmos – Micrófono de
@@ -2036,6 +2063,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DT4B3L8T
+        condicion: new
       - ASIN: B09YHQM2PS
         title: >-
           Corsair HS80 RGB USB Auriculares premium para juegos con sonido envolvente 7.1 (Micrófono omnidireccional,
@@ -2078,6 +2106,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DT4B3L8T
+        condicion: new
       - ASIN: B0D5Z1C5TB
         title: >-
           Corsair HS80 MAX Wireless Auriculares para Juegos Multiplataforma con Bluetooth – Dolby Atmos – Micrófono de
@@ -2140,6 +2169,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0DT4B3L8T
+        condicion: new
     ParentASIN: B0DT4B3L8T
     variationAttributes:
       - name: style_name
@@ -2149,6 +2179,7 @@ productos:
     nombreCompleto: >-
       Corsair HS80 RGB WIRELESS Auriculares Inalámbricos para Juegos Multiplataforma RGB - Dolby Atmos - Micrófono
       Omnidireccional - Compatible con iCUE - PC, Mac, PS5, PS4 - Carbono
+    condicion: new
   - ASIN: B07TLX61W7
     a_tener_en_cuenta: ⚙️ Configuración avanzada, 💪 Construcción premium
     brand: Logitech G
@@ -2230,6 +2261,7 @@ productos:
     nombreCompleto: >-
       Logitech G PRO X Auriculares Gaming con Cable y Micrófono con Blue VO!CE, DTS Headphone:X 7.1, Controladores PRO-G
       50mm, Sonido Surround 7.1 para Esports, para PC/PS/Xbox/Nintendo Switch - Negro
+    condicion: used
   - ASIN: B0D1KBNWHF
     a_tener_en_cuenta: 📱 App SteelSeries GG, 🎮 Compatible con todo
     brand: SteelSeries
@@ -2407,6 +2439,7 @@ productos:
           - name: size_name
             value: PlayStation
         ParentASIN: B0DMFKMGBV
+        condicion: new
       - ASIN: B0D1KCF7L2
         title: >-
           SteelSeries Arctis Nova 5P Cascos PS5 Inalámbricos - PS5, PC, Switch 2, móvil - Controladores magnéticos de
@@ -2490,6 +2523,7 @@ productos:
           - name: size_name
             value: PlayStation
         ParentASIN: B0DMFKMGBV
+        condicion: new
       - ASIN: B0D1KD9NG8
         title: >-
           SteelSeries Arctis Nova 5X Cascos Xbox Inalámbricos - Xbox, PC, Switch 2, móvil - Controladores magnéticos de
@@ -2576,6 +2610,7 @@ productos:
           - name: size_name
             value: Xbox
         ParentASIN: B0DMFKMGBV
+        condicion: new
       - ASIN: B0D78D88Y8
         title: >-
           SteelSeries Arctis Nova 5 Blanco Cascos gaming inalámbricos PC, PS5, Switch 2, móvil - Controladores
@@ -2653,6 +2688,7 @@ productos:
           - name: size_name
             value: PC, Switch, Mobile
         ParentASIN: B0DMFKMGBV
+        condicion: new
       - ASIN: B0D78DB44V
         title: >-
           SteelSeries Arctis Nova 5X Blanco Cascos Xbox Inalámbricos - Xbox, PC, Switch 2, móvil - Controladores
@@ -2730,6 +2766,7 @@ productos:
           - name: size_name
             value: Xbox
         ParentASIN: B0DMFKMGBV
+        condicion: new
     ParentASIN: B0DMFKMGBV
     variationAttributes:
       - name: style_name
@@ -2739,6 +2776,7 @@ productos:
     nombreCompleto: >-
       SteelSeries Arctis Nova 5 Cascos gaming inalámbricos PC, PS5, Switch 2, móvil - Controladores magnéticos de
       neodimio - Más de 100 preajustes de audio - Batería de 60h - 2,4 GHz o BT - Micro Gen2.X
+    condicion: new
   - ASIN: B07MTXLFXV
     a_tener_en_cuenta: 🎤 Micrófono plegable, 🧩 Buen rendimiento por el precio
     brand: Logitech G
@@ -2855,6 +2893,7 @@ productos:
           - name: pattern_name
             value: Auriculares + Ratón
         ParentASIN: B0FPX297T7
+        condicion: new
     ParentASIN: B0FPX297T7
     variationAttributes:
       - name: style_name
@@ -2862,6 +2901,7 @@ productos:
     nombreCompleto: >-
       Logitech G432 Auriculares Gaming con Cable, Sonido 7.1 Surround DTS:X 2.0, Transductores 50mm USB y Jack Audio
       3.5mm, Micrófono Volteable, Peso Ligero, PC/Mac/Xbox One/PS4/Switch- Azul/Negro
+    condicion: new
   - ASIN: B07Y2MJRW6
     a_tener_en_cuenta: 🎤 Mic. abatible, 🖥️ Compatible con PC y consolas
     brand: Corsair
@@ -2999,6 +3039,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0F99JRMR4
+        condicion: new
     ParentASIN: B0F99JRMR4
     variationAttributes:
       - name: color_name
@@ -3006,6 +3047,7 @@ productos:
     nombreCompleto: >-
       Corsair VOID RGB ELITE Auriculares Inalámbricos para Juegos - Sonido Envolvente 7.1 - Micrófono Omnidireccional -
       Almohadillas de Malla de Microfibra - Compatible iCUE - PC, Mac, PS5, PS4 - Carbono
+    condicion: new
   - ASIN: B0C3BV19Q3
     a_tener_en_cuenta: 💬 Mic. claro, 🎚️ Incluye DAC USB
     brand: HyperX
@@ -3104,6 +3146,7 @@ productos:
           - name: configuration
             value: Cloud II
         ParentASIN: B0F6CRD2YL
+        condicion: new
       - ASIN: B08NTYB4M7
         title: >-
           HyperX Cloud II Wireless – Auriculares inalámbricos para PC, PS4, PS5*, Nintendo Switch, batería duradera de
@@ -3167,6 +3210,7 @@ productos:
           - name: configuration
             value: Cloud II
         ParentASIN: B0F6CRD2YL
+        condicion: new
       - ASIN: B0C3BSZ56D
         title: >-
           HyperX Cloud III wired Auriculares para Juegos con Cable, PC, PS5, Xbox Series X S, Controladores de 53 mm en
@@ -3219,6 +3263,7 @@ productos:
           - name: configuration
             value: Cloud III
         ParentASIN: B0F6CRD2YL
+        condicion: new
       - ASIN: B00SAYCVTQ
         title: HyperX Cloud II – Cascos de Gaming para PC/PS4/Mac, color gris
         brand: HyperX
@@ -3248,6 +3293,7 @@ productos:
           - name: configuration
             value: Cloud II
         ParentASIN: B0F6CRD2YL
+        condicion: new
     ParentASIN: B0F6CRD2YL
     variationAttributes:
       - name: color_name
@@ -3259,6 +3305,7 @@ productos:
     nombreCompleto: >-
       HyperX Cloud III: auriculares para juegos con cable, PC, PS5, Xbox Series X|S, controladores de 53 mm en ángulo,
       DTS, espuma con memoria, marco resistente, micrófono nítido de 10 mm, USB-C, USB-A
+    condicion: new
   - ASIN: B09YHQRDNR
     a_tener_en_cuenta: 🎤 Micrófono abatible, 🪶 Cómodo muchas horas
     brand: Corsair
@@ -3278,7 +3325,7 @@ productos:
     lo_mejor: 🧊 Diseño ligero, 🔊 Sonido 7.1 con adaptador USB
     nombre: Corsair HS55 SURROUND
     valoracion: 4
-    precio: "66,37\_€"
+    precio: "69,99\_€"
     precioOriginal: "79,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -3354,6 +3401,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0BY1ZQFVB
+        condicion: new
       - ASIN: B0B1QJW8BR
         title: >-
           Corsair HS35 STEREO Auriculares Multiplataforma Ligeros con Cable para Juegos - Micrófono Desmontable -
@@ -3387,6 +3435,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0BY1ZQFVB
+        condicion: new
       - ASIN: B0BVL1RP6F
         title: >-
           Corsair HS55 WIRELESS Auriculares Inalámbricos Ligeros para Juegos - Sonido Envolvente Dolby 7.1 - Micrófono
@@ -3445,6 +3494,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0BY1ZQFVB
+        condicion: new
     ParentASIN: B0BY1ZQFVB
     variationAttributes:
       - name: style_name
@@ -3454,4 +3504,5 @@ productos:
     nombreCompleto: >-
       Corsair HS55 SURROUND Auriculares Multiplataforma Ligeros con Cable para Juegos - Sonido Envolvente Dolby 7.1 -
       Compatible con iCUE - PC, Mac, PS5, PS4, Xbox, Nintendo Switch, Móvil - Blanco
+    condicion: new
 actualizacion: '2025-09-11'

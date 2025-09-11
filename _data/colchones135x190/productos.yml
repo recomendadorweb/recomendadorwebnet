@@ -147,6 +147,7 @@ productos:
           - name: size_name
             value: 120x190 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C3GLS
         title: >-
           Colchón viscoelástico 160x190 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -215,6 +216,7 @@ productos:
           - name: size_name
             value: 160x190 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2BJMDT
         title: >-
           Colchón viscoelástico 180x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -275,6 +277,7 @@ productos:
           - name: size_name
             value: 180x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C1181
         title: >-
           Colchón viscoelástico 140x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -343,6 +346,7 @@ productos:
           - name: size_name
             value: 140x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C1YW8
         title: >-
           Colchón viscoelástico 200x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -414,6 +418,7 @@ productos:
           - name: size_name
             value: 200x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2BN5LQ
         title: >-
           Colchón viscoelástico 160x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -474,6 +479,7 @@ productos:
           - name: size_name
             value: 160x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C3RGJ
         title: >-
           Colchón viscoelástico 150x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -541,6 +547,7 @@ productos:
           - name: size_name
             value: 150x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C466Y
         title: >-
           Colchón viscoelástico 90x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -608,6 +615,7 @@ productos:
           - name: size_name
             value: 90x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2BX9BS
         title: >-
           Colchón viscoelástico 90x190 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -676,6 +684,7 @@ productos:
           - name: size_name
             value: 90x190 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
     ParentASIN: B07D3D8SZW
     variationAttributes:
       - name: size_name
@@ -683,6 +692,7 @@ productos:
     nombreCompleto: >-
       Simpur Colchón visco 135x190 cm Dream Repair Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
       Media/Alta - 13 Zonas de Confort y Soporte Ergonómico - Multicapa - Alta Durabilidad
+    condicion: new
   - ASIN: B0B9BXQZ6D
     a_tener_en_cuenta: Capa ViscoCare que alinea la columna
     brand: Cecotec
@@ -793,12 +803,13 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B57GKTC5
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 90x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
           FoamVital, Doble Cara Dual System para Invierno y Verano
         brand: Cecotec
-        precio: "94,90\_€"
+        precio: "99,95\_€"
         precioOriginal: "109,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
@@ -842,6 +853,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B57KJF5F
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 150x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -894,6 +906,7 @@ productos:
           - name: color_name
             value: White
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B57J6FFY
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 90x190. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -939,6 +952,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B57HY3KJ
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 135x190. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -991,6 +1005,7 @@ productos:
           - name: color_name
             value: White
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B6P3SD49
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 160x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -1038,6 +1053,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B6P4CQ26
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 160x190. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
@@ -1085,6 +1101,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B6P3S4MB
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 180x190. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
@@ -1132,10 +1149,12 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
     ParentASIN: B0CS9KRNNK
     nombreCompleto: >-
       Cecotec Colchón Viscoelástico Flow ViscoCare 1900 135x190cm.Multicapa, Altura 21 cm, Núcleo FoamTech, Firmeza
       Alta, Capa Viscoelástica ViscoCare, Tejido PureCare, Doble Cara AllPerfect
+    condicion: new
   - ASIN: B0C85VT1XF
     a_tener_en_cuenta: Viscoelástico con tejido AirFlow
     brand: T-ORMU
@@ -1274,6 +1293,7 @@ productos:
           - name: item_display_width
             value: 200.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85S4MGX
         title: >-
           T-ORMU COLCHONES 150X180 VISCOELASTICOS Premium Firme – Colchón 150X180 Viscoelástico Firmeza Alta ± 29 CM
@@ -1339,6 +1359,7 @@ productos:
           - name: item_display_width
             value: 150.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85TQG6H
         title: >-
           T-ORMU COLCHONES 105X200 VISCOELASTICOS Premium Firme – Colchón 105X200 Viscoelástico Firmeza Alta ± 29 CM
@@ -1404,6 +1425,7 @@ productos:
           - name: item_display_width
             value: 105.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85SNVQK
         title: >-
           T-ORMU COLCHONES 120X190 VISCOELASTICOS Premium Firme – Colchón 120X190 Viscoelástico Firmeza Alta ± 29 CM
@@ -1469,6 +1491,7 @@ productos:
           - name: item_display_width
             value: 120.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85S8NVT
         title: >-
           T-ORMU COLCHONES 120X200 VISCOELASTICOS Premium Firme – Colchón 120X200 Viscoelástico Firmeza Alta ± 29 CM
@@ -1534,6 +1557,7 @@ productos:
           - name: item_display_width
             value: 120.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85SNQJD
         title: >-
           T-ORMU COLCHONES 200X180 VISCOELASTICOS Premium Firme – Colchón 200X180 Viscoelástico Firmeza Alta ± 29 CM
@@ -1599,6 +1623,7 @@ productos:
           - name: item_display_width
             value: 200.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85SN8CD
         title: >-
           T-ORMU COLCHONES 180X200 VISCOELASTICOS Premium Firme – Colchón 180X200 Viscoelástico Firmeza Alta ± 29 CM
@@ -1664,6 +1689,7 @@ productos:
           - name: item_display_width
             value: 180.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85SV3XL
         title: >-
           T-ORMU COLCHONES 105X190 VISCOELASTICOS Premium Firme – Colchón 105X190 Viscoelástico Firmeza Alta ± 29 CM
@@ -1729,6 +1755,7 @@ productos:
           - name: item_display_width
             value: 105.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85S4Q9D
         title: >-
           T-ORMU COLCHONES 80X180 VISCOELASTICOS Premium Firme – Colchón 80X180 Viscoelástico Firmeza Alta ± 29 CM
@@ -1794,6 +1821,7 @@ productos:
           - name: item_display_width
             value: 80.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
       - ASIN: B0C85S27H2
         title: >-
           T-ORMU COLCHONES 75X190 VISCOELASTICOS Premium – COLCHÓN 75X190 Firmeza Media Alta + 29 CM Altura – Colchon
@@ -1856,10 +1884,12 @@ productos:
           - name: item_display_width
             value: 75.0 Centímetros
         ParentASIN: B0C8VZHLZF
+        condicion: new
     ParentASIN: B0C8VZHLZF
     nombreCompleto: >-
       T-ORMU COLCHONES 135X190 VISCOELASTICOS Premium Firme – Colchón 135X190 Viscoelástico Firmeza Alta ± 29 CM Altura
       – Matrimonio – Traspirable Antialérgico Confortable Ergonómico Oeko-Tex
+    condicion: new
   - ASIN: B016AFQAUM
     a_tener_en_cuenta: Viscoelástico
     brand: Dormio
@@ -1998,6 +2028,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQAB6
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 90 x 200 Altura 21 cm.
         brand: Dormio
@@ -2064,6 +2095,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQAO8
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 150 x 190 Altura 21 cm.
         brand: Dormio
@@ -2130,6 +2162,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQFXE
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 150 x 190 Altura 24 cm.
         brand: Dormio
@@ -2188,6 +2221,7 @@ productos:
           - name: style_name
             value: 24 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQFXO
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 90 x 190 Altura 24 cm.
         brand: Dormio
@@ -2246,6 +2280,7 @@ productos:
           - name: style_name
             value: 24 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQG1K
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 105 x 200 Altura 21 cm.
         brand: Dormio
@@ -2312,6 +2347,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQAD4
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 90 x 190 Altura 21 cm.
         brand: Dormio
@@ -2378,6 +2414,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQFWA
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 150 x 200 Altura 21 cm.
         brand: Dormio
@@ -2444,6 +2481,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQFY8
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 135 x 190 Altura 24 cm.
         brand: Dormio
@@ -2502,6 +2540,7 @@ productos:
           - name: style_name
             value: 24 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
     ParentASIN: B0CQTBKWXY
     variationAttributes:
       - name: size_name
@@ -2509,6 +2548,7 @@ productos:
       - name: style_name
         value: 21 cm
     nombreCompleto: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 135 x 190 Altura 21 cm.
+    condicion: new
   - ASIN: B0CNVZMDKC
     a_tener_en_cuenta: Viscoelástica MemoryVex + núcleo Flexicell
     brand: NATURELITS
@@ -2624,6 +2664,7 @@ productos:
           - name: style_name
             value: Espuma Compacta
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVY1Q7L
         title: >-
           NATURELITS Colchón MemoryVex 180x200 Visco Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
@@ -2677,6 +2718,7 @@ productos:
           - name: style_name
             value: Espuma Compacta
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVY3LHT
         title: >-
           NATURELITS Colchón MemoryVex 160x190 Muelles Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
@@ -2730,6 +2772,7 @@ productos:
           - name: style_name
             value: Hibrido Muelles
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVYGWL6
         title: >-
           NATURELITS Colchón 150x190 Reversible de Matrimonio. Alto Confort. Hipoalergénico, Antiácaros y Transpirable.
@@ -2783,6 +2826,7 @@ productos:
           - name: style_name
             value: Espuma Compacta
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVXLTTL
         title: >-
           NATURELITS Colchón MemoryVex 160x190 Visco Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
@@ -2836,6 +2880,7 @@ productos:
           - name: style_name
             value: Espuma Compacta
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVY3LKB
         title: >-
           NATURELITS Colchón MemoryVex 90x190 Visco Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
@@ -2889,6 +2934,7 @@ productos:
           - name: style_name
             value: Espuma Compacta
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVYCWM7
         title: >-
           NATURELITS Colchón MemoryVex 140x200 Visco Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
@@ -2942,6 +2988,7 @@ productos:
           - name: style_name
             value: Espuma Compacta
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVYF73T
         title: >-
           NATURELITS Colchón MemoryVex 140x190 Visco Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
@@ -2995,6 +3042,7 @@ productos:
           - name: style_name
             value: Espuma Compacta
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVYKZL1
         title: >-
           NATURELITS Colchones 135x190 Dual Invierno/Verano Enrollado. Hipoalergénico, Antiácaros y Transpirable. Núcleo
@@ -3048,6 +3096,7 @@ productos:
           - name: style_name
             value: Hibrido Muelles
         ParentASIN: B0CNVWF6HV
+        condicion: new
       - ASIN: B0CNVYMK63
         title: >-
           NATURELITS Colchón MemoryVex 180x190 Muelles Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
@@ -3101,10 +3150,12 @@ productos:
           - name: style_name
             value: Hibrido Muelles
         ParentASIN: B0CNVWF6HV
+        condicion: new
     ParentASIN: B0CNVWF6HV
     nombreCompleto: >-
       NATURELITS Colchón MemoryVex 135x190 Visco Reversible Invierno/Verano Individual. Antiácaros y Transpirable.
       Núcleo Flexicell. Firmeza Media. Modelo Serene Altura 30 cm
+    condicion: new
   - ASIN: B0CT41TYRF
     a_tener_en_cuenta: Viscoelástico
     brand: LUXIABED
@@ -3219,6 +3270,7 @@ productos:
           - name: style_name
             value: Altura 14 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3N7NJY
         title: >-
           LUXIABED Colchon 140x200 Muelles Ensacados Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3272,6 +3324,7 @@ productos:
           - name: style_name
             value: Muelles Altura 26 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3WFP16
         title: >-
           LUXIABED Colchon 135x190 Muelles Ensacados Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3325,6 +3378,7 @@ productos:
           - name: style_name
             value: Muelles Altura 26 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3YV332
         title: >-
           LUXIABED Colchon 90x190 Muelles Ensacados Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3378,6 +3432,7 @@ productos:
           - name: style_name
             value: Altura 30 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3YDMJR
         title: >-
           LUXIABED Colchon 140x200 Viscoelastica Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3431,6 +3486,7 @@ productos:
           - name: style_name
             value: Altura 14 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3YTNJJ
         title: >-
           LUXIABED Colchon 150x190 Muelles Ensacados Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3484,6 +3540,7 @@ productos:
           - name: style_name
             value: Muelles Altura 26 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3MTYFW
         title: >-
           LUXIABED Colchon 180x190 Viscoelastica Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3537,6 +3594,7 @@ productos:
           - name: style_name
             value: Altura 26 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3Y4DKX
         title: >-
           LUXIABED Colchon 140x190 Viscoelastica Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3590,6 +3648,7 @@ productos:
           - name: style_name
             value: Altura 26 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3YWBBK
         title: >-
           LUXIABED Colchon 150x200 Muelles Ensacados Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3643,6 +3702,7 @@ productos:
           - name: style_name
             value: Muelles Altura 26 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
       - ASIN: B0CT3YFXSH
         title: >-
           LUXIABED Colchon 180x200 Viscoelastica Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens.
@@ -3696,10 +3756,12 @@ productos:
           - name: style_name
             value: Altura 26 cm
         ParentASIN: B0CT4FFC21
+        condicion: new
     ParentASIN: B0CT4FFC21
     nombreCompleto: >-
       LUXIABED Colchon 135x190 Viscoelastica Dual: Caras Diferenciadas. Confort + Firmeza Media MemorySens. Higiénico y
       Transpirable. Individual Color Gris. Modelo Fantasy Altura 20 cm
+    condicion: new
   - ASIN: B0CJXQ7M8K
     a_tener_en_cuenta: Viscoelástico
     brand: Todocama
@@ -3822,6 +3884,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXQN7B5
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -3880,6 +3943,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXR4F2V
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -3938,6 +4002,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXPY4CJ
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -3996,6 +4061,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXR14ZX
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -4054,6 +4120,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXQV517
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -4112,6 +4179,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXR732P
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -4170,6 +4238,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXQ75BQ
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -4232,6 +4301,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
       - ASIN: B0CJXQ6M2R
         title: >-
           Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm,
@@ -4290,6 +4360,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CJXYBYX4
+        condicion: new
     ParentASIN: B0CJXYBYX4
     variationAttributes:
       - name: size_name
@@ -4299,6 +4370,7 @@ productos:
     nombreCompleto: >-
       Todocama - Colchón viscoelástico, multicapa Airsoft, tejido Aloe Vera transpirable, altura ± 21 cm, tratamiento
       antiácaros y antibacterias. 135x190 cm
+    condicion: new
   - ASIN: B0BXYZPJ1M
     a_tener_en_cuenta: Viscoelástico
     brand: beloBed
@@ -4417,6 +4489,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0BXZ2FMND
         title: >-
           beloBed Colchon 140x190 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4454,6 +4527,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0BXZ85SBX
         title: >-
           beloBed Colchon 80x200 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4509,6 +4583,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0C7QXFNKL
         title: >-
           beloBed Colchon 120x200 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4564,6 +4639,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0BXZ6YXC1
         title: >-
           beloBed Colchon 90x200 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4619,6 +4695,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0BXYZ5L57
         title: >-
           beloBed Colchon 80x190 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4674,6 +4751,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0BXZCFZJ3
         title: >-
           beloBed Colchon 150x200 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4729,6 +4807,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0C7R173DF
         title: >-
           beloBed Colchon 160x200 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4784,6 +4863,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
       - ASIN: B0BXZM6RS8
         title: >-
           beloBed Colchon 150x190 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
@@ -4839,6 +4919,7 @@ productos:
           - name: style_name
             value: Altura 18 cm
         ParentASIN: B0F8P8RMFV
+        condicion: new
     ParentASIN: B0F8P8RMFV
     variationAttributes:
       - name: size_name
@@ -4848,6 +4929,7 @@ productos:
     nombreCompleto: >-
       beloBed Colchon 135x190 cm Altura 18 cm. con Viscolastica Alto Confort. Reversible Doble Cara. Firmeza Media.
       Multicapa Transpirable. Nucleo de Espuma HR ComfortFusion
+    condicion: new
   - ASIN: B07RN6RZMN
     a_tener_en_cuenta: Muelles ensacados + Viscoelástico HD
     brand: Simpur Low Cost
@@ -4982,6 +5064,7 @@ productos:
           - name: size_name
             value: 150x190 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP7V58G
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5042,6 +5125,7 @@ productos:
           - name: size_name
             value: 160x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP76PR2
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5102,6 +5186,7 @@ productos:
           - name: size_name
             value: 150x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP6T42V
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5162,6 +5247,7 @@ productos:
           - name: size_name
             value: 180x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RN6ZXN1
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5222,6 +5308,7 @@ productos:
           - name: size_name
             value: 140x190 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP8MX69
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5282,6 +5369,7 @@ productos:
           - name: size_name
             value: 140x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP81T79
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5342,6 +5430,7 @@ productos:
           - name: size_name
             value: 90x190 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP74873
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5402,6 +5491,7 @@ productos:
           - name: size_name
             value: 135x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RN5R5GG
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -5462,6 +5552,7 @@ productos:
           - name: size_name
             value: 90x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
     ParentASIN: B0B1DMLYH6
     variationAttributes:
       - name: size_name
@@ -5469,6 +5560,7 @@ productos:
     nombreCompleto: >-
       Simpur, Colchón 135x190 cm, Altura 30cm, Muelles Ensacados Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
       Independencia de Lechos, Ortopédico, Descanso Recomendado para Airbnb Booking
+    condicion: new
   - ASIN: B0C4FVR8TL
     a_tener_en_cuenta: Viscoelástica con gel + espuma HD
     brand: MICAMAMELLAMA
@@ -5573,6 +5665,7 @@ productos:
           - name: size_name
             value: 105 x 190 cm
         ParentASIN: B0CMB9RYLK
+        condicion: new
       - ASIN: B0D6GLLRBT
         title: >-
           MICAMAMELLAMA Colchon 90 x 190 Vibe Life Viscoelastico | Alta Densidad | Confort y Adaptabilidad | Firmeza
@@ -5613,6 +5706,7 @@ productos:
           - name: size_name
             value: 90 x 190 cm
         ParentASIN: B0CMB9RYLK
+        condicion: new
       - ASIN: B0F8YJ3S6W
         title: >-
           MICAMAMELLAMA Colchón 150x190 Vibe Life Viscoelastico | Alta Densidad | Confort y Adaptabilidad | Firmeza
@@ -5667,6 +5761,7 @@ productos:
           - name: size_name
             value: 150 x 190 cm
         ParentASIN: B0CMB9RYLK
+        condicion: new
     ParentASIN: B0CMB9RYLK
     variationAttributes:
       - name: size_name
@@ -5674,6 +5769,7 @@ productos:
     nombreCompleto: >-
       MICAMAMELLAMA Colchon 135x190 Vibe Life Viscoelastico | Alta Densidad | Confort y Adaptabilidad | Firmeza Media |
       Altura 28cm | Fabricado en España | Hipoalergénico | colchones 135x190
+    condicion: new
   - ASIN: B0D9KKGB4K
     a_tener_en_cuenta: Viscoelástico + Blue Látex
     brand: Naturalex
@@ -5789,6 +5885,7 @@ productos:
           - name: style_name
             value: Altura 30 cm - Espuma
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KHVLVS
         title: >-
           Naturalex - Colchón Premium Privilege 160x200 cm - Altura 30 cm - Espuma Viscoelástica AeraPur HQ & Blue Látex
@@ -5842,6 +5939,7 @@ productos:
           - name: style_name
             value: Altura 30 cm - Espuma
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KJYKKB
         title: >-
           Naturalex - Colchón Premium Privilege 140x200 cm - Altura 25 cm - Espuma Viscoelástica AeraPur HQ & Blue Látex
@@ -5895,6 +5993,7 @@ productos:
           - name: style_name
             value: Altura 24 cm - Espuma
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KHWRVL
         title: >-
           Naturalex - Colchón Muelles 160x200 cm - Altura 30 cm - Privilege - Híbrido Muelles Ensacados y Viscoelástica
@@ -5948,6 +6047,7 @@ productos:
           - name: style_name
             value: Altura 30 cm - Muelles
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KH5758
         title: >-
           Naturalex - Colchón Muelles 140x190 cm - Altura 24 cm - Privilege - Híbrido Muelles Ensacados y Viscoelástica
@@ -6001,6 +6101,7 @@ productos:
           - name: style_name
             value: Altura 24 cm - Muelles
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KHQRRV
         title: >-
           Naturalex - Colchón Muelles 180x200 cm - Altura 24 cm - Privilege - Híbrido Muelles Ensacados y Viscoelástica
@@ -6054,6 +6155,7 @@ productos:
           - name: style_name
             value: Altura 24 cm - Muelles
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KJ98G6
         title: >-
           Naturalex - Colchón Muelles 140x200 cm - Altura 30 cm - Privilege - Híbrido Muelles Ensacados y Viscoelástica
@@ -6107,6 +6209,7 @@ productos:
           - name: style_name
             value: Altura 30 cm - Muelles
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KJZ6DT
         title: >-
           Naturalex - Colchón Premium Privilege 140x190 cm - Altura 30 cm - Espuma Viscoelástica AeraPur HQ & Blue Látex
@@ -6160,6 +6263,7 @@ productos:
           - name: style_name
             value: Altura 30 cm - Espuma
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KK4VL5
         title: >-
           Naturalex - Colchón Premium Privilege 160x200 cm - Altura 25 cm - Espuma Viscoelástica AeraPur HQ & Blue Látex
@@ -6213,6 +6317,7 @@ productos:
           - name: style_name
             value: Altura 24 cm - Espuma
         ParentASIN: B0DT4SJQXV
+        condicion: new
       - ASIN: B0D9KJ38DV
         title: >-
           Naturalex - Colchón Premium Privilege 180x200 cm - Altura 30 cm - Espuma Viscoelástica AeraPur HQ & Blue Látex
@@ -6266,10 +6371,12 @@ productos:
           - name: style_name
             value: Altura 30 cm - Espuma
         ParentASIN: B0DT4SJQXV
+        condicion: new
     ParentASIN: B0DT4SJQXV
     nombreCompleto: >-
       Naturalex - Colchón Premium Privilege 135x190 cm - Altura 30 cm - Espuma Viscoelástica AeraPur HQ & Blue Látex - 7
       Zonas de Confort, Óptima Ventilación, Adaptable - Certificado Oeko-Tex
+    condicion: new
   - ASIN: B016AFQVXS
     a_tener_en_cuenta: Núcleo Eliocel + Viscoelástico
     brand: Dormio
@@ -6399,6 +6506,7 @@ productos:
           - name: style_name
             value: Colchón de Eliocel
         ParentASIN: B01NA79JSM
+        condicion: new
       - ASIN: B016AFQVA6
         title: >-
           Dormio Ortopédico - Colchón Viscoelástico adaptable, Multiacolchado, Antideformaciones, Medida 150x190,
@@ -6458,6 +6566,7 @@ productos:
           - name: style_name
             value: Colchón de Eliocel
         ParentASIN: B01NA79JSM
+        condicion: new
       - ASIN: B016AFQQ06
         title: >-
           Dormio Ortopédico - Colchón Viscoelástico adaptable, Multiacolchado, Antideformaciones, Medida 105x190,
@@ -6520,6 +6629,7 @@ productos:
           - name: style_name
             value: Colchón de Eliocel
         ParentASIN: B01NA79JSM
+        condicion: new
       - ASIN: B016AFQVBU
         title: >-
           Dormio Ortopédico - Colchón Viscoelástico adaptable, Multiacolchado, Antideformaciones, Medida 90x200,
@@ -6582,6 +6692,7 @@ productos:
           - name: style_name
             value: Colchón de Eliocel
         ParentASIN: B01NA79JSM
+        condicion: new
       - ASIN: B016AFQVCY
         title: >-
           Dormio Ortopédico - Colchón Viscoelástico adaptable, Multiacolchado, Antideformaciones, Medida 105x200,
@@ -6641,6 +6752,7 @@ productos:
           - name: style_name
             value: Colchón de Eliocel
         ParentASIN: B01NA79JSM
+        condicion: new
       - ASIN: B016AFQVH4
         title: >-
           Dormio Ortopédico - Colchón Viscoelástico adaptable, Multiacolchado, Antideformaciones, Medida 150x200,
@@ -6700,6 +6812,7 @@ productos:
           - name: style_name
             value: Colchón de Eliocel
         ParentASIN: B01NA79JSM
+        condicion: new
       - ASIN: B016AFQVGA
         title: >-
           Dormio Ortopédico - Colchón Viscoelástico adaptable, Multiacolchado, Antideformaciones, Medida 135x200,
@@ -6759,6 +6872,7 @@ productos:
           - name: style_name
             value: Colchón de Eliocel
         ParentASIN: B01NA79JSM
+        condicion: new
     ParentASIN: B01NA79JSM
     variationAttributes:
       - name: size_name
@@ -6768,6 +6882,7 @@ productos:
     nombreCompleto: >-
       Dormio Ortopédico - Colchón Viscoelástico adaptable, Multiacolchado, Antideformaciones, Medida 135x190,
       Tratamiento antiácaros y antibacterias. Fabricado en España.
+    condicion: new
   - ASIN: B08BXPMBNV
     a_tener_en_cuenta: Espuma Viscoelástica con gel + carbón de bambú
     brand: LUCID
@@ -6880,6 +6995,7 @@ productos:
           - name: size_name
             value: 160 x 200 cm
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B0864KK3ML
         title: >-
           LUCID 8 Inch Memory Foam Plush Feel – Gel Infusion – Hypoallergenic Bamboo Charcoal – Breathable-Cover
@@ -6916,6 +7032,7 @@ productos:
           - name: size_name
             value: US Twin
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B08BXNVXN7
         title: >-
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -6969,6 +7086,7 @@ productos:
           - name: size_name
             value: 90 x 200 cm
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B082WNK5XD
         title: >-
           LUCID 5 pulgadas Colchón de espuma viscoelástica de perfil bajo, infusión de gel refrescante, hipoalergénico,
@@ -7026,6 +7144,7 @@ productos:
           - name: size_name
             value: Queen
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B08BXNWBPR
         title: >-
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -7079,6 +7198,7 @@ productos:
           - name: size_name
             value: 140 x 200 cm
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B08BXK8J5D
         title: >-
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -7132,6 +7252,7 @@ productos:
           - name: size_name
             value: 120 x 200 cm
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B08BXPFCRL
         title: >-
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -7185,6 +7306,7 @@ productos:
           - name: size_name
             value: 100 x 200 cm
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B08BXK962R
         title: >-
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -7238,6 +7360,7 @@ productos:
           - name: size_name
             value: 120 x 190 cm
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
       - ASIN: B08BXNTGLR
         title: >-
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -7291,10 +7414,12 @@ productos:
           - name: size_name
             value: 80 x 190 cm
         ParentASIN: B0D9FQ4BKJ
+        condicion: new
     ParentASIN: B0D9FQ4BKJ
     nombreCompleto: >-
       LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
       135x190 cm
+    condicion: new
   - ASIN: B0883KR5BN
     a_tener_en_cuenta: Espuma Viscoelástica + grafeno
     brand: Imperial Confort
@@ -7382,12 +7507,13 @@ productos:
           - name: size_name
             value: 160x200
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883KN9C6
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT Neutralizer,
           Transpirable y doble cara (invierno/verano), Blanco - Gris, Grosor 30 cm - 150x190
         brand: Imperial Confort
-        precio: "365,75\_€"
+        precio: "365,83\_€"
         precioOriginal: "380,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31HIVwXAOLL._SL500_.jpg
@@ -7421,6 +7547,7 @@ productos:
           - name: size_name
             value: 150x190
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883KW1QP
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
@@ -7460,6 +7587,7 @@ productos:
           - name: size_name
             value: 135x200
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883KNXVZ
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
@@ -7499,6 +7627,7 @@ productos:
           - name: size_name
             value: 160x190
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883K4XRJ
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
@@ -7538,6 +7667,7 @@ productos:
           - name: size_name
             value: 105x190
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883KLLJR
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
@@ -7575,6 +7705,7 @@ productos:
           - name: size_name
             value: 140x190
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883KNXWL
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
@@ -7613,6 +7744,7 @@ productos:
           - name: size_name
             value: 150x200
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883JTZLH
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
@@ -7652,6 +7784,7 @@ productos:
           - name: size_name
             value: 105x200
         ParentASIN: B088KN931X
+        condicion: new
       - ASIN: B0883KLH5H
         title: >-
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
@@ -7691,6 +7824,7 @@ productos:
           - name: size_name
             value: 90x200
         ParentASIN: B088KN931X
+        condicion: new
     ParentASIN: B088KN931X
     variationAttributes:
       - name: size_name
@@ -7698,6 +7832,7 @@ productos:
     nombreCompleto: >-
       Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
       Transpirable y doble cara (invierno/verano) - Grosor 30 cm - 135x190
+    condicion: new
   - ASIN: B0CXDX9D2G
     a_tener_en_cuenta: Espuma HR + Viscoelástico
     brand: amuéblate online
@@ -7824,6 +7959,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDV289Y
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -7883,6 +8019,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDTK8H8
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -7942,6 +8079,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDVK6MJ
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -8001,6 +8139,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDVRW2J
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -8060,6 +8199,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDVJSR8
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -8119,6 +8259,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDVR6ZL
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -8178,6 +8319,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDVXFHM
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -8237,6 +8379,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDV53VG
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -8296,6 +8439,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
       - ASIN: B0CXDV3C86
         title: >-
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
@@ -8355,10 +8499,12 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0CXF2RWSP
+        condicion: new
     ParentASIN: B0CXF2RWSP
     nombreCompleto: >-
       amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm, Antiácaros,
       Antibacerias e Hipoalergénico, 135x190
+    condicion: new
   - ASIN: B0CL4YL9KF
     a_tener_en_cuenta: Visco acu-point + núcleo Gravitas Core
     brand: ZZ DON DESCANSO
@@ -8498,6 +8644,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W65LKSH
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, 80x190 cm, Firmeza media-alta, Gris
         brand: ZZ DON DESCANSO
@@ -8565,6 +8712,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66MWNN
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, 90x200 cm, Firmeza media-alta
         brand: ZZ DON DESCANSO
@@ -8632,6 +8780,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08RZ8ZKMV
         title: >-
           Don Descanso-Colchón Cama Nido Mulhacén 67x180cm. Colchón Viscoelástico con Tejido Aloe Vera Strech y Tejido
@@ -8701,6 +8850,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08RZBFD58
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 105x180 cm
         brand: ZZ DON DESCANSO
@@ -8768,6 +8918,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W65LSF8
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 120x180 cm
         brand: ZZ DON DESCANSO
@@ -8835,6 +8986,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66CK8F
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 105x190 cm
         brand: ZZ DON DESCANSO
@@ -8902,6 +9054,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W65LSDN
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 180x190 cm
         brand: ZZ DON DESCANSO
@@ -8969,6 +9122,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66L4HG
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 160x180 cm
         brand: ZZ DON DESCANSO
@@ -9036,6 +9190,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66L4KS
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 80x180 cm
         brand: ZZ DON DESCANSO
@@ -9103,8 +9258,10 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
     ParentASIN: B0D6NMZ8MN
     nombreCompleto: Don descanso ZZ Colchón Viscoelástico Aloe Vera Mulhacén, Espuma con Memoria, Gris, 135x190 cm
+    condicion: new
   - ASIN: B0BWF11KKH
     a_tener_en_cuenta: Viscoelástico
     brand: Dormio
@@ -9225,6 +9382,7 @@ productos:
           - name: style_name
             value: Eliocel
         ParentASIN: B0DNMZFZZ6
+        condicion: new
       - ASIN: B07FJG4QN6
         title: >-
           Dormio Ergonomic Sport - Colchón Eliocel adaptable, apto cama Nido, Antiácaros, Antideformaciones. Medida
@@ -9282,6 +9440,7 @@ productos:
           - name: style_name
             value: Eliocel
         ParentASIN: B0DNMZFZZ6
+        condicion: new
       - ASIN: B0BWDZNNHN
         title: >-
           Dormio Ergonomic Sport - Colchón Eliocel adaptable, apto cama Nido, Antiácaros, Antideformaciones. Medida
@@ -9316,6 +9475,7 @@ productos:
           - name: style_name
             value: Eliocel
         ParentASIN: B0DNMZFZZ6
+        condicion: new
       - ASIN: B0BWF14ZCF
         title: >-
           Dormio Ergonomic Sport - Colchón Eliocel adaptable, apto cama Nido, Antiácaros, Antideformaciones. Medida
@@ -9374,6 +9534,7 @@ productos:
           - name: style_name
             value: Eliocel
         ParentASIN: B0DNMZFZZ6
+        condicion: new
       - ASIN: B07F97XWGQ
         title: >-
           Dormio Sport Visco - Colchón Viscoelástico Apto cama Nido, Transpirable, Antiácaros. Medida 90 x 190. Altura
@@ -9422,6 +9583,7 @@ productos:
           - name: style_name
             value: Visco
         ParentASIN: B0DNMZFZZ6
+        condicion: new
       - ASIN: B0BWF1JDWF
         title: >-
           Dormio Ergonomic Sport - Colchón Eliocel adaptable, apto cama Nido, Antiácaros, Antideformaciones. Medida
@@ -9477,6 +9639,7 @@ productos:
           - name: style_name
             value: Eliocel
         ParentASIN: B0DNMZFZZ6
+        condicion: new
     ParentASIN: B0DNMZFZZ6
     variationAttributes:
       - name: size_name
@@ -9486,6 +9649,7 @@ productos:
     nombreCompleto: >-
       Dormio Ergonomic Sport - Colchón Eliocel adaptable, apto cama Nido, Antiácaros, Antideformaciones. Medida 135x190.
       Altura 14cm.
+    condicion: new
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
 actualizacion: '2025-09-11'

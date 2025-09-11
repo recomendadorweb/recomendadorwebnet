@@ -21,7 +21,7 @@ productos:
       - Cuerpo de aluminio con acabado premium
     brand: Razer
     ASIN: B08P52KQ8G
-    precio: "151,78\_€"
+    precio: "151,79\_€"
     precioOriginal: "269,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -108,6 +108,7 @@ productos:
           - name: color_name
             value: Interruptor Rojo Linear
         ParentASIN: B0F9Q1MJLF
+        condicion: new
       - ASIN: B089SP45YC
         title: >-
           Razer Huntsman Mini (Interruptor Rojo) - 60% Teclado Compacto para Juegos (Interruptores Óptico-Mecánicos
@@ -170,6 +171,7 @@ productos:
           - name: color_name
             value: Interruptor Rojo Linear
         ParentASIN: B0F9Q1MJLF
+        condicion: new
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
@@ -215,6 +217,7 @@ productos:
           - name: color_name
             value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
+        condicion: new
       - ASIN: B08BZQFTM3
         title: >-
           Razer Huntsman Mini (Interruptor Rojo) - 60% Teclado Compacto para Juegos (Interruptores Óptico-Mecánicos
@@ -271,6 +274,7 @@ productos:
           - name: color_name
             value: Interruptor Rojo Linear
         ParentASIN: B0F9Q1MJLF
+        condicion: new
       - ASIN: B08BZDLVNN
         title: >-
           Razer Huntsman Mini (Interruptor Morado) - 60% Teclado Compacto para Juegos (Interruptores Óptico-Mecánicos
@@ -327,13 +331,14 @@ productos:
           - name: color_name
             value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
+        condicion: new
       - ASIN: B097F14PZJ
         title: >-
           Razer Huntsman V2 (Purple Switch) - Teclado óptico para juegos prácticamente sin latencia (reposa-palmas,
           mandos, 4 teclas multimedia, tapas de teclas Doubleshot PBT) Teclado Español - Negro
         brand: Razer
-        precio: "183,67\_€"
-        precioOriginal: "184,33\_€"
+        precio: "144,93\_€"
+        precioOriginal: "184,86\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31RYiVIxK+L._SL500_.jpg
         imagenWidth: 500
@@ -390,6 +395,7 @@ productos:
           - name: color_name
             value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
+        condicion: used
       - ASIN: B08GM91TCC
         title: >-
           Razer Huntsman Mini (Purple Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores
@@ -448,6 +454,7 @@ productos:
           - name: color_name
             value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
+        condicion: new
       - ASIN: B08P54ZK97
         title: >-
           Razer Huntsman V2 (Interruptor Analógico) - Teclado Óptico para Juegos con Latencia de Entrada Casi Nula
@@ -533,6 +540,7 @@ productos:
           - name: color_name
             value: Interruptor Analog Optical
         ParentASIN: B0F9Q1MJLF
+        condicion: new
       - ASIN: B097F2KHX4
         title: >-
           Razer Huntsman V2 Tenkeyless (Interruptor Morado) - Teclado Óptico para Juegos (Interruptores Ópticos Clicky,
@@ -588,6 +596,7 @@ productos:
           - name: color_name
             value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
+        condicion: new
     ParentASIN: B0F9Q1MJLF
     variationAttributes:
       - name: style_name
@@ -599,6 +608,7 @@ productos:
     nombreCompleto: >-
       Razer Huntsman V2 Analog - Teclado Premium para juegos con interruptores ópticos analógicos (reposamuñecas,
       control giratorio digital, 4 teclas multimedia, Chroma RGB) Teclado Español - Negro
+    condicion: used
   - nombre: Razer BlackWidow V4 X
     lo_mejor: Switches mecánicos Green muy responsivos, RGB por tecla, rueda multifunción, teclas multimedia dedicadas
     a_tener_en_cuenta: No incluye reposamuñecas, pero excelente calidad-precio dentro de gama media-alta
@@ -689,7 +699,7 @@ productos:
           Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
           mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
         brand: Razer
-        precio: "111,94\_€"
+        precio: "111,95\_€"
         precioOriginal: "119,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
@@ -722,6 +732,7 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08G577XZF
         title: >-
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
@@ -765,6 +776,7 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: used
       - ASIN: B08GCS5VKG
         title: >-
           Razer BlackWidow V3 Pro (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
@@ -839,6 +851,7 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08GCSQRZW
         title: >-
           Razer BlackWidow V3 Pro (Interruptor Vierde) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
@@ -898,6 +911,7 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08H5LW86P
         title: >-
           Razer BlackWidow V3 Tenkeyless (Interruptor Amarillo) - Teclado Mecánico Compacto para Juegos (Interruptores
@@ -962,6 +976,7 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08Z8JZMDQ
         title: >-
           Razer BlackWidow V3 Mini HyperSpeed (Interruptor Verde) - Teclado Mecánico Inalámbrico para Juegos 65%
@@ -1022,12 +1037,13 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08Z8JZWHX
         title: >-
           Razer BlackWidow V3 Mini HyperSpeed (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos 65%
           (Interruptores Mecánicos Silenciosos, Bluetooth, Teclas de Pudín Sigiloso) Diseño US| Negro
         brand: Razer
-        precio: "113,28\_€"
+        precio: "113,29\_€"
         precioOriginal: "189,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41aQlimYVRL._SL500_.jpg
@@ -1066,12 +1082,13 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
+        condicion: used
       - ASIN: B08G5BG648
         title: >-
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
           Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño ES | Negro
         brand: Razer
-        precio: "107,78\_€"
+        precio: "107,79\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41nvSdlw2dL._SL500_.jpg
@@ -1130,10 +1147,12 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: used
     ParentASIN: B0DPC8X1VJ
     nombreCompleto: >-
       Razer BlackWidow V4 X, Teclado gaming con Razer Chroma RGB (Switches mecánicos amarillos , 6 teclas macro
       dedicadas de ABS de doble inyección) ES-Layout, Negro
+    condicion: new
   - nombre: Razer Ornata V3 X
     lo_mejor: Membrana silenciosa, diseño fino y cómodo, teclas planas y resistentes al agua, ideal para trabajar y jugar
     a_tener_en_cuenta: Buena opción económica si no necesitas un teclado mecánico
@@ -1261,6 +1280,7 @@ productos:
           - name: style_name
             value: Ornata V3 TKL
         ParentASIN: B0C7HPNK2D
+        condicion: used
     ParentASIN: B0C7HPNK2D
     variationAttributes:
       - name: size_name
@@ -1270,6 +1290,7 @@ productos:
     nombreCompleto: >-
       Razer Ornata V3 X - Teclado para Juegos de Bajo Perfil (Interruptores de Membrana Silenciosos, Teclas Recubiertas
       de rayos UV, Diseño Duradero y Resistente a Derrames) Diseño ES, Negro
+    condicion: new
   - nombre: Razer Apex 3
     lo_mejor: Teclado silencioso con resistencia IP32 al agua, RGB por zonas y controles multimedia dedicados
     a_tener_en_cuenta: Perfecto para setups compartidos o nocturnos; sin iluminación por tecla
@@ -1373,6 +1394,7 @@ productos:
           - name: style_name
             value: QWERTY nórdico
         ParentASIN: B0D4QT9BHJ
+        condicion: new
     ParentASIN: B0D4QT9BHJ
     variationAttributes:
       - name: style_name
@@ -1380,6 +1402,7 @@ productos:
     nombreCompleto: >-
       SteelSeries Apex 3 - Teclado Gaming - Iluminación RGB de 10 zonas - Resistencia al agua IP32 - Reposamuñecas
       magnético superior - Teclado QWERTY Español
+    condicion: new
   - nombre: Mars Gaming MKPRO
     lo_mejor: Switches mecánicos OUTEMU, chasis de aluminio, RGB completo y reposamuñecas desmontable
     a_tener_en_cuenta: Excelente para empezar en mecánicos sin gastar mucho
@@ -1399,7 +1422,7 @@ productos:
       - Formato completo con anti-ghosting
     brand: Mars Gaming
     ASIN: B0F383W18C
-    precio: "43,94\_€"
+    precio: "43,59\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -1487,6 +1510,7 @@ productos:
           - name: style_name
             value: MK320ES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
@@ -1529,6 +1553,7 @@ productos:
           - name: style_name
             value: MKTKLES
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
@@ -1581,6 +1606,7 @@ productos:
           - name: style_name
             value: MKXTKLRES
         ParentASIN: B0DZ752MKH
+        condicion: used
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
@@ -1621,6 +1647,7 @@ productos:
           - name: style_name
             value: MRK0
         ParentASIN: B0DZ752MKH
+        condicion: new
       - ASIN: B00IXZFQHG
         title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
         brand: Mars Gaming
@@ -1666,10 +1693,12 @@ productos:
           - name: style_name
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
+        condicion: new
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
       de Control, Software Avanzado, Multiplataforma, Switch Silent, Español, Negro
+    condicion: new
   - nombre: Logitech G213 Prodigy
     lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado, resistente a líquidos
     a_tener_en_cuenta: Alternativa silenciosa y cómoda si no necesitas mecánico
@@ -1743,6 +1772,7 @@ productos:
     nombreCompleto: >-
       Logitech G213 Prodigy Teclado Gaming con Reposamuñecas, RGB LIGHTSYNC, Teclas Retroiluminadas y Personalizables,
       Resistente a Salpicaduras, Controles Multimedia Dedicados, Disposición QWERTY ES
+    condicion: used
   - nombre: Corsair K55 RGB PRO
     lo_mejor: Teclas macro y multimedia dedicadas, resistencia IP42, RGB por zonas y compatible con iCUE
     a_tener_en_cuenta: Ideal para productividad y MMO si no necesitas switches mecánicos
@@ -1762,7 +1792,7 @@ productos:
       - Compatible con Corsair iCUE
     brand: Corsair
     ASIN: B08YDJ6DKN
-    precio: "64,99\_€"
+    precio: "64,89\_€"
     precioOriginal: "64,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -1825,6 +1855,7 @@ productos:
     nombreCompleto: >-
       Corsair K55 RGB PRO Teclado para Juegos con Teclas de Membrana, Retroiluminación RGB Dinámica, 6 Teclas Macro con
       Integración el Software Elgato, Resistencia al Polvo y los Derrames, QWERTY, Negro
+    condicion: new
   - nombre: Razer BlackWidow V3 TKL
     valoracion: 5
     caracteristicas:
@@ -1909,7 +1940,7 @@ productos:
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
           Teclas ABS Doubleshot, Roller Digital Multi-Fucntion y Tecla Multimedia) Diseño ES | Negro
         brand: Razer
-        precio: "107,78\_€"
+        precio: "107,79\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41nvSdlw2dL._SL500_.jpg
@@ -1968,6 +1999,7 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: used
       - ASIN: B08G577XZF
         title: >-
           Razer BlackWidow V3 (Interruptor Vierde) - Teclado Mecánico para Juegos (Interruptores Mecánicos Clicky,
@@ -2011,12 +2043,13 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: used
       - ASIN: B08CHLZVFP
         title: >-
           Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
           mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
         brand: Razer
-        precio: "111,94\_€"
+        precio: "111,95\_€"
         precioOriginal: "119,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
@@ -2049,6 +2082,7 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08GCS5VKG
         title: >-
           Razer BlackWidow V3 Pro (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
@@ -2123,6 +2157,7 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08H5LW86P
         title: >-
           Razer BlackWidow V3 Tenkeyless (Interruptor Amarillo) - Teclado Mecánico Compacto para Juegos (Interruptores
@@ -2187,6 +2222,7 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08GCSQRZW
         title: >-
           Razer BlackWidow V3 Pro (Interruptor Vierde) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
@@ -2246,6 +2282,7 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08Z8JZMDQ
         title: >-
           Razer BlackWidow V3 Mini HyperSpeed (Interruptor Verde) - Teclado Mecánico Inalámbrico para Juegos 65%
@@ -2306,12 +2343,13 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+        condicion: new
       - ASIN: B08Z8JZWHX
         title: >-
           Razer BlackWidow V3 Mini HyperSpeed (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos 65%
           (Interruptores Mecánicos Silenciosos, Bluetooth, Teclas de Pudín Sigiloso) Diseño US| Negro
         brand: Razer
-        precio: "113,28\_€"
+        precio: "113,29\_€"
         precioOriginal: "189,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41aQlimYVRL._SL500_.jpg
@@ -2350,10 +2388,12 @@ productos:
           - name: color_name
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
+        condicion: used
     ParentASIN: B0DPC8X1VJ
     nombreCompleto: >-
       Razer BlackWidow V3 Tenkeyless (Yellow Switch) - Teclado compacto para juegos con interruptores mecánicos (teclas
       ABS, iluminación RGB Chroma) Teclado Español - Negro
+    condicion: new
   - nombre: Logitech G512
     lo_mejor: Switches GX (Brown, Red o Blue), chasis de aluminio, RGB por tecla y puerto USB integrado
     a_tener_en_cuenta: Equilibrio perfecto entre calidad, rendimiento y estética
@@ -2424,6 +2464,7 @@ productos:
     nombreCompleto: >-
       Logitech G512 Teclado Gaming Mecánico, RGB LIGHTSYNC, Teclas retroiluminadas, GX-Táctil Marrón, Aleación de
       Aluminio, Teclas F Personalizables, Paso de USB, Disposición QWERTY ES - Carbón/Negro
+    condicion: new
   - nombre: Logitech G413 TKL SE
     lo_mejor: Diseño TKL compacto, retroiluminación blanca clara, carcasa de aluminio y switches táctiles
     a_tener_en_cuenta: Diseño limpio y resistente para setups minimalistas
@@ -2443,7 +2484,7 @@ productos:
       - Diseño limpio y sin distracciones
     brand: Logitech G
     ASIN: B07W7KMK4W
-    precio: "46,99\_€"
+    precio: "46,98\_€"
     precioOriginal: "54,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -2547,6 +2588,7 @@ productos:
           - name: pattern_name
             value: G413
         ParentASIN: B0FP2X9GNZ
+        condicion: used
       - ASIN: B074DZ9XK5
         title: >-
           Logitech G 413 Mechanical Gaming Keyboard, Backlit Keys, Romer-G Touch Keys, Aluminum Alloy 5052,
@@ -2594,6 +2636,7 @@ productos:
           - name: pattern_name
             value: G413 (Gen 1)
         ParentASIN: B0FP2X9GNZ
+        condicion: new
       - ASIN: B07W5JKPK4
         title: >-
           Logitech G413 SE Full-Size Teclado Mecánico para Gaming - Retroiluminado con Interruptores Mecánicos Táctiles,
@@ -2663,6 +2706,7 @@ productos:
           - name: pattern_name
             value: G413 SE (Gen 2)
         ParentASIN: B0FP2X9GNZ
+        condicion: new
     nombreCompleto: >-
       Logitech G413 TKL SE Teclado Mecánico Gaming - Teclado Compacto Retroiluminado con Interruptores Mecánicos
       Táctiles, Anti-Ghosting, Compatible con Windows, macOS, Disposición QWERTY Español - Negro
@@ -2672,4 +2716,5 @@ productos:
         value: QWERTY Español
       - name: pattern_name
         value: G413 SE TKL (Gen 2)
+    condicion: new
 actualizacion: '2025-09-11'

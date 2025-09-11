@@ -112,6 +112,7 @@ productos:
           - name: color_name
             value: Negro-verde
         ParentASIN: B0CM63GP72
+        condicion: new
       - ASIN: B0CL282F8M
         title: >-
           RCB TECH R9X Moto Eléctrica Infantil,3 Modos de Velocidad, máx 25km/h, Autonomía máxima 15KM, Neumáticos de 12
@@ -166,6 +167,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0CM63GP72
+        condicion: new
     ParentASIN: B0CM63GP72
     variationAttributes:
       - name: color_name
@@ -173,6 +175,7 @@ productos:
     nombreCompleto: >-
       RCB TECH R9X Moto Eléctrica Infantil,3 Modos de Velocidad, máx 25km/h, Autonomía máxima 15KM, Neumáticos de 12
       Pulgadas, Bicicleta de Motocross para niños de 3-12 años
+    condicion: new
   - ASIN: B0CQYMNKTC
     a_tener_en_cuenta: hasta 12 años
     brand: RCB
@@ -290,6 +293,7 @@ productos:
           - name: color_name
             value: Noir Verde
         ParentASIN: B0DBHVGD3X
+        condicion: new
       - ASIN: B0CQYMNXS1
         title: >-
           RCB R9X Moto Eléctrica Infantil, Neumáticos de 12 Pulgadas, Potente Motor, 3 Modos 8/12/25KMH, Autonomía
@@ -346,6 +350,7 @@ productos:
           - name: color_name
             value: Noir Bleu
         ParentASIN: B0DBHVGD3X
+        condicion: new
     ParentASIN: B0DBHVGD3X
     variationAttributes:
       - name: color_name
@@ -353,6 +358,7 @@ productos:
     nombreCompleto: >-
       RCB R9X Moto Eléctrica Infantil, Neumáticos de 12 Pulgadas, Potente Motor, 3 Modos 8/12/25KMH, Autonomía máxima
       15KM, Motocross para niños de 3-12 años
+    condicion: new
   - ASIN: B0BTM3GDC4
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -486,6 +492,7 @@ productos:
           - name: size_name
             value: EV12M PRO(Bluetooth)
         ParentASIN: B0DF2SVG8Z
+        condicion: new
       - ASIN: B0BTM3LS4S
         title: >-
           EVERCROSS EV12M Motocicleta Eléctrica Niños, Moto Eléctrica con Motor de 300 W, Modos de Velocidad de 8/12/25
@@ -546,6 +553,7 @@ productos:
           - name: size_name
             value: EV12M
         ParentASIN: B0DF2SVG8Z
+        condicion: new
       - ASIN: B0DB87DJY4
         title: >-
           EVERCROSS EV12M Pro Moto Cross Eléctrica, Motocicleta Eléctrica con Motor de 300W, 15KM de Largo Alcance,
@@ -617,6 +625,7 @@ productos:
           - name: size_name
             value: EV12M PRO(Bluetooth)
         ParentASIN: B0DF2SVG8Z
+        condicion: new
     ParentASIN: B0DF2SVG8Z
     variationAttributes:
       - name: color_name
@@ -626,6 +635,7 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV12M Motocicleta Eléctrica Niños, Moto Eléctrica con Motor de 300 W, Modos de Velocidad de 8/12/25 KMH,
       15 km de Largo Alcance, Neumático de 12'', Moto Cross para niños de 3 a 12 años
+    condicion: new
   - ASIN: B0D4QS35W1
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -752,6 +762,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0D4TQ6F8H
+        condicion: new
     ParentASIN: B0D4TQ6F8H
     variationAttributes:
       - name: color_name
@@ -759,6 +770,7 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV08M Motocicleta Eléctrica para Niños, Motobici Eléctrica con Motor 150W, Velocidad de 8/16km/h y
       Autonomía 10km Moto Eléctrica, Neumáticas de 12’’, Motocross para Niños de 3 a 12 Años
+    condicion: new
   - ASIN: B0CS2WQKRX
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -896,6 +908,7 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0FHGTGZ3Y
         title: >-
           EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
@@ -962,6 +975,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0DXVB4MCB
         title: >-
           EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12" de Ancho, Modos de Velocidad 8/16KM/H y
@@ -1024,6 +1038,7 @@ productos:
           - name: color_name
             value: 13m Azul
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0DXVHY7RD
         title: >-
           EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12" de Ancho, Modos de Velocidad 8/16KM/H y
@@ -1086,6 +1101,7 @@ productos:
           - name: color_name
             value: 13m Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
     ParentASIN: B0FHK5CFL5
     variationAttributes:
       - name: color_name
@@ -1093,4 +1109,5 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
       Cross para Niños de 3-12 Años
+    condicion: new
 actualizacion: '2025-09-11'

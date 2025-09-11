@@ -64,6 +64,7 @@ productos:
       Walking Mum Saco Silla De Paseo I Love Vichy. Uso Universal Y Compatible Con La Mayoría De Los Carros. Color
       Verde.
     variantes: []
+    condicion: new
   - ASIN: B0BHFC29PP
     nombreCompleto: >-
       mibebestore Saco Silla Paseo Universal, Saco Invierno Silla Paseo Universal, Desmontable con Cremallera, Cabezal
@@ -179,6 +180,7 @@ productos:
           - name: color_name
             value: Cabaña Rojo
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B0BHDBFJKD
         title: >-
           mibebestore Saco Silla Paseo Universal, Saco Invierno Silla Paseo Universal, Desmontable con Cremallera,
@@ -226,6 +228,7 @@ productos:
           - name: color_name
             value: Maquillaje Liso
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B0BHDNR5BZ
         title: >-
           Saco Silla Paseo Universal, saco invierno silla paseo universal, Desmontable con cremallera, cabezal
@@ -273,6 +276,7 @@ productos:
           - name: color_name
             value: Paracaidas Azul
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B08JQBNC7C
         title: mibebestore Saco Polar de Invierno de Silla de Paseo - (Universal) - Animales Gris - Unisex
         brand: mibebestore
@@ -326,6 +330,7 @@ productos:
           - name: color_name
             value: Animales
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B08K53VMDC
         title: Saco POLAR de Invierno de Silla de Paseo - (Universal) - Rojo - OFERTA
         brand: mibebestore
@@ -373,6 +378,7 @@ productos:
           - name: color_name
             value: Liso Rojo
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B0BHDLKVK3
         title: >-
           Saco Silla Paseo Universal, saco invierno silla paseo universal, Desmontable con cremallera, cabezal
@@ -432,6 +438,7 @@ productos:
           - name: color_name
             value: Unicornio Maquillaje
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B09RV7QJ4J
         title: mibebestore - Saco Silla Paseo Universal Polar Estrellas Gris Marino - Unisex
         brand: mibebestore
@@ -482,6 +489,7 @@ productos:
           - name: color_name
             value: 0 - Modelo 1
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B08K54NGVK
         title: mibebestore Saco Polar de Invierno de Silla de Paseo - (Universal) - Liso Fucsia - Oferta
         brand: mibebestore
@@ -529,6 +537,7 @@ productos:
           - name: color_name
             value: Liso Fucsia
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B0BHDLMJ7Q
         title: >-
           mibebestore Saco Silla Paseo Universal, Saco Invierno Silla Paseo Universal, Desmontable con Cremallera,
@@ -585,6 +594,7 @@ productos:
           - name: color_name
             value: Leã³n Gris
         ParentASIN: B081Y6KFNQ
+        condicion: new
       - ASIN: B0BHDN4RZN
         title: >-
           Saco Silla Paseo Universal, saco invierno silla paseo universal, Desmontable con cremallera, cabezal
@@ -644,7 +654,9 @@ productos:
           - name: color_name
             value: Animals Verde
         ParentASIN: B081Y6KFNQ
+        condicion: new
     ParentASIN: B081Y6KFNQ
+    condicion: new
   - ASIN: B08MKWGRHQ
     nombreCompleto: >-
       Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -804,6 +816,7 @@ productos:
           - name: color_name
             value: Minnie Topos
         ParentASIN: B0DMWGV9G5
+        condicion: new
       - ASIN: B09GKQBT4W
         title: >-
           Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -874,10 +887,12 @@ productos:
           - name: color_name
             value: Mickey Topos
         ParentASIN: B0DMWGV9G5
+        condicion: new
     ParentASIN: B0DMWGV9G5
     variationAttributes:
       - name: color_name
         value: Minnie Blossons
+    condicion: new
   - ASIN: B0CLZZ2NY9
     nombreCompleto: >-
       Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1034,6 +1049,7 @@ productos:
           - name: color_name
             value: Vichy Negro
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CLZXS3RJ
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1095,6 +1111,7 @@ productos:
           - name: color_name
             value: Polipiel Rosa
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CM1188T3
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1159,6 +1176,7 @@ productos:
           - name: color_name
             value: Polipiel Gris
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CLZZ14XZ
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1223,6 +1241,7 @@ productos:
           - name: color_name
             value: Premium Gris
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CM1138ZP
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1293,6 +1312,7 @@ productos:
           - name: color_name
             value: Premium Azul
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CLZYHFW7
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1354,6 +1374,7 @@ productos:
           - name: color_name
             value: Premium Rosa
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CM1145H6
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1424,6 +1445,7 @@ productos:
           - name: color_name
             value: Premium Negro
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CLZZ4K3J
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1491,6 +1513,7 @@ productos:
           - name: color_name
             value: Polipiel Negro
         ParentASIN: B0CM11589G
+        condicion: new
       - ASIN: B0CM114LMR
         title: >-
           Saco polar de Silla de Paseo Universal, Saco carrito de Bebé invierno, Desmontable impermeable y transpirable
@@ -1560,10 +1583,12 @@ productos:
           - name: color_name
             value: Vichy Rosa
         ParentASIN: B0CM11589G
+        condicion: new
     ParentASIN: B0CM11589G
     variationAttributes:
       - name: color_name
         value: Polipiel Beige
+    condicion: new
   - ASIN: B0CYM4FVVY
     nombreCompleto: >-
       molis&co. Saco de Carrito Bebé Universal. Saco Capazo Cochecito Bebe Primavera y Otoño. Saco Silla Paseo a Prueba
@@ -1702,6 +1727,7 @@ productos:
           - name: size_name
             value: Invierno
         ParentASIN: B0BJ3B8XLZ
+        condicion: new
       - ASIN: B0F848L74T
         title: >-
           molis&co. Saco de Carrito Bebé Universal. Saco Capazo Cochecito Bebe Primavera y Otoño. Saco Silla Paseo a
@@ -1768,6 +1794,7 @@ productos:
           - name: size_name
             value: Primavera/Otoño
         ParentASIN: B0BJ3B8XLZ
+        condicion: new
       - ASIN: B0CYM5NP1F
         title: >-
           molis&co. Saco de Carrito Bebé Universal. Capazo Cochecito Bebe Primavera y Otoño. Silla Paseo a Prueba de
@@ -1834,12 +1861,14 @@ productos:
           - name: size_name
             value: Primavera/Otoño
         ParentASIN: B0BJ3B8XLZ
+        condicion: new
     ParentASIN: B0BJ3B8XLZ
     variationAttributes:
       - name: color_name
         value: Ines Ii
       - name: size_name
         value: Primavera/Otoño
+    condicion: new
   - ASIN: B0DBLX4S7N
     nombreCompleto: >-
       Vicloon Saco Silla Paseo Universal, Saco Invierno Silla Paseo, Resistente al Viento y al Frío/Desmontable/Fácil de
@@ -1848,7 +1877,7 @@ productos:
     salesrank: 5233
     enlace: https://www.amazon.es/dp/B0DBLX4S7N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: Vicloon
-    precio: "13,99\_€"
+    precio: "15,99\_€"
     precioOriginal: "13,99\_€"
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg
@@ -1981,10 +2010,12 @@ productos:
           - name: color_name
             value: gris
         ParentASIN: B0DC481VSQ
+        condicion: new
     ParentASIN: B0DC481VSQ
     variationAttributes:
       - name: color_name
         value: Negro
+    condicion: new
   - ASIN: B0F32PDWWQ
     nombreCompleto: >-
       Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor cochecito
@@ -2128,6 +2159,7 @@ productos:
           - name: style_name
             value: Todo el año
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B0DNQMPCF6
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2186,6 +2218,7 @@ productos:
           - name: style_name
             value: Todo el año
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B0DK3NVY6L
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2244,6 +2277,7 @@ productos:
           - name: style_name
             value: Todo el año
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B09N9M9761
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2305,6 +2339,7 @@ productos:
           - name: style_name
             value: Todo el año
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B08W98GPGW
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2366,6 +2401,7 @@ productos:
           - name: style_name
             value: El verano
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B0B2P7DXHH
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2427,6 +2463,7 @@ productos:
           - name: style_name
             value: El verano
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B0DNQP52XW
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2485,6 +2522,7 @@ productos:
           - name: style_name
             value: Invierno
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B08W8NPYH1
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2546,6 +2584,7 @@ productos:
           - name: style_name
             value: El verano
         ParentASIN: B0DVT4Q3WC
+        condicion: new
       - ASIN: B0DNQPH65M
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
@@ -2604,7 +2643,9 @@ productos:
           - name: style_name
             value: Todo el año
         ParentASIN: B0DVT4Q3WC
+        condicion: new
     ParentASIN: B0DVT4Q3WC
+    condicion: new
   - ASIN: B0B7BDSL1N
     nombreCompleto: >-
       Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -2769,6 +2810,7 @@ productos:
           - name: color_name
             value: Marino Rosa
         ParentASIN: B0DR2TVSS8
+        condicion: new
       - ASIN: B09GKMW2RC
         title: >-
           Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -2845,6 +2887,7 @@ productos:
           - name: color_name
             value: Marino Gris
         ParentASIN: B0DR2TVSS8
+        condicion: new
       - ASIN: B07X3D362C
         title: >-
           Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -2915,6 +2958,7 @@ productos:
           - name: color_name
             value: Animalitos Gris
         ParentASIN: B0DR2TVSS8
+        condicion: new
       - ASIN: B0B7BB7682
         title: >-
           Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -2985,10 +3029,12 @@ productos:
           - name: color_name
             value: Cactus Gris
         ParentASIN: B0DR2TVSS8
+        condicion: new
     ParentASIN: B0DR2TVSS8
     variationAttributes:
       - name: color_name
         value: Perritos Azul
+    condicion: new
   - ASIN: B09GKMGTV9
     nombreCompleto: >-
       Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -3160,6 +3206,7 @@ productos:
           - name: color_name
             value: Marino Gris
         ParentASIN: B0DR2TVSS8
+        condicion: new
       - ASIN: B07X3D362C
         title: >-
           Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -3230,6 +3277,7 @@ productos:
           - name: color_name
             value: Animalitos Gris
         ParentASIN: B0DR2TVSS8
+        condicion: new
       - ASIN: B0B7BDSL1N
         title: >-
           Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -3300,6 +3348,7 @@ productos:
           - name: color_name
             value: Perritos Azul
         ParentASIN: B0DR2TVSS8
+        condicion: new
       - ASIN: B0B7BB7682
         title: >-
           Interbaby Saco Silla Paseo Universal Saco Bebe Invierno Suave, Cálido, Afelpado | Saco Carro Bebe Invierno
@@ -3370,10 +3419,12 @@ productos:
           - name: color_name
             value: Cactus Gris
         ParentASIN: B0DR2TVSS8
+        condicion: new
     ParentASIN: B0DR2TVSS8
     variationAttributes:
       - name: color_name
         value: Marino Rosa
+    condicion: new
   - ASIN: B09RG8CLPV
     nombreCompleto: Walking Mum Saco Silla De Paseo I Love Vichy. Uso Universal Y Compatible Con La Mayoría De Los Carros. Color Rosa.
     valoracion: 4.1
@@ -3436,4 +3487,5 @@ productos:
       durabilidad para el uso diario.
     title: Walking Mum Saco Silla De Paseo I Love Vichy. Uso Universal Y Compatible Con La Mayoría De Los Carros. Color Rosa.
     variantes: []
+    condicion: new
 actualizacion: '2025-09-11'
