@@ -193,7 +193,7 @@
   }
 
   /* Ajustes suaves de tipografía/espacios en móvil */
-  .home-section .section-head{ align-items: center; }
+  .home-section .section-head{ align-items: center; padding: 0 0 10px 0;}
   .home-section .section-head .see-all{ font-size: .95rem; }
 
   .home-section a{ font-size: 1.05rem !important; }
@@ -434,7 +434,7 @@
   {% if include.mostrar_autor == true or autor_flag == 'true' or autor_flag == '1' or autor_flag == 'yes' %}
     {% if autor %}
       <span class="author-block">
-        <a class="author-inline" href "{{ autor.enlace | default: '#' }}">
+        <a class="author-inline" href="{{ autor.enlace | default: '#' }}">
           <img class="author-avatar-xs" src="{{ autor.avatar }}" alt="{{ autor.descripcion_alt | default: 'Avatar de ' | append: autor.nombre }}">
           <small class="author-name-xs">{{ autor.nombre }}</small>
         </a>
