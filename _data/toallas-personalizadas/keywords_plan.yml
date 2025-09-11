@@ -1,0 +1,94 @@
+cabecera:
+  # KW_ATACADA: toallas personalizadas | VOL: 1600
+  principal: toallas personalizadas
+  meta:
+    vol: 1600
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: toallas personalizadas | VOL: 1600
+  - toallas personalizadas
+  # KW_ATACADA: toalla personalizada | VOL: 880
+  - toalla personalizada
+  # KW_ATACADA: toallas personalizadas bebe | VOL: 390
+  - toallas personalizadas para bebé
+  # KW_ATACADA: toallas personalizadas playa | VOL: 320
+  - toallas personalizadas de playa
+secciones:
+  - kw: toallas personalizadas
+    # KW_ATACADA: toallas personalizadas | VOL: 1600
+    titulo: toallas personalizadas
+    id: toallas-personalizadas
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1600
+    diff: 0
+    intent: C
+  - kw: toalla personalizada
+    # KW_ATACADA: toalla personalizada | VOL: 880
+    titulo: toalla personalizada
+    id: toalla-personalizada
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 880
+    diff: 0
+    intent: I
+  - kw: toallas personalizadas bebe
+    # KW_ATACADA: toallas personalizadas bebe | VOL: 390
+    titulo: toallas personalizadas para bebé
+    id: toallas-personalizadas-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 390
+    diff: 0
+    intent: I
+  - kw: toallas personalizadas playa
+    # KW_ATACADA: toallas personalizadas playa | VOL: 320
+    titulo: toallas personalizadas de playa
+    id: toallas-personalizadas-playa
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 320
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: toallas personalizadas | VOL: 1600
+  - toallas personalizadas
+  # KW_ATACADA: toalla personalizada | VOL: 880
+  - toalla personalizada
+  # KW_ATACADA: toallas personalizadas bebe | VOL: 390
+  - toallas personalizadas para bebé
+  # KW_ATACADA: toallas personalizadas playa | VOL: 320
+  - toallas personalizadas de playa
+  # KW_ATACADA: toalla de playa personalizada | VOL: 170
+  - toalla de playa personalizada
+  # KW_ATACADA: toalla personalizada con nombre | VOL: 170
+  - toalla personalizada con nombre
+  # KW_ATACADA: toalla personalizada nombre | VOL: 170
+  - toalla personalizada con nombre
+  # KW_ATACADA: toallas bordadas con nombres | VOL: 170
+  - toallas bordadas con nombres
+  # KW_ATACADA: toallas con nombres bordados | VOL: 170
+  - toallas con nombres bordados
+  # KW_ATACADA: toallas nombre bordado | VOL: 170
+  - toallas con nombre bordado
+html_map:
+  h1: toallas personalizadas para bebé
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - toallas personalizadas
+  - toalla personalizada
+  - toallas personalizadas para bebé
+  - toallas personalizadas de playa
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 10
+  total_brands_detected: 83

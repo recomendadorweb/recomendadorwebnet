@@ -19,7 +19,7 @@ productos:
     lo_mejor: Media-Alta
     nombre: Imperial Confort Oslo New Viscoelástico
     valoracion: 4.3
-    precio: "147,18\_€"
+    precio: "158,99\_€"
     precioOriginal: "147,18\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -112,10 +112,11 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B01ETFVUBY
         title: Imperial Confort Oslo New - Colchón 90x190 - Grosor 21 cm - Viscoelástico - Firmeza media/alta
         brand: Imperial Confort
-        precio: "85,36\_€"
+        precio: "110,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg
@@ -162,6 +163,7 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B01ETFVUDC
         title: Imperial Confort Oslo New - Colchón 135x180 - Grosor 21 cm - Viscoelástico - Firmeza media/alta
         brand: Imperial Confort
@@ -214,10 +216,11 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B015J72BZK
         title: Imperial Confort Oslo New - Grosor 21 cm - Viscoelástico - Firmeza Media/Alta, Blanco, Colchón 135 x 200
         brand: Imperial Confort
-        precio: "186,57\_€"
+        precio: "178,41\_€"
         precioOriginal: "186,57\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg
@@ -264,6 +267,7 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B01ETFVUDM
         title: Imperial Confort Oslo - Colchón Viscoelástico acolchado alta firmeza - Grosor 21 cm - 150x180
         brand: Imperial Confort
@@ -314,6 +318,7 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B01ETFVUBE
         title: Imperial Confort Oslo New - Colchón 135x190 - Grosor 21 cm - Viscoelástico - Firmeza media/alta
         brand: Imperial Confort
@@ -370,6 +375,7 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B01ETFVUFK
         title: Imperial Confort Oslo New - Colchón 105x180 - Grosor 21 cm - Viscoelástico - Firmeza media/alta
         brand: Imperial Confort
@@ -420,6 +426,7 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B01ETFVUD2
         title: Imperial Confort Oslo New - Colchón 105x190 - Grosor 21 cm - Viscoelástico - Firmeza media/alta
         brand: Imperial Confort
@@ -470,10 +477,11 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B01ETFVVMW
         title: Imperial Confort Oslo New - Colchón 135x180 - Grosor 24 cm - Viscoelástico - Firmeza media/alta
         brand: Imperial Confort
-        precio: "191,84\_€"
+        precio: "206,99\_€"
         precioOriginal: "191,84\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg
@@ -520,10 +528,11 @@ productos:
           - name: style_name
             value: Grosor 24 cm
         ParentASIN: B07R4B88TW
+        condicion: new
       - ASIN: B015J9863Y
         title: Imperial Confort Oslo New - Colchón 105x200 - Grosor 21 cm - Viscoelástico - Firmeza media/alta
         brand: Imperial Confort
-        precio: "156,97\_€"
+        precio: "168,99\_€"
         precioOriginal: "156,97\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg
@@ -570,8 +579,10 @@ productos:
           - name: style_name
             value: Grosor 21 cm
         ParentASIN: B07R4B88TW
+        condicion: new
     ParentASIN: B07R4B88TW
     nombreCompleto: Imperial Confort Oslo New - Colchón 90x190 - Grosor 24 cm - Viscoelástico - Firmeza media/alta
+    condicion: new
   - ASIN: B0F38HGRY1
     a_tener_en_cuenta: Viscoelástica + HR multicapa
     brand: Todocama
@@ -592,7 +603,7 @@ productos:
     lo_mejor: Media-Alta
     nombre: Todocama Pure Flow Max Viscoelástico
     valoracion: 4.5
-    precio: "84,99\_€"
+    precio: "89,99\_€"
     precioOriginal: "89,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -703,6 +714,7 @@ productos:
           - name: size_name
             value: 135x190 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38GQ8FQ
         title: >-
           Todocama - Colchón viscoelástico 135x200 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -762,6 +774,7 @@ productos:
           - name: size_name
             value: 135x200 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38J8DY8
         title: >-
           Todocama - Colchón viscoelástico 140x190 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -821,6 +834,7 @@ productos:
           - name: size_name
             value: 140x190 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38JDCTW
         title: >-
           Todocama - Colchón viscoelástico 160x200 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -880,6 +894,7 @@ productos:
           - name: size_name
             value: 160x200 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38HYMK1
         title: >-
           Todocama - Colchón viscoelástico 160x190 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -939,6 +954,7 @@ productos:
           - name: size_name
             value: 160x190 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38JH9SC
         title: >-
           Todocama - Colchón viscoelástico 105x200 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -998,6 +1014,7 @@ productos:
           - name: size_name
             value: 105x200 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38HDBTX
         title: >-
           Todocama - Colchón viscoelástico 80x190 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -1057,6 +1074,7 @@ productos:
           - name: size_name
             value: 80x190 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38HX2CV
         title: >-
           Todocama - Colchón viscoelástico 150x200 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -1116,6 +1134,7 @@ productos:
           - name: size_name
             value: 150x200 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
       - ASIN: B0F38JGF75
         title: >-
           Todocama - Colchón viscoelástico 140x200 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta,
@@ -1175,6 +1194,7 @@ productos:
           - name: size_name
             value: 140x200 cm
         ParentASIN: B0F59S7S2K
+        condicion: new
     ParentASIN: B0F59S7S2K
     variationAttributes:
       - name: size_name
@@ -1182,6 +1202,7 @@ productos:
     nombreCompleto: >-
       Todocama - Colchón viscoelástico 90x190 cm, Pure Flow MAX Multicapa, Altura 21 cm, firmeza Media/Alta, Tratamiento
       antiácaros, antibacterias e hipoalergénico. Fabricado en España.
+    condicion: new
   - ASIN: B07D2BX9BS
     a_tener_en_cuenta: HR + visco Bio Sense
     brand: Simpur Low Cost
@@ -1322,6 +1343,7 @@ productos:
           - name: size_name
             value: 180x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2BN5LQ
         title: >-
           Colchón viscoelástico 160x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1382,6 +1404,7 @@ productos:
           - name: size_name
             value: 160x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C1181
         title: >-
           Colchón viscoelástico 140x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1450,6 +1473,7 @@ productos:
           - name: size_name
             value: 140x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C1YW8
         title: >-
           Colchón viscoelástico 200x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1521,6 +1545,7 @@ productos:
           - name: size_name
             value: 200x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C3RGJ
         title: >-
           Colchón viscoelástico 150x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1588,6 +1613,7 @@ productos:
           - name: size_name
             value: 150x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C3GLS
         title: >-
           Colchón viscoelástico 160x190 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1656,6 +1682,7 @@ productos:
           - name: size_name
             value: 160x190 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2C466Y
         title: >-
           Colchón viscoelástico 90x200 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1723,6 +1750,7 @@ productos:
           - name: size_name
             value: 90x200 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2BVDYB
         title: >-
           Simpur Colchón visco 135x190 cm Dream Repair Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1793,6 +1821,7 @@ productos:
           - name: size_name
             value: 135x190 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
       - ASIN: B07D2BSFS9
         title: >-
           Colchón viscoelástico 120x190 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
@@ -1861,6 +1890,7 @@ productos:
           - name: size_name
             value: 120x190 cm
         ParentASIN: B07D3D8SZW
+        condicion: new
     ParentASIN: B07D3D8SZW
     variationAttributes:
       - name: size_name
@@ -1868,6 +1898,7 @@ productos:
     nombreCompleto: >-
       Colchón viscoelástico 90x190 cm Dream Repair - Altura +/- 30 cm - Espumación HR de Alta Densidad - Firmeza
       Media/Alta - 13 Zonas de Confort y Soporte Ergonómico - Multicapa - Alta Durabilidad
+    condicion: new
   - ASIN: B07RP81T79
     a_tener_en_cuenta: Muelles ensacados + viscoelástica
     brand: Simpur Low Cost
@@ -2001,6 +2032,7 @@ productos:
           - name: size_name
             value: 90x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RN6RZMN
         title: >-
           Simpur, Colchón 135x190 cm, Altura 30cm, Muelles Ensacados Magestic, Altura 30cm, Firmeza 7,5/10,
@@ -2061,6 +2093,7 @@ productos:
           - name: size_name
             value: 135x190 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RN6ZXN1
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -2121,6 +2154,7 @@ productos:
           - name: size_name
             value: 140x190 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP6T42V
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -2181,6 +2215,7 @@ productos:
           - name: size_name
             value: 180x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP76PR2
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -2241,6 +2276,7 @@ productos:
           - name: size_name
             value: 150x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP7V58G
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -2301,6 +2337,7 @@ productos:
           - name: size_name
             value: 160x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP8MX69
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -2361,6 +2398,7 @@ productos:
           - name: size_name
             value: 140x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RP74873
         title: >-
           Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica,
@@ -2421,6 +2459,7 @@ productos:
           - name: size_name
             value: 135x200 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
       - ASIN: B07RN69PJ9
         title: >-
           Simpur, Colchón 150x190 cm, Altura 30cm, Muelles Ensacados Magestic, Altura 30cm, Firmeza 7,5/10,
@@ -2484,6 +2523,7 @@ productos:
           - name: size_name
             value: 150x190 cm
         ParentASIN: B0B1DMLYH6
+        condicion: new
     ParentASIN: B0B1DMLYH6
     variationAttributes:
       - name: size_name
@@ -2491,6 +2531,7 @@ productos:
     nombreCompleto: >-
       Simpur Low Cost, Colchón Muelles Ensacados Visco Spring Magestic, Altura 30cm, Firmeza 7,5/10, Viscoelástica, 9
       Capas Diferenciadas, Independencia de Lechos, Ortopédico, Altura 30 cm, 90x190 cm
+    condicion: new
   - ASIN: B016AFQAD4
     a_tener_en_cuenta: Memory foam + HR
     brand: Dormio
@@ -2634,6 +2675,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQAB6
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 90 x 200 Altura 21 cm.
         brand: Dormio
@@ -2700,6 +2742,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQAO8
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 150 x 190 Altura 21 cm.
         brand: Dormio
@@ -2766,6 +2809,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQAUM
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 135 x 190 Altura 21 cm.
         brand: Dormio
@@ -2829,6 +2873,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQFXE
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 150 x 190 Altura 24 cm.
         brand: Dormio
@@ -2887,6 +2932,7 @@ productos:
           - name: style_name
             value: 24 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQFXO
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 90 x 190 Altura 24 cm.
         brand: Dormio
@@ -2945,6 +2991,7 @@ productos:
           - name: style_name
             value: 24 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQG1K
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 105 x 200 Altura 21 cm.
         brand: Dormio
@@ -3011,64 +3058,7 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
-      - ASIN: B016AFQFY8
-        title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 135 x 190 Altura 24 cm.
-        brand: Dormio
-        precio: "310,16\_€"
-        precioOriginal: No especificado
-        disponibilidad: Envío en 6 a 7 meses
-        imagen: https://m.media-amazon.com/images/I/31HISKU4EpL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 312
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41inzjZCfWL._SL500_.jpg
-            width: 500
-            height: 326
-          - url: https://m.media-amazon.com/images/I/2142quy7djL._SL500_.jpg
-            width: 500
-            height: 150
-          - url: https://m.media-amazon.com/images/I/416u96KiAbL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/2169wcxRFOL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/41Bh9UdslSL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/4168o-yQMHL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41+C3XvaEzL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/516oT-WHMOL._SL500_.jpg
-            width: 500
-            height: 336
-          - url: https://m.media-amazon.com/images/I/419xtfzevXL._SL500_.jpg
-            width: 500
-            height: 322
-          - url: https://m.media-amazon.com/images/I/41Re2DU8iKL._SL500_.jpg
-            width: 333
-            height: 500
-        enlace: https://www.amazon.es/dp/B016AFQFY8?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Altura total 24 cm; disponible también en altura de 21 cm
-          - Núcleo de ELIOCEL de alta resistencia y acolchado de 3 capas
-          - Tratamiento antiácaros, antibacterias, antimoho, antiestático y antialérgico
-          - Su óptima adaptabilidad consigue evitar tensión muscular y favorecer un descanso saludable y reparador
-          - >-
-            Combina la firmeza de su núcleo con la propiedad termorreguladora de la viscoelástica, sensible a la
-            temperatura corporal y ambiental
-          - Alta firmeza y dureza intermedia
-          - Certificados de calidad OEKO TEX textiles de confianza y AITEX en todos sus materiales
-          - Fabricado en España
-        variationAttributes:
-          - name: size_name
-            value: 135x190x24
-          - name: style_name
-            value: 24 cm
-        ParentASIN: B0CQTBKWXY
+        condicion: new
       - ASIN: B016AFQFWA
         title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 150 x 200 Altura 21 cm.
         brand: Dormio
@@ -3135,6 +3125,66 @@ productos:
           - name: style_name
             value: 21 cm
         ParentASIN: B0CQTBKWXY
+        condicion: new
+      - ASIN: B016AFQFY8
+        title: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 135 x 190 Altura 24 cm.
+        brand: Dormio
+        precio: "171,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HISKU4EpL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 312
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41inzjZCfWL._SL500_.jpg
+            width: 500
+            height: 326
+          - url: https://m.media-amazon.com/images/I/2142quy7djL._SL500_.jpg
+            width: 500
+            height: 150
+          - url: https://m.media-amazon.com/images/I/416u96KiAbL._SL500_.jpg
+            width: 333
+            height: 500
+          - url: https://m.media-amazon.com/images/I/2169wcxRFOL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/41Bh9UdslSL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/4168o-yQMHL._SL500_.jpg
+            width: 333
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41+C3XvaEzL._SL500_.jpg
+            width: 333
+            height: 500
+          - url: https://m.media-amazon.com/images/I/516oT-WHMOL._SL500_.jpg
+            width: 500
+            height: 336
+          - url: https://m.media-amazon.com/images/I/419xtfzevXL._SL500_.jpg
+            width: 500
+            height: 322
+          - url: https://m.media-amazon.com/images/I/41Re2DU8iKL._SL500_.jpg
+            width: 333
+            height: 500
+        enlace: https://www.amazon.es/dp/B016AFQFY8?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Altura total 24 cm; disponible también en altura de 21 cm
+          - Núcleo de ELIOCEL de alta resistencia y acolchado de 3 capas
+          - Tratamiento antiácaros, antibacterias, antimoho, antiestático y antialérgico
+          - Su óptima adaptabilidad consigue evitar tensión muscular y favorecer un descanso saludable y reparador
+          - >-
+            Combina la firmeza de su núcleo con la propiedad termorreguladora de la viscoelástica, sensible a la
+            temperatura corporal y ambiental
+          - Alta firmeza y dureza intermedia
+          - Certificados de calidad OEKO TEX textiles de confianza y AITEX en todos sus materiales
+          - Fabricado en España
+        variationAttributes:
+          - name: size_name
+            value: 135x190x24
+          - name: style_name
+            value: 24 cm
+        ParentASIN: B0CQTBKWXY
+        condicion: new
     ParentASIN: B0CQTBKWXY
     variationAttributes:
       - name: size_name
@@ -3142,6 +3192,7 @@ productos:
       - name: style_name
         value: 21 cm
     nombreCompleto: Dormio Zafiro - Colchón Viscoelástico, Transpirable, Antiácaros. Medida 90 x 190 Altura 21 cm.
+    condicion: new
   - ASIN: B08YB77MQW
     a_tener_en_cuenta: Memory foam + espuma Breath Soft
     brand: ZZ DON DESCANSO
@@ -3286,6 +3337,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08RZ8ZKMV
         title: >-
           Don Descanso-Colchón Cama Nido Mulhacén 67x180cm. Colchón Viscoelástico con Tejido Aloe Vera Strech y Tejido
@@ -3355,6 +3407,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W65LKSH
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, 80x190 cm, Firmeza media-alta, Gris
         brand: ZZ DON DESCANSO
@@ -3422,6 +3475,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W65LSDN
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 180x190 cm
         brand: ZZ DON DESCANSO
@@ -3489,6 +3543,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W65LKR8
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 90x190 cm
         brand: ZZ DON DESCANSO
@@ -3556,6 +3611,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66CK8F
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 105x190 cm
         brand: ZZ DON DESCANSO
@@ -3623,6 +3679,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66L4HG
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 160x180 cm
         brand: ZZ DON DESCANSO
@@ -3690,6 +3747,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W65LSF8
         title: Don descanso ZZ MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 120x180 cm
         brand: ZZ DON DESCANSO
@@ -3757,6 +3815,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66MWNN
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, 90x200 cm, Firmeza media-alta
         brand: ZZ DON DESCANSO
@@ -3824,6 +3883,7 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
       - ASIN: B08W66L4KS
         title: ZZ DON DESCANSO MULHACEN Colchón Cama Nido, Espuma viscoelástica, Altura ± 15cm, 80x180 cm
         brand: ZZ DON DESCANSO
@@ -3891,8 +3951,10 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0D6NMZ8MN
+        condicion: new
     ParentASIN: B0D6NMZ8MN
     nombreCompleto: ZZ DON DESCANSO MULHACÉN Colchón Viscoelástico, Espuma, Altura ± 26cm, 90x190 cm
+    condicion: new
   - ASIN: B0B9BX7R2R
     a_tener_en_cuenta: Memory foam + HR FoamTech
     brand: Cecotec
@@ -4004,6 +4066,57 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
+      - ASIN: B0B57GKTC5
+        title: >-
+          Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 90x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
+          FoamVital, Doble Cara Dual System para Invierno y Verano
+        brand: Cecotec
+        precio: "99,95\_€"
+        precioOriginal: "109,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B0B57GKTC5?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - La medida ideal para tu descanso. Colchón con firmeza alta que te abrazará sin hundimiento .
+          - >-
+            Composición multicapa que se complementan para ofrecerte la mejor sensación de descanso. VisComfort, capa
+            viscoelástica que se amolda a las líneas de tu cuerpo.
+          - >-
+            Núcleo FoamVital que aporta firmeza y resistencia al conjunto. Tejido SoftTex que aporta elasticidad,
+            suavidad, alta transpiración, resistencia y es de fácil limpieza.
+          - >-
+            Doble cara Dual System. Disfruta de la sensación de frescor en verano y calidez en invierno. Tu óptimo
+            descanso no depende de la estación. Altura total de 21 cm.
+          - Colchón envasado al vacío para facilitar el transporte a tu hogar en las mejores condiciones.
+        variationAttributes:
+          - name: size_name
+            value: 90 x 200 cm
+          - name: color_name
+            value: Granate
+        ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B57HY3KJ
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 135x190. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -4056,6 +4169,7 @@ productos:
           - name: color_name
             value: White
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B57J6FFY
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 90x190. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -4101,6 +4215,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B57KJF5F
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 150x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -4151,8 +4266,9 @@ productos:
           - name: size_name
             value: 150 x 200 cm
           - name: color_name
-            value: Granate
+            value: White
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B6P3S4MB
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 180x190. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
@@ -4200,6 +4316,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B6P3SD49
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 160x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
@@ -4247,53 +4364,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
-      - ASIN: B0B6P47461
-        title: >-
-          Cecotec Colchón Viscoelástico Flow PureVital 1900 200x200. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
-          Alta, Capa Viscoelástica VisComfort, Tejido SoftTex, Doble Cara Dual System
-        brand: Cecotec
-        precio: "194,00\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0B6P47461?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Colchón de firmeza alta y altura total de 21 cm con la medida ideal para tu descanso.
-          - Núcleo FoamVital de espuma HR de 23 Kg/m³ que aporta resistencia y firmeza al conjunto.
-          - >-
-            Compuesto por diferentes capas diseñadas para mejorar tu descanso, con Tejido SoftTex y doble cara Dual
-            System de descanso verano e Invierno con sistema de triple protección.
-          - >-
-            Capa viscoelástica VisComfort que se adaptará a las curvas de tu cuerpo., permitiendo que la columna
-            vertebral permanezca en una posición neutral.
-          - El colchón se entrega enrollado y envasado al vacío para transportar el colchón de la manera más cómoda.
-        variationAttributes:
-          - name: size_name
-            value: 200 x 200 cm
-          - name: color_name
-            value: Granate
-        ParentASIN: B0CS9KRNNK
+        condicion: new
       - ASIN: B0B6P4CQ26
         title: >-
           Cecotec Colchón Viscoelástico Flow PureVital 1900 160x190. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
@@ -4341,59 +4412,12 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
-      - ASIN: B0B57GKTC5
-        title: >-
-          Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 90x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
-          FoamVital, Doble Cara Dual System para Invierno y Verano
-        brand: Cecotec
-        precio: "94,90\_€"
-        precioOriginal: "109,00\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0B57GKTC5?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - La medida ideal para tu descanso. Colchón con firmeza alta que te abrazará sin hundimiento .
-          - >-
-            Composición multicapa que se complementan para ofrecerte la mejor sensación de descanso. VisComfort, capa
-            viscoelástica que se amolda a las líneas de tu cuerpo.
-          - >-
-            Núcleo FoamVital que aporta firmeza y resistencia al conjunto. Tejido SoftTex que aporta elasticidad,
-            suavidad, alta transpiración, resistencia y es de fácil limpieza.
-          - >-
-            Doble cara Dual System. Disfruta de la sensación de frescor en verano y calidez en invierno. Tu óptimo
-            descanso no depende de la estación. Altura total de 21 cm.
-          - Colchón envasado al vacío para facilitar el transporte a tu hogar en las mejores condiciones.
-        variationAttributes:
-          - name: size_name
-            value: 90 x 200 cm
-          - name: color_name
-            value: Granate
-        ParentASIN: B0CS9KRNNK
+        condicion: new
     ParentASIN: B0CS9KRNNK
     nombreCompleto: >-
       Cecotec Colchón Viscoelástico Flow ViscoCare 1900 90x190cm.Multicapa, Altura 21 cm, Núcleo FoamTech, Firmeza Alta,
       Capa Viscoelástica ViscoCare, Tejido PureCare, Doble Cara AllPerfect
+    condicion: new
   - ASIN: B07L9F6DMD
     a_tener_en_cuenta: Visco carbono + biocerámica
     brand: ROYAL SLEEP
@@ -4413,7 +4437,7 @@ productos:
     lo_mejor: Alta
     nombre: Royal Sleep Ceramic Plus Viscoelástico + Carbono
     valoracion: 4.6
-    precio: "152,99\_€"
+    precio: "179,99\_€"
     precioOriginal: "179,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -4473,7 +4497,7 @@ productos:
           ROYAL SLEEP - Colchón Viscoelástico Hilo Carbono y Biocerámico | 150x200 | Firmeza Alta | Gama Alta | Efecto
           Antiestrés y Regenerador | Altura 25cm - Colchones Ceramic Plus
         brand: ROYAL SLEEP
-        precio: "269,99\_€"
+        precio: "309,99\_€"
         precioOriginal: "309,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51xHQM5pq5L._SL500_.jpg
@@ -4534,6 +4558,7 @@ productos:
           - name: color_name
             value: Colchón 25cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L9BYLDJ
         title: >-
           ROYAL SLEEP Colchón Viscoelástico Hilo de Carbono y Biocerámico con Efecto Regenerador | Gama Alta | Firmeza
@@ -4594,12 +4619,13 @@ productos:
           - name: color_name
             value: Colchón 29cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L91XNBB
         title: >-
           ROYAL SLEEP - Colchón Viscoelástico Hilo Carbono y Biocerámico | 135x182 | Firmeza Alta | Gama Alta | Efecto
           Antiestrés y Regenerador | Altura 25cm - Colchones Ceramic Plus
         brand: ROYAL SLEEP
-        precio: "219,29\_€"
+        precio: "257,99\_€"
         precioOriginal: "257,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51xHQM5pq5L._SL500_.jpg
@@ -4660,13 +4686,14 @@ productos:
           - name: color_name
             value: Colchón 25cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L9BW5RK
         title: >-
           ROYAL SLEEP - Colchón Viscoelástico con Hilo de Carbono y Biocerámico | 90x190 | Firmeza Alta | Gama Alta |
           Efecto Antiestrés y Regenerador | Altura 23cm - Colchones Ceramic
         brand: ROYAL SLEEP
-        precio: "117,29\_€"
-        precioOriginal: "124,99\_€"
+        precio: "124,99\_€"
+        precioOriginal: "137,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51I4azIyT9L._SL500_.jpg
         imagenWidth: 500
@@ -4715,6 +4742,7 @@ productos:
           - name: color_name
             value: Colchón 23cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L92KFTS
         title: >-
           ROYAL SLEEP - Colchón Viscoelástico con Hilo de Carbono y Biocerámico | 180x200 | Firmeza Alta | Gama Alta |
@@ -4773,6 +4801,7 @@ productos:
           - name: color_name
             value: Colchón 23cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L9C1SW2
         title: >-
           ROYAL SLEEP Colchón Viscoelástico Hilo de Carbono y Biocerámico con Efecto Regenerador | Gama Alta | Firmeza
@@ -4836,6 +4865,7 @@ productos:
           - name: color_name
             value: Colchón 29cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L9C49DZ
         title: >-
           ROYAL SLEEP - Colchón Viscoelástico Hilo Carbono y Biocerámico | 160x190 | Firmeza Alta | Gama Alta | Efecto
@@ -4897,6 +4927,7 @@ productos:
           - name: color_name
             value: Colchón 25cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L9BGHPZ
         title: >-
           ROYAL SLEEP Colchón Viscoelástico Hilo de Carbono y Biocerámico con Efecto Regenerador | Gama Alta | Firmeza
@@ -4960,6 +4991,7 @@ productos:
           - name: color_name
             value: Colchón 29cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L9B6N7L
         title: >-
           ROYAL SLEEP - Colchón Viscoelástico Hilo Carbono y Biocerámico | 135x200 | Firmeza Alta | Gama Alta | Efecto
@@ -5026,12 +5058,13 @@ productos:
           - name: color_name
             value: Colchón 25cm
         ParentASIN: B07VDKJ37G
+        condicion: new
       - ASIN: B07L9BY5P9
         title: >-
           ROYAL SLEEP - Colchón Viscoelástico Hilo Carbono y Biocerámico | 105x190 | Firmeza Alta | Gama Alta | Efecto
           Antiestrés y Regenerador | Altura 25cm - Colchones Ceramic Plus
         brand: ROYAL SLEEP
-        precio: "167,43\_€"
+        precio: "196,99\_€"
         precioOriginal: "196,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51xHQM5pq5L._SL500_.jpg
@@ -5092,10 +5125,12 @@ productos:
           - name: color_name
             value: Colchón 25cm
         ParentASIN: B07VDKJ37G
+        condicion: new
     ParentASIN: B07VDKJ37G
     nombreCompleto: >-
       ROYAL SLEEP - Colchón Viscoelástico Hilo Carbono y Biocerámico | 90x190 | Firmeza Alta | Gama Alta | Efecto
       Antiestrés y Regenerador | Altura 25cm - Colchones Ceramic Plus
+    condicion: new
   - ASIN: B07YDV2D7S
     a_tener_en_cuenta: Viscoelástica + HR
     brand: PIKOLIN
@@ -5221,6 +5256,7 @@ productos:
           - name: style_name
             value: Altura 24cm
         ParentASIN: B0BSG3NZ7J
+        condicion: new
       - ASIN: B08YNRY916
         title: >-
           PIKOLIN Leah - Colchón viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
@@ -5284,6 +5320,7 @@ productos:
           - name: style_name
             value: Altura 24cm
         ParentASIN: B0BSG3NZ7J
+        condicion: new
       - ASIN: B08YNS3BV8
         title: >-
           PIKOLIN Leah - Colchón viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
@@ -5347,12 +5384,13 @@ productos:
           - name: style_name
             value: Altura 24cm
         ParentASIN: B0BSG3NZ7J
+        condicion: new
       - ASIN: B07YDW4KLR
         title: >-
           PIKOLIN Leah - Colchón viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
           Protección Higiénica Total, 150x190
         brand: PIKOLIN
-        precio: "389,99\_€"
+        precio: "454,99\_€"
         precioOriginal: "454,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41D2T-pgNOL._SL500_.jpg
@@ -5404,6 +5442,7 @@ productos:
           - name: style_name
             value: Altura 24cm
         ParentASIN: B0BSG3NZ7J
+        condicion: new
       - ASIN: B07YDV391C
         title: >-
           PIKOLIN Leah - Colchón viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
@@ -5461,6 +5500,7 @@ productos:
           - name: style_name
             value: Altura 24cm
         ParentASIN: B0BSG3NZ7J
+        condicion: new
       - ASIN: B08YNV21C3
         title: >-
           PIKOLIN Leah - Colchón viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
@@ -5533,6 +5573,7 @@ productos:
           - name: style_name
             value: Altura 24cm
         ParentASIN: B0BSG3NZ7J
+        condicion: new
       - ASIN: B07YDVN5MB
         title: >-
           PIKOLIN Leah - Colchón Viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
@@ -5590,6 +5631,7 @@ productos:
           - name: style_name
             value: Altura 24cm
         ParentASIN: B0BSG3NZ7J
+        condicion: new
     ParentASIN: B0BSG3NZ7J
     variationAttributes:
       - name: size_name
@@ -5599,6 +5641,7 @@ productos:
     nombreCompleto: >-
       PIKOLIN Leah - Colchón viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
       Protección Higiénica Total, 90x190
+    condicion: new
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-05'
+actualizacion: '2025-09-11'

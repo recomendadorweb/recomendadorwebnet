@@ -48,6 +48,7 @@ productos:
     nombreCompleto: >-
       FEBER - Motorbike Cross 400F con Batería de 6V, Luces en los Faros, Sonido de Motor, Claxón y Dos Ruedines
       Traseros para Estabilidad, Peso Soportado 35 kg, Niños de 3 a 5 años, Famosa (800011250)
+    condicion: new
   - ASIN: B0BDFCMVCX
     a_tener_en_cuenta: 3 a 5 años
     brand: HOMCOM
@@ -122,7 +123,7 @@ productos:
           HOMCOM Moto Eléctrica con Licencia Honda para Niños de 3-5 Años Moto a Batería 6V con Faro Bocina Música y
           Ruedas Auxiliares Extraíbles Carga 30 kg 90x44x52 cm Blanco
         brand: HOMCOM
-        precio: "121,99\_€"
+        precio: "114,99\_€"
         precioOriginal: "121,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Rc-sS0A-L._SL500_.jpg
@@ -179,6 +180,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0BF9GWM33
+        condicion: new
     ParentASIN: B0BF9GWM33
     variationAttributes:
       - name: color_name
@@ -186,6 +188,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica con Licencia Honda para Niños de 3-5 Años Moto a Batería 6V con Faro Bocina Música y Ruedas
       Auxiliares Extraíbles Carga 30 kg 90x44x52 cm Rojo
+    condicion: new
   - ASIN: B0DBCGXFH9
     a_tener_en_cuenta: A partir de 3 años
     brand: AIYAPLAY
@@ -256,6 +259,7 @@ productos:
     nombreCompleto: >-
       AIYAPLAY Moto Eléctrica para Niños de +3 Años con Licencia Honda Motocicleta de Batería 12V con USB MP3 Luz LED
       Moto para Niños con Velocidad 3 km/h Carga 30 kg Rojo
+    condicion: new
   - ASIN: B09C1NXQGF
     a_tener_en_cuenta: A partir de 3 años
     brand: HOMCOM
@@ -329,7 +333,7 @@ productos:
           HOMCOM Moto Eléctrica Infantil con 3 Ruedas Trimoto para Niños de +3 Años con Batería 6V Recargable Funciones
           de Música Bocina Faros 86x42x52 cm Negro y Rojo
         brand: HOMCOM
-        precio: "74,99\_€"
+        precio: "63,74\_€"
         precioOriginal: "76,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41P275Dxg1L._SL500_.jpg
@@ -386,6 +390,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B09C29TCDZ
+        condicion: new
       - ASIN: B0DBL5HD6R
         title: >-
           HOMCOM Moto Eléctrica Infantil con 3 Ruedas Trimoto para Niños de +3 Años con Batería 6V Recargable Funciones
@@ -448,6 +453,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B09C29TCDZ
+        condicion: new
     ParentASIN: B09C29TCDZ
     variationAttributes:
       - name: color_name
@@ -455,4 +461,5 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica Infantil con 3 Ruedas Trimoto para Niños de +3 Años con Batería 6V Recargable Funciones de
       Música Bocina Faros 86x42x52 cm Negro y Blanco
-actualizacion: '2025-09-05'
+    condicion: new
+actualizacion: '2025-09-11'

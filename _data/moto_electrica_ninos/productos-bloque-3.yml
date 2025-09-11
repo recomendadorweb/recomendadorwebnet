@@ -46,7 +46,7 @@ productos:
       - Ruedas EVA
       - Luces LED
     nombre: ATAA Aprilia Dorsoduro 12v Moto eléctrica Infantil
-    precio: "181,89\_€"
+    precio: "181,49\_€"
     precioOriginal: "229,99\_€"
     valoracion: 4.3
     title: >-
@@ -56,6 +56,7 @@ productos:
     nombreCompleto: >-
       ATAA Aprilia Dorsoduro 12v Moto eléctrica Infantil Increíble Moto eléctrica para niños y niñas, con Dos Motores de
       12v
+    condicion: new
   - ASIN: B085H35QJG
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -160,6 +161,7 @@ productos:
           - name: style_name
             value: Racing Honda CBR
         ParentASIN: B0DJM2JCBR
+        condicion: new
       - ASIN: B0FDG8NT91
         title: >-
           Moto Eléctrica Niños 3 Años 4 Años 5 Años Honda Competición 12V – Moto a Batería para Niños con Ruedas de
@@ -214,6 +216,7 @@ productos:
           - name: style_name
             value: Honda Competition
         ParentASIN: B0DJM2JCBR
+        condicion: new
     ParentASIN: B0DJM2JCBR
     variationAttributes:
       - name: style_name
@@ -221,6 +224,7 @@ productos:
     nombreCompleto: >-
       Moto Eléctrica Niños 3 Años 4 Años 5 Años Repsol 12V – Moto a Batería para Niños con Ruedas de Apoyo - Luces y
       Sonidos - Licencia de Marca – INJUSA
+    condicion: new
   - ASIN: B084VTCVYF
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -300,6 +304,7 @@ productos:
           - name: color_name
             value: Amarillo
         ParentASIN: B01HPPEW06
+        condicion: new
     ParentASIN: B01HPPEW06
     variationAttributes:
       - name: style_name
@@ -309,6 +314,7 @@ productos:
     nombreCompleto: >-
       Moto Eléctrica Niños 3 Años 4 Años 5 Años CR 6V Verde – Moto a Batería para Niños con Ruedas de Apoyo - Puño
       Acelerador - 5-6 km/h – INJUSA
+    condicion: new
   - ASIN: B0CBQ174WS
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -384,6 +390,7 @@ productos:
     nombreCompleto: >-
       Moto Eléctrica Niños 3 Años 4 Años 5 Años 6 Años Thunder MAX VX 12V – Moto a Batería para Niños con Ruedas de
       Apoyo - Puño Acelerador - 5-6 km/h - Roja – INJUSA
+    condicion: new
   - ASIN: B0B1JGL7Q3
     a_tener_en_cuenta: 3 a 6 años
     brand: Babycar
@@ -520,6 +527,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0C7VXNXLW
+        condicion: new
     ParentASIN: B0C7VXNXLW
     nombreCompleto: >-
       Moto eléctrica Infantil Honda CBR 1000 12V de Babycar - Moto eléctrica Infantil con Acelerador de pie y Acceso MP3
@@ -527,4 +535,5 @@ productos:
     variationAttributes:
       - name: color_name
         value: Rojo
-actualizacion: '2025-09-05'
+    condicion: ''
+actualizacion: '2025-09-11'

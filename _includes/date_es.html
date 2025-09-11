@@ -1,6 +1,7 @@
-{% assign meses = "enero,febrero,marzo,abril,mayo,junio,julio,agosto,septiembre,octubre,noviembre,diciembre" | split: "," %}
-{% assign dia = include.date | date: "%-d" %}
-{% assign mes = include.date | date: "%-m" | minus: 1 %}
-{% assign mes_nombre = meses[mes] %}
-{% assign anio = include.date | date: "%Y" %}
-{{ dia }} de {{ mes_nombre }} de {{ anio }}
+{%- assign target = include.date | date: "%Y-%m-%d" -%}
+{%- assign today  = "now" | date: "%Y-%m-%d" -%}
+{%- assign yesterday = "now" | date: "%s" | minus: 86400 | date: "%Y-%m-%d" -%}
+
+
+  {{ include.date | date: "%d/%m/%Y" }}
+

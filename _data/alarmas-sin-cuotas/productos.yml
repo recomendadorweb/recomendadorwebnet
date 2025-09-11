@@ -135,6 +135,7 @@ productos:
           - name: configuration
             value: Alarm Set
         ParentASIN: B08XZDT699
+        condicion: new
       - ASIN: B0CZPK9XHQ
         title: >-
           Kit de Ring Alarm S + Cámara interior (Indoor Camera 2ª gen) con Suscripción a Ring Home (a la venta por
@@ -201,6 +202,7 @@ productos:
           - name: configuration
             value: Alarm Set
         ParentASIN: B08XZDT699
+        condicion: new
     ParentASIN: B08XZDT699
     variationAttributes:
       - name: style_name
@@ -210,6 +212,7 @@ productos:
     nombreCompleto: >-
       Kit de Ring Alarm - S | Sistema de seguridad para el hogar con alarma y vigilancia asistida opcional - Sin
       compromisos a largo plazo | Compatible con Alexa | 30 días gratis de Ring Home
+    condicion: new
   - ASIN: B092B6K1KJ
     a_tener_en_cuenta: 📦 No incluye sirena exterior por defecto
     brand: Ring
@@ -345,6 +348,7 @@ productos:
           - name: configuration
             value: Con Sirena para exteriores
         ParentASIN: B0CQRJYYP9
+        condicion: new
       - ASIN: B0CZF7ZQ8C
         title: >-
           Kit de Ring Alarm M + Cámara interior (Indoor Camera 2ª gen) con Suscripción a Ring Home (a la venta por
@@ -411,6 +415,7 @@ productos:
           - name: configuration
             value: Alarm Set
         ParentASIN: B0CQRJYYP9
+        condicion: new
       - ASIN: B0CZF9KT57
         title: >-
           Kit de Ring Alarm M + Cámara interior (Indoor Camera 2.ª gen.) con sirena para exteriores con Suscripción a
@@ -477,6 +482,7 @@ productos:
           - name: configuration
             value: Con Sirena para exteriores
         ParentASIN: B0CQRJYYP9
+        condicion: new
     ParentASIN: B0CQRJYYP9
     variationAttributes:
       - name: size_name
@@ -486,6 +492,7 @@ productos:
     nombreCompleto: >-
       Kit de Ring Alarm - M | Sistema de seguridad para el hogar con alarma y vigilancia asistida opcional - Sin
       compromisos a largo plazo | Compatible con Alexa | 30 días gratis de Ring Home
+    condicion: new
   - ASIN: B0929TGRZF
     a_tener_en_cuenta: 🔊 Sirena exterior no incluida
     brand: Ring
@@ -622,6 +629,7 @@ productos:
           - name: configuration
             value: Con Sirena para exteriores
         ParentASIN: B0CQRJG69C
+        condicion: new
       - ASIN: B0CZF7B1V8
         title: >-
           Kit de Ring Alarm L + Cámara interior (Indoor Camera 2ª gen) con suscripción a Ring Home (a la venta por
@@ -688,6 +696,7 @@ productos:
           - name: configuration
             value: Alarm Set
         ParentASIN: B0CQRJG69C
+        condicion: new
       - ASIN: B0CZF8TJ6L
         title: >-
           Kit de Ring Alarm L + Cámara interior (Indoor Camera 2.ª gen.) con sirena para exteriores con Suscripción a
@@ -754,6 +763,7 @@ productos:
           - name: configuration
             value: Con Sirena para exteriores
         ParentASIN: B0CQRJG69C
+        condicion: new
     ParentASIN: B0CQRJG69C
     variationAttributes:
       - name: size_name
@@ -763,6 +773,7 @@ productos:
     nombreCompleto: >-
       Kit de Ring Alarm - L | Sistema de seguridad para el hogar con alarma y vigilancia asistida opcional - Sin
       compromisos a largo plazo | Compatible con Alexa | 30 días gratis de Ring Home
+    condicion: new
   - ASIN: B092BBK1GF
     a_tener_en_cuenta: 🏗️ Volumen de sensores elevado, requiere tiempo para instalar
     brand: Ring
@@ -902,6 +913,7 @@ productos:
           - name: configuration
             value: Con Sirena para exteriores
         ParentASIN: B0CQRJXBLH
+        condicion: new
     ParentASIN: B0CQRJXBLH
     variationAttributes:
       - name: size_name
@@ -911,4 +923,5 @@ productos:
     nombreCompleto: >-
       Kit de Ring Alarm - XL con sirena exterior | Sistema de seguridad para el hogar con alarma y vigilancia asistida
       opcional - Sin compromisos a largo plazo | 30 días gratis de Ring Home
-actualizacion: '2025-09-05'
+    condicion: new
+actualizacion: '2025-09-11'

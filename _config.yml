@@ -8,6 +8,13 @@ author:
   name: "Carlos López"
   email: recomendadorwebnet@gmail.com
 lang: es
+timezone: Europe/Madrid
+
+
+# Opciones del plugin de categorías
+categoria_permalink: "/categorias/:slug/"   # cambia el patrón si quieres
+categoria_layout: "categoria"          # layout a usar para las páginas de categoría
+
 
 # Directorios
 include: ["_pages"]

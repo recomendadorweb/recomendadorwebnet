@@ -1,0 +1,90 @@
+cabecera:
+  # KW_ATACADA: vestido invitada otoño | VOL: 1900
+  principal: vestido de invitada de otoño
+  meta:
+    vol: 1900
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: vestido invitada otoño | VOL: 1900
+  - vestido de invitada de otoño
+  # KW_ATACADA: vestidos invitada boda otoño 2024 | VOL: 1300
+  - vestidos de invitada de boda de otoño 2024
+  # KW_ATACADA: vestido invitada boda otoño 2024 | VOL: 720
+  - vestido de invitada de boda de otoño 2024
+  # KW_ATACADA: vestidos boda otoño | VOL: 720
+  - vestidos de boda de otoño
+secciones:
+  - kw: vestido invitada otoño
+    # KW_ATACADA: vestido invitada otoño | VOL: 1900
+    titulo: vestido de invitada de otoño
+    id: vestido-invitada-otono
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1900
+    diff: 0
+    intent: I
+  - kw: vestidos invitada boda otoño 2024
+    # KW_ATACADA: vestidos invitada boda otoño 2024 | VOL: 1300
+    titulo: vestidos de invitada de boda de otoño 2024
+    id: vestidos-invitada-boda-otono-2024
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1300
+    diff: 0
+    intent: I
+  - kw: vestido invitada boda otoño 2024
+    # KW_ATACADA: vestido invitada boda otoño 2024 | VOL: 720
+    titulo: vestido de invitada de boda de otoño 2024
+    id: vestido-invitada-boda-otono-2024
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 720
+    diff: 0
+    intent: I
+  - kw: vestidos boda otoño
+    # KW_ATACADA: vestidos boda otoño | VOL: 720
+    titulo: vestidos de boda de otoño
+    id: vestidos-boda-otono
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 720
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: vestido invitada otoño | VOL: 1900
+  - vestido de invitada de otoño
+  # KW_ATACADA: vestidos invitada boda otoño 2024 | VOL: 1300
+  - vestidos de invitada de boda de otoño 2024
+  # KW_ATACADA: vestido invitada boda otoño 2024 | VOL: 720
+  - vestido de invitada de boda de otoño 2024
+  # KW_ATACADA: vestidos boda otoño | VOL: 720
+  - vestidos de boda de otoño
+  # KW_ATACADA: vestidos invitada otoño | VOL: 590
+  - vestidos de invitada de otoño
+  # KW_ATACADA: invitada boda otoño | VOL: 480
+  - invitada de boda de otoño
+  # KW_ATACADA: vestido invitada otoño 2024 | VOL: 480
+  - vestido de invitada de otoño 2024
+  # KW_ATACADA: vestidos invitada boda otoño | VOL: 480
+  - vestidos de invitada de boda de otoño
+html_map:
+  h1: vestido de invitada de otoño
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - vestido de invitada de otoño
+  - vestidos de invitada de boda de otoño 2024
+  - vestido de invitada de boda de otoño 2024
+  - vestidos de boda de otoño
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 8
+  total_brands_detected: 80

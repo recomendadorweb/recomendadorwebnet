@@ -1,0 +1,10 @@
+---
+layout: default
+title: "Categorías"
+permalink: /categorias/
+---
+<ul>
+  {%- for c in site.data.categorias -%}
+    <li><a href="{{ c.url | relative_url }}">{{ c.name }}</a> ({{ c.count }})</li>
+  {%- endfor -%}
+</ul>

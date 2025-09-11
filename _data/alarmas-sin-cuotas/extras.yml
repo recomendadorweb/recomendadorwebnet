@@ -46,6 +46,7 @@ productos:
     title: Teclado de la Ring Alarm (2.ª generación)
     variantes: []
     nombreCompleto: Teclado de la Ring Alarm (2.ª generación)
+    condicion: new
   - ASIN: B08J6C5JJN
     a_tener_en_cuenta:
       - Requiere estación base de Ring Alarm
@@ -93,6 +94,7 @@ productos:
     title: Detector de movimiento de Ring Alarm (2.ª generación)
     variantes: []
     nombreCompleto: Detector de movimiento de Ring Alarm (2.ª generación)
+    condicion: new
   - ASIN: B08J6SJBFD
     a_tener_en_cuenta:
       - Requiere estación base Ring Alarm
@@ -136,6 +138,7 @@ productos:
     title: Sensor de contacto de Ring Alarm (2.ª generación)
     variantes: []
     nombreCompleto: Sensor de contacto de Ring Alarm (2.ª generación)
+    condicion: new
   - ASIN: B0923BB6KQ
     a_tener_en_cuenta:
       - Funciona con pilas
@@ -195,6 +198,7 @@ productos:
     title: Sensor de contacto de exteriores de la Ring Alarm
     variantes: []
     nombreCompleto: Sensor de contacto de exteriores de la Ring Alarm
+    condicion: new
   - ASIN: B08J67ZNCD
     a_tener_en_cuenta:
       - No funciona sin estación base
@@ -233,6 +237,7 @@ productos:
     title: Extensor de alcance de la Ring Alarm (2.ª generación)
     variantes: []
     nombreCompleto: Extensor de alcance de la Ring Alarm (2.ª generación)
+    condicion: new
   - ASIN: B08HGYR7JC
     a_tener_en_cuenta:
       - Necesita fuente de energía adicional (no incluida)
@@ -293,6 +298,7 @@ productos:
     title: Sirena para exteriores Ring Alarm de Amazon
     variantes: []
     nombreCompleto: Sirena para exteriores Ring Alarm de Amazon
+    condicion: new
   - ASIN: B09NXP9QBL
     a_tener_en_cuenta:
       - Requiere Ring Home Standard para alertas avanzadas
@@ -350,6 +356,7 @@ productos:
     title: Botón del pánico Ring de Amazon
     variantes: []
     nombreCompleto: Botón del pánico Ring de Amazon
+    condicion: new
   - ASIN: B09LFGXM5K
     a_tener_en_cuenta:
       - No es un dispositivo electrónico
@@ -394,6 +401,7 @@ productos:
     title: Placa de seguridad Ring
     variantes: []
     nombreCompleto: Placa de seguridad Ring
+    condicion: new
   - ASIN: B08TGJTVG6
     a_tener_en_cuenta:
       - Requiere Ring Home Standard para grabación
@@ -452,6 +460,7 @@ productos:
     title: Sensor de rotura de cristales para Ring Alarm
     variantes: []
     nombreCompleto: Sensor de rotura de cristales para Ring Alarm
+    condicion: new
   - ASIN: B0B6GKHS2S
     a_tener_en_cuenta:
       - No incluye almacenamiento sin Ring Home Standard
@@ -607,6 +616,7 @@ productos:
           - name: configuration
             value: 1 Cámara
         ParentASIN: B0C62PV871
+        condicion: new
       - ASIN: B0CRM5LQZN
         title: >-
           Ring Cámara interior (Indoor Camera 2.ª gen.) | Cámara de vigilancia wifi con enchufe para mascotas | Vídeo
@@ -675,6 +685,7 @@ productos:
           - name: configuration
             value: 1 Cámara
         ParentASIN: B0C62PV871
+        condicion: new
       - ASIN: B0CRM29NTV
         title: >-
           Ring Cámara interior (Indoor Camera 2.ª gen.) | Cámara de vigilancia wifi con enchufe para mascotas | Vídeo
@@ -743,6 +754,7 @@ productos:
           - name: configuration
             value: 1 Cámara
         ParentASIN: B0C62PV871
+        condicion: new
     ParentASIN: B0C62PV871
     variationAttributes:
       - name: color_name
@@ -754,4 +766,5 @@ productos:
     nombreCompleto: >-
       Ring Cámara interior (Indoor Camera 2.ª gen.) | Cámara de vigilancia wifi con enchufe para mascotas | Vídeo 1080p
       HD, comunicación bidireccional, cubierta de privacidad | 30 días gratis de Ring Home
-actualizacion: '2025-09-05'
+    condicion: new
+actualizacion: '2025-09-11'

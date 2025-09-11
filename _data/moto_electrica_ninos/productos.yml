@@ -4,21 +4,21 @@ productos:
     brand: HOMCOM
     caracteristicasAmazon:
       - >-
-        LICENCIA DE VESPA: Esta moto eléctrica cuenta con licencia oficial de VESPA y está recomendada para niños
-        mayores de 18 meses (bajo la supervisión de un adulto) y soporta un peso de hasta 25 kg. Perfecta para jugar
+        LICENCIA DE VESPA: Esta moto eléctrica Infantil cuenta con licencia oficial de VESPA y está recomendada para
+        niños de 18-36 meses (bajo la supervisión de un adulto) y soporta un peso de hasta 25 kg. Perfecta para jugar
         tanto en exteriores como en interiores
       - >-
-        FÁCIL DE USAR CON VELOCIDAD DE SEGURIDAD: Al ser una moto pensada para los más pequeños es muy fácil de manejar,
-        simplemente accionando el pedal irá hacia adelante con una velocidad máxima de 3 km/h
+        FÁCIL DE USAR CON VELOCIDAD DE SEGURIDAD: Al ser una moto pensada para los más pequeños, la moto de batería es
+        muy fácil de manejar, simplemente accionando el pedal irá hacia adelante con una velocidad máxima de 3 km/h
       - >-
-        SEGURA Y ESTABLE: Sus 4 ruedas, 2 anchas y 2 ruedines auxiliares, aseguran que tu bebé viaje de forma estable y
-        segura. Además, el asiento amplio de PP, es muy cómodo para su uso
+        SEGURA Y ESTABLE: Las 4 ruedas, 2 anchas y 2 ruedines auxiliares de esta moto de juguete eléctrica aseguran que
+        tu bebé viaje de forma estable y segura. Además, el asiento amplio de PU, es muy cómodo para su uso
       - >-
         CONDUCCIÓN REALISTA: Incluso los más peques de la casa pueden disfrutar de una conducción realista con esta moto
-        que tiene faro (delantero con luz real), manillar con bocina y pedal como las de verdad. El faro delantero se
-        ilumina al pisar el pedal
+        de batería que tiene faro (delantero con luz real), manillar con bocina y pedal como las de verdad. El faro
+        delantero se ilumina al pisar el pedal
       - >-
-        AUTONOMÍA DE 45 MINUTOS: Cuenta con una batería de 6 V que se recomienda cargar durante 9-10 horas la primera
+        AUTONOMÍA DE 45 MINUTOS: Cuenta con una batería de 6V que se recomienda cargar durante 9-10 horas la primera
         vez, y unas 8 horas las siguientes. De este modo (dependiendo del tipo de uso) puede tener una autonomía de
         hasta 45 minutos. Medidas totales: 66,5x38x52 cm (LxANxAL)
     descripcion: >-
@@ -28,11 +28,11 @@ productos:
       un toque muy realista. Ideal para dar sus primeros paseos con una sonrisa de oreja a oreja.
     disponibilidad: En stock
     enlace: https://amzn.to/4l4UVD2?tag=recomendadorn-21&th=1
-    imagen: https://m.media-amazon.com/images/I/41SaPf29KBL._SL500_.jpg
+    imagen: https://m.media-amazon.com/images/I/41NqQjIIkyL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/41JEEUOk34L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/41gC6F8iJuL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/511MhK-WicL._SL500_.jpg
@@ -41,13 +41,13 @@ productos:
       - url: https://m.media-amazon.com/images/I/41M8jRQ4diL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41m6R1rYwQL._SL500_.jpg
-        width: 500
-        height: 500
       - url: https://m.media-amazon.com/images/I/51dtQ471+SL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/41E3zsDlWXL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41m6R1rYwQL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/41KoKYONwVL._SL500_.jpg
@@ -72,8 +72,8 @@ productos:
           HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas
           Motocicleta Infantil con Licencia 66,5x38x52 cm Rojo
         brand: HOMCOM
-        precio: "81,99\_€"
-        precioOriginal: No especificado
+        precio: "63,74\_€"
+        precioOriginal: "81,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Pp+i1f0DL._SL500_.jpg
         imagenWidth: 500
@@ -128,12 +128,13 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0FBX5TQM9
+        condicion: new
       - ASIN: B0DSGSL6S3
         title: >-
           HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas
           Motocicleta Infantil con Licencia 66,5x38x52 cm Rosa
         brand: HOMCOM
-        precio: "81,99\_€"
+        precio: "67,14\_€"
         precioOriginal: "81,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/419BPHyaNdL._SL500_.jpg
@@ -189,6 +190,7 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FBX5TQM9
+        condicion: new
       - ASIN: B08QVK1K5Q
         title: >-
           HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas
@@ -250,6 +252,7 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0FBX5TQM9
+        condicion: new
     ParentASIN: B0FBX5TQM9
     variationAttributes:
       - name: color_name
@@ -257,6 +260,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas Motocicleta
       Infantil con Licencia 66,5x38x52 cm Blanco
+    condicion: new
   - ASIN: B07MT59Z1D
     a_tener_en_cuenta: 1 a 3 años
     brand: HOMCOM
@@ -332,7 +336,7 @@ productos:
         precio: "68,99\_€"
         precioOriginal: "71,99\_€"
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41vR8uKmB8L._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/414CEcYcsEL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
@@ -382,6 +386,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0F24HBFY5
+        condicion: new
       - ASIN: B07MT7XWDM
         title: >-
           HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto
@@ -440,6 +445,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0F24HBFY5
+        condicion: new
     ParentASIN: B0F24HBFY5
     variationAttributes:
       - name: color_name
@@ -447,6 +453,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto Infantil
       con Música Carga 20 kg Rojo
+    condicion: new
   - ASIN: B08J82PGH6
     a_tener_en_cuenta: A partir de 2 años
     brand: TURBO CHALLENGE
@@ -512,6 +519,7 @@ productos:
     title: TURBO CHALLENGE Baby Driver Vespa GTS, Color Verde Aguamarina, Large (MGM 119151)
     variantes: []
     nombreCompleto: TURBO CHALLENGE Baby Driver Vespa GTS, Color Verde Aguamarina, Large (MGM 119151)
+    condicion: new
   - ASIN: B0BJDKDV86
     a_tener_en_cuenta: A partir de 2 años
     brand: HOMCOM
@@ -588,7 +596,7 @@ productos:
           HOMCOM Moto Eléctrica BMW HP4 para Niños de +18 Meses Motocicleta de Batería 6V con Música USB Velocidad 2,5
           km/h Avance y Retroceso Carga 30 kg 82,5x42x54 cm Rojo
         brand: HOMCOM
-        precio: "94,99\_€"
+        precio: "87,99\_€"
         precioOriginal: "98,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41r+0C8n8uL._SL500_.jpg
@@ -644,6 +652,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0BKK44X75
+        condicion: new
     ParentASIN: B0BKK44X75
     variationAttributes:
       - name: color_name
@@ -651,6 +660,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica BMW HP4 para Niños de +18 Meses Motocicleta de Batería 6V con Música USB Velocidad 2,5 km/h
       Avance y Retroceso Carga 30 kg 82,5x42x54 cm Azul
+    condicion: new
   - ASIN: B0DJM8FKMR
     a_tener_en_cuenta: A partir de 2 años
     brand: AIYAPLAY
@@ -714,7 +724,7 @@ productos:
       - Buena batería
       - Con música
     nombre: AIYAPLAY Moto Eléctrica para Niños
-    precio: "69,99\_€"
+    precio: "66,99\_€"
     precioOriginal: No especificado
     valoracion: 4.3
     title: >-
@@ -782,6 +792,7 @@ productos:
           - name: color_name
             value: Negro Y Rojo
         ParentASIN: B0DJNT63S2
+        condicion: new
     ParentASIN: B0DJNT63S2
     variationAttributes:
       - name: color_name
@@ -789,6 +800,7 @@ productos:
     nombreCompleto: >-
       AIYAPLAY Moto Eléctrica para Niños de +2 Años Moto de Batería para Niños 6V con Función de Soplar Burbujas Faros
       Música Velocidad 3 km/h Carga 30 kg Verde
+    condicion: new
   - ASIN: B072JCB6MF
     a_tener_en_cuenta: 3 a 5 años
     brand: Famosa
@@ -838,6 +850,7 @@ productos:
     nombreCompleto: >-
       FEBER - Motorbike Cross 400F con Batería de 6V, Luces en los Faros, Sonido de Motor, Claxón y Dos Ruedines
       Traseros para Estabilidad, Peso Soportado 35 kg, Niños de 3 a 5 años, Famosa (800011250)
+    condicion: new
   - ASIN: B0BDFCMVCX
     a_tener_en_cuenta: 3 a 5 años
     brand: HOMCOM
@@ -912,7 +925,7 @@ productos:
           HOMCOM Moto Eléctrica con Licencia Honda para Niños de 3-5 Años Moto a Batería 6V con Faro Bocina Música y
           Ruedas Auxiliares Extraíbles Carga 30 kg 90x44x52 cm Blanco
         brand: HOMCOM
-        precio: "121,99\_€"
+        precio: "114,99\_€"
         precioOriginal: "121,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Rc-sS0A-L._SL500_.jpg
@@ -969,6 +982,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0BF9GWM33
+        condicion: new
     ParentASIN: B0BF9GWM33
     variationAttributes:
       - name: color_name
@@ -976,6 +990,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica con Licencia Honda para Niños de 3-5 Años Moto a Batería 6V con Faro Bocina Música y Ruedas
       Auxiliares Extraíbles Carga 30 kg 90x44x52 cm Rojo
+    condicion: new
   - ASIN: B0DBCGXFH9
     a_tener_en_cuenta: A partir de 3 años
     brand: AIYAPLAY
@@ -1046,6 +1061,7 @@ productos:
     nombreCompleto: >-
       AIYAPLAY Moto Eléctrica para Niños de +3 Años con Licencia Honda Motocicleta de Batería 12V con USB MP3 Luz LED
       Moto para Niños con Velocidad 3 km/h Carga 30 kg Rojo
+    condicion: new
   - ASIN: B09C1NXQGF
     a_tener_en_cuenta: A partir de 3 años
     brand: HOMCOM
@@ -1119,7 +1135,7 @@ productos:
           HOMCOM Moto Eléctrica Infantil con 3 Ruedas Trimoto para Niños de +3 Años con Batería 6V Recargable Funciones
           de Música Bocina Faros 86x42x52 cm Negro y Rojo
         brand: HOMCOM
-        precio: "74,99\_€"
+        precio: "63,74\_€"
         precioOriginal: "76,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41P275Dxg1L._SL500_.jpg
@@ -1176,6 +1192,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B09C29TCDZ
+        condicion: new
       - ASIN: B0DBL5HD6R
         title: >-
           HOMCOM Moto Eléctrica Infantil con 3 Ruedas Trimoto para Niños de +3 Años con Batería 6V Recargable Funciones
@@ -1238,6 +1255,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B09C29TCDZ
+        condicion: new
     ParentASIN: B09C29TCDZ
     variationAttributes:
       - name: color_name
@@ -1245,6 +1263,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica Infantil con 3 Ruedas Trimoto para Niños de +3 Años con Batería 6V Recargable Funciones de
       Música Bocina Faros 86x42x52 cm Negro y Blanco
+    condicion: new
   - ASIN: B088X3VSH4
     a_tener_en_cuenta: 3 a 6 años
     brand: ATAA
@@ -1292,7 +1311,7 @@ productos:
       - Ruedas EVA
       - Luces LED
     nombre: ATAA Aprilia Dorsoduro 12v Moto eléctrica Infantil
-    precio: "181,89\_€"
+    precio: "181,49\_€"
     precioOriginal: "229,99\_€"
     valoracion: 4.3
     title: >-
@@ -1302,6 +1321,7 @@ productos:
     nombreCompleto: >-
       ATAA Aprilia Dorsoduro 12v Moto eléctrica Infantil Increíble Moto eléctrica para niños y niñas, con Dos Motores de
       12v
+    condicion: new
   - ASIN: B085H35QJG
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -1406,6 +1426,7 @@ productos:
           - name: style_name
             value: Racing Honda CBR
         ParentASIN: B0DJM2JCBR
+        condicion: new
       - ASIN: B0FDG8NT91
         title: >-
           Moto Eléctrica Niños 3 Años 4 Años 5 Años Honda Competición 12V – Moto a Batería para Niños con Ruedas de
@@ -1460,6 +1481,7 @@ productos:
           - name: style_name
             value: Honda Competition
         ParentASIN: B0DJM2JCBR
+        condicion: new
     ParentASIN: B0DJM2JCBR
     variationAttributes:
       - name: style_name
@@ -1467,6 +1489,7 @@ productos:
     nombreCompleto: >-
       Moto Eléctrica Niños 3 Años 4 Años 5 Años Repsol 12V – Moto a Batería para Niños con Ruedas de Apoyo - Luces y
       Sonidos - Licencia de Marca – INJUSA
+    condicion: new
   - ASIN: B084VTCVYF
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -1546,6 +1569,7 @@ productos:
           - name: color_name
             value: Amarillo
         ParentASIN: B01HPPEW06
+        condicion: new
     ParentASIN: B01HPPEW06
     variationAttributes:
       - name: style_name
@@ -1555,6 +1579,7 @@ productos:
     nombreCompleto: >-
       Moto Eléctrica Niños 3 Años 4 Años 5 Años CR 6V Verde – Moto a Batería para Niños con Ruedas de Apoyo - Puño
       Acelerador - 5-6 km/h – INJUSA
+    condicion: new
   - ASIN: B0CBQ174WS
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -1630,6 +1655,7 @@ productos:
     nombreCompleto: >-
       Moto Eléctrica Niños 3 Años 4 Años 5 Años 6 Años Thunder MAX VX 12V – Moto a Batería para Niños con Ruedas de
       Apoyo - Puño Acelerador - 5-6 km/h - Roja – INJUSA
+    condicion: new
   - ASIN: B0B1JGL7Q3
     a_tener_en_cuenta: 3 a 6 años
     brand: Babycar
@@ -1766,6 +1792,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0C7VXNXLW
+        condicion: new
     ParentASIN: B0C7VXNXLW
     nombreCompleto: >-
       Moto eléctrica Infantil Honda CBR 1000 12V de Babycar - Moto eléctrica Infantil con Acelerador de pie y Acceso MP3
@@ -1773,6 +1800,7 @@ productos:
     variationAttributes:
       - name: color_name
         value: Rojo
+    condicion: ''
   - ASIN: B0F9FH3DPP
     a_tener_en_cuenta: A partir de 4 años
     brand: RCB
@@ -1894,6 +1922,7 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0F9FQPDQY
+        condicion: new
       - ASIN: B0F9FKR47C
         title: >-
           RCB R9X Pro Moto Eléctrica Niños, Motocicleta Eléctrica con Motor 350W, Modos de Velocidad 10/15/25 km/h &
@@ -1951,6 +1980,7 @@ productos:
           - name: color_name
             value: Rouge
         ParentASIN: B0F9FQPDQY
+        condicion: new
     ParentASIN: B0F9FQPDQY
     variationAttributes:
       - name: color_name
@@ -1958,6 +1988,7 @@ productos:
     nombreCompleto: >-
       RCB R9X Pro Moto Eléctrica Niños, Motocicleta Eléctrica con Motor 350W, Modos de Velocidad 10/15/25 km/h & Alcance
       16KM, Iluminación Ambiental, Neumático 12" Moto para Infantil 4+ Años
+    condicion: new
   - ASIN: B0DXVB4MCB
     a_tener_en_cuenta: hasta 7 años
     brand: EVERCROSS
@@ -2020,8 +2051,8 @@ productos:
       - Hasta 16 km/h
       - Ruedas EVA
     nombre: EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12''
-    precio: "229,99\_€"
-    precioOriginal: No especificado
+    precio: "209,99\_€"
+    precioOriginal: "229,99\_€"
     valoracion: 4.4
     title: >-
       EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12" de Ancho, Modos de Velocidad 8/16KM/H y Autonomía de
@@ -2032,7 +2063,7 @@ productos:
           EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12" de Ancho, Modos de Velocidad 8/16KM/H y
           Autonomía de 12KM, Sistema de Frenos de Disco, para Niños de 3 a 7 Años de Edad
         brand: EVERCROSS
-        precio: "229,99\_€"
+        precio: "209,99\_€"
         precioOriginal: "299,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/5166aahl9SL._SL500_.jpg
@@ -2089,13 +2120,14 @@ productos:
           - name: color_name
             value: 13m Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0CS2J5YB2
         title: >-
           EVERCROSS EV05M Moto Eléctrica Niños, Moto Eléctrica 150W, 8/16 km/h Modo Velocidad y 10 km Largo Alcance Moto
           Eléctrica, 12'' Moto Cross para Niños de 3-12 Años
         brand: EVERCROSS
-        precio: "229,99\_€"
-        precioOriginal: No especificado
+        precio: "209,99\_€"
+        precioOriginal: "229,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41UTxc5K55L._SL500_.jpg
         imagenWidth: 500
@@ -2155,13 +2187,14 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0CS2WQKRX
         title: >-
           EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
           Cross para Niños de 3-12 Años
         brand: EVERCROSS
-        precio: "229,99\_€"
-        precioOriginal: No especificado
+        precio: "209,99\_€"
+        precioOriginal: "229,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41F8A-XAEBL._SL500_.jpg
         imagenWidth: 444
@@ -2221,12 +2254,13 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0FHGTGZ3Y
         title: >-
           EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
           Cross para Niños de 3-12 Años
         brand: EVERCROSS
-        precio: "229,99\_€"
+        precio: "209,99\_€"
         precioOriginal: "279,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41dCBpAa+UL._SL500_.jpg
@@ -2287,6 +2321,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0FHK5CFL5
+        condicion: new
     ParentASIN: B0FHK5CFL5
     variationAttributes:
       - name: color_name
@@ -2294,6 +2329,7 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12'' de Ancho, Modos de Velocidad 8/16KM/H y Autonomía
       de 12KM, Sistema de Frenos de Disco, para Niños de 3 a 7 Años de Edad
+    condicion: new
   - ASIN: B0F8BHG12S
     a_tener_en_cuenta: hasta 8 años
     brand: RCB
@@ -2346,66 +2382,13 @@ productos:
       - Buena batería
       - 4 km/h
     nombre: RCB Moto Eléctrica Niños
-    precio: "169,99\_€"
+    precio: "189,99\_€"
     precioOriginal: "219,99\_€"
     valoracion: 4.4
     title: >-
       RCB Moto Eléctrica Niños 12V, electricas Infantiles con 2 Motores, Velocidad de 4 km/h, Luces LED, Múltiples Tipos
       de Música para Educación Temprana, la Mejor Moto Niños para Niños de 3 a 8 Años
-    variantes:
-      - ASIN: B0F8BG39GC
-        title: >-
-          RCB Moto Eléctrica Niños 12V, electricas Infantiles con 2 Motores, Velocidad de 4 km/h, Luces LED, Múltiples
-          Tipos de Música para Educación Temprana, la Mejor Moto Niños para Niños de 3 a 8 Años
-        brand: RCB
-        precio: "169,99\_€"
-        precioOriginal: "219,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41GRBwld3EL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41joMHOYVFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51dGk+qfBDL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51U7aHdA3XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51oC9HnHzkL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41saSEs5tHL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/514fjjzQaLL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F8BG39GC?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            🚀 【Doble Motor y Conducción Suave】¡Esta moto eléctrica niños premium cuenta con doble motor que ofrece la
-            velocidad perfecta de 4 km/h para niños de 3 a 8 años! Ruedas antideslizantes de 7 pulgadas y sistema
-            avanzado de amortiguación para una conducción ultra suave en cualquier terreno.
-          - >-
-            🎵 【Música Interactiva y Cuentos】¡Experiencia completa con canciones educativas, cuentos incorporados y
-            conexión USB! Luces LED dinámicas que sincronizan con la música para diversión inmersiva.
-          - >-
-            🛑 【Características de Seguridad Inteligente】Moto eléctrica niños profesional con frenado automático
-            instantáneo al soltar el acelerador. Diseño de centro de gravedad bajo (102×55×56 cm) garantiza máxima
-            estabilidad para pilotos desde 36 meses.
-          - >-
-            🌈 【Efectos de Luces Llamativos】¡Destácate con el deslumbrante sistema de luces LED! Potente batería de 12V
-            ofrece larga diversión con recarga rápida.
-          - >-
-            👶 【Diseñada para Pequeños Pilotos】Esta excepcional moto eléctrica niños combina construcción ligera con
-            tecnología de amortiguación robusta. Asiento ergonómico garantiza comodidad en largas aventuras.
-        variationAttributes:
-          - name: color_name
-            value: Blanco
-        ParentASIN: B0F9K6V8DW
+    variantes: []
     ParentASIN: B0F9K6V8DW
     variationAttributes:
       - name: color_name
@@ -2413,6 +2396,7 @@ productos:
     nombreCompleto: >-
       RCB Moto Eléctrica Niños 12V, electricas Infantiles con 2 Motores, Velocidad de 4 km/h, Luces LED, Múltiples Tipos
       de Música para Educación Temprana, la Mejor Moto Niños para Niños de 3 a 8 Años
+    condicion: new
   - ASIN: B0F9KN8762
     a_tener_en_cuenta: hasta 8 años
     brand: RCB
@@ -2534,63 +2518,7 @@ productos:
           - name: color_name
             value: Amarillo
         ParentASIN: B0F9JW7TKF
-      - ASIN: B0F9KSHGVL
-        title: >-
-          RCB 12V Moto Eléctrica Niños, 2 Motores y 12" Pulgadas Motos Electricas Infantiles 3/8 km/h Modos de
-          Velocidad, Multi-Música, Puerto USB, Moto Bateria Niño para 3-8 Niños
-        brand: RCB
-        precio: "209,99\_€"
-        precioOriginal: "279,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41hwBSmtuQL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51Lw0k27rTL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51kC7Y9KWRL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51suAoF8WSL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51khb892zoL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51-CeDzeM1L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51gBUg1mHpL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0F9KSHGVL?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            🏍️【Gentle Dual-Motor Power】Esta moto eléctrica niños cuenta con motores duales de 12V con Low-Speed (3
-            km/h) para principiantes y High-Speed (8 km/h) para pilotos más experimentados. La aceleración suave
-            proporciona una experiencia de aprendizaje cómoda en esta motocicleta eléctrica.
-          - >-
-            🏍️【Diseño todoterreno estable】El correpasillos eléctrico para niños viene equipado con neumáticos
-            todoterreno de 12 pulgadas que ofrecen una pisada segura sobre hierba, aceras y otras superficies planas. La
-            amplia distancia entre ejes asegura un equilibrio estable durante los paseos en esta moto eléctrica.
-          - >-
-            🏍️【Smart Brake System】Suelte para parar, seguro y sin preocupaciones. El vehículo frena automáticamente
-            cuando se suelta el pedal del acelerador-sin necesidad de operaciones complejas. El diseño sin mando a
-            distancia evita interferencias, facilitando la supervisión a los padres.
-          - >-
-            🏍️【Interactive Music Features】Nuestra moto eléctrica niños múltiples canciones infantiles alegres y
-            agradables sonidos del motor. El altavoz incorporado funciona con USB para que los niños puedan disfrutar de
-            sus canciones favoritas mientras montan su bicicleta eléctrica para niños, apoyando la educación de la
-            primera infancia a través del aprendizaje musical y el desarrollo del ritmo.
-          - >-
-            🏍️【Child-Friendly Safety Features】Nuestra moto eléctrica para niños se detiene automáticamente cuando se
-            suelta y tiene neumáticos antideslizantes para un manejo seguro. El diseño de perfil bajo y el asiento
-            acolchado garantizan una conducción cómoda y sin preocupaciones en esta bicicleta eléctrica para niños.
-        variationAttributes:
-          - name: color_name
-            value: Rojo
-        ParentASIN: B0F9JW7TKF
+        condicion: new
     ParentASIN: B0F9JW7TKF
     variationAttributes:
       - name: color_name
@@ -2598,6 +2526,7 @@ productos:
     nombreCompleto: >-
       RCB 12V Moto Eléctrica Niños, 2 Motores y 12" Pulgadas Motos Electricas Infantiles 3/8 km/h Modos de Velocidad,
       Multi-Música, Puerto USB, Moto Bateria Niño para 3-8 Niños
+    condicion: ''
   - ASIN: B0C9J4RJTF
     a_tener_en_cuenta: hasta 8 años
     brand: RELAX4LIFE
@@ -2719,6 +2648,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0CVKJFS25
+        condicion: new
     ParentASIN: B0CVKJFS25
     variationAttributes:
       - name: color_name
@@ -2726,6 +2656,7 @@ productos:
     nombreCompleto: >-
       RELAX4LIFE 12V Aprilia Moto Eléctrica Niños con 2 Ruedas Auxiliares, Velocidad 5,5-6KM/H, Moto Infantil con Luces,
       Música, Faros, Marcha Adelante, USB y MP3 para Niños 3-8 Años, Carga 25kg (Amarillo)
+    condicion: new
   - ASIN: B0CM61498D
     a_tener_en_cuenta: hasta 12 años
     brand: RCB TECH
@@ -2839,6 +2770,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0CM63GP72
+        condicion: new
       - ASIN: B0CM63PYN3
         title: >-
           RCB TECH R9X Moto Eléctrica Infantil,3 Modos de Velocidad, máx 25km/h, Autonomía máxima 15KM, Neumáticos de 12
@@ -2893,6 +2825,7 @@ productos:
           - name: color_name
             value: Negro-verde
         ParentASIN: B0CM63GP72
+        condicion: new
     ParentASIN: B0CM63GP72
     variationAttributes:
       - name: color_name
@@ -2900,6 +2833,7 @@ productos:
     nombreCompleto: >-
       RCB TECH R9X Moto Eléctrica Infantil,3 Modos de Velocidad, máx 25km/h, Autonomía máxima 15KM, Neumáticos de 12
       Pulgadas, Bicicleta de Motocross para niños de 3-12 años
+    condicion: new
   - ASIN: B0CQYMNKTC
     a_tener_en_cuenta: hasta 12 años
     brand: RCB
@@ -3017,6 +2951,7 @@ productos:
           - name: color_name
             value: Noir Verde
         ParentASIN: B0DBHVGD3X
+        condicion: new
       - ASIN: B0CQYMNXS1
         title: >-
           RCB R9X Moto Eléctrica Infantil, Neumáticos de 12 Pulgadas, Potente Motor, 3 Modos 8/12/25KMH, Autonomía
@@ -3073,6 +3008,7 @@ productos:
           - name: color_name
             value: Noir Bleu
         ParentASIN: B0DBHVGD3X
+        condicion: new
     ParentASIN: B0DBHVGD3X
     variationAttributes:
       - name: color_name
@@ -3080,6 +3016,7 @@ productos:
     nombreCompleto: >-
       RCB R9X Moto Eléctrica Infantil, Neumáticos de 12 Pulgadas, Potente Motor, 3 Modos 8/12/25KMH, Autonomía máxima
       15KM, Motocross para niños de 3-12 años
+    condicion: new
   - ASIN: B0BTM3GDC4
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -3202,6 +3139,7 @@ productos:
           - name: size_name
             value: EV12M
         ParentASIN: B0DF2SVG8Z
+        condicion: new
       - ASIN: B0DB87DJY4
         title: >-
           EVERCROSS EV12M Pro Moto Cross Eléctrica, Motocicleta Eléctrica con Motor de 300W, 15KM de Largo Alcance,
@@ -3273,6 +3211,7 @@ productos:
           - name: size_name
             value: EV12M PRO(Bluetooth)
         ParentASIN: B0DF2SVG8Z
+        condicion: new
       - ASIN: B0DB874VBC
         title: >-
           EVERCROSS EV12M Pro Moto Cross Eléctrica, Motocicleta Eléctrica con Motor de 300W, 15KM de Largo Alcance,
@@ -3344,6 +3283,7 @@ productos:
           - name: size_name
             value: EV12M PRO(Bluetooth)
         ParentASIN: B0DF2SVG8Z
+        condicion: new
     ParentASIN: B0DF2SVG8Z
     variationAttributes:
       - name: color_name
@@ -3353,6 +3293,7 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV12M Motocicleta Eléctrica Niños, Moto Eléctrica con Motor de 300 W, Modos de Velocidad de 8/12/25 KMH,
       15 km de Largo Alcance, Neumático de 12'', Moto Cross para niños de 3 a 12 años
+    condicion: new
   - ASIN: B0D4QS35W1
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -3479,6 +3420,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0D4TQ6F8H
+        condicion: new
     ParentASIN: B0D4TQ6F8H
     variationAttributes:
       - name: color_name
@@ -3486,6 +3428,7 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV08M Motocicleta Eléctrica para Niños, Motobici Eléctrica con Motor 150W, Velocidad de 8/16km/h y
       Autonomía 10km Moto Eléctrica, Neumáticas de 12’’, Motocross para Niños de 3 a 12 Años
+    condicion: new
   - ASIN: B0CS2WQKRX
     a_tener_en_cuenta: hasta 12 años
     brand: EVERCROSS
@@ -3550,7 +3493,7 @@ productos:
       - Hasta 16 km/h
       - Buena batería
     nombre: EVERCROSS EV05M Moto Eléctrica para Niños
-    precio: "229,99\_€"
+    precio: "209,99\_€"
     precioOriginal: "229,99\_€"
     valoracion: 4.4
     title: >-
@@ -3562,8 +3505,8 @@ productos:
           EVERCROSS EV05M Moto Eléctrica Niños, Moto Eléctrica 150W, 8/16 km/h Modo Velocidad y 10 km Largo Alcance Moto
           Eléctrica, 12'' Moto Cross para Niños de 3-12 Años
         brand: EVERCROSS
-        precio: "229,99\_€"
-        precioOriginal: No especificado
+        precio: "209,99\_€"
+        precioOriginal: "229,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41UTxc5K55L._SL500_.jpg
         imagenWidth: 500
@@ -3623,12 +3566,13 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0FHGTGZ3Y
         title: >-
           EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
           Cross para Niños de 3-12 Años
         brand: EVERCROSS
-        precio: "229,99\_€"
+        precio: "209,99\_€"
         precioOriginal: "279,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41dCBpAa+UL._SL500_.jpg
@@ -3689,13 +3633,14 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0DXVB4MCB
         title: >-
           EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12" de Ancho, Modos de Velocidad 8/16KM/H y
           Autonomía de 12KM, Sistema de Frenos de Disco, para Niños de 3 a 7 Años de Edad
         brand: EVERCROSS
-        precio: "229,99\_€"
-        precioOriginal: No especificado
+        precio: "209,99\_€"
+        precioOriginal: "229,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51uCG-Q-RcL._SL500_.jpg
         imagenWidth: 500
@@ -3751,12 +3696,13 @@ productos:
           - name: color_name
             value: 13m Azul
         ParentASIN: B0FHK5CFL5
+        condicion: new
       - ASIN: B0DXVHY7RD
         title: >-
           EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12" de Ancho, Modos de Velocidad 8/16KM/H y
           Autonomía de 12KM, Sistema de Frenos de Disco, para Niños de 3 a 7 Años de Edad
         brand: EVERCROSS
-        precio: "229,99\_€"
+        precio: "209,99\_€"
         precioOriginal: "299,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/5166aahl9SL._SL500_.jpg
@@ -3813,6 +3759,7 @@ productos:
           - name: color_name
             value: 13m Rosa
         ParentASIN: B0FHK5CFL5
+        condicion: new
     ParentASIN: B0FHK5CFL5
     variationAttributes:
       - name: color_name
@@ -3820,4 +3767,5 @@ productos:
     nombreCompleto: >-
       EVERCROSS EV05M Moto Eléctrica para Niños, 150W Motocicleta, 8/16 km/h, Alcance de 10 km, Ruedas de 12'', Moto
       Cross para Niños de 3-12 Años
-actualizacion: '2025-09-05'
+    condicion: new
+actualizacion: '2025-09-11'

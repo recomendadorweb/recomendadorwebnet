@@ -93,6 +93,7 @@ productos:
           - name: color_name
             value: Lila
         ParentASIN: B0DYYM5XJ1
+        condicion: new
       - ASIN: B0DYYL2PRC
         title: >-
           Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
@@ -138,6 +139,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DYYM5XJ1
+        condicion: new
       - ASIN: B0DYYLKK11
         title: >-
           Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
@@ -177,6 +179,7 @@ productos:
           - name: color_name
             value: Celeste
         ParentASIN: B0DYYM5XJ1
+        condicion: new
       - ASIN: B0DYYKQRRH
         title: >-
           Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
@@ -219,6 +222,7 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0DYYM5XJ1
+        condicion: new
       - ASIN: B0DYYLLMT3
         title: >-
           Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
@@ -261,6 +265,7 @@ productos:
           - name: color_name
             value: Azul/Rojo
         ParentASIN: B0DYYM5XJ1
+        condicion: new
       - ASIN: B0DYYM55J7
         title: >-
           Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
@@ -306,13 +311,63 @@ productos:
           - name: color_name
             value: Negro/Fucsia
         ParentASIN: B0DYYM5XJ1
+        condicion: new
+      - ASIN: B0DYYKNZGG
+        title: >-
+          Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
+          de Flor (Fucsia/Morado)
+        brand: Yusons
+        precio: "13,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41yywV23s-L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51UCYmJSn5L._SL500_.jpg
+            width: 489
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WugIz0ZFL._SL500_.jpg
+            width: 306
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41RyQjx547L._SL500_.jpg
+            width: 403
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41QopB-mg5L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41pjzWI++pL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CRXETlNqL._SL500_.jpg
+            width: 338
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg
+            width: 455
+            height: 500
+        enlace: https://www.amazon.es/dp/B0DYYKNZGG?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Material: 100% poliéster. Mantón tradicional popular con estampado de flores.'
+          - 'Mantón de manilla de gran tamaño: Mira foto de medida de cada modelo, son medidas adultos.'
+          - Talla única, una variedad de colores para elegir, fucsia, negro, blanco, rojo......
+          - >-
+            Ligero y suave, úsalo como chal, ya sea sobre los hombros o la cabeza. Ideal para la fiesta de abril, baile
+            de flamenco español tradicional.
+          - >-
+            Regalo perfecto: esta gran bufanda se puede presentar como un regalo a tu familia, amigos e incluso a ti
+            mismo en Acción de Gracias, Navidad, cumpleaños, Día de la Madre o algunos días especiales.
+        variationAttributes:
+          - name: color_name
+            value: Fucsia/Morado
+        ParentASIN: B0DYYM5XJ1
+        condicion: new
       - ASIN: B0DYYKG23V
         title: >-
           Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
           de Flor (Rojo)
         brand: Yusons
-        precio: "9,99\_€"
-        precioOriginal: "13,99\_€"
+        precio: "13,99\_€"
+        precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41zK68qNu0L._SL500_.jpg
         imagenWidth: 500
@@ -345,34 +400,32 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0DYYM5XJ1
-      - ASIN: B0DYYM5HB1
+        condicion: new
+      - ASIN: B0DYYM3QHF
         title: >-
-          Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
-          de Flor (Crema)
+          Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
+          Flamenca de Flor (Negro)
         brand: Yusons
-        precio: "13,99\_€"
-        precioOriginal: No especificado
+        precio: "9,99\_€"
+        precioOriginal: "13,99\_€"
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41wDZsBeezL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/41rI7OyJfeL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41la+4Yf7cL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41zP8zb20+L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41ZcP6-5HTL._SL500_.jpg
-            width: 375
+          - url: https://m.media-amazon.com/images/I/31eWOAysNpL._SL500_.jpg
+            width: 281
             height: 500
-          - url: https://m.media-amazon.com/images/I/41WSkUKcVkL._SL500_.jpg
-            width: 375
+          - url: https://m.media-amazon.com/images/I/41OEpeuHOJL._SL500_.jpg
+            width: 289
             height: 500
-          - url: https://m.media-amazon.com/images/I/41Fx8xvvKNL._SL500_.jpg
-            width: 500
-            height: 375
           - url: https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg
             width: 455
             height: 500
-        enlace: https://www.amazon.es/dp/B0DYYM5HB1?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B0DYYM3QHF?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - 'Material: 100% poliéster. Mantón tradicional popular con estampado de flores.'
           - 'Mantón de manilla de gran tamaño: Mira foto de medida de cada modelo, son medidas adultos.'
@@ -385,12 +438,54 @@ productos:
             mismo en Acción de Gracias, Navidad, cumpleaños, Día de la Madre o algunos días especiales.
         variationAttributes:
           - name: color_name
-            value: Crema
+            value: Negro
         ParentASIN: B0DYYM5XJ1
+        condicion: new
+      - ASIN: B0DYYM4RR7
+        title: >-
+          Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
+          Flamenca de Flor (Naranja)
+        brand: Yusons
+        precio: "13,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41foIkGMGsL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31YEosLxETL._SL500_.jpg
+            width: 354
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41A7TXt1pUL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31OwRg31kZL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg
+            width: 455
+            height: 500
+        enlace: https://www.amazon.es/dp/B0DYYM4RR7?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Material: 100% poliéster. Mantón tradicional popular con estampado de flores.'
+          - 'Mantón de manilla de gran tamaño: Mira foto de medida de cada modelo, son medidas adultos.'
+          - Talla única, una variedad de colores para elegir, fucsia, negro, blanco, rojo......
+          - >-
+            Ligero y suave, úsalo como chal, ya sea sobre los hombros o la cabeza. Ideal para la fiesta de abril, baile
+            de flamenco español tradicional.
+          - >-
+            Regalo perfecto: esta gran bufanda se puede presentar como un regalo a tu familia, amigos e incluso a ti
+            mismo en Acción de Gracias, Navidad, cumpleaños, Día de la Madre o algunos días especiales.
+        variationAttributes:
+          - name: color_name
+            value: Naranja
+        ParentASIN: B0DYYM5XJ1
+        condicion: new
     ParentASIN: B0DYYM5XJ1
     nombreCompleto: >-
       Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
       Flamenca de Flor (Negro/Rojo)
+    condicion: new
   - ASIN: B0F5N45BR5
     a_tener_en_cuenta: Es grande, no apto para niñas pequeñas
     caracteristicas:
@@ -458,6 +553,7 @@ productos:
           - name: color_name
             value: Morado Claro
         ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07TK1LQJZ
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -497,6 +593,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07TK1MR47
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -527,6 +624,7 @@ productos:
           - name: color_name
             value: Amarillo
         ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07TGKQ6G4
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -563,6 +661,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07TK17DNX
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -593,39 +692,7 @@ productos:
           - name: color_name
             value: Naranja
         ParentASIN: B07THL4TCN
-      - ASIN: B07TK1KX7N
-        title: >-
-          MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
-          Amarillo Azul. Envio desde madrid con seguimiento. (Rosa)
-        brand: MUNDDY
-        precio: "8,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51vjaMEB-AL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51y2oqQ6wgL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51aPM8zAdaL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B07TK1KX7N?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Mantón de manila bordado de Flores con acabado en pico
-          - >-
-            Disponible en varios colores y diseños diferentes para que elija el que más le guste y mejor se adapte a sus
-            necesidades.
-          - Fabricado 100% en poliester de gran calidad. Sus medidas son 150x70cm (adulta)
-          - >-
-            Perfecto para todo tipo de eventos o celebraciones o para llevarlo en el día a día. Muy elegante y
-            conjuntará perfectamente con el look que elija.
-          - Envio desde madrid por pàquete estandar o Express segun su nesecidad.
-        variationAttributes:
-          - name: color_name
-            value: Rosa
-        ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07TK13TRW
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -662,6 +729,7 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07TGKQNNZ
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -695,6 +763,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07TJYZZ7C
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -725,6 +794,7 @@ productos:
           - name: color_name
             value: Verde Oscuro
         ParentASIN: B07THL4TCN
+        condicion: new
       - ASIN: B07THL67RK
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -755,10 +825,46 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B07THL4TCN
+        condicion: new
+      - ASIN: B07TK1KX7N
+        title: >-
+          MUNDDY® - Mantón Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
+          Amarillo Azul. Envio desde madrid con seguimiento. (Rosa)
+        brand: MUNDDY
+        precio: "8,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51vjaMEB-AL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51y2oqQ6wgL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51aPM8zAdaL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B07TK1KX7N?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Mantón de manila bordado de Flores con acabado en pico
+          - >-
+            Disponible en varios colores y diseños diferentes para que elija el que más le guste y mejor se adapte a sus
+            necesidades.
+          - Fabricado 100% en poliester de gran calidad. Sus medidas son 150x70cm (adulta)
+          - >-
+            Perfecto para todo tipo de eventos o celebraciones o para llevarlo en el día a día. Muy elegante y
+            conjuntará perfectamente con el look que elija.
+          - Envio desde madrid por pàquete estandar o Express segun su nesecidad.
+        variationAttributes:
+          - name: color_name
+            value: Rosa
+        ParentASIN: B07THL4TCN
+        condicion: new
     ParentASIN: B07THL4TCN
     nombreCompleto: >-
       MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo Negro
       Rosa Blanco Amarillo Azul. Envio desde madrid (Rojo-Plata)
+    condicion: new
   - ASIN: B0F66Y545P
     a_tener_en_cuenta: Algo voluminoso si se dobla mal
     caracteristicas:
@@ -823,6 +929,7 @@ productos:
           - name: color_name
             value: Fussia-morado (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N4V25S
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -850,6 +957,7 @@ productos:
           - name: color_name
             value: Rosa (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N5L26R
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -877,6 +985,7 @@ productos:
           - name: color_name
             value: Rojo (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N3TBJK
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -904,6 +1013,7 @@ productos:
           - name: color_name
             value: Azul Oscuro (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N7FXRC
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -931,6 +1041,7 @@ productos:
           - name: color_name
             value: Verde Oscuro (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N7LBCY
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -958,6 +1069,7 @@ productos:
           - name: color_name
             value: Naranja (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N6KJR6
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -985,6 +1097,7 @@ productos:
           - name: color_name
             value: Verde Claro (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N6FTV3
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -1012,6 +1125,7 @@ productos:
           - name: color_name
             value: Negro (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N4FL9Q
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -1039,6 +1153,7 @@ productos:
           - name: color_name
             value: Morado Oscuro (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
       - ASIN: B0F5N72MWJ
         title: >-
           MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo
@@ -1066,10 +1181,12 @@ productos:
           - name: color_name
             value: Blanco (B)
         ParentASIN: B0F5N5MP6N
+        condicion: new
     ParentASIN: B0F5N5MP6N
     nombreCompleto: >-
       MUNDDY - Manton Bordado en Flores Para Adulto. Mantones Flamenco Sevillana.Mantón para fiesta de Color Rojo Negro
       Rosa Blanco Amarillo Azul. Envio desde madrid (Multicolor)
+    condicion: new
   - ASIN: B07TJZ8WQ1
     a_tener_en_cuenta: Tamaño reducido para uso infantil
     caracteristicas:
@@ -1143,6 +1260,7 @@ productos:
           - name: color_name
             value: Verde Oscuro
         ParentASIN: B07TGKVKD4
+        condicion: new
       - ASIN: B07TK14D8H
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -1173,6 +1291,7 @@ productos:
           - name: color_name
             value: Amarillo
         ParentASIN: B07TGKVKD4
+        condicion: new
       - ASIN: B07TJYWMRW
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -1203,6 +1322,7 @@ productos:
           - name: color_name
             value: Naranja
         ParentASIN: B07TGKVKD4
+        condicion: new
       - ASIN: B07TK2B24C
         title: >-
           MUNDDY® - Mantón Poliéster Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa
@@ -1236,36 +1356,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B07TGKVKD4
-      - ASIN: B07TK383W3
-        title: >-
-          MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
-          Amarillo Azul. Envio desde madrid con seguimiento. … (Azul Oscuro)
-        brand: MUNDDY
-        precio: "6,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51xgz2E3WTL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/519mhHterML._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B07TK383W3?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Mantón de manila bordado de Flores con acabado en pico
-          - >-
-            Disponible en varios colores y diseños diferentes para que elija el que más le guste y mejor se adapte a sus
-            necesidades.
-          - Fabricado 100% en poliester de gran calidad. Sus medidas son 100x45cm(niña)
-          - >-
-            Perfecto para todo tipo de eventos o celebraciones o para llevarlo en el día a día. Muy elegante y
-            conjuntará perfectamente con el look que elija.
-          - Envio desde madrid por pàquete estandar o Express segun su nesecidad.
-        variationAttributes:
-          - name: color_name
-            value: Azul Oscuro
-        ParentASIN: B07TGKVKD4
+        condicion: new
       - ASIN: B07TK3LYDT
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -1302,6 +1393,7 @@ productos:
           - name: color_name
             value: Morado
         ParentASIN: B07TGKVKD4
+        condicion: new
       - ASIN: B07TK22BN8
         title: >-
           MUNDDY® - Mantón Poliéster Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa
@@ -1335,6 +1427,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B07TGKVKD4
+        condicion: new
       - ASIN: B07TGKW18J
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -1365,6 +1458,7 @@ productos:
           - name: color_name
             value: Azul Claro
         ParentASIN: B07TGKVKD4
+        condicion: new
       - ASIN: B07TJZFFMY
         title: >-
           MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
@@ -1395,6 +1489,38 @@ productos:
           - name: color_name
             value: Verde Claro
         ParentASIN: B07TGKVKD4
+        condicion: new
+      - ASIN: B07TK383W3
+        title: >-
+          MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
+          Amarillo Azul. Envio desde madrid con seguimiento. … (Azul Oscuro)
+        brand: MUNDDY
+        precio: "6,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51xgz2E3WTL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/519mhHterML._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B07TK383W3?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Mantón de manila bordado de Flores con acabado en pico
+          - >-
+            Disponible en varios colores y diseños diferentes para que elija el que más le guste y mejor se adapte a sus
+            necesidades.
+          - Fabricado 100% en poliester de gran calidad. Sus medidas son 100x45cm(niña)
+          - >-
+            Perfecto para todo tipo de eventos o celebraciones o para llevarlo en el día a día. Muy elegante y
+            conjuntará perfectamente con el look que elija.
+          - Envio desde madrid por pàquete estandar o Express segun su nesecidad.
+        variationAttributes:
+          - name: color_name
+            value: Azul Oscuro
+        ParentASIN: B07TGKVKD4
+        condicion: new
     ParentASIN: B07TGKVKD4
     variationAttributes:
       - name: color_name
@@ -1402,6 +1528,7 @@ productos:
     nombreCompleto: >-
       MUNDDY® - Mantón Flamenco Sevillana Bordado en Flores, Poliéster, Para niña. Color Rojo Negro Rosa Blanco Amarillo
       Azul. Envio desde madrid con seguimiento.
+    condicion: new
   - ASIN: B07TJZ383Z
     a_tener_en_cuenta: No lleva bordado
     caracteristicas:
@@ -1445,36 +1572,6 @@ productos:
       MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
       Amarillo Azul. Envio desde madrid con seguimiento. (Rojo)
     variantes:
-      - ASIN: B07TJZCLKZ
-        title: >-
-          MUNDDY® - Mantónes de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
-          Amarillo Azul. Envio desde madrid con seguimiento. (Amarillo)
-        brand: MUNDDY
-        precio: "7,49\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41lvpfS1TBL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51lTuT79reL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B07TJZCLKZ?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Mantón de manila de Color liso con acabado en pico
-          - >-
-            Disponible en varios colores y diseños diferentes para que elija el que más le guste y mejor se adapte a sus
-            necesidades.
-          - Fabricado 100% en poliester de gran calidad. Sus medidas son 150x70cm (adulta)
-          - >-
-            Perfecto para todo tipo de eventos o celebraciones o para llevarlo en el día a día. Muy elegante y
-            conjuntará perfectamente con el look que elija.
-          - Envio desde madrid por pàquete estandar o Express segun su nesecidad.
-        variationAttributes:
-          - name: color_name
-            value: Amarillo
-        ParentASIN: B07TK34BWD
       - ASIN: B07TK4Q7LF
         title: >-
           MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
@@ -1505,6 +1602,7 @@ productos:
           - name: color_name
             value: Morado
         ParentASIN: B07TK34BWD
+        condicion: new
       - ASIN: B07TJ1PPFG
         title: >-
           MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
@@ -1535,6 +1633,7 @@ productos:
           - name: color_name
             value: Naranja
         ParentASIN: B07TK34BWD
+        condicion: new
       - ASIN: B07TJZ3841
         title: >-
           MUNDDY®- Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
@@ -1565,13 +1664,14 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B07TK34BWD
+        condicion: new
       - ASIN: B07TK49SWJ
         title: >-
           MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
           Amarillo Azul. Envio desde madrid con seguimiento. (Azul Oscuro)
         brand: MUNDDY
-        precio: "11,99\_€"
-        precioOriginal: No especificado
+        precio: "7,49\_€"
+        precioOriginal: "11,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41P+H1YDSlL._SL500_.jpg
         imagenWidth: 500
@@ -1598,6 +1698,7 @@ productos:
           - name: color_name
             value: Azul Oscuro
         ParentASIN: B07TK34BWD
+        condicion: new
       - ASIN: B07THL8G8C
         title: >-
           MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
@@ -1628,6 +1729,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B07TK34BWD
+        condicion: new
       - ASIN: B07TK3YTPD
         title: >-
           MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
@@ -1661,6 +1763,7 @@ productos:
           - name: color_name
             value: Fussia
         ParentASIN: B07TK34BWD
+        condicion: new
       - ASIN: B07TJYY6HB
         title: >-
           MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
@@ -1691,6 +1794,7 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B07TK34BWD
+        condicion: new
       - ASIN: B07TK1FQPS
         title: >-
           MUNDDY® - Mantónes de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
@@ -1718,6 +1822,38 @@ productos:
           - name: color_name
             value: Marron
         ParentASIN: B07TK34BWD
+        condicion: new
+      - ASIN: B07TJZCLKZ
+        title: >-
+          MUNDDY® - Mantónes de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
+          Amarillo Azul. Envio desde madrid con seguimiento. (Amarillo)
+        brand: MUNDDY
+        precio: "7,49\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41lvpfS1TBL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51lTuT79reL._SL500_.jpg
+            width: 500
+            height: 500
+        enlace: https://www.amazon.es/dp/B07TJZCLKZ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Mantón de manila de Color liso con acabado en pico
+          - >-
+            Disponible en varios colores y diseños diferentes para que elija el que más le guste y mejor se adapte a sus
+            necesidades.
+          - Fabricado 100% en poliester de gran calidad. Sus medidas son 150x70cm (adulta)
+          - >-
+            Perfecto para todo tipo de eventos o celebraciones o para llevarlo en el día a día. Muy elegante y
+            conjuntará perfectamente con el look que elija.
+          - Envio desde madrid por pàquete estandar o Express segun su nesecidad.
+        variationAttributes:
+          - name: color_name
+            value: Amarillo
+        ParentASIN: B07TK34BWD
+        condicion: new
     ParentASIN: B07TK34BWD
     variationAttributes:
       - name: color_name
@@ -1725,6 +1861,7 @@ productos:
     nombreCompleto: >-
       MUNDDY® - Mantón de Colores Liso Para Adulto. Mantones Flamenco Sevillana.Color Rojo liso Negro Rosa Blanco
       Amarillo Azul. Envio desde madrid con seguimiento. (Rojo)
+    condicion: new
   - ASIN: B06XY2S6Z7
     a_tener_en_cuenta: Tamaño algo justo si se desea cubrir hombros anchos
     caracteristicas:
@@ -1827,6 +1964,7 @@ productos:
           - name: color_name
             value: Oro Marfil
         ParentASIN: B0BZT6B6N2
+        condicion: new
       - ASIN: B01MED8NMV
         title: >-
           LA SEÑORITA Mantón de Manila Blanco Crema con Bordados Rojo y Verde Mantones de Flamenca para el Vestido de
@@ -1870,6 +2008,7 @@ productos:
           - name: color_name
             value: Marfil Rojo
         ParentASIN: B0BZT6B6N2
+        condicion: new
       - ASIN: B01G20MN2E
         title: La Señorita Mantones bordados Flamenco Manton de Manila negro flores de colores mediana 160 * 80cm para Mujer
         brand: La Senorita
@@ -1890,6 +2029,7 @@ productos:
           - name: color_name
             value: Negro Flores
         ParentASIN: B0BZT6B6N2
+        condicion: new
       - ASIN: B010R4KKF8
         title: >-
           LA SEÑORITA Mantón de Manila Rojo con Bordados en Negro. Mantones de Flamenca para el Vestido de Feria,
@@ -1945,150 +2085,7 @@ productos:
           - name: color_name
             value: Rojo Negro
         ParentASIN: B0BZT6B6N2
-      - ASIN: B01FXYWQOA
-        title: >-
-          LA SEÑORITA Mantón de Manila Negro con Bordados en Oro. Mantones de Flamenca para el Vestido de Feria,
-          Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
-        brand: La Senorita
-        precio: "26,95\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51RpSuRJKrL._SL500_.jpg
-        imagenWidth: 374
-        imagenHeight: 500
-        imagenesVariantes: []
-        enlace: https://www.amazon.es/dp/B01FXYWQOA?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [160 x 80 cm] excluyendo flecos. se adapta
-            perfectamente a la mayoría de las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o
-            para las niñas que van a clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
-          - >-
-            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
-            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
-            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
-            mientras que bailas. Bordado a una cara. 6 flecos por nudo!!! Flecos: 23cm
-          - >-
-            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
-            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
-            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
-            simplemente por uno de los hombros. ¡Tú eliges!
-          - >-
-            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
-            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
-            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
-            urbanas.
-          - >-
-            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
-            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
-            intacto durante mucho tiempo.
-        variationAttributes:
-          - name: size_name
-            value: M
-          - name: color_name
-            value: Negro Oro
-        ParentASIN: B0BZT6B6N2
-      - ASIN: B01FXUT8EU
-        title: >-
-          LA SEÑORITA Mantón de Manila Negro con Bordados Blanco y Rojo, Mantones de Flamenca para el Vestido de Feria,
-          Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
-        brand: La Senorita
-        precio: "26,95\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51iMkS1ZqlL._SL500_.jpg
-        imagenWidth: 373
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41P6vqZh11L._SL500_.jpg
-            width: 243
-            height: 500
-        enlace: https://www.amazon.es/dp/B01FXUT8EU?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [160 x 80 cm] excluyendo flecos. se adapta
-            perfectamente a la mayoría de las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o
-            para las niñas que van a clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
-          - >-
-            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
-            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
-            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
-            mientras que bailas. Bordado a una cara. 6 flecos por nudo!!! Flecos: 23cm
-          - >-
-            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
-            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
-            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
-            simplemente por uno de los hombros. ¡Tú eliges!
-          - >-
-            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
-            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
-            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
-            urbanas.
-          - >-
-            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
-            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
-            intacto durante mucho tiempo.
-        variationAttributes:
-          - name: size_name
-            value: M
-          - name: color_name
-            value: Negro Rojo Blanco
-        ParentASIN: B0BZT6B6N2
-      - ASIN: B010R4KGZ2
-        title: >-
-          LA SEÑORITA Mantón de Manila Negro con Bordados en Rojo. Mantones de Flamenca para el Vestido de Feria,
-          Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
-        brand: La Senorita
-        precio: "26,95\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51Yp0VGEtWL._SL500_.jpg
-        imagenWidth: 375
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51Q3MHBcU3L._SL500_.jpg
-            width: 356
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Anuq1SrWL._SL500_.jpg
-            width: 315
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51c77cq8cbL._SL500_.jpg
-            width: 500
-            height: 334
-          - url: https://m.media-amazon.com/images/I/41ZZDTTGNWL._SL500_.jpg
-            width: 262
-            height: 500
-        enlace: https://www.amazon.es/dp/B010R4KGZ2?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [160 x 80 cm] se adapta perfectamente a la mayoría de
-            las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o para las niñas que van a
-            clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
-          - >-
-            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
-            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
-            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
-            mientras que bailas.
-          - >-
-            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
-            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
-            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
-            simplemente por uno de los hombros. ¡Tú eliges!
-          - >-
-            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
-            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
-            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
-            urbanas.
-          - >-
-            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
-            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
-            intacto durante mucho tiempo.
-        variationAttributes:
-          - name: size_name
-            value: M
-          - name: color_name
-            value: Negro Rojo
-        ParentASIN: B0BZT6B6N2
+        condicion: new
       - ASIN: B06XWVKNXY
         title: >-
           LA SEÑORITA Mantón de Manila Negro con Bordados Negro, Mantones de Flamenca para el Vestido de Feria,
@@ -2135,6 +2132,98 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0BZT6B6N2
+        condicion: new
+      - ASIN: B01FXYWQOA
+        title: >-
+          LA SEÑORITA Mantón de Manila Negro con Bordados en Oro. Mantones de Flamenca para el Vestido de Feria,
+          Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
+        brand: La Senorita
+        precio: "26,95\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51RpSuRJKrL._SL500_.jpg
+        imagenWidth: 374
+        imagenHeight: 500
+        imagenesVariantes: []
+        enlace: https://www.amazon.es/dp/B01FXYWQOA?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [160 x 80 cm] excluyendo flecos. se adapta
+            perfectamente a la mayoría de las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o
+            para las niñas que van a clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
+          - >-
+            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
+            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
+            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
+            mientras que bailas. Bordado a una cara. 6 flecos por nudo!!! Flecos: 23cm
+          - >-
+            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
+            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
+            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
+            simplemente por uno de los hombros. ¡Tú eliges!
+          - >-
+            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
+            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
+            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
+            urbanas.
+          - >-
+            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
+            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
+            intacto durante mucho tiempo.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Negro Oro
+        ParentASIN: B0BZT6B6N2
+        condicion: new
+      - ASIN: B01FXUT8EU
+        title: >-
+          LA SEÑORITA Mantón de Manila Negro con Bordados Blanco y Rojo, Mantones de Flamenca para el Vestido de Feria,
+          Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
+        brand: La Senorita
+        precio: "26,95\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51iMkS1ZqlL._SL500_.jpg
+        imagenWidth: 373
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41P6vqZh11L._SL500_.jpg
+            width: 243
+            height: 500
+        enlace: https://www.amazon.es/dp/B01FXUT8EU?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [160 x 80 cm] excluyendo flecos. se adapta
+            perfectamente a la mayoría de las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o
+            para las niñas que van a clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
+          - >-
+            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
+            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
+            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
+            mientras que bailas. Bordado a una cara. 6 flecos por nudo!!! Flecos: 23cm
+          - >-
+            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
+            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
+            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
+            simplemente por uno de los hombros. ¡Tú eliges!
+          - >-
+            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
+            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
+            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
+            urbanas.
+          - >-
+            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
+            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
+            intacto durante mucho tiempo.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Negro Rojo Blanco
+        ParentASIN: B0BZT6B6N2
+        condicion: new
     ParentASIN: B0BZT6B6N2
     variationAttributes:
       - name: size_name
@@ -2144,6 +2233,7 @@ productos:
     nombreCompleto: >-
       LA SEÑORITA Mantón de Manila Negro con Bordados Rojo y Verde, Mantones de Flamenca para el Vestido de Feria,
       Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
+    condicion: new
   - ASIN: B07JGYWHQY
     a_tener_en_cuenta: Requiere saber colocarlo bien por su tamaño
     caracteristicas:
@@ -2240,6 +2330,7 @@ productos:
           - name: color_name
             value: Rojo Multicolor
         ParentASIN: B0BY7JRFFD
+        condicion: new
       - ASIN: B01M3O5LJZ
         title: >-
           LA SEÑORITA Mantón de Manila Negro con bordados Rojo y Oro, GRANDE, Mantones de Flamenca para el Vestido de
@@ -2283,6 +2374,7 @@ productos:
           - name: color_name
             value: Negro Amarillo
         ParentASIN: B0BY7JRFFD
+        condicion: new
       - ASIN: B075BG966K
         title: >-
           LA SEÑORITA Mantón de Manila Negro con bordados Flores, GRANDE, Mantones de Flamenca para el Vestido de Feria,
@@ -2330,6 +2422,7 @@ productos:
           - name: color_name
             value: Multicolor
         ParentASIN: B0BY7JRFFD
+        condicion: new
       - ASIN: B07563L4W5
         title: >-
           LA SEÑORITA Mantón de Manila Negro con bordados Naranja y Oro, GRANDE, Mantones de Flamenca para el Vestido de
@@ -2383,6 +2476,7 @@ productos:
           - name: color_name
             value: Negro Naranja
         ParentASIN: B0BY7JRFFD
+        condicion: new
       - ASIN: B06XY16WYQ
         title: >-
           LA SEÑORITA Mantón de Manila Negro con Bordados Rojo y Verde, Mantones de Flamenca para el Vestido de Feria,
@@ -2426,6 +2520,7 @@ productos:
           - name: color_name
             value: Negro Werde
         ParentASIN: B0BY7JRFFD
+        condicion: new
       - ASIN: B0717359SS
         title: >-
           LA SEÑORITA Mantón de Manila Rojo con bordados Negro, GRANDE, Mantones de Flamenca para el Vestido de Feria,
@@ -2472,49 +2567,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0BY7JRFFD
-      - ASIN: B06XY1DGRK
-        title: >-
-          LA SEÑORITA Mantón de Manila Rojo con bordados Negro, GRANDE, Mantones de Flamenca para el Vestido de Feria,
-          Sevillana o Flamenca. [190 x 90 cm] Tamaño Ideal para Mujer
-        brand: La Senorita
-        precio: "29,95\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41VOOwPJ-yL._SL500_.jpg
-        imagenWidth: 375
-        imagenHeight: 500
-        imagenesVariantes: []
-        enlace: https://www.amazon.es/dp/B06XY1DGRK?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [190 x 90 cm] GRANDE, excluyendo flecos. se adapta
-            perfectamente a la mayoría de las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o
-            para las niñas que van a clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
-          - >-
-            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
-            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
-            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
-            mientras que bailas. Bordado a una cara, 6 flecos por nudo!!! Flecos negro: 23cm
-          - >-
-            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
-            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
-            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
-            simplemente por uno de los hombros. ¡Tú eliges!
-          - >-
-            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
-            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
-            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
-            urbanas.
-          - >-
-            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
-            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
-            intacto durante mucho tiempo.
-        variationAttributes:
-          - name: size_name
-            value: L
-          - name: color_name
-            value: Rojo Negro
-        ParentASIN: B0BY7JRFFD
+        condicion: new
       - ASIN: B0781ZB76V
         title: >-
           LA SEÑORITA Mantón de Manila Negro con bordados Rojo y Blanco, GRANDE, Mantones de Flamenca para el Vestido de
@@ -2561,6 +2614,7 @@ productos:
           - name: color_name
             value: Negro Perla
         ParentASIN: B0BY7JRFFD
+        condicion: new
       - ASIN: B07822LQXR
         title: >-
           LA SEÑORITA Mantón de Manila Negro con bordados Azul, GRANDE, Mantones de Flamenca para el Vestido de Feria,
@@ -2604,65 +2658,12 @@ productos:
           - name: color_name
             value: Negro Azul
         ParentASIN: B0BY7JRFFD
-      - ASIN: B01ITH2S78
-        title: >-
-          LA SEÑORITA Mantón de Manila Blanco Crema con Bordados en Oro. Mantones de Flamenca para el Vestido de Feria,
-          Sevillana o Flamenca. [190 x 90 cm] Tamaño Grande Ideal para Mujer
-        brand: La Senorita
-        precio: "29,95\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/512kIGAyFJL._SL500_.jpg
-        imagenWidth: 322
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51GAhSHRJaL._SL500_.jpg
-            width: 500
-            height: 461
-          - url: https://m.media-amazon.com/images/I/510SeNH5y5L._SL500_.jpg
-            width: 414
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41lJeNGpBbL._SL500_.jpg
-            width: 244
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41FrQBnu7hL._SL500_.jpg
-            width: 363
-            height: 500
-        enlace: https://www.amazon.es/dp/B01ITH2S78?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [160 x 80 cm] excluyendo flecos. se adapta
-            perfectamente a la mayoría de las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o
-            para las niñas que van a clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
-          - >-
-            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
-            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
-            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
-            mientras que bailas. Bordado a una cara. 6 flecos por nudo!!! Flecos: 23cm
-          - >-
-            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
-            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
-            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
-            simplemente por uno de los hombros. ¡Tú eliges!
-          - >-
-            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
-            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
-            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
-            urbanas.
-          - >-
-            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
-            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
-            intacto durante mucho tiempo.
-        variationAttributes:
-          - name: size_name
-            value: L
-          - name: color_name
-            value: Crema Dorado
-        ParentASIN: B0BY7JRFFD
+        condicion: new
     ParentASIN: B0BY7JRFFD
     nombreCompleto: >-
       LA SEÑORITA Mantón de Manila Negro con bordados Oro y Rojo, GRANDE, Mantones de Flamenca para el Vestido de Feria,
       Sevillana o Flamenca. [190 x 90 cm] Tamaño Ideal para Mujer
+    condicion: new
   - ASIN: B0CW1ZWZX8
     a_tener_en_cuenta: Solo 3 colores disponibles
     caracteristicas:
@@ -2756,6 +2757,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0DTF7G66Y
+        condicion: new
       - ASIN: B0CW2253RX
         title: >-
           Mantón Bordado en Flores para Baile Flamenco Español, Set de Complementos Sevillana, Mantón, Collar, Flor y
@@ -2805,6 +2807,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DTF7G66Y
+        condicion: new
     ParentASIN: B0DTF7G66Y
     variationAttributes:
       - name: color_name
@@ -2812,4 +2815,5 @@ productos:
     nombreCompleto: >-
       Mantón Bordado en Flores para Baile Flamenco Español, Set de Complementos Sevillana, Mantón, Collar, Flor y
       Peineta Flamenca para Adultos (Negro)
-actualizacion: '2025-09-05'
+    condicion: new
+actualizacion: '2025-09-11'

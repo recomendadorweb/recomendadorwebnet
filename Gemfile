@@ -12,3 +12,7 @@ gem 'base64'
 gem 'wdm', '>= 0.1.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # gem "rails"
+
+gem "tzinfo", "~> 2.0"
+
+gem "tzinfo-data", "~> 1.2025"

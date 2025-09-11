@@ -1,0 +1,822 @@
+{%- assign _title = include.title | default: "Sección" -%}
+{%- assign _see_all_label = include.see_all_label | default: "see all" -%}
+{%- assign _offset = include.offset | default: 0 -%}
+{%- assign _limit = include.limit | default: 4 -%}
+{%- assign _desc = include.description | default: include.descripcion | default: "" -%}
+
+{%- comment -%} Siempre usamos site.pages {%- endcomment -%}
+{%- assign base = site.pages -%}
+
+{%- if include.category -%}
+  {%- assign base = base | where_exp: "p", "p.categories contains include.category" -%}
+{%- endif -%}
+{%- if include.tag -%}
+  {%- assign base = base | where_exp: "p", "p.tags contains include.tag" -%}
+{%- endif -%}
+{%- if include.require_keyword -%}
+  {%- assign base = base | where_exp: "p", "p.keywords" -%}
+{%- endif -%}
+{%- if include.contains_keyword -%}
+  {%- assign _kw = include.contains_keyword | downcase -%}
+  {%- assign filtered_kw = "" | split: "" -%}
+  {%- for p in base -%}
+    {%- assign k = p.keywords -%}
+    {%- assign k_str = k | join: ',' | default: k | downcase -%}
+    {%- if k_str and (k_str contains _kw) -%}
+      {%- assign filtered_kw = filtered_kw | push: p -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign base = filtered_kw -%}
+{%- endif -%}
+
+{%- comment -%} ==== FILTRO POR CATEGORÍA (front matter 'categoria' o 'categorias') ==== {%- endcomment -%}
+{%- assign _categoria_raw = include.categoria | default: include.categorias -%}
+{%- if _categoria_raw and _categoria_raw != "" -%}
+  {%- comment -%} Normalizamos la lista pedida en el include (string o array) {%- endcomment -%}
+  {%- assign _cats_param_list = _categoria_raw -%}
+  {%- unless _cats_param_list.first -%}
+    {%- assign _norm = _categoria_raw
+        | replace: ", ", "," | replace: " ,", ","
+        | replace: " |", "|" | replace: "| ", "|"
+      -%}
+    {%- assign _cats_param_list = _norm | split: "|" | join: "|" | split: "," | join: "|" | split: "|" -%}
+  {%- endunless -%}
+
+  {%- assign cats_list = "" | split: "" -%}
+  {%- for c in _cats_param_list -%}
+    {%- assign c_norm = c | downcase | strip -%}
+    {%- if c_norm != "" -%}
+      {%- assign cats_list = cats_list | push: c_norm -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- assign cats_list = cats_list | uniq -%}
+
+  {%- assign filtradas_cat = "" | split: "" -%}
+  {%- for p in base -%}
+    {%- assign match_cat = false -%}
+
+    {%- comment -%} p.categoria puede ser string "gaming, tecnologia" o array; también admitimos p.categorias {%- endcomment -%}
+    {%- assign pcat_raw = p.categoria | default: p.categorias -%}
+    {%- if pcat_raw -%}
+      {%- assign pcat_list = pcat_raw -%}
+      {%- unless pcat_list.first -%}
+        {%- assign pnorm = pcat_raw
+            | replace: ", ", "," | replace: " ,", ","
+            | replace: " |", "|" | replace: "| ", "|"
+          -%}
+        {%- assign pcat_list = pnorm | split: "|" | join: "|" | split: "," | join: "|" | split: "|" -%}
+      {%- endunless -%}
+
+      {%- for wanted in cats_list -%}
+        {%- if match_cat -%}{% break %}{%- endif -%}
+        {%- for pc in pcat_list -%}
+          {%- assign pc_norm = pc | downcase | strip -%}
+          {%- if pc_norm == wanted -%}
+            {%- assign match_cat = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    {%- if match_cat -%}
+      {%- assign filtradas_cat = filtradas_cat | push: p -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign base = filtradas_cat -%}
+{%- endif -%}
+
+{%- comment -%} ==== FILTRO POR RUTAS usando **carpeta** (exactas o recursivas) ==== {%- endcomment -%}
+{%- assign _carpeta_raw = include.carpeta | default: include.dirs -%}
+{%- assign _recursiva = include.carpeta_recursiva | default: include.dirs_recursive | default: true -%}
+
+{%- if _carpeta_raw and _carpeta_raw != "" -%}
+  {%- assign carpetas_list = _carpeta_raw -%}
+  {%- unless carpetas_list.first -%}
+    {%- assign _norm = _carpeta_raw
+        | replace: ", ", ","
+        | replace: " ,", ","
+        | replace: " |", "|"
+        | replace: "| ", "|"
+        | replace: ",", "|"
+      -%}
+    {%- assign carpetas_list = _norm | split: "|" -%}
+  {%- endunless -%}
+
+  {%- assign carpetas_list = carpetas_list | uniq -%}
+  {%- assign filtradas = "" | split: "" -%}
+
+  {%- for p in base -%}
+    {%- assign match_dir = false -%}
+
+    {%- assign path_base = p.dir | default: p.url | default: "" -%}
+    {%- if path_base != "" -%}
+      {%- assign path_norm = path_base -%}
+      {%- assign first_char_pb = path_norm | slice: 0, 1 -%}
+      {%- if first_char_pb != "/" -%}{%- assign path_norm = "/" | append: path_norm -%}{%- endif -%}
+      {%- assign last_char_pb = path_norm | slice: -1, 1 -%}
+      {%- if last_char_pb != "/" -%}{%- assign path_norm = path_norm | append: "/" -%}{%- endif -%}
+    {%- else -%}
+      {%- assign path_norm = "" -%}
+    {%- endif -%}
+
+    {%- for d in carpetas_list -%}
+      {%- assign d_norm = d | strip -%}
+      {%- if d_norm == "" -%}{% continue %}{%- endif -%}
+      {%- assign first_char = d_norm | slice: 0, 1 -%}
+      {%- if first_char != "/" -%}{%- assign d_norm = "/" | append: d_norm -%}{%- endif -%}
+      {%- assign last_char = d_norm | slice: -1, 1 -%}
+      {%- if last_char != "/" -%}{%- assign d_norm = d_norm | append: "/" -%}{%- endif -%}
+
+      {%- if _recursiva -%}
+        {%- assign d_len = d_norm | size -%}
+        {%- assign prefix = path_norm | slice: 0, d_len -%}
+        {%- if prefix == d_norm -%}
+          {%- assign match_dir = true -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- else -%}
+        {%- if path_norm == d_norm -%}
+          {%- assign match_dir = true -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if match_dir -%}
+      {%- assign filtradas = filtradas | push: p -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign base = filtradas -%}
+{%- endif -%}
+
+{%- assign base = base | where_exp: "p", "p.date" -%}
+{%- assign list_sorted = base | sort: "date" | reverse -%}
+
+{%- if include.exclude_urls and include.exclude_urls.size > 0 -%}
+  {%- assign filtered = "" | split: "" -%}
+  {%- for p in list_sorted -%}
+    {%- unless include.exclude_urls contains p.url -%}
+      {%- assign filtered = filtered | push: p -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- assign list_sorted = filtered -%}
+{%- endif -%}
+
+{%- assign list_offset = list_sorted | slice: _offset, 999 -%}
+{%- assign items = list_offset | slice: 0, _limit -%}
+{%- assign main = items | first -%}
+
+{%- comment -%}
+  Construimos las SUB-TARJETAS excluyendo elementos con front matter:
+  excluidoHome: true (o 'true')
+  y completamos hasta 3 tarjetas tomando del mismo list_offset.
+{%- endcomment -%}
+{%- assign subs = "" | split: "" -%}
+{%- assign _subs_count = 0 -%}
+{%- for p in list_offset -%}
+  {%- if forloop.first -%}{% continue %}{%- endif -%}
+  {%- if p.excluidoHome == true or p.excluidoHome == 'true' -%}{% continue %}{%- endif -%}
+  {%- assign subs = subs | push: p -%}
+  {%- assign _subs_count = _subs_count | plus: 1 -%}
+  {%- if _subs_count >= 3 -%}{% break %}{%- endif -%}
+{%- endfor -%}
+
+<div class="hero-divider"></div>
+<section class="split-feature" aria-label="{{ _title | escape }}">
+  <header class="sf-head">
+    <h2 class="sf-title">{{ _title }}</h2>
+    <nav class="sf-links">
+      {%- if include.see_all_url -%}
+        <a href="{{ include.see_all_url | relative_url }}">Ver todo en {{ include.title | default: 'esta categoría' }}</a>
+      {%- endif -%}
+    </nav>
+  </header>
+
+  {%- if _desc != "" -%}
+    <p class="sf-desc">{{ _desc }}</p>
+  {%- endif -%}
+
+  {%- if main -%}
+    <div class="sf-hero">
+      <a class="sf-media" href="{{ main.url | relative_url }}">
+        <img src="{{ main.imagenhome | default: main.image | default: '/global/images/placeholder.webp' }}" alt="{{ main.title | escape }}">
+      </a>
+
+      <div class="sf-side">
+        {%- for p in subs -%}
+        {%- comment -%} FECHA desde data por tipo con formato DD/MM/YYYY {%- endcomment -%}
+        {%- assign _tipo = p.tipo | downcase -%}
+        {%- assign _productos_data = site.data[_tipo].productos -%}
+        {%- assign _titulo1 = site.data[_tipo].cabecera.titulo -%}
+        {%- assign _actu_val = _productos_data.actualizacion | default: "" -%}
+        {%- assign _actu_fmt = "" -%}
+        {%- if _actu_val != "" -%}
+          {%- if _actu_val contains "-" or _actu_val contains ":" or _actu_val contains "T" -%}
+            {%- assign _actu_fmt = _actu_val | date: "%d/%m/%Y" -%}
+          {%- elsif _actu_val contains "/" -%}
+            {%- assign _actu_fmt = _actu_val -%}
+          {%- else -%}
+            {%- assign _actu_fmt = _actu_val | date: "%d/%m/%Y" -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        <article class="sf-item">
+          <a class="sf-thumb" href="{{ p.url | relative_url }}">
+            <img src="{{ p.imagenhome | default: p.image | default: '/global/images/placeholder.webp' }}" alt="{{ _titulo1 | escape }}" loading="lazy">
+          </a>
+          <div class="sf-body">
+            <h3 class="sf-item-title"><a href="{{ p.url | relative_url }}">{{ _titulo1 }}</a></h3>
+
+            {%- if _actu_fmt != "" -%}
+              <p class="sf-date">Actualizado: {{ _actu_fmt }}</p>
+            {%- else -%}
+              {%- assign _when_fallback = p.last_modified_at | default: p.date -%}
+              <p class="sf-date">Actualizado: {{ _when_fallback | date: "%d/%m/%Y" }}</p>
+            {%- endif -%}
+
+            {%- assign _autor = site.data.autor.autores[p.autor] -%}
+            {%- if _autor -%}
+              <p class="sf-by">
+                <img src="{{ _autor.avatar }}" alt="{{ _autor.nombre }}" class="sf-avatar">
+                <a href="{{ _autor.enlace | default: '#' }}">{{ _autor.nombre }}</a>
+              </p>
+            {%- endif -%}
+          </div>
+        </article>
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- comment -%} FECHA principal con el mismo formato {%- endcomment -%}
+    {%- assign _tipo_main = main.tipo | downcase -%}
+    {%- assign _productos_data_main = site.data[_tipo_main].productos -%}
+    {%- assign _cabeceraTitulo = site.data[_tipo_main].cabecera.titulo -%}
+    {%- assign _actu_val_main = _productos_data_main.actualizacion | default: "" -%}
+    {%- assign _actu_fmt_main = "" -%}
+    {%- if _actu_val_main != "" -%}
+      {%- if _actu_val_main contains "-" or _actu_val_main contains ":" or _actu_val_main contains "T" -%}
+        {%- assign _actu_fmt_main = _actu_val_main | date: "%d/%m/%Y" -%}
+      {%- elsif _actu_val_main contains "/" -%}
+        {%- assign _actu_fmt_main = _actu_val_main -%}
+      {%- else -%}
+        {%- assign _actu_fmt_main = _actu_val_main | date: "%d/%m/%Y" -%}
+      {%- endif -%}
+    {%- endif -%}
+
+    <h3 class="sf-main-title"><a href="{{ main.url | relative_url }}">{{ _cabeceraTitulo }}</a></h3>
+
+    {%- if _actu_fmt_main != "" -%}
+      <p class="sf-date">Actualizado: {{ _actu_fmt_main }}</p>
+    {%- else -%}
+      {%- assign _when_main_fallback = main.last_modified_at | default: main.date -%}
+      <p class="sf-date">Actualizado: {{ _when_main_fallback | date: "%d/%m/%Y" }}</p>
+    {%- endif -%}
+
+    {%- assign _autor_main = site.data.autor.autores[main.autor] -%}
+    {%- if _autor_main -%}
+      <p class="sf-by">
+        <img src="{{ _autor_main.avatar }}" alt="{{ _autor_main.nombre }}" class="sf-avatar">
+        <a href="{{ _autor_main.enlaceBlog | default: '#' }}">{{ _autor_main.nombre }}</a>
+      </p>
+    {%- endif -%}
+    <p class="sf-dek">
+      {%- if main.subtitle -%}{{ main.subtitle }}{%- else -%}{{ main.excerpt | strip_html | truncate: 180 }}{%- endif -%}
+    </p>
+  {%- endif -%}
+</section>
+
+<style>
+.split-feature{max-width:1200px;margin:0px auto 36px;padding:0px 14px;}
+.sf-head{display:flex;align-items:flex-end;justify-content:space-between;}
+.sf-title{margin:0;font-size:1.6rem;font-weight:900;}
+.sf-links a{color:#111 !important;font-size:1.2rem !important;white-space:nowrap;text-decoration:none;font-weight:bold !important;}
+.sf-links a:hover{color:#0073e6 !important;text-decoration:none}
+.sf-hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch;}
+.sf-media img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;display:block;border-radius:10px;}
+.sf-side{display:grid;grid-template-rows:repeat(3,1fr);gap:16px;height:100%;}
+.sf-item{display:grid;grid-template-columns:140px 1fr;gap:12px;height:100%;overflow:hidden;}
+.sf-thumb img{width:140px;height:100%;object-fit:cover;display:block;border-radius:10px;}
+.sf-body{display:flex;flex-direction:column;gap:6px;min-width:0;}
+.sf-main-title{margin:10px 0 6px;font-size:1.2rem;font-weight:800;line-height:1.2;}
+.sf-main-title a{color:#111 !important;text-decoration:none;font-weight:bold !important;}
+.sf-main-title a:hover{color:#0073e6 !important;text-decoration:none;font-weight:bold !important;}
+.sf-item-title{margin:0;font-size:1.2rem;font-weight:800;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.sf-item-title a{color:#111 !important;text-decoration:none;font-weight:bold !important;}
+.sf-item-title a:hover{color:#0073e6 !important;text-decoration:none;font-weight:bold !important;}
+.sf-date{margin:6px 0 6px;color:#0073e6;font-size:.84rem;font-weight:700;}
+.sf-by{color:#111 !important;margin:0;display:inline-flex;align-items:center;gap:8px;color:#555;font-size:.9rem;}
+.sf-by .sf-avatar{width:24px;height:24px;border-radius:50%;object-fit:cover;display:inline-block;}
+.sf-dek{margin:2px 0 0;color:#444;line-height:1.5;}
+.sf-desc{margin:0 0 20px;color:#666;}
+@media (max-width: 900px){
+  .sf-hero{grid-template-columns:1fr;gap:16px;}
+  .sf-side{grid-template-rows:none;display:flex;flex-direction:column;}
+  .sf-item{grid-template-columns:110px 1fr;height:auto;}
+  .sf-thumb img{width:110px;height:80px;}
+  .sf-desc{margin:10px 0 20px;color:#666;}
+}
+/* === OVERRIDES AUTOR: alineado correcto y colores consistentes === */
+.split-feature .sf-body{min-width:0;}
+
+.split-feature .sf-side .sf-body{
+  display:grid; grid-template-rows:auto auto auto; row-gap:3px; align-content:start;
+}
+.split-feature .sf-by{
+  display:inline-flex !important; align-items:center; justify-content:flex-start; gap:8px; margin:0; line-height:1;
+}
+.split-feature .sf-by .sf-avatar{
+  width:22px; height:22px; border-radius:50%; object-fit:cover; flex:0 0 22px; display:inline-block;
+}
+.split-feature .sf-by a, .split-feature .sf-by a:visited{
+  color:#111 !important; text-decoration:none; margin:0 !important; padding:0 !important; font-size:.95rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:100%;
+}
+.split-feature .sf-by a:hover{ color:#0073e6 !important; }
+.split-feature .sf-by a{ margin-left:0 !important; }
+
+.split-feature .sf-side .sf-body{
+  display:grid !important; grid-template-rows:auto auto auto; row-gap:3px; align-content:start; justify-items:start;
+}
+.split-feature .sf-by{
+  display:inline-flex !important; align-items:center !important; justify-content:flex-start !important; gap:8px !important; margin:0 !important; line-height:1 !important; width:auto !important;
+}
+.split-feature .sf-by .sf-avatar{
+  width:22px !important; height:22px !important; border-radius:50% !important; object-fit:cover !important; flex:0 0 22px !important;
+}
+.split-feature .sf-by a, .split-feature .sf-by a:visited{
+  display:inline-block !important; margin:0 !important; padding:0 !important; float:none !important; text-align:left !important; color:#111 !important; font-size:.95rem !important; white-space:nowrap !important; overflow:hidden !important; text-overflow:ellipsis !important; max-width:100% !important;
+}
+.split-feature .sf-by a:hover{ color:#0073e6 !important; }
+.split-feature .sf-side .sf-item{ align-items:start !important; }
+
+.split-feature{ --sf-thumb: 120px; }
+@media (max-width: 900px){
+  .split-feature{ --sf-thumb: 100px; }
+}
+.split-feature .sf-side{ grid-template-rows: repeat(3, auto) !important; height:auto !important; }
+.split-feature .sf-side .sf-item{ grid-template-columns: var(--sf-thumb) 1fr !important; align-items:start !important; height:auto !important; }
+.split-feature .sf-side .sf-thumb{ width: var(--sf-thumb) !important; height: var(--sf-thumb) !important; display:block !important; }
+.split-feature .sf-side .sf-thumb img{ width:100% !important; height:100% !important; aspect-ratio:1 / 1 !important; object-fit:cover !important; border-radius:10px !important; }
+.split-feature .sf-side .sf-thumb img, .split-feature .sf-side .sf-item{ overflow:hidden; }
+
+.split-feature .sf-date{ margin:6px 0 6px; color:#0073e6; font-size:14px; font-weight:700; }
+/* === PARCHE RESPONSIVE MINIMO (solo móvil) === */
+@media (max-width: 900px){
+  /* Lado: 2 tarjetas por fila */
+  .split-feature .sf-side{
+    display:grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap:12px;
+  }
+
+  /* Cada tarjeta: imagen arriba, texto debajo */
+  .split-feature .sf-side .sf-item{
+    grid-template-columns: 1fr !important;
+    gap:8px;
+    height:auto;
+  }
+
+  /* Miniaturas cuadradas y fluidas */
+  .split-feature .sf-side .sf-thumb{
+    width:100% !important;
+    height:auto !important;
+  }
+  .split-feature .sf-side .sf-thumb img{
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    border-radius:10px !important;
+  }
+
+  /* Títulos con 3 líneas máx para evitar desbordes */
+  .split-feature .sf-side .sf-item-title{
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+  }
+
+  /* Opcional: ocultar autor para ganar aire (quita esta línea si no quieres) */
+  .split-feature .sf-side .sf-by{ display:none !important; }
+
+  /* --- Bonus: primera tarjeta más grande (ocupa 2 columnas) --- */
+  .split-feature .sf-side .sf-item:first-child{
+    grid-column: 1 / -1;
+  }
+  .split-feature .sf-side .sf-item:first-child .sf-thumb img{
+    aspect-ratio: 16 / 9 !important; /* hero horizontal */
+  }
+}
+/* === PARCHE: héroe grande + tarjetas pequeñas (mobile) === */
+@media (max-width: 900px){
+  /* 1) Héroe principal: ocupa toda la anchura con 16:9 */
+  .split-feature .sf-hero{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: stretch;
+  }
+  .split-feature .sf-media img{
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+  }
+
+  /* 2) Lista de tarjetas pequeñas debajo del héroe */
+  .split-feature .sf-side{
+    display:flex !important;
+    flex-direction:column;
+    gap: 12px;
+    height: auto !important;
+  }
+
+  /* Tarjeta “tile”: imagen a la izq, contenido a la dcha */
+  .split-feature .sf-side .sf-item{
+    grid-template-columns: 112px 1fr !important; /* fuerza 2 columnas en mobile */
+    gap: 10px !important;
+    align-items: center !important;
+    height: auto !important;
+    background: #fff;
+    border: 1px solid #e6e8ec;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04);
+  }
+  .split-feature .sf-side .sf-item:hover{
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
+  }
+
+  /* Miniatura: formato 4:3, recorte elegante */
+  .split-feature .sf-side .sf-thumb{
+    width: 112px !important;
+    height: 84px !important; /* 4:3 */
+    display:block !important;
+  }
+  .split-feature .sf-side .sf-thumb img{
+    width: 100% !important;
+    height: 100% !important;
+    aspect-ratio: 4 / 3 !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+  }
+
+  /* Tipografía compacta y sin desbordes */
+  .split-feature .sf-side .sf-item-title{
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .split-feature .sf-side .sf-date{
+    margin: 2px 0 0;
+    font-size: 0.85rem;
+  }
+  .split-feature .sf-side .sf-by .sf-avatar{
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  /* Espaciado general del bloque */
+  .split-feature{ margin-bottom: 28px; }
+}
+/* === SOLO MÓVIL: poner el bloque principal debajo de la imagen === */
+@media (max-width: 900px){
+  /* El section actúa como grilla vertical */
+  .split-feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  /* Aplanamos solo el contenedor del héroe para poder ordenar sus hijos */
+  .split-feature .sf-hero{
+    display: contents !important;
+  }
+
+  /* Orden deseado en móvil */
+  .split-feature .sf-media{ grid-row: 1; }       /* imagen principal */
+  .split-feature .sf-main-title{ grid-row: 2; }  /* título */
+  .split-feature .sf-date{ grid-row: 3; }        /* fecha */
+  .split-feature .sf-by{ grid-row: 4; }          /* autor */
+  .split-feature .sf-dek{ grid-row: 5; }         /* resumen */
+  .split-feature .sf-side{ grid-row: 6; }        /* tarjetas pequeñas */
+}
+/* === SOLO MÓVIL: cabecera arriba, luego tarjetas === */
+@media (max-width: 900px){
+  .split-feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  /* Aplanamos para poder manipular el orden */
+  .split-feature .sf-hero{
+    display: contents !important;
+  }
+
+  /* Imagen principal siempre primero */
+  .split-feature .sf-media{ grid-row: 1; }
+
+  /* Cabecera (título + fecha + autor + dek) justo después de la imagen */
+  .split-feature .sf-main-title,
+  .split-feature .sf-date,
+  .split-feature .sf-by,
+  .split-feature .sf-dek {
+    grid-row: 2;
+  }
+
+  /* Tarjetas pequeñas después de la cabecera */
+  .split-feature .sf-side{ grid-row: 3; }
+}
+/* === SOLO MÓVIL: ordenar filas y evitar que la imagen quede a la altura del título de sección === */
+@media (max-width: 900px){
+  .split-feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  /* Aplanamos el hero para poder reordenar */
+  .split-feature .sf-hero{ display: contents !important; }
+
+  /* 1) Colocar explícitamente la cabecera de la sección en la primera fila */
+  .split-feature .sf-head{ grid-row: 1; }
+
+  /* 2) Imagen principal en su propia fila y como bloque */
+  .split-feature .sf-media{
+    grid-row: 2;
+    display: block;         /* evita estar en línea con la cabecera */
+    width: 100%;
+  }
+  .split-feature .sf-media img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  /* 3) Cabecera del post principal debajo de la imagen (en orden) */
+  .split-feature .sf-main-title{ grid-row: 3; }
+  .split-feature .sf-date{       grid-row: 4; }
+  .split-feature .sf-by{         grid-row: 5; }
+  .split-feature .sf-dek{        grid-row: 6; }
+
+  /* 4) Tarjetas pequeñas después */
+  .split-feature .sf-side{       grid-row: 7; }
+}
+/* === SOLO MÓVIL: descripción justo debajo del título principal === */
+@media (max-width: 900px){
+  .split-feature .sf-main-title { grid-row: 3; } /* título principal */
+  .split-feature .sf-dek        { grid-row: 4; } /* descripción justo debajo */
+  .split-feature .sf-date       { grid-row: 5; } /* fecha */
+  .split-feature .sf-by         { grid-row: 6; } /* autor */
+  .split-feature .sf-side       { grid-row: 7; } /* tarjetas pequeñas */
+}
+@media (max-width: 900px){
+  .split-feature{
+    display: grid;
+    grid-template-areas:
+      "head"
+      "media"
+      "title"
+      "dek"
+      "date"
+      "by"
+      "side";
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  .sf-head       { grid-area: head; }
+  .sf-media      { grid-area: media; display:block; width:100%; }
+  .sf-media img  { width:100%; height:auto; aspect-ratio:16/9; border-radius:12px; object-fit:cover; }
+
+  .sf-main-title { grid-area: title; }
+  .sf-dek        { grid-area: dek; }     /* Descripción justo debajo del título */
+  .sf-date       { grid-area: date; }
+  .sf-by         { grid-area: by; }
+  .sf-side       { grid-area: side; }
+}
+/* === SOLO MÓVIL: ordenar cabecera -> imagen -> título -> descripción -> fecha -> autor -> tarjetas === */
+@media (max-width: 900px){
+  /* El section actúa como grid vertical */
+  .split-feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "media"
+      "title"
+      "dek"
+      "date"
+      "by"
+      "side";
+    row-gap: 12px;
+  }
+
+  /* MUY IMPORTANTE: promovemos los hijos de .sf-hero al grid del section */
+  .split-feature .sf-hero{ display: contents !important; }
+
+  /* Anulamos cualquier grid-row previo que empujaba elementos al final */
+  .split-feature .sf-media,
+  .split-feature .sf-main-title,
+  .split-feature .sf-dek,
+  .split-feature .sf-date,
+  .split-feature .sf-by,
+  .split-feature .sf-side{
+    grid-row: auto !important;
+  }
+
+  /* Asignamos áreas (no cambia estilos de tarjetas) */
+  .split-feature .sf-head{        grid-area: head; }
+  .split-feature .sf-media{       grid-area: media; display:block; width:100%; }
+  .split-feature .sf-main-title{  grid-area: title; }
+  .split-feature .sf-dek{         grid-area: dek; }     /* <- descripción justo debajo del título */
+  .split-feature .sf-date{        grid-area: date; }
+  .split-feature .sf-by{          grid-area: by; }
+  .split-feature .sf-side{        grid-area: side; }
+
+  /* Opcional: aseguramos la imagen 16:9 sin tocar el resto */
+  .split-feature .sf-media img{
+    display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:12px;
+  }
+}
+/* === SOLO MÓVIL: orden correcto del bloque principal === */
+@media (max-width: 900px){
+  /* El section actúa como una columna */
+  .split-feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  /* Promovemos los hijos de .sf-hero al grid del section (sin tocar las tarjetas) */
+  .split-feature .sf-hero{ display: contents !important; }
+
+  /* Anulamos áreas/fila previas que puedan interferir */
+  .split-feature .sf-head,
+  .split-feature .sf-media,
+  .split-feature .sf-main-title,
+  .split-feature .sf-dek,
+  .split-feature .sf-date,
+  .split-feature .sf-by,
+  .split-feature .sf-side{
+    grid-area: auto !important;
+  }
+
+  /* Orden deseado en móvil (NO tocamos .sf-side *.sf-item*) */
+  .split-feature .sf-head{        grid-row: 1; }
+  .split-feature .sf-media{       grid-row: 2; display:block; width:100%; }
+  .split-feature .sf-main-title{  grid-row: 3; }  /* Título principal */
+  .split-feature .sf-dek{         grid-row: 4; }  /* Descripción justo debajo del título */
+  .split-feature .sf-date{        grid-row: 5; }
+  .split-feature .sf-by{          grid-row: 6; }
+  .split-feature .sf-side{        grid-row: 7; }  /* Tarjetas pequeñas después */
+
+  /* Solo aseguramos la imagen 16:9, sin tocar las tarjetas */
+  .split-feature .sf-media img{
+    display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:12px;
+  }
+}
+/* === SOLO MÓVIL: imagen principal + info principal antes de las tarjetas === */
+@media (max-width: 900px){
+  .split-feature{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  /* Promovemos .sf-hero y la info principal al grid del section */
+  .split-feature .sf-hero,
+  .split-feature .sf-main-title,
+  .split-feature .sf-dek,
+  .split-feature .sf-date,
+  .split-feature .sf-by,
+  .split-feature .sf-side{
+    display: block;
+    grid-area: auto;
+  }
+
+  /* Orden en móvil */
+  .split-feature .sf-head        { grid-row: 1; } /* Cabecera sección */
+  .split-feature .sf-media       { grid-row: 2; display:block; width:100%; }
+  .split-feature .sf-main-title  { grid-row: 3; } /* Título principal */
+  .split-feature .sf-dek         { grid-row: 4; } /* Descripción */
+  .split-feature .sf-date        { grid-row: 5; }
+  .split-feature .sf-by          { grid-row: 6; }
+  .split-feature .sf-side        { grid-row: 7; } /* Tarjetas debajo */
+
+  /* Imagen principal 16:9 */
+  .split-feature .sf-media img{
+    display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:12px;
+  }
+}
+/* === SOLO MÓVIL: imagen principal -> info principal -> tarjetas (con prioridad) === */
+@media (max-width: 900px){
+  /* El <section> actúa como una columna */
+  .split-feature{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    row-gap: 12px !important;
+  }
+
+  /* Aplana el contenedor del héroe para poder reordenar sus hijos */
+  .split-feature .sf-hero{ display: contents !important; }
+
+  /* Orden forzado (sin tocar estilos de .sf-side ni sus items) */
+  .split-feature .sf-head{       grid-row: 1 !important; }  /* cabecera de sección */
+  .split-feature .sf-media{      grid-row: 2 !important; display:block !important; width:100% !important; }
+  .split-feature .sf-main-title{ grid-row: 3 !important; }  /* título principal */
+  .split-feature .sf-dek{        grid-row: 4 !important; }  /* descripción justo debajo del título */
+  .split-feature .sf-date{       grid-row: 5 !important; }
+  .split-feature .sf-by{         grid-row: 6 !important; }
+  .split-feature .sf-side{       grid-row: 7 !important; }  /* tarjetas debajo */
+
+  /* Solo aseguramos la imagen 16:9; NO tocamos .sf-side */
+  .split-feature .sf-media img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    aspect-ratio:16/9 !important;
+    object-fit:cover !important;
+    border-radius:12px !important;
+  }
+}
+/* === SOLO MÓVIL: colocar la descripción de la sección debajo del header === */
+@media (max-width: 900px){
+  .split-feature{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    row-gap: 3px !important;
+  }
+  .split-feature .sf-hero{ display: contents !important; }
+
+  /* Orden en móvil (incluyendo la descripción de sección) */
+  .split-feature .sf-head{       grid-row: 1 !important; } /* título de sección + "ver todo" */
+  .split-feature .sf-desc{       grid-row: 2 !important; } /* <— descripción de la sección aquí */
+  .split-feature .sf-media{      grid-row: 3 !important; display:block !important; width:100% !important; }
+  .split-feature .sf-main-title{ grid-row: 4 !important; } /* título principal */
+  .split-feature .sf-dek{        grid-row: 5 !important; } /* descripción del post principal */
+  .split-feature .sf-date{       grid-row: 6 !important; }
+  .split-feature .sf-by{         grid-row: 7 !important; }
+  .split-feature .sf-side{       grid-row: 8 !important; } /* tarjetas pequeñas */
+
+  .split-feature .sf-media img{
+    display:block !important; width:100% !important; height:auto !important;
+    aspect-ratio:16/9 !important; object-fit:cover !important; border-radius:12px !important;
+  }
+}
+@media (max-width: 900px){
+  /* Autor siempre debajo y alineado a la izquierda */
+  .split-feature .sf-date{
+    display:block;
+    float:none !important;
+  }
+  .split-feature .sf-by{
+    display:block !important;          /* bloque = rompe línea */
+    float:none !important;
+    clear:both !important;
+    text-align:left !important;
+    margin:0 0 5px !important;
+  }
+  .split-feature .sf-by .sf-avatar{
+    width:18px; height:18px;           /* compacto en móvil */
+    vertical-align:middle;
+  }
+  .split-feature .sf-by a{
+    margin-left:6px !important;        /* separación del avatar */
+    float:none !important;
+    text-align:left !important;
+    display:inline-block !important;
+  }
+}
+@media (max-width: 900px){
+  /* Cabecera: título y enlace en la misma línea */
+  .split-feature .sf-head{
+    display:flex;
+    align-items:baseline;   /* título y enlace en la misma línea */
+    justify-content:space-between;
+    gap:8px;
+  }
+
+  /* Enlace más pequeño para que no compita con el título */
+  .split-feature .sf-head .sf-links a{
+    font-size:1.05rem !important;
+    white-space:nowrap;
+  }
+
+  /* Título mantiene el tamaño */
+  .split-feature .sf-head .sf-title{
+    margin:0;
+    font-size:1.35rem;
+    font-weight:900;
+  }
+}
+
+</style>

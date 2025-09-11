@@ -4,21 +4,21 @@ productos:
     brand: HOMCOM
     caracteristicasAmazon:
       - >-
-        LICENCIA DE VESPA: Esta moto eléctrica cuenta con licencia oficial de VESPA y está recomendada para niños
-        mayores de 18 meses (bajo la supervisión de un adulto) y soporta un peso de hasta 25 kg. Perfecta para jugar
+        LICENCIA DE VESPA: Esta moto eléctrica Infantil cuenta con licencia oficial de VESPA y está recomendada para
+        niños de 18-36 meses (bajo la supervisión de un adulto) y soporta un peso de hasta 25 kg. Perfecta para jugar
         tanto en exteriores como en interiores
       - >-
-        FÁCIL DE USAR CON VELOCIDAD DE SEGURIDAD: Al ser una moto pensada para los más pequeños es muy fácil de manejar,
-        simplemente accionando el pedal irá hacia adelante con una velocidad máxima de 3 km/h
+        FÁCIL DE USAR CON VELOCIDAD DE SEGURIDAD: Al ser una moto pensada para los más pequeños, la moto de batería es
+        muy fácil de manejar, simplemente accionando el pedal irá hacia adelante con una velocidad máxima de 3 km/h
       - >-
-        SEGURA Y ESTABLE: Sus 4 ruedas, 2 anchas y 2 ruedines auxiliares, aseguran que tu bebé viaje de forma estable y
-        segura. Además, el asiento amplio de PP, es muy cómodo para su uso
+        SEGURA Y ESTABLE: Las 4 ruedas, 2 anchas y 2 ruedines auxiliares de esta moto de juguete eléctrica aseguran que
+        tu bebé viaje de forma estable y segura. Además, el asiento amplio de PU, es muy cómodo para su uso
       - >-
         CONDUCCIÓN REALISTA: Incluso los más peques de la casa pueden disfrutar de una conducción realista con esta moto
-        que tiene faro (delantero con luz real), manillar con bocina y pedal como las de verdad. El faro delantero se
-        ilumina al pisar el pedal
+        de batería que tiene faro (delantero con luz real), manillar con bocina y pedal como las de verdad. El faro
+        delantero se ilumina al pisar el pedal
       - >-
-        AUTONOMÍA DE 45 MINUTOS: Cuenta con una batería de 6 V que se recomienda cargar durante 9-10 horas la primera
+        AUTONOMÍA DE 45 MINUTOS: Cuenta con una batería de 6V que se recomienda cargar durante 9-10 horas la primera
         vez, y unas 8 horas las siguientes. De este modo (dependiendo del tipo de uso) puede tener una autonomía de
         hasta 45 minutos. Medidas totales: 66,5x38x52 cm (LxANxAL)
     descripcion: >-
@@ -28,11 +28,11 @@ productos:
       un toque muy realista. Ideal para dar sus primeros paseos con una sonrisa de oreja a oreja.
     disponibilidad: En stock
     enlace: https://amzn.to/4l4UVD2?tag=recomendadorn-21&th=1
-    imagen: https://m.media-amazon.com/images/I/41SaPf29KBL._SL500_.jpg
+    imagen: https://m.media-amazon.com/images/I/41NqQjIIkyL._SL500_.jpg
     imagenHeight: 500
     imagenWidth: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/41JEEUOk34L._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/41gC6F8iJuL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/511MhK-WicL._SL500_.jpg
@@ -41,13 +41,13 @@ productos:
       - url: https://m.media-amazon.com/images/I/41M8jRQ4diL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41m6R1rYwQL._SL500_.jpg
-        width: 500
-        height: 500
       - url: https://m.media-amazon.com/images/I/51dtQ471+SL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/41E3zsDlWXL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41m6R1rYwQL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/41KoKYONwVL._SL500_.jpg
@@ -128,12 +128,13 @@ productos:
           - name: color_name
             value: Verde
         ParentASIN: B0FBX5TQM9
+        condicion: new
       - ASIN: B0DSGSL6S3
         title: >-
           HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas
           Motocicleta Infantil con Licencia 66,5x38x52 cm Rosa
         brand: HOMCOM
-        precio: "81,99\_€"
+        precio: "67,14\_€"
         precioOriginal: "81,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/419BPHyaNdL._SL500_.jpg
@@ -189,13 +190,14 @@ productos:
           - name: color_name
             value: Rosa
         ParentASIN: B0FBX5TQM9
+        condicion: new
       - ASIN: B0DSGRQ1VQ
         title: >-
           HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas
           Motocicleta Infantil con Licencia 66,5x38x52 cm Rojo
         brand: HOMCOM
-        precio: "81,99\_€"
-        precioOriginal: No especificado
+        precio: "63,74\_€"
+        precioOriginal: "81,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Pp+i1f0DL._SL500_.jpg
         imagenWidth: 500
@@ -250,6 +252,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0FBX5TQM9
+        condicion: new
     ParentASIN: B0FBX5TQM9
     variationAttributes:
       - name: color_name
@@ -257,6 +260,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas Motocicleta
       Infantil con Licencia 66,5x38x52 cm Blanco
+    condicion: new
   - ASIN: B07MT59Z1D
     a_tener_en_cuenta: 1 a 3 años
     brand: HOMCOM
@@ -382,6 +386,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0F24HBFY5
+        condicion: new
       - ASIN: B0F2GKCDWD
         title: >-
           HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto
@@ -390,7 +395,7 @@ productos:
         precio: "68,99\_€"
         precioOriginal: "71,99\_€"
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41vR8uKmB8L._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/414CEcYcsEL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
@@ -440,6 +445,7 @@ productos:
           - name: color_name
             value: Azul
         ParentASIN: B0F24HBFY5
+        condicion: new
     ParentASIN: B0F24HBFY5
     variationAttributes:
       - name: color_name
@@ -447,6 +453,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto Infantil
       con Música Carga 20 kg Rojo
+    condicion: new
   - ASIN: B08J82PGH6
     a_tener_en_cuenta: A partir de 2 años
     brand: TURBO CHALLENGE
@@ -512,6 +519,7 @@ productos:
     title: TURBO CHALLENGE Baby Driver Vespa GTS, Color Verde Aguamarina, Large (MGM 119151)
     variantes: []
     nombreCompleto: TURBO CHALLENGE Baby Driver Vespa GTS, Color Verde Aguamarina, Large (MGM 119151)
+    condicion: new
   - ASIN: B0BJDKDV86
     a_tener_en_cuenta: A partir de 2 años
     brand: HOMCOM
@@ -588,7 +596,7 @@ productos:
           HOMCOM Moto Eléctrica BMW HP4 para Niños de +18 Meses Motocicleta de Batería 6V con Música USB Velocidad 2,5
           km/h Avance y Retroceso Carga 30 kg 82,5x42x54 cm Rojo
         brand: HOMCOM
-        precio: "94,99\_€"
+        precio: "87,99\_€"
         precioOriginal: "98,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41r+0C8n8uL._SL500_.jpg
@@ -644,6 +652,7 @@ productos:
           - name: color_name
             value: Rojo
         ParentASIN: B0BKK44X75
+        condicion: new
     ParentASIN: B0BKK44X75
     variationAttributes:
       - name: color_name
@@ -651,6 +660,7 @@ productos:
     nombreCompleto: >-
       HOMCOM Moto Eléctrica BMW HP4 para Niños de +18 Meses Motocicleta de Batería 6V con Música USB Velocidad 2,5 km/h
       Avance y Retroceso Carga 30 kg 82,5x42x54 cm Azul
+    condicion: new
   - ASIN: B0DJM8FKMR
     a_tener_en_cuenta: A partir de 2 años
     brand: AIYAPLAY
@@ -714,7 +724,7 @@ productos:
       - Buena batería
       - Con música
     nombre: AIYAPLAY Moto Eléctrica para Niños
-    precio: "69,99\_€"
+    precio: "66,99\_€"
     precioOriginal: No especificado
     valoracion: 4.3
     title: >-
@@ -782,6 +792,7 @@ productos:
           - name: color_name
             value: Negro Y Rojo
         ParentASIN: B0DJNT63S2
+        condicion: new
     ParentASIN: B0DJNT63S2
     variationAttributes:
       - name: color_name
@@ -789,5 +800,6 @@ productos:
     nombreCompleto: >-
       AIYAPLAY Moto Eléctrica para Niños de +2 Años Moto de Batería para Niños 6V con Función de Soplar Burbujas Faros
       Música Velocidad 3 km/h Carga 30 kg Verde
+    condicion: new
 titulo_a_tener_en_cuenta: Edad recomendada
-actualizacion: '2025-09-05'
+actualizacion: '2025-09-11'

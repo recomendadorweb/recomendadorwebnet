@@ -8,685 +8,514 @@ pagination:
   enabled: true
 date: 2025-08-05
 ---
-
 <style>
-:root {
-  --color-azul-profesional: #364e68;
-  --color-rosa-destacado: #B0032C;
-  --color-fondo-claro: #f5f5f5;
-  --color-texto-gris: #666;
-  --color-claro-hover: #dde7f0;
-  --color-fondo-widget: #f0f4f8;
-  --color-shadow: rgba(0, 0, 0, 0.1);
-  --hotpost-height: 150px;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-fondo-claro);
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
-h2 {
-  text-align: center;
-  margin: 30px 0 10px;
-  font-size: 1.8em;
-  color: #333;
-}
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-.hot-post,
-.hot-post-secundario {position: relative;
-  overflow: hidden;}
-.hot-post img,
-.hot-post-secundario img {display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;}
-.hot-post:hover img,
-.hot-post-secundario:hover img {transform: scale(1.05);
-  filter: brightness(0.8); /* oscurece la imagen al pasar el ratón */}
-  .grid-posts {
-  max-width: 1200px;
-  margin: 0 auto 50px;
-  padding: 0;
+:root{
+  --color-azul-profesional:#364e68;
+  --color-rosa-destacado:#B0032C;
+  --color-fondo-claro:#f5f5f5;
+  --color-texto-gris:#666;
+  --color-claro-hover:#dde7f0;
+  --color-fondo-widget:#f0f4f8;
+  --color-shadow:rgba(0,0,0,.1);
+  --hotpost-height:150px;
+  --top-row-h:360px;
 }
 
-.hot-grid {
-  display: grid;
-  grid-template-areas:
-    "main side1"
-    "main side2";
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: var(--hotpost-height) var(--hotpost-height);
-  gap: 10px;
+/* Base */
+body{font-family:'Poppins',sans-serif;margin:0;padding:0;background-color:var(--color-fondo-claro);}
+.home-landing a{color:inherit;text-decoration:none;}
+.home-landing h2{margin:.2rem;font-size:1.6em;text-align:center;color:#333;}
+.home-landing img{display:block;width:100%;height:auto;object-fit:cover;}
+
+/* ====== FILA SUPERIOR (3 columnas) ====== */
+.home-landing .homepage-top{
+  position:relative;z-index:1;max-width:1032px;margin:0 auto 20px;padding:14px;
+  display:grid;grid-template-columns:1.2fr 2.5fr 1fr;gap:14px;
+  background:#ffffffd9;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);
+  align-items:stretch;
+}
+.home-landing .homepage-top > *{min-height:0;height:100%;display:flex;flex-direction:column;}
+@media (max-width:1100px){.home-landing .homepage-top{grid-template-columns:240px 1fr 280px;}}
+@media (max-width:980px){.home-landing .homepage-top{grid-template-columns:1fr;}}
+
+/* ====== FILA INFERIOR (bloque ancho) ====== */
+.home-landing .homepage-below{max-width:1032px;margin:0 auto 30px;padding:0 20px;}
+.home-landing .homepage-below .wide-section{
+  background:#ffffffd9;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);padding:20px;
+}
+.home-landing .homepage-below .wide-section h2{margin:0 0 16px;font-size:1.4rem;color:#111;text-align:left;}
+
+/* Columna izquierda: Últimos posts */
+.home-landing .latest-widget{border-radius:10px;overflow:hidden;}
+.home-landing .latest-widget .lw-header{padding:14px 16px 0 0px;}
+.home-landing .latest-widget .lw-header h3{margin:0;font-size:1rem;font-weight:700;color:#111;}
+.home-landing .latest-widget .lw-list{padding:8px 0;}
+.home-landing .latest-widget .lw-item{
+  display:flex;align-items:center;gap:10px;padding:10px 5px;border-left:3px solid transparent;
+}
+.home-landing .latest-widget .lw-item:hover{background:#fafafa;border-left-color:var(--color-rosa-destacado);}
+.home-landing .latest-widget .lw-thumb{width:58px;height:44px;flex-shrink:0;border-radius:6px;overflow:hidden;background:#eee;}
+.home-landing .latest-widget .lw-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.home-landing .latest-widget .lw-body{min-width:0;}
+.home-landing .latest-widget .lw-title{
+  font-size:.95rem;line-height:1.25;font-weight:600;color:#000;display:block;overflow:visible;white-space:normal;
+}
+.home-landing .latest-widget .lw-meta{margin-top:2px;font-size:.78rem;color:var(--color-texto-gris);}
+
+/* Columna central: HERO estilo home */
+.home-landing .hero{position:relative;z-index:2;display:flex;flex-direction:column;background:transparent;border-radius:0;box-shadow:none;overflow:visible;}
+.home-landing .hero .hero-media{position:relative;width:100%;aspect-ratio:auto;overflow:hidden;background:#ffffffd9;margin-bottom: 10px;}
+.home-landing .hero .hero-media img{width:100%;height:100%;object-fit:cover;transition:transform .3s ease,filter .3s ease;border-radius: 10px;}
+.home-landing .hero .hero-cat{
+  position:absolute;top:10px;left:10px;background:var(--color-rosa-destacado);color:#fff;font-size:12px;font-weight:700;padding:4px 8px;border-radius:4px;
+}
+.home-landing .hero .hero-inner{display:block !important;margin:0 !important;padding:0 8px !important;max-width:780px !important;column-count:1 !important;gap:0 !important;}
+.home-landing .hero .hero-title{
+  margin:8px 0 8px !important;font-size:clamp(1.9rem,1.8vw + 1rem,2.4rem) !important;line-height:1.1;font-weight:900;letter-spacing:-.5px;color:#111 !important;
+}
+.home-landing .hero .hero-title a{color:#111 !important;text-decoration:none;}
+.home-landing .hero .hero-title a :hover{color:#0073e6 !important;text-decoration:none;}
+.home-landing .hero .hero-byline{margin:0 0 10px !important;font-size:.95rem;color:#444;}
+.home-landing .hero .hero-dek{margin:0 !important;max-width:60ch;line-height:1.6;color:#333;}
+.home-landing .hero h1,.home-landing .hero h1 a{color:#111 !important;text-transform:none !important;}
+.home-landing .hero,.home-landing .hero p{column-count:1 !important;}
+
+/* Columna derecha: widgets (sidebar) */
+.home-landing aside .popular-box-widget{border-radius:10px;padding:0;overflow:hidden;margin-bottom:15px;display:flex;flex-direction:column;height:100%;}
+.popular-box-header{margin:14px 0px 0 16px;}
+.popular-box-header h3{margin: 0px;font-size:1rem;font-weight:700;color:#222;}
+.popular-box-content{padding:8px 0px;display:flex;flex-direction:column;gap:14px;flex:0 0 auto;}
+.popular-box-item{display:flex;gap:12px;align-items:center;}
+.popular-thumb{display:block;width:72px;height:72px;background-size:cover;background-position:center;border-radius:6px;flex-shrink:0;}
+.popular-thumb-guias{display:block;width:100%;aspect-ratio:16/9;background-size:cover;background-position:center;border-radius:8px;}
+.popular-text{flex:1;display:flex;flex-direction:column;justify-content:center;}
+.popular-title{font-size:.95em;font-weight:600;color:#000 !important;line-height:1.3;margin-bottom:4px;text-decoration:none;}
+.popular-title:hover{color:#0073e6 !important;text-decoration:underline;}
+.popular-date{font-size:.8em;color:#595959;}
+
+/* Grid inferior / tarjetas / listados */
+.hot-post,.hot-post-secundario{position:relative;overflow:hidden;}
+.hot-post img,.hot-post-secundario img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .4s ease,filter .4s ease;}
+.hot-post:hover img,.hot-post-secundario:hover img{transform:scale(1.05);filter:brightness(.8);}
+.grid-posts{max-width:1032px;margin:0 auto 50px;padding:0;}
+.post-category{
+  position:absolute;top:0;left:0;background:var(--color-rosa-destacado);color:#fff;font-size:12px;font-weight:600;text-transform:uppercase;padding:3px 8px;border-radius:0 0 4px 0;z-index:3;letter-spacing:.4px;
+}
+.post-category:hover{background-color:#004aad;}
+.post-text{position:absolute;bottom:0;left:0;right:0;padding:20px 15px;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);color:#fff;z-index:2;}
+.post-title{margin:0;font-size:1.2em;font-weight:bold;line-height:1.3;color:#fff;text-shadow:1px 1px 2px rgba(0,0,0,.5);}
+.post-subtitle{margin:5px 0 0;font-size:1em;font-weight:400;color:rgba(255,255,255,.85);text-shadow:1px 1px 2px rgba(0,0,0,.4);}
+.card-post{position:relative;overflow:hidden;border-radius:8px;margin-bottom:15px;box-shadow:0 2px 6px var(--color-shadow);}
+.card-post img{transition:transform .3s ease,filter .3s ease;}
+.card-post:hover img{transform:scale(1.05);filter:brightness(.8);}
+
+/* Blog list */
+.blog-tarjeta{display:flex;border:1px solid #ddd;border-radius:12px;padding:16px;margin-bottom:24px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:box-shadow .3s ease;}
+.blog-tarjeta:hover{box-shadow:0 4px 16px rgba(0,0,0,.1);}
+.tarjeta-thumb{flex-shrink:0;}
+.tarjeta-thumb img{width:200px;height:160px;object-fit:cover;border-radius:8px;}
+.tarjeta-info{margin-left:16px;flex:1;}
+.tarjeta-title{margin:0;font-size:1.15rem;font-weight:bold;color:#000;text-align:left;}
+.tarjeta-title a{color:#000 !important;}
+.tarjeta-title a:hover{color:#1A73E8 !important;text-decoration:underline;}
+.tarjeta-excerpt{margin:12px 0;font-size:1rem;color:#555;line-height:1.4;}
+.entry-meta{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:0;}
+.entry-meta img{width:28px;height:28px;border-radius:50%;object-fit:cover;}
+.entry-meta span{font-size:.85rem;color:#666;}
+
+/* Widgets grid (guías) y tags */
+.widget.type-grid .grid-items{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px;}
+.widget.type-grid .grid-item{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.05);transition:transform .2s ease;text-align:left;}
+.widget.type-grid .grid-item:hover{box-shadow:0 4px 16px rgba(0,0,0,.1);}
+.widget.type-grid .grid-item img{width:100%;height:140px;object-fit:cover;display:block;border-top-left-radius:10px;border-top-right-radius:10px;}
+.widget.type-grid .post-title{margin:8px 10px 0;font-size:.95rem;font-weight:600;color:#222;}
+.widget.type-grid .post-title:hover{color:#007bff;text-decoration:underline;}
+.widget.type-grid .post-date{margin:4px 10px 10px;font-size:.75rem;color:#595959;}
+
+/* Utilidades */
+.load-more-container{text-align:center;margin:30px 0;}
+.load-more-button{background:#004DCC;color:#fff;border:0;padding:10px 24px;border-radius:6px;font-size:15px;font-weight:500;cursor:pointer;transition:background-color .2s ease;}
+.load-more-button:hover{background:#1a5ed8;}
+#back-top{
+  position:fixed;bottom:20px;right:20px;width:42px;height:42px;line-height:42px;background:#007bff;color:#fff;font-size:20px;font-weight:bold;text-align:center;border-radius:50%;text-decoration:none;box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:999;opacity:0;pointer-events:none;transition:opacity .3s ease;
+}
+#back-top.visible{opacity:1;pointer-events:auto;}
+#back-top:hover{background:#0056b3;}
+#results-container{margin-top:12px;padding-left:0;overflow:visible;}
+#results-container li{list-style:none;margin-bottom:6px;padding:6px 10px;border:1px solid #fc3c68;border-radius:5px;font-size:.95rem;background:#fff;white-space:normal;word-wrap:break-word;}
+.site-footer,footer{position:relative;z-index:0;clear:both;}
+
+/* Responsive */
+@media (max-width:768px){
+  .blog-tarjeta{flex-direction:column;align-items:center;}
+  .tarjeta-thumb,.tarjeta-thumb img{width:100% !important;height:200px !important;}
+  .tarjeta-info{margin-left:0;margin-top:12px;}
 }
 
-.main-post {
-  grid-area: main;
-  height: calc(var(--hotpost-height) * 2 + 20px);
-  content-visibility: auto;
-  contain-intrinsic-size: 340px;
-  min-height: 310px;
+/* ========= MODO CONTENEDOR ÚNICO ========= */
+.contenedor-unico{max-width:1032px;margin:0 auto;background:#fff;padding:14px;}
+.contenedor-unico .homepage-top,
+.contenedor-unico .homepage-home .home-section{margin:0px 14px 14px 14px !important;padding:0px !important;background:transparent !important;border-radius:0 !important;box-shadow:none !important;}
+.contenedor-unico .hero-divider{margin:0 !important;}
+.contenedor-unico > *{box-shadow:none !important;border:none !important;border-radius:0 !important;}
+
+/* home */
+.homepage-home .home-section{
+  max-width:1032px;margin:0 auto 40px;padding:20px;background:#fff;border-radius:10px;box-shadow:0 1px 6px rgba(0,0,0,.08);text-align:left;
+}
+.homepage-home h2{margin:0 0 10px;font-size:1.6em;text-align:left;}
+.homepage-home p{margin:0 0 20px;color:#666;}
+.home-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.home-card{background:#fff;overflow:hidden; border-radius: 10px;transition:transform .2s ease;text-align:left;}
+.home-card img{width:100%;height:160px;object-fit:cover;display:block;}
+.home-card h3{font-size:1rem;margin:10px 10px 0px 10px;color:#000;font-weight:600;}
+.home-card a{text-decoration:none;color:inherit;display:block;}
+.home-card a:hover h3{color:#0073e6;}
+.author-post{color:#000 !important;text-decoration:none;}
+.author-post:hover{color:#0073e6 !important;text-decoration:none;}
+.hero .hero-byline{
+  display:flex;
+  align-items:center;
+  gap:8px;          /* espacio entre elementos */
+  flex-wrap:wrap;   /* por si en móvil se parte en dos líneas */
+  line-height:1.2;  /* uniforme */
 }
 
-.side-post:nth-of-type(2) {
-  grid-area: side1;
-  height: var(--hotpost-height);
+.author-link{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  text-decoration:none;
+  color:inherit;
+  line-height:1;    /* evita saltos verticales */
 }
 
-.side-post:nth-of-type(3) {
-  grid-area: side2;
-  height: var(--hotpost-height);
+.author-avatar{
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;    /* elimina el baseline de la imagen */
 }
 
-.post {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #000;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+/* mobile */
+/* ======= MOBILE-ONLY OVERRIDES ======= */
+@media (max-width: 980px){
+  /* Contenedor general: respiración y menos sombras */
+  .contenedor-unico{padding:10px;}
+  .home-landing .homepage-top{padding:10px;gap:10px;}
+  .homepage-home .home-section{margin:0 10px 24px 10px;padding:14px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
 }
 
-.post-category {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: var(--color-rosa-destacado);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: 0 0 4px 0;
-  z-index: 3;
-  letter-spacing: 0.4px;
+/* Orden inteligente en columna (hero primero) */
+@media (max-width: 980px){
+  .home-landing .homepage-top{display:grid;grid-template-columns:1fr;}
+  .home-landing .latest-widget{order:2;}
+  .home-landing .hero{order:1;}
+  .home-landing aside{order:3;}
 }
 
-.post-category:hover {
-  background-color: #004aad;
-}
-
-.post-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 20px 15px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-  color: #fff;
-  z-index: 2;
-}
-
-.post-title {margin: 0;
-  font-size: 1.2em;
-  font-weight: bold;
-  line-height: 1.3;
-  color: #ffffff;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.comparativa-title {
-  font-size: 0.95em !important;
-  font-weight: 600;
-  color: #000000 !important;
-  text-decoration: none;
-  line-height: 1.3;
-  margin: 13px;
-}
-
-.post-subtitle {
-  margin: 5px 0 0;
-  font-size: 1em;
-  font-weight: normal;
-  color: rgba(255, 255, 255, 0.85);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-}
-.grid-posts .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.grid-posts .post {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #000;
-  height: var(--hotpost-height);
-}
-
-.grid-posts .post-category {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background-color: #e50914;
-  color: #fff;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 20px;
-  z-index: 3;
-  letter-spacing: 0.5px;
-}
-
-.grid-posts .post-text {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 15px 12px 18px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent 80%);
-  color: #fff;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.grid-posts h3 {
-  margin: 0;
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-.grid-posts .post-subtitle {
-  margin: 0;
-  font-size: 0.85em;
-  opacity: 0.85;
-}
-.card-post {
-  position: relative;
-  overflow: hidden;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 2px 6px var(--color-shadow);
-}
-
-.card-post:hover img {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-}
-
-.card-post img {
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.card-post.clasica {
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px var(--color-shadow);
-  transition: transform 0.2s ease;
-}
-
-.card-post.clasica:hover {
-  transform: translateY(-2px);
-}
-
-.card-post.clasica img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.card-post.clasica .card-texto {
-  padding: 12px 15px;
-}
-
-.card-post.clasica .card-texto h4 {
-  margin: 0 0 6px;
-  font-size: 1em;
-  font-weight: bold;
-  color: #222;
-}
-
-.card-post.clasica .card-texto p {
-  margin: 0;
-  font-size: 0.9em;
-  color: var(--color-texto-gris);
-}
-.blog-tarjeta {
-  display: flex;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 24px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.3s ease;
-}
-
-.blog-tarjeta:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-}
-
-.tarjeta-thumb {
-  flex-shrink: 0;
-}
-
-.tarjeta-thumb img {
-  width: 200px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.tarjeta-info {
-  margin-left: 16px;
-  flex: 1;
-}
-
-.tarjeta-title {
-  font-size: 1.15rem;
-  margin: 0;
-  font-weight: bold;
-  color: #000;
-  text-align: left;
-}
-
-.tarjeta-title a {
-  color: #000 !important;
-}
-
-.tarjeta-title a:hover {
-  color: #1A73E8 !important;
-  text-decoration: underline;
-}
-
-.tarjeta-excerpt {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.4;
-  margin: 12px 0;
-}
-
-.entry-meta {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 8px;
-  margin: 0;
-}
-
-.entry-meta img {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.entry-meta span {
-  font-size: 0.85rem;
-  color: #666;
-}
-.tarjeta-final {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px var(--color-shadow);
-  transition: transform 0.2s ease;
-  margin-bottom: 7px;
-}
-
-.tarjeta-final .contenedor-img {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-}
-
-.tarjeta-final .contenedor-img:hover img {
-  transform: scale(1.05);
-  filter: brightness(0.8);
-}
-
-.tarjeta-final .info-texto {
-  padding: 12px 15px;
-}
-
-.tarjeta-final h4 {
-  margin: 0 0 6px;
-  font-size: 1em;
-  font-weight: bold;
-  color: #222;
-}
-
-.tarjeta-final .autor-fecha {
-  font-size: 0.8em;
-  color: #888;
-  margin: 0;
-}
-
-.tarjeta-final .descripcion {
-  margin: 6px 0 4px;
-  font-size: 0.9em;
-  color: #555;
-  line-height: 1.4;
-}
-.avatar-link {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  z-index: 4;
-  display: block;
-  width: 32px;
-  height: 32px;
-  border: 1px solid #000000;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  transition: transform 0.2s ease;
-}
-
-.avatar-link:hover {
-  transform: scale(1.1);
-}
-.popular-box-widget {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.popular-box-header {
-  padding: 16px 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.popular-box-header h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #222;
-  margin: 0;
-}
-
-.popular-box-content {
-  padding: 16px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.popular-box-item {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.popular-thumb {
-  display: block;
-  width: 72px;
-  height: 72px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 6px;
-  flex-shrink: 0;
-}
-
-.popular-thumb-guias {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 8px;
-}
-
-.popular-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.popular-title {
-  font-size: 0.95em;
-  font-weight: 600;
-  color: #000000 !important;
-  text-decoration: none;
-  line-height: 1.3;
-  margin-bottom: 4px;
-}
-
-.popular-title:hover {
-  color: #0073e6 !important;
-  text-decoration: underline;
-}
-
-.popular-date {
-  font-size: 0.8em;
-  color: #595959;
-}
-.load-more-container {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.load-more-button {
-  background-color: #004DCC;
-  color: white;
-  border: none;
-  padding: 10px 24px;
-  border-radius: 6px;
-  font-size: 15px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-.load-more-button:hover {
-  background-color: #1a5ed8;
-}
-#back-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 42px;
-  height: 42px;
-  background-color: #007bff;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 42px;
-  border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-#back-top.visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-#back-top:hover {
-  background-color: #0056b3;
-}
-.tag-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 11px;
-}
-.tag-box a {
-  display: inline-block;
-  padding: 3px 11px;
-  border: 1px solid #007bff;
-  border-radius: 15px;
-  color: #007bff;
-  text-decoration: none;
-  font-size: 13px;
-  white-space: nowrap;
-  transition: background 0.2s ease;
-}
-.tag-box a:hover {
-  background: #007bff;
-  color: white !important;
-}
-.popular-box-content.tag-box {
-  flex-direction: row !important;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-#results-container {
-  margin-top: 12px;
-  padding-left: 0;
-  overflow: visible;
-}
-
-#results-container li {
-  list-style: none;
-  margin-bottom: 6px;
-  padding: 6px 10px;
-  border: 1px solid #fc3c68;
-  border-radius: 5px;
-  font-size: 0.95rem;
-  background: #fff;
-  white-space: normal;
-  word-wrap: break-word;
-}
-.titulo-principal {
-  margin-top: 20px !important;
-  font-size: 1.4em;
-  color: #333;
-  text-align: left;
-  font-weight: bold;
-  margin: 0;
-}
-.author-post {
-
-  font-size: 0.95em;
-  font-weight: 600;
-  color: #000000 !important;
-  text-decoration: none;
-  line-height: 1.3;
-  margin-bottom: 4px;
-}
-
-.author-post:hover {
-  color: #0073e6 !important;
-  text-decoration: underline;
-}
-@media (max-width: 768px) {
-  .hot-grid {
-    grid-template-areas:
-      "main"
-      "side1"
-      "side2";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+/* HERO: reservas de espacio para evitar CLS + tipografía fluida */
+@media (max-width: 768px){
+  .home-landing .hero .hero-media{aspect-ratio:16/9;border-radius:10px;}
+  .home-landing .hero .hero-title{
+    font-size:clamp(1.4rem, 4.5vw + .6rem, 1.9rem) !important;
+    margin:6px 0 6px !important;
   }
+  .home-landing .hero .hero-byline{font-size:.9rem;}
+  .home-landing .hero .hero-dek{font-size:.98rem;line-height:1.6;}
+}
 
-  .main-post,
-  .side-post:nth-of-type(2),
-  .side-post:nth-of-type(3),
-  .grid-posts .post,
-  .popular-box-widget,
-  .widget.type-grid .grid-items {
-    height: auto;
-    width: 100% !important;
-    margin: 0 auto 20px;
-    grid-template-columns: 1fr !important;
-  }
+/* Últimos posts: tap targets más grandes y thumbs consistentes */
+@media (max-width: 768px){
+  .latest-widget .lw-item{padding:12px 8px;gap:12px;}
+  .latest-widget .lw-thumb{width:76px;height:56px;border-radius:8px;}
+  .latest-widget .lw-title{font-size:1rem;line-height:1.3;}
+  .latest-widget .lw-meta{font-size:.8rem;}
+}
 
-  .contenido-con-sidebar {
-    flex-direction: column;
-  }
-  .contenido-principal,
-  .barra-lateral {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-top: 20px;
-  }
-  .blog-tarjeta {
-    flex-direction: column;
-    align-items: center;
-  }
-  .tarjeta-thumb,
-  .tarjeta-thumb img {
-    width: 100% !important;
-    height: 200px !important;
-  }
-  .tarjeta-info {
-    margin-left: 0;
-    margin-top: 12px;
+/* Sidebar: bloque a ancho completo con mejor ritmo vertical */
+@media (max-width: 980px){
+  aside .popular-box-widget{margin-top:6px;padding:10px;border-radius:10px;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+  .popular-box-content{gap:10px;}
+  .popular-thumb{width:64px;height:64px;border-radius:8px;}
+  .popular-title{font-size:1rem;}
+}
+
+/* Tarjetas / grids: 2 columnas en móviles medianos, 1 en móviles pequeños */
+@media (max-width: 980px){
+  .widget.type-grid .grid-items{grid-template-columns:repeat(2, minmax(0,1fr));gap:12px;}
+  .home-card img{height:140px;}
+}
+@media (max-width: 480px){
+  .widget.type-grid .grid-items{grid-template-columns:1fr;}
+  .home-card img{height:150px;}
+}
+
+/* Blog list: layout vertical limpio (ya casi listo, pulimos detalles) */
+@media (max-width: 768px){
+  .blog-tarjeta{padding:14px;border-radius:10px;}
+  .tarjeta-thumb img{height:180px !important;}
+  .tarjeta-title{font-size:1.05rem;}
+  .tarjeta-excerpt{font-size:.98rem;}
+}
+
+/* Hot posts / cards: reservar altura para evitar saltos */
+@media (max-width: 768px){
+  .card-post{border-radius:10px;overflow:hidden;/* reserva de relación para CLS */}
+  .card-post img{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;}
+  .hot-post,.hot-post-secundario{aspect-ratio:16/9;}
+  .hot-post img,.hot-post-secundario img{height:auto;}
+}
+
+/* Secciones home (includes): espaciado compacto y tipografía */
+@media (max-width: 768px){
+  .homepage-home h2{font-size:1.35em;}
+  .homepage-home p{font-size:.98rem;line-height:1.6;margin-bottom:16px;}
+  .home-grid{gap:14px;}
+}
+
+/* Botón 'Cargar más' y 'Back to top': accesibles con el dedo */
+@media (max-width: 768px){
+  .load-more-button{padding:12px 20px;font-size:16px;border-radius:10px}
+  #back-top{width:48px;height:48px;line-height:48px;font-size:22px;bottom:14px;right:14px;}
+}
+
+/* Aviso de afiliados: mejor legibilidad en móvil */
+@media (max-width: 768px){
+  [style*="Bienvenido a"]{ /* tu caja de aviso inline */
+    max-width: 94% !important;
+    font-size:.98rem !important;
+    line-height:1.6 !important;
+    padding:12px 14px !important;
   }
 }
-.widget.type-grid .grid-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
+
+/* Buscador: resultados más respirados en móvil */
+@media (max-width: 600px){
+  #results-container li{font-size:1rem;padding:10px 12px;}
 }
 
-.widget.type-grid .grid-item {
-  background: #fff;
-  border-radius: 10px;
+/* Pequeñas mejoras de contraste y clicabilidad */
+@media (hover:none){
+  .popular-title:hover,
+  .widget.type-grid .post-title:hover,
+  .home-card a:hover h3{color:inherit;text-decoration:none;}
+}
+/* ===== WIDGET LATERAL EN HORIZONTAL CON SCROLL-SNAP ===== */
+aside .popular-box-widget{
+  position:relative;
+  border-radius:10px;
+  overflow:hidden; /* recorta gradientes */
+}
+
+/* Contenedor deslizante */
+.popular-box-content{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:stretch;
+  gap:14px;
+  padding:12px 16px 16px 16px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+}
+
+/* Tarjeta elemento */
+.popular-box-item{
+  flex:0 0 auto;
+  width:260px;               /* ancho visible por tarjeta */
+  min-height:88px;
+  border:0px solid #eee;
+  border-radius:10px;
+  background:#fff;
+  scroll-snap-align:start;   /* “ancla” al inicio */
+}
+
+/* Miniatura dentro de la tarjeta */
+.popular-thumb{width:72px;height:72px;border-radius:8px;flex-shrink:0;}
+.popular-text{min-width:0;}
+.popular-title{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+
+/* Scrollbar discreto (o escóndelo si prefieres) */
+.popular-box-content::-webkit-scrollbar{height:8px;}
+.popular-box-content::-webkit-scrollbar-track{background:#f1f1f1;border-radius:10px;}
+.popular-box-content::-webkit-scrollbar-thumb{background:#c9d6e2;border-radius:10px;}
+.popular-box-content{scrollbar-width:thin;scrollbar-color:#c9d6e2 #f1f1f1;}
+
+/* Bordes con degradado para indicar desplazamiento */
+.popular-box-widget::before,
+.popular-box-widget::after{
+  content:"";
+  position:absolute;top:0;bottom:0;width:24px;pointer-events:none;z-index:2;
+}
+.popular-box-widget::before{
+  left:0;background:linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+.popular-box-widget::after{
+  right:0;background:linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+/* En móvil, ligeramente más compactas */
+@media (max-width: 980px){
+  .popular-box-item{width:220px;}
+}
+
+/* Si usas el modo “contenedor único”, mantenlo horizontal igualmente */
+.contenedor-unico aside .popular-box-content{
+  display:flex !important; flex-direction:row !important; overflow-x:auto;
+}
+/* --- FIX: que el widget no fuerce altura completa --- */
+aside .popular-box-widget{
+  height:auto !important;     /* antes: height:100% */
+  overflow:hidden;            /* recorta cualquier desborde visual */
+}
+
+/* --- FIX: carril horizontal sin estirar verticalmente --- */
+.popular-box-content{
+  align-items:flex-start !important;   /* antes: stretch */
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+}
+
+/* --- FIX: tarjeta con tamaño propio y sin “crecer” raro --- */
+.popular-box-item{
+  flex:0 0 auto;
+  width:260px;                         /* ajusta 240–300px a gusto */
+  max-width:100%;
+  height:auto;                         /* evita estirar en vertical */
+  align-self:flex-start;               /* ignora un posible stretch */
+  box-sizing:border-box;
+}
+
+/* Evita que el contenido fuerce ancho/alto extra */
+.popular-text{min-width:0;}
+.popular-title{
+  display:block;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  max-width:100%;
+}
+/* 1) El widget no fuerza altura */
+.home-landing aside .popular-box-widget{
+  height:auto !important;
+  overflow:hidden;            /* recorta bordes/gradientes */
+  box-sizing:border-box;
+}
+
+/* 2) El carril SÍ debe poder encoger al ancho del aside */
+.home-landing aside .popular-box-widget .popular-box-content{
+  width:100% !important;
+  min-width:0 !important;     /* << la clave para que no se estire */
+  flex:1 1 auto !important;
+  align-items:flex-start !important;
+  overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type:x mandatory;
+  box-sizing:border-box;
+}
+
+/* 3) Cada tarjeta no puede “empujar” al contenedor */
+.home-landing aside .popular-box-widget .popular-box-item{
+  flex:0 0 auto;
+  inline-size:260px;          /* prueba 240–300px */
+  max-inline-size:100%;
+  block-size:auto;
+  align-self:flex-start;
+  box-sizing:border-box;
+}
+
+/* 4) Textos largos no fuerzan ancho extra */
+.home-landing aside .popular-box-widget .popular-text{min-width:0 !important;}
+.home-landing aside .popular-box-widget .popular-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; /* máximo 2 líneas */
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
-  text-align: left;
+  text-overflow: ellipsis;
+  white-space: normal; /* permitir saltos de línea */
+  max-width: 100%;
 }
 
-.widget.type-grid .grid-item:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+/* 5) Bordes-gradiente siguen dentro del aside */
+.home-landing aside .popular-box-widget::before,
+.home-landing aside .popular-box-widget::after{inset-block:0;inline-size:24px;pointer-events:none;}
+/* El aside (grid item) puede encoger dentro de la grid */
+.home-landing .homepage-top aside { min-width: 0 !important; }
+
+/* El contenedor del widget no se sale y ocupa el ancho disponible */
+.home-landing aside .popular-box-widget { width:100%; box-sizing:border-box; }
+
+/* El carril horizontal no “empuja” al padre */
+.home-landing aside .popular-box-widget .popular-box-content{
+  width:100%;
+  min-width:0;            /* clave para permitir encoger */
+  box-sizing:border-box;
+  overflow-x:auto;
 }
 
-.widget.type-grid .grid-item img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+/* Cada tarjeta mantiene su ancho sin forzar al carril */
+.home-landing aside .popular-box-widget .popular-box-item{
+  flex:0 0 260px;         /* o 240–300px a gusto */
+  max-width:260px;
+  box-sizing:border-box;
+}
+/* === RESTAURAR OFERTAS FLASH: vertical en desktop, horizontal solo en móvil === */
+
+/* Desktop (por defecto): columna vertical como antes */
+.home-landing aside .popular-box-widget .popular-box-content{
+  display:flex !important;
+  flex-direction:column !important;   /* << vertical otra vez */
+  gap:0px !important;
+  padding:8px 0px !important;
+  overflow:visible !important;
+  scroll-snap-type:none !important;
 }
 
-.widget.type-grid .post-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #222;
-  margin: 8px 10px 0;
-  line-height: 1.3;
+/* Las tarjetas ocupan el ancho del sidebar */
+.home-landing aside .popular-box-widget .popular-box-item{
+  flex:0 0 auto !important;
+  width:100% !important;
+  max-width:100% !important;
+  align-self:auto !important;
+  scroll-snap-align:unset !important;
 }
 
-.widget.type-grid .post-title:hover {
-  color: #007bff;
-  text-decoration: underline;
+/* Quitar gradientes laterales en desktop */
+.home-landing aside .popular-box-widget::before,
+.home-landing aside .popular-box-widget::after{
+  content:none !important;
 }
 
-.widget.type-grid .post-date {
-  font-size: 0.75rem;
-  color: #595959;
-  margin: 4px 10px 10px;
-}
-@media (max-width: 768px) {
-  .main-post {
-    height: 300px !important;
+/* MÓVIL: carrusel horizontal (el único sitio donde debe ser horizontal) */
+@media (max-width:980px){
+  .home-landing aside .popular-box-widget .popular-box-content{
+    flex-direction:row !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type:x mandatory;
+    gap:14px !important;
+    padding:12px 16px 16px 16px !important;
   }
-
-  .side-post:nth-of-type(2),
-  .side-post:nth-of-type(3) {
-    height: 250px !important;
+  .home-landing aside .popular-box-widget .popular-box-item{
+    width:220px !important;
+    max-width:220px !important;
+    scroll-snap-align:start;
+    align-self:flex-start;
+  }
+  .home-landing aside .popular-box-widget::before,
+  .home-landing aside .popular-box-widget::after{
+    content:"";
+    position:absolute; top:0; bottom:0; width:24px; pointer-events:none; z-index:2;
+  }
+  .home-landing aside .popular-box-widget::before{
+    left:0;  background:linear-gradient(to right, #fff, rgba(255,255,255,0));
+  }
+  .home-landing aside .popular-box-widget::after{
+    right:0; background:linear-gradient(to left,  #fff, rgba(255,255,255,0));
   }
 }
 
@@ -694,385 +523,232 @@ img {
 
 {% include estiloazul.html %}
 {% include menu.html %}
+<div class="contenedor-unico">
 
+<div class="home-landing">
 
-<div class="container style=padding: 0; !important">
-<section class="hot-posts">
-  <div class="hot-grid">
-    {% assign principal = site.posts | where: "destacado", 1 | first %}
-    {% assign secundario2 = site.posts | where: "destacado", 2 | first %}
-    {% assign secundario3 = site.posts | where: "destacado", 3 | first %}
+<!-- ====== FILA 1: izquierda últimos posts, centro héroe, derecha widgets ====== -->
+<div class="homepage-top">
 
-{% if principal %}
-<article class="post hot-post main-post" style="position: relative;">
-  {% if principal.categories %}
-    <a href="/categoria/{{ principal.categories[0] | slugify }}/">
-      <span class="post-category">{{ principal.categories[0] }}</span>
-    </a>
-  {% endif %}
-  <a href="{{ principal.url | relative_url }}" style="display: block; height: 100%;">
-<img fetchpriority="high"
-  src="{{ principal.image | replace: '.webp', '-768w.webp' }}" 
-  alt="{{ principal.excerpt }}"
-  width="660"
-  height="310" />
-    <div class="post-text">
-      <h3 class="post-title">{{ principal.title }}</h3>
-      {% if principal.subtitle %}
-        <p class="post-subtitle">{{ principal.subtitle }}</p>
-      {% endif %}
+  <!-- IZQUIERDA: Últimos posts (lista) -->
+  <aside class="latest-widget" aria-label="Últimos posts">
+    <div class="lw-header">
+      <h3>Lo último ></h3>
+      <div class="hero-divider"></div>
     </div>
+    <div class="lw-list">
+{% assign latest_posts = site.posts | sort: "date" | reverse %}
+{% for post in latest_posts limit: 5 %}
+  <a class="lw-item" href="{{ post.url | relative_url }}">
+    <span class="lw-thumb">
+      <img
+        src="{{ post.image | default: '/global/images/placeholder.webp' }}"
+        alt="{{ post.title | escape }}"
+        width="116" height="88" loading="lazy">
+    </span>
+    <span class="lw-body">
+      <span class="lw-title">{{ post.title }}</span>
+      <span class="lw-meta">{{ post.date | date: "%d/%m/%Y" }}</span>
+    </span>
   </a>
-</article>
-{% endif %}
-
- {% if secundario2 %}
-    <article class="post hot-post-secundario side-post side1" style="position: relative;">
-      {% if secundario2.categories %}
-        <a href="/categoria/{{ secundario2.categories[0] | slugify }}/">
-          <span class="post-category">{{ secundario2.categories[0] }}</span>
-        </a>
-      {% endif %}
-  <a href="{{ secundario2.url | relative_url }}" style="display: block; height: 100%;">
-<img fetchpriority="high"
-  src="{{ secundario2.image | replace: '.webp', '-480w.webp' }}" 
-  alt="{{ secundario2.excerpt }}"
-  width="400"
-  height="225" />
-          <div class="post-text">
-          <h3 class="post-title">{{ secundario2.title }}</h3>
-        </div>
-      </a>
-    </article>
-    {% endif %}
-
-    {% if secundario3 %}
-    <article class="post hot-post-secundario side-post side2" style="position: relative;">
-      {% if secundario3.categories %}
-        <a href="/categoria/{{ secundario3.categories[0] | slugify }}/">
-          <span class="post-category">{{ secundario3.categories[0] }}</span>
-        </a>
-      {% endif %}
-      <a href="{{ secundario3.url | relative_url }}" style="display: block; height: 100%;">
-<img fetchpriority="high"
-  src="{{ secundario3.image | replace: '.webp', '-480w.webp' | relative_url }}" 
-  alt="{{ secundario3.excerpt }}"
-  width="400"
-  height="225" />
-          <div class="post-text">
-          <h3 class="post-title">{{ secundario3.title }}</h3>
-        </div>
-      </a>
-    </article>
-    {% endif %}
-  </div>
-</section>
-
-<div style="background-color: #fef6f8; padding: 12px 18px; margin: 10px auto 10px; max-width: 900px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); font-size: 0.95rem; color: #444;">
-  Descubre la nueva sección de <strong>belleza</strong>, donde <strong>Sara Campos</strong> comparte su experiencia profesional en estética, tratamientos naturales y bienestar femenino.
-  <a href="/belleza/" style="color: #b03e6f; font-weight: bold; text-decoration: none; margin-left: 8px;">Visítala aquí →</a>
-</div>
-<div class="fila-titulo">
-  <h2 class="titulo-principal" style="margin-top: 10px !important">Últimos posts ></h2>
-</div>
-<div class="contenido-con-sidebar" style="display: flex; gap: 0px;">
-  <div class="contenido-principal" style="width: 75%;">
-<section style="max-width: 1200px; margin: auto;">
-  {% assign sorted_posts = site.posts | sort: "date" | reverse %}
-  {% for post in sorted_posts %}
-  {% unless post.categories contains "belleza" or post.destacado %}
-
-  <article class="blog-tarjeta hentry post-item" style="display: none;">
-  <div class="tarjeta-thumb" style="position: relative;">
-    <a href="{{ post.url | relative_url }}">
-<img 
-  src="{{ post.image | replace: '.webp', '-480w.webp' }}" 
-  alt="{{ post.title }}"
-  width="200"
-  height="160"
-  loading="lazy" />
-         {% if post.categories %}
-        <a href="/categoria/{{ post.categories[0] | slugify }}/">
-          <span class="post-category">
-            {{ post.categories[0] }}
-          </span>
-        </a>
-      {% endif %}
-    </a>
-  </div>
-  <div class="tarjeta-info">
-    <h2 class="tarjeta-title">
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h2>
-    <p class="tarjeta-excerpt">
-      {{ post.excerpt | strip_html | truncate: 140 }}
-    </p>
-    <div class="entry-meta">
-      <div style="display: inline-flex; align-items: center; gap: 8px; float: right;">
-        {% assign autor = site.data.autor.autores[post.autor] %}
-        <img src="{{ autor.avatar }}" loading="lazy" width="28" height="28" alt="{{ autor.nombre }}">
-        <span style="font-size: 0.85rem; color: #666;">
-          Por <a class="author-post" href="{{ autor.enlaceBlog }}">{{ autor.nombre }} </a> 
-        </span>
-      </div>
-    </div>
-  </div>
-</article>
-  {% endunless %}
 {% endfor %}
-</section>
-  <div class="load-more-container" style="text-align: center; margin-top: 2rem;">
-    <button class="load-more-button" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Cargar más ▼</button>
-  </div>
+    </div>
+  </aside>
 
-  <div id="enlace-final" style="display: none; margin-top: 2rem; text-align: center;margin-bottom: 2rem;">
-        <a href="/blog/2025/"><button class="load-more-button" style="padding: 0.75rem 1.5rem; font-size: 1rem;">Ver todos los posts</button></a>
-  </div>
+  <!-- CENTRO: Héroe con destacado:1 -->
+  {% assign principal = site.posts | where: "destacado", 1 | first %}
+  <section class="hero" aria-label="Artículo destacado">
+    {% if principal %}
+      <a class="hero-media" href="{{ principal.url | relative_url }}">
+        {% if principal.categories %}
+          <span class="hero-cat">{{ principal.categories[0] }}</span>
+        {% endif %}
+        <img fetchpriority="high" src="{{ principal.image }}" alt="{{ principal.title }}">
+      </a>
 
-<div class="fila-titulo">
-  <h2 class="titulo-principal">Últimas guías de compra actualizadas ></h2>
-</div>
+      <div class="hero-divider"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title">
+          <a href="{{ principal.url | relative_url }}">{{ principal.title }}</a>
+        </h1>
 
-<div class="widget HTML is-visible type-grid" id="custom-grid-widget">
-  <div class="grid-items">
-{% assign guias_actualizadas = site.pages | sort: "date" | reverse %}
-{% assign count = 0 %}
-{% for guia in guias_actualizadas %}
-  {% if guia.date and guia.title and guia.path contains "index.html" and guia.path != "belleza/index.html" and guia.path != "index.html" %}
-    {% if guia.imagen %}
-      {% assign imagen_url = guia.imagen | relative_url %}
+        {% assign autor = site.data.autor.autores[principal.autor] %}
+        <p class="hero-byline">
+          {% if autor %}
+            Por <a class="author-post" href="{{ autor.enlace }}" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;color:inherit;">
+              {% if autor.avatar %}
+                <img src="{{ autor.avatar }}" alt="{{ autor.nombre }}" style="width:22px;height:22px;border-radius:50%;object-fit:cover;">
+              {% endif %}
+              <span>{{ autor.nombre }}</span>
+            </a>
+
+          {% else %}
+            Por {{ principal.autor | default: "Redacción" }}
+          {% endif %}
+          • {{ principal.date | date: "%d/%m/%Y" }}
+        </p>
+
+        <p class="hero-dek">
+          {% if principal.subtitle %}
+            {{ principal.subtitle }}
+          {% else %}
+            {{ principal.excerpt | strip_html | truncate: 220 }}
+          {% endif %}
+        </p>
+      </div>
     {% else %}
-      {% assign imagen_url = '/global/images/default.webp' %}
+      <div class="hero-media" style="background:#eaeaea;display:flex;align-items:center;justify-content:center;">
+        <span style="font-weight:700;color:#666;">Añade un post con <code>destacado: 1</code> en el front matter</span>
+      </div>
+      <div class="hero-divider"></div>
+      <div class="hero-inner">
+        <h1 class="hero-title">Tu hero aparecerá aquí</h1>
+        <p class="hero-byline">Por Redacción • {{ "now" | date: "%d/%m/%Y" }}</p>
+        <p class="hero-dek">Imagen amplia, línea negra, titular grande, autor y una bajada descriptiva.</p>
+      </div>
     {% endif %}
-    <div class="grid-item">
-      <a href="{{ guia.url | relative_url }}">
-        <img src="{{ guia.imagen | default: '/global/images/default.webp' }}" loading="lazy" alt="{{ guia.title }}">
-      </a>
-      <a href="{{ guia.url | relative_url }}">
-        <h3 class="comparativa-title">{{ guia.title }}</h3>
-      </a>
-      <p class="post-date">
-        {{ guia.date | date: "%d/%m/%Y" }}
-      </p>
+  </section>
+
+  <!-- DERECHA: Widget único -->
+  <aside aria-label="Barra lateral">
+    <div class="popular-box-widget">
+    {% include widget_ofertas.html %}
     </div>
-    {% assign count = count | plus: 1 %}
-    {% if count == 6 %}
-      {% break %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-
-
-  </div>
+  </aside>
 </div>
 
-
-</div>
-<aside class="barra-lateral" style="width: 25%; margin-left: 15px;">
-
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Conoce al equipo ></h3>
-  </div>
-  <div class="popular-box-content">
-    
-    <!-- Carlos López -->
-    <div class="popular-box-item">
-      <a href="/sobre-nosotros/#carlos" class="popular-thumb" style="background-image:url(/global/images/avatarCarlos.webp);" aria-label="Ir al perfil de Carlos López"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#carlos" class="popular-title">Carlos López</a>
-        <div class="popular-date">Analista tech con 15 años de experiencia</div>
-      </div>
-    </div>
-
-    <!-- Sara Martín -->
-    <div class="popular-box-item">
-      <a href="/sobre-nosotros/#sara" class="popular-thumb" style="background-image:url(/global/images/avatarSara.webp);" aria-label="Ir al perfil de Sara Martín"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#sara" class="popular-title">Sara Campos</a>
-        <div class="popular-date">Especialista en belleza y bienestar</div>
-      </div>
-    </div>
-
-        <div class="popular-box-item">
-      <a href="/sobre-nosotros/#david" class="popular-thumb" style="background-image:url(/global/images/avatarDavid.webp);" aria-label="Ir al perfil de David Jimenez"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#david" class="popular-title">David Jimenez</a>
-        <div class="popular-date">Analista deportivo con experiencia en guías y pruebas</div>
-      </div>
-    </div>
-
-            <div class="popular-box-item">
-      <a href="/sobre-nosotros/#laura" class="popular-thumb" style="background-image:url(/global/images/avatarLaura.webp);" aria-label="Ir al perfil de Laura"></a>
-      <div class="popular-text">
-        <a href="/sobre-nosotros/#laura" class="popular-title">Laura García</a>
-        <div class="popular-date">Experta en moda y tendencias</div>
-      </div>
-    </div>
-        
-    <div style="text-align: center; margin-top: 12px;">
-      <a href="/sobre-nosotros/" style="font-size: 0.9em; font-weight: bold; color: var(--color-azul-profesional); text-decoration: none;">
-        Ver todo el equipo →
-      </a>
-    </div>
-  </div>
+      <div class="hero-divider"></div>
+<div style="max-width:80%; margin:20px auto; padding:10px 15px; background:#fafafa; border-radius:8px; border:1px solid #e0e0e0; font-family:Arial, sans-serif; font-size:15px; line-height:1.5; color:#444; text-align:center;">
+  <p style="margin:0;">
+    Bienvenido a <strong>Recomendador.net</strong>. En nuestra web puedes encontrar enlaces de afiliado de Amazon. Si compras a través de ellos, podemos recibir una pequeña comisión <b>sin coste extra para ti</b>. Esto nos ayuda a cubrir los gastos del equipo, las pruebas de productos y el mantenimiento del sitio, para seguir ofreciéndote comparativas, opiniones imparciales y de calidad.
+  </p>
 </div>
 
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Guías de compra Populares ></h3>
-  </div>
-<div class="popular-box-content">
-  {% assign top_posts = site.pages | where_exp: "post", "post.top" %}
-  {% assign sorted_top_posts = top_posts | sort: "top" %}
-  {% for post in sorted_top_posts limit:5 %}
-    <div class="popular-box-item">
-      <a href="{{ post.url }}" class="popular-thumb-guias" style="display:block; width:80px; height:80px; flex-shrink:0; background-image:url({{ post.imagen }}); background-size:cover; background-position:center center; border-radius:8px;" aria-label="{{ post.title }}"></a>
-      <div class="popular-text">
-        <a href="{{ post.url }}" class="popular-title">{{ post.shortTitle }}</a>
-      </div>
-    </div>
-  {% endfor %}
-</div>
+<!-- ====== FILA 2: bloque ANCHO debajo de las 3 columnas ====== -->
 
-</div>
+{% include home_seccion_destacada.html
+   h2='Otoño 2025'
+   descripcion='Las mejores recomendaciones para esta temporada.'
+   carpeta="saco-silla-paseo, cuellos-de-pelo, vestido-invitada-otono"
+   limite=3 %}
 
-<style>
-.tag-box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 11px;
-}
+{% include home_seccion_alta.html
+  title="Tecnología"
+  descripcion='Los mejores productos de tecnología recomendados por expertos.'
+  categorias="tecnologia"
+  limit=4
+  see_all_url="/categorias/tecnologia/"
+%}
 
-.tag-box a {
-  display: inline-block;
-  padding: 3px 11px;
-  border: 1px solid #007bff;
-  border-radius: 15px;
-  color: #007bff;
-  text-decoration: none;
-  font-size: 13px;
-  white-space: nowrap;
-  transition: background 0.2s ease;
-}
+{% include home_seccion_destacada.html
+   h2='Hogar'
+   descripcion='Productos probados por Recomendador.net para mejorar tu hogar.'
+   limite=4
+   categorias="hogar"
+   descripcion_extra=true
+   mostrar_autor=true 
+   see_all_url="/categorias/hogar/"
+%}
 
-.tag-box a:hover {
-  background: #007bff;
-  color: white !important;
-}
-.popular-box-content.tag-box {
-  flex-direction: row !important;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-</style>
+{% include home_seccion_alta.html
+  title="Belleza"
+  descripcion='Los mejores productos de belleza y cuidado personal recomendados por expertos.'
+  categorias="belleza"
+  limit=4
+  see_all_url="/categorias/belleza/"
+%}
 
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Categorías ></h3>
-  </div>
-  <div class="popular-box-content tag-box">
-    {% assign sorted_categories = site.categories | sort %}
-    {% for category in sorted_categories %}
-      <a href="{{ site.baseurl }}/categoria/{{ category[0] | slugify }}/">
-        {{ category[0] | capitalize_each}}
-      </a>
-    {% endfor %}
-  </div>
-</div>
+{% include home_seccion_destacada.html
+   h2='Deportes'
+   descripcion='Productos probados por Recomendador.net para mejorar tu experiencia deportiva.'
+   limite=4
+   categorias="deporte"
+   descripcion_extra=true
+   mostrar_autor=true
+   see_all_url="/categorias/deporte/"
+%}
 
-<style>#results-container {
-  margin-top: 12px;
-  padding-left: 0;
-  overflow: visible;
-}
+{% include home_seccion_alta.html
+  title="Tecnología"
+  descripcion='Análisis y comparativas de los mejores gadgets y dispositivos tecnológicos.'
+  categorias="tecnologia"
+  limit=4
+  see_all_url="/categorias/tecnologia/"
+%}
 
-#results-container li {
-  list-style: none;
-  margin-bottom: 6px;
-  padding: 6px 10px;
-  border: 1px solid #fc3c68;
-  border-radius: 5px;
-  font-size: 0.95rem;
-  background: #fff;
-  white-space: normal;
-  word-wrap: break-word;
-}
+{% include home_seccion_destacada.html
+   h2='Bebé y niños'
+   descripcion='Productos probados por Recomendador.net para mejorar la experiencia de los más pequeños.'
+   limite=3
+   categorias="bebe"
+   descripcion_extra=true
+   mostrar_autor=true
+   see_all_url="/categorias/bebe/"
+%}
 
-</style>
-<div class="popular-box-widget">
-  <div class="popular-box-header">
-    <h3>Búsqueda ></h3>
-  </div>
-<div class="popular-box-content">
-  <input type="text" id="search-input" placeholder="Escribe para buscar" style="width: 100%; padding: 8px 3px; font-size: 1rem; border: 1px solid #ccc; border-radius: 6px;" />
-  <ul id="results-container" style="margin-top: 16px; list-style: none; padding: 0;"></ul>
-</div>
-</div>
+{% include home_seccion_alta.html
+  title="Moda"
+  descripcion='Análisis y comparativas de los mejores productos de moda.'
+  categorias="moda"
+  limit=4
+  see_all_url="/categorias/moda/"
+%}
 
 
-</aside>
-</div>
-
+</div> <!-- /.home-landing -->
 
 {% include footer.html %}
 
-</div>
+</div> <!-- /.contenedor-unico -->
+
+
 <a href="#" id="back-top" title="Volver arriba" role="button">↑</a>
 <script src="/assets/js/simple-jekyll-search.min.js" defer></script>
 
 <script>
+  // Mostrar posts progresivamente en el listado inferior (FILA 2)
   const posts = document.querySelectorAll('.post-item');
   const loadMoreButton = document.querySelector('.load-more-button');
   const enlaceFinal = document.getElementById('enlace-final');
   let visibleCount = 0;
   const postsPerClick = 5;
-
   function showNextPosts() {
     for (let i = visibleCount; i < visibleCount + postsPerClick; i++) {
-      if (posts[i]) {
-        posts[i].style.display = 'flex'; // usa 'block' si no usas Flexbox
-      }
+      if (posts[i]) { posts[i].style.display = 'flex'; }
     }
     visibleCount += postsPerClick;
-
     if (visibleCount >= posts.length) {
-      loadMoreButton.style.display = 'none';
-      enlaceFinal.style.display = 'block';
+      if (loadMoreButton) loadMoreButton.style.display = 'none';
+      if (enlaceFinal) enlaceFinal.style.display = 'block';
     }
   }
-
-  loadMoreButton.addEventListener('click', showNextPosts);
-  showNextPosts(); // Mostrar los primeros 5 al cargar
+  if (loadMoreButton) {
+    posts.forEach((p)=>{ p.style.display = 'none'; });
+    loadMoreButton.addEventListener('click', showNextPosts);
+    showNextPosts();
+  }
 </script>
+
 <script>
+  // Botón volver arriba
   const backTopBtn = document.getElementById('back-top');
-
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) {
-      backTopBtn.classList.add('visible');
-    } else {
-      backTopBtn.classList.remove('visible');
-    }
+    if (window.scrollY > 150) backTopBtn.classList.add('visible');
+    else backTopBtn.classList.remove('visible');
   });
-
   backTopBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
+
 <script defer>
+  // Buscador diferido
   document.addEventListener("DOMContentLoaded", function () {
     const input = document.getElementById("search-input");
+    if (!input) return;
     let initialized = false;
-
     input.addEventListener("focus", function () {
       if (initialized) return;
-
       SimpleJekyllSearch({
         searchInput: input,
         resultsContainer: document.getElementById('results-container'),
@@ -1080,9 +756,7 @@ img {
         searchResultTemplate: '<li><a href="{url}">{title}</a></li>',
         noResultsText: 'No se encontraron resultados',
       });
-
       initialized = true;
     });
   });
 </script>
-

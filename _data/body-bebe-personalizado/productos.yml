@@ -130,6 +130,7 @@ productos:
           - name: pattern_name
             value: Ardillas
         ParentASIN: B0C947RJ3R
+        condicion: new
       - ASIN: B0C948MNLB
         title: >-
           EVYRE | Body Bebe Personalizado "Yo También Estuve en la Boda" | 100% Algodón, Impresión Directa | 3 Meses a
@@ -184,6 +185,7 @@ productos:
           - name: pattern_name
             value: Pareja
         ParentASIN: B0C947RJ3R
+        condicion: new
       - ASIN: B0C947HZVS
         title: >-
           EVYRE | Body Bebe Personalizado "Yo También Estuve en la Boda" | 100% Algodón, Impresión Directa | 3 Meses a
@@ -238,10 +240,12 @@ productos:
           - name: pattern_name
             value: Conejos
         ParentASIN: B0C947RJ3R
+        condicion: new
     ParentASIN: B0C947RJ3R
     variationAttributes:
       - name: pattern_name
         value: Pollitos
+    condicion: new
   - ASIN: B084GDD5WB
     nombreCompleto: Body bebe personalizado ¿Es muy pronto para pedir una moto? Unisex motorista divertido
     valoracion: 4.9
@@ -286,6 +290,7 @@ productos:
       - Algodón
     title: Body bebe personalizado ¿Es muy pronto para pedir una moto? Unisex motorista divertido
     variantes: []
+    condicion: new
   - ASIN: B0D4ZHC2M1
     nombreCompleto: Latostadora Body Bebe Personalizado - Ropa para Niño y Niña Recién Nacido - Body Friki para Bebés
     valoracion: 4.8
@@ -416,6 +421,7 @@ productos:
           - name: size_name
             value: 12 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXX6BP8
         title: >-
           latostadora Body Bebe Personalizado Niño Niña - Ropa Bebe Niño - Body Personalizado Bebe Recien Nacido - Ropa
@@ -473,6 +479,7 @@ productos:
           - name: size_name
             value: 18 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXWS34H
         title: >-
           LatoStadora Body Personalizado Niño Niña - Ropa Bebé Niño y Niña - podría ser también: Body Recien Nacido -
@@ -530,6 +537,7 @@ productos:
           - name: size_name
             value: 12 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXYPZQX
         title: >-
           latostadora Body Bebe Personalizado Niño Niña - Ropa Bebe Niño - Body Personalizado Bebe Recien Nacido - Ropa
@@ -587,6 +595,7 @@ productos:
           - name: size_name
             value: 18 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXYNBR8
         title: Latostadora Body Bebe Personalizado - Ropa Para Niño y Niña Recién Nacido - Body Friki Para Bebés
         brand: latostadora
@@ -642,6 +651,7 @@ productos:
           - name: size_name
             value: 9 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXWM7J8
         title: >-
           latostadora Body Bebe Personalizado Niño Niña - Ropa Bebe Niño - Body Personalizado Bebe Recien Nacido - Ropa
@@ -699,6 +709,7 @@ productos:
           - name: size_name
             value: 12 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXVGKPX
         title: Latostadora Body Bebe Personalizado - Ropa Para Niño y Niña Recién Nacido - Body Friki Para Bebés
         brand: latostadora
@@ -754,6 +765,7 @@ productos:
           - name: size_name
             value: 18 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXXZMH4
         title: >-
           latostadora Body Bebe Personalizado Niño Niña - Ropa Bebe Niño - Body Personalizado Bebe Recien Nacido - Ropa
@@ -811,6 +823,7 @@ productos:
           - name: size_name
             value: 9 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXZ6H3Z
         title: >-
           latostadora Body Bebe Personalizado Niño Niña - Ropa Bebe Niño - Body Personalizado Bebe Recien Nacido - Ropa
@@ -868,6 +881,7 @@ productos:
           - name: size_name
             value: 18 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
       - ASIN: B0CMXZBJRP
         title: >-
           latostadora Body Bebe Personalizado Niño Niña - Ropa Bebe Niño - Body Personalizado Bebe Recien Nacido - Ropa
@@ -925,7 +939,9 @@ productos:
           - name: size_name
             value: 9 meses
         ParentASIN: B0CMXWVVWF
+        condicion: new
     ParentASIN: B0CMXWVVWF
+    condicion: new
   - ASIN: B0DTJ611J3
     nombreCompleto: >-
       Body Bebe Personalizado/Niño Niña - Body Personalizable Bebe Recien Nacido - Ropa Recién Nacido Niños - Bodys
@@ -1032,6 +1048,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DTJ6HMSH
+        condicion: new
       - ASIN: B0DTJH6D36
         title: >-
           Body Bebe Personalizado / Niño Niña - Body Personalizable con fotos y textos - Bebe Recien Nacido - Ropa
@@ -1075,6 +1092,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0DTJ6HMSH
+        condicion: new
       - ASIN: B0DTJG8795
         title: >-
           Body Bebe Personalizado / Niño Niña - Body Personalizable con fotos y textos - Bebe Recien Nacido - Ropa
@@ -1118,6 +1136,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0DTJ6HMSH
+        condicion: new
       - ASIN: B0DTJGP9YP
         title: >-
           Body Bebe Personalizado / Niño Niña - Body Personalizable con fotos y textos - Bebe Recien Nacido - Ropa
@@ -1161,6 +1180,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0DTJ6HMSH
+        condicion: new
       - ASIN: B0DTJFBQM4
         title: >-
           Body Bebe Personalizado / Niño Niña - Body Personalizable con fotos y textos - Bebe Recien Nacido - Ropa
@@ -1200,6 +1220,7 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0DTJ6HMSH
+        condicion: new
       - ASIN: B0DTJGDXTZ
         title: >-
           Body Bebe Personalizado/Niño Niña - Body Personalizable con fotos y textos - Bebe Recien Nacido - Ropa Recién
@@ -1243,6 +1264,7 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DTJ6HMSH
+        condicion: new
       - ASIN: B0DTJGXZRZ
         title: >-
           Body Bebe Personalizado/Niño Niña - Body Personalizable con fotos y textos - Bebe Recien Nacido - Ropa Recién
@@ -1286,12 +1308,14 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0DTJ6HMSH
+        condicion: new
     ParentASIN: B0DTJ6HMSH
     variationAttributes:
       - name: size_name
         value: 3 meses
       - name: color_name
         value: Blanco
+    condicion: new
   - ASIN: B0F5Z5JGTP
     nombreCompleto: Pack 2 Body personalizado bebe '¿Quieres ser mi Padrino/Madrina?'
     valoracion: 4.1
@@ -1346,6 +1370,7 @@ productos:
         mensaje especial
     title: Pack 2 Body Bebe personalizado '¿Quieres ser mi Padrino/Madrina?'
     variantes: []
+    condicion: ''
   - ASIN: B0F63KSPY2
     nombreCompleto: Body personalizado bebe '¿Quieres ser mi Padrino/Madrina?
     valoracion: 4.1
@@ -1403,4 +1428,5 @@ productos:
         rosa
     title: Body Bebe personalizado '¿Quieres ser mi Padrino/Madrina?
     variantes: []
-actualizacion: '2025-09-05'
+    condicion: ''
+actualizacion: '2025-09-11'
