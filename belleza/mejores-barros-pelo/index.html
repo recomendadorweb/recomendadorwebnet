@@ -48,16 +48,16 @@
   
   
   <link rel="preload" as="image"
-    href="/global/images/blog/gadget-salva-vidas.webp"
-    imagesrcset="/global/images/blog/gadget-salva-vidas-480w.webp 480w, /global/images/blog/gadget-salva-vidas-768w.webp 768w, /global/images/blog/gadget-salva-vidas-1200w.webp 1200w"
+    href=""
+    imagesrcset="-480w.webp 480w, -768w.webp 768w, -1200w.webp 1200w"
     imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw">
 
   
   
   
   <link rel="preload" as="image"
-    href="/global/images/blog/moto-electrica-ni%C3%B1os.webp"
-    imagesrcset="/global/images/blog/moto-electrica-niños-480w.webp 480w, /global/images/blog/moto-electrica-niños-768w.webp 768w, /global/images/blog/moto-electrica-niños-1200w.webp 1200w"
+    href=""
+    imagesrcset="-480w.webp 480w, -768w.webp 768w, -1200w.webp 1200w"
     imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw">
 
 
@@ -443,6 +443,7 @@ body {
             <li><a href="/belleza/vestidos-fiesta-tallas-grandes/">👗 Vestidos de fiesta de tallas grandes</a></li>
             <li><a href="/belleza/vestidos-invitada-talla-grande/">👗 Vestidos de invitada de tallas grandes</a></li>
             <li><a href="/belleza/cuellos-de-pelo/">🧣 Cuellos de pelo</a></li>
+            <li><a href="/moda/vestido-invitada-otono/">👗 Vestido de invitada de otoño</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -487,6 +488,7 @@ body {
             <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
             <li><a href="/hogar/saco-silla-paseo/">👶 Mejor saco para carro de bebé</a></li>
             <li><a href="/hogar/body-bebe-personalizado/">👕 Mejor body para bebé personalizado</a></li>
+            <li><a href="/hogar/toallas-personalizadas/">🛁 Mejores toallas personalizadas</a></li>
           </ul>
         </li>
         <li><a href="/contacto/">📬 Contacto</a></li>
@@ -527,6 +529,7 @@ body {
         <li><a href="/belleza/vestidos-fiesta-tallas-grandes/">👗 Vestidos de fiesta de tallas grandes</a></li>
         <li><a href="/belleza/vestidos-invitada-talla-grande/">👗 Vestidos de invitada de tallas grandes</a></li>
         <li><a href="/belleza/cuellos-de-pelo/">🧣 Cuellos de pelo</a></li>
+        <li><a href="/moda/vestido-invitada-otono/">👗 Vestido de invitada de otoño</a></li>
       </ul>
     </li>
         <li>
@@ -560,6 +563,7 @@ body {
         <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
         <li><a href="/hogar/saco-silla-paseo/">👶 Mejor saco para carro de bebé</a></li>
         <li><a href="/hogar/body-bebe-personalizado/">👕 Mejor body para bebé personalizado</a></li>
+        <li><a href="/hogar/toallas-personalizadas/">🛁 Mejores toallas personalizadas</a></li>
       </ul>
     </li>
         <li style="margin-bottom: 20px;">
@@ -698,7 +702,6 @@ body {
 
 <div class="container">
 <style>
-
   .cabecera-contenedor {
   position: relative;
   width: 100%;
@@ -743,10 +746,63 @@ body {
     max-width: calc(100% - 20px);
   }
 }
+  /* ===== Breadcrumb fuera de la imagen ===== */
+  .breadcrumb {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 8px; /* queda pegado a la cabecera */
+    font-size: .95rem;
+    color: #555;
+  }
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+  }
+  .breadcrumb li + li:before {
+    content: "›";
+    opacity: .7;
+    margin: 0 .4rem;
+  }
+  .breadcrumb a {
+    color: #555 !important;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
 
-
-
+  @media (max-width: 768px) {
+    .breadcrumb { font-size: .85rem; margin-bottom: 6px; }
+  }
 </style>
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Inicio</a></li>
+    
+      <li>
+        <a href="/categorias/belleza/">
+          Belleza
+        </a>
+      </li>
+    
+  </ol>
+</nav>
+
 
 
 
@@ -762,6 +818,7 @@ body {
     Los mejores barros para el pelo en 2025 según una experta en belleza
   </h1>
 </div>
+
 
 <div class="autor">
   <a href="/sobre-nosotros/#sara" style="text-decoration: none; color: inherit;" target="_blank">
@@ -2172,13 +2229,20 @@ body {
 </section>
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 
-<div style="margin-top: 1em; border-top: 1px solid #ddd; padding-top: 0em;"></div>
+<style>
+    footer a { font-size: 0.8em; }
+    footer {
+  margin-top: 50px; /* espacio respecto a las tarjetas */
+}
+.hero-divider1{height:6px;background:#111;margin:10px 0 12px !important;}
+</style>
 <footer>
-© 2025 Recomendador.net - Algunos enlaces de Amazon pueden generarnos comisiones de afiliado sin coste para ti.
-<br>
-<a href="/legal/aviso-legal/">Aviso legal</a> · 
-<a href="/legal/politica-privacidad/">Política de privacidad</a> · 
-<a href="/legal/politica-cookies/">Política de cookies</a>
+<div class="hero-divider1"></div>
+    © 2025 Recomendador.net - Algunos enlaces de Amazon pueden generarnos comisiones de afiliado sin coste para ti.
+    <br>
+    <a href="/legal/aviso-legal/">Aviso legal</a> · 
+    <a href="/legal/politica-privacidad/">Política de privacidad</a> · 
+    <a href="/legal/politica-cookies/">Política de cookies</a>
 </footer>
 
 </div>

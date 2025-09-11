@@ -48,16 +48,16 @@
   
   
   <link rel="preload" as="image"
-    href="/global/images/blog/gadget-salva-vidas.webp"
-    imagesrcset="/global/images/blog/gadget-salva-vidas-480w.webp 480w, /global/images/blog/gadget-salva-vidas-768w.webp 768w, /global/images/blog/gadget-salva-vidas-1200w.webp 1200w"
+    href=""
+    imagesrcset="-480w.webp 480w, -768w.webp 768w, -1200w.webp 1200w"
     imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw">
 
   
   
   
   <link rel="preload" as="image"
-    href="/global/images/blog/moto-electrica-ni%C3%B1os.webp"
-    imagesrcset="/global/images/blog/moto-electrica-niños-480w.webp 480w, /global/images/blog/moto-electrica-niños-768w.webp 768w, /global/images/blog/moto-electrica-niños-1200w.webp 1200w"
+    href=""
+    imagesrcset="-480w.webp 480w, -768w.webp 768w, -1200w.webp 1200w"
     imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw">
 
 
@@ -139,6 +139,7 @@
             <li><a href="/belleza/vestidos-fiesta-tallas-grandes/">👗 Vestidos de fiesta de tallas grandes</a></li>
             <li><a href="/belleza/vestidos-invitada-talla-grande/">👗 Vestidos de invitada de tallas grandes</a></li>
             <li><a href="/belleza/cuellos-de-pelo/">🧣 Cuellos de pelo</a></li>
+            <li><a href="/moda/vestido-invitada-otono/">👗 Vestido de invitada de otoño</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -183,6 +184,7 @@
             <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
             <li><a href="/hogar/saco-silla-paseo/">👶 Mejor saco para carro de bebé</a></li>
             <li><a href="/hogar/body-bebe-personalizado/">👕 Mejor body para bebé personalizado</a></li>
+            <li><a href="/hogar/toallas-personalizadas/">🛁 Mejores toallas personalizadas</a></li>
           </ul>
         </li>
         <li><a href="/contacto/">📬 Contacto</a></li>
@@ -223,6 +225,7 @@
         <li><a href="/belleza/vestidos-fiesta-tallas-grandes/">👗 Vestidos de fiesta de tallas grandes</a></li>
         <li><a href="/belleza/vestidos-invitada-talla-grande/">👗 Vestidos de invitada de tallas grandes</a></li>
         <li><a href="/belleza/cuellos-de-pelo/">🧣 Cuellos de pelo</a></li>
+        <li><a href="/moda/vestido-invitada-otono/">👗 Vestido de invitada de otoño</a></li>
       </ul>
     </li>
         <li>
@@ -256,6 +259,7 @@
         <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
         <li><a href="/hogar/saco-silla-paseo/">👶 Mejor saco para carro de bebé</a></li>
         <li><a href="/hogar/body-bebe-personalizado/">👕 Mejor body para bebé personalizado</a></li>
+        <li><a href="/hogar/toallas-personalizadas/">🛁 Mejores toallas personalizadas</a></li>
       </ul>
     </li>
         <li style="margin-bottom: 20px;">
@@ -698,7 +702,6 @@ body {
 
 <div class="container">
 <style>
-
   .cabecera-contenedor {
   position: relative;
   width: 100%;
@@ -743,10 +746,63 @@ body {
     max-width: calc(100% - 20px);
   }
 }
+  /* ===== Breadcrumb fuera de la imagen ===== */
+  .breadcrumb {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 8px; /* queda pegado a la cabecera */
+    font-size: .95rem;
+    color: #555;
+  }
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+  }
+  .breadcrumb li + li:before {
+    content: "›";
+    opacity: .7;
+    margin: 0 .4rem;
+  }
+  .breadcrumb a {
+    color: #555 !important;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
 
-
-
+  @media (max-width: 768px) {
+    .breadcrumb { font-size: .85rem; margin-bottom: 6px; }
+  }
 </style>
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Inicio</a></li>
+    
+      <li>
+        <a href="/categorias/moda/">
+          Moda
+        </a>
+      </li>
+    
+  </ol>
+</nav>
+
 
 
 
@@ -762,6 +818,7 @@ body {
     Los mejores vestidos de fiesta de tallas grandes
   </h1>
 </div>
+
 
 <div class="autor">
   <a href="" style="text-decoration: none; color: inherit;" target="_blank">
@@ -2606,20 +2663,20 @@ document.addEventListener('keydown', function(e){
             onclick="onVariantClick(this)"
             role="button"
             tabindex="0"
-            title="Talla única Grande - Violeta Oscuro"
-            data-title="Talla única Grande - Violeta Oscuro"
-            data-imagen="https://m.media-amazon.com/images/I/41sX8pdIvdL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B07DW3F9Y3?tag=recomendadorn-21&th=1&psc=1"
+            title="Talla única Grande - Rosa Pálido"
+            data-title="Talla única Grande - Rosa Pálido"
+            data-imagen="https://m.media-amazon.com/images/I/316IODD9UAL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07BS9X1NJ?tag=recomendadorn-21&th=1&psc=1"
             data-precio="85,99 €"
             data-precio-original="89,99 €"
             
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31a1raq-YHL._SL500_.jpg","width":313,"height":500},{"url":"https://m.media-amazon.com/images/I/31mf2HbOjpL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z1DRb5bUL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51njzmZzcJL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51b-Th+zqyL._SL500_.jpg","width":333,"height":500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31-YaI9LbHL._SL500_.jpg","width":313,"height":500},{"url":"https://m.media-amazon.com/images/I/31DFvTLEHiL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z1DRb5bUL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51b-Th+zqyL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51njzmZzcJL._SL500_.jpg","width":333,"height":500}]'
             
           >
             
-              <img src="https://m.media-amazon.com/images/I/41sX8pdIvdL._SL500_.jpg" alt="Talla única Grande - Violeta Oscuro" loading="lazy" />
+              <img src="https://m.media-amazon.com/images/I/316IODD9UAL._SL500_.jpg" alt="Talla única Grande - Rosa Pálido" loading="lazy" />
             
-            <span class="var-label">Talla única Grande - Violeta Oscuro</span>
+            <span class="var-label">Talla única Grande - Rosa Pálido</span>
           </button></div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
@@ -3108,7 +3165,75 @@ Para el cuidado, opté por tratarlo con delicadeza y evitar lavados agresivos, y
     
   
     <article class="ficha-teclado">
-      <h3 id="Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)">Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)</h3><div class="imagen-con-miniaturas">
+      <h3 id="Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)">Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
+
+        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Negro - 54 Grande"
+          data-title="Negro - 54 Grande"
+          data-imagen="https://m.media-amazon.com/images/I/31x70St-pqL._SL500_.jpg"
+          data-enlace="https://www.amazon.es/dp/B0D72S45GZ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+          data-precio="34,80 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41PlVNNABVL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/411Octiq8-L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41+kr-NuWEL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41hBAwi83jL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/41dkG+gM91L._SL500_.jpg","width":333,"height":500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/31x70St-pqL._SL500_.jpg" alt="Negro - 54 Grande" loading="lazy" />
+          
+          <span class="var-label">Negro - 54 Grande</span>
+        </button>
+
+        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Rojo Oscuro - 50 Grande"
+            data-title="Rojo Oscuro - 50 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/317Bd9dxljL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D736N5WB?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="46,57 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41GE0j8us1L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41+dzn7alhL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41188LtxkLL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41QbC6PvUCL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/411ZPg4fTIL._SL500_.jpg","width":333,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/317Bd9dxljL._SL500_.jpg" alt="Rojo Oscuro - 50 Grande" loading="lazy" />
+            
+            <span class="var-label">Rojo Oscuro - 50 Grande</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Gris - 48 Grande"
+            data-title="Gris - 48 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/31UASPBSs-L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D72LMGVF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="44,87 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41kz3aYhleL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41KU5buFp3L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41-IJz7ffTL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41xBTXim3sL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/419Bgli88OL._SL500_.jpg","width":333,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31UASPBSs-L._SL500_.jpg" alt="Gris - 48 Grande" loading="lazy" />
+            
+            <span class="var-label">Gris - 48 Grande</span>
+          </button></div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3305,7 +3430,7 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
             data-title="rojo vino - 52 Grande"
             data-imagen="https://m.media-amazon.com/images/I/31dP+bIvTmL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0DSJH4YCY?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="71,45 €"
+            data-precio="71,54 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41maPFE+HcL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41iPQKLWJ5L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41tRr5CHRTL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41Wv1bfMv7L._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41azKXfdNpL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/51Cm22rAcNL._SL500_.jpg","width":385,"height":500}]'
@@ -3364,8 +3489,8 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
             onclick="onVariantClick(this)"
             role="button"
             tabindex="0"
-            title="Negro - 46 Grande"
-            data-title="Negro - 46 Grande"
+            title="Negro - 18 Grande"
+            data-title="Negro - 18 Grande"
             data-imagen="https://m.media-amazon.com/images/I/31y1j0FiwVL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0DSJGRW3V?tag=recomendadorn-21&th=1&psc=1"
             data-precio="75,53 €"
@@ -3375,9 +3500,9 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
             
           >
             
-              <img src="https://m.media-amazon.com/images/I/31y1j0FiwVL._SL500_.jpg" alt="Negro - 46 Grande" loading="lazy" />
+              <img src="https://m.media-amazon.com/images/I/31y1j0FiwVL._SL500_.jpg" alt="Negro - 18 Grande" loading="lazy" />
             
-            <span class="var-label">Negro - 46 Grande</span>
+            <span class="var-label">Negro - 18 Grande</span>
           </button><button
             type="button"
             class="var-btn"
@@ -3452,7 +3577,7 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
             data-title="Azul Marino - 46 Grande"
             data-imagen="https://m.media-amazon.com/images/I/317bFN3vMVL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0DSJGKJT7?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="75,43 €"
+            data-precio="75,41 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/4133mtPwE6L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41WuGAhqRGL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41zT+U+XxRL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41Ys3MZKacL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/415vvX0vzzL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/41ZeGECtHTL._SL500_.jpg","width":385,"height":500}]'
@@ -3469,20 +3594,20 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
             onclick="onVariantClick(this)"
             role="button"
             tabindex="0"
-            title="azul marino - 54 Grande"
-            data-title="azul marino - 54 Grande"
-            data-imagen="https://m.media-amazon.com/images/I/31W6Hdd+WsL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B0DSJH6JC5?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="55,19 €"
+            title="Azul Marino - 50 Grande"
+            data-title="Azul Marino - 50 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/317bFN3vMVL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DSJH9ZHV?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="75,50 €"
             data-precio-original="No especificado"
             
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41DvWgY0hTL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41l-0vzuCCL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41a6brFFL8L._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/4108ls5hONL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41dwGXzNSlL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/51Cm22rAcNL._SL500_.jpg","width":385,"height":500}]'
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/4133mtPwE6L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41WuGAhqRGL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41zT+U+XxRL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41Ys3MZKacL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/415vvX0vzzL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/41ZeGECtHTL._SL500_.jpg","width":385,"height":500}]'
             
           >
             
-              <img src="https://m.media-amazon.com/images/I/31W6Hdd+WsL._SL500_.jpg" alt="azul marino - 54 Grande" loading="lazy" />
+              <img src="https://m.media-amazon.com/images/I/317bFN3vMVL._SL500_.jpg" alt="Azul Marino - 50 Grande" loading="lazy" />
             
-            <span class="var-label">azul marino - 54 Grande</span>
+            <span class="var-label">Azul Marino - 50 Grande</span>
           </button></div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
@@ -3805,27 +3930,6 @@ Para conservarlo, lo lavo con cuidado y evito la secadora para mantener el dobla
             onclick="onVariantClick(this)"
             role="button"
             tabindex="0"
-            title="Rojo Oscuro - 54 Grande"
-            data-title="Rojo Oscuro - 54 Grande"
-            data-imagen="https://m.media-amazon.com/images/I/314IUZMAEsL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B0DSJF7ZGW?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="46,99 €"
-            data-precio-original="46,99 €"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31r9b29FkwL._SL500_.jpg","width":341,"height":500},{"url":"https://m.media-amazon.com/images/I/41oj2ZdigFL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41zEC4Y0DHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/314Wy9elc1L._SL500_.jpg","width":500,"height":267}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/314IUZMAEsL._SL500_.jpg" alt="Rojo Oscuro - 54 Grande" loading="lazy" />
-            
-            <span class="var-label">Rojo Oscuro - 54 Grande</span>
-          </button><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
             title="Azul Grisáceo - 46 Grande"
             data-title="Azul Grisáceo - 46 Grande"
             data-imagen="https://m.media-amazon.com/images/I/31VRlFHfhgL._SL500_.jpg"
@@ -3840,27 +3944,6 @@ Para conservarlo, lo lavo con cuidado y evito la secadora para mantener el dobla
               <img src="https://m.media-amazon.com/images/I/31VRlFHfhgL._SL500_.jpg" alt="Azul Grisáceo - 46 Grande" loading="lazy" />
             
             <span class="var-label">Azul Grisáceo - 46 Grande</span>
-          </button><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
-            title="Azul Grisáceo - 50 Grande"
-            data-title="Azul Grisáceo - 50 Grande"
-            data-imagen="https://m.media-amazon.com/images/I/31VRlFHfhgL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B0DSJF8PVD?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="46,99 €"
-            data-precio-original="No especificado"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/319dl24eGXL._SL500_.jpg","width":344,"height":500},{"url":"https://m.media-amazon.com/images/I/41iBFM3-YKL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41V6RPoL6AL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/314Wy9elc1L._SL500_.jpg","width":500,"height":267}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/31VRlFHfhgL._SL500_.jpg" alt="Azul Grisáceo - 50 Grande" loading="lazy" />
-            
-            <span class="var-label">Azul Grisáceo - 50 Grande</span>
           </button></div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
@@ -5191,8 +5274,8 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
           data-title="azul cobalto - 54 Grande"
           data-imagen="https://m.media-amazon.com/images/I/3160A8tW+IL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0D7MCFNYG?tag=recomendadorn-21&th=1"
-          data-precio="67,31 €"
-          data-precio-original="No especificado"
+          data-precio="57,15 €"
+          data-precio-original="67,31 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31m7aoj+bZL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31-uegb9jDL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/316CoPBPJCL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/41Nh9ULn6zL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31pWrJwdTVL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31Fm4m1ugyL._SL500_.jpg","width":370,"height":500}]'
           
@@ -5214,7 +5297,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-title="Azul Oscuro - 54 Grande"
             data-imagen="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LT3FBD?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,49 €"
+            data-precio="57,33 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31Sq21KtbAL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31ItmIsJEoL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31EZxZ3UvnL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/411mFYt13VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31kq-QnPvgL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/31I3VNLKBxL._SL500_.jpg","width":371,"height":500}]'
@@ -5235,8 +5318,8 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-title="Azul Oscuro - 48 Grande"
             data-imagen="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7M92PJH?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,31 €"
-            data-precio-original="No especificado"
+            data-precio="57,15 €"
+            data-precio-original="67,31 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31Sq21KtbAL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31ItmIsJEoL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31EZxZ3UvnL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/411mFYt13VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31kq-QnPvgL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/31I3VNLKBxL._SL500_.jpg","width":371,"height":500}]'
             
@@ -5277,7 +5360,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-title="Negro - 26 Plus"
             data-imagen="https://m.media-amazon.com/images/I/31mmjA9cvhL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LWDDFH?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,49 €"
+            data-precio="57,33 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qDG9MXNKL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31DJsJ4g54L._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31i9gqIeciL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/413qzj2OHCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31SGYLwcA5L._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31YrRsNl+1L._SL500_.jpg","width":370,"height":500}]'
@@ -5298,7 +5381,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-title="Negro - 48 Grande"
             data-imagen="https://m.media-amazon.com/images/I/31mmjA9cvhL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LZKV4B?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,49 €"
+            data-precio="57,33 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qDG9MXNKL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31DJsJ4g54L._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31i9gqIeciL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/413qzj2OHCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31SGYLwcA5L._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31YrRsNl+1L._SL500_.jpg","width":370,"height":500}]'
@@ -5340,8 +5423,8 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-title="Azul Oscuro - 50 Grande"
             data-imagen="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LN1WRT?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,31 €"
-            data-precio-original="No especificado"
+            data-precio="57,15 €"
+            data-precio-original="67,31 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31Sq21KtbAL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31ItmIsJEoL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31EZxZ3UvnL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/411mFYt13VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31kq-QnPvgL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/31I3VNLKBxL._SL500_.jpg","width":371,"height":500}]'
             
@@ -5357,33 +5440,12 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             onclick="onVariantClick(this)"
             role="button"
             tabindex="0"
-            title="azul/gris - 46 Grande"
-            data-title="azul/gris - 46 Grande"
-            data-imagen="https://m.media-amazon.com/images/I/41xSMCc2gOL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B0F8TPXKZH?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,34 €"
-            data-precio-original="No especificado"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/417HtKVPpFL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/41v15gF0zXL._SL500_.jpg","width":360,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z+R-bmj-L._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51IGkvAsKOL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41IbesSTNQL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/41xSMCc2gOL._SL500_.jpg" alt="azul/gris - 46 Grande" loading="lazy" />
-            
-            <span class="var-label">azul/gris - 46 Grande</span>
-          </button><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
             title="Azul Oscuro - 28 Plus"
             data-title="Azul Oscuro - 28 Plus"
             data-imagen="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LSWDTK?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,31 €"
-            data-precio-original="No especificado"
+            data-precio="57,15 €"
+            data-precio-original="67,31 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31Sq21KtbAL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31ItmIsJEoL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31EZxZ3UvnL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/411mFYt13VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31kq-QnPvgL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/31I3VNLKBxL._SL500_.jpg","width":371,"height":500}]'
             
@@ -5392,6 +5454,27 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
               <img src="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg" alt="Azul Oscuro - 28 Plus" loading="lazy" />
             
             <span class="var-label">Azul Oscuro - 28 Plus</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="azul real - 26 Plus"
+            data-title="azul real - 26 Plus"
+            data-imagen="https://m.media-amazon.com/images/I/3160A8tW+IL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D7LVVGLJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="57,33 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31m7aoj+bZL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31-uegb9jDL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/316CoPBPJCL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/41Nh9ULn6zL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31pWrJwdTVL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31Fm4m1ugyL._SL500_.jpg","width":370,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/3160A8tW+IL._SL500_.jpg" alt="azul real - 26 Plus" loading="lazy" />
+            
+            <span class="var-label">azul real - 26 Plus</span>
           </button></div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
@@ -5504,11 +5587,13 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          67,31 €
+          57,15 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
-                     text-decoration: line-through; white-space: nowrap; display:none;">
+                     text-decoration: line-through; white-space: nowrap; ;">
+          
+            Antes: 67,31 €
           
         </span>
       </p>
@@ -6656,7 +6741,7 @@ Valoro especialmente la variedad de tallas disponibles y su versatilidad, por es
             data-title="42 Grande - Fuchsia"
             data-imagen="https://m.media-amazon.com/images/I/31ZQ7fYFW1L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0BB7LTPYV?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="35,36 €"
+            data-precio="36,33 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31OL0ijAS1L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/31M3jprW7VL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/31cMmGk6euL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/31LD9hWnBBL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/31bVP12vDNL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/6118NZtHzCL._SL500_.jpg","width":500,"height":463},{"url":"https://m.media-amazon.com/images/I/41tbtF5AxBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31fRynpuOIL._SL500_.jpg","width":352,"height":270}]'
@@ -7402,13 +7487,20 @@ Valoro especialmente la variedad de tallas disponibles y su versatilidad, por es
 </section>
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 
-<div style="margin-top: 1em; border-top: 1px solid #ddd; padding-top: 0em;"></div>
+<style>
+    footer a { font-size: 0.8em; }
+    footer {
+  margin-top: 50px; /* espacio respecto a las tarjetas */
+}
+.hero-divider1{height:6px;background:#111;margin:10px 0 12px !important;}
+</style>
 <footer>
-© 2025 Recomendador.net - Algunos enlaces de Amazon pueden generarnos comisiones de afiliado sin coste para ti.
-<br>
-<a href="/legal/aviso-legal/">Aviso legal</a> · 
-<a href="/legal/politica-privacidad/">Política de privacidad</a> · 
-<a href="/legal/politica-cookies/">Política de cookies</a>
+<div class="hero-divider1"></div>
+    © 2025 Recomendador.net - Algunos enlaces de Amazon pueden generarnos comisiones de afiliado sin coste para ti.
+    <br>
+    <a href="/legal/aviso-legal/">Aviso legal</a> · 
+    <a href="/legal/politica-privacidad/">Política de privacidad</a> · 
+    <a href="/legal/politica-cookies/">Política de cookies</a>
 </footer>
 
 </div>

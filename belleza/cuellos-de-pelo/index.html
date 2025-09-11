@@ -48,16 +48,16 @@
   
   
   <link rel="preload" as="image"
-    href="/global/images/blog/gadget-salva-vidas.webp"
-    imagesrcset="/global/images/blog/gadget-salva-vidas-480w.webp 480w, /global/images/blog/gadget-salva-vidas-768w.webp 768w, /global/images/blog/gadget-salva-vidas-1200w.webp 1200w"
+    href=""
+    imagesrcset="-480w.webp 480w, -768w.webp 768w, -1200w.webp 1200w"
     imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw">
 
   
   
   
   <link rel="preload" as="image"
-    href="/global/images/blog/moto-electrica-ni%C3%B1os.webp"
-    imagesrcset="/global/images/blog/moto-electrica-niños-480w.webp 480w, /global/images/blog/moto-electrica-niños-768w.webp 768w, /global/images/blog/moto-electrica-niños-1200w.webp 1200w"
+    href=""
+    imagesrcset="-480w.webp 480w, -768w.webp 768w, -1200w.webp 1200w"
     imagesizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw">
 
 
@@ -139,6 +139,7 @@
             <li><a href="/belleza/vestidos-fiesta-tallas-grandes/">👗 Vestidos de fiesta de tallas grandes</a></li>
             <li><a href="/belleza/vestidos-invitada-talla-grande/">👗 Vestidos de invitada de tallas grandes</a></li>
             <li><a href="/belleza/cuellos-de-pelo/">🧣 Cuellos de pelo</a></li>
+            <li><a href="/moda/vestido-invitada-otono/">👗 Vestido de invitada de otoño</a></li>
           </ul>
         </li>
         <li class="dropdown">
@@ -183,6 +184,7 @@
             <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
             <li><a href="/hogar/saco-silla-paseo/">👶 Mejor saco para carro de bebé</a></li>
             <li><a href="/hogar/body-bebe-personalizado/">👕 Mejor body para bebé personalizado</a></li>
+            <li><a href="/hogar/toallas-personalizadas/">🛁 Mejores toallas personalizadas</a></li>
           </ul>
         </li>
         <li><a href="/contacto/">📬 Contacto</a></li>
@@ -223,6 +225,7 @@
         <li><a href="/belleza/vestidos-fiesta-tallas-grandes/">👗 Vestidos de fiesta de tallas grandes</a></li>
         <li><a href="/belleza/vestidos-invitada-talla-grande/">👗 Vestidos de invitada de tallas grandes</a></li>
         <li><a href="/belleza/cuellos-de-pelo/">🧣 Cuellos de pelo</a></li>
+        <li><a href="/moda/vestido-invitada-otono/">👗 Vestido de invitada de otoño</a></li>
       </ul>
     </li>
         <li>
@@ -256,6 +259,7 @@
         <li><a href="/hogar/bolso-carro-bebe/">👜 Mejor bolso para carro de bebé</a></li>
         <li><a href="/hogar/saco-silla-paseo/">👶 Mejor saco para carro de bebé</a></li>
         <li><a href="/hogar/body-bebe-personalizado/">👕 Mejor body para bebé personalizado</a></li>
+        <li><a href="/hogar/toallas-personalizadas/">🛁 Mejores toallas personalizadas</a></li>
       </ul>
     </li>
         <li style="margin-bottom: 20px;">
@@ -698,7 +702,6 @@ body {
 
 <div class="container">
 <style>
-
   .cabecera-contenedor {
   position: relative;
   width: 100%;
@@ -743,10 +746,63 @@ body {
     max-width: calc(100% - 20px);
   }
 }
+  /* ===== Breadcrumb fuera de la imagen ===== */
+  .breadcrumb {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 8px; /* queda pegado a la cabecera */
+    font-size: .95rem;
+    color: #555;
+  }
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+  }
+  .breadcrumb li + li:before {
+    content: "›";
+    opacity: .7;
+    margin: 0 .4rem;
+  }
+  .breadcrumb a {
+    color: #555 !important;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
 
-
-
+  @media (max-width: 768px) {
+    .breadcrumb { font-size: .85rem; margin-bottom: 6px; }
+  }
 </style>
+
+
+
+
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Inicio</a></li>
+    
+      <li>
+        <a href="/categorias/moda/">
+          Moda
+        </a>
+      </li>
+    
+  </ol>
+</nav>
+
 
 
 
@@ -762,6 +818,7 @@ body {
     Los mejores cuellos de pelo de 2025
   </h1>
 </div>
+
 
 <div class="autor">
   <a href="/sobre-nosotros/#laura" style="text-decoration: none; color: inherit;" target="_blank">
@@ -1809,27 +1866,6 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41b1lMi7WUL._SL500_.jpg" alt="Negro&amp;blanco,120cm - 120" loading="lazy" />
             
             <span class="var-label">Negro&blanco,120cm - 120</span>
-          </button><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
-            title="Negro&amp;blanco,80cm - 80"
-            data-title="Negro&amp;blanco,80cm - 80"
-            data-imagen="https://m.media-amazon.com/images/I/41wHmuUcJEL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B07GPFTCWK?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="21,99 €"
-            data-precio-original="No especificado"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41xtBDnRSOL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51SICzxRf8L._SL500_.jpg","width":500,"height":480}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/41wHmuUcJEL._SL500_.jpg" alt="Negro&amp;blanco,80cm - 80" loading="lazy" />
-            
-            <span class="var-label">Negro&blanco,80cm - 80</span>
           </button><button
             type="button"
             class="var-btn"
@@ -3804,6 +3840,27 @@ La marca DianShaoA cumple con lo esperado para un complemento práctico y abriga
               <img src="https://m.media-amazon.com/images/I/41Qwx6Axm3L._SL500_.jpg" alt="Pontevedra Collections 91 - Orange" loading="lazy" />
             
             <span class="var-label">Pontevedra Collections 91 - Orange</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Pontevedra Collections 14 - Light Purple"
+            data-title="Pontevedra Collections 14 - Light Purple"
+            data-imagen="https://m.media-amazon.com/images/I/41YXm5YVRoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B095JFBFQ8?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,92 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41mgjPXi-1L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41qTdiCmjLL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51p-AqZAlXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51lEKWtQehL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/410fSUd-w9L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41YXm5YVRoL._SL500_.jpg" alt="Pontevedra Collections 14 - Light Purple" loading="lazy" />
+            
+            <span class="var-label">Pontevedra Collections 14 - Light Purple</span>
           </button></div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
@@ -4852,13 +4909,20 @@ En mi caso el tejido y el acabado me parecieron de buena calidad, por eso fue un
 </section>
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 
-<div style="margin-top: 1em; border-top: 1px solid #ddd; padding-top: 0em;"></div>
+<style>
+    footer a { font-size: 0.8em; }
+    footer {
+  margin-top: 50px; /* espacio respecto a las tarjetas */
+}
+.hero-divider1{height:6px;background:#111;margin:10px 0 12px !important;}
+</style>
 <footer>
-© 2025 Recomendador.net - Algunos enlaces de Amazon pueden generarnos comisiones de afiliado sin coste para ti.
-<br>
-<a href="/legal/aviso-legal/">Aviso legal</a> · 
-<a href="/legal/politica-privacidad/">Política de privacidad</a> · 
-<a href="/legal/politica-cookies/">Política de cookies</a>
+<div class="hero-divider1"></div>
+    © 2025 Recomendador.net - Algunos enlaces de Amazon pueden generarnos comisiones de afiliado sin coste para ti.
+    <br>
+    <a href="/legal/aviso-legal/">Aviso legal</a> · 
+    <a href="/legal/politica-privacidad/">Política de privacidad</a> · 
+    <a href="/legal/politica-cookies/">Política de cookies</a>
 </footer>
 
 </div>
