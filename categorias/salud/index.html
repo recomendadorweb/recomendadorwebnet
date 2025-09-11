@@ -646,9 +646,63 @@
     grid-template-columns: 1fr !important; /* fuerza una tarjeta por fila en mobile */
   }
 }
+/* ===== Breadcrumb fuera de la imagen ===== */
+  .breadcrumb {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 8px; /* queda pegado a la cabecera */
+    font-size: .95rem;
+    color: #555;
+  }
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+  }
+  .breadcrumb li + li:before {
+    content: "›";
+    opacity: .7;
+    margin: 0 .4rem;
+  }
+  .breadcrumb a {
+    color: #555 !important;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
 
+  @media (max-width: 768px) {
+    .breadcrumb { font-size: .85rem; margin-bottom: 6px; }
+  }
 </style>
+
 <div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Inicio</a></li>
+      <li>
+        <a href="/categorias/">Categorías</a>
+      </li>
+      <li>
+
+
+<a href="/categorias/salud/">
+
+          Salud
+        </a>
+      </li>
+  </ol>
+</nav>
 <h1 class="hero-title">Salud</h1>
 <div class="hero-divider"></div>
 
