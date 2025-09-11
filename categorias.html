@@ -1,10 +1,137 @@
 ---
 layout: default
-title: "Categorías"
+title: "Categorías | Recomendador.net"
 permalink: /categorias/
 ---
-<ul>
-  {%- for c in site.data.categorias -%}
-    <li><a href="{{ c.url | relative_url }}">{{ c.name }}</a> ({{ c.count }})</li>
-  {%- endfor -%}
-</ul>
+{% include menu.html %}
+{% include estiloazul.html %}
+
+<style>
+    .hero-title{
+  margin:8px 0 8px !important;font-size:clamp(1.9rem,1.8vw + 1rem,2.4rem) !important;line-height:1.1;font-weight:900;letter-spacing:-.5px;color:#111 !important;
+}
+  /* Contenedor general */
+  .cat-wrap {max-width: 1200px;}
+  .cat-title {font-size: clamp(1.8rem, 2.5vw, 2.4rem); font-weight: 800; letter-spacing: -0.01em; margin: 0.5rem 0 1rem;}
+
+  /* Grid responsivo */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 1rem;
+    list-style: none;        /* Sin marcadores */
+    padding: 0;              /* Sin padding por defecto */
+    margin: 25px 0 0 0;               /* Sin margen extra */
+  }
+  .cat-grid li { margin: 0; padding: 0; } /* Cada item limpio */
+  
+  @media (min-width: 640px){ .cat-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.2rem; } }
+  @media (min-width: 1024px){ .cat-grid { grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1.4rem; } }
+
+  /* Tarjeta */
+  .cat-card {
+    display:block; text-decoration:none; color:inherit;
+    border-radius:16px; overflow:hidden; background:#fff;
+    box-shadow: 0 6px 20px rgba(0,0,0,.06);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  /* Imagen vertical 2:3 */
+  .cat-media { position: relative; aspect-ratio: 2 / 3; background: #f3f5f7; }
+  .cat-media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+
+  /* Texto debajo de la imagen */
+  .cat-meta {
+    padding: .8rem .95rem 1rem;
+    color: #000;
+    display:flex; align-items:center; justify-content:space-between; gap:.75rem;
+  }
+  .cat-name { font-size: 1.1rem; font-weight: 700; letter-spacing: .1px; line-height:1.2; align-items: center; }
+  .cat-count { font-size:.85rem; color:#6b7280; background:#eef2f7; border-radius:999px; padding:.2rem .55rem; }
+
+  /* Menos movimiento si el usuario lo pide */
+  @media (prefers-reduced-motion: reduce) {
+    .cat-card { transition: none; }
+    .cat-card:hover { transform:none; }
+  }
+  /* ===== Breadcrumb fuera de la imagen ===== */
+  .breadcrumb {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 8px; /* queda pegado a la cabecera */
+    font-size: .95rem;
+    color: #555;
+  }
+  .breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+  }
+  .breadcrumb li + li:before {
+    content: "›";
+    opacity: .7;
+    margin: 0 .4rem;
+  }
+  .breadcrumb a {
+    color: #555 !important;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumb { font-size: .85rem; margin-bottom: 6px; }
+  }
+</style>
+
+<div class="container">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Inicio</a></li>
+      <li>
+        <a href="{{ '/categorias/' | relative_url }}">Categorías</a>
+      </li>
+  </ol>
+</nav>
+  <div class="cat-wrap">
+    <h1 class="hero-title">Categorías</h1>
+    <div class="hero-divider"></div>
+    <ul class="cat-grid" role="list">
+      {%- for c in site.data.categorias -%}
+        {%- assign slug = c.slug | default: c.name | slugify -%}
+        {%- assign img  = c.image | default: 'global/images/categorias/' | append: slug | append: '.webp' -%}
+        <li>
+          <a class="cat-card" href="{{ c.url | relative_url }}">
+            <div class="cat-media">
+              <img
+                src="{{ img | relative_url }}"
+                alt="Categoría: {{ c.name | escape }}"
+                loading="lazy"
+                decoding="async"
+                width="1024" height="1536"
+                srcset="{{ img | relative_url }} 1024w"
+                sizes="(max-width:640px) 50vw, (max-width:1024px) 33vw, 25vw">
+            </div>
+            <div class="cat-meta">
+              <span class="cat-name">{{ c.name | capitalize }}</span>
+              {%- if c.count -%}
+                <span class="cat-count">{{ c.count }}</span>
+              {%- endif -%}
+            </div>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  {% include footer.html %}
+</div>
