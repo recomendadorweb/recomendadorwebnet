@@ -19,7 +19,9 @@ permalink: /sitemap.xml
     or page.sitemap == false -%}
       <url>
         <loc>{{ baseurl }}{{ page.url | replace:'index.html','' }}</loc>
+        {%- if page.date -%}
         <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {%- endif -%}
       </url>
     {%- endunless -%}
   {%- endfor -%}
