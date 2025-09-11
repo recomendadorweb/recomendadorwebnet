@@ -19,7 +19,7 @@ productos:
     lo_mejor: 🎯 Sensor HERO 25K con peso ajustable y 11 botones
     nombre: Logitech G502 HERO
     valoracion: 5
-    precio: "41,00\_€"
+    precio: "26,94\_€"
     precioOriginal: "92,99\_€"
     disponibilidad: En stock
     imagenesVariantes: []
@@ -60,7 +60,7 @@ productos:
     nombreCompleto: >-
       Logitech G502 HERO Ratón Gaming con Cable Alto Rendimiento, Captor HERO 25K, 25,600 DPI, RGB, Peso Personalizable,
       11 Botones Programables, Memoria Integrada, PC/Mac - Negro
-    condicion: new
+    condicion: used
   - ASIN: B0BT4VRZGV
     a_tener_en_cuenta: 🖱 Sin RGB ni sensor de gama alta
     brand: Razer
@@ -303,7 +303,7 @@ productos:
           Razer Basilisk V3 - Ratón para Juegos Personalizable con Cable (10+1 Botones Programables, Rueda Inclinable
           Hyperscroll, 11 Zonas De Iluminación, Interruptores Ópticos de Ratón, Sensor Óptico) Negro
         brand: Razer
-        precio: "54,99\_€"
+        precio: "48,95\_€"
         precioOriginal: "79,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31N1BZUZLwL._SL500_.jpg
@@ -747,7 +747,7 @@ productos:
     lo_mejor: 💡 Rueda inteligente, RGB y sensor Focus+
     nombre: Razer Basilisk V3
     valoracion: 4
-    precio: "54,99\_€"
+    precio: "48,95\_€"
     precioOriginal: "79,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -1493,9 +1493,9 @@ productos:
     lo_mejor: 🔧 12 botones, base carga y diseño robusto
     nombre: ASUS ROG SPATHA X
     valoracion: 4
-    precio: "141,46\_€"
+    precio: "145,56\_€"
     precioOriginal: "151,80\_€"
-    disponibilidad: Envío en 2 a 3 días
+    disponibilidad: Envío en 4 a 5 días
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41r+ND63hlL._SL500_.jpg
         width: 500
@@ -1540,7 +1540,7 @@ productos:
           ASUS ROG Harpe Ace Mini -Ratón Gaming inalámbrico, 49 g Ligero, Sensor óptico AimPoint Pro 42K,
           microinterruptores ópticos, ROG Polling Rate Booster, Esports y FPS, pequeño, Mediano, Negro
         brand: ASUS
-        precio: "119,00\_€"
+        precio: "109,00\_€"
         precioOriginal: "119,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31GDDfBgFlL._SL500_.jpg
@@ -2082,7 +2082,7 @@ productos:
     lo_mejor: 🪶 Ultraligero y perforado, IP54
     nombre: SteelSeries Aerox 5 Wireless
     valoracion: 4.5
-    precio: "99,16\_€"
+    precio: "109,16\_€"
     precioOriginal: "99,00\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -2562,50 +2562,6 @@ productos:
             value: Blanco
         ParentASIN: B0D31JSJFX
         condicion: new
-      - ASIN: B09S3VW7KG
-        title: >-
-          Razer Viper 8K Hz - Ratón para Juegos E-Sport Ambidiestro con Tecnología Hyperpolling De 8000 Hz (Enfoque
-          Óptico + Sensor con 20K dpi, Interruptores de Ratón Óptico de 2.ª Generación, 71g) ESL Ed.
-        brand: Razer
-        precio: "91,29\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41LaPdB9rxL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41XVtObevwL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ykQ5PRr8L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41G50U0NqhL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41HSegLxINL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41pDgbLBzFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51rhw99Rx8L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B09S3VW7KG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Viper 8KHz - ESL Ed
-          - 'Pilas incluidas: No'
-          - 'Marca: eRazer'
-          - 'Color: nero'
-          - 'Batteries_required: No'
-        variationAttributes:
-          - name: style_name
-            value: Viper 8K Hz
-          - name: color_name
-            value: ESL
-        ParentASIN: B0D31JSJFX
-        condicion: used
       - ASIN: B09QFVSYX6
         title: >-
           Razer Viper V2 Pro - Ratón Inalámbrico Ultraligero para Juegos de Deportes Electrónicos de 58g (Sensor Óptico
@@ -2689,53 +2645,67 @@ productos:
             value: Negro
         ParentASIN: B0D31JSJFX
         condicion: new
-      - ASIN: B081QXQ86Y
+      - ASIN: B084W6W9WB
         title: >-
-          Razer Viper Ultimate - Ratón Gaming Inalámbrico (Ambidiestro, Ligero y Rápido, Sensor Óptico 20.000 Dpi, RGB
-          Chroma) Negro
+          Razer Viper Mini - Ratón para Juegos (Ratón Gaming, Ambidiestro, 61g de peso, Cable Speedflex, Sensor Óptico
+          de 8.500 ppp e Iluminación Chroma RGB) - Negro
         brand: Razer
-        precio: "118,79\_€"
+        precio: "49,38\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31TqF4kqLgL._SL500_.jpg
-        imagenWidth: 262
+        imagen: https://m.media-amazon.com/images/I/31lMWsSgoSL._SL500_.jpg
+        imagenWidth: 369
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31cFf3v-mPL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41rrmljy7wL._SL500_.jpg
             width: 500
             height: 333
-          - url: https://m.media-amazon.com/images/I/417C96wCMlL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/11pQcmd4bmL._SL500_.jpg
+            width: 500
+            height: 376
+          - url: https://m.media-amazon.com/images/I/41Y5BZnf8ZL._SL500_.jpg
+            width: 500
+            height: 446
+          - url: https://m.media-amazon.com/images/I/4152PexzRJL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/51N6SqLg2WL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/418ntgZ4JCL._SL500_.jpg
             width: 500
             height: 500
-        condicion: used
-        enlace: https://www.amazon.es/dp/B081QXQ86Y?tag=recomendadorn-21&th=1&psc=1
+          - url: https://m.media-amazon.com/images/I/51-CHjgnSnL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41wVK1LG3AL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41KFfST1YYL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B084W6W9WB?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
-            DISEÑO LIGERO DE 74 G - Disfruta de un control más rápido y fluido con un ratón inalámbrico ligero diseñado
-            para esports. Con un peso total de 74 g, no compromete la robustez de su diseño ambidiestro.
+            Un diseño ambidiestro ultraligero de 61 g: Sin necesidad de un diseño de panal, nuestro ratón ligero permite
+            un control suave y sin esfuerzos que no compromete en absoluto su óptima resistencia; con seis botones
+            programables para óptima practicidad
           - >-
-            Los modelos Quartz y Mercury pesan 78 g (2,75 oz) - Ratón inalámbrico gaming para esports ligero y fiable de
-            74 g: el Razer Viper Ultimate incluye un sensor óptico de 20 000 PPP idóneo para los jugadores más serios y
-            ofrece un peso ligero sin necesidad de agujeros en el diseño
+            Switches ópticos para ratón Razer: Cada click que haces se acciona a la velocidad de la luz, sin
+            desactivación de rebote, por lo que siempre serás el primero en apretar el gatillo; Además los switches
+            duran hasta 50 millones de clicks
           - >-
-            Peso ligero de 74 g Diseñado para deportes electrónicos: El ratón Razer Viper Ultimate es el ratón
-            inalámbrico para juegos más ligero, que además aprovecha todo su potencial con su diseño ambidiestro real,
-            su peso óptimo está diseñado para un control más rápido y suave
+            Cable Razer Speedflex: El cable del Razer Viper Mini tiene una óptima flexibilidad y está diseñado para
+            producir una resistencia mínima, para que puedas realizar movimientos rápidos y suaves y lograr un óptimo
+            grado de control
           - >-
-            Switches ópticos para ratones Razer: Cada clic que haces se realiza a la velocidad de la luz, sin
-            desactivación de rebote, por lo que siempre serás el primero en apretar el gatillo, los switches también
-            duran hasta 70 millones de clics
+            Sensor óptico de 8500 PPP: Consigue la precisión de alto rendimiento y la puntería uniforme que necesitas
+            para un juego competitivo con un sensor óptico bien equilibrado para velocidad y control
           - >-
-            Hasta 70 horas de duración de la batería: Una eficiencia energética inalámbrica óptimizada hace que funcione
-            a un rendimiento óptimo durante hasta 70 horas seguidas, cárgalo una vez a la semana para disfrutar de 10
-            horas de juego diario
-          - 'Factor de forma: Verdadero-ambidiestro'
+            Con tecnología Razer Chroma RGB: Gracias a los 16.8 millones de colores y un paquete de efectos de
+            iluminación únicos podrás personalizar la iluminación inferior de Razer Viper Mini con Razer Synapse 3 y
+            darle personalidad a tu estación de combate
         variationAttributes:
           - name: style_name
-            value: Viper Ultimate
+            value: Viper Mini
           - name: color_name
             value: Negro
         ParentASIN: B0D31JSJFX
@@ -3044,7 +3014,7 @@ productos:
           Razer DeathAdder V2 Pro Paquete Que Consta de Mouse Profesional para Juegos inalámbrico con Sensor de Enfoque
           + 20K dpi y Mouse Dock Chroma estación de Carga con iluminación RGB
         brand: Razer
-        precio: "165,87\_€"
+        precio: "171,59\_€"
         precioOriginal: "156,87\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31QBXgHccYL._SL500_.jpg
@@ -3276,7 +3246,7 @@ productos:
           Razer DeathAdder V3 Pro HyperPolling Wireless Dongle - Ratón para Esports Ultraligero con una magnífica tasa
           de sondeo inalámbrico de 8K Hz (63 g, Sensor óptico Focus Pro de 30k PPP) Negro
         brand: Razer
-        precio: "148,20\_€"
+        precio: "148,38\_€"
         precioOriginal: "189,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31mYqnBVOEL._SL500_.jpg
@@ -3434,7 +3404,7 @@ productos:
           Razer DeathAdder V3 Pro Fortnite Edition - Ratón inalámbrico Esports Gaming - Sensor óptico Focus Pro 30K dpi
           (63g Ligero, Forma ergonómica, interruptores de ratón Gen-3, HyperSpeed) Fortnite
         brand: Razer
-        precio: "119,00\_€"
+        precio: "108,00\_€"
         precioOriginal: "159,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41oPCEF8NZL._SL500_.jpg
@@ -3591,4 +3561,4 @@ productos:
       Razer DeathAdder V3 - Ratón Ergonómico para Deportes Electrónicos (Diseño Ligero De 59g, Sensor Óptico De 30K,
       Interruptores Ópticos de Ratón Gen-3, Tecnología Hyperpolling De 8000 Hz) Negro
     condicion: new
-actualizacion: '2025-09-11'
+actualizacion: '2025-09-12'

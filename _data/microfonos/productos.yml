@@ -19,7 +19,7 @@ productos:
     lo_mejor: 🎙 Calidad de estudio XLR + interfaz incluida 🔧 Control completo 🔊 Sonido cálido 🖥 Ideal para setups avanzados
     nombre: SteelSeries Alias Pro Kit
     valoracion: 5
-    precio: "230,65\_€"
+    precio: "225,54\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -412,7 +412,7 @@ productos:
       - ASIN: B01LY6Z2M6
         title: Logitech for Creators Blue Yeti Micrófono Condensador USB para Grabación, Streaming, Gaming, Podcasting, Azul
         brand: Logitech for Creators
-        precio: "108,94\_€"
+        precio: "117,01\_€"
         precioOriginal: "139,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31DaRb7oyoL._SL500_.jpg
@@ -479,6 +479,51 @@ productos:
             value: Azul
         ParentASIN: B0C74S3X9H
         condicion: new
+      - ASIN: B078MHS3SC
+        title: >-
+          Logitech for Creators Blue Yeticaster Pack Profesional para Broadcasting, Micrófono USB, Suspensión Radius
+          III, Brazo Compass, efectos Blue VO!CE - Negro
+        brand: Logitech for Creators
+        precio: "110,90\_€"
+        precioOriginal: "229,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/314D8z3E+5L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51A-N8uV2sL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41GHe0Ns4ML._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: used
+        enlace: https://www.amazon.es/dp/B078MHS3SC?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Micrófono de condensador USB Yeti: graba y difunde directamente en tu ordenador o portátil, PC o Mac con una
+            calidad de sonido sin igual gracias nuestro micrófono USB número uno
+          - >-
+            Brazo articulado Compass: fija el micrófono USB Yeti al brazo Compass que posee un diseño con muelles
+            internos y una organización interna de cableado para el streaming, gaming, podcasting y más
+          - >-
+            Suspensión antivibraciones personalizada Radius III: completa tu estudio con esta suspensión estilo vintage,
+            diseñada para aislar al micrófono Yeti del ruido, golpes y vibraciones ambiente
+          - >-
+            Legendario sonido de difusión Blue: el paquete Yeticaster está equipado con nuestro sonido legendario de
+            difusión, haciendo así la diferencia a la hora de grabar audio y de hacer streaming
+          - >-
+            Software Blue VO!CE: eleva tus transmisiones y grabaciones con un sonido vocal claro y entretén a tu público
+            con efectos mejorados, modulación avanzada y muestras de audio de alta definición
+          - >-
+            Controles de audio integrados: controla el volumen de los auriculares, la selección de patrones, el
+            silenciamiento instantáneo y la ganancia del micrófono. Conéctalo con el cable USB incluido
+        variationAttributes:
+          - name: pattern_name
+            value: Yeticaster Kit
+          - name: color_name
+            value: Negro
+        ParentASIN: B0C74S3X9H
     ParentASIN: B0C74S3X9H
     variationAttributes:
       - name: pattern_name
@@ -818,7 +863,7 @@ productos:
     lo_mejor: 🌈 Iluminación LED 🔄 4 patrones 🎛 Ganancia accesible 🎤 Calidad muy estable
     nombre: HyperX QuadCast
     valoracion: 4.5
-    precio: "92,64\_€"
+    precio: "79,99\_€"
     precioOriginal: "79,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -994,7 +1039,7 @@ productos:
           SteelSeries Alias Pro Kit — Micro XLR + Mezclador Stream — cápsula 3 Veces Mayor para Gaming, Streaming y
           pódcast — Interfaz USB/XLR — Controles para personalización — RGB — PC Individual o Dual
         brand: SteelSeries
-        precio: "230,65\_€"
+        precio: "225,54\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41eRGqCR0JL._SL500_.jpg
@@ -1147,7 +1192,7 @@ productos:
         brand: Logitech G
         precio: "245,02\_€"
         precioOriginal: "183,74\_€"
-        disponibilidad: En stock
+        disponibilidad: Envío en 3 a 4 días
         imagen: https://m.media-amazon.com/images/I/214H7IXocjL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1298,7 +1343,7 @@ productos:
           Razer Seiren Mini - Micrófono compacto para USB para streaming, (compacto con patrón polar supercardioide,
           soporte inclinable, amortiguador integrado) Negro
         brand: Razer
-        precio: "39,99\_€"
+        precio: "44,98\_€"
         precioOriginal: "59,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21PMFQjj-1S._SL500_.jpg
@@ -1463,9 +1508,9 @@ productos:
           Razer Seiren V2 Pro - Microphone USB professionnel pour streamers (Microphone dynamique 30 mm, filtre
           passe-haut, limiteur de gain, monitoring du microphone) Noir
         brand: Razer
-        precio: "112,57\_€"
+        precio: "112,99\_€"
         precioOriginal: "84,99\_€"
-        disponibilidad: Envío en 2 a 3 días
+        disponibilidad: Envío en 8 a 9 días
         imagen: https://m.media-amazon.com/images/I/31YWSdrJmDL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1720,7 +1765,7 @@ productos:
           Razer Seiren V3 Chroma - Micrófono USB RGB - Micrófono de Condensador supercardioide con Tap-to-Mute
           (iluminación reactiva, limitador de Ganancia Digital y Amortiguador Integrado) Quartz
         brand: Razer
-        precio: "98,20\_€"
+        precio: "99,42\_€"
         precioOriginal: No especificado
         disponibilidad: Envío en 3 a 4 días
         imagen: https://m.media-amazon.com/images/I/31fP65P9bSL._SL500_.jpg
@@ -1793,7 +1838,7 @@ productos:
           Razer Seiren V3 Chroma - Micrófono USB RGB con pulsación para silenciar (Iluminación Reactiva Para Streaming y
           juegos, Micrófono de condensador supercardioide) Negro
         brand: Razer
-        precio: "115,23\_€"
+        precio: "115,24\_€"
         precioOriginal: "119,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41BL4X2ec1L._SL500_.jpg
@@ -2133,7 +2178,7 @@ productos:
           Trust Gaming GXT 253 Emita Brazo de Micrófono USB, Soporte de Micrófono, Diseño Giratorio de 360 Grados, 35 cm
           x 40 cm, hasta 900 Gramos de Peso para PC, Portátil - Negro
         brand: Trust Gaming
-        precio: "47,25\_€"
+        precio: "47,21\_€"
         precioOriginal: "49,99\_€"
         disponibilidad: Envío en 2 a 3 días
         imagen: https://m.media-amazon.com/images/I/61eWNa8aJSL._SL500_.jpg
@@ -2238,7 +2283,7 @@ productos:
       - ASIN: B06XNQVCKG
         title: Trust Gaming 21753 GXT Emita, Micrófono USB para Estudio, PC, PS4, PS5, Negro
         brand: Trust Gaming
-        precio: "85,74\_€"
+        precio: "85,63\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41o9D0O2hIL._SL500_.jpg
@@ -2371,4 +2416,4 @@ productos:
       Trust Gaming GXT 252 Emita Plus Micrófono USB Profesional con Condensador, Brazo y Filtro Pop, Patrón Cardioide,
       Micro para Streaming, Podcast, PC, PS4 y PS5 - Negro
     condicion: new
-actualizacion: '2025-09-11'
+actualizacion: '2025-09-12'

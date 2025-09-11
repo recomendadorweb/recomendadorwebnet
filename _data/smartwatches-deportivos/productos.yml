@@ -208,7 +208,7 @@ productos:
     lo_mejor: 📊 Métricas completas 🔋 Gran autonomía 📡 GPS multibanda 🏃 Para corredores serios
     nombre: Garmin Forerunner 255
     valoracion: 5
-    precio: "241,96\_€"
+    precio: "236,12\_€"
     precioOriginal: "209,49\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -249,9 +249,9 @@ productos:
           Garmin Forerunner 255, Reloj Inteligente para Correr con GPS, Garmin Pay, Autonomía de hasta 14 Días, Gris
           Pizarra
         brand: Garmin
-        precio: "241,91\_€"
+        precio: "231,10\_€"
         precioOriginal: "349,99\_€"
-        disponibilidad: En stock
+        disponibilidad: Envío en 2 a 3 días
         imagen: https://m.media-amazon.com/images/I/41oPOwZvB0L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -297,7 +297,7 @@ productos:
           Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
           avanzadas, Garmin Pay, Autonomía de 14 Días, Blanco
         brand: Garmin
-        precio: "382,61\_€"
+        precio: "285,79\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41e6z9PjjXL._SL500_.jpg
@@ -441,6 +441,41 @@ productos:
             value: Gris
         ParentASIN: B0BYJVH4JP
         condicion: new
+      - ASIN: B0B2WY7TTH
+        title: >-
+          Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
+          avanzadas, Garmin Pay, Autonomía de hasta 14 Días, Negro
+        brand: Garmin
+        precio: "323,34\_€"
+        precioOriginal: "399,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41wNe-M+lrL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41BZabm6AzL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0B2WY7TTH?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Obtendrás una visión general del sueño, el estado de VFC y la sesión de entrenamiento diaria con tu morning
+            report.
+          - Desafía tus límites con la función de triatlón integrada y más de 30 perfiles de actividad.
+          - >-
+            Planifica tu estrategia con sesiones de entrenamiento diarias recomendadas, detalles del trayecto y mucho
+            más en el widget de carrera.
+          - >-
+            Descarga hasta 500 canciones, así como listas de reproducción, de tus cuentas de Spotify, Deezer o Amazon
+            Music.
+          - Paga el café después del entrenamiento con los pagos contactless de Garmin Pay.
+        variationAttributes:
+          - name: style_name
+            value: Forerunner 255 Música
+          - name: color_name
+            value: Negro
+        ParentASIN: B0BYJVH4JP
     ParentASIN: B0BYJVH4JP
     variationAttributes:
       - name: style_name
@@ -1487,7 +1522,7 @@ productos:
           COROS Pace 3 Reloj Deportivo GPS, Ligero Reloj Running, Batería de 17 días, GPS de Doble frecuencia,
           Frecuencia Cardíaca, Navegación, Seguimiento del sueño, Correr, Bicicleta y Esquí (Silicona Blanca)
         brand: COROS
-        precio: "228,67\_€"
+        precio: "234,74\_€"
         precioOriginal: "249,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41O9CHvOj2L._SL500_.jpg
@@ -1619,4 +1654,4 @@ productos:
       COROS Pace 3 Reloj Deportivo GPS, Ligero Reloj Running, Batería de 17 días, GPS de Doble frecuencia, Frecuencia
       Cardíaca, Navegación, Seguimiento del sueño, Correr, Bicicleta y Esquí (Silicona Negro)
     condicion: new
-actualizacion: '2025-09-11'
+actualizacion: '2025-09-12'
