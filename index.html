@@ -542,7 +542,7 @@ aside .popular-box-widget{
   <a class="lw-item" href="{{ post.url | relative_url }}">
     <span class="lw-thumb">
       <img
-        src="{{ post.image | default: '/global/images/placeholder.webp' }}"
+        src="{{ post.image | default: '/global/images/placeholder.webp' | replace: '.webp', '-home.webp' }}"
         alt="{{ post.title | escape }}"
         width="116" height="88" loading="lazy">
     </span>
