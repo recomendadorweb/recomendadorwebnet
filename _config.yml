@@ -72,4 +72,4 @@ jekyll-archives:
     year: '/blog/:year/'
     month: '/blog/:year/:month/'
     tag: '/tag/:name/'
-    category: '/categoria/:name/'
+    category: '/categoria-blog/:name/'
