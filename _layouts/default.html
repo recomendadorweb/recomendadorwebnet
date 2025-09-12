@@ -42,17 +42,6 @@ Entradas en la categoría: {{ page.title | capitalize_each }} | Recomendador.net
 
   <!-- otros tags -->
 
-{% assign sizes = "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw" %}
-
-{% for i in (1..3) %}
-  {% assign post = site.posts | where: "destacado", i | first %}
-  {% assign base = post.image | split: "-768w.webp" | first %}
-  {% assign base = base | remove: ".webp" %}
-  <link rel="preload" as="image"
-    href="{{ post.image | relative_url }}"
-    imagesrcset="{{ base }}"
-    imagesizes="{{ sizes }}">
-{% endfor %}
 {% if page.robots %}
   <meta name="robots" content="{{ page.robots }}">
 {% endif %}
