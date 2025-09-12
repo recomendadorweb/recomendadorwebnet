@@ -76,7 +76,7 @@ productos:
           Azul Marino XL
         brand: LIAMERHE
         precio: "23,99\_€"
-        precioOriginal: "26,99\_€"
+        precioOriginal: "24,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41xmxaeoqRL._SL500_.jpg
         imagenWidth: 375
@@ -2886,7 +2886,7 @@ productos:
           Neteson Vestidos Mujer Casual Elegante Vestido de Punto Suéter Manga Larga Cuello Redondo A-Line Túnica
           Vestidos Jersey Otoño Invierno
         brand: Neteson
-        precio: "17,99\_€"
+        precio: "18,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41AWVAFWvuL._SL500_.jpg
@@ -2952,7 +2952,7 @@ productos:
           Neteson Vestidos Mujer Casual Elegante Vestido de Punto Suéter Manga Larga Cuello Redondo A-Line Túnica
           Vestidos Jersey Otoño Invierno
         brand: Neteson
-        precio: "17,99\_€"
+        precio: "18,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41AWVAFWvuL._SL500_.jpg
@@ -3018,7 +3018,7 @@ productos:
           Neteson Vestidos Mujer Casual Elegante Vestido de Punto Suéter Manga Larga Cuello Redondo A-Line Túnica
           Vestidos Jersey Otoño Invierno
         brand: Neteson
-        precio: "17,99\_€"
+        precio: "18,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41AWVAFWvuL._SL500_.jpg
@@ -3084,7 +3084,7 @@ productos:
           Neteson Vestidos Mujer Casual Elegante Vestido de Punto Suéter Manga Larga Cuello Redondo A-Line Túnica
           Vestidos Jersey Otoño Invierno
         brand: Neteson
-        precio: "17,99\_€"
+        precio: "18,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41AWVAFWvuL._SL500_.jpg
@@ -3282,7 +3282,7 @@ productos:
           Neteson Vestidos Mujer Casual Elegante Vestido de Punto Suéter Manga Larga Cuello Redondo A-Line Túnica
           Vestidos Jersey Otoño Invierno
         brand: Neteson
-        precio: "17,99\_€"
+        precio: "18,99\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41AWVAFWvuL._SL500_.jpg
@@ -5258,9 +5258,9 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, XL
         brand: DSAoTeng
-        precio: "15,16\_€"
+        precio: "10,29\_€"
         precioOriginal: "15,00\_€"
-        disponibilidad: Envío en 4 a 5 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
         imagenHeight: 500
@@ -5314,9 +5314,9 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, L
         brand: DSAoTeng
-        precio: "15,16\_€"
+        precio: "10,29\_€"
         precioOriginal: "15,00\_€"
-        disponibilidad: Envío en 4 a 5 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
         imagenHeight: 500
@@ -5512,9 +5512,9 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, Morado (, XXL
         brand: DSAoTeng
-        precio: "15,16\_€"
+        precio: "10,29\_€"
         precioOriginal: "15,00\_€"
-        disponibilidad: Envío en 4 a 5 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -5786,65 +5786,6 @@ productos:
         variationAttributes:
           - name: size_name
             value: XL
-          - name: color_name
-            value: A-azul
-        ParentASIN: B0CGV9MCCZ
-        condicion: new
-      - ASIN: B0CDKRLL17
-        nombreCompleto: JENJON Vestidos de Mujer 3.0 V Cuello Elegante Manga Larga Maxi Elastica Vestido de Casual Otoño e Invierno
-        valoracion: 4.5
-        salesrank: 39163
-        enlace: https://www.amazon.es/dp/B0CDKRLL17?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
-        title: JENJON Vestidos de Mujer 3.0 V Cuello Elegante Manga Larga Maxi Elastica Vestido de Casual Otoño e Invierno
-        brand: JENJON
-        precio: "39,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/316RS3rnWpL._SL500_.jpg
-        imagenWidth: 386
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51LacOtZ6dL._SL500_.jpg
-            width: 386
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51l-9Zd90XL._SL500_.jpg
-            width: 386
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31hUeJRiIzL._SL500_.jpg
-            width: 386
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31NwDjO577L._SL500_.jpg
-            width: 386
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31c96NWtB3L._SL500_.jpg
-            width: 386
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415ESr-HPwL._SL500_.jpg
-            width: 386
-            height: 500
-        caracteristicasAmazon:
-          - >-
-            Características: Esta es la versión 2.0 del vestido elástico, nuestro diseñador ha optimizado el tamaño y la
-            longitud de la falda para que toda la falda se ajuste mejor y favorezca su figura. Diseño clásico único,
-            vestido ligero y elástico con cuello en V, antiarrugas, delgado y elegante, holgado y sexy para la mayoría
-            de las formas del cuerpo.
-          - 'Material: Poliéster, fabricado con tejido de alta calidad. Muy suave, cómoda.'
-          - >-
-            Instrucciones de lavado: Se recomienda lavar a máquina. Lavar con agua fría y colores similares. Colgar para
-            secar, no usar lejía. No lo deje en remojo durante mucho tiempo y use lejía con cloro.
-          - >-
-            Ocasión: esta falda es perfecta para muchas ocasiones, la vida diaria, el trabajo, la fiesta, las
-            vacaciones, la informalidad y la Navidad son su mejor opción. use medias con tacones altos o bailarinas, y
-            en invierno es perfecto usar un abrigo sobre una falda
-          - >-
-            Atención: consulte la lista de tallas antes de comprar para poder obtener la talla correcta. Nuestro tamaño
-            puede tener una imprecisión de 2 cm/1 pulgada debido a la medición manual. Dado que el color de la ropa
-            puede ser ligeramente diferente en diferentes teléfonos móviles, el color del producto real que recibió
-            puede ser ligeramente diferente del color que se muestra en el teléfono móvil. Espero que tengas buenas
-            compras.
-        variationAttributes:
-          - name: size_name
-            value: M
           - name: color_name
             value: A-azul
         ParentASIN: B0CGV9MCCZ

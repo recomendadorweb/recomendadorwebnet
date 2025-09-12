@@ -167,9 +167,9 @@ productos:
           Moto Eléctrica Niños 3 Años 4 Años 5 Años Honda Competición 12V – Moto a Batería para Niños con Ruedas de
           Entrenamiento - Luces y Sonidos - Licencia de Marca – INJUSA
         brand: INJUSA
-        precio: "259,99\_€"
+        precio: "259,95\_€"
         precioOriginal: No especificado
-        disponibilidad: En stock
+        disponibilidad: Envío en 2 a 3 días
         imagen: https://m.media-amazon.com/images/I/41HXPbRW94L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -274,37 +274,7 @@ productos:
     title: >-
       Moto Eléctrica Niños 3 Años 4 Años 5 Años CR 6V Verde – Moto a Batería para Niños con Ruedas de Apoyo - Puño
       Acelerador - 5-6 km/h – INJUSA
-    variantes:
-      - ASIN: B00KZ389AA
-        title: Injusa - Moto Arrow, de 6 V (648)
-        brand: INJUSA
-        precio: "89,99\_€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41jVkRsezrL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41lztM1HIbL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41unlhhus0L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00KZ389AA?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Descripción del producto: Moto eléctrica INJUSA Arrow con batería de 6 voltios. Velocidad: 3 - 4 km por
-            hora. Con asa de transporte. Apta para niños a partir de 2 años. Dimensiones del producto: 80 x 33 x 55 cm.
-          - 'Pilas necesarias: 1 x Producto específico incluido'
-          - 'Edad mínima: 2 años'
-        variationAttributes:
-          - name: style_name
-            value: Arrow
-          - name: color_name
-            value: Amarillo
-        ParentASIN: B01HPPEW06
-        condicion: new
+    variantes: []
     ParentASIN: B01HPPEW06
     variationAttributes:
       - name: style_name

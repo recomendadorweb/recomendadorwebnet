@@ -19,9 +19,9 @@ productos:
     lo_mejor: 🔊 Sonido THX posicional, ⚡ Conexión HyperSpeed, 🔋 Batería 70h
     nombre: Razer BlackShark V2 HyperSpeed
     valoracion: 5
-    precio: "127,89\_€"
+    precio: "116,75\_€"
     precioOriginal: "149,99\_€"
-    disponibilidad: En stock
+    disponibilidad: Envío en 3 a 4 días
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51SJ-5TAOHL._SL500_.jpg
         width: 500
@@ -355,7 +355,7 @@ productos:
           Razer BlackShark V2 Pro - Auriculares Inalámbricos para Esports (Diafragmas de Titanio de 50 mm TriForce,
           Micrófono Supercardioide HyperClear, Cancelación Pasiva de Ruido Avanzada) Rainbow Six Siege
         brand: Razer
-        precio: "219,99\_€"
+        precio: "213,39\_€"
         precioOriginal: "219,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41vEb+dBjjL._SL500_.jpg
@@ -648,6 +648,49 @@ productos:
             value: Verde
         ParentASIN: B0D1FMKM76
         condicion: new
+      - ASIN: B09S6KGCL1
+        title: >-
+          Razer BlackShark V2 (ESL Ed.) - Auriculares Gaming con tarjeta de sonido USB, (cable de mando de 50 mm,
+          reducción de ruido, para PC, Mac, PS4, Xbox One y Switch)
+        brand: Razer
+        precio: "85,79\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41+jedQB1ZL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 468
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/415AtykuBYL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51eS+Hcfi5L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41NVWWJJ0mL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51iT8Q6EXiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51jhObSq7PL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/412sp4XZRnL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: used
+        enlace: https://www.amazon.es/dp/B09S6KGCL1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - BlackShark V2 - ESL Ed.
+          - Descubre nuestra gama completa de productos.
+          - Nuestro objetivo principal es la satisfacción del cliente
+          - Producto elaborado con materiales de alta calidad.
+        variationAttributes:
+          - name: style_name
+            value: Blackshark V2
+          - name: color_name
+            value: ESL Ed.
+        ParentASIN: B0D1FMKM76
     ParentASIN: B0D1FMKM76
     nombreCompleto: >-
       Razer BlackShark V2 HyperSpeed para PC - Auriculares para esports inalámbricos y ligeros (280 g, Micrófono
@@ -986,7 +1029,7 @@ productos:
           Razer BlackShark V2 Pro - Auriculares Inalámbricos para Esports (Diafragmas de Titanio de 50 mm TriForce,
           Micrófono Supercardioide HyperClear, Cancelación Pasiva de Ruido Avanzada) Rainbow Six Siege
         brand: Razer
-        precio: "219,99\_€"
+        precio: "213,39\_€"
         precioOriginal: "219,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41vEb+dBjjL._SL500_.jpg
@@ -1204,6 +1247,49 @@ productos:
             value: Negro
         ParentASIN: B0D1FMKM76
         condicion: new
+      - ASIN: B09S6KGCL1
+        title: >-
+          Razer BlackShark V2 (ESL Ed.) - Auriculares Gaming con tarjeta de sonido USB, (cable de mando de 50 mm,
+          reducción de ruido, para PC, Mac, PS4, Xbox One y Switch)
+        brand: Razer
+        precio: "85,79\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41+jedQB1ZL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 468
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/415AtykuBYL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51eS+Hcfi5L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41NVWWJJ0mL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51iT8Q6EXiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51jhObSq7PL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/412sp4XZRnL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: used
+        enlace: https://www.amazon.es/dp/B09S6KGCL1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - BlackShark V2 - ESL Ed.
+          - Descubre nuestra gama completa de productos.
+          - Nuestro objetivo principal es la satisfacción del cliente
+          - Producto elaborado con materiales de alta calidad.
+        variationAttributes:
+          - name: style_name
+            value: Blackshark V2
+          - name: color_name
+            value: ESL Ed.
+        ParentASIN: B0D1FMKM76
     ParentASIN: B0D1FMKM76
     variationAttributes:
       - name: style_name
@@ -1301,7 +1387,7 @@ productos:
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Negro
         brand: Razer
-        precio: "125,00\_€"
+        precio: "80,29\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31Q8YRZMiFL._SL500_.jpg
@@ -1385,7 +1471,7 @@ productos:
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Quartz
         brand: Razer
-        precio: "68,00\_€"
+        precio: "72,31\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -2008,7 +2094,7 @@ productos:
           Corsair HS80 RGB WIRELESS Auriculares Inalámbricos para Juegos Multiplataforma RGB - Dolby Atmos - Micrófono
           Omnidireccional - Compatible con iCUE - PC, Mac, PS5, PS4 - Blanco
         brand: Corsair
-        precio: "148,00\_€"
+        precio: "131,72\_€"
         precioOriginal: "169,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31YLokEXRZL._SL500_.jpg
@@ -2068,7 +2154,7 @@ productos:
           Corsair HS80 MAX Wireless Auriculares para Juegos Multiplataforma con Bluetooth – Dolby Atmos – Micrófono de
           Calidad Broadcast – Compatible con iCUE – PC, Mac, PS5, PS4, Switch, Móvil – Blanco
         brand: Corsair
-        precio: "129,99\_€"
+        precio: "171,43\_€"
         precioOriginal: "189,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31BeC9-PYPL._SL500_.jpg
@@ -2261,7 +2347,7 @@ productos:
     lo_mejor: 🎙️ Micrófono Blue VO!CE, 🎮 Sonido envolvente pro
     nombre: Logitech G PRO X
     valoracion: 5
-    precio: "92,25\_€"
+    precio: "79,74\_€"
     precioOriginal: "89,95\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -2859,7 +2945,7 @@ productos:
     lo_mejor: 💰 Precio asequible, 🎧 Sonido 7.1 DTS:X
     nombre: Logitech G432
     valoracion: 4
-    precio: "50,99\_€"
+    precio: "52,90\_€"
     precioOriginal: "52,90\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -2915,7 +3001,7 @@ productos:
           Logitech G432 Auriculares Gaming con Cable + G502 Hero Ratón Gaming, Captor Hero 25K, Peso Personalizable, 11
           Botones Programables
         brand: Logitech G
-        precio: "91,99\_€"
+        precio: "93,90\_€"
         precioOriginal: "145,89\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31pEhAgl7zL._SL500_.jpg
@@ -3164,7 +3250,7 @@ productos:
       - ASIN: B00SAYCXWG
         title: HyperX KHX-HSCP-RD Cloud II - Cascos de Gaming para PC/PS4/Mac, Negro/Rojo
         brand: HyperX
-        precio: "80,61\_€"
+        precio: "80,68\_€"
         precioOriginal: "99,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41SkA5j2l-L._SL500_.jpg
@@ -3387,7 +3473,7 @@ productos:
     lo_mejor: 🧊 Diseño ligero, 🔊 Sonido 7.1 con adaptador USB
     nombre: Corsair HS55 SURROUND
     valoracion: 4
-    precio: "69,93\_€"
+    precio: "69,85\_€"
     precioOriginal: "79,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -3504,7 +3590,7 @@ productos:
           Omnidireccional - Alcance de Hasta 15 m - Compatible con iCUE - PC, Mac, PS5, PS4 - Blanco
         brand: Corsair
         precio: "77,95\_€"
-        precioOriginal: "100,00\_€"
+        precioOriginal: "119,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31nOZI0NHVL._SL500_.jpg
         imagenWidth: 500
@@ -3567,4 +3653,4 @@ productos:
       Corsair HS55 SURROUND Auriculares Multiplataforma Ligeros con Cable para Juegos - Sonido Envolvente Dolby 7.1 -
       Compatible con iCUE - PC, Mac, PS5, PS4, Xbox, Nintendo Switch, Móvil - Blanco
     condicion: new
-actualizacion: '2025-09-11'
+actualizacion: '2025-09-12'

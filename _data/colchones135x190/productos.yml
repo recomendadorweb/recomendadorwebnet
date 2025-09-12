@@ -1100,6 +1100,56 @@ productos:
             value: Granate
         ParentASIN: B0CS9KRNNK
         condicion: new
+      - ASIN: B0B57GKTC5
+        title: >-
+          Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 90x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
+          FoamVital, Doble Cara Dual System para Invierno y Verano
+        brand: Cecotec
+        precio: "94,90\_€"
+        precioOriginal: "109,00\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0B57GKTC5?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - La medida ideal para tu descanso. Colchón con firmeza alta que te abrazará sin hundimiento .
+          - >-
+            Composición multicapa que se complementan para ofrecerte la mejor sensación de descanso. VisComfort, capa
+            viscoelástica que se amolda a las líneas de tu cuerpo.
+          - >-
+            Núcleo FoamVital que aporta firmeza y resistencia al conjunto. Tejido SoftTex que aporta elasticidad,
+            suavidad, alta transpiración, resistencia y es de fácil limpieza.
+          - >-
+            Doble cara Dual System. Disfruta de la sensación de frescor en verano y calidez en invierno. Tu óptimo
+            descanso no depende de la estación. Altura total de 21 cm.
+          - Colchón envasado al vacío para facilitar el transporte a tu hogar en las mejores condiciones.
+        variationAttributes:
+          - name: size_name
+            value: 90 x 200 cm
+          - name: color_name
+            value: Granate
+        ParentASIN: B0CS9KRNNK
     ParentASIN: B0CS9KRNNK
     nombreCompleto: >-
       Cecotec Colchón Viscoelástico Flow ViscoCare 1900 135x190cm.Multicapa, Altura 21 cm, Núcleo FoamTech, Firmeza
@@ -5897,7 +5947,7 @@ productos:
         brand: Naturalex
         precio: "195,48\_€"
         precioOriginal: No especificado
-        disponibilidad: En stock
+        disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/51dV3DWYDML._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -6109,7 +6159,7 @@ productos:
       - ASIN: B0D9KJ98G6
         title: >-
           Naturalex - Colchón Muelles 140x200 cm - Altura 30 cm - Privilege - Híbrido Muelles Ensacados y Viscoelástica
-          - Espuma HR y Blue Látex - Ergonómico, Transpirable, Gran Adaptabilidad - Acabados Premium
+          - Espuma HR y Blue Látex - Ergonómico, Transpirable, Gran Adaptabilidad - Semifirme
         brand: Naturalex
         precio: "265,48\_€"
         precioOriginal: No especificado
@@ -6221,7 +6271,7 @@ productos:
         brand: Naturalex
         precio: "205,48\_€"
         precioOriginal: No especificado
-        disponibilidad: Envío en 4 a 5 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51dV3DWYDML._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -7316,7 +7366,7 @@ productos:
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
           80x190 cm
         brand: LUCID
-        precio: "138,83\_€"
+        precio: "139,90\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41YFczsupqL._SL500_.jpg
@@ -7387,7 +7437,7 @@ productos:
     lo_mejor: Media-Alta
     nombre: Imperial Confort - ViscoBayscent Grafeno
     valoracion: 4.4
-    precio: "327,74\_€"
+    precio: "326,57\_€"
     precioOriginal: "331,47\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -9602,4 +9652,4 @@ productos:
     condicion: new
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-11'
+actualizacion: '2025-09-12'

@@ -219,7 +219,7 @@ productos:
     lo_mejor: Comodísima para uso diario, con buena autonomía y funciones básicas de salud que cumplen bien.
     nombre: Xiaomi Smart Band 9 Active
     valoracion: 4.3
-    precio: "19,99\_€"
+    precio: "18,79\_€"
     precioOriginal: "24,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -870,7 +870,7 @@ productos:
     lo_mejor: Elegante y muy completa. La mejor opción si quieres estilo sin renunciar a sensores fiables.
     nombre: HUAWEI Band 8
     valoracion: 4.6
-    precio: "23,99\_€"
+    precio: "20,28\_€"
     precioOriginal: "59,00\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -1582,7 +1582,7 @@ productos:
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
           medición,Altamente Compatible,100 Modos de Entrenamiento Diferentes,Azul【Exclusivo Amazon】
         brand: HUAWEI
-        precio: "26,81\_€"
+        precio: "31,72\_€"
         precioOriginal: "59,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41uIg6IlDaL._SL500_.jpg
@@ -1640,6 +1640,72 @@ productos:
             value: Azul Polímeros
         ParentASIN: B0F2J23SQ7
         condicion: used
+      - ASIN: B0CYCDKXSW
+        title: >-
+          HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
+          medición,Altamente compatible,100 modos de entrenamiento diferentes,Blanco
+        brand: HUAWEI
+        precio: "59,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41CmuwEMV7L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41UspN6yqPL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417CcrjdBiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41YxZnMYyRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/419c4K7puFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41h-ejBAwbL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41q9scnVvWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CYCDKXSW?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【Uso confortable 24/7】Correa de fluoroelastómero nueva y mejorada. Ligera como el aire con 14 gramos y
+            finísima con 8,99 mm. Suave, agradable a la piel y hecha para durar. Diseño perforado que absorbe el sudor.
+            Dos hebillas, para un ajuste ceñido y un aspecto limpio.
+          - >-
+            【HUAWEI TruSleep 4.0, Monitoreo profesional de la salud】Mantenga un registro de su frecuencia cardíaca,
+            SpO2, frecuencia respiratoria y cualquier respiración anormal mientras está dormitando, para estar tranquilo
+            todo el tiempo.
+          - >-
+            【Seguimiento mejorado de signos vitales】HUAWEI TruSeen 5.5 monitoreo de salud y análisis de arritmia de onda
+            de pulso. Manténgase al tanto del ritmo, incluso cuando esté corriendo o haciendo ejercicio, y obtenga
+            mejores lecturas de frecuencia cardíaca, todo gracias al rendimiento y la estabilidad mejorados reforzados
+            por nuestro mejor módulo multicanal y algoritmo de fusión inteligente. Y las mediciones de SpO2 son más
+            estables y rápidas.
+          - >-
+            【100 modos de entrenamiento diferentes】Anillos de actividad de última generación, para hacer de la vida
+            saludable tu realidad diaria. Modo de natación de nivel profesional, con un sensor de nueve ejes totalmente
+            nuevo y un algoritmo innovador que identifica con precisión las cuatro brazadas. Sumérgete en tus
+            actividades favoritas y benefíciate de las evaluaciones de entrenamiento basadas en datos, con 100 modos de
+            entrenamiento entre los que elegir y detección automática para cuatro ejercicios comunes.
+          - >-
+            【Carga rápida y batería duradera】Carga durante cinco minutos y úsalo durante dos días, o carga durante los
+            45 minutos completos para llenar tu banda hasta el borde, ¡y úsalo hasta dos semanas seguidas!14 días de uso
+            máximo, 9 días de uso típico.
+        variationAttributes:
+          - name: style_name
+            value: Band 9
+          - name: color_name
+            value: Blanco Polímeros
+        ParentASIN: B0F2J23SQ7
     ParentASIN: B0F2J23SQ7
     variationAttributes:
       - name: style_name
@@ -1735,6 +1801,36 @@ productos:
             value: plateado
         ParentASIN: B0CWF6FSNQ
         condicion: new
+      - ASIN: B0CVMWY3CD
+        title: >-
+          Samsung Galaxy Fit3 - Reloj inteligente con pantalla AMOLED de 40 mm, cuerpo de aluminio, seguimiento completo
+          de la actividad física y la salud, batería hasta 13 días, carga rápida, 5 ATM, oro rosa
+        brand: Samsung
+        precio: "56,05\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/416TrigA+IL._SL500_.jpg
+        imagenWidth: 404
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CVMWY3CD?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Compatible solo con Android; gran pantalla AMOLED con cristal curvo 2.5D y cuerpo de aluminio.
+          - Duración de la batería de hasta 13 días con carga rápida (65 % en 30 minutos).
+          - >-
+            Seguimiento completo de salud y actividad física impulsado por la aplicación Samsung Health (idioma español
+            no garantizado).
+          - >-
+            Seguimiento avanzado del sueño, el nivel de oxígeno en la sangre, el ritmo cardíaco y el estrés. Resistente
+            al polvo y al agua hasta 5 ATM y grado de impermeabilidad IP68.
+          - >-
+            Género: unisex. Potencia de la batería: 208 mAh. Tipo de cierre: hebilla. Tipo de deportes: correr, ciclismo
+            y otros deportes.
+        variationAttributes:
+          - name: color_name
+            value: Oro rosa | Con oferta
+        ParentASIN: B0CWF6FSNQ
     ParentASIN: B0CWF6FSNQ
     variationAttributes:
       - name: color_name

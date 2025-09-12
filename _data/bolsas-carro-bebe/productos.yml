@@ -7,7 +7,7 @@ productos:
     salesrank: 533
     enlace: https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: Walking Mum
-    precio: "25,90\_€"
+    precio: "21,90\_€"
     precioOriginal: "28,90\_€"
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg
@@ -776,6 +776,73 @@ productos:
             value: Mini
         ParentASIN: B0CJMJ23WK
         condicion: new
+      - ASIN: B0F4DDBS5K
+        title: >-
+          MIMUSELINA Bolso Carro Bebe | Pañalera Bebe organizador para silla paseo con gran capacidad | Bolso Maternidad
+          Elegante y Práctico | Hecho en España | Blossom Standard
+        brand: MIMUSELINA
+        precio: "34,95\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/317UW823c8L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/419EHqmGpqL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41-T1WZxCFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31zmcP0broL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31mTP1qR6fL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41z9CYqSToL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/412mdd6PCyL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41wJWQVxvDL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0F4DDBS5K?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            ELEGANTE Y FUNCIONAL, 2 BOLSILLOS INTERNOS – El bolso carrito bebe Mimuselina tipo panera combina estilo y
+            organización. Con 2 compartimentos internos y cierre de cremallera, es ideal para pañales, biberones,
+            chupetes y otros accesorios. Un bolso organizador carrito bebe que te permite llevar todo en orden y siempre
+            a mano en cada paseo
+          - >-
+            MULTIUSOS Y CÓMODO DE TRANSPORTAR – El bolso silla paseo bebe Mimuselina, gracias a sus asas dobles con
+            botones de presión, se cuelga fácilmente en la silla de paseo o carro. Incluye además una correa larga en
+            espiga para llevarla al hombro, perfecta para usar incluso sin el carrito. Esta bolsa carro bebe versátil se
+            adapta a cada momento del día, dentro y fuera de casa
+          - >-
+            GRAN CAPACIDAD EN FORMATO MIDI (37x32x11 cm) – Aunque de tamaño compacto, estas pañaleras para bebes
+            sorprenden por su amplitud. Su tamaño intermedio entre un bolso grande y una bolsa pequeña permite llevar
+            pañales, biberones, mudas y otros esenciales del bebé sin ocupar demasiado espacio. Un bolso para carro bebe
+            práctico para paseos diarios o salidas más largas, siempre con todo organizado en un solo lugar
+          - >-
+            TEJIDO SEGURO Y DE CALIDAD – Los bolsos sillas de paseo Mimuselina están confeccionados en 100% algodón con
+            certificación OEKO-TEX, libre de sustancias nocivas para tu bebé. Gracias a su resistencia y suavidad, cada
+            modelo es ideal como bolso cambiador bebe en el día a día y también como bolsa hospital bebe. Una opción
+            fiable dentro de los bolsos de maternidad para padres que buscan estilo y seguridad
+          - >-
+            PRÁCTICO Y DURADERO, HECHO EN ESPAÑA CON MATERIALES DE ALTA CALIDAD – La bolsa carrito bebe Mimuselina se
+            puede lavar a mano o en lavadora a 30°C, manteniendo siempre su forma y diseño. Gracias a su resistencia, es
+            una elección práctica entre los bolsos carritos bebe. También resulta ideal como bolso maternidad hospital,
+            acompañando a las familias desde los primeros días y garantizando acabados cuidados y duraderos
+        variationAttributes:
+          - name: color_name
+            value: Blossom
+          - name: size_name
+            value: Estándar
+        ParentASIN: B0CJMJ23WK
     ParentASIN: B0CJMJ23WK
     variationAttributes:
       - name: color_name
@@ -1560,4 +1627,4 @@ productos:
       Resistente Salpicaduras Organizador Hecho A Mano España Cochecito Cambiador Multiusos Paseo
     variantes: []
     condicion: new
-actualizacion: '2025-09-11'
+actualizacion: '2025-09-12'
