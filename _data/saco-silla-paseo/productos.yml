@@ -73,7 +73,7 @@ productos:
     salesrank: 3329
     enlace: https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: mibebestore
-    precio: "34,95\_€"
+    precio: "34,90\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg
@@ -2585,34 +2585,38 @@ productos:
             value: Todo el año
         ParentASIN: B0DVT4Q3WC
         condicion: new
-      - ASIN: B0DNQPH65M
+      - ASIN: B08W8LTBPP
         title: >-
           Manta porteo saco para silla de coche paseo capazo y carro verano 90x90 cm - universal arrullo cobertor
-          cochecito para niños y niñas lavable y transpirable Minky Oeko-Tex Ositos de peluche
+          cochecito para niños y niñas lavable y transpirable Minky Oeko-Tex Rosa gris claro
         brand: Totsy Baby
-        precio: "39,88\_€"
-        precioOriginal: "41,99\_€"
+        precio: "29,94\_€"
+        precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31zwc4OY3jL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/418tiEcdRHL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41X1LnBq0HL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41+3zDaEc9L._SL500_.jpg
             width: 500
             height: 500
           - url: https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41pUQ5YPXOL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51bvWkmiT7L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/418LuA25BHL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51VJweHmG2L._SL500_.jpg
             width: 500
             height: 500
-        enlace: https://www.amazon.es/dp/B0DNQPH65M?tag=recomendadorn-21&th=1&psc=1
+          - url: https://m.media-amazon.com/images/I/51kAfOcEmhL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08W8LTBPP?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
             🔄【USO VERSÁTIL】 – Uso universal como manta envolvente, manta para cochecito o saco para portabebés. La
@@ -2639,11 +2643,10 @@ productos:
             frecuentes.
         variationAttributes:
           - name: color_name
-            value: Ositos de Peluche
+            value: Rosa Gris Claro
           - name: style_name
             value: primavera-otoño
         ParentASIN: B0DVT4Q3WC
-        condicion: new
     ParentASIN: B0DVT4Q3WC
     condicion: new
   - ASIN: B0B7BDSL1N
@@ -3488,4 +3491,4 @@ productos:
     title: Walking Mum Saco Silla De Paseo I Love Vichy. Uso Universal Y Compatible Con La Mayoría De Los Carros. Color Rosa.
     variantes: []
     condicion: new
-actualizacion: '2025-09-12'
+actualizacion: '2025-09-13'

@@ -69,7 +69,7 @@ productos:
           Garmin Forerunner 55 - Reloj inteligente para running con GPS, planes de entrenamiento, notificaciones y
           seguimiento del bienestar, Blanco
         brand: Garmin
-        precio: "161,97\_€"
+        precio: "158,98\_€"
         precioOriginal: "199,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41u06XEXGYL._SL500_.jpg
@@ -110,7 +110,7 @@ productos:
       - ASIN: B0DD542SY9
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: "201,98\_€"
+        precio: "198,99\_€"
         precioOriginal: "239,98\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21EpcbLQRgL._SL500_.jpg
@@ -146,7 +146,7 @@ productos:
       - ASIN: B0DD5493Q2
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: "201,98\_€"
+        precio: "198,99\_€"
         precioOriginal: "239,98\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21Jzi-5UdjL._SL500_.jpg
@@ -297,7 +297,7 @@ productos:
           Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
           avanzadas, Garmin Pay, Autonomía de 14 Días, Blanco
         brand: Garmin
-        precio: "285,79\_€"
+        precio: "382,61\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41e6z9PjjXL._SL500_.jpg
@@ -402,7 +402,7 @@ productos:
           Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
           avanzadas, Garmin Pay, Autonomía de hasta 14 Días, Negro
         brand: Garmin
-        precio: "324,06\_€"
+        precio: "408,98\_€"
         precioOriginal: "399,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41wNe-M+lrL._SL500_.jpg
@@ -412,7 +412,7 @@ productos:
           - url: https://m.media-amazon.com/images/I/41BZabm6AzL._SL500_.jpg
             width: 500
             height: 500
-        condicion: used
+        condicion: new
         enlace: https://www.amazon.es/dp/B0B2WY7TTH?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
@@ -461,7 +461,7 @@ productos:
     valoracion: 4
     precio: "299,99\_€"
     precioOriginal: "329,99\_€"
-    disponibilidad: Envío en 3 a 7 meses
+    disponibilidad: Disponible para envío en 1 o 2 días
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41rrE4czoiL._SL500_.jpg
         width: 500
@@ -795,7 +795,7 @@ productos:
     lo_mejor: 🏔 Muy robusto ⚡ Preciso en montaña 🔋 Autonomía top 🔄 Ideal para trail y ultras
     nombre: SUUNTO Race
     valoracion: 4
-    precio: "368,00\_€"
+    precio: "368,49\_€"
     precioOriginal: "399,00\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -861,9 +861,9 @@ productos:
           SUUNTO Race Reloj Deportivo - Smartwatch Exteriores, Pantalla AMOLED Brillante De 1,43" Con Cristal De Zafiro,
           Corona Cómoda y Botones De Control, GPS De Doble Frecuencia, Larga Duración De La Batería
         brand: Suunto
-        precio: "368,00\_€"
+        precio: "392,75\_€"
         precioOriginal: "399,00\_€"
-        disponibilidad: En stock
+        disponibilidad: Envío en 3 a 4 días
         imagen: https://m.media-amazon.com/images/I/41LUmn4Gn7L._SL500_.jpg
         imagenWidth: 400
         imagenHeight: 500
@@ -1610,4 +1610,4 @@ productos:
       COROS Pace 3 Reloj Deportivo GPS, Ligero Reloj Running, Batería de 17 días, GPS de Doble frecuencia, Frecuencia
       Cardíaca, Navegación, Seguimiento del sueño, Correr, Bicicleta y Esquí (Silicona Negro)
     condicion: new
-actualizacion: '2025-09-12'
+actualizacion: '2025-09-13'

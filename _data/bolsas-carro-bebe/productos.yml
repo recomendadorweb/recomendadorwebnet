@@ -1240,16 +1240,16 @@ productos:
         precio: "35,90\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31ssuCmasDL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 308
+        imagen: https://m.media-amazon.com/images/I/41pUJuV-rpL._SL500_.jpg
+        imagenWidth: 433
+        imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/412wKbKti2L._SL500_.jpg
-            width: 500
-            height: 500
           - url: https://m.media-amazon.com/images/I/41Z-HuMdiXL._SL500_.jpg
             width: 500
             height: 423
+          - url: https://m.media-amazon.com/images/I/412wKbKti2L._SL500_.jpg
+            width: 500
+            height: 500
         enlace: https://www.amazon.es/dp/B07PT6NLNY?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
@@ -1260,7 +1260,7 @@ productos:
             hecho a medida, no se admiten devoluciones.
           - >-
             ✅ Personalizamos: mantas, sábanas, dou dou, capas de baño, talegas, bolsos, etc.. Pincha en el texto
-            "mibebestore" ubicado debajo del nombre de este producto. Cualquier aclaración al: 660 41 06 90
+            "mibebestore" ubicado debajo del nombre de este producto.
           - >-
             ✅ Si te gusta una fuente de letra o color de hilo que no tenemos, puedes hacer una pregunta en la página del
             producto y la añadimos rápidamente.
@@ -1627,4 +1627,4 @@ productos:
       Resistente Salpicaduras Organizador Hecho A Mano España Cochecito Cambiador Multiusos Paseo
     variantes: []
     condicion: new
-actualizacion: '2025-09-12'
+actualizacion: '2025-09-13'

@@ -2224,6 +2224,62 @@ productos:
             value: Negro Rojo Blanco
         ParentASIN: B0BZT6B6N2
         condicion: new
+      - ASIN: B010R4KGZ2
+        title: >-
+          LA SEÑORITA Mantón de Manila Negro con Bordados en Rojo. Mantones de Flamenca para el Vestido de Feria,
+          Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
+        brand: La Senorita
+        precio: "26,95\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51Yp0VGEtWL._SL500_.jpg
+        imagenWidth: 375
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51Q3MHBcU3L._SL500_.jpg
+            width: 356
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Anuq1SrWL._SL500_.jpg
+            width: 315
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51c77cq8cbL._SL500_.jpg
+            width: 500
+            height: 334
+          - url: https://m.media-amazon.com/images/I/41ZZDTTGNWL._SL500_.jpg
+            width: 262
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B010R4KGZ2?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            *PARA CLASES DE FLAMENCO & TODAS LAS EDADES: Su tamaño [160 x 80 cm] se adapta perfectamente a la mayoría de
+            las siluetas. Es el mantón perfecto para llevar con tu vestido de flamenca, o para las niñas que van a
+            clases de baile flamenco o sevillanas. ¡Mantones flamencos para hijas y mamás!
+          - >-
+            *MANTÓN TRIANGULAR & TEXTURA LIGERA: Los mantones de flamenca tienen que ser ligeros que te permitan tener
+            flexibilidad y dinamismo en el baile. Los mantones de La Señorita están pensados para que los puedas colocar
+            fácilmente sobre los hombros y con la consistencia adecuada para que el vuelo del mantón sea perfecto
+            mientras que bailas.
+          - >-
+            *MIL MANERAS DE LLEVAR UN MANTÓN DE MANILA. Hay muchas formas de ponerse un mantón de manila. Lo importante
+            es que el modelo que elijas se adapte a cómo quieres colocártelo. Entre las formas más tradicionales tienes
+            echado en forma de pico sobre los hombros, anudado en la cintura al más puro estilo zíngaro o echado
+            simplemente por uno de los hombros. ¡Tú eliges!
+          - >-
+            *COMPLEMENTO PARA BODAS Y EVENTOS. Este mantón de manila es ese chal con flecos que siempre debes tener en
+            tu fondo de armario para acudir a una boda o evento. Por su tamaño, colores y textura, lo puedes utilizar
+            como chal y se combina fácilmente con cualquier tipo de prendas, desde las más clásicas hasta las más
+            urbanas.
+          - >-
+            *CUIDADO FÁCIL: Los mantones La Señorita están realizados en poliéster de alta calidad para que sea muy
+            fácil su cuidado y mantenimiento. Recomendamos el lavado a mano para que los flecos y el bordado permanezca
+            intacto durante mucho tiempo.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Negro Rojo
+        ParentASIN: B0BZT6B6N2
     ParentASIN: B0BZT6B6N2
     variationAttributes:
       - name: size_name
@@ -2816,4 +2872,4 @@ productos:
       Mantón Bordado en Flores para Baile Flamenco Español, Set de Complementos Sevillana, Mantón, Collar, Flor y
       Peineta Flamenca para Adultos (Negro)
     condicion: new
-actualizacion: '2025-09-12'
+actualizacion: '2025-09-13'

@@ -19,7 +19,7 @@ productos:
     lo_mejor: 🎯 Sensor HERO 25K con peso ajustable y 11 botones
     nombre: Logitech G502 HERO
     valoracion: 5
-    precio: "26,94\_€"
+    precio: "27,99\_€"
     precioOriginal: "92,99\_€"
     disponibilidad: En stock
     imagenesVariantes: []
@@ -303,7 +303,7 @@ productos:
           Razer Basilisk V3 - Ratón para Juegos Personalizable con Cable (10+1 Botones Programables, Rueda Inclinable
           Hyperscroll, 11 Zonas De Iluminación, Interruptores Ópticos de Ratón, Sensor Óptico) Negro
         brand: Razer
-        precio: "54,99\_€"
+        precio: "48,95\_€"
         precioOriginal: "79,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31N1BZUZLwL._SL500_.jpg
@@ -747,7 +747,7 @@ productos:
     lo_mejor: 💡 Rueda inteligente, RGB y sensor Focus+
     nombre: Razer Basilisk V3
     valoracion: 4
-    precio: "54,99\_€"
+    precio: "48,95\_€"
     precioOriginal: "79,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -1412,7 +1412,7 @@ productos:
     lo_mejor: ⚖️ Ligero, ergonómico y preciso
     nombre: Logitech G403 HERO
     valoracion: 4
-    precio: "56,47\_€"
+    precio: "56,46\_€"
     precioOriginal: "79,99\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -1541,7 +1541,7 @@ productos:
           microinterruptores ópticos, ROG Polling Rate Booster, Esports y FPS, pequeño, Mediano, Negro
         brand: ASUS
         precio: "109,00\_€"
-        precioOriginal: "119,99\_€"
+        precioOriginal: "127,25\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31GDDfBgFlL._SL500_.jpg
         imagenWidth: 500
@@ -2082,7 +2082,7 @@ productos:
     lo_mejor: 🪶 Ultraligero y perforado, IP54
     nombre: SteelSeries Aerox 5 Wireless
     valoracion: 4.5
-    precio: "110,13\_€"
+    precio: "110,11\_€"
     precioOriginal: "99,00\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -2147,7 +2147,79 @@ productos:
     title: >-
       SteelSeries Aerox 5 Wireless - Ratón gaming perforado RGB - Diseño ultraligero resistente al agua - 9 botones -
       Bluetooth/2,4 GHz - Sensor óptico TrueMove Air 18K DPI
-    variantes: []
+    variantes:
+      - ASIN: B09W19PZFF
+        title: >-
+          SteelSeries Aerox 5 - Raton Gaming Con Cable - Diseño ultraligero resistente al agua - RGB - Sensor óptico
+          TrueMove Air 18K DPI
+        brand: SteelSeries
+        precio: "69,01\_€"
+        precioOriginal: "89,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41Ub62UybmL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51pkMaAMUIL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41VERrEiKVL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41monkt-0mL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/412HWGgvoDL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41sssD8YaLL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/314GZ2ibeKL._SL500_.jpg
+            width: 429
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31OrgrypnsL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41tMxfI36tL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41UQNLb8BSL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31fV2xcdwRL._SL500_.jpg
+            width: 429
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31f2cbyd-6L._SL500_.jpg
+            width: 429
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Yg67vlYaL._SL500_.jpg
+            width: 288
+            height: 500
+          - url: https://m.media-amazon.com/images/I/310rFkurOdL._SL500_.jpg
+            width: 171
+            height: 500
+          - url: https://m.media-amazon.com/images/I/414UJRWv--L._SL500_.jpg
+            width: 288
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B09W19PZFF?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - FLIPANTE RGB - PrismSync RGB trizonal brilla en 16,8 millones de colores configurables
+          - ULTRALIGERO - Diseñado con carcasa perforada adelgazando a 66 g para jugar sin esfuerzo a gran velocidad
+          - AQUABARRIER - Interior protegido contra salpicaduras, polvo, suciedad; tecnología clase IP54
+          - >-
+            FORMA CURTIDA EN BATALLAS - Componentes optimizados y conformados cuidadosamente para peso mínimo, máximo
+            confort y durabilidad extensa
+          - >-
+            9 BOTONES PROGRAMABLES - Confort natural con botones personalizables, panel lateral e interruptor
+            subida/bajada
+        variationAttributes:
+          - name: size_name
+            value: Con cable
+          - name: style_name
+            value: Aerox 5
+        ParentASIN: B0DN6NB5SR
     ParentASIN: B0DN6NB5SR
     variationAttributes:
       - name: size_name
@@ -2868,75 +2940,6 @@ productos:
       Razer DeathAdder V3 - Ratón Ergonómico para Deportes Electrónicos (Diseño Ligero De 59g, Sensor Óptico De 30K,
       Interruptores Ópticos de Ratón Gen-3, Tecnología Hyperpolling De 8000 Hz) Negro
     variantes:
-      - ASIN: B081QX9V2Y
-        title: >-
-          Razer DeathAdder V2 - Ratón Gaming con cable y comodidad ergonómica para PC / Mac (interruptores ópticos,
-          sensor óptico Focus+ 20K, cable Speedflex, memoria integrada) Negro
-        brand: Razer
-        precio: "99,90\_€"
-        precioOriginal: "79,99\_€"
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31bqhKz2DnL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51LLIwCXJ0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41DJBXMWJ1L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/2114JcIq1nL._SL500_.jpg
-            width: 500
-            height: 375
-          - url: https://m.media-amazon.com/images/I/41z7iuQy3dL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Vy6XVxR4L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41u+AWAi8DL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/418CfDvrOSL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31bofpeff8L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31llrrZCRML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31q-n17FZGL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B081QX9V2Y?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            El optimo diseño ergonómico de su clase: A través de innumerables prototipos y pruebas, nuestros científicos
-            y diseñadores de ergonomía han creado la estructura más cómoda y ligera posible que te permite ofrecer tu
-            optimo juego y durante más tiempo
-          - >-
-            Switches ópticos para ratón Razer: Cada clic se acciona a la velocidad de la luz, sin desactivación de
-            rebote, así que siempre serás el primero en apretar el gatillo, además los switches duran hasta 70 millones
-            de clics
-          - >-
-            Sensor óptico Razer Focus+ 20K: Su sensor óptico de 20 000 PPP te asegura de que se registra hasta el
-            movimiento más ínfimo, lo que te proporciona una precisión muy aguda para esos disparos ganadores y
-            maniobras elusivas
-          - >-
-            Cable Razer Speedflex: Con una optima flexibilidad y un arrastre mínimo para realizar movimientos sin
-            obstáculos, permitiéndote un control fluido en tus partidas
-          - >-
-            5 perfiles de memoria integrada: Guarda hasta 5 configuraciones de perfiles en la memoria integrada y lleva
-            tus ajustes donde quieras para estar siempre listo para competir con tus controles favoritos
-        variationAttributes:
-          - name: style_name
-            value: DeathAdder V2
-          - name: color_name
-            value: Negro
-        ParentASIN: B0D8TJXH95
-        condicion: new
       - ASIN: B08NVB68R3
         title: >-
           Razer DeathAdder V2 Pro Paquete Que Consta de Mouse Profesional para Juegos inalámbrico con Sensor de Enfoque
@@ -3332,7 +3335,7 @@ productos:
           Razer DeathAdder V3 Pro Fortnite Edition - Ratón inalámbrico Esports Gaming - Sensor óptico Focus Pro 30K dpi
           (63g Ligero, Forma ergonómica, interruptores de ratón Gen-3, HyperSpeed) Fortnite
         brand: Razer
-        precio: "111,07\_€"
+        precio: "110,60\_€"
         precioOriginal: "159,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41oPCEF8NZL._SL500_.jpg
@@ -3489,4 +3492,4 @@ productos:
       Razer DeathAdder V3 - Ratón Ergonómico para Deportes Electrónicos (Diseño Ligero De 59g, Sensor Óptico De 30K,
       Interruptores Ópticos de Ratón Gen-3, Tecnología Hyperpolling De 8000 Hz) Negro
     condicion: new
-actualizacion: '2025-09-12'
+actualizacion: '2025-09-13'
