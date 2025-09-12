@@ -50,7 +50,7 @@ Entradas en la categoría: {{ page.title | capitalize_each }} | Recomendador.net
   {% assign base = base | remove: ".webp" %}
   <link rel="preload" as="image"
     href="{{ post.image | relative_url }}"
-    imagesrcset="{{ base }}-480w.webp 480w, {{ base }}-768w.webp 768w, {{ base }}-1200w.webp 1200w"
+    imagesrcset="{{ base }}"
     imagesizes="{{ sizes }}">
 {% endfor %}
 {% if page.robots %}
