@@ -1645,8 +1645,8 @@ productos:
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
           medición,Altamente compatible,100 modos de entrenamiento diferentes,Blanco
         brand: HUAWEI
-        precio: "59,00\_€"
-        precioOriginal: No especificado
+        precio: "32,02\_€"
+        precioOriginal: "59,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41CmuwEMV7L._SL500_.jpg
         imagenWidth: 500
@@ -1673,7 +1673,7 @@ productos:
           - url: https://m.media-amazon.com/images/I/416B0AZbE3L._SL500_.jpg
             width: 500
             height: 500
-        condicion: new
+        condicion: used
         enlace: https://www.amazon.es/dp/B0CYCDKXSW?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
@@ -1839,4 +1839,4 @@ productos:
       Samsung Galaxy Fit3 - Reloj inteligente con pantalla AMOLED de 40 mm, cuerpo de aluminio, seguimiento completo de
       la actividad física y la salud, batería hasta 13 días, carga rápida, 5 ATM, gris
     condicion: new
-actualizacion: '2025-09-13'
+actualizacion: '2025-09-14'

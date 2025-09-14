@@ -7,7 +7,7 @@ productos:
     salesrank: 533
     enlace: https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: Walking Mum
-    precio: "21,90\_€"
+    precio: "25,90\_€"
     precioOriginal: "28,90\_€"
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg
@@ -333,6 +333,9 @@ productos:
           - url: https://m.media-amazon.com/images/I/41JbBn4uRDL._SL500_.jpg
             width: 389
             height: 500
+          - url: https://m.media-amazon.com/images/I/51SQo9zcDCL._SL500_.jpg
+            width: 500
+            height: 459
           - url: https://m.media-amazon.com/images/I/41od1irh-cL._SL500_.jpg
             width: 469
             height: 500
@@ -1106,7 +1109,7 @@ productos:
       Danielstore - Bolso Maternidad Personalizado | Organizador Pañales | Asa Colgar al Hombro | Compatible Carrito
       Bebe | Fácil Limpieza, Rosa, 1 Unidad, Polipiel
     variantes: []
-    condicion: ''
+    condicion: new
   - ASIN: B0DM97L5JL
     nombreCompleto: Walking Mum BOLSA CROSSBODY MIMOSA ROSA
     valoracion: 4.4
@@ -1244,12 +1247,21 @@ productos:
         imagenWidth: 433
         imagenHeight: 500
         imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41JAPg9KCFL._SL500_.jpg
+            width: 500
+            height: 414
+          - url: https://m.media-amazon.com/images/I/418zeGYYocL._SL500_.jpg
+            width: 500
+            height: 414
+          - url: https://m.media-amazon.com/images/I/41vJWuHDBFL._SL500_.jpg
+            width: 500
+            height: 324
           - url: https://m.media-amazon.com/images/I/41Z-HuMdiXL._SL500_.jpg
             width: 500
             height: 423
-          - url: https://m.media-amazon.com/images/I/412wKbKti2L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/4103nMgSB4L._SL500_.jpg
             width: 500
-            height: 500
+            height: 414
         enlace: https://www.amazon.es/dp/B07PT6NLNY?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
@@ -1627,4 +1639,4 @@ productos:
       Resistente Salpicaduras Organizador Hecho A Mano España Cochecito Cambiador Multiusos Paseo
     variantes: []
     condicion: new
-actualizacion: '2025-09-13'
+actualizacion: '2025-09-14'
