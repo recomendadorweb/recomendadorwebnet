@@ -1151,11 +1151,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1179,16 +1192,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1213,15 +1223,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1230,14 +1241,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1251,7 +1260,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1259,7 +1267,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1271,7 +1278,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1281,7 +1287,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1289,7 +1295,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1301,7 +1307,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Imperial Confort Oslo New Viscoelástico">Imperial Confort Oslo New Viscoelástico</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1309,8 +1315,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="90x190 - Grosor 24 cm"
+          data-title="90x190 - Grosor 24 cm"
           data-imagen="https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg"
           data-enlace="https://amzn.to/3TRyEgQ?tag=recomendadorn-21&th=1"
           data-precio="158,99 €"
@@ -1320,12 +1326,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg" alt="90x190 - Grosor 24 cm" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">90x190 - Grosor 24 cm</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1535,7 +1541,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/21h241WAwJL._SL500_.jpg" alt="105x200 - Grosor 21 cm" loading="lazy" />
             
             <span class="var-label">105x200 - Grosor 21 cm</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3TRyEgQ?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 49 variantes más en Amazon para Imperial Confort Oslo New Viscoelástico"
+            title="+49 variantes más en Amazon"
+          >
+            <span class="var-label">+49 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1549,7 +1571,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="334"
               alt="Imperial Confort Oslo New Viscoelástico"
-              
               loading="eager"
             />
           </a>
@@ -1679,7 +1700,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Todocama Pure Flow Max Viscoelástico">Todocama Pure Flow Max Viscoelástico</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1703,7 +1724,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">90x190 cm</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1892,7 +1913,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/313clh1+UqL._SL500_.jpg" alt="140x200 cm" loading="lazy" />
             
             <span class="var-label">140x200 cm</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="180x200 cm"
+            data-title="180x200 cm"
+            data-imagen="https://m.media-amazon.com/images/I/313clh1+UqL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F38JMC53?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="159,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/316yWtLbzuL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/316tbVdzxDL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/214ZYRydSCL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/31d+zUn7iaL._SL500_.jpg","width":500,"height":353},{"url":"https://m.media-amazon.com/images/I/41apybtbMgL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/31dK7g8f6FL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/41xFYYohx2L._SL500_.jpg","width":500,"height":333}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/313clh1+UqL._SL500_.jpg" alt="180x200 cm" loading="lazy" />
+            
+            <span class="var-label">180x200 cm</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/44bnh9G?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 11 variantes más en Amazon para Todocama Pure Flow Max Viscoelástico"
+            title="+11 variantes más en Amazon"
+          >
+            <span class="var-label">+11 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1906,7 +1964,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="333"
               alt="Todocama Pure Flow Max Viscoelástico"
-              
               loading="eager"
             />
           </a>
@@ -2046,7 +2103,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Simpur Dream Repair Viscoelástico">Simpur Dream Repair Viscoelástico</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2070,7 +2127,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">90x190 cm</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2259,7 +2316,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51WTGpRrUQL._SL500_.jpg" alt="120x190 cm" loading="lazy" />
             
             <span class="var-label">120x190 cm</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="120x200 cm"
+            data-title="120x200 cm"
+            data-imagen="https://m.media-amazon.com/images/I/51WTGpRrUQL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07D2C4DT5?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="249,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31Xiinsrn+L._SL500_.jpg","width":500,"height":268},{"url":"https://m.media-amazon.com/images/I/41BEBpyty9L._SL500_.jpg","width":500,"height":334},{"url":"https://m.media-amazon.com/images/I/41ezw+ASG3L._SL500_.jpg","width":500,"height":311},{"url":"https://m.media-amazon.com/images/I/311nxbmZBVL._SL500_.jpg","width":500,"height":343},{"url":"https://m.media-amazon.com/images/I/51S3KpEteTL._SL500_.jpg","width":500,"height":268},{"url":"https://m.media-amazon.com/images/I/41FNdCM+yhL._SL500_.jpg","width":500,"height":268},{"url":"https://m.media-amazon.com/images/I/51dKWEI571L._SL500_.jpg","width":500,"height":268},{"url":"https://m.media-amazon.com/images/I/41FNdCM+yhL._SL500_.jpg","width":500,"height":268}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51WTGpRrUQL._SL500_.jpg" alt="120x200 cm" loading="lazy" />
+            
+            <span class="var-label">120x200 cm</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4eyKdmL?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 3 variantes más en Amazon para Simpur Dream Repair Viscoelástico"
+            title="+3 variantes más en Amazon"
+          >
+            <span class="var-label">+3 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2273,7 +2367,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="305"
               alt="Simpur Dream Repair Viscoelástico"
-              
               loading="eager"
             />
           </a>
@@ -2421,7 +2514,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Simpur Visco Spring Magestic Muelles Ensacados + Viscoelástico">Simpur Visco Spring Magestic Muelles Ensacados + Viscoelástico</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2445,7 +2538,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">90x190 cm</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2634,7 +2727,31 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41hY9GJYI4L._SL500_.jpg" alt="150x190 cm" loading="lazy" />
             
             <span class="var-label">150x190 cm</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="160x190 cm"
+            data-title="160x190 cm"
+            data-imagen="https://m.media-amazon.com/images/I/31Rq86R8SNL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07RTG7294?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="323,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41cGARpdVuL._SL500_.jpg","width":500,"height":373},{"url":"https://m.media-amazon.com/images/I/41+Hu3KRzBL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/51Jz3bzZuFL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/518OBjN-ESL._SL500_.jpg","width":500,"height":268},{"url":"https://m.media-amazon.com/images/I/51ID+3mLKhL._SL500_.jpg","width":500,"height":268},{"url":"https://m.media-amazon.com/images/I/51ID+3mLKhL._SL500_.jpg","width":500,"height":268}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31Rq86R8SNL._SL500_.jpg" alt="160x190 cm" loading="lazy" />
+            
+            <span class="var-label">160x190 cm</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2648,7 +2765,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="375"
               alt="Simpur Visco Spring Magestic Muelles Ensacados + Viscoelástico"
-              
               loading="eager"
             />
           </a>
@@ -2776,7 +2892,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Dormio Zafiro Viscoelástico">Dormio Zafiro Viscoelástico</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2800,7 +2916,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">90x190x21 - 21 cm</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2989,7 +3105,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31HISKU4EpL._SL500_.jpg" alt="135x190x24 - 24 cm" loading="lazy" />
             
             <span class="var-label">135x190x24 - 24 cm</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="135x200x21 - 21 cm"
+            data-title="135x200x21 - 21 cm"
+            data-imagen="https://m.media-amazon.com/images/I/31HISKU4EpL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B016AFQGUQ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="154,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41inzjZCfWL._SL500_.jpg","width":500,"height":326},{"url":"https://m.media-amazon.com/images/I/31HN0PWlZnL._SL500_.jpg","width":500,"height":232},{"url":"https://m.media-amazon.com/images/I/416u96KiAbL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/2169wcxRFOL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/41Bh9UdslSL._SL500_.jpg","width":500,"height":333},{"url":"https://m.media-amazon.com/images/I/4168o-yQMHL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41+C3XvaEzL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/516oT-WHMOL._SL500_.jpg","width":500,"height":336},{"url":"https://m.media-amazon.com/images/I/419xtfzevXL._SL500_.jpg","width":500,"height":322},{"url":"https://m.media-amazon.com/images/I/41Re2DU8iKL._SL500_.jpg","width":333,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31HISKU4EpL._SL500_.jpg" alt="135x200x21 - 21 cm" loading="lazy" />
+            
+            <span class="var-label">135x200x21 - 21 cm</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4lrM1A0?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 14 variantes más en Amazon para Dormio Zafiro Viscoelástico"
+            title="+14 variantes más en Amazon"
+          >
+            <span class="var-label">+14 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3003,7 +3156,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="312"
               alt="Dormio Zafiro Viscoelástico"
-              
               loading="eager"
             />
           </a>
@@ -3173,7 +3325,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="ZZ Don Descanso Mulhacén Viscoelástico">ZZ Don Descanso Mulhacén Viscoelástico</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3181,8 +3333,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Altura ± 26cm - 90x190 cm - Gris"
+          data-title="Altura ± 26cm - 90x190 cm - Gris"
           data-imagen="https://m.media-amazon.com/images/I/3189Nk0BdoL._SL500_.jpg"
           data-enlace="https://amzn.to/4l8fgYW?tag=recomendadorn-21&th=1"
           data-precio="147,40 €"
@@ -3192,12 +3344,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/3189Nk0BdoL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/3189Nk0BdoL._SL500_.jpg" alt="Altura ± 26cm - 90x190 cm - Gris" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Altura ± 26cm - 90x190 cm - Gris</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3407,7 +3559,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31I+2UE9SPL._SL500_.jpg" alt="Altura ± 15cm - 80x180 cm - Gris" loading="lazy" />
             
             <span class="var-label">Altura ± 15cm - 80x180 cm - Gris</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4l8fgYW?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 192 variantes más en Amazon para ZZ Don Descanso Mulhacén Viscoelástico"
+            title="+192 variantes más en Amazon"
+          >
+            <span class="var-label">+192 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3421,7 +3589,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="ZZ Don Descanso Mulhacén Viscoelástico"
-              
               loading="eager"
             />
           </a>
@@ -3571,7 +3738,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Cecotec Flow ViscoCare 1900 Viscoelástico">Cecotec Flow ViscoCare 1900 Viscoelástico</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3579,8 +3746,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="90 x 190 cm - Azul"
+          data-title="90 x 190 cm - Azul"
           data-imagen="https://m.media-amazon.com/images/I/41InZTIv-vL._SL500_.jpg"
           data-enlace="https://amzn.to/3Tgk16F?tag=recomendadorn-21&th=1"
           data-precio="89,90 €"
@@ -3590,12 +3757,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41InZTIv-vL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41InZTIv-vL._SL500_.jpg" alt="90 x 190 cm - Azul" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">90 x 190 cm - Azul</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3732,7 +3899,7 @@ document.addEventListener('keydown', function(e){
             data-title="160 x 190 cm - Granate"
             data-imagen="https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0B6P4CQ26?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="189,00 €"
+            data-precio="195,85 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg","width":500,"height":500}]'
@@ -3784,7 +3951,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg" alt="200 x 200 cm - Granate" loading="lazy" />
             
             <span class="var-label">200 x 200 cm - Granate</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="105 x 190 cm - Granate"
+            data-title="105 x 190 cm - Granate"
+            data-imagen="https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0B6PFLDST?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="104,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg" alt="105 x 190 cm - Granate" loading="lazy" />
+            
+            <span class="var-label">105 x 190 cm - Granate</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3Tgk16F?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 19 variantes más en Amazon para Cecotec Flow ViscoCare 1900 Viscoelástico"
+            title="+19 variantes más en Amazon"
+          >
+            <span class="var-label">+19 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3798,7 +4002,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Cecotec Flow ViscoCare 1900 Viscoelástico"
-              
               loading="eager"
             />
           </a>
@@ -3926,7 +4129,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Royal Sleep Ceramic Plus Viscoelástico + Carbono">Royal Sleep Ceramic Plus Viscoelástico + Carbono</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3934,8 +4137,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="90x190 - Colchón 25cm"
+          data-title="90x190 - Colchón 25cm"
           data-imagen="https://m.media-amazon.com/images/I/51xHQM5pq5L._SL500_.jpg"
           data-enlace="https://amzn.to/4lCLETB?tag=recomendadorn-21&th=1"
           data-precio="179,99 €"
@@ -3945,12 +4148,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/51xHQM5pq5L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/51xHQM5pq5L._SL500_.jpg" alt="90x190 - Colchón 25cm" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">90x190 - Colchón 25cm</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4160,7 +4363,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51xHQM5pq5L._SL500_.jpg" alt="105x190 - Colchón 25cm" loading="lazy" />
             
             <span class="var-label">105x190 - Colchón 25cm</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4lCLETB?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 28 variantes más en Amazon para Royal Sleep Ceramic Plus Viscoelástico + Carbono"
+            title="+28 variantes más en Amazon"
+          >
+            <span class="var-label">+28 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4174,7 +4393,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Royal Sleep Ceramic Plus Viscoelástico + Carbono"
-              
               loading="eager"
             />
           </a>
@@ -4334,7 +4552,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Pikolin Leah">Pikolin Leah</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4358,7 +4576,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">90x190 - Altura 24cm</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4526,7 +4744,65 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41D2T-pgNOL._SL500_.jpg" alt="140x200 - Altura 24cm" loading="lazy" />
             
             <span class="var-label">140x200 - Altura 24cm</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="135x200 - Altura 24cm"
+            data-title="135x200 - Altura 24cm"
+            data-imagen="https://m.media-amazon.com/images/I/41D2T-pgNOL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0944824P7?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="444,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31bzOq107VL._SL500_.jpg","width":500,"height":229},{"url":"https://m.media-amazon.com/images/I/51UQGf4-IzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41XxTML2HsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41H8Zyz3hNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/61gTV7Yf8BL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-ipe3rs1L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41D2T-pgNOL._SL500_.jpg" alt="135x200 - Altura 24cm" loading="lazy" />
+            
+            <span class="var-label">135x200 - Altura 24cm</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="150x190 - Altura 21cm"
+            data-title="150x190 - Altura 21cm"
+            data-imagen="https://m.media-amazon.com/images/I/41uJ5kOOD4L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BRD8WPJX?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="359,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51XG9m0esOL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/61TodxKCcwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51fPcrfdIoL._SL500_.jpg","width":447,"height":500},{"url":"https://m.media-amazon.com/images/I/41H8Zyz3hNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51S+0Qy7G9L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/61AkayItfiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51bUYNo6tDL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41uJ5kOOD4L._SL500_.jpg" alt="150x190 - Altura 21cm" loading="lazy" />
+            
+            <span class="var-label">150x190 - Altura 21cm</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3IajSPK?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 31 variantes más en Amazon para Pikolin Leah"
+            title="+31 variantes más en Amazon"
+          >
+            <span class="var-label">+31 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4540,7 +4816,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Pikolin Leah"
-              
               loading="eager"
             />
           </a>

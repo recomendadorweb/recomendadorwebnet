@@ -1724,11 +1724,24 @@ En definitiva, son prendas que priorizan la <strong>comodidad sin perder estilo<
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1752,16 +1765,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1786,15 +1796,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1803,14 +1814,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1824,7 +1833,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1832,7 +1840,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1844,7 +1851,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1854,7 +1860,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1862,7 +1868,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1874,7 +1880,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="OBEEII Vestidos fiesta tallas grandes gasa bordado Rosa Lotus 3XL">OBEEII Vestidos fiesta tallas grandes gasa bordado Rosa Lotus 3XL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1882,8 +1888,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="3XL - Rosa Lotus"
+          data-title="3XL - Rosa Lotus"
           data-imagen="https://m.media-amazon.com/images/I/41qg1IlpFCL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0CT4ZCT7M?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="43,89 €"
@@ -1893,12 +1899,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41qg1IlpFCL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41qg1IlpFCL._SL500_.jpg" alt="3XL - Rosa Lotus" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">3XL - Rosa Lotus</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2108,7 +2114,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41tPSzAqZ-L._SL500_.jpg" alt="3XL - Azul Claro" loading="lazy" />
             
             <span class="var-label">3XL - Azul Claro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0CT4ZCT7M?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 9 variantes más en Amazon para OBEEII Vestidos fiesta tallas grandes gasa bordado Rosa Lotus 3XL"
+            title="+9 variantes más en Amazon"
+          >
+            <span class="var-label">+9 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2122,7 +2144,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="OBEEII Vestidos fiesta tallas grandes gasa bordado Rosa Lotus 3XL"
-              
               loading="eager"
             />
           </a>
@@ -2250,7 +2271,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="72styles Vestidos fiesta tallas grandes Infinito Convertible (Tallas 0–24)">72styles Vestidos fiesta tallas grandes Infinito Convertible (Tallas 0–24)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2274,7 +2295,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Talla única - Mauve</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2484,7 +2505,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/316IODD9UAL._SL500_.jpg" alt="Talla única Grande - Rosa Pálido" loading="lazy" />
             
             <span class="var-label">Talla única Grande - Rosa Pálido</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B08P17NH13?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 49 variantes más en Amazon para 72styles Vestidos fiesta tallas grandes Infinito Convertible (Tallas 0–24)"
+            title="+49 variantes más en Amazon"
+          >
+            <span class="var-label">+49 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2498,7 +2535,6 @@ document.addEventListener('keydown', function(e){
               width="333"
               height="500"
               alt="72styles Vestidos fiesta tallas grandes Infinito Convertible (Tallas 0–24)"
-              
               loading="eager"
             />
           </a>
@@ -2620,7 +2656,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Generic Vestido fiesta tallas grandes Madrina — Vestido Fiesta Elegante">Generic Vestido fiesta tallas grandes Madrina — Vestido Fiesta Elegante</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2644,7 +2680,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">5XL - Rosa</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2833,7 +2869,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41cWSpU-eZL._SL500_.jpg" alt="M - Grey" loading="lazy" />
             
             <span class="var-label">M - Grey</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="L - Grey"
+            data-title="L - Grey"
+            data-imagen="https://m.media-amazon.com/images/I/41cWSpU-eZL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D3LVBH2F?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,42 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51ZkK-fBJzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51ysE4C5E6L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41jAl9Z52jL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41TuQwGUdoL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51m+QM3SibL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41cWSpU-eZL._SL500_.jpg" alt="L - Grey" loading="lazy" />
+            
+            <span class="var-label">L - Grey</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0D3LSN9FW?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 228 variantes más en Amazon para Generic Vestido fiesta tallas grandes Madrina — Vestido Fiesta Elegante"
+            title="+228 variantes más en Amazon"
+          >
+            <span class="var-label">+228 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2847,7 +2920,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Generic Vestido fiesta tallas grandes Madrina — Vestido Fiesta Elegante"
-              
               loading="eager"
             />
           </a>
@@ -2974,7 +3046,7 @@ Para el cuidado, opté por tratarlo con delicadeza y evitar lavados agresivos, y
     <article class="ficha-teclado">
       <h3 id="Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)">Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2998,7 +3070,7 @@ Para el cuidado, opté por tratarlo con delicadeza y evitar lavados agresivos, y
           <span class="var-label">Negro - 54 Grande</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3040,7 +3112,31 @@ Para el cuidado, opté por tratarlo con delicadeza y evitar lavados agresivos, y
               <img src="https://m.media-amazon.com/images/I/31UASPBSs-L._SL500_.jpg" alt="Gris - 48 Grande" loading="lazy" />
             
             <span class="var-label">Gris - 48 Grande</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Rojo Oscuro - 48 Grande"
+            data-title="Rojo Oscuro - 48 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/317Bd9dxljL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D73BCKK4?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="67,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41GE0j8us1L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41+dzn7alhL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41188LtxkLL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41QbC6PvUCL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/411ZPg4fTIL._SL500_.jpg","width":333,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/317Bd9dxljL._SL500_.jpg" alt="Rojo Oscuro - 48 Grande" loading="lazy" />
+            
+            <span class="var-label">Rojo Oscuro - 48 Grande</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3054,7 +3150,6 @@ Para el cuidado, opté por tratarlo con delicadeza y evitar lavados agresivos, y
               width="313"
               height="500"
               alt="Hanna Nikole Vestido cóctel gasa 2 piezas (tallas US)"
-              
               loading="eager"
             />
           </a>
@@ -3181,7 +3276,7 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
     <article class="ficha-teclado">
       <h3 id="Hanna Nikole Conjunto gasa 2 piezas - Talla grande">Hanna Nikole Conjunto gasa 2 piezas - Talla grande</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3205,7 +3300,7 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
           <span class="var-label">Modelo principal</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3415,7 +3510,23 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
               <img src="https://m.media-amazon.com/images/I/317bFN3vMVL._SL500_.jpg" alt="Azul Marino - 50 Grande" loading="lazy" />
             
             <span class="var-label">Azul Marino - 50 Grande</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DSJKN4CQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 4 variantes más en Amazon para Hanna Nikole Conjunto gasa 2 piezas - Talla grande"
+            title="+4 variantes más en Amazon"
+          >
+            <span class="var-label">+4 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3429,7 +3540,6 @@ En mi caso la tela se mostró cómoda y fácil de llevar durante varias horas, y
               width="387"
               height="500"
               alt="Hanna Nikole Conjunto gasa 2 piezas - Talla grande"
-              
               loading="eager"
             />
           </a>
@@ -3559,7 +3669,7 @@ Para conservarlo, lo lavo con cuidado y evito la secadora para mantener el dobla
     <article class="ficha-teclado">
       <h3 id="Hanna Nikole vestidos fiesta tallas grandes De Gasa Plisado Azul Marino 22W">Hanna Nikole vestidos fiesta tallas grandes De Gasa Plisado Azul Marino 22W</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3583,7 +3693,7 @@ Para conservarlo, lo lavo con cuidado y evito la secadora para mantener el dobla
           <span class="var-label">Azul Marino - 52 Grande</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3772,7 +3882,44 @@ Para conservarlo, lo lavo con cuidado y evito la secadora para mantener el dobla
               <img src="https://m.media-amazon.com/images/I/31MICbtHXBL._SL500_.jpg" alt="Rosa Claro - 46 Grande" loading="lazy" />
             
             <span class="var-label">Rosa Claro - 46 Grande</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Azul Grisáceo - 50 Grande"
+            data-title="Azul Grisáceo - 50 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/31VRlFHfhgL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DSJF8PVD?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="34,27 €"
+            data-precio-original="46,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/319dl24eGXL._SL500_.jpg","width":344,"height":500},{"url":"https://m.media-amazon.com/images/I/41iBFM3-YKL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41V6RPoL6AL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/314Wy9elc1L._SL500_.jpg","width":500,"height":267}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31VRlFHfhgL._SL500_.jpg" alt="Azul Grisáceo - 50 Grande" loading="lazy" />
+            
+            <span class="var-label">Azul Grisáceo - 50 Grande</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DSJDXMBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 4 variantes más en Amazon para Hanna Nikole vestidos fiesta tallas grandes De Gasa Plisado Azul Marino 22W"
+            title="+4 variantes más en Amazon"
+          >
+            <span class="var-label">+4 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3786,7 +3933,6 @@ Para conservarlo, lo lavo con cuidado y evito la secadora para mantener el dobla
               width="436"
               height="500"
               alt="Hanna Nikole vestidos fiesta tallas grandes De Gasa Plisado Azul Marino 22W"
-              
               loading="eager"
             />
           </a>
@@ -3895,7 +4041,7 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
     <article class="ficha-teclado">
       <h3 id="NUSGEAR Vestido gasa corto mujer, cuello en V — talla grande">NUSGEAR Vestido gasa corto mujer, cuello en V — talla grande</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3919,7 +4065,7 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
           <span class="var-label">Armada - 5XL</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4108,7 +4254,44 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
               <img src="https://m.media-amazon.com/images/I/31IFY-e9x5L._SL500_.jpg" alt="Wine - 4XL" loading="lazy" />
             
             <span class="var-label">Wine - 4XL</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Verde - 4XL"
+            data-title="Verde - 4XL"
+            data-imagen="https://m.media-amazon.com/images/I/31NNvwKdLIL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F1JMRYGV?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="16,98 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41UhZAfnjvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51+64MsBOGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31xJVf-w11L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nxm2PjRUL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31NNvwKdLIL._SL500_.jpg" alt="Verde - 4XL" loading="lazy" />
+            
+            <span class="var-label">Verde - 4XL</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0F1JMHMKN?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 29 variantes más en Amazon para NUSGEAR Vestido gasa corto mujer, cuello en V — talla grande"
+            title="+29 variantes más en Amazon"
+          >
+            <span class="var-label">+29 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4122,7 +4305,6 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
               width="500"
               height="500"
               alt="NUSGEAR Vestido gasa corto mujer, cuello en V — talla grande"
-              
               loading="eager"
             />
           </a>
@@ -4230,7 +4412,7 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
     <article class="ficha-teclado">
       <h3 id="ADMAY Vestido largo encaje hombros descubiertos verde XXL">ADMAY Vestido largo encaje hombros descubiertos verde XXL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4238,8 +4420,8 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="XXL - Verde"
+          data-title="XXL - Verde"
           data-imagen="https://m.media-amazon.com/images/I/41Z78PMladL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0BTBKZ94C?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="12,56 €"
@@ -4249,12 +4431,12 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41Z78PMladL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41Z78PMladL._SL500_.jpg" alt="XXL - Verde" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">XXL - Verde</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4464,7 +4646,23 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
               <img src="https://m.media-amazon.com/images/I/41zrlTEPxWL._SL500_.jpg" alt="XXL - Vino" loading="lazy" />
             
             <span class="var-label">XXL - Vino</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0BTBKZ94C?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 11 variantes más en Amazon para ADMAY Vestido largo encaje hombros descubiertos verde XXL"
+            title="+11 variantes más en Amazon"
+          >
+            <span class="var-label">+11 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4478,7 +4676,6 @@ Además es práctico en el mantenimiento porque se puede lavar a mano o a máqui
               width="500"
               height="500"
               alt="ADMAY Vestido largo encaje hombros descubiertos verde XXL"
-              
               loading="eager"
             />
           </a>
@@ -4607,7 +4804,6 @@ Al usarlo me sentí cómoda porque al ser sin mangas no resta movilidad, y lo co
               width="500"
               height="500"
               alt="Vectry Vestido de Fiesta de tallas grandes Encaje Midi Azul - 5XL"
-              
               loading="eager"
             />
           </a>
@@ -4733,7 +4929,7 @@ Al usarlo me sentí cómoda porque al ser sin mangas no resta movilidad, y lo co
     <article class="ficha-teclado">
       <h3 id="Odizli vestidos fiesta tallas grandes midi encaje manga 3/4 azul oscuro XXL">Odizli vestidos fiesta tallas grandes midi encaje manga 3/4 azul oscuro XXL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4741,8 +4937,8 @@ Al usarlo me sentí cómoda porque al ser sin mangas no resta movilidad, y lo co
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="XXL - Azul Oscuro"
+          data-title="XXL - Azul Oscuro"
           data-imagen="https://m.media-amazon.com/images/I/31vMUYMw2HL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0B3RDNVTG?tag=recomendadorn-21&th=1"
           data-precio="59,71 €"
@@ -4752,12 +4948,12 @@ Al usarlo me sentí cómoda porque al ser sin mangas no resta movilidad, y lo co
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31vMUYMw2HL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31vMUYMw2HL._SL500_.jpg" alt="XXL - Azul Oscuro" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">XXL - Azul Oscuro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4967,7 +5163,23 @@ Al usarlo me sentí cómoda porque al ser sin mangas no resta movilidad, y lo co
               <img src="https://m.media-amazon.com/images/I/41gTYcc9M+L._SL500_.jpg" alt="XL - Negro" loading="lazy" />
             
             <span class="var-label">XL - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0B3RDNVTG?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 8 variantes más en Amazon para Odizli vestidos fiesta tallas grandes midi encaje manga 3/4 azul oscuro XXL"
+            title="+8 variantes más en Amazon"
+          >
+            <span class="var-label">+8 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4981,7 +5193,6 @@ Al usarlo me sentí cómoda porque al ser sin mangas no resta movilidad, y lo co
               width="500"
               height="500"
               alt="Odizli vestidos fiesta tallas grandes midi encaje manga 3/4 azul oscuro XXL"
-              
               loading="eager"
             />
           </a>
@@ -5090,7 +5301,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
     <article class="ficha-teclado">
       <h3 id="Hanna Nikole Traje de noche gasa 2 piezas tallas grandes">Hanna Nikole Traje de noche gasa 2 piezas tallas grandes</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -5114,7 +5325,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
           <span class="var-label">azul cobalto - 54 Grande</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -5126,7 +5337,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-imagen="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LT3FBD?tag=recomendadorn-21&th=1&psc=1"
             data-precio="57,33 €"
-            data-precio-original="No especificado"
+            data-precio-original="67,49 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31Sq21KtbAL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31ItmIsJEoL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31EZxZ3UvnL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/411mFYt13VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31kq-QnPvgL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/31I3VNLKBxL._SL500_.jpg","width":371,"height":500}]'
             
@@ -5168,7 +5379,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-imagen="https://m.media-amazon.com/images/I/31mmjA9cvhL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LWDDFH?tag=recomendadorn-21&th=1&psc=1"
             data-precio="57,33 €"
-            data-precio-original="No especificado"
+            data-precio-original="67,49 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qDG9MXNKL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31DJsJ4g54L._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31i9gqIeciL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/413qzj2OHCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31SGYLwcA5L._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31YrRsNl+1L._SL500_.jpg","width":370,"height":500}]'
             
@@ -5189,7 +5400,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-imagen="https://m.media-amazon.com/images/I/31mmjA9cvhL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LZKV4B?tag=recomendadorn-21&th=1&psc=1"
             data-precio="57,33 €"
-            data-precio-original="No especificado"
+            data-precio-original="67,49 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qDG9MXNKL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31DJsJ4g54L._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31i9gqIeciL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/413qzj2OHCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31SGYLwcA5L._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31YrRsNl+1L._SL500_.jpg","width":370,"height":500}]'
             
@@ -5198,27 +5409,6 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
               <img src="https://m.media-amazon.com/images/I/31mmjA9cvhL._SL500_.jpg" alt="Negro - 48 Grande" loading="lazy" />
             
             <span class="var-label">Negro - 48 Grande</span>
-          </button><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
-            title="Azul Oscuro - 50 Grande"
-            data-title="Azul Oscuro - 50 Grande"
-            data-imagen="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B0D7LN1WRT?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="57,15 €"
-            data-precio-original="67,31 €"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31Sq21KtbAL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31ItmIsJEoL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/31EZxZ3UvnL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/411mFYt13VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31kq-QnPvgL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/31I3VNLKBxL._SL500_.jpg","width":371,"height":500}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg" alt="Azul Oscuro - 50 Grande" loading="lazy" />
-            
-            <span class="var-label">Azul Oscuro - 50 Grande</span>
           </button><button
             type="button"
             class="var-btn"
@@ -5252,7 +5442,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
             data-imagen="https://m.media-amazon.com/images/I/3160A8tW+IL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7LVVGLJ?tag=recomendadorn-21&th=1&psc=1"
             data-precio="57,33 €"
-            data-precio-original="No especificado"
+            data-precio-original="67,49 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31m7aoj+bZL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31-uegb9jDL._SL500_.jpg","width":361,"height":500},{"url":"https://m.media-amazon.com/images/I/316CoPBPJCL._SL500_.jpg","width":376,"height":500},{"url":"https://m.media-amazon.com/images/I/41Nh9ULn6zL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31pWrJwdTVL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/31Fm4m1ugyL._SL500_.jpg","width":370,"height":500}]'
             
@@ -5303,7 +5493,65 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
               <img src="https://m.media-amazon.com/images/I/41zddOC1-3L._SL500_.jpg" alt="borgoña - 46 Grande" loading="lazy" />
             
             <span class="var-label">borgoña - 46 Grande</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="morado - 46 Grande"
+            data-title="morado - 46 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/41XgMapWRfL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F8TXTJSS?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="67,49 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41MODzfg6GL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/41LZSSm4UIL._SL500_.jpg","width":360,"height":500},{"url":"https://m.media-amazon.com/images/I/416pRPUxv+L._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51b+Ghx0dIL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41EWa7Ci2DL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41XgMapWRfL._SL500_.jpg" alt="morado - 46 Grande" loading="lazy" />
+            
+            <span class="var-label">morado - 46 Grande</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="azul/gris - 52 Grande"
+            data-title="azul/gris - 52 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/41xSMCc2gOL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F8V2P7HC?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="67,49 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/417HtKVPpFL._SL500_.jpg","width":371,"height":500},{"url":"https://m.media-amazon.com/images/I/41v15gF0zXL._SL500_.jpg","width":360,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z+R-bmj-L._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51IGkvAsKOL._SL500_.jpg","width":387,"height":500},{"url":"https://m.media-amazon.com/images/I/41IbesSTNQL._SL500_.jpg","width":370,"height":500},{"url":"https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg","width":385,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xSMCc2gOL._SL500_.jpg" alt="azul/gris - 52 Grande" loading="lazy" />
+            
+            <span class="var-label">azul/gris - 52 Grande</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0D7MCFNYG?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 3 variantes más en Amazon para Hanna Nikole Traje de noche gasa 2 piezas tallas grandes"
+            title="+3 variantes más en Amazon"
+          >
+            <span class="var-label">+3 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -5317,7 +5565,6 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
               width="313"
               height="500"
               alt="Hanna Nikole Traje de noche gasa 2 piezas tallas grandes"
-              
               loading="eager"
             />
           </a>
@@ -5459,7 +5706,7 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
     <article class="ficha-teclado">
       <h3 id="Ever-Pretty Vestido Novia A-línea Escote V Blanco 48">Ever-Pretty Vestido Novia A-línea Escote V Blanco 48</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -5467,8 +5714,8 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="48 - Blanco"
+          data-title="48 - Blanco"
           data-imagen="https://m.media-amazon.com/images/I/31SyohcShUL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B01J2VTZWQ?tag=recomendadorn-21&th=1"
           data-precio="59,99 €"
@@ -5478,12 +5725,12 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31SyohcShUL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31SyohcShUL._SL500_.jpg" alt="48 - Blanco" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">48 - Blanco</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -5693,7 +5940,23 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
               <img src="https://m.media-amazon.com/images/I/315vgF-ht+L._SL500_.jpg" alt="38 - Borgoña" loading="lazy" />
             
             <span class="var-label">38 - Borgoña</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B01J2VTZWQ?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 355 variantes más en Amazon para Ever-Pretty Vestido Novia A-línea Escote V Blanco 48"
+            title="+355 variantes más en Amazon"
+          >
+            <span class="var-label">+355 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -5707,7 +5970,6 @@ La longitud hasta la rodilla lo hace versátil para bodas o cócteles y el tejid
               width="375"
               height="500"
               alt="Ever-Pretty Vestido Novia A-línea Escote V Blanco 48"
-              
               loading="eager"
             />
           </a>
@@ -5827,7 +6089,7 @@ En general es una opción bonita y adecuada para eventos formales si se elige la
     <article class="ficha-teclado">
       <h3 id="DianShaoA vestidos fiesta tallas grandes Ceremonia Largo Encaje Negro 5XL">DianShaoA vestidos fiesta tallas grandes Ceremonia Largo Encaje Negro 5XL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -5835,8 +6097,8 @@ En general es una opción bonita y adecuada para eventos formales si se elige la
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="5XL - Negro"
+          data-title="5XL - Negro"
           data-imagen="https://m.media-amazon.com/images/I/4184WLkE-yL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B07PRGCH1L?tag=recomendadorn-21&th=1"
           data-precio="26,97 €"
@@ -5846,12 +6108,12 @@ En general es una opción bonita y adecuada para eventos formales si se elige la
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/4184WLkE-yL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/4184WLkE-yL._SL500_.jpg" alt="5XL - Negro" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">5XL - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6061,7 +6323,23 @@ En general es una opción bonita y adecuada para eventos formales si se elige la
               <img src="https://m.media-amazon.com/images/I/41edT5O2F+L._SL500_.jpg" alt="4XL - Blanco" loading="lazy" />
             
             <span class="var-label">4XL - Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B07PRGCH1L?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 19 variantes más en Amazon para DianShaoA vestidos fiesta tallas grandes Ceremonia Largo Encaje Negro 5XL"
+            title="+19 variantes más en Amazon"
+          >
+            <span class="var-label">+19 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -6075,7 +6353,6 @@ En general es una opción bonita y adecuada para eventos formales si se elige la
               width="400"
               height="500"
               alt="DianShaoA vestidos fiesta tallas grandes Ceremonia Largo Encaje Negro 5XL"
-              
               loading="eager"
             />
           </a>
@@ -6195,7 +6472,7 @@ Para conservarlo, prefiero lavado a mano o ciclo delicado y secado natural; en m
     <article class="ficha-teclado">
       <h3 id="Moon Wood vestidos fiesta tallas grandes Largo — Negro 5XL">Moon Wood vestidos fiesta tallas grandes Largo — Negro 5XL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -6219,7 +6496,7 @@ Para conservarlo, prefiero lavado a mano o ciclo delicado y secado natural; en m
           <span class="var-label">5XL - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6408,7 +6685,44 @@ Para conservarlo, prefiero lavado a mano o ciclo delicado y secado natural; en m
               <img src="https://m.media-amazon.com/images/I/31jYN0gyzGL._SL500_.jpg" alt="4XL - Violeta" loading="lazy" />
             
             <span class="var-label">4XL - Violeta</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="XXL - Azul Polvo"
+            data-title="XXL - Azul Polvo"
+            data-imagen="https://m.media-amazon.com/images/I/31SxSc8DhfL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DP49M6S8?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="27,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31hzOvKD6jL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/31-lsfe5OEL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51V2Umf2Q8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41fJz7Hi1cL._SL500_.jpg","width":375,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31SxSc8DhfL._SL500_.jpg" alt="XXL - Azul Polvo" loading="lazy" />
+            
+            <span class="var-label">XXL - Azul Polvo</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DP487SDG?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 52 variantes más en Amazon para Moon Wood vestidos fiesta tallas grandes Largo — Negro 5XL"
+            title="+52 variantes más en Amazon"
+          >
+            <span class="var-label">+52 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -6422,7 +6736,6 @@ Para conservarlo, prefiero lavado a mano o ciclo delicado y secado natural; en m
               width="375"
               height="500"
               alt="Moon Wood vestidos fiesta tallas grandes Largo — Negro 5XL"
-              
               loading="eager"
             />
           </a>
@@ -6534,7 +6847,7 @@ Valoro especialmente la variedad de tallas disponibles y su versatilidad, por es
     <article class="ficha-teclado">
       <h3 id="Trendyol Vestido Midi A-line Fucsia para Mujer Talla 50+">Trendyol Vestido Midi A-line Fucsia para Mujer Talla 50+</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -6558,7 +6871,7 @@ Valoro especialmente la variedad de tallas disponibles y su versatilidad, por es
           <span class="var-label">50 Grande - Fuchsia</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6579,7 +6892,10 @@ Valoro especialmente la variedad de tallas disponibles y su versatilidad, por es
               <img src="https://m.media-amazon.com/images/I/31ZQ7fYFW1L._SL500_.jpg" alt="42 Grande - Fuchsia" loading="lazy" />
             
             <span class="var-label">42 Grande - Fuchsia</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -6593,7 +6909,6 @@ Valoro especialmente la variedad de tallas disponibles y su versatilidad, por es
               width="333"
               height="500"
               alt="Trendyol Vestido Midi A-line Fucsia para Mujer Talla 50+"
-              
               loading="eager"
             />
           </a>

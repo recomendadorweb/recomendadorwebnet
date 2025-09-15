@@ -2078,11 +2078,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -2106,16 +2119,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -2140,15 +2150,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -2157,14 +2168,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -2178,7 +2187,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -2186,7 +2194,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -2198,7 +2205,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -2208,7 +2214,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -2216,7 +2222,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -2228,7 +2234,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HOMCOM Moto Eléctrica Vespa">HOMCOM Moto Eléctrica Vespa</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2252,7 +2258,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Blanco</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2284,7 +2290,7 @@ document.addEventListener('keydown', function(e){
             data-title="Rosa"
             data-imagen="https://m.media-amazon.com/images/I/419BPHyaNdL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0DSGSL6S3?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="67,14 €"
+            data-precio="81,99 €"
             data-precio-original="81,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51uiPPwWOJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rnAawEQ0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Jc1b3SlyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Nm0d+I7BL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ATNhuyVWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41jRPYhkIAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51aKaJ0IX5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vDWjWNDWL._SL500_.jpg","width":500,"height":500}]'
@@ -2315,7 +2321,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41Pp+i1f0DL._SL500_.jpg" alt="Rojo" loading="lazy" />
             
             <span class="var-label">Rojo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2329,7 +2338,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HOMCOM Moto Eléctrica Vespa"
-              
               loading="eager"
             />
           </a>
@@ -2464,7 +2472,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HOMCOM Moto Eléctrica para Niños">HOMCOM Moto Eléctrica para Niños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2488,7 +2496,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2530,7 +2538,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/414CEcYcsEL._SL500_.jpg" alt="Azul" loading="lazy" />
             
             <span class="var-label">Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2544,7 +2555,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HOMCOM Moto Eléctrica para Niños"
-              
               loading="eager"
             />
           </a>
@@ -2691,7 +2701,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="TURBO CHALLENGE Baby Driver Vespa GTS"
-              
               loading="eager"
             />
           </a>
@@ -2824,7 +2833,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HOMCOM Moto Eléctrica BMW HP4">HOMCOM Moto Eléctrica BMW HP4</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2848,7 +2857,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Azul</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2869,7 +2878,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41r+0C8n8uL._SL500_.jpg" alt="Rojo" loading="lazy" />
             
             <span class="var-label">Rojo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2883,7 +2895,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HOMCOM Moto Eléctrica BMW HP4"
-              
               loading="eager"
             />
           </a>
@@ -3018,7 +3029,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="AIYAPLAY Moto Eléctrica para Niños">AIYAPLAY Moto Eléctrica para Niños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3042,7 +3053,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro Y Verde</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3063,7 +3074,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41AcoPrZWtL._SL500_.jpg" alt="Negro Y Rojo" loading="lazy" />
             
             <span class="var-label">Negro Y Rojo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3077,7 +3091,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="AIYAPLAY Moto Eléctrica para Niños"
-              
               loading="eager"
             />
           </a>
@@ -3261,11 +3274,24 @@ document.addEventListener('keydown', function(e){
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -3289,16 +3315,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -3323,15 +3346,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -3340,14 +3364,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -3361,7 +3383,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -3369,7 +3390,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -3381,7 +3401,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -3391,7 +3410,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -3399,7 +3418,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -3423,7 +3442,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Motorbike Cross 400F FEBER"
-              
               loading="eager"
             />
           </a>
@@ -3496,7 +3514,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HOMCOM Moto Eléctrica con Licencia Honda">HOMCOM Moto Eléctrica con Licencia Honda</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3520,7 +3538,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3541,7 +3559,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41Rc-sS0A-L._SL500_.jpg" alt="Blanco" loading="lazy" />
             
             <span class="var-label">Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3555,7 +3576,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HOMCOM Moto Eléctrica con Licencia Honda"
-              
               loading="eager"
             />
           </a>
@@ -3702,7 +3722,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="AIYAPLAY Moto Eléctrica para Niños"
-              
               loading="eager"
             />
           </a>
@@ -3835,7 +3854,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HOMCOM Moto Eléctrica Infantil con 3 Ruedas">HOMCOM Moto Eléctrica Infantil con 3 Ruedas</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3859,7 +3878,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3870,7 +3889,7 @@ document.addEventListener('keydown', function(e){
             data-title="Rojo"
             data-imagen="https://m.media-amazon.com/images/I/41P275Dxg1L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B09C1PCKZR?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="63,74 €"
+            data-precio="74,99 €"
             data-precio-original="76,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51c37Keh+CL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51dD-HDyCmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51e-SBBCfeL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51zwifb9t+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51AhBVim-TL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51goMjFbmKL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51PLtsX92KL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51UZ4hIR1sL._SL500_.jpg","width":500,"height":500}]'
@@ -3901,7 +3920,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51iEnbcIfHL._SL500_.jpg" alt="Azul" loading="lazy" />
             
             <span class="var-label">Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3915,7 +3937,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HOMCOM Moto Eléctrica Infantil con 3 Ruedas"
-              
               loading="eager"
             />
           </a>
@@ -4101,11 +4122,24 @@ document.addEventListener('keydown', function(e){
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -4129,16 +4163,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -4163,15 +4194,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -4180,14 +4212,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -4201,7 +4231,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -4209,7 +4238,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -4221,7 +4249,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -4231,7 +4258,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -4239,7 +4266,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -4263,7 +4290,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="ATAA Aprilia Dorsoduro 12v Moto eléctrica Infantil"
-              
               loading="eager"
             />
           </a>
@@ -4398,7 +4424,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Moto Eléctrica Niños Repsol">Moto Eléctrica Niños Repsol</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4422,7 +4448,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">moto de carreras</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4454,7 +4480,7 @@ document.addEventListener('keydown', function(e){
             data-title="Honda Competition"
             data-imagen="https://m.media-amazon.com/images/I/41HXPbRW94L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0FDG8NT91?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="259,99 €"
+            data-precio="259,95 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41tP4uHzSQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41w2Pa20aTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41IJFgpJEqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vflKGb5mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41XxVrGCEDL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41S59V4DeyL._SL500_.jpg","width":500,"height":500}]'
@@ -4464,7 +4490,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41HXPbRW94L._SL500_.jpg" alt="Honda Competition" loading="lazy" />
             
             <span class="var-label">Honda Competition</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4478,7 +4507,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Moto Eléctrica Niños Repsol"
-              
               loading="eager"
             />
           </a>
@@ -4583,7 +4611,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Moto Eléctrica Niños Injusa Verde"
-              
               loading="eager"
             />
           </a>
@@ -4678,7 +4705,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Moto Eléctrica Niños Injusa Thunder Max"
-              
               loading="eager"
             />
           </a>
@@ -4821,7 +4847,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Moto eléctrica Infantil Honda CBR">Moto eléctrica Infantil Honda CBR</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4845,7 +4871,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4866,7 +4892,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51szzlSl9GL._SL500_.jpg" alt="Blanco" loading="lazy" />
             
             <span class="var-label">Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4880,7 +4909,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Moto eléctrica Infantil Honda CBR"
-              
               loading="eager"
             />
           </a>
@@ -5074,11 +5102,24 @@ document.addEventListener('keydown', function(e){
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -5102,16 +5143,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -5136,15 +5174,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -5153,14 +5192,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -5174,7 +5211,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -5182,7 +5218,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -5194,7 +5229,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -5204,7 +5238,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -5212,7 +5246,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -5224,7 +5258,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="RCB R9X Pro Moto Eléctrica">RCB R9X Pro Moto Eléctrica</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -5248,7 +5282,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Bleu</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -5290,7 +5324,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/418CJoJ9JXL._SL500_.jpg" alt="Rouge" loading="lazy" />
             
             <span class="var-label">Rouge</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -5304,7 +5341,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="RCB R9X Pro Moto Eléctrica"
-              
               loading="eager"
             />
           </a>
@@ -5419,7 +5455,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12''">EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12''</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -5443,7 +5479,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Azul</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -5527,7 +5563,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41dCBpAa+UL._SL500_.jpg" alt="Azul" loading="lazy" />
             
             <span class="var-label">Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -5541,7 +5580,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="EVERCROSS EV13M Moto Eléctrica Infantil con Neumáticos de 12''"
-              
               loading="eager"
             />
           </a>
@@ -5678,7 +5716,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="RCB Moto Eléctrica Niños"
-              
               loading="eager"
             />
           </a>
@@ -5793,7 +5830,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="RCB 12V Moto Eléctrica Niños">RCB 12V Moto Eléctrica Niños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -5817,7 +5854,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -5838,7 +5875,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41EDDM3BbuL._SL500_.jpg" alt="Amarillo" loading="lazy" />
             
             <span class="var-label">Amarillo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -5852,7 +5892,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="RCB 12V Moto Eléctrica Niños"
-              
               loading="eager"
             />
           </a>
@@ -5967,7 +6006,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="RELAX4LIFE 12V Aprilia Moto Eléctrica Niños">RELAX4LIFE 12V Aprilia Moto Eléctrica Niños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -5991,7 +6030,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Amarillo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6012,7 +6051,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51HFi8+k9mL._SL500_.jpg" alt="Rojo" loading="lazy" />
             
             <span class="var-label">Rojo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -6026,7 +6068,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="RELAX4LIFE 12V Aprilia Moto Eléctrica Niños"
-              
               loading="eager"
             />
           </a>
@@ -6200,11 +6241,24 @@ document.addEventListener('keydown', function(e){
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -6228,16 +6282,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -6262,15 +6313,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -6279,14 +6331,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -6300,7 +6350,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -6308,7 +6357,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -6320,7 +6368,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -6330,7 +6377,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -6338,7 +6385,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -6350,7 +6397,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="RCB TECH R9X Moto Eléctrica Infantil">RCB TECH R9X Moto Eléctrica Infantil</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -6374,7 +6421,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro-azul</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6416,7 +6463,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41E5J7JHH8L._SL500_.jpg" alt="Rojo" loading="lazy" />
             
             <span class="var-label">Rojo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -6430,7 +6480,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="RCB TECH R9X Moto Eléctrica Infantil"
-              
               loading="eager"
             />
           </a>
@@ -6543,7 +6592,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="RCB R9X Moto Eléctrica Infantil">RCB R9X Moto Eléctrica Infantil</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -6567,7 +6616,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Noir Rouge</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6609,7 +6658,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41fh9nH0O4L._SL500_.jpg" alt="Noir Bleu" loading="lazy" />
             
             <span class="var-label">Noir Bleu</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -6623,7 +6675,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="RCB R9X Moto Eléctrica Infantil"
-              
               loading="eager"
             />
           </a>
@@ -6738,7 +6789,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="EVERCROSS EV12M Motocicleta Eléctrica Niños">EVERCROSS EV12M Motocicleta Eléctrica Niños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -6762,7 +6813,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Azul - EV12M</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6825,7 +6876,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41qrNvHb7xL._SL500_.jpg" alt="Rojo - EV12M PRO(Bluetooth)" loading="lazy" />
             
             <span class="var-label">Rojo - EV12M PRO(Bluetooth)</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -6839,7 +6893,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="EVERCROSS EV12M Motocicleta Eléctrica Niños"
-              
               loading="eager"
             />
           </a>
@@ -6944,7 +6997,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="EVERCROSS EV08M Motocicleta Eléctrica para Niños">EVERCROSS EV08M Motocicleta Eléctrica para Niños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -6968,7 +7021,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -6989,7 +7042,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51FlhjYVhML._SL500_.jpg" alt="Azul" loading="lazy" />
             
             <span class="var-label">Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -7003,7 +7059,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="EVERCROSS EV08M Motocicleta Eléctrica para Niños"
-              
               loading="eager"
             />
           </a>
@@ -7116,7 +7171,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="EVERCROSS EV05M Moto Eléctrica para Niños">EVERCROSS EV05M Moto Eléctrica para Niños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -7140,7 +7195,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -7224,7 +7279,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/5166aahl9SL._SL500_.jpg" alt="13m Rosa" loading="lazy" />
             
             <span class="var-label">13m Rosa</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -7238,7 +7296,6 @@ document.addEventListener('keydown', function(e){
               width="444"
               height="500"
               alt="EVERCROSS EV05M Moto Eléctrica para Niños"
-              
               loading="eager"
             />
           </a>

@@ -786,11 +786,24 @@ Te recomiendo valorar el ajuste, los materiales y las opciones de impresión par
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -814,16 +827,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -848,15 +858,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -865,14 +876,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -886,7 +895,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -894,7 +902,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -906,7 +913,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -916,7 +922,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -924,7 +930,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -936,7 +942,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Zena Padel camisetas padel personalizadas Rainbow M">Zena Padel camisetas padel personalizadas Rainbow M</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -960,7 +966,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">M - Nero</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1149,7 +1155,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31iPTzkB1cL._SL500_.jpg" alt="XXL - Nero" loading="lazy" />
             
             <span class="var-label">XXL - Nero</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1163,7 +1172,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Zena Padel camisetas padel personalizadas Rainbow M"
-              
               loading="eager"
             />
           </a>
@@ -1292,7 +1300,7 @@ Por último, saber que está confeccionada en Italia me transmitió confianza en
     <article class="ficha-teclado">
       <h3 id="Zena Padel camisetas padel personalizadas Rainbow 01 Negro/Naranja S">Zena Padel camisetas padel personalizadas Rainbow 01 Negro/Naranja S</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1300,8 +1308,8 @@ Por último, saber que está confeccionada en Italia me transmitió confianza en
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="S - Negro/Naranja"
+          data-title="S - Negro/Naranja"
           data-imagen="https://m.media-amazon.com/images/I/3131f9oDn8L._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0CJCJRBF4?tag=recomendadorn-21&th=1"
           data-precio="29,00 €"
@@ -1311,12 +1319,12 @@ Por último, saber que está confeccionada en Italia me transmitió confianza en
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/3131f9oDn8L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/3131f9oDn8L._SL500_.jpg" alt="S - Negro/Naranja" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">S - Negro/Naranja</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1526,7 +1534,23 @@ Por último, saber que está confeccionada en Italia me transmitió confianza en
               <img src="https://m.media-amazon.com/images/I/31Dwhd7VvnL._SL500_.jpg" alt="XL - Negro/Italia" loading="lazy" />
             
             <span class="var-label">XL - Negro/Italia</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0CJCJRBF4?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 26 variantes más en Amazon para Zena Padel camisetas padel personalizadas Rainbow 01 Negro/Naranja S"
+            title="+26 variantes más en Amazon"
+          >
+            <span class="var-label">+26 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1540,7 +1564,6 @@ Por último, saber que está confeccionada en Italia me transmitió confianza en
               width="500"
               height="500"
               alt="Zena Padel camisetas padel personalizadas Rainbow 01 Negro/Naranja S"
-              
               loading="eager"
             />
           </a>
@@ -1690,7 +1713,7 @@ Recomiendo lavar a baja temperatura y evitar lejía para conservar el tejido.</p
     <article class="ficha-teclado">
       <h3 id="Zena Padel camisetas padel personalizadas RAINBOW01 Negro/Dorado L">Zena Padel camisetas padel personalizadas RAINBOW01 Negro/Dorado L</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1698,8 +1721,8 @@ Recomiendo lavar a baja temperatura y evitar lejía para conservar el tejido.</p
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Negro y dorado. - L"
+          data-title="Negro y dorado. - L"
           data-imagen="https://m.media-amazon.com/images/I/31Q7VWo06TL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0CRVV39L5?tag=recomendadorn-21&th=1"
           data-precio="45,00 €"
@@ -1709,12 +1732,12 @@ Recomiendo lavar a baja temperatura y evitar lejía para conservar el tejido.</p
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31Q7VWo06TL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31Q7VWo06TL._SL500_.jpg" alt="Negro y dorado. - L" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Negro y dorado. - L</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1924,7 +1947,23 @@ Recomiendo lavar a baja temperatura y evitar lejía para conservar el tejido.</p
               <img src="https://m.media-amazon.com/images/I/31iVeQXNHkL._SL500_.jpg" alt="negro / rojo - XXL" loading="lazy" />
             
             <span class="var-label">negro / rojo - XXL</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0CRVV39L5?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 29 variantes más en Amazon para Zena Padel camisetas padel personalizadas RAINBOW01 Negro/Dorado L"
+            title="+29 variantes más en Amazon"
+          >
+            <span class="var-label">+29 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1938,7 +1977,6 @@ Recomiendo lavar a baja temperatura y evitar lejía para conservar el tejido.</p
               width="500"
               height="500"
               alt="Zena Padel camisetas padel personalizadas RAINBOW01 Negro/Dorado L"
-              
               loading="eager"
             />
           </a>

@@ -1373,11 +1373,24 @@ Te sugiero evaluar tacto, fijación y facilidad de lavado antes de comprar.</p>
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1401,16 +1414,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1435,15 +1445,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1452,14 +1463,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1473,7 +1482,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1481,7 +1489,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1493,7 +1500,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1503,7 +1509,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1511,7 +1517,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1523,7 +1529,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="soul young cuellos de pelo 80x16cm Blanco">soul young cuellos de pelo 80x16cm Blanco</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1547,7 +1553,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Blanco,80cm - 80</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1736,7 +1742,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41Ayuc1VzyL._SL500_.jpg" alt="Mapache,120cm - 120" loading="lazy" />
             
             <span class="var-label">Mapache,120cm - 120</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Blanco,120cm - 120"
+            data-title="Blanco,120cm - 120"
+            data-imagen="https://m.media-amazon.com/images/I/41mPrUftUbL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07W672M1Y?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="29,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31MG85yqJdL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/31uvhErjYJL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31jpLHYGj8L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31eUnRKxTvL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31uhsCrfHFL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41mPrUftUbL._SL500_.jpg" alt="Blanco,120cm - 120" loading="lazy" />
+            
+            <span class="var-label">Blanco,120cm - 120</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B07GPH1LM1?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 3 variantes más en Amazon para soul young cuellos de pelo 80x16cm Blanco"
+            title="+3 variantes más en Amazon"
+          >
+            <span class="var-label">+3 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1750,7 +1793,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="soul young cuellos de pelo 80x16cm Blanco"
-              
               loading="eager"
             />
           </a>
@@ -1847,7 +1889,7 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
     <article class="ficha-teclado">
       <h3 id="Lina & Lily cuellos de pelo Caqui">Lina & Lily cuellos de pelo Caqui</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1871,7 +1913,7 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
           <span class="var-label">Caqui</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2060,7 +2102,44 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
               <img src="https://m.media-amazon.com/images/I/41rm7WKUFdL._SL500_.jpg" alt="Durazno" loading="lazy" />
             
             <span class="var-label">Durazno</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Rojo"
+            data-title="Rojo"
+            data-imagen="https://m.media-amazon.com/images/I/41NvHP5DsIL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08VJ8WGY3?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="14,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41mfRCmaarL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41NvHP5DsIL._SL500_.jpg" alt="Rojo" loading="lazy" />
+            
+            <span class="var-label">Rojo</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B07KC58X34?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Lina & Lily cuellos de pelo Caqui"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2074,7 +2153,6 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
               width="376"
               height="500"
               alt="Lina & Lily cuellos de pelo Caqui"
-              
               loading="eager"
             />
           </a>
@@ -2162,7 +2240,7 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
     <article class="ficha-teclado">
       <h3 id="ihreesy cuellos de pelo caqui 70 cm">ihreesy cuellos de pelo caqui 70 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2170,8 +2248,8 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Caqui - 70"
+          data-title="Caqui - 70"
           data-imagen="https://m.media-amazon.com/images/I/415DsO6nXiL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B08LMLC4X4?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
           data-precio="20,99 €"
@@ -2181,12 +2259,12 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/415DsO6nXiL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/415DsO6nXiL._SL500_.jpg" alt="Caqui - 70" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Caqui - 70</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2396,7 +2474,23 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
               <img src="https://m.media-amazon.com/images/I/31EOiEwpJ7L._SL500_.jpg" alt="Negro - 80" loading="lazy" />
             
             <span class="var-label">Negro - 80</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B08LMLC4X4?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 48 variantes más en Amazon para ihreesy cuellos de pelo caqui 70 cm"
+            title="+48 variantes más en Amazon"
+          >
+            <span class="var-label">+48 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2410,7 +2504,6 @@ La uso tanto en salidas informales como en noches más arregladas porque combina
               width="500"
               height="500"
               alt="ihreesy cuellos de pelo caqui 70 cm"
-              
               loading="eager"
             />
           </a>
@@ -2547,7 +2640,7 @@ La textura de la piel sintética tipo zorro es agradable y realmente aporta calo
     <article class="ficha-teclado">
       <h3 id="Sonnena cuellos de pelo piel sintética mujer">Sonnena cuellos de pelo piel sintética mujer</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2571,7 +2664,7 @@ La textura de la piel sintética tipo zorro es agradable y realmente aporta calo
           <span class="var-label">Talla única - 01 F</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2760,7 +2853,44 @@ La textura de la piel sintética tipo zorro es agradable y realmente aporta calo
               <img src="https://m.media-amazon.com/images/I/41uTr4i3n-L._SL500_.jpg" alt="Talla única - 01 A" loading="lazy" />
             
             <span class="var-label">Talla única - 01 A</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Talla única - 02 Caqui1"
+            data-title="Talla única - 02 Caqui1"
+            data-imagen="https://m.media-amazon.com/images/I/51dHgmiGyNL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DQP87XM3?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="14,59 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51ZKKEG2j1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51ZKKEG2j1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51XTvHfslPL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51dHgmiGyNL._SL500_.jpg" alt="Talla única - 02 Caqui1" loading="lazy" />
+            
+            <span class="var-label">Talla única - 02 Caqui1</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DQ4SMR84?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 12 variantes más en Amazon para Sonnena cuellos de pelo piel sintética mujer"
+            title="+12 variantes más en Amazon"
+          >
+            <span class="var-label">+12 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2774,7 +2904,6 @@ La textura de la piel sintética tipo zorro es agradable y realmente aporta calo
               width="500"
               height="500"
               alt="Sonnena cuellos de pelo piel sintética mujer"
-              
               loading="eager"
             />
           </a>
@@ -2874,7 +3003,7 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
     <article class="ficha-teclado">
       <h3 id="MELIFLUOS DESIGNED IN SPAIN cuello pelo FC03-16 Otoño-Invierno">MELIFLUOS DESIGNED IN SPAIN cuello pelo FC03-16 Otoño-Invierno</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2898,7 +3027,7 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
           <span class="var-label">Lugo Collection 3 - Turmeric</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3087,7 +3216,44 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
               <img src="https://m.media-amazon.com/images/I/41mts6ab8sL._SL500_.jpg" alt="Lugo Collection 1 - Light Gray" loading="lazy" />
             
             <span class="var-label">Lugo Collection 1 - Light Gray</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Palencia Collection 1 - Black"
+            data-title="Palencia Collection 1 - Black"
+            data-imagen="https://m.media-amazon.com/images/I/41JwFU-k81L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0C4R9H3HW?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,92 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/418eP1bUqiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/419pmk7NrdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+LEYTggxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/311ZVxl+7rL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31STJTYYlWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31HQpsQcT5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31RWQQbJxAL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41JwFU-k81L._SL500_.jpg" alt="Palencia Collection 1 - Black" loading="lazy" />
+            
+            <span class="var-label">Palencia Collection 1 - Black</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B07RRQGRST?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 3 variantes más en Amazon para MELIFLUOS DESIGNED IN SPAIN cuello pelo FC03-16 Otoño-Invierno"
+            title="+3 variantes más en Amazon"
+          >
+            <span class="var-label">+3 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3101,7 +3267,6 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
               width="500"
               height="500"
               alt="MELIFLUOS DESIGNED IN SPAIN cuello pelo FC03-16 Otoño-Invierno"
-              
               loading="eager"
             />
           </a>
@@ -3199,7 +3364,7 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
     <article class="ficha-teclado">
       <h3 id="DianShaoA cuello pelo Café, 90×10 cm, Talla única">DianShaoA cuello pelo Café, 90×10 cm, Talla única</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3223,7 +3388,7 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
           <span class="var-label">Talla única - Café</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3412,7 +3577,44 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
               <img src="https://m.media-amazon.com/images/I/41z+YZ1TRML._SL500_.jpg" alt="Talla única - Azul" loading="lazy" />
             
             <span class="var-label">Talla única - Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Talla única - Zorro Plateado"
+            data-title="Talla única - Zorro Plateado"
+            data-imagen="https://m.media-amazon.com/images/I/41P6GOpoO0L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07J1VG6M5?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="8,49 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41P6GOpoO0L._SL500_.jpg" alt="Talla única - Zorro Plateado" loading="lazy" />
+            
+            <span class="var-label">Talla única - Zorro Plateado</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B07J1V95RX?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 1 variantes más en Amazon para DianShaoA cuello pelo Café, 90×10 cm, Talla única"
+            title="+1 variantes más en Amazon"
+          >
+            <span class="var-label">+1 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3426,7 +3628,6 @@ En mi caso se ha convertido en un básico del invierno por su comodidad y fácil
               width="400"
               height="500"
               alt="DianShaoA cuello pelo Café, 90×10 cm, Talla única"
-              
               loading="eager"
             />
           </a>
@@ -3497,7 +3698,7 @@ La marca DianShaoA cumple con lo esperado para un complemento práctico y abriga
     <article class="ficha-teclado">
       <h3 id="MELIFLUOS DESIGNED IN SPAIN cuello de pelo FC01-4D">MELIFLUOS DESIGNED IN SPAIN cuello de pelo FC01-4D</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3521,7 +3722,7 @@ La marca DianShaoA cumple con lo esperado para un complemento práctico y abriga
           <span class="var-label">Beige</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3710,7 +3911,31 @@ La marca DianShaoA cumple con lo esperado para un complemento práctico y abriga
               <img src="https://m.media-amazon.com/images/I/41YXm5YVRoL._SL500_.jpg" alt="Pontevedra Collections 14 - Light Purple" loading="lazy" />
             
             <span class="var-label">Pontevedra Collections 14 - Light Purple</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Pontevedra Collections 12 - Ash Gray"
+            data-title="Pontevedra Collections 12 - Ash Gray"
+            data-imagen="https://m.media-amazon.com/images/I/41DoFAS3E6L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B095JG16PH?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,92 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41g4VYdig9L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41jForOMvsL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41V17uGPJNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/516FiJSU0RL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41DoFAS3E6L._SL500_.jpg" alt="Pontevedra Collections 12 - Ash Gray" loading="lazy" />
+            
+            <span class="var-label">Pontevedra Collections 12 - Ash Gray</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3724,7 +3949,6 @@ La marca DianShaoA cumple con lo esperado para un complemento práctico y abriga
               width="500"
               height="500"
               alt="MELIFLUOS DESIGNED IN SPAIN cuello de pelo FC01-4D"
-              
               loading="eager"
             />
           </a>
@@ -3834,7 +4058,7 @@ Es un regalo fácil de acertar para amigas o familiares.</p>
     <article class="ficha-teclado">
       <h3 id="VEVESMUNDO cuello de pelo extraíble 80cm">VEVESMUNDO cuello de pelo extraíble 80cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3842,8 +4066,8 @@ Es un regalo fácil de acertar para amigas o familiares.</p>
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Gris Claro - 90cm/35in"
+          data-title="Gris Claro - 90cm/35in"
           data-imagen="https://m.media-amazon.com/images/I/41Bsc7Bm76L._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B09H312LWS?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
           data-precio="19,99 €"
@@ -3853,12 +4077,12 @@ Es un regalo fácil de acertar para amigas o familiares.</p>
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41Bsc7Bm76L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41Bsc7Bm76L._SL500_.jpg" alt="Gris Claro - 90cm/35in" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Gris Claro - 90cm/35in</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4068,7 +4292,23 @@ Es un regalo fácil de acertar para amigas o familiares.</p>
               <img src="https://m.media-amazon.com/images/I/41zmDyObFgL._SL500_.jpg" alt="Rosa Melocotón Con Encaje Negro - 90cm/35in" loading="lazy" />
             
             <span class="var-label">Rosa Melocotón Con Encaje Negro - 90cm/35in</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B09H312LWS?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 85 variantes más en Amazon para VEVESMUNDO cuello de pelo extraíble 80cm"
+            title="+85 variantes más en Amazon"
+          >
+            <span class="var-label">+85 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4082,7 +4322,6 @@ Es un regalo fácil de acertar para amigas o familiares.</p>
               width="362"
               height="500"
               alt="VEVESMUNDO cuello de pelo extraíble 80cm"
-              
               loading="eager"
             />
           </a>
@@ -4244,7 +4483,6 @@ Es una alternativa ligera y cálida que además queda muy bien como regalo.</p>
               width="500"
               height="500"
               alt="MELIFLUOS DESIGNED IN SPAIN cuellos pelo FC01-11"
-              
               loading="eager"
             />
           </a>

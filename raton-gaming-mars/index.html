@@ -1116,11 +1116,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1144,16 +1157,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1178,15 +1188,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1195,14 +1206,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1216,7 +1225,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1224,7 +1232,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1236,7 +1243,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1246,7 +1252,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1254,7 +1260,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1266,7 +1272,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MMW">Mars Gaming MMW</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1290,7 +1296,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">MMW</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1322,8 +1328,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -1458,7 +1464,65 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEX"
+            data-title="MMEX"
+            data-imagen="https://m.media-amazon.com/images/I/41phEY7X3AL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZM2DF4?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="13,52 €"
+            data-precio-original="22,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41SE2x4NQIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gQCvivcaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41k3AhADawL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51NQlZVGwNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41lomHn00AL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51bmZbjej7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41F+uSVlD9L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41phEY7X3AL._SL500_.jpg" alt="MMEX" loading="lazy" />
+            
+            <span class="var-label">MMEX</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4ke99Sg?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MMW"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1472,7 +1536,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="303"
               alt="Mars Gaming MMW"
-              
               loading="eager"
             />
           </a>
@@ -1540,7 +1603,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MM55 Blanco">Mars Gaming MM55 Blanco</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1548,8 +1611,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MM55W"
+          data-title="MM55W"
           data-imagen="https://m.media-amazon.com/images/I/41cYvlDPkTL._SL500_.jpg"
           data-enlace="https://amzn.to/4dokCfv?tag=recomendadorn-21&th=1"
           data-precio="13,18 €"
@@ -1559,12 +1622,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41cYvlDPkTL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41cYvlDPkTL._SL500_.jpg" alt="MM55W" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MM55W</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1680,8 +1743,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -1753,7 +1816,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4dokCfv?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MM55 Blanco"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1767,7 +1867,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MM55 Blanco"
-              
               loading="eager"
             />
           </a>
@@ -1897,7 +1996,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MMEX">Mars Gaming MMEX</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1905,8 +2004,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MMEX"
+          data-title="MMEX"
           data-imagen="https://m.media-amazon.com/images/I/41phEY7X3AL._SL500_.jpg"
           data-enlace="https://amzn.to/3YTw78R?tag=recomendadorn-21&th=1"
           data-precio="13,52 €"
@@ -1916,12 +2015,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41phEY7X3AL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41phEY7X3AL._SL500_.jpg" alt="MMEX" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MMEX</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2058,8 +2157,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -2110,7 +2209,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3YTw78R?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MMEX"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2124,7 +2260,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MMEX"
-              
               loading="eager"
             />
           </a>
@@ -2264,7 +2399,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming ERGO VERTI">Mars Gaming ERGO VERTI</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2272,23 +2407,23 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MMSKW"
+          data-title="MMSKW"
           data-imagen="https://m.media-amazon.com/images/I/31oiIRfQS+L._SL500_.jpg"
           data-enlace="https://amzn.to/3YTwkc9?tag=recomendadorn-21&th=1"
-          data-precio="25,90 €"
-          data-precio-original="25,90 €"
+          data-precio="20,45 €"
+          data-precio-original="22,00 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41untTrlFQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41P1MOq8eoL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41wxtKwNNcL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41JxSi6zIML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31dJHdfn1PL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31oiIRfQS+L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31oiIRfQS+L._SL500_.jpg" alt="MMSKW" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MMSKW</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2425,8 +2560,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -2477,7 +2612,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3YTwkc9?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming ERGO VERTI"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2491,7 +2663,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming ERGO VERTI"
-              
               loading="eager"
             />
           </a>
@@ -2569,13 +2740,13 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          25,90 €
+          20,45 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
                      text-decoration: line-through; white-space: nowrap; ;">
           
-            Antes: 25,90 €
+            Antes: 22,00 €
           
         </span>
       </p>
@@ -2611,7 +2782,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MMR Translúcido">Mars Gaming MMR Translúcido</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2619,8 +2790,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MMRW"
+          data-title="MMRW"
           data-imagen="https://m.media-amazon.com/images/I/31t7Byl7ItL._SL500_.jpg"
           data-enlace="https://amzn.to/43oi4d2?tag=recomendadorn-21&th=1"
           data-precio="12,90 €"
@@ -2630,12 +2801,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31t7Byl7ItL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31t7Byl7ItL._SL500_.jpg" alt="MMRW" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MMRW</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2772,8 +2943,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -2824,7 +2995,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/43oi4d2?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MMR Translúcido"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2838,7 +3046,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MMR Translúcido"
-              
               loading="eager"
             />
           </a>
@@ -2958,7 +3165,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MMWERGO">Mars Gaming MMWERGO</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2982,7 +3189,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">MMWERGO</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3056,8 +3263,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -3150,7 +3357,65 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEX"
+            data-title="MMEX"
+            data-imagen="https://m.media-amazon.com/images/I/41phEY7X3AL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZM2DF4?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="13,52 €"
+            data-precio-original="22,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41SE2x4NQIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gQCvivcaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41k3AhADawL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51NQlZVGwNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41lomHn00AL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51bmZbjej7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41F+uSVlD9L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41phEY7X3AL._SL500_.jpg" alt="MMEX" loading="lazy" />
+            
+            <span class="var-label">MMEX</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/43llWLx?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MMWERGO"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3164,7 +3429,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MMWERGO"
-              
               loading="eager"
             />
           </a>
@@ -3292,7 +3556,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MMPRO">Mars Gaming MMPRO</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3300,8 +3564,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MMPRO"
+          data-title="MMPRO"
           data-imagen="https://m.media-amazon.com/images/I/31PKCSogveL._SL500_.jpg"
           data-enlace="https://amzn.to/4kgyyux?tag=recomendadorn-21&th=1"
           data-precio="17,89 €"
@@ -3311,12 +3575,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31PKCSogveL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31PKCSogveL._SL500_.jpg" alt="MMPRO" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MMPRO</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3453,8 +3717,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -3505,7 +3769,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4kgyyux?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MMPRO"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3519,7 +3820,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MMPRO"
-              
               loading="eager"
             />
           </a>
@@ -3637,7 +3937,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MMW3">Mars Gaming MMW3</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3645,23 +3945,23 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MMW3"
+          data-title="MMW3"
           data-imagen="https://m.media-amazon.com/images/I/41Y0HsJJKmL._SL500_.jpg"
           data-enlace="https://amzn.to/4m7YD0s?tag=recomendadorn-21&th=1"
-          data-precio="14,90 €"
+          data-precio="13,99 €"
           data-precio-original="No especificado"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41MhMyEPYhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511OeTaOm1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41n9TcdHlCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41j9l8TppiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41lQg06pDQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31D+RVif10L._SL500_.jpg","width":369,"height":500}]'
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41Y0HsJJKmL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41Y0HsJJKmL._SL500_.jpg" alt="MMW3" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MMW3</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3756,8 +4056,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -3850,7 +4150,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4m7YD0s?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MMW3"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3864,7 +4201,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MMW3"
-              
               loading="eager"
             />
           </a>
@@ -3952,7 +4288,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          14,90 €
+          13,99 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -3992,7 +4328,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MMGLOW">Mars Gaming MMGLOW</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4000,8 +4336,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MMGLOW"
+          data-title="MMGLOW"
           data-imagen="https://m.media-amazon.com/images/I/31H8ocIEiUL._SL500_.jpg"
           data-enlace="https://amzn.to/434JYui?tag=recomendadorn-21&th=1"
           data-precio="15,90 €"
@@ -4011,12 +4347,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31H8ocIEiUL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31H8ocIEiUL._SL500_.jpg" alt="MMGLOW" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MMGLOW</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4153,8 +4489,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -4205,7 +4541,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/434JYui?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MMGLOW"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4219,7 +4592,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MMGLOW"
-              
               loading="eager"
             />
           </a>
@@ -4329,7 +4701,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MM-XT BLACK 9B">Mars Gaming MM-XT BLACK 9B</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4337,8 +4709,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MMXT"
+          data-title="MMXT"
           data-imagen="https://m.media-amazon.com/images/I/31LmBINshyL._SL500_.jpg"
           data-enlace="https://amzn.to/437m813?tag=recomendadorn-21&th=1"
           data-precio="12,72 €"
@@ -4348,12 +4720,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31LmBINshyL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31LmBINshyL._SL500_.jpg" alt="MMXT" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MMXT</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4469,8 +4841,8 @@ document.addEventListener('keydown', function(e){
             data-title="MMWERGOW"
             data-imagen="https://m.media-amazon.com/images/I/31yeKRkljqL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08WJ95L35?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="9,90 €"
-            data-precio-original="No especificado"
+            data-precio="8,95 €"
+            data-precio-original="9,90 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31qKS8TTVyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31g19eazUCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lh7eP9ykL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31T0gir1ZJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FZ6KGv7lL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31nzZ5FSYeL._SL500_.jpg","width":410,"height":500}]'
             
@@ -4542,7 +4914,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31TNJmXjYYL._SL500_.jpg" alt="MMAXW" loading="lazy" />
             
             <span class="var-label">MMAXW</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MMEXW"
+            data-title="MMEXW"
+            data-imagen="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08XZL89PM?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="17,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HY+NRBEiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31bWSKsqRFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LV74wcwsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31UjauEiuWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gwcwHL3ML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-pr5c6bBL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41xETfMQNoL._SL500_.jpg" alt="MMEXW" loading="lazy" />
+            
+            <span class="var-label">MMEXW</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/437m813?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 23 variantes más en Amazon para Mars Gaming MM-XT BLACK 9B"
+            title="+23 variantes más en Amazon"
+          >
+            <span class="var-label">+23 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4556,7 +4965,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MM-XT BLACK 9B"
-              
               loading="eager"
             />
           </a>

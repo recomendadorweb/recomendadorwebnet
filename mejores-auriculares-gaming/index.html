@@ -1111,11 +1111,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1139,16 +1152,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1173,15 +1183,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1190,14 +1201,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1211,7 +1220,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1219,7 +1227,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1231,7 +1238,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1241,7 +1247,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1249,7 +1255,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1261,7 +1267,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer BlackShark V2 HyperSpeed">Razer BlackShark V2 HyperSpeed</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1269,8 +1275,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="BlackShark V2 HyperSpeed - Negro"
+          data-title="BlackShark V2 HyperSpeed - Negro"
           data-imagen="https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg"
           data-enlace="https://amzn.to/4jC56iA?tag=recomendadorn-21&th=1"
           data-precio="116,84 €"
@@ -1280,12 +1286,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg" alt="BlackShark V2 HyperSpeed - Negro" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">BlackShark V2 HyperSpeed - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1432,7 +1438,86 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41M86sM-a3L._SL500_.jpg" alt="Blackshark V2 X - Verde" loading="lazy" />
             
             <span class="var-label">Blackshark V2 X - Verde</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="BlackShark V2 X - Rosa"
+            data-title="BlackShark V2 X - Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/41RWObIBI5L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BDRMXQQC?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="54,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41JCvX70MjL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41RWObIBI5L._SL500_.jpg" alt="BlackShark V2 X - Rosa" loading="lazy" />
+            
+            <span class="var-label">BlackShark V2 X - Rosa</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="BlackShark V2 Pro (2023) - Negro"
+            data-title="BlackShark V2 Pro (2023) - Negro"
+            data-imagen="https://m.media-amazon.com/images/I/41fleBAPLGL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BXLWCLZN?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="169,99 €"
+            data-precio-original="229,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41oRJBoNVXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41V9Uxt-ReL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41YFGKpNjSL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41xMvTW5TnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/411cmSdBDAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51CwshOs44L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511G1RhVhhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51u1aNjcsrL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31vz3tz3SgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31U1QTwSMuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31t4dUq5N-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31DEtvDCDsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41NvRlNJOML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41IjihFskIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51MASP4m2sL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41fleBAPLGL._SL500_.jpg" alt="BlackShark V2 Pro (2023) - Negro" loading="lazy" />
+            
+            <span class="var-label">BlackShark V2 Pro (2023) - Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="BlackShark V2 Pro (2023) - Blanco"
+            data-title="BlackShark V2 Pro (2023) - Blanco"
+            data-imagen="https://m.media-amazon.com/images/I/41rBaCbsqtL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BXLXZYXQ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="177,90 €"
+            data-precio-original="229,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41zeskdc0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51kMSwJbdwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/418-CaxMQzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41W+OYsPt+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51aw32x2gvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51qhMgT9MpL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51XW-PAcAyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41RfaxUKgEL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41rBaCbsqtL._SL500_.jpg" alt="BlackShark V2 Pro (2023) - Blanco" loading="lazy" />
+            
+            <span class="var-label">BlackShark V2 Pro (2023) - Blanco</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4jC56iA?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 6 variantes más en Amazon para Razer BlackShark V2 HyperSpeed"
+            title="+6 variantes más en Amazon"
+          >
+            <span class="var-label">+6 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1446,7 +1531,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer BlackShark V2 HyperSpeed"
-              
               loading="eager"
             />
           </a>
@@ -1676,7 +1760,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer BlackShark V2 X">Razer BlackShark V2 X</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1700,7 +1784,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Blackshark V2 X - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1826,7 +1910,107 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41Ns24ra6oL._SL500_.jpg" alt="BlackShark V2 X USB - Negro" loading="lazy" />
             
             <span class="var-label">BlackShark V2 X USB - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="BlackShark V2 X - Rosa"
+            data-title="BlackShark V2 X - Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/41RWObIBI5L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BDRMXQQC?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="54,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41JCvX70MjL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41RWObIBI5L._SL500_.jpg" alt="BlackShark V2 X - Rosa" loading="lazy" />
+            
+            <span class="var-label">BlackShark V2 X - Rosa</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="BlackShark V2 Pro (2023) - Negro"
+            data-title="BlackShark V2 Pro (2023) - Negro"
+            data-imagen="https://m.media-amazon.com/images/I/41fleBAPLGL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BXLWCLZN?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="169,99 €"
+            data-precio-original="229,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41oRJBoNVXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41V9Uxt-ReL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41YFGKpNjSL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41xMvTW5TnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/411cmSdBDAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51CwshOs44L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511G1RhVhhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51u1aNjcsrL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31vz3tz3SgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31U1QTwSMuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31t4dUq5N-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31DEtvDCDsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41NvRlNJOML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41IjihFskIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51MASP4m2sL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41fleBAPLGL._SL500_.jpg" alt="BlackShark V2 Pro (2023) - Negro" loading="lazy" />
+            
+            <span class="var-label">BlackShark V2 Pro (2023) - Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="BlackShark V2 Pro (2023) - Blanco"
+            data-title="BlackShark V2 Pro (2023) - Blanco"
+            data-imagen="https://m.media-amazon.com/images/I/41rBaCbsqtL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BXLXZYXQ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="177,90 €"
+            data-precio-original="229,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41zeskdc0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51kMSwJbdwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/418-CaxMQzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41W+OYsPt+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51aw32x2gvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51qhMgT9MpL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51XW-PAcAyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41RfaxUKgEL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41rBaCbsqtL._SL500_.jpg" alt="BlackShark V2 Pro (2023) - Blanco" loading="lazy" />
+            
+            <span class="var-label">BlackShark V2 Pro (2023) - Blanco</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="BlackShark V2 HyperSpeed - Negro"
+            data-title="BlackShark V2 HyperSpeed - Negro"
+            data-imagen="https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CBRTBSNV?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="116,84 €"
+            data-precio-original="149,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51SJ-5TAOHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4108Iq5R93L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51y9vcYIrdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41NN9yRso2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51HtbP1OF2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/513u80+ZPoL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31RzLEL8xsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31LeEK5L1cL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31b4Y58XeyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41BtXKoVGlL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41pTHFatwbL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41q28ONbiVL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51weqIO7HGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41c8HGVez-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+2dNQ5QAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51FLW4YjDnL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg" alt="BlackShark V2 HyperSpeed - Negro" loading="lazy" />
+            
+            <span class="var-label">BlackShark V2 HyperSpeed - Negro</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4kmfXNt?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 6 variantes más en Amazon para Razer BlackShark V2 X"
+            title="+6 variantes más en Amazon"
+          >
+            <span class="var-label">+6 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1840,7 +2024,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer BlackShark V2 X"
-              
               loading="eager"
             />
           </a>
@@ -2010,7 +2193,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer Barracuda X">Razer Barracuda X</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2034,7 +2217,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Barracuda X (2022) - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2066,7 +2249,7 @@ document.addEventListener('keydown', function(e){
             data-title="Barracuda X - Quartz Rosa"
             data-imagen="https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B09BD6DKL5?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="72,29 €"
+            data-precio="68,00 €"
             data-precio-original="99,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41HisBowNiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51jh9BX0RQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41MKHHodkdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LUKcenDTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hipjpWzFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/417UOhWe+5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gQclue9JL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41JyxXr3zgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41DLFf1ngBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31qQ6JsCSTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41h7p5PG0OL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31cuIkSltLL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31+oZt-G5xL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ow1XxpZOL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hHToSuRwL._SL500_.jpg","width":500,"height":500}]'
@@ -2108,7 +2291,7 @@ document.addEventListener('keydown', function(e){
             data-title="Barracuda X (2022) - Quartz Rosa"
             data-imagen="https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B09X5HTYZR?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="85,45 €"
+            data-precio="89,99 €"
             data-precio-original="119,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/519QztX91nL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51SsqZk5GdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51hznDDE04L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41DIVU4HZIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41rMIcLZoTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41cN3yGX4HL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31w5kKaQG0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31mwrZ9gk+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31MsYRj21RL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31jXwblyOOL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31wyh4yQ3YL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-GEnv0HtL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51qx8WcNkTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31fxfF-Kl-L._SL500_.jpg","width":500,"height":500}]'
@@ -2202,7 +2385,52 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41PojmhGqmL._SL500_.jpg" alt="Barracuda - Negro" loading="lazy" />
             
             <span class="var-label">Barracuda - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Barracuda X Chroma - Negro"
+            data-title="Barracuda X Chroma - Negro"
+            data-imagen="https://m.media-amazon.com/images/I/31pLlwPLsSL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DGH2D1NJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="129,00 €"
+            data-precio-original="139,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/518t6YzBxsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zP0cV2K7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41c9PZgWB2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41k-HuURnIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Ldi9yYNcL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZZNqPqqbL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31qrFvMX6gL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41q4ZaXCxYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41sl+VCl5XL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41PNrMbY0TL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41aioJfCODL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41RzzBBfzaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31GMRcv7oqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41RZlobKBoL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/413UIxTA9TL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/412Xb4iOQcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31pLlwPLsSL._SL500_.jpg" alt="Barracuda X Chroma - Negro" loading="lazy" />
+            
+            <span class="var-label">Barracuda X Chroma - Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Barracuda X Chroma - Mercury Blanco"
+            data-title="Barracuda X Chroma - Mercury Blanco"
+            data-imagen="https://m.media-amazon.com/images/I/31Vx+5SVOUL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DH58V1BK?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="123,99 €"
+            data-precio-original="139,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41kF66DcjIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41OS0kmuARL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zPCE-1G5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41paF7LJOnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41dELmaIx9L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/412pUw9139L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41kX6QTTOML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/418g5P7zkHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41UJZntUF4L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31Vx+5SVOUL._SL500_.jpg" alt="Barracuda X Chroma - Mercury Blanco" loading="lazy" />
+            
+            <span class="var-label">Barracuda X Chroma - Mercury Blanco</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2216,7 +2444,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer Barracuda X"
-              
               loading="eager"
             />
           </a>
@@ -2386,7 +2613,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Corsair HS80 RGB Wireless">Corsair HS80 RGB Wireless</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2410,7 +2637,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Moderno - Negro -</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2442,7 +2669,7 @@ document.addEventListener('keydown', function(e){
             data-title="Inalámbrico - Blanco"
             data-imagen="https://m.media-amazon.com/images/I/31YLokEXRZL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B09TTMBTY5?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="131,94 €"
+            data-precio="132,61 €"
             data-precio-original="169,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41dtzHyj4bL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41CSmY9cuRL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vpGCMN9ZL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EfzusKs4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/519UxWKyOmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51G+jhhn+QL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51uhy0dvJhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31JYE1734zL._SL500_.jpg","width":500,"height":500}]'
@@ -2515,7 +2742,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31kwzic7LWL._SL500_.jpg" alt="Inalámbrico con Bluetooth - Gris" loading="lazy" />
             
             <span class="var-label">Inalámbrico con Bluetooth - Gris</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2529,7 +2759,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Corsair HS80 RGB Wireless"
-              
               loading="eager"
             />
           </a>
@@ -2681,7 +2910,6 @@ document.addEventListener('keydown', function(e){
               width="344"
               height="500"
               alt="Logitech G PRO X"
-              
               loading="eager"
             />
           </a>
@@ -2831,7 +3059,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="SteelSeries Arctis Nova 5">SteelSeries Arctis Nova 5</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2855,7 +3083,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Nova Negro - PC, Switch, Mobile</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2960,7 +3188,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31KhPFkf3DL._SL500_.jpg" alt="Nova Blanco - Xbox" loading="lazy" />
             
             <span class="var-label">Nova Blanco - Xbox</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2974,7 +3205,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="SteelSeries Arctis Nova 5"
-              
               loading="eager"
             />
           </a>
@@ -3204,7 +3434,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Logitech G432">Logitech G432</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3228,7 +3458,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">G432</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3249,7 +3479,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31pEhAgl7zL._SL500_.jpg" alt="Auriculares + Ratón" loading="lazy" />
             
             <span class="var-label">Auriculares + Ratón</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3263,7 +3496,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Logitech G432"
-              
               loading="eager"
             />
           </a>
@@ -3393,7 +3625,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Corsair VOID RGB ELITE">Corsair VOID RGB ELITE</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3417,7 +3649,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro -</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3438,7 +3670,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31jA5KD1azL._SL500_.jpg" alt="Blanco" loading="lazy" />
             
             <span class="var-label">Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3452,7 +3687,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Corsair VOID RGB ELITE"
-              
               loading="eager"
             />
           </a>
@@ -3582,7 +3816,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HyperX Cloud III">HyperX Cloud III</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3606,7 +3840,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro y rojo - Alámbrico - Cloud III</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3617,7 +3851,7 @@ document.addEventListener('keydown', function(e){
             data-title="Negro y rojo - Alámbrico - Cloud II"
             data-imagen="https://m.media-amazon.com/images/I/41SkA5j2l-L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B00SAYCXWG?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="80,66 €"
+            data-precio="80,77 €"
             data-precio-original="99,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41QYrAKaS0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Ah7A4464L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41M9u7LTB9L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/518f6-RKJ4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41geWMT+SHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+10LMubML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zcI9sb0ML._SL500_.jpg","width":500,"height":500}]'
@@ -3638,7 +3872,7 @@ document.addEventListener('keydown', function(e){
             data-title="Negro y rojo - Inalámbrico - Cloud II"
             data-imagen="https://m.media-amazon.com/images/I/41SkA5j2l-L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08NTYB4M7?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="149,99 €"
+            data-precio="75,81 €"
             data-precio-original="168,22 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41QYrAKaS0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Ah7A4464L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41M9u7LTB9L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/518f6-RKJ4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41geWMT+SHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+10LMubML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zcI9sb0ML._SL500_.jpg","width":500,"height":500}]'
@@ -3680,8 +3914,8 @@ document.addEventListener('keydown', function(e){
             data-title="Metálico - Alámbrico - Cloud II"
             data-imagen="https://m.media-amazon.com/images/I/31ZkyS-UhAL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B00SAYCVTQ?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="108,99 €"
-            data-precio-original="No especificado"
+            data-precio="72,52 €"
+            data-precio-original="99,99 €"
             
               data-imagenes='[]'
             
@@ -3690,7 +3924,31 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31ZkyS-UhAL._SL500_.jpg" alt="Metálico - Alámbrico - Cloud II" loading="lazy" />
             
             <span class="var-label">Metálico - Alámbrico - Cloud II</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Negro - Inalámbrico - Cloud III"
+            data-title="Negro - Inalámbrico - Cloud III"
+            data-imagen="https://m.media-amazon.com/images/I/31gePlHzyTL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CBQYKFR2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="94,91 €"
+            data-precio-original="119,85 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41z2ZcLWXaL._SL500_.jpg","width":500,"height":250},{"url":"https://m.media-amazon.com/images/I/31-NE0FMAFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31i0lbnsc8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21gEI0kY0UL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31tbCE-0DpL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/218UGwICegL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41FpDzYhW4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Mn1Hp214L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41q0rO2FO1L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31gePlHzyTL._SL500_.jpg" alt="Negro - Inalámbrico - Cloud III" loading="lazy" />
+            
+            <span class="var-label">Negro - Inalámbrico - Cloud III</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3704,7 +3962,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HyperX Cloud III"
-              
               loading="eager"
             />
           </a>
@@ -3834,7 +4091,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Corsair HS55 SURROUND">Corsair HS55 SURROUND</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3846,7 +4103,7 @@ document.addEventListener('keydown', function(e){
           data-title="HS55 Surround - Blanco"
           data-imagen="https://m.media-amazon.com/images/I/31mOsOj0DiL._SL500_.jpg"
           data-enlace="https://amzn.to/433vfRG?tag=recomendadorn-21&th=1"
-          data-precio="69,53 €"
+          data-precio="69,41 €"
           data-precio-original="79,99 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31M2+jujOpL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/512qBK-gQkL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/31+sGZY2dmL._SL500_.jpg","width":500,"height":375}]'
@@ -3858,7 +4115,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">HS55 Surround - Blanco</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3921,7 +4178,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31nOZI0NHVL._SL500_.jpg" alt="HS55 WIRELESS - Blanco" loading="lazy" />
             
             <span class="var-label">HS55 WIRELESS - Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3935,7 +4195,6 @@ document.addEventListener('keydown', function(e){
               width="421"
               height="500"
               alt="Corsair HS55 SURROUND"
-              
               loading="eager"
             />
           </a>
@@ -3993,7 +4252,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          69,53 €
+          69,41 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;

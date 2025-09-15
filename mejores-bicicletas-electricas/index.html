@@ -1167,11 +1167,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1195,16 +1208,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1229,15 +1239,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1246,14 +1257,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1267,7 +1276,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1275,7 +1283,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1287,7 +1294,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1297,7 +1303,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1305,7 +1311,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1317,7 +1323,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Cecotec Bicicleta Eléctrica de Montaña">Cecotec Bicicleta Eléctrica de Montaña</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1341,7 +1347,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Suspensión Delantera - 55 km Autonomía</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1404,7 +1410,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/419n30BaI1L._SL500_.jpg" alt="Suspensión Delantera - 120 km Autonomía" loading="lazy" />
             
             <span class="var-label">Suspensión Delantera - 120 km Autonomía</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1418,7 +1427,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Cecotec Bicicleta Eléctrica de Montaña"
-              
               loading="eager"
             />
           </a>
@@ -1558,7 +1566,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Eleglide Bicicleta eléctrica 27,5''">Eleglide Bicicleta eléctrica 27,5''</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1582,7 +1590,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">27,5"</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1603,7 +1611,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51FbD2s0ZnL._SL500_.jpg" alt="29&quot;" loading="lazy" />
             
             <span class="var-label">29"</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1617,7 +1628,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Eleglide Bicicleta eléctrica 27,5''"
-              
               loading="eager"
             />
           </a>
@@ -1765,7 +1775,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Eleglide Bicicleta eléctrica 29''">Eleglide Bicicleta eléctrica 29''</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1789,7 +1799,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">29"</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1810,7 +1820,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51FbD2s0ZnL._SL500_.jpg" alt="27,5&quot;" loading="lazy" />
             
             <span class="var-label">27,5"</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1824,7 +1837,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Eleglide Bicicleta eléctrica 29''"
-              
               loading="eager"
             />
           </a>
@@ -1962,7 +1974,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Cecotec Bicicleta Eléctrica de Ciudad">Cecotec Bicicleta Eléctrica de Ciudad</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1986,7 +1998,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">90 km Autonomía - Verde</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2049,7 +2061,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41wJ2H3lhaL._SL500_.jpg" alt="35 km Autonomía - Gris" loading="lazy" />
             
             <span class="var-label">35 km Autonomía - Gris</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2063,7 +2078,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Cecotec Bicicleta Eléctrica de Ciudad"
-              
               loading="eager"
             />
           </a>
@@ -2191,7 +2205,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Milecity1 26"">Milecity1 26"</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2215,7 +2229,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Gris - MileCity1</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2236,7 +2250,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51qX+LBGCAL._SL500_.jpg" alt="Verde - MileCity1" loading="lazy" />
             
             <span class="var-label">Verde - MileCity1</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2250,7 +2267,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Milecity1 26""
-              
               loading="eager"
             />
           </a>
@@ -2378,7 +2394,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Touroll Bicicleta eléctrica 29''">Touroll Bicicleta eléctrica 29''</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2402,7 +2418,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">U1 29"</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2423,7 +2439,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51Jmq9nqp9L._SL500_.jpg" alt="U1 26&quot;" loading="lazy" />
             
             <span class="var-label">U1 26"</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2437,7 +2456,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="407"
               alt="Touroll Bicicleta eléctrica 29''"
-              
               loading="eager"
             />
           </a>
@@ -2575,7 +2593,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Touroll Bicicleta eléctrica 26''">Touroll Bicicleta eléctrica 26''</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2599,7 +2617,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">U1 26"</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2620,7 +2638,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51Jmq9nqp9L._SL500_.jpg" alt="U1 29&quot;" loading="lazy" />
             
             <span class="var-label">U1 29"</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2634,7 +2655,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="407"
               alt="Touroll Bicicleta eléctrica 26''"
-              
               loading="eager"
             />
           </a>
@@ -2784,7 +2804,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Touroll S1"
-              
               loading="eager"
             />
           </a>
@@ -2934,7 +2953,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="RZOGUWEX Bicicleta Eléctrica"
-              
               loading="eager"
             />
           </a>
@@ -3062,7 +3080,57 @@ document.addEventListener('keydown', function(e){
     
   
     <article class="ficha-teclado">
-      <h3 id="ENGWE E26 Step-Thru">ENGWE E26 Step-Thru</h3><div class="imagen-con-miniaturas">
+      <h3 id="ENGWE E26 Step-Thru">ENGWE E26 Step-Thru</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
+
+        <!-- Botón del MODELO PRINCIPAL -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Step-Thru - Gris Oscuro"
+          data-title="Step-Thru - Gris Oscuro"
+          data-imagen="https://m.media-amazon.com/images/I/51Lva6IUlzL._SL500_.jpg"
+          data-enlace="https://amzn.to/3GOwFXz?tag=recomendadorn-21&th=1"
+          data-precio="1.499,00 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg","width":375,"height":500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/51Lva6IUlzL._SL500_.jpg" alt="Step-Thru - Gris Oscuro" loading="lazy" />
+          
+          <span class="var-label">Step-Thru - Gris Oscuro</span>
+        </button>
+
+        <!-- Botones de VARIANTES --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Step-Thru - Amarillo"
+            data-title="Step-Thru - Amarillo"
+            data-imagen="https://m.media-amazon.com/images/I/51IzPvEvveL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CJ2Z7N76?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="1.499,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg","width":375,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51IzPvEvveL._SL500_.jpg" alt="Step-Thru - Amarillo" loading="lazy" />
+            
+            <span class="var-label">Step-Thru - Amarillo</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3076,7 +3144,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="ENGWE E26 Step-Thru"
-              
               loading="eager"
             />
           </a>
@@ -3212,7 +3279,78 @@ document.addEventListener('keydown', function(e){
     
   
     <article class="ficha-teclado">
-      <h3 id="ENGWE E26 High-step">ENGWE E26 High-step</h3><div class="imagen-con-miniaturas">
+      <h3 id="ENGWE E26 High-step">ENGWE E26 High-step</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
+
+        <!-- Botón del MODELO PRINCIPAL -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="High-Step - Azul Gema"
+          data-title="High-Step - Azul Gema"
+          data-imagen="https://m.media-amazon.com/images/I/51QzK+V3wTL._SL500_.jpg"
+          data-enlace="https://amzn.to/3GQCbsH?tag=recomendadorn-21&th=1"
+          data-precio="1.499,00 €"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg","width":375,"height":500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/51QzK+V3wTL._SL500_.jpg" alt="High-Step - Azul Gema" loading="lazy" />
+          
+          <span class="var-label">High-Step - Azul Gema</span>
+        </button>
+
+        <!-- Botones de VARIANTES --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Step-Thru - Gris Oscuro"
+            data-title="Step-Thru - Gris Oscuro"
+            data-imagen="https://m.media-amazon.com/images/I/51Lva6IUlzL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CHW4JCFR?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="1.499,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg","width":375,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51Lva6IUlzL._SL500_.jpg" alt="Step-Thru - Gris Oscuro" loading="lazy" />
+            
+            <span class="var-label">Step-Thru - Gris Oscuro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Step-Thru - Amarillo"
+            data-title="Step-Thru - Amarillo"
+            data-imagen="https://m.media-amazon.com/images/I/51IzPvEvveL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CJ2Z7N76?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="1.499,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg","width":375,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51IzPvEvveL._SL500_.jpg" alt="Step-Thru - Amarillo" loading="lazy" />
+            
+            <span class="var-label">Step-Thru - Amarillo</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3226,7 +3364,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="ENGWE E26 High-step"
-              
               loading="eager"
             />
           </a>

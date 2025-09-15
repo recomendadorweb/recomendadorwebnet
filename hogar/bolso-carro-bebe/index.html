@@ -1211,11 +1211,24 @@ Como experto, busco que combine <strong>organización eficiente</strong> y <stro
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1239,16 +1252,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1273,15 +1283,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1290,14 +1301,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1311,7 +1320,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1319,7 +1327,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1331,7 +1338,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1341,7 +1347,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1349,7 +1355,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1373,7 +1379,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Walking Mum I Love Vichy — Bolso organizador Negro 31x17x12 cm"
-              
               loading="eager"
             />
           </a>
@@ -1451,7 +1456,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          25,90 €
+          21,90 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -1493,7 +1498,7 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
     <article class="ficha-teclado">
       <h3 id="TENDS Bolso para Carrito y Maternidad 37x34 cm">TENDS Bolso para Carrito y Maternidad 37x34 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1517,7 +1522,7 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
           <span class="var-label">Grey</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1601,7 +1606,10 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
               <img src="https://m.media-amazon.com/images/I/21nLW+A-6QL._SL500_.jpg" alt="Noir" loading="lazy" />
             
             <span class="var-label">Noir</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1615,7 +1623,6 @@ Lo he lavado a 30 °C con detergente suave y se ha mantenido bien; aconsejo evit
               width="500"
               height="500"
               alt="TENDS Bolso para Carrito y Maternidad 37x34 cm"
-              
               loading="eager"
             />
           </a>
@@ -1744,7 +1751,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
     <article class="ficha-teclado">
       <h3 id="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru">MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1768,7 +1775,7 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
           <span class="var-label">Ecru - M</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1894,7 +1901,10 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
               <img src="https://m.media-amazon.com/images/I/317UW823c8L._SL500_.jpg" alt="Blossom - Estándar" loading="lazy" />
             
             <span class="var-label">Blossom - Estándar</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1908,7 +1918,6 @@ En mi experiencia, es una solución cómoda para salidas y visitas al hospital; 
               width="500"
               height="500"
               alt="MIMUSELINA Bolso Panera para Carrito de Bebé, Ecru"
-              
               loading="eager"
             />
           </a>
@@ -2018,7 +2027,7 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
     <article class="ficha-teclado">
       <h3 id="Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm">Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2030,7 +2039,7 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
           data-title="Moderno"
           data-imagen="https://m.media-amazon.com/images/I/41GxRfmJ5IL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B09R21T6G5?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
-          data-precio="46,33 €"
+          data-precio="46,00 €"
           data-precio-original="No especificado"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41qyfJDU0hL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41QuEO-qh4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415r6dFqhtL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/319m1+JWrwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-lsKjGI-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41otLFLeDxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-gbg4leML._SL500_.jpg","width":500,"height":500}]'
@@ -2042,7 +2051,7 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
           <span class="var-label">Moderno</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2084,7 +2093,10 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
               <img src="https://m.media-amazon.com/images/I/41J8LsqqQ+L._SL500_.jpg" alt="Casual" loading="lazy" />
             
             <span class="var-label">Casual</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2098,7 +2110,6 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
               width="500"
               height="333"
               alt="Walking Mum Bolso Cambiador I Love Vichy — Verde 42x36x13 cm"
-              
               loading="eager"
             />
           </a>
@@ -2196,7 +2207,7 @@ En general me ofrece organización y un acabado cuidado para el día a día con 
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          46,33 €
+          46,00 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -2249,7 +2260,6 @@ Su estilo neutro y urbano lo hace apto para padres y madres, y las asas cortas y
               width="321"
               height="500"
               alt="Danielstore Bolso Maternidad Personalizado Rosa"
-              
               loading="eager"
             />
           </a>
@@ -2414,7 +2424,6 @@ En general es un organizador cómodo y funcional para el día a día.</p>
               width="500"
               height="500"
               alt="Walking Mum Bolsa Crossbody Mimosa Rosa (floral)"
-              
               loading="eager"
             />
           </a>
@@ -2563,7 +2572,7 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
     <article class="ficha-teclado">
       <h3 id="mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)">mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2587,7 +2596,7 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
           <span class="var-label">Talega Polipiel</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2608,7 +2617,10 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
               <img src="https://m.media-amazon.com/images/I/41pUJuV-rpL._SL500_.jpg" alt="Bolso Kona" loading="lazy" />
             
             <span class="var-label">Bolso Kona</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2622,7 +2634,6 @@ La pieza tiene un aspecto cuidado y combina bien con prendas casuales. Para cons
               width="500"
               height="500"
               alt="mibebestore Talega Lactancia Polipiel Rosa (38x33x11 cm)"
-              
               loading="eager"
             />
           </a>
@@ -2732,7 +2743,7 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
     <article class="ficha-teclado">
       <h3 id="variouss Bolso Talega Lactancia Polipiel Blanco/Azul">variouss Bolso Talega Lactancia Polipiel Blanco/Azul</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2756,7 +2767,7 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
           <span class="var-label">Blanco/Azul</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2819,7 +2830,10 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
               <img src="https://m.media-amazon.com/images/I/419lrORRS1L._SL500_.jpg" alt="Rosa" loading="lazy" />
             
             <span class="var-label">Rosa</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2833,7 +2847,6 @@ Ten en cuenta que al ser un producto hecho a medida no admite devolución.</p>
               width="500"
               height="500"
               alt="variouss Bolso Talega Lactancia Polipiel Blanco/Azul"
-              
               loading="eager"
             />
           </a>
@@ -2977,7 +2990,6 @@ Se aprecia el acabado por estar fabricado y bordado en España.</p>
               width="500"
               height="333"
               alt="Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm"
-              
               loading="eager"
             />
           </a>
@@ -3132,7 +3144,6 @@ El diseño unisex en negro aporta un estilo urbano; para mí ha sido práctico y
               width="334"
               height="442"
               alt="mibebestore Bolso Polipiel Carrito Personalizado CELESTE"
-              
               loading="eager"
             />
           </a>

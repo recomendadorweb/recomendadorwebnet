@@ -966,11 +966,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -994,16 +1007,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1028,15 +1038,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1045,14 +1056,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1066,7 +1075,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1074,7 +1082,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1086,7 +1093,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1096,7 +1102,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1104,7 +1110,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1116,7 +1122,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Garmin Forerunner 55">Garmin Forerunner 55</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1140,7 +1146,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro - Smartwatch</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1151,7 +1157,7 @@ document.addEventListener('keydown', function(e){
             data-title="Blanco - Smartwatch"
             data-imagen="https://m.media-amazon.com/images/I/41u06XEXGYL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0953XKD13?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="167,95 €"
+            data-precio="167,71 €"
             data-precio-original="199,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/418pQC6c1VL._SL500_.jpg","width":500,"height":500}]'
@@ -1203,7 +1209,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/21Jzi-5UdjL._SL500_.jpg" alt="Whitestone - con Quick Release Band 3" loading="lazy" />
             
             <span class="var-label">Whitestone - con Quick Release Band 3</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1217,7 +1226,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Garmin Forerunner 55"
-              
               loading="eager"
             />
           </a>
@@ -1337,7 +1345,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Garmin Forerunner 255">Garmin Forerunner 255</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1349,7 +1357,7 @@ document.addEventListener('keydown', function(e){
           data-title="Forerunner 255 - Azul Oscuro"
           data-imagen="https://m.media-amazon.com/images/I/419Jvlp-MrL._SL500_.jpg"
           data-enlace="https://amzn.to/3HQ4EiU?tag=recomendadorn-21&th=1"
-          data-precio="236,23 €"
+          data-precio="241,96 €"
           data-precio-original="209,49 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51d7SESG-VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51FOtcZg97L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/512q+5ObgsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51jdzEpTLfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Wh2nmoUKL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51+a4VgEx+L._SL500_.jpg","width":500,"height":500}]'
@@ -1361,7 +1369,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Forerunner 255 - Azul Oscuro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1466,7 +1474,31 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41wNe-M+lrL._SL500_.jpg" alt="Forerunner 255 Música - Negro" loading="lazy" />
             
             <span class="var-label">Forerunner 255 Música - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Forerunner 255S - Gris"
+            data-title="Forerunner 255S - Gris"
+            data-imagen="https://m.media-amazon.com/images/I/41oTO2kxiAL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0B46N96ST?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="332,46 €"
+            data-precio-original="349,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51d7SESG-VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51FOtcZg97L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/512q+5ObgsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51jdzEpTLfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Wh2nmoUKL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51+a4VgEx+L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41oTO2kxiAL._SL500_.jpg" alt="Forerunner 255S - Gris" loading="lazy" />
+            
+            <span class="var-label">Forerunner 255S - Gris</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1480,7 +1512,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Garmin Forerunner 255"
-              
               loading="eager"
             />
           </a>
@@ -1568,7 +1599,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          236,23 €
+          241,96 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -1610,7 +1641,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Garmin Forerunner 165">Garmin Forerunner 165</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1622,7 +1653,7 @@ document.addEventListener('keydown', function(e){
           data-title="Music - Negro"
           data-imagen="https://m.media-amazon.com/images/I/31lO0J0XTaL._SL500_.jpg"
           data-enlace="https://amzn.to/40ex9Nf?tag=recomendadorn-21&th=1"
-          data-precio="299,99 €"
+          data-precio="300,99 €"
           data-precio-original="329,99 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41rrE4czoiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41c1A5XG5GL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51CT7kIAmAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41r+Tllzb6L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41foABJnOTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41RfNwy+vRL._SL500_.jpg","width":500,"height":500}]'
@@ -1634,7 +1665,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Music - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1718,7 +1749,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31phsVbUS5L._SL500_.jpg" alt="Music - Azul" loading="lazy" />
             
             <span class="var-label">Music - Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1732,7 +1766,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Garmin Forerunner 165"
-              
               loading="eager"
             />
           </a>
@@ -1820,7 +1853,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          299,99 €
+          300,99 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -1862,7 +1895,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="SUUNTO Race">SUUNTO Race</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1886,7 +1919,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro (All Black)</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1897,7 +1930,7 @@ document.addEventListener('keydown', function(e){
             data-title="Azul (Midnight)"
             data-imagen="https://m.media-amazon.com/images/I/41LUmn4Gn7L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0CC312X97?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="395,98 €"
+            data-precio="394,03 €"
             data-precio-original="399,00 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41zaxb529aL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51doqLP3CqL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51tgLc8r1IL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41FK0oMt+bL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51Xt-+qQcXL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51V1AczgjVL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51Ls8cIAG6L._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41YYB5eAYCL._SL500_.jpg","width":400,"height":500}]'
@@ -1918,7 +1951,7 @@ document.addEventListener('keydown', function(e){
             data-title="Gris (Titanium Charcoal)"
             data-imagen="https://m.media-amazon.com/images/I/413uFo6nAjL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0CC2JTMMM?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="419,00 €"
+            data-precio="396,00 €"
             data-precio-original="499,00 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41zaxb529aL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51yFKUHSUqL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/512GtZx1olL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41FK0oMt+bL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51tSDQ+8GAL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51tUYwreCrL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51RgP0M3aSL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41YYB5eAYCL._SL500_.jpg","width":400,"height":500}]'
@@ -1939,7 +1972,7 @@ document.addEventListener('keydown', function(e){
             data-title="Negro (Titanium Amethyst)"
             data-imagen="https://m.media-amazon.com/images/I/41WdZA5AO7L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0CC33CBHJ?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="368,00 €"
+            data-precio="396,00 €"
             data-precio-original="499,00 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/518A0m46EsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zaxb529aL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/514V39O4yIL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/511tTlaLGlL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41FK0oMt+bL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51OiZONCILL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51dW2u-GTGL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51Naxknu59L._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41YYB5eAYCL._SL500_.jpg","width":400,"height":500}]'
@@ -1970,7 +2003,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41n61dAXsPL._SL500_.jpg" alt="Blanco (Birch White)" loading="lazy" />
             
             <span class="var-label">Blanco (Birch White)</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1984,7 +2020,6 @@ document.addEventListener('keydown', function(e){
               width="400"
               height="500"
               alt="SUUNTO Race"
-              
               loading="eager"
             />
           </a>
@@ -2144,7 +2179,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="SUUNTO 9 Peak">SUUNTO 9 Peak</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2168,7 +2203,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">All Black</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2179,7 +2214,7 @@ document.addEventListener('keydown', function(e){
             data-title="Titanium Slate"
             data-imagen="https://m.media-amazon.com/images/I/417tVUiyMsL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0B64D43WN?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="299,00 €"
+            data-precio="302,00 €"
             data-precio-original="399,00 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51dkNPZ3fJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41VxOn4l9pL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51fe4j5-ZaL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51Tvqp10eEL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/413+5LgtBWL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41u0AuHP0rL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51woMEu+12L._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/51ZNneGh9QL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41A4THavITL._SL500_.jpg","width":400,"height":500},{"url":"https://m.media-amazon.com/images/I/41dDrAc3+hL._SL500_.jpg","width":400,"height":500}]'
@@ -2189,7 +2224,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/417tVUiyMsL._SL500_.jpg" alt="Titanium Slate" loading="lazy" />
             
             <span class="var-label">Titanium Slate</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2203,7 +2241,6 @@ document.addEventListener('keydown', function(e){
               width="400"
               height="500"
               alt="SUUNTO 9 Peak"
-              
               loading="eager"
             />
           </a>
@@ -2385,7 +2422,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Polar M430"
-              
               loading="eager"
             />
           </a>
@@ -2495,7 +2531,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="COROS Pace 3">COROS Pace 3</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2519,7 +2555,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Silicona Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2551,7 +2587,7 @@ document.addEventListener('keydown', function(e){
             data-title="Silicona Blanco"
             data-imagen="https://m.media-amazon.com/images/I/41O9CHvOj2L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0CFQFSTSN?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="234,74 €"
+            data-precio="249,00 €"
             data-precio-original="249,00 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41-VbbGsusL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51ROEa2IFiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41XlckXO3FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Y7JxWu8sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41jT+ojYIWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hvwxIrxgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51UUFGnoZhL._SL500_.jpg","width":500,"height":500}]'
@@ -2572,7 +2608,7 @@ document.addEventListener('keydown', function(e){
             data-title="Nailon Tiza"
             data-imagen="https://m.media-amazon.com/images/I/41yfD8RnDVL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D6VQYQ9R?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="230,28 €"
+            data-precio="249,00 €"
             data-precio-original="249,00 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41l6jfoUAzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51ROEa2IFiL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41IKhZ3LFLL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51ZP244lt7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hvwxIrxgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41jT+ojYIWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/416jyhEaffL._SL500_.jpg","width":500,"height":500}]'
@@ -2582,7 +2618,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41yfD8RnDVL._SL500_.jpg" alt="Nailon Tiza" loading="lazy" />
             
             <span class="var-label">Nailon Tiza</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2596,7 +2635,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="COROS Pace 3"
-              
               loading="eager"
             />
           </a>

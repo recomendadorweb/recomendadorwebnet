@@ -1372,11 +1372,24 @@ Como experto, recomiendo priorizar la <strong>ajustabilidad y el patrón</strong
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1400,16 +1413,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1434,15 +1444,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1451,14 +1462,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1472,7 +1481,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1480,7 +1488,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1492,7 +1499,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1502,7 +1508,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1510,7 +1516,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1522,7 +1528,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Ever-Pretty vestidos invitada talla grande Borgoña 48">Ever-Pretty vestidos invitada talla grande Borgoña 48</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1530,8 +1536,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="48 - Borgoña"
+          data-title="48 - Borgoña"
           data-imagen="https://m.media-amazon.com/images/I/31Vp3ouUvbL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B07QXHK9SV?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="63,99 €"
@@ -1541,12 +1547,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31Vp3ouUvbL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31Vp3ouUvbL._SL500_.jpg" alt="48 - Borgoña" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">48 - Borgoña</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1756,7 +1762,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31arLXQciJL._SL500_.jpg" alt="48 - Cielo Azul" loading="lazy" />
             
             <span class="var-label">48 - Cielo Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B07QXHK9SV?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 221 variantes más en Amazon para Ever-Pretty vestidos invitada talla grande Borgoña 48"
+            title="+221 variantes más en Amazon"
+          >
+            <span class="var-label">+221 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1770,7 +1792,6 @@ document.addEventListener('keydown', function(e){
               width="375"
               height="500"
               alt="Ever-Pretty vestidos invitada talla grande Borgoña 48"
-              
               loading="eager"
             />
           </a>
@@ -1900,7 +1921,7 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
     <article class="ficha-teclado">
       <h3 id="Hanna Nikole vestidos invitada talla grande 2 piezas gasa">Hanna Nikole vestidos invitada talla grande 2 piezas gasa</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1908,23 +1929,23 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Gris Antracita - 54 Grande"
+          data-title="Gris Antracita - 54 Grande"
           data-imagen="https://m.media-amazon.com/images/I/415P03lX-cL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0D78WTR15?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
-          data-precio="69,50 €"
+          data-precio="66,02 €"
           data-precio-original="No especificado"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51QAwHrqWTL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/516yBcJ4SUL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/514Eks1RI6L._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51bcQ6NkzPL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51QwT+z1J8L._SL500_.jpg","width":386,"height":500}]'
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/415P03lX-cL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/415P03lX-cL._SL500_.jpg" alt="Gris Antracita - 54 Grande" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Gris Antracita - 54 Grande</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1956,8 +1977,8 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Negro - 54 Grande"
             data-imagen="https://m.media-amazon.com/images/I/41z3zPxFYlL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78RRYKW?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,73 €"
-            data-precio-original="No especificado"
+            data-precio="78,59 €"
+            data-precio-original="82,73 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51lXzd6sohL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51Itrgtmd3L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51PZEH1tniL._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51nAE5SkISL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51QwT+z1J8L._SL500_.jpg","width":386,"height":500}]'
             
@@ -1977,8 +1998,8 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Azul Cobalto - 54 Grande"
             data-imagen="https://m.media-amazon.com/images/I/4150rFMmDGL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78RS3N8?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,73 €"
-            data-precio-original="No especificado"
+            data-precio="78,59 €"
+            data-precio-original="82,73 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Sfoer0vdL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51yrDQgAZ2L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51Yl3SfKKIL._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51ffLOP2TbL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51QwT+z1J8L._SL500_.jpg","width":386,"height":500}]'
             
@@ -1998,7 +2019,7 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Azul Oscuro - 52 Grande"
             data-imagen="https://m.media-amazon.com/images/I/410s1XGKfaL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78RYCTM?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,91 €"
+            data-precio="78,76 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51NDeeX2vaL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51ljQhhQA1L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51+JH8QIIeL._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51PY7eJG+1L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/61fzoWyedeL._SL500_.jpg","width":385,"height":500}]'
@@ -2019,8 +2040,8 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Azul Oscuro - 28 Plus"
             data-imagen="https://m.media-amazon.com/images/I/410s1XGKfaL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78S5SZG?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,73 €"
-            data-precio-original="No especificado"
+            data-precio="78,59 €"
+            data-precio-original="82,73 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51NDeeX2vaL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51ljQhhQA1L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51+JH8QIIeL._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51PY7eJG+1L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/61fzoWyedeL._SL500_.jpg","width":385,"height":500}]'
             
@@ -2040,8 +2061,8 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Negro - 56 Grande"
             data-imagen="https://m.media-amazon.com/images/I/41z3zPxFYlL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78SFQ9Y?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,73 €"
-            data-precio-original="No especificado"
+            data-precio="78,78 €"
+            data-precio-original="82,73 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51lXzd6sohL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51Itrgtmd3L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51PZEH1tniL._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51nAE5SkISL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51QwT+z1J8L._SL500_.jpg","width":386,"height":500}]'
             
@@ -2061,8 +2082,8 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Negro - 48 Grande"
             data-imagen="https://m.media-amazon.com/images/I/41z3zPxFYlL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78SJJ5K?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,70 €"
-            data-precio-original="No especificado"
+            data-precio="78,56 €"
+            data-precio-original="82,73 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51lXzd6sohL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51Itrgtmd3L._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51PZEH1tniL._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51nAE5SkISL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51QwT+z1J8L._SL500_.jpg","width":386,"height":500}]'
             
@@ -2082,7 +2103,7 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Vino Tinto - 48 Grande"
             data-imagen="https://m.media-amazon.com/images/I/414drY0e3nL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78SKYFS?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,93 €"
+            data-precio="78,78 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/517a8-3SkxL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51tOp5r4mOL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51mei8+Jw0L._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51wiLT2SLsL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51QwT+z1J8L._SL500_.jpg","width":386,"height":500}]'
@@ -2103,8 +2124,8 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Vino Tinto - 50 Grande"
             data-imagen="https://m.media-amazon.com/images/I/414drY0e3nL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78T387R?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="82,73 €"
-            data-precio-original="No especificado"
+            data-precio="78,59 €"
+            data-precio-original="82,73 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/517a8-3SkxL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51tOp5r4mOL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51mei8+Jw0L._SL500_.jpg","width":381,"height":500},{"url":"https://m.media-amazon.com/images/I/51wiLT2SLsL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/51QwT+z1J8L._SL500_.jpg","width":386,"height":500}]'
             
@@ -2124,7 +2145,7 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
             data-title="Rosa Y Morado. - 28 Plus"
             data-imagen="https://m.media-amazon.com/images/I/31GJoh+RsdL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D78RQJ7L?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="69,71 €"
+            data-precio="66,22 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Eh2dEaVTL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/419LSAHj72L._SL500_.jpg","width":368,"height":500},{"url":"https://m.media-amazon.com/images/I/41ATglt1XiL._SL500_.jpg","width":420,"height":500},{"url":"https://m.media-amazon.com/images/I/41TZ-gEczyL._SL500_.jpg","width":390,"height":500},{"url":"https://m.media-amazon.com/images/I/51afXwyomoL._SL500_.jpg","width":385,"height":500}]'
@@ -2134,7 +2155,23 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
               <img src="https://m.media-amazon.com/images/I/31GJoh+RsdL._SL500_.jpg" alt="Rosa Y Morado. - 28 Plus" loading="lazy" />
             
             <span class="var-label">Rosa Y Morado. - 28 Plus</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0D78WTR15?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 22 variantes más en Amazon para Hanna Nikole vestidos invitada talla grande 2 piezas gasa"
+            title="+22 variantes más en Amazon"
+          >
+            <span class="var-label">+22 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2148,7 +2185,6 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
               width="387"
               height="500"
               alt="Hanna Nikole vestidos invitada talla grande 2 piezas gasa"
-              
               loading="eager"
             />
           </a>
@@ -2226,7 +2262,7 @@ Es una opción cómoda y llamativa para cócteles, bodas o cualquier evento form
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          69,50 €
+          66,02 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -2268,7 +2304,7 @@ En mi caso lo combiné con tacones y accesorios sencillos, y funcionó perfecto 
     <article class="ficha-teclado">
       <h3 id="OBEEII vestidos invitada talla grande Rosa Lotus 3XL">OBEEII vestidos invitada talla grande Rosa Lotus 3XL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2276,8 +2312,8 @@ En mi caso lo combiné con tacones y accesorios sencillos, y funcionó perfecto 
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="3XL - Rosa Lotus"
+          data-title="3XL - Rosa Lotus"
           data-imagen="https://m.media-amazon.com/images/I/41qg1IlpFCL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0CT4ZCT7M?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="43,89 €"
@@ -2287,12 +2323,12 @@ En mi caso lo combiné con tacones y accesorios sencillos, y funcionó perfecto 
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41qg1IlpFCL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41qg1IlpFCL._SL500_.jpg" alt="3XL - Rosa Lotus" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">3XL - Rosa Lotus</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2502,7 +2538,23 @@ En mi caso lo combiné con tacones y accesorios sencillos, y funcionó perfecto 
               <img src="https://m.media-amazon.com/images/I/41tPSzAqZ-L._SL500_.jpg" alt="XXL - Azul Claro" loading="lazy" />
             
             <span class="var-label">XXL - Azul Claro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0CT4ZCT7M?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 9 variantes más en Amazon para OBEEII vestidos invitada talla grande Rosa Lotus 3XL"
+            title="+9 variantes más en Amazon"
+          >
+            <span class="var-label">+9 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2516,7 +2568,6 @@ En mi caso lo combiné con tacones y accesorios sencillos, y funcionó perfecto 
               width="500"
               height="500"
               alt="OBEEII vestidos invitada talla grande Rosa Lotus 3XL"
-              
               loading="eager"
             />
           </a>
@@ -2646,7 +2697,7 @@ Por eso lo recomiendo si buscas un vestido de invitada con estilo y comodidad.</
     <article class="ficha-teclado">
       <h3 id="Hanna Nikole vestido invitada boda talla grande gasa">Hanna Nikole vestido invitada boda talla grande gasa</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2670,7 +2721,7 @@ Por eso lo recomiendo si buscas un vestido de invitada con estilo y comodidad.</
           <span class="var-label">Negro - 54 Grande</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2712,7 +2763,31 @@ Por eso lo recomiendo si buscas un vestido de invitada con estilo y comodidad.</
               <img src="https://m.media-amazon.com/images/I/31UASPBSs-L._SL500_.jpg" alt="Gris - 48 Grande" loading="lazy" />
             
             <span class="var-label">Gris - 48 Grande</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Rojo Oscuro - 48 Grande"
+            data-title="Rojo Oscuro - 48 Grande"
+            data-imagen="https://m.media-amazon.com/images/I/317Bd9dxljL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D73BCKK4?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="67,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41GE0j8us1L._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41+dzn7alhL._SL500_.jpg","width":464,"height":500},{"url":"https://m.media-amazon.com/images/I/41188LtxkLL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41QbC6PvUCL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/411ZPg4fTIL._SL500_.jpg","width":333,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/317Bd9dxljL._SL500_.jpg" alt="Rojo Oscuro - 48 Grande" loading="lazy" />
+            
+            <span class="var-label">Rojo Oscuro - 48 Grande</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2726,7 +2801,6 @@ Por eso lo recomiendo si buscas un vestido de invitada con estilo y comodidad.</
               width="313"
               height="500"
               alt="Hanna Nikole vestido invitada boda talla grande gasa"
-              
               loading="eager"
             />
           </a>
@@ -2853,7 +2927,7 @@ Me guié por las tallas US indicadas y el ajuste fue adecuado; en mi caso lo lle
     <article class="ficha-teclado">
       <h3 id="Hanna Nikole vestido invitada boda talla grande">Hanna Nikole vestido invitada boda talla grande</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2861,8 +2935,8 @@ Me guié por las tallas US indicadas y el ajuste fue adecuado; en mi caso lo lle
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Azul Marino - 54 Grande"
+          data-title="Azul Marino - 54 Grande"
           data-imagen="https://m.media-amazon.com/images/I/41J1E9JSESL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DSLN1N17?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="61,21 €"
@@ -2872,12 +2946,12 @@ Me guié por las tallas US indicadas y el ajuste fue adecuado; en mi caso lo lle
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41J1E9JSESL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41J1E9JSESL._SL500_.jpg" alt="Azul Marino - 54 Grande" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Azul Marino - 54 Grande</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3087,7 +3161,23 @@ Me guié por las tallas US indicadas y el ajuste fue adecuado; en mi caso lo lle
               <img src="https://m.media-amazon.com/images/I/41DEuWuaHLL._SL500_.jpg" alt="Azul/Gris - 54 Grande" loading="lazy" />
             
             <span class="var-label">Azul/Gris - 54 Grande</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DSLN1N17?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 9 variantes más en Amazon para Hanna Nikole vestido invitada boda talla grande"
+            title="+9 variantes más en Amazon"
+          >
+            <span class="var-label">+9 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3101,7 +3191,6 @@ Me guié por las tallas US indicadas y el ajuste fue adecuado; en mi caso lo lle
               width="384"
               height="500"
               alt="Hanna Nikole vestido invitada boda talla grande"
-              
               loading="eager"
             />
           </a>
@@ -3221,7 +3310,7 @@ En mi caso aprecié la versatilidad: sirve para bodas, eventos formales o salida
     <article class="ficha-teclado">
       <h3 id="Generic vestidos invitada boda tallas grandes Morado 4XL">Generic vestidos invitada boda tallas grandes Morado 4XL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3229,8 +3318,8 @@ En mi caso aprecié la versatilidad: sirve para bodas, eventos formales o salida
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Morado ( - 4XL"
+          data-title="Morado ( - 4XL"
           data-imagen="https://m.media-amazon.com/images/I/41LQfN-9IdL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DZBMZYNZ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="20,74 €"
@@ -3240,12 +3329,12 @@ En mi caso aprecié la versatilidad: sirve para bodas, eventos formales o salida
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41LQfN-9IdL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41LQfN-9IdL._SL500_.jpg" alt="Morado ( - 4XL" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Morado ( - 4XL</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3455,7 +3544,23 @@ En mi caso aprecié la versatilidad: sirve para bodas, eventos formales o salida
               <img src="https://m.media-amazon.com/images/I/41osm0iyh+L._SL500_.jpg" alt="Negro - 5XL" loading="lazy" />
             
             <span class="var-label">Negro - 5XL</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DZBMZYNZ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 11 variantes más en Amazon para Generic vestidos invitada boda tallas grandes Morado 4XL"
+            title="+11 variantes más en Amazon"
+          >
+            <span class="var-label">+11 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3469,7 +3574,6 @@ En mi caso aprecié la versatilidad: sirve para bodas, eventos formales o salida
               width="500"
               height="500"
               alt="Generic vestidos invitada boda tallas grandes Morado 4XL"
-              
               loading="eager"
             />
           </a>
@@ -3579,7 +3683,7 @@ En conjunto, cumple bien como opción de invitada o dama de honor en tallas gran
     <article class="ficha-teclado">
       <h3 id="Generic vestidos invitada boda tallas grandes manga corta cuello en V">Generic vestidos invitada boda tallas grandes manga corta cuello en V</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3603,7 +3707,7 @@ En conjunto, cumple bien como opción de invitada o dama de honor en tallas gran
           <span class="var-label">5XL - Azul</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3792,7 +3896,44 @@ En conjunto, cumple bien como opción de invitada o dama de honor en tallas gran
               <img src="https://m.media-amazon.com/images/I/4157ZTrBZ4L._SL500_.jpg" alt="L - Amarillo" loading="lazy" />
             
             <span class="var-label">L - Amarillo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="XXL - Rosa"
+            data-title="XXL - Rosa"
+            data-imagen="https://m.media-amazon.com/images/I/41hQas04EFL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D3ZSG6DR?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="9,97 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41laj1AfF3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51yv7awYieL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51yhXX8+W2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41laj1AfF3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51yv7awYieL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Tiz0EpOkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41hQas04EFL._SL500_.jpg" alt="XXL - Rosa" loading="lazy" />
+            
+            <span class="var-label">XXL - Rosa</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0D3ZS6K4W?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 29 variantes más en Amazon para Generic vestidos invitada boda tallas grandes manga corta cuello en V"
+            title="+29 variantes más en Amazon"
+          >
+            <span class="var-label">+29 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3806,7 +3947,6 @@ En conjunto, cumple bien como opción de invitada o dama de honor en tallas gran
               width="500"
               height="500"
               alt="Generic vestidos invitada boda tallas grandes manga corta cuello en V"
-              
               loading="eager"
             />
           </a>
@@ -3938,7 +4078,7 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
     <article class="ficha-teclado">
       <h3 id="SCOMCHIC vestidos boda tallas grandes Borgoña XL manga corta">SCOMCHIC vestidos boda tallas grandes Borgoña XL manga corta</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3946,8 +4086,8 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Borgoña - XL Grande"
+          data-title="Borgoña - XL Grande"
           data-imagen="https://m.media-amazon.com/images/I/31-iQaTpErL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DRZQB5HZ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="50,61 €"
@@ -3957,12 +4097,12 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31-iQaTpErL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31-iQaTpErL._SL500_.jpg" alt="Borgoña - XL Grande" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Borgoña - XL Grande</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4172,7 +4312,23 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
               <img src="https://m.media-amazon.com/images/I/31RwlYfkseL._SL500_.jpg" alt="Negro - - 3XL Grande" loading="lazy" />
             
             <span class="var-label">Negro - - 3XL Grande</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DRZQB5HZ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 21 variantes más en Amazon para SCOMCHIC vestidos boda tallas grandes Borgoña XL manga corta"
+            title="+21 variantes más en Amazon"
+          >
+            <span class="var-label">+21 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4186,7 +4342,6 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
               width="375"
               height="500"
               alt="SCOMCHIC vestidos boda tallas grandes Borgoña XL manga corta"
-              
               loading="eager"
             />
           </a>
@@ -4316,7 +4471,7 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
     <article class="ficha-teclado">
       <h3 id="Generic vestido invitada talla grande gasa manga corta XL">Generic vestido invitada talla grande gasa manga corta XL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4324,8 +4479,8 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Pp1. - XL"
+          data-title="Pp1. - XL"
           data-imagen="https://m.media-amazon.com/images/I/31cHG3lWLVL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0F32X8DZF?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="25,29 €"
@@ -4335,12 +4490,12 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31cHG3lWLVL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31cHG3lWLVL._SL500_.jpg" alt="Pp1. - XL" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Pp1. - XL</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4550,7 +4705,23 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
               <img src="https://m.media-amazon.com/images/I/31GclZH0chL._SL500_.jpg" alt="Gn1 - XXL" loading="lazy" />
             
             <span class="var-label">Gn1 - XXL</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0F32X8DZF?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 45 variantes más en Amazon para Generic vestido invitada talla grande gasa manga corta XL"
+            title="+45 variantes más en Amazon"
+          >
+            <span class="var-label">+45 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4564,7 +4735,6 @@ Recomiendo consultar la guía de tallas para elegir el ajuste deseado.</p>
               width="500"
               height="500"
               alt="Generic vestido invitada talla grande gasa manga corta XL"
-              
               loading="eager"
             />
           </a>

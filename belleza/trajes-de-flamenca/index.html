@@ -1232,11 +1232,24 @@ body {
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1260,16 +1273,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1294,15 +1304,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1311,14 +1322,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1332,7 +1341,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1340,7 +1348,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1352,7 +1359,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1362,7 +1368,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1370,7 +1376,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1382,7 +1388,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Vestido profesional de Flamenca de Lunares">Vestido profesional de Flamenca de Lunares</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1406,7 +1412,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">M - Rojo Con Lunares Negros</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1427,7 +1433,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51R3DAdCS2L._SL500_.jpg" alt="S - Rojo Con Lunares Negros" loading="lazy" />
             
             <span class="var-label">S - Rojo Con Lunares Negros</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1441,7 +1450,6 @@ document.addEventListener('keydown', function(e){
               width="249"
               height="500"
               alt="Vestido profesional de Flamenca de Lunares"
-              
               loading="eager"
             />
           </a>
@@ -1549,7 +1557,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Vestido Flamenco Mujer con Volantes">Vestido Flamenco Mujer con Volantes</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1557,8 +1565,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="M - Negro Multicolor"
+          data-title="M - Negro Multicolor"
           data-imagen="https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg"
           data-enlace="https://amzn.to/46vrh6l?tag=recomendadorn-21&th=1"
           data-precio="49,90 €"
@@ -1568,12 +1576,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41hLyzE8AFL._SL500_.jpg" alt="M - Negro Multicolor" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">M - Negro Multicolor</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1783,7 +1791,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/316ShEeSbsL._SL500_.jpg" alt="L - Lila Blanco" loading="lazy" />
             
             <span class="var-label">L - Lila Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/46vrh6l?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 8 variantes más en Amazon para Vestido Flamenco Mujer con Volantes"
+            title="+8 variantes más en Amazon"
+          >
+            <span class="var-label">+8 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1797,7 +1821,6 @@ document.addEventListener('keydown', function(e){
               width="344"
               height="500"
               alt="Vestido Flamenco Mujer con Volantes"
-              
               loading="eager"
             />
           </a>
@@ -1895,7 +1918,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Traje Profesional 2 Piezas Lunares Gojoy Shop">Traje Profesional 2 Piezas Lunares Gojoy Shop</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1919,7 +1942,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">M - Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2108,7 +2131,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg" alt="L - Azul" loading="lazy" />
             
             <span class="var-label">L - Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="M - Azul"
+            data-title="M - Azul"
+            data-imagen="https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08BDJYXM1?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="39,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41dCyzxZM0L._SL500_.jpg","width":500,"height":447},{"url":"https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg","width":500,"height":474},{"url":"https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg","width":492,"height":500},{"url":"https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg","width":369,"height":500},{"url":"https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg","width":361,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg" alt="M - Azul" loading="lazy" />
+            
+            <span class="var-label">M - Azul</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/41a4Yj2?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 67 variantes más en Amazon para Traje Profesional 2 Piezas Lunares Gojoy Shop"
+            title="+67 variantes más en Amazon"
+          >
+            <span class="var-label">+67 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2122,7 +2182,6 @@ document.addEventListener('keydown', function(e){
               width="393"
               height="500"
               alt="Traje Profesional 2 Piezas Lunares Gojoy Shop"
-              
               loading="eager"
             />
           </a>
@@ -2240,7 +2299,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Vestido Flamenco Rojo Lunares Negro (Niñas)">Vestido Flamenco Rojo Lunares Negro (Niñas)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2264,7 +2323,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">6 años - Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2348,7 +2407,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41za+f2JwiL._SL500_.jpg" alt="4 años - Rojo" loading="lazy" />
             
             <span class="var-label">4 años - Rojo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2362,7 +2424,6 @@ document.addEventListener('keydown', function(e){
               width="322"
               height="500"
               alt="Vestido Flamenco Rojo Lunares Negro (Niñas)"
-              
               loading="eager"
             />
           </a>
@@ -2460,7 +2521,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Vestido Flamenca con Flor (Niñas)">Vestido Flamenca con Flor (Niñas)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2484,7 +2545,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro - 5-6 años(110cm)</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2589,7 +2650,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41tpY1vI4UL._SL500_.jpg" alt="Negro - 9 años(130cm)" loading="lazy" />
             
             <span class="var-label">Negro - 9 años(130cm)</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2603,7 +2667,6 @@ document.addEventListener('keydown', function(e){
               width="398"
               height="500"
               alt="Vestido Flamenca con Flor (Niñas)"
-              
               loading="eager"
             />
           </a>
@@ -2731,7 +2794,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Traje Profesional 2 Piezas Volante en Manga">Traje Profesional 2 Piezas Volante en Manga</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2739,8 +2802,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Rojo - M"
+          data-title="Rojo - M"
           data-imagen="https://m.media-amazon.com/images/I/41L1JcvjGVL._SL500_.jpg"
           data-enlace="https://amzn.to/4o7CJeM?tag=recomendadorn-21&th=1"
           data-precio="29,99 €"
@@ -2750,12 +2813,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41L1JcvjGVL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41L1JcvjGVL._SL500_.jpg" alt="Rojo - M" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Rojo - M</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2965,7 +3028,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31GBpiVE4FL._SL500_.jpg" alt="Negro - M" loading="lazy" />
             
             <span class="var-label">Negro - M</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4o7CJeM?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 59 variantes más en Amazon para Traje Profesional 2 Piezas Volante en Manga"
+            title="+59 variantes más en Amazon"
+          >
+            <span class="var-label">+59 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2979,7 +3058,6 @@ document.addEventListener('keydown', function(e){
               width="281"
               height="500"
               alt="Traje Profesional 2 Piezas Volante en Manga"
-              
               loading="eager"
             />
           </a>
@@ -3097,7 +3175,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Vestido de Flamenco Largo y Elegante">Vestido de Flamenco Largo y Elegante</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3121,7 +3199,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Red - M</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3310,7 +3388,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41vz4uEAzpL._SL500_.jpg" alt="Red - S" loading="lazy" />
             
             <span class="var-label">Red - S</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Blue - 3XL"
+            data-title="Blue - 3XL"
+            data-imagen="https://m.media-amazon.com/images/I/41hQCINE1WL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09YTDH9PH?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="58,00 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41aRPEhuPPL._SL500_.jpg","width":500,"height":491},{"url":"https://m.media-amazon.com/images/I/41j8CDQHKvL._SL500_.jpg","width":396,"height":500},{"url":"https://m.media-amazon.com/images/I/41iVhnsj++L._SL500_.jpg","width":366,"height":500},{"url":"https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg","width":457,"height":500},{"url":"https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg","width":500,"height":241}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41hQCINE1WL._SL500_.jpg" alt="Blue - 3XL" loading="lazy" />
+            
+            <span class="var-label">Blue - 3XL</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/40H13dw?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 7 variantes más en Amazon para Vestido de Flamenco Largo y Elegante"
+            title="+7 variantes más en Amazon"
+          >
+            <span class="var-label">+7 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3324,7 +3439,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Vestido de Flamenco Largo y Elegante"
-              
               loading="eager"
             />
           </a>
@@ -3452,7 +3566,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Traje de Flamenca Mujer Verde">Traje de Flamenca Mujer Verde</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3476,7 +3590,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">M</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3518,7 +3632,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51a0Do1t-DL._SL500_.jpg" alt="XL" loading="lazy" />
             
             <span class="var-label">XL</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3532,7 +3649,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="454"
               alt="Traje de Flamenca Mujer Verde"
-              
               loading="eager"
             />
           </a>
@@ -3605,7 +3721,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Traje de Flamenca Mujer Rojo">Traje de Flamenca Mujer Rojo</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3629,7 +3745,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">38-40</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3650,7 +3766,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41efHDWplLL._SL500_.jpg" alt="L" loading="lazy" />
             
             <span class="var-label">L</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3664,7 +3783,6 @@ document.addEventListener('keydown', function(e){
               width="177"
               height="500"
               alt="Traje de Flamenca Mujer Rojo"
-              
               loading="eager"
             />
           </a>

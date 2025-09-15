@@ -1116,11 +1116,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1144,16 +1157,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1178,15 +1188,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1195,14 +1206,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1216,7 +1225,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1224,7 +1232,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1236,7 +1243,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1246,7 +1252,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1254,7 +1260,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1266,7 +1272,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKXTKL">Mars Gaming MKXTKL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1290,7 +1296,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">MKXTKLBES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1343,8 +1349,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -1395,7 +1401,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4d6kqS9?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 25 variantes más en Amazon para Mars Gaming MKXTKL"
+            title="+25 variantes más en Amazon"
+          >
+            <span class="var-label">+25 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1409,7 +1536,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKXTKL"
-              
               loading="eager"
             />
           </a>
@@ -1549,7 +1675,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKULTRA">Mars Gaming MKULTRA</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1557,23 +1683,23 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MKULTRARES"
+          data-title="MKULTRARES"
           data-imagen="https://m.media-amazon.com/images/I/4141uu0sUfL._SL500_.jpg"
           data-enlace="https://amzn.to/44sorhy?tag=recomendadorn-21&th=1"
-          data-precio="74,00 €"
+          data-precio="71,52 €"
           data-precio-original="59,90 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51FmcV-qGzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Tnt9yBZaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51aCeccGK4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/510O1Dx8c4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Y+8lhrDqL._SL500_.jpg","width":500,"height":500}]'
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/4141uu0sUfL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/4141uu0sUfL._SL500_.jpg" alt="MKULTRARES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MKULTRARES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1626,8 +1752,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -1678,7 +1804,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/44sorhy?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 24 variantes más en Amazon para Mars Gaming MKULTRA"
+            title="+24 variantes más en Amazon"
+          >
+            <span class="var-label">+24 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1692,7 +1939,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKULTRA"
-              
               loading="eager"
             />
           </a>
@@ -1770,7 +2016,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          74,00 €
+          71,52 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -1812,7 +2058,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MK80">Mars Gaming MK80</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1820,8 +2066,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MK80BES"
+          data-title="MK80BES"
           data-imagen="https://m.media-amazon.com/images/I/41kupb44JvL._SL500_.jpg"
           data-enlace="https://amzn.to/43654bC?tag=recomendadorn-21&th=1"
           data-precio="Sin precio"
@@ -1831,12 +2077,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41kupb44JvL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41kupb44JvL._SL500_.jpg" alt="MK80BES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MK80BES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1868,8 +2114,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -1941,7 +2187,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/43654bC?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 25 variantes más en Amazon para Mars Gaming MK80"
+            title="+25 variantes más en Amazon"
+          >
+            <span class="var-label">+25 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1955,7 +2322,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="375"
               alt="Mars Gaming MK80"
-              
               loading="eager"
             />
           </a>
@@ -2073,7 +2439,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKMINIPRO">Mars Gaming MKMINIPRO</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2081,8 +2447,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MKMINIPROYES"
+          data-title="MKMINIPROYES"
           data-imagen="https://m.media-amazon.com/images/I/41eI9tQ13+L._SL500_.jpg"
           data-enlace="https://amzn.to/42VvpJi?tag=recomendadorn-21&th=1"
           data-precio="26,90 €"
@@ -2092,12 +2458,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41eI9tQ13+L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41eI9tQ13+L._SL500_.jpg" alt="MKMINIPROYES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MKMINIPROYES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2150,8 +2516,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -2202,7 +2568,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/42VvpJi?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 24 variantes más en Amazon para Mars Gaming MKMINIPRO"
+            title="+24 variantes más en Amazon"
+          >
+            <span class="var-label">+24 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2216,7 +2703,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKMINIPRO"
-              
               loading="eager"
             />
           </a>
@@ -2336,7 +2822,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKPRO">Mars Gaming MKPRO</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2344,23 +2830,23 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MKPROYES"
+          data-title="MKPROYES"
           data-imagen="https://m.media-amazon.com/images/I/41fSYMkeoIL._SL500_.jpg"
           data-enlace="https://amzn.to/4k3ywXj?tag=recomendadorn-21&th=1"
-          data-precio="41,90 €"
+          data-precio="41,87 €"
           data-precio-original="No especificado"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41rFx5MEjSL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415zS5GQufL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51BPF2QhV5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gRp5Are1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41nKTeb6z5L._SL500_.jpg","width":500,"height":500}]'
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41fSYMkeoIL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41fSYMkeoIL._SL500_.jpg" alt="MKPROYES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MKPROYES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2392,8 +2878,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -2465,7 +2951,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4k3ywXj?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 24 variantes más en Amazon para Mars Gaming MKPRO"
+            title="+24 variantes más en Amazon"
+          >
+            <span class="var-label">+24 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2479,7 +3086,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKPRO"
-              
               loading="eager"
             />
           </a>
@@ -2557,7 +3163,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          41,90 €
+          41,87 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -2597,7 +3203,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKMINIBES">Mars Gaming MKMINIBES</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2605,8 +3211,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MKMINIBES"
+          data-title="MKMINIBES"
           data-imagen="https://m.media-amazon.com/images/I/417bxE0cmDS._SL500_.jpg"
           data-enlace="https://amzn.to/3Zeu3s3?tag=recomendadorn-21&th=1"
           data-precio="39,36 €"
@@ -2616,12 +3222,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/417bxE0cmDS._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/417bxE0cmDS._SL500_.jpg" alt="MKMINIBES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MKMINIBES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2674,8 +3280,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -2726,7 +3332,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3Zeu3s3?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 24 variantes más en Amazon para Mars Gaming MKMINIBES"
+            title="+24 variantes más en Amazon"
+          >
+            <span class="var-label">+24 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2740,7 +3467,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKMINIBES"
-              
               loading="eager"
             />
           </a>
@@ -2860,7 +3586,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MK60 Rainbow White">Mars Gaming MK60 Rainbow White</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2868,8 +3594,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MK60WBRES"
+          data-title="MK60WBRES"
           data-imagen="https://m.media-amazon.com/images/I/41ur6yGMYyL._SL500_.jpg"
           data-enlace="https://amzn.to/43u74Me?tag=recomendadorn-21&th=1"
           data-precio="59,14 €"
@@ -2879,12 +3605,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41ur6yGMYyL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41ur6yGMYyL._SL500_.jpg" alt="MK60WBRES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MK60WBRES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2937,8 +3663,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -2989,7 +3715,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/43u74Me?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 24 variantes más en Amazon para Mars Gaming MK60 Rainbow White"
+            title="+24 variantes más en Amazon"
+          >
+            <span class="var-label">+24 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3003,7 +3850,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MK60 Rainbow White"
-              
               loading="eager"
             />
           </a>
@@ -3121,7 +3967,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKULTRA Blanco">Mars Gaming MKULTRA Blanco</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3129,8 +3975,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MKULTRAWRES"
+          data-title="MKULTRAWRES"
           data-imagen="https://m.media-amazon.com/images/I/41Xm7WP8i0L._SL500_.jpg"
           data-enlace="https://amzn.to/4jTuEYt?tag=recomendadorn-21&th=1"
           data-precio="68,12 €"
@@ -3140,12 +3986,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41Xm7WP8i0L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41Xm7WP8i0L._SL500_.jpg" alt="MKULTRAWRES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MKULTRAWRES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3198,8 +4044,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -3250,7 +4096,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4jTuEYt?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 24 variantes más en Amazon para Mars Gaming MKULTRA Blanco"
+            title="+24 variantes más en Amazon"
+          >
+            <span class="var-label">+24 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3264,7 +4231,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKULTRA Blanco"
-              
               loading="eager"
             />
           </a>
@@ -3384,7 +4350,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKCLOUDPRES">Mars Gaming MKCLOUDPRES</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3408,7 +4374,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Modelo principal</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3461,8 +4427,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -3513,7 +4479,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4mi3g8c?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 25 variantes más en Amazon para Mars Gaming MKCLOUDPRES"
+            title="+25 variantes más en Amazon"
+          >
+            <span class="var-label">+25 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3527,7 +4614,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKCLOUDPRES"
-              
               loading="eager"
             />
           </a>
@@ -3645,7 +4731,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mars Gaming MKPRO Blanco">Mars Gaming MKPRO Blanco</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3653,23 +4739,23 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="MKPROWYES"
+          data-title="MKPROWYES"
           data-imagen="https://m.media-amazon.com/images/I/31TrKlegrPL._SL500_.jpg"
           data-enlace="https://amzn.to/431xAfX?tag=recomendadorn-21&th=1"
-          data-precio="42,87 €"
-          data-precio-original="No especificado"
+          data-precio="40,05 €"
+          data-precio-original="41,89 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41xElGEWUjL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41wgpX2KaJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41gIQsGsIqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41aMndJaA+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Cl54r27-L._SL500_.jpg","width":500,"height":500}]'
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31TrKlegrPL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31TrKlegrPL._SL500_.jpg" alt="MKPROWYES" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">MKPROWYES</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3722,8 +4808,8 @@ document.addEventListener('keydown', function(e){
             data-title="MK320ES"
             data-imagen="https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08568XBVL?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,90 €"
-            data-precio-original="No especificado"
+            data-precio="17,66 €"
+            data-precio-original="19,90 €"
             
               data-imagenes='[]'
             
@@ -3774,7 +4860,128 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg" alt="MKMINIWRES" loading="lazy" />
             
             <span class="var-label">MKMINIWRES</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXES"
+            data-title="MKAXES"
+            data-imagen="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="22,94 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg" alt="MKAXES" loading="lazy" />
+            
+            <span class="var-label">MKAXES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXWES"
+            data-title="MKAXWES"
+            data-imagen="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="19,08 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg" alt="MKAXWES" loading="lazy" />
+            
+            <span class="var-label">MKAXWES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKAXPES"
+            data-title="MKAXPES"
+            data-imagen="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="11,90 €"
+            data-precio-original="15,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg" alt="MKAXPES" loading="lazy" />
+            
+            <span class="var-label">MKAXPES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOES"
+            data-title="MKREVOES"
+            data-imagen="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,23 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg" alt="MKREVOES" loading="lazy" />
+            
+            <span class="var-label">MKREVOES</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="MKREVOPROBES"
+            data-title="MKREVOPROBES"
+            data-imagen="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="21,90 €"
+            data-precio-original="26,90 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg" alt="MKREVOPROBES" loading="lazy" />
+            
+            <span class="var-label">MKREVOPROBES</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/431xAfX?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 24 variantes más en Amazon para Mars Gaming MKPRO Blanco"
+            title="+24 variantes más en Amazon"
+          >
+            <span class="var-label">+24 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3788,7 +4995,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mars Gaming MKPRO Blanco"
-              
               loading="eager"
             />
           </a>
@@ -3866,11 +5072,13 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          42,87 €
+          40,05 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
-                     text-decoration: line-through; white-space: nowrap; display:none;">
+                     text-decoration: line-through; white-space: nowrap; ;">
+          
+            Antes: 41,89 €
           
         </span>
       </p>

@@ -1218,11 +1218,24 @@ Además son prácticos para el día a día: <strong>fáciles de montar y lavable
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1246,16 +1259,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1280,15 +1290,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1297,14 +1308,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1318,7 +1327,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1326,7 +1334,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1338,7 +1345,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1348,7 +1354,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1356,7 +1362,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1380,7 +1386,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Walking Mum Saco Universal para Silla I Love Vichy Verde"
-              
               loading="eager"
             />
           </a>
@@ -1468,7 +1473,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="mibebestore Saco Silla Paseo Universal Cactus Verde">mibebestore Saco Silla Paseo Universal Cactus Verde</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1476,23 +1481,23 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Cactus Caqui"
+          data-title="Cactus Caqui"
           data-imagen="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
-          data-precio="34,90 €"
+          data-precio="34,95 €"
           data-precio-original="No especificado"
           
             data-imagenes='[]'
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/310fPVbAIkL._SL500_.jpg" alt="Cactus Caqui" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Cactus Caqui</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1702,7 +1707,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51KAL+8TIsL._SL500_.jpg" alt="Animals Verde" loading="lazy" />
             
             <span class="var-label">Animals Verde</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0BHFC29PP?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 8 variantes más en Amazon para mibebestore Saco Silla Paseo Universal Cactus Verde"
+            title="+8 variantes más en Amazon"
+          >
+            <span class="var-label">+8 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1716,7 +1737,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="mibebestore Saco Silla Paseo Universal Cactus Verde"
-              
               loading="eager"
             />
           </a>
@@ -1744,7 +1764,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          34,90 €
+          34,95 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -1785,7 +1805,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
     <article class="ficha-teclado">
       <h3 id="Interbaby Saco Silla Paseo Universal Minnie Blossoms">Interbaby Saco Silla Paseo Universal Minnie Blossoms</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1809,7 +1829,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
           <span class="var-label">Minnie Blossons</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1851,7 +1871,10 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               <img src="https://m.media-amazon.com/images/I/41h7CjULcvL._SL500_.jpg" alt="Mickey Topos" loading="lazy" />
             
             <span class="var-label">Mickey Topos</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1865,7 +1888,6 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               width="500"
               height="500"
               alt="Interbaby Saco Silla Paseo Universal Minnie Blossoms"
-              
               loading="eager"
             />
           </a>
@@ -2005,7 +2027,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
     <article class="ficha-teclado">
       <h3 id="variouss Saco Polar Universal Polipiel Beige 98x50 cm">variouss Saco Polar Universal Polipiel Beige 98x50 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2029,7 +2051,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
           <span class="var-label">Polipiel Beige</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2218,7 +2240,31 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               <img src="https://m.media-amazon.com/images/I/41UXNWhK3KL._SL500_.jpg" alt="Vichy Rosa" loading="lazy" />
             
             <span class="var-label">Vichy Rosa</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Vichy Verde"
+            data-title="Vichy Verde"
+            data-imagen="https://m.media-amazon.com/images/I/41KzOZh9cwL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CM11WVN2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="49,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41cjeu3AQdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41GSqhJYGSL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ttQftVYjL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41T4eDp0XcL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41YJizllUhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41LTJgZapmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41AW7JmpBVL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41DgtE3DeuL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51LoUt66+7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41OPxB7ZlRL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41TJxRevJ3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41YqFtJnGSL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41KzOZh9cwL._SL500_.jpg" alt="Vichy Verde" loading="lazy" />
+            
+            <span class="var-label">Vichy Verde</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2232,7 +2278,6 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               width="500"
               height="500"
               alt="variouss Saco Polar Universal Polipiel Beige 98x50 cm"
-              
               loading="eager"
             />
           </a>
@@ -2392,7 +2437,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
     <article class="ficha-teclado">
       <h3 id="molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5">molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2416,7 +2461,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
           <span class="var-label">Ines Ii - Primavera/Otoño</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2479,7 +2524,10 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               <img src="https://m.media-amazon.com/images/I/41Qt2zanJHL._SL500_.jpg" alt="Lotus - Primavera/Otoño" loading="lazy" />
             
             <span class="var-label">Lotus - Primavera/Otoño</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2493,7 +2541,6 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               width="500"
               height="500"
               alt="molis&co Inés II - Saco Capazo 70x42 cm, TOG 2.5"
-              
               loading="eager"
             />
           </a>
@@ -2601,7 +2648,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
     <article class="ficha-teclado">
       <h3 id="Vicloon Saco para Silla de Paseo Universal — Negro">Vicloon Saco para Silla de Paseo Universal — Negro</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2613,7 +2660,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
           data-title="Negro"
           data-imagen="https://m.media-amazon.com/images/I/41+VY0b-krL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DBLX4S7N?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
-          data-precio="15,99 €"
+          data-precio="16,59 €"
           data-precio-original="13,99 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31HFFjPQgyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41WU9zKbKQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51SVanx+fYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4102IWbj4HL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41C6WuRpi8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Fj3sqsypL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41K1wIQ1l4L._SL500_.jpg","width":500,"height":500}]'
@@ -2625,7 +2672,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
           <span class="var-label">Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2636,8 +2683,8 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
             data-title="gris"
             data-imagen="https://m.media-amazon.com/images/I/41jjpoXOlrL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0DBLSRHSP?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="19,99 €"
-            data-precio-original="19,99 €"
+            data-precio="16,14 €"
+            data-precio-original="16,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/417beBLBh4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/513KD9tLu-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51qiTOijMKL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41VbENPZa+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ywnmF2vJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Tmou3TthL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31fy70qTyjL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41GCZwDmO0L._SL500_.jpg","width":500,"height":500}]'
             
@@ -2646,7 +2693,10 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               <img src="https://m.media-amazon.com/images/I/41jjpoXOlrL._SL500_.jpg" alt="gris" loading="lazy" />
             
             <span class="var-label">gris</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2660,7 +2710,6 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               width="500"
               height="500"
               alt="Vicloon Saco para Silla de Paseo Universal — Negro"
-              
               loading="eager"
             />
           </a>
@@ -2758,7 +2807,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          15,99 €
+          16,59 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -2800,7 +2849,7 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
     <article class="ficha-teclado">
       <h3 id="Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm">Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2808,8 +2857,8 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Jirafas - Todo el año"
+          data-title="Jirafas - Todo el año"
           data-imagen="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0F32PDWWQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="39,99 €"
@@ -2819,33 +2868,12 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41Mmn-GtWpL._SL500_.jpg" alt="Jirafas - Todo el año" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Jirafas - Todo el año</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
-            title="África Marrón - Todo el año"
-            data-title="África Marrón - Todo el año"
-            data-imagen="https://m.media-amazon.com/images/I/41s1cA+y3kL._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B0BCKK3WG4?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="33,23 €"
-            data-precio-original="34,99 €"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/413RhQHyChL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31tET4AgPSL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41dyaZg-hTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51BZJGMd2iL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/5145VCch5EL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41VULNQskJL._SL500_.jpg","width":500,"height":500}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/41s1cA+y3kL._SL500_.jpg" alt="África Marrón - Todo el año" loading="lazy" />
-            
-            <span class="var-label">África Marrón - Todo el año</span>
-          </button><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3013,7 +3041,65 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               <img src="https://m.media-amazon.com/images/I/418tiEcdRHL._SL500_.jpg" alt="Rosa Gris Claro - primavera-otoño" loading="lazy" />
             
             <span class="var-label">Rosa Gris Claro - primavera-otoño</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Ositos de Peluche - primavera-otoño"
+            data-title="Ositos de Peluche - primavera-otoño"
+            data-imagen="https://m.media-amazon.com/images/I/31zwc4OY3jL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DNQPH65M?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="41,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41X1LnBq0HL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/418LuA25BHL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31zwc4OY3jL._SL500_.jpg" alt="Ositos de Peluche - primavera-otoño" loading="lazy" />
+            
+            <span class="var-label">Ositos de Peluche - primavera-otoño</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Conejo - Todo el año"
+            data-title="Conejo - Todo el año"
+            data-imagen="https://m.media-amazon.com/images/I/31K5OKdRpsL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F2F6JHDY?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="39,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31-o+ab-8WL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Xx2XAJcGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51IotFDC5kL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/513WufZxwpL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41bylh+oa1L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31K5OKdRpsL._SL500_.jpg" alt="Conejo - Todo el año" loading="lazy" />
+            
+            <span class="var-label">Conejo - Todo el año</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0F32PDWWQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 1 variantes más en Amazon para Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
+            title="+1 variantes más en Amazon"
+          >
+            <span class="var-label">+1 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3027,7 +3113,6 @@ Las cremalleras laterales permiten abrirlo totalmente o sacar los pies del niño
               width="500"
               height="500"
               alt="Totsy Baby Manta porteo universal Minky Jirafas 90x90 cm"
-              
               loading="eager"
             />
           </a>
@@ -3147,7 +3232,7 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
     <article class="ficha-teclado">
       <h3 id="Interbaby Saco Universal Silla Paseo Perritos Azul">Interbaby Saco Universal Silla Paseo Perritos Azul</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3171,7 +3256,7 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
           <span class="var-label">Perritos Azul</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3255,7 +3340,10 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
               <img src="https://m.media-amazon.com/images/I/41ZxvTlL5UL._SL500_.jpg" alt="Cactus Gris" loading="lazy" />
             
             <span class="var-label">Cactus Gris</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3269,7 +3357,6 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
               width="500"
               height="500"
               alt="Interbaby Saco Universal Silla Paseo Perritos Azul"
-              
               loading="eager"
             />
           </a>
@@ -3427,7 +3514,7 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
     <article class="ficha-teclado">
       <h3 id="Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable">Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3451,7 +3538,7 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
           <span class="var-label">Marino Rosa</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3535,7 +3622,10 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
               <img src="https://m.media-amazon.com/images/I/41ZxvTlL5UL._SL500_.jpg" alt="Cactus Gris" loading="lazy" />
             
             <span class="var-label">Cactus Gris</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3549,7 +3639,6 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
               width="500"
               height="500"
               alt="Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable"
-              
               loading="eager"
             />
           </a>
@@ -3721,7 +3810,6 @@ La lavé a máquina varias veces y mantuvo suavidad y forma, por lo que me parec
               width="500"
               height="500"
               alt="Walking Mum Saco Silla Paseo I Love Vichy Rosa (Universal)"
-              
               loading="eager"
             />
           </a>

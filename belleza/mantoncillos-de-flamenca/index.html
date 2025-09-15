@@ -1187,11 +1187,24 @@ body {
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1215,16 +1228,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1249,15 +1259,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1266,14 +1277,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1287,7 +1296,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1295,7 +1303,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1307,7 +1314,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1317,7 +1323,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1325,7 +1331,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1337,7 +1343,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón de Manila Mujer de Pico en Triángulo">Mantón de Manila Mujer de Pico en Triángulo</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1345,8 +1351,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Negro/Rojo"
+          data-title="Negro/Rojo"
           data-imagen="https://m.media-amazon.com/images/I/41TNOw2psUL._SL500_.jpg"
           data-enlace="https://amzn.to/4mm5q5R?tag=recomendadorn-21&th=1"
           data-precio="17,99 €"
@@ -1356,12 +1362,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41TNOw2psUL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41TNOw2psUL._SL500_.jpg" alt="Negro/Rojo" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Negro/Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1494,27 +1500,6 @@ document.addEventListener('keydown', function(e){
             onclick="onVariantClick(this)"
             role="button"
             tabindex="0"
-            title="Fucsia/Morado"
-            data-title="Fucsia/Morado"
-            data-imagen="https://m.media-amazon.com/images/I/41yywV23s-L._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B0DYYKNZGG?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="13,99 €"
-            data-precio-original="No especificado"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51UCYmJSn5L._SL500_.jpg","width":489,"height":500},{"url":"https://m.media-amazon.com/images/I/41WugIz0ZFL._SL500_.jpg","width":306,"height":500},{"url":"https://m.media-amazon.com/images/I/41RyQjx547L._SL500_.jpg","width":403,"height":500},{"url":"https://m.media-amazon.com/images/I/41QopB-mg5L._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41pjzWI++pL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/51CRXETlNqL._SL500_.jpg","width":338,"height":500},{"url":"https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg","width":455,"height":500}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/41yywV23s-L._SL500_.jpg" alt="Fucsia/Morado" loading="lazy" />
-            
-            <span class="var-label">Fucsia/Morado</span>
-          </button><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
             title="Rojo"
             data-title="Rojo"
             data-imagen="https://m.media-amazon.com/images/I/41zK68qNu0L._SL500_.jpg"
@@ -1571,7 +1556,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41foIkGMGsL._SL500_.jpg" alt="Naranja" loading="lazy" />
             
             <span class="var-label">Naranja</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Crema"
+            data-title="Crema"
+            data-imagen="https://m.media-amazon.com/images/I/41wDZsBeezL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DYYM5HB1?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="13,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41la+4Yf7cL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZcP6-5HTL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41WSkUKcVkL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41Fx8xvvKNL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg","width":455,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41wDZsBeezL._SL500_.jpg" alt="Crema" loading="lazy" />
+            
+            <span class="var-label">Crema</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4mm5q5R?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 11 variantes más en Amazon para Mantón de Manila Mujer de Pico en Triángulo"
+            title="+11 variantes más en Amazon"
+          >
+            <span class="var-label">+11 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1585,7 +1607,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mantón de Manila Mujer de Pico en Triángulo"
-              
               loading="eager"
             />
           </a>
@@ -1713,7 +1734,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón Bordado en Flores Para Adulto">Mantón Bordado en Flores Para Adulto</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1721,8 +1742,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Rojo-plata"
+          data-title="Rojo-plata"
           data-imagen="https://m.media-amazon.com/images/I/41Viob2u66L._SL500_.jpg"
           data-enlace="https://amzn.to/3UC7R8G?tag=recomendadorn-21&th=1"
           data-precio="9,99 €"
@@ -1732,12 +1753,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41Viob2u66L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41Viob2u66L._SL500_.jpg" alt="Rojo-plata" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Rojo-plata</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1947,7 +1968,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51vjaMEB-AL._SL500_.jpg" alt="Rosa" loading="lazy" />
             
             <span class="var-label">Rosa</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3UC7R8G?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 18 variantes más en Amazon para Mantón Bordado en Flores Para Adulto"
+            title="+18 variantes más en Amazon"
+          >
+            <span class="var-label">+18 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1961,7 +1998,6 @@ document.addEventListener('keydown', function(e){
               width="499"
               height="500"
               alt="Mantón Bordado en Flores Para Adulto"
-              
               loading="eager"
             />
           </a>
@@ -2029,7 +2065,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón Bordado en Flores Para Adulto">Mantón Bordado en Flores Para Adulto</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2037,8 +2073,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Multicolor"
+          data-title="Multicolor"
           data-imagen="https://m.media-amazon.com/images/I/51kjG1JL1PL._SL500_.jpg"
           data-enlace="https://amzn.to/4l7X154?tag=recomendadorn-21&th=1"
           data-precio="8,99 €"
@@ -2048,12 +2084,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/51kjG1JL1PL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/51kjG1JL1PL._SL500_.jpg" alt="Multicolor" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Multicolor</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2263,7 +2299,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41TEh4VLuiL._SL500_.jpg" alt="Blanco (B)" loading="lazy" />
             
             <span class="var-label">Blanco (B)</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4l7X154?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 2 variantes más en Amazon para Mantón Bordado en Flores Para Adulto"
+            title="+2 variantes más en Amazon"
+          >
+            <span class="var-label">+2 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2277,7 +2329,6 @@ document.addEventListener('keydown', function(e){
               width="499"
               height="500"
               alt="Mantón Bordado en Flores Para Adulto"
-              
               loading="eager"
             />
           </a>
@@ -2345,7 +2396,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón Bordado en Flores Para niña">Mantón Bordado en Flores Para niña</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2369,7 +2420,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2558,7 +2609,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51xgz2E3WTL._SL500_.jpg" alt="Azul Oscuro" loading="lazy" />
             
             <span class="var-label">Azul Oscuro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Marron"
+            data-title="Marron"
+            data-imagen="https://m.media-amazon.com/images/I/51aExo5faoL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07TK4KQ19?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="6,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/519mhHterML._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51aExo5faoL._SL500_.jpg" alt="Marron" loading="lazy" />
+            
+            <span class="var-label">Marron</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4fhhinp?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 5 variantes más en Amazon para Mantón Bordado en Flores Para niña"
+            title="+5 variantes más en Amazon"
+          >
+            <span class="var-label">+5 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2572,7 +2660,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mantón Bordado en Flores Para niña"
-              
               loading="eager"
             />
           </a>
@@ -2660,7 +2747,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón de Colores Liso Para Adulto">Mantón de Colores Liso Para Adulto</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2684,7 +2771,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2873,7 +2960,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41lvpfS1TBL._SL500_.jpg" alt="Amarillo" loading="lazy" />
             
             <span class="var-label">Amarillo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2887,7 +2977,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mantón de Colores Liso Para Adulto"
-              
               loading="eager"
             />
           </a>
@@ -2975,7 +3064,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón de Manila de Flamenco Talla M">Mantón de Manila de Flamenco Talla M</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2999,7 +3088,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">M - Negro Rosas Rojo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3167,7 +3256,65 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51Yp0VGEtWL._SL500_.jpg" alt="M - Negro Rojo" loading="lazy" />
             
             <span class="var-label">M - Negro Rojo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="M - Blanco Rojo"
+            data-title="M - Blanco Rojo"
+            data-imagen="https://m.media-amazon.com/images/I/41UvVqlDQdL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07BD1Z5VW?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41UvVqlDQdL._SL500_.jpg" alt="M - Blanco Rojo" loading="lazy" />
+            
+            <span class="var-label">M - Blanco Rojo</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="M - Negro Ámbar"
+            data-title="M - Negro Ámbar"
+            data-imagen="https://m.media-amazon.com/images/I/51gdy3JrkhL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07BD2PZNH?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="26,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ciAqhahnL._SL500_.jpg","width":500,"height":312}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51gdy3JrkhL._SL500_.jpg" alt="M - Negro Ámbar" loading="lazy" />
+            
+            <span class="var-label">M - Negro Ámbar</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/4m5wgj5?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 12 variantes más en Amazon para Mantón de Manila de Flamenco Talla M"
+            title="+12 variantes más en Amazon"
+          >
+            <span class="var-label">+12 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3181,7 +3328,6 @@ document.addEventListener('keydown', function(e){
               width="320"
               height="500"
               alt="Mantón de Manila de Flamenco Talla M"
-              
               loading="eager"
             />
           </a>
@@ -3249,7 +3395,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón de Manila de Flamenco Talla L">Mantón de Manila de Flamenco Talla L</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3257,8 +3403,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="L - Rojo Dorado"
+          data-title="L - Rojo Dorado"
           data-imagen="https://m.media-amazon.com/images/I/41ChFHsIMFL._SL500_.jpg"
           data-enlace="https://amzn.to/3INSgAq?tag=recomendadorn-21&th=1"
           data-precio="29,95 €"
@@ -3268,12 +3414,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41ChFHsIMFL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41ChFHsIMFL._SL500_.jpg" alt="L - Rojo Dorado" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">L - Rojo Dorado</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3420,7 +3566,86 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51cBWrFABPL._SL500_.jpg" alt="L - Negro Azul" loading="lazy" />
             
             <span class="var-label">L - Negro Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="L - Crema Dorado"
+            data-title="L - Crema Dorado"
+            data-imagen="https://m.media-amazon.com/images/I/512kIGAyFJL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B01ITH2S78?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="29,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51GAhSHRJaL._SL500_.jpg","width":500,"height":461},{"url":"https://m.media-amazon.com/images/I/510SeNH5y5L._SL500_.jpg","width":414,"height":500},{"url":"https://m.media-amazon.com/images/I/41lJeNGpBbL._SL500_.jpg","width":244,"height":500},{"url":"https://m.media-amazon.com/images/I/41FrQBnu7hL._SL500_.jpg","width":363,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/512kIGAyFJL._SL500_.jpg" alt="L - Crema Dorado" loading="lazy" />
+            
+            <span class="var-label">L - Crema Dorado</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="L - Negro Blanco"
+            data-title="L - Negro Blanco"
+            data-imagen="https://m.media-amazon.com/images/I/41W-9s0OAML._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07824RJLG?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="29,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51jZzMM0cbL._SL500_.jpg","width":474,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41W-9s0OAML._SL500_.jpg" alt="L - Negro Blanco" loading="lazy" />
+            
+            <span class="var-label">L - Negro Blanco</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="L - Negro"
+            data-title="L - Negro"
+            data-imagen="https://m.media-amazon.com/images/I/41dm0Hu82IL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B07864F942?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="29,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41-H6buZGaL._SL500_.jpg","width":309,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41dm0Hu82IL._SL500_.jpg" alt="L - Negro" loading="lazy" />
+            
+            <span class="var-label">L - Negro</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/3INSgAq?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 12 variantes más en Amazon para Mantón de Manila de Flamenco Talla L"
+            title="+12 variantes más en Amazon"
+          >
+            <span class="var-label">+12 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3434,7 +3659,6 @@ document.addEventListener('keydown', function(e){
               width="283"
               height="500"
               alt="Mantón de Manila de Flamenco Talla L"
-              
               loading="eager"
             />
           </a>
@@ -3502,7 +3726,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Mantón Bordado en Flores con set de complementos">Mantón Bordado en Flores con set de complementos</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3526,7 +3750,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3568,7 +3792,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41Kf8wsn7SL._SL500_.jpg" alt="Blanco" loading="lazy" />
             
             <span class="var-label">Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3582,7 +3809,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mantón Bordado en Flores con set de complementos"
-              
               loading="eager"
             />
           </a>

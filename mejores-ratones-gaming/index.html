@@ -1111,11 +1111,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1139,16 +1152,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1173,15 +1183,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1190,14 +1201,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1211,7 +1220,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1219,7 +1227,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1231,7 +1238,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1241,7 +1247,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1249,7 +1255,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1273,7 +1279,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="288"
               alt="Logitech G502 HERO"
-              
               loading="eager"
             />
           </a>
@@ -1301,7 +1306,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          32,49 €
+          41,90 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -1343,7 +1348,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer Basilisk V3 X HyperSpeed">Razer Basilisk V3 X HyperSpeed</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1367,7 +1372,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Basilisk V3 X Hyperspeed - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1399,7 +1404,7 @@ document.addEventListener('keydown', function(e){
             data-title="Basilisk X Hyperspeed - Negro"
             data-imagen="https://m.media-amazon.com/images/I/31D19YJ1WVL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B07Y8QWZDW?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="63,78 €"
+            data-precio="63,79 €"
             data-precio-original="74,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51hpJ42z8sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415Me7EJIqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41VBc9capAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51BZgMR+0AL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/419YzjQtkJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41pCwHEHbwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31SOq-SYL8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31jpiTle+BL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41PRD6GyC2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41SXlNCmeUL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZxTkRUPjL._SL500_.jpg","width":500,"height":500}]'
@@ -1441,7 +1446,7 @@ document.addEventListener('keydown', function(e){
             data-title="Basilisk V3 Pro - Negro"
             data-imagen="https://m.media-amazon.com/images/I/41-DF6LRmxL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0B42XQNMH?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="129,99 €"
+            data-precio="138,49 €"
             data-precio-original="179,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/519ajVm-3KL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51WTrUhjf5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/518APcCzQ4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-haI8Sm7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hBtFv9DJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lEcdNjxxL._SL500_.jpg","width":500,"height":354},{"url":"https://m.media-amazon.com/images/I/21POp8xdgdL._SL500_.jpg","width":500,"height":354},{"url":"https://m.media-amazon.com/images/I/21UFcvxbavL._SL500_.jpg","width":354,"height":500},{"url":"https://m.media-amazon.com/images/I/31DRDVsXT3L._SL500_.jpg","width":354,"height":500},{"url":"https://m.media-amazon.com/images/I/211po+1RCyL._SL500_.jpg","width":500,"height":354}]'
@@ -1535,7 +1540,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/412ZFNu3sEL._SL500_.jpg" alt="Basilisk V3 Pro 35K - Blanco" loading="lazy" />
             
             <span class="var-label">Basilisk V3 Pro 35K - Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1549,7 +1557,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer Basilisk V3 X HyperSpeed"
-              
               loading="eager"
             />
           </a>
@@ -1729,7 +1736,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer Basilisk V3">Razer Basilisk V3</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1753,7 +1760,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Basilisk V3 - Black</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1785,7 +1792,7 @@ document.addEventListener('keydown', function(e){
             data-title="Basilisk X Hyperspeed - Negro"
             data-imagen="https://m.media-amazon.com/images/I/31D19YJ1WVL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B07Y8QWZDW?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="63,78 €"
+            data-precio="63,79 €"
             data-precio-original="74,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51hpJ42z8sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415Me7EJIqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41VBc9capAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51BZgMR+0AL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/419YzjQtkJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41pCwHEHbwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31SOq-SYL8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31jpiTle+BL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41PRD6GyC2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41SXlNCmeUL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZxTkRUPjL._SL500_.jpg","width":500,"height":500}]'
@@ -1806,7 +1813,7 @@ document.addEventListener('keydown', function(e){
             data-title="Basilisk V3 Pro - Negro"
             data-imagen="https://m.media-amazon.com/images/I/41-DF6LRmxL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0B42XQNMH?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="129,99 €"
+            data-precio="138,49 €"
             data-precio-original="179,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/519ajVm-3KL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51WTrUhjf5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/518APcCzQ4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-haI8Sm7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hBtFv9DJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lEcdNjxxL._SL500_.jpg","width":500,"height":354},{"url":"https://m.media-amazon.com/images/I/21POp8xdgdL._SL500_.jpg","width":500,"height":354},{"url":"https://m.media-amazon.com/images/I/21UFcvxbavL._SL500_.jpg","width":354,"height":500},{"url":"https://m.media-amazon.com/images/I/31DRDVsXT3L._SL500_.jpg","width":354,"height":500},{"url":"https://m.media-amazon.com/images/I/211po+1RCyL._SL500_.jpg","width":500,"height":354}]'
@@ -1921,7 +1928,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41asaaDnh4L._SL500_.jpg" alt="Basilisk V3 35K - Negro" loading="lazy" />
             
             <span class="var-label">Basilisk V3 35K - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1935,7 +1945,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer Basilisk V3"
-              
               loading="eager"
             />
           </a>
@@ -2117,7 +2126,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Logitech G403 HERO"
-              
               loading="eager"
             />
           </a>
@@ -2205,7 +2213,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          56,44 €
+          57,76 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -2247,7 +2255,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="ASUS ROG SPATHA X">ASUS ROG SPATHA X</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2259,7 +2267,7 @@ document.addEventListener('keydown', function(e){
           data-title="ROG SPATHA X - Negro"
           data-imagen="https://m.media-amazon.com/images/I/31mZ6+vbarL._SL500_.jpg"
           data-enlace="https://amzn.to/3ETZfWC?tag=recomendadorn-21&th=1"
-          data-precio="132,37 €"
+          data-precio="151,95 €"
           data-precio-original="151,80 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41r+ND63hlL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41wOsJMvrsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ldWpQULzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41qF7PCfFCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41b7JC60DnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/414Nks1KDNL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/414Nks1KDNL._SL500_.jpg","width":500,"height":500}]'
@@ -2271,7 +2279,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">ROG SPATHA X - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2324,7 +2332,7 @@ document.addEventListener('keydown', function(e){
             data-title="P723 ROG HARPE II ACE/BLK//MS,AIMPOINTPRO - Negro"
             data-imagen="https://m.media-amazon.com/images/I/31bv+-eZIeL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0FCM6DF3N?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="188,90 €"
+            data-precio="188,80 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31bFEDmWTaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31XJk4LbBVL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31cVBME16DL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Qe6VmWPVL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/310G-RvPtML._SL500_.jpg","width":500,"height":500}]'
@@ -2387,7 +2395,7 @@ document.addEventListener('keydown', function(e){
             data-title="P723 ROG HARPE II ACE/WHT//MS,AIMPOINTPRO - Blanco"
             data-imagen="https://m.media-amazon.com/images/I/31aQBkVPqLL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0FCM74MML?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="208,95 €"
+            data-precio="208,84 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31HFe+7exQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31wby-jJfJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31GfVSlfeoL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31I3ZIIBMML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/312TYxrpH6L._SL500_.jpg","width":500,"height":500}]'
@@ -2418,7 +2426,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/312ud0iJNpL._SL500_.jpg" alt="HARPE ACE EXTREME - Negro" loading="lazy" />
             
             <span class="var-label">HARPE ACE EXTREME - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2432,7 +2443,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="ASUS ROG SPATHA X"
-              
               loading="eager"
             />
           </a>
@@ -2530,7 +2540,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          132,37 €
+          151,95 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -2584,7 +2594,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Logitech G402 Hyperion Fury"
-              
               loading="eager"
             />
           </a>
@@ -2714,7 +2723,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="SteelSeries Aerox 5 Wireless">SteelSeries Aerox 5 Wireless</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2726,7 +2735,7 @@ document.addEventListener('keydown', function(e){
           data-title="Inalámbrico - Aerox 5"
           data-imagen="https://m.media-amazon.com/images/I/41mENIQvBiL._SL500_.jpg"
           data-enlace="https://amzn.to/4dvGiqo?tag=recomendadorn-21&th=1"
-          data-precio="110,46 €"
+          data-precio="110,47 €"
           data-precio-original="99,00 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51Gn-sDB0mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41o+Hjei2LL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41kP1OZEOJL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vPi6DdycL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zQUd9gacL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/415AuI5jikL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41a9Z1VB3mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41x810KHKML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31ckPegIdgL._SL500_.jpg","width":429,"height":500},{"url":"https://m.media-amazon.com/images/I/31gixKIkUdL._SL500_.jpg","width":429,"height":500},{"url":"https://m.media-amazon.com/images/I/31AUCM6EEEL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31hJwpvQoBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/214OkvZ-jYL._SL500_.jpg","width":429,"height":500},{"url":"https://m.media-amazon.com/images/I/31PQit-XuRL._SL500_.jpg","width":172,"height":500},{"url":"https://m.media-amazon.com/images/I/41rSGGl1wjL._SL500_.jpg","width":289,"height":500},{"url":"https://m.media-amazon.com/images/I/41kXej0TwQL._SL500_.jpg","width":289,"height":500}]'
@@ -2738,7 +2747,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Inalámbrico - Aerox 5</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2759,7 +2768,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41Ub62UybmL._SL500_.jpg" alt="Con cable - Aerox 5" loading="lazy" />
             
             <span class="var-label">Con cable - Aerox 5</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2773,7 +2785,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="SteelSeries Aerox 5 Wireless"
-              
               loading="eager"
             />
           </a>
@@ -2961,7 +2972,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          110,46 €
+          110,47 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -3003,7 +3014,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer Viper V3 HyperSpeed">Razer Viper V3 HyperSpeed</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3011,8 +3022,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Viper V3 HyperSpeed - Negro"
+          data-title="Viper V3 HyperSpeed - Negro"
           data-imagen="https://m.media-amazon.com/images/I/31bdoFHzM0L._SL500_.jpg"
           data-enlace="https://amzn.to/43fJXDN?tag=recomendadorn-21&th=1"
           data-precio="59,99 €"
@@ -3022,12 +3033,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31bdoFHzM0L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31bdoFHzM0L._SL500_.jpg" alt="Viper V3 HyperSpeed - Negro" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Viper V3 HyperSpeed - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3080,7 +3091,7 @@ document.addEventListener('keydown', function(e){
             data-title="Viper 8KHz - Negro"
             data-imagen="https://m.media-amazon.com/images/I/31HxPH1WyQL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B08P1PWN2Q?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="69,99 €"
+            data-precio="68,99 €"
             data-precio-original="68,76 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31eRSMB58LL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/21SGkRpxEdL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/21kfX570IDL._SL500_.jpg","width":500,"height":375},{"url":"https://m.media-amazon.com/images/I/21kTrqFPUHL._SL500_.jpg","width":500,"height":375}]'
@@ -3153,7 +3164,107 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31lMWsSgoSL._SL500_.jpg" alt="Viper Mini - Negro" loading="lazy" />
             
             <span class="var-label">Viper Mini - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Viper 8K Hz - ESL"
+            data-title="Viper 8K Hz - ESL"
+            data-imagen="https://m.media-amazon.com/images/I/41LaPdB9rxL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B09S3VW7KG?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="91,29 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41XVtObevwL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ykQ5PRr8L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41G50U0NqhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41HSegLxINL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41pDgbLBzFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rhw99Rx8L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41LaPdB9rxL._SL500_.jpg" alt="Viper 8K Hz - ESL" loading="lazy" />
+            
+            <span class="var-label">Viper 8K Hz - ESL</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Viper V3 Pro - Negro"
+            data-title="Viper V3 Pro - Negro"
+            data-imagen="https://m.media-amazon.com/images/I/31f-at+es2L._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CSPN2G5Z?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="172,52 €"
+            data-precio-original="179,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41dJl-7qKfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51aYvUlYJeL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hTG6+bhML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41oFAeMOlCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41IYH8Cz78L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zV8t0V9+L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41JyfiqrrDL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vN1QnuVFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41s6WHxsTrL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31wSo8oeVdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41qbKlqq80L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31DfjCLG4iL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31f-at+es2L._SL500_.jpg" alt="Viper V3 Pro - Negro" loading="lazy" />
+            
+            <span class="var-label">Viper V3 Pro - Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Viper V3 Pro - Blanco"
+            data-title="Viper V3 Pro - Blanco"
+            data-imagen="https://m.media-amazon.com/images/I/31FHfWB9zeL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CSPNCGL2?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="168,33 €"
+            data-precio-original="179,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41dJl-7qKfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41hTG6+bhML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41F071Sr6fL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41IYH8Cz78L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41EdsibkxHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41okCxe5izL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vN1QnuVFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41NsPk5WIvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FyD4dpjAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31xEhD+OMzL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21lvPI25c7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/311RINpGovL._SL500_.jpg","width":331,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31FHfWB9zeL._SL500_.jpg" alt="Viper V3 Pro - Blanco" loading="lazy" />
+            
+            <span class="var-label">Viper V3 Pro - Blanco</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Viper V3 Pro - Sentinels"
+            data-title="Viper V3 Pro - Sentinels"
+            data-imagen="https://m.media-amazon.com/images/I/31ELY9tAmfL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0DQCKLB3K?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="218,75 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/418tRux5dRL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41i-gZNzypL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41EbsPJJHrL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41iTggUEVWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41nLxKooRWL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41GPougX2zL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31dsOhhcO0L._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31ELY9tAmfL._SL500_.jpg" alt="Viper V3 Pro - Sentinels" loading="lazy" />
+            
+            <span class="var-label">Viper V3 Pro - Sentinels</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://amzn.to/43fJXDN?tag=recomendadorn-21&th=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 1 variantes más en Amazon para Razer Viper V3 HyperSpeed"
+            title="+1 variantes más en Amazon"
+          >
+            <span class="var-label">+1 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3167,7 +3278,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer Viper V3 HyperSpeed"
-              
               loading="eager"
             />
           </a>
@@ -3407,7 +3517,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Corsair NIGHTSWORD">Corsair NIGHTSWORD</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3431,7 +3541,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">NIGHTSWORD</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3452,7 +3562,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31qazocn28L._SL500_.jpg" alt="NIGHTSABRE WIRELESS" loading="lazy" />
             
             <span class="var-label">NIGHTSABRE WIRELESS</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3466,7 +3579,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Corsair NIGHTSWORD"
-              
               loading="eager"
             />
           </a>
@@ -3616,7 +3728,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer DeathAdder V3">Razer DeathAdder V3</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3640,7 +3752,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">DeathAdder V3 - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3714,7 +3826,7 @@ document.addEventListener('keydown', function(e){
             data-title="DeathAdder V3 Pro - Faker - Rojo"
             data-imagen="https://m.media-amazon.com/images/I/412jmAevBeL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0BSXR9HHW?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="253,06 €"
+            data-precio="245,92 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41-ZE4jowRL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41vH-AT5ntL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41QISAM8z3L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51yFGKYMT6L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41CzvA9lVlL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51f7KnIoQ0L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Vcm9n-2wL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41sAsrmDQUL._SL500_.jpg","width":343,"height":500}]'
@@ -3808,7 +3920,52 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31VET0N-mOL._SL500_.jpg" alt="DeathAdder V3 Pro - Negro" loading="lazy" />
             
             <span class="var-label">DeathAdder V3 Pro - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="DeathAdder V3 Hyperspeed - Negro"
+            data-title="DeathAdder V3 Hyperspeed - Negro"
+            data-imagen="https://m.media-amazon.com/images/I/31D4dnvCXtL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D384K6L9?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="104,99 €"
+            data-precio-original="119,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41ZI7IP8krL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41VOqzwBkYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41-8two00iL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41sRWi7t+VL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41QLU-t+7xL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Euq8ZiKQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21VkCxqO-4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31gwF+noMGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/3153k3YMYhL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31D4dnvCXtL._SL500_.jpg" alt="DeathAdder V3 Hyperspeed - Negro" loading="lazy" />
+            
+            <span class="var-label">DeathAdder V3 Hyperspeed - Negro</span>
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="DeathAdder V4 Pro - Blanco"
+            data-title="DeathAdder V4 Pro - Blanco"
+            data-imagen="https://m.media-amazon.com/images/I/316m-1XJULL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0F2TGLH84?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="165,99 €"
+            data-precio-original="179,99 €"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41W09A4fZFL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41udRrcqmbL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41+9XxQSydL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41fgiotryyL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/414WwhYZRBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41fWxfHp6fL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21GVLYbXwhL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/21LVrJh7gZL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31QKpX0oQdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31POSR6uqsL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/316m-1XJULL._SL500_.jpg" alt="DeathAdder V4 Pro - Blanco" loading="lazy" />
+            
+            <span class="var-label">DeathAdder V4 Pro - Blanco</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3822,7 +3979,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer DeathAdder V3"
-              
               loading="eager"
             />
           </a>

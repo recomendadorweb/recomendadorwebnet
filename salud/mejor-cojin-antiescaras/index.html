@@ -1221,11 +1221,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1249,16 +1262,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1283,15 +1293,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1300,14 +1311,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1321,7 +1330,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1329,7 +1337,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1341,7 +1348,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1351,7 +1357,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1359,7 +1365,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1383,7 +1389,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="280"
               alt="TECNOCOLCHÓN Visco Air"
-              
               loading="eager"
             />
           </a>
@@ -1523,7 +1528,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="SILKORA® Premium"
-              
               loading="eager"
             />
           </a>
@@ -1653,7 +1657,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="PEPE Mobility">PEPE Mobility</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1677,7 +1681,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1698,7 +1702,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/21bIWvJdMXL._SL500_.jpg" alt="Azul" loading="lazy" />
             
             <span class="var-label">Azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1712,7 +1719,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="361"
               alt="PEPE Mobility"
-              
               loading="eager"
             />
           </a>
@@ -1844,7 +1850,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="VALENTIA MEDICAL Visco + HR"
-              
               loading="eager"
             />
           </a>
@@ -1974,7 +1979,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Mobiclinic con hueco central"
-              
               loading="eager"
             />
           </a>
@@ -2104,7 +2108,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="408"
               alt="OrtoPrime para Coxis"
-              
               loading="eager"
             />
           </a>
@@ -2266,7 +2269,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="405"
               alt="OrtoPrime Herradura"
-              
               loading="eager"
             />
           </a>
@@ -2418,7 +2420,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="384"
               alt="OrtoPrime Ranurado"
-              
               loading="eager"
             />
           </a>
@@ -2558,7 +2559,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="KMINA Cojín Antiescaras">KMINA Cojín Antiescaras</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2582,7 +2583,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Densidad Alta</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2624,7 +2625,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31-YrarpFRL._SL500_.jpg" alt="Negro" loading="lazy" />
             
             <span class="var-label">Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2638,7 +2642,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="397"
               alt="KMINA Cojín Antiescaras"
-              
               loading="eager"
             />
           </a>
@@ -2768,7 +2771,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="VALENTIA MEDICAL Viscoelástica firme"
-              
               loading="eager"
             />
           </a>
@@ -2898,7 +2900,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="VALENTIA MEDICAL Viscoelástica"
-              
               loading="eager"
             />
           </a>
@@ -3028,7 +3029,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="dumald Cojín Antiescaras"
-              
               loading="eager"
             />
           </a>

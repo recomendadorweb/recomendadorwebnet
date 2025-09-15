@@ -1430,11 +1430,24 @@ Como guía experta, recomiendo priorizar cortes favorecedores y potenciar la <st
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1458,16 +1471,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1492,15 +1502,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1509,14 +1520,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1530,7 +1539,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1538,7 +1546,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1550,7 +1557,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1560,7 +1566,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1568,7 +1574,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1580,7 +1586,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="LIAMERHE vestido invitada otoño Burdeos S">LIAMERHE vestido invitada otoño Burdeos S</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1588,8 +1594,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="S - B-burdeos"
+          data-title="S - B-burdeos"
           data-imagen="https://m.media-amazon.com/images/I/31fGifrFKSL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DFCFZF6C?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="24,99 €"
@@ -1599,12 +1605,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31fGifrFKSL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31fGifrFKSL._SL500_.jpg" alt="S - B-burdeos" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">S - B-burdeos</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1814,7 +1820,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41xmxaeoqRL._SL500_.jpg" alt="M - A-azul Marino" loading="lazy" />
             
             <span class="var-label">M - A-azul Marino</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DFCFZF6C?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 87 variantes más en Amazon para LIAMERHE vestido invitada otoño Burdeos S"
+            title="+87 variantes más en Amazon"
+          >
+            <span class="var-label">+87 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1828,7 +1850,6 @@ document.addEventListener('keydown', function(e){
               width="375"
               height="500"
               alt="LIAMERHE vestido invitada otoño Burdeos S"
-              
               loading="eager"
             />
           </a>
@@ -1925,7 +1946,7 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
     <article class="ficha-teclado">
       <h3 id="LIAMERHE vestido invitada otoño Burdeos L">LIAMERHE vestido invitada otoño Burdeos L</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1949,7 +1970,7 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
           <span class="var-label">Modelo principal</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2159,7 +2180,23 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
               <img src="https://m.media-amazon.com/images/I/41EOUYoMUeL._SL500_.jpg" alt="B-verde-short - L" loading="lazy" />
             
             <span class="var-label">B-verde-short - L</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DFCCPVBQ?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 78 variantes más en Amazon para LIAMERHE vestido invitada otoño Burdeos L"
+            title="+78 variantes más en Amazon"
+          >
+            <span class="var-label">+78 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2173,7 +2210,6 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
               width="375"
               height="500"
               alt="LIAMERHE vestido invitada otoño Burdeos L"
-              
               loading="eager"
             />
           </a>
@@ -2279,7 +2315,7 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
     <article class="ficha-teclado">
       <h3 id="Enmain vestido invitada otoño Negro XL">Enmain vestido invitada otoño Negro XL</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2303,7 +2339,7 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
           <span class="var-label">XL - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2492,7 +2528,44 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
               <img src="https://m.media-amazon.com/images/I/51BVftswNFL._SL500_.jpg" alt="XL - Azul\agua" loading="lazy" />
             
             <span class="var-label">XL - Azul\agua</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="XL - Turquesa"
+            data-title="XL - Turquesa"
+            data-imagen="https://m.media-amazon.com/images/I/51t9jONxncL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0D3PQRLD7?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="24,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41JEKn0iAgL._SL500_.jpg","width":330,"height":500},{"url":"https://m.media-amazon.com/images/I/41XkD9S68WL._SL500_.jpg","width":330,"height":500},{"url":"https://m.media-amazon.com/images/I/516wTxyJYHL._SL500_.jpg","width":330,"height":500},{"url":"https://m.media-amazon.com/images/I/41asoTOqejL._SL500_.jpg","width":330,"height":500},{"url":"https://m.media-amazon.com/images/I/414+VcRf2IL._SL500_.jpg","width":400,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51t9jONxncL._SL500_.jpg" alt="XL - Turquesa" loading="lazy" />
+            
+            <span class="var-label">XL - Turquesa</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0D3PQBZ27?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 84 variantes más en Amazon para Enmain vestido invitada otoño Negro XL"
+            title="+84 variantes más en Amazon"
+          >
+            <span class="var-label">+84 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2506,7 +2579,6 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
               width="330"
               height="500"
               alt="Enmain vestido invitada otoño Negro XL"
-              
               loading="eager"
             />
           </a>
@@ -2624,7 +2696,7 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
     <article class="ficha-teclado">
       <h3 id="CMTOP vestido invitada otoño Azul Marino L">CMTOP vestido invitada otoño Azul Marino L</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2632,8 +2704,8 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Azul Marino - L"
+          data-title="Azul Marino - L"
           data-imagen="https://m.media-amazon.com/images/I/31TSrFMO8eL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DPJQDG3H?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="24,99 €"
@@ -2643,12 +2715,12 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31TSrFMO8eL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31TSrFMO8eL._SL500_.jpg" alt="Azul Marino - L" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Azul Marino - L</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2723,7 +2795,7 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
             data-imagen="https://m.media-amazon.com/images/I/31SuT13T44L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0DPJPXBGD?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
             data-precio="24,99 €"
-            data-precio-original="30,99 €"
+            data-precio-original="33,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41y0TTsdMfL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/41ckNsnzvmL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/41nZtDq3M5L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51ajZgYNzeL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/51Z2fqMT1ML._SL500_.jpg","width":385,"height":500}]'
             
@@ -2858,7 +2930,23 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
               <img src="https://m.media-amazon.com/images/I/31gcgcg-RZL._SL500_.jpg" alt="Negro - M" loading="lazy" />
             
             <span class="var-label">Negro - M</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DPJQDG3H?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 9 variantes más en Amazon para CMTOP vestido invitada otoño Azul Marino L"
+            title="+9 variantes más en Amazon"
+          >
+            <span class="var-label">+9 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2872,7 +2960,6 @@ En mi caso los bolsillos laterales fueron muy útiles para el móvil y las llave
               width="385"
               height="500"
               alt="CMTOP vestido invitada otoño Azul Marino L"
-              
               loading="eager"
             />
           </a>
@@ -2995,7 +3082,7 @@ En mi caso la talla L fue adecuada, y seguí las indicaciones de lavado para man
     <article class="ficha-teclado">
       <h3 id="Neteson vestidos invitada boda otoño 2024 jersey punto A-Line">Neteson vestidos invitada boda otoño 2024 jersey punto A-Line</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3019,7 +3106,7 @@ En mi caso la talla L fue adecuada, y seguí las indicaciones de lavado para man
           <span class="var-label">Rojo Vino - L</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3208,7 +3295,10 @@ En mi caso la talla L fue adecuada, y seguí las indicaciones de lavado para man
               <img src="https://m.media-amazon.com/images/I/41AWVAFWvuL._SL500_.jpg" alt="Verde Oliva - S" loading="lazy" />
             
             <span class="var-label">Verde Oliva - S</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3222,7 +3312,6 @@ En mi caso la talla L fue adecuada, y seguí las indicaciones de lavado para man
               width="455"
               height="500"
               alt="Neteson vestidos invitada boda otoño 2024 jersey punto A-Line"
-              
               loading="eager"
             />
           </a>
@@ -3349,7 +3438,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
     <article class="ficha-teclado">
       <h3 id="Hotouch vestidos invitada boda otoño 2024 Marrón L">Hotouch vestidos invitada boda otoño 2024 Marrón L</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3357,8 +3446,8 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Marrón - L"
+          data-title="Marrón - L"
           data-imagen="https://m.media-amazon.com/images/I/41JheCIr2bL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0D7CYNQZN?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="32,99 €"
@@ -3368,12 +3457,12 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41JheCIr2bL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41JheCIr2bL._SL500_.jpg" alt="Marrón - L" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Marrón - L</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3384,7 +3473,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Verde - XXL"
             data-imagen="https://m.media-amazon.com/images/I/41ej4yFrvXL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CV7VYR?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41W6UIeG2zL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41q35VdER4L._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41-valtZ5NL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41p1DHlsj-L._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3405,7 +3494,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Negro - S"
             data-imagen="https://m.media-amazon.com/images/I/41SX6dBY-kL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CVNLCB?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41sb7e5EnTL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41MksZZa6xL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/419p8xZz+lL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41kra0hb53L._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3426,7 +3515,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Azul - XL"
             data-imagen="https://m.media-amazon.com/images/I/41nYOLBynWL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CWRQM6?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41NEsQ2bzxL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41e6pRtfinL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41gOsxioDtL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41lIrh7qfHL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3447,7 +3536,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Azul - L"
             data-imagen="https://m.media-amazon.com/images/I/41nYOLBynWL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CWLHYM?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41NEsQ2bzxL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41e6pRtfinL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41gOsxioDtL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41lIrh7qfHL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3468,7 +3557,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Marrón - XL"
             data-imagen="https://m.media-amazon.com/images/I/41JheCIr2bL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CVLWC1?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41Oqh1DLHeL._SL500_.jpg","width":334,"height":500},{"url":"https://m.media-amazon.com/images/I/51WSeBwkeIL._SL500_.jpg","width":334,"height":500},{"url":"https://m.media-amazon.com/images/I/41ScM6egHTL._SL500_.jpg","width":334,"height":500},{"url":"https://m.media-amazon.com/images/I/41pwLpv83UL._SL500_.jpg","width":334,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3489,7 +3578,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Negro - XXL"
             data-imagen="https://m.media-amazon.com/images/I/41SX6dBY-kL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CWQ8RF?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41sb7e5EnTL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41MksZZa6xL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/419p8xZz+lL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41kra0hb53L._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3510,7 +3599,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Beige - XXL"
             data-imagen="https://m.media-amazon.com/images/I/41JShbafa-L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CVP7MN?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41gUQDhNuoL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41fqp3f3EPL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41eJPIpNIeL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/416e0vXVKLL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3531,7 +3620,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Beige - XL"
             data-imagen="https://m.media-amazon.com/images/I/41JShbafa-L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CW943P?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41gUQDhNuoL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41fqp3f3EPL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41eJPIpNIeL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/416e0vXVKLL._SL500_.jpg","width":333,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3552,7 +3641,7 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
             data-title="Azul - S"
             data-imagen="https://m.media-amazon.com/images/I/41nYOLBynWL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0D7CWKVYV?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="28,04 €"
+            data-precio="32,99 €"
             data-precio-original="32,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41NEsQ2bzxL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41e6pRtfinL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41gOsxioDtL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/41lIrh7qfHL._SL500_.jpg","width":357,"height":500},{"url":"https://m.media-amazon.com/images/I/412MVFZrojL._SL500_.jpg","width":500,"height":351}]'
@@ -3583,7 +3672,23 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
               <img src="https://m.media-amazon.com/images/I/41CAm+e+iDL._SL500_.jpg" alt="Burdeos - XL" loading="lazy" />
             
             <span class="var-label">Burdeos - XL</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0D7CYNQZN?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 16 variantes más en Amazon para Hotouch vestidos invitada boda otoño 2024 Marrón L"
+            title="+16 variantes más en Amazon"
+          >
+            <span class="var-label">+16 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3597,7 +3702,6 @@ Además, el corte A-line con pliegues y las rayas verticales realmente alargan l
               width="386"
               height="500"
               alt="Hotouch vestidos invitada boda otoño 2024 Marrón L"
-              
               loading="eager"
             />
           </a>
@@ -3717,7 +3821,7 @@ Además, es fácil de combinar con botas o un abrigo para cenas o salidas inform
     <article class="ficha-teclado">
       <h3 id="fdsmall vestido invitada boda otoño 2024 Midi Marrón L">fdsmall vestido invitada boda otoño 2024 Midi Marrón L</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3725,8 +3829,8 @@ Además, es fácil de combinar con botas o un abrigo para cenas o salidas inform
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="L - Marrón"
+          data-title="L - Marrón"
           data-imagen="https://m.media-amazon.com/images/I/41-aXICxlCL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DRNTG124?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="21,89 €"
@@ -3736,12 +3840,12 @@ Además, es fácil de combinar con botas o un abrigo para cenas o salidas inform
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41-aXICxlCL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41-aXICxlCL._SL500_.jpg" alt="L - Marrón" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">L - Marrón</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3951,7 +4055,23 @@ Además, es fácil de combinar con botas o un abrigo para cenas o salidas inform
               <img src="https://m.media-amazon.com/images/I/51CC1EuCF5L._SL500_.jpg" alt="L - Negro" loading="lazy" />
             
             <span class="var-label">L - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DRNTG124?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 5 variantes más en Amazon para fdsmall vestido invitada boda otoño 2024 Midi Marrón L"
+            title="+5 variantes más en Amazon"
+          >
+            <span class="var-label">+5 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3965,7 +4085,6 @@ Además, es fácil de combinar con botas o un abrigo para cenas o salidas inform
               width="500"
               height="500"
               alt="fdsmall vestido invitada boda otoño 2024 Midi Marrón L"
-              
               loading="eager"
             />
           </a>
@@ -4085,7 +4204,7 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
     <article class="ficha-teclado">
       <h3 id="ONLY vestidos boda otoño 3/4 Negro - Talla Medium (40)">ONLY vestidos boda otoño 3/4 Negro - Talla Medium (40)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4097,7 +4216,7 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
           data-title="M - Negro"
           data-imagen="https://m.media-amazon.com/images/I/31+w7wI6JlL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B07CJLMNGY?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
-          data-precio="13,43 €"
+          data-precio="17,90 €"
           data-precio-original="21,99 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/21GJL8Bg7zL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/21ubblml55L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31GuAerbk9L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31-dwWkDYVL._SL500_.jpg","width":385,"height":500}]'
@@ -4109,7 +4228,7 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
           <span class="var-label">M - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4120,7 +4239,7 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
             data-title="S - Negro"
             data-imagen="https://m.media-amazon.com/images/I/31+w7wI6JlL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B07CJHV8QL?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="13,43 €"
+            data-precio="17,90 €"
             data-precio-original="21,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/21GJL8Bg7zL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/21ubblml55L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31GuAerbk9L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31-dwWkDYVL._SL500_.jpg","width":385,"height":500}]'
@@ -4183,7 +4302,7 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
             data-title="L - Negro"
             data-imagen="https://m.media-amazon.com/images/I/31+w7wI6JlL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B07CJRZY8R?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1"
-            data-precio="13,43 €"
+            data-precio="17,90 €"
             data-precio-original="21,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/21GJL8Bg7zL._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/21ubblml55L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31GuAerbk9L._SL500_.jpg","width":385,"height":500},{"url":"https://m.media-amazon.com/images/I/31-dwWkDYVL._SL500_.jpg","width":385,"height":500}]'
@@ -4256,7 +4375,31 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
               <img src="https://m.media-amazon.com/images/I/21SeqrQTeNL._SL500_.jpg" alt="XS - Verde (Pine Grove Pine Grove)" loading="lazy" />
             
             <span class="var-label">XS - Verde (Pine Grove Pine Grove)</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="3XL - Port Royale"
+            data-title="3XL - Port Royale"
+            data-imagen="https://m.media-amazon.com/images/I/31flx9uCMGL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0BMYNVC5Z?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="23,85 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31-1VCFfRkL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/31+6l2SCSSL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/31qB9llgkPL._SL500_.jpg","width":375,"height":500},{"url":"https://m.media-amazon.com/images/I/41YLIaWG-7L._SL500_.jpg","width":375,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/31flx9uCMGL._SL500_.jpg" alt="3XL - Port Royale" loading="lazy" />
+            
+            <span class="var-label">3XL - Port Royale</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4270,7 +4413,6 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
               width="333"
               height="500"
               alt="ONLY vestidos boda otoño 3/4 Negro - Talla Medium (40)"
-              
               loading="eager"
             />
           </a>
@@ -4338,7 +4480,7 @@ Solo hay que tener cuidado con el lavado (agua fría, sin lejía) para mantener 
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          13,43 €
+          17,90 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -4380,7 +4522,7 @@ En mi caso la talla coincidió con lo esperado, por eso recomiendo revisar la gu
     <article class="ficha-teclado">
       <h3 id="DSAoTeng vestidos invitada otoño manga larga verde L">DSAoTeng vestidos invitada otoño manga larga verde L</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4388,8 +4530,8 @@ En mi caso la talla coincidió con lo esperado, por eso recomiendo revisar la gu
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Verde - L"
+          data-title="Verde - L"
           data-imagen="https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0DPF44C38?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="10,29 €"
@@ -4399,12 +4541,12 @@ En mi caso la talla coincidió con lo esperado, por eso recomiendo revisar la gu
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg" alt="Verde - L" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Verde - L</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4614,7 +4756,23 @@ En mi caso la talla coincidió con lo esperado, por eso recomiendo revisar la gu
               <img src="https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg" alt="Rosso - M" loading="lazy" />
             
             <span class="var-label">Rosso - M</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0DPF44C38?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 13 variantes más en Amazon para DSAoTeng vestidos invitada otoño manga larga verde L"
+            title="+13 variantes más en Amazon"
+          >
+            <span class="var-label">+13 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4628,7 +4786,6 @@ En mi caso la talla coincidió con lo esperado, por eso recomiendo revisar la gu
               width="222"
               height="500"
               alt="DSAoTeng vestidos invitada otoño manga larga verde L"
-              
               loading="eager"
             />
           </a>
@@ -4730,7 +4887,7 @@ Me lo puse tanto en una salida informal como en una cena, y se sintió apropiado
     <article class="ficha-teclado">
       <h3 id="JENJON invitada boda otoño Maxi">JENJON invitada boda otoño Maxi</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -4738,8 +4895,8 @@ Me lo puse tanto en una salida informal como en una cena, y se sintió apropiado
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="S - A-verde"
+          data-title="S - A-verde"
           data-imagen="https://m.media-amazon.com/images/I/317NjHobXJL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0CDKRLNPC?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
           data-precio="33,99 €"
@@ -4749,12 +4906,12 @@ Me lo puse tanto en una salida informal como en una cena, y se sintió apropiado
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/317NjHobXJL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/317NjHobXJL._SL500_.jpg" alt="S - A-verde" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">S - A-verde</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -4943,7 +5100,44 @@ Me lo puse tanto en una salida informal como en una cena, y se sintió apropiado
               <img src="https://m.media-amazon.com/images/I/316RS3rnWpL._SL500_.jpg" alt="L - A-azul" loading="lazy" />
             
             <span class="var-label">L - A-azul</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="M - A-azul"
+            data-title="M - A-azul"
+            data-imagen="https://m.media-amazon.com/images/I/316RS3rnWpL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0CDKRLL17?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="39,99 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51LacOtZ6dL._SL500_.jpg","width":386,"height":500},{"url":"https://m.media-amazon.com/images/I/51l-9Zd90XL._SL500_.jpg","width":386,"height":500},{"url":"https://m.media-amazon.com/images/I/31hUeJRiIzL._SL500_.jpg","width":386,"height":500},{"url":"https://m.media-amazon.com/images/I/31NwDjO577L._SL500_.jpg","width":386,"height":500},{"url":"https://m.media-amazon.com/images/I/31c96NWtB3L._SL500_.jpg","width":386,"height":500},{"url":"https://m.media-amazon.com/images/I/415ESr-HPwL._SL500_.jpg","width":386,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/316RS3rnWpL._SL500_.jpg" alt="M - A-azul" loading="lazy" />
+            
+            <span class="var-label">M - A-azul</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0CDKRLNPC?tag=recomendadorn-21&linkCode=osi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 53 variantes más en Amazon para JENJON invitada boda otoño Maxi"
+            title="+53 variantes más en Amazon"
+          >
+            <span class="var-label">+53 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -4957,7 +5151,6 @@ Me lo puse tanto en una salida informal como en una cena, y se sintió apropiado
               width="386"
               height="500"
               alt="JENJON invitada boda otoño Maxi"
-              
               loading="eager"
             />
           </a>

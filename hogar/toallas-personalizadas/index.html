@@ -1137,11 +1137,24 @@ Al elegir materiales de calidad y técnicas de impresión adecuadas, <strong>gan
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1165,16 +1178,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1199,15 +1209,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1216,14 +1227,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1237,7 +1246,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1245,7 +1253,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1257,7 +1264,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1267,7 +1273,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1275,7 +1281,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1287,7 +1293,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="ZPUBLI+ toallas personalizadas 30x50 Princesa">ZPUBLI+ toallas personalizadas 30x50 Princesa</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1311,7 +1317,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Toalla Manos Princesa</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1500,7 +1506,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41aB1X5rhQL._SL500_.jpg" alt="Toalla Manos Unicornio Globo" loading="lazy" />
             
             <span class="var-label">Toalla Manos Unicornio Globo</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Toalla Manos Girafa"
+            data-title="Toalla Manos Girafa"
+            data-imagen="https://m.media-amazon.com/images/I/41glBeLMfcS._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B099HCKDGJ?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="15,10 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31+W98ZUNOS._SL500_.jpg","width":500,"height":329},{"url":"https://m.media-amazon.com/images/I/41ilKxpSX-S._SL500_.jpg","width":500,"height":329},{"url":"https://m.media-amazon.com/images/I/41sswGCYWCS._SL500_.jpg","width":500,"height":329},{"url":"https://m.media-amazon.com/images/I/31VsgqEDVuS._SL500_.jpg","width":500,"height":329},{"url":"https://m.media-amazon.com/images/I/41bLTiXwqwS._SL500_.jpg","width":500,"height":408}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41glBeLMfcS._SL500_.jpg" alt="Toalla Manos Girafa" loading="lazy" />
+            
+            <span class="var-label">Toalla Manos Girafa</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B099H8PX5J?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 9 variantes más en Amazon para ZPUBLI+ toallas personalizadas 30x50 Princesa"
+            title="+9 variantes más en Amazon"
+          >
+            <span class="var-label">+9 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1514,7 +1557,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="ZPUBLI+ toallas personalizadas 30x50 Princesa"
-              
               loading="eager"
             />
           </a>
@@ -1640,7 +1682,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="CARREDANA toallas personalizadas Bordadas - Azul Cielo">CARREDANA toallas personalizadas Bordadas - Azul Cielo</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1664,7 +1706,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Toalla Azul Cielo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1769,7 +1811,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41UzW-kxWIL._SL500_.jpg" alt="Toalla Gris Plata" loading="lazy" />
             
             <span class="var-label">Toalla Gris Plata</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1783,7 +1828,6 @@ document.addEventListener('keydown', function(e){
               width="449"
               height="500"
               alt="CARREDANA toallas personalizadas Bordadas - Azul Cielo"
-              
               loading="eager"
             />
           </a>
@@ -1927,7 +1971,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="ZPUBLI+ toallas personalizadas Jirafa 2 30×50 infantil">ZPUBLI+ toallas personalizadas Jirafa 2 30×50 infantil</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1935,8 +1979,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Toalla Jirafa 2 - 30x50"
+          data-title="Toalla Jirafa 2 - 30x50"
           data-imagen="https://m.media-amazon.com/images/I/41-bwjYSESL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0B87VHXRH?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
           data-precio="15,10 €"
@@ -1946,12 +1990,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/41-bwjYSESL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/41-bwjYSESL._SL500_.jpg" alt="Toalla Jirafa 2 - 30x50" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Toalla Jirafa 2 - 30x50</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2161,7 +2205,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41aB1X5rhQL._SL500_.jpg" alt="Unicornio Globo - 30x50" loading="lazy" />
             
             <span class="var-label">Unicornio Globo - 30x50</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0B87VHXRH?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 89 variantes más en Amazon para ZPUBLI+ toallas personalizadas Jirafa 2 30×50 infantil"
+            title="+89 variantes más en Amazon"
+          >
+            <span class="var-label">+89 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2175,7 +2235,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="ZPUBLI+ toallas personalizadas Jirafa 2 30×50 infantil"
-              
               loading="eager"
             />
           </a>
@@ -2313,7 +2372,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="CARREDANA toallas personalizadas bordadas con puntilla (Azul Cielo)">CARREDANA toallas personalizadas bordadas con puntilla (Azul Cielo)</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2337,7 +2396,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Azul Cielo</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2442,7 +2501,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31wb9BKwjQL._SL500_.jpg" alt="Negro" loading="lazy" />
             
             <span class="var-label">Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2456,7 +2518,6 @@ document.addEventListener('keydown', function(e){
               width="449"
               height="500"
               alt="CARREDANA toallas personalizadas bordadas con puntilla (Azul Cielo)"
-              
               loading="eager"
             />
           </a>
@@ -2572,7 +2633,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="LolaPix toallas personalizadas Surf - varios tamaños">LolaPix toallas personalizadas Surf - varios tamaños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2596,7 +2657,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Surf</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2785,7 +2846,44 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/519NYlCpAGS._SL500_.jpg" alt="Frida" loading="lazy" />
             
             <span class="var-label">Frida</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="Sirena"
+            data-title="Sirena"
+            data-imagen="https://m.media-amazon.com/images/I/41AnwUpqZcS._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B097TCZ6D3?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="15,95 €"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51NFPcgiEvL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/5161pbDSVHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Ee0DF4RpL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/61hhjIHRtKL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41dp+GUAfSL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/519InrVy3TL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41B-h-g2QiL._SL500_.jpg","width":331,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/41AnwUpqZcS._SL500_.jpg" alt="Sirena" loading="lazy" />
+            
+            <span class="var-label">Sirena</span>
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B097TC7T98?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 4 variantes más en Amazon para LolaPix toallas personalizadas Surf - varios tamaños"
+            title="+4 variantes más en Amazon"
+          >
+            <span class="var-label">+4 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2799,7 +2897,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="LolaPix toallas personalizadas Surf - varios tamaños"
-              
               loading="eager"
             />
           </a>
@@ -2927,7 +3024,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="LolaPix toalla personalizada Koala varios tamaños">LolaPix toalla personalizada Koala varios tamaños</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2935,8 +3032,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="Koala"
+          data-title="Koala"
           data-imagen="https://m.media-amazon.com/images/I/416Yd1IEOpL._SL500_.jpg"
           data-enlace="https://www.amazon.es/dp/B0FDL4Y79Y?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
           data-precio="15,95 €"
@@ -2946,12 +3043,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/416Yd1IEOpL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/416Yd1IEOpL._SL500_.jpg" alt="Koala" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">Koala</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3161,7 +3258,23 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41gb-93OLFL._SL500_.jpg" alt="Pikachu" loading="lazy" />
             
             <span class="var-label">Pikachu</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+          <a
+            class="var-btn var-btn--more"
+            href="https://www.amazon.es/dp/B0FDL4Y79Y?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1"
+            target="_blank"
+            rel="nofollow sponsored"
+            role="button"
+            tabindex="0"
+            aria-label="Ver 1 variantes más en Amazon para LolaPix toalla personalizada Koala varios tamaños"
+            title="+1 variantes más en Amazon"
+          >
+            <span class="var-label">+1 variantes más en Amazon</span>
+          </a>
+        
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3175,7 +3288,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="LolaPix toalla personalizada Koala varios tamaños"
-              
               loading="eager"
             />
           </a>
@@ -3315,7 +3427,6 @@ document.addEventListener('keydown', function(e){
               width="470"
               height="500"
               alt="PORRAS ESTAMPACION & BANDERAS toalla personalizada 100×150 cm"
-              
               loading="eager"
             />
           </a>
@@ -3401,7 +3512,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="CUDIYST toallas personalizadas bebe 75×150 cm">CUDIYST toallas personalizadas bebe 75×150 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3425,7 +3536,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">1 Foto</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3530,7 +3641,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/51itV5olU9L._SL500_.jpg" alt="5 Fotos" loading="lazy" />
             
             <span class="var-label">5 Fotos</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3544,7 +3658,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="CUDIYST toallas personalizadas bebe 75×150 cm"
-              
               loading="eager"
             />
           </a>
@@ -3660,7 +3773,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Reuhen toallas personalizadas playa 150×75 y 180×90 cm">Reuhen toallas personalizadas playa 150×75 y 180×90 cm</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3684,7 +3797,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">1 Foto-1</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3852,7 +3965,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41hjRLpWRIL._SL500_.jpg" alt="2 Foto" loading="lazy" />
             
             <span class="var-label">2 Foto</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3866,7 +3982,6 @@ document.addEventListener('keydown', function(e){
               width="396"
               height="500"
               alt="Reuhen toallas personalizadas playa 150×75 y 180×90 cm"
-              
               loading="eager"
             />
           </a>

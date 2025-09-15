@@ -1116,11 +1116,24 @@
 .selector-variantes .var-btn {
   display: inline-flex; align-items: center; gap: .5rem;
   border: 1px solid #ccc; border-radius: 8px; padding: .35rem .6rem;
-  cursor: pointer; background: #fff; font-size: .9rem;
+  cursor: pointer; background: #fff; font-size: .9rem; text-decoration: none; color: inherit;
 }
 .selector-variantes .var-btn[aria-pressed="true"] { border-color: #0073e6; box-shadow: 0 0 0 2px rgba(0,115,230,.15); }
 .selector-variantes .var-btn img { width: 28px; height: 28px; object-fit: cover; border-radius: 4px; }
 .selector-variantes .var-label { white-space: nowrap; max-width: 180px; overflow: hidden; text-overflow: ellipsis; }
+/* Botón "más variantes": que no recorte el texto */
+.selector-variantes .var-btn--more .var-label{
+  max-width: none;      /* sin límite */
+  white-space: normal;  /* permite salto de línea */
+  overflow: visible;    /* no oculte texto */
+  text-overflow: clip;  /* sin elipsis */
+}
+
+/* Opcional: estilo sutil para diferenciarlo (puedes quitarlo si no quieres) */
+.selector-variantes .var-btn--more{
+  border-style: dashed;
+  background: #f0f7ff;
+}
 </style>
 
 <script>
@@ -1144,16 +1157,13 @@ function moverZoomFlotante(e, container) {
   const zoom = container.querySelector('.zoom-flotante');
   const rect = img.getBoundingClientRect();
 
-  // Coordenadas relativas a la imagen
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
 
-  // Posición del fondo (zoom)
   zoom.style.backgroundPosition = `${(x/rect.width)*100}% ${(y/rect.height)*100}%`;
 
-  // Posicionar el cuadro de zoom respecto al contenedor localmente
-  const localLeft = x + 20; // 20px a la derecha del cursor
-  const localTop  = y - zoom.offsetHeight / 2; // centrado verticalmente
+  const localLeft = x + 20;
+  const localTop  = y - zoom.offsetHeight / 2;
   zoom.style.left = `${localLeft}px`;
   zoom.style.top  = `${localTop}px`;
 }
@@ -1178,15 +1188,16 @@ function seleccionarMiniatura(imgElement) {
 /* === VARIANTES === */
 function onVariantClick(btn) {
   const ficha = btn.closest('.ficha-teclado');
-  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>b.setAttribute('aria-pressed','false'));
-  btn.setAttribute('aria-pressed','true');
+  ficha.querySelectorAll('.selector-variantes .var-btn').forEach(b=>{
+    if (b.tagName === 'BUTTON') b.setAttribute('aria-pressed','false');
+  });
+  if (btn.tagName === 'BUTTON') btn.setAttribute('aria-pressed','true');
 
   const vImg = btn.dataset.imagen;
   const vEnlace = btn.dataset.enlace;
   const vPrecio = btn.dataset.precio || '';
   const vPrecioOriginal = btn.dataset.precioOriginal || '';
 
-  // 1) imagen principal + zoom
   const principal = ficha.querySelector('.lupa-imagen img');
   const zoomDiv = ficha.querySelector('.zoom-flotante');
   if (vImg) {
@@ -1195,14 +1206,12 @@ function onVariantClick(btn) {
     if (zoomDiv) zoomDiv.style.backgroundImage = `url('${vImg}')`;
   }
 
-  // 2) ENLACES: botón de compra + enlace de la imagen principal
   const boton = ficha.querySelector('.boton-compra');
   if (boton && vEnlace) boton.href = vEnlace;
 
   const linkImg = ficha.querySelector('.lupa-imagen a');
   if (linkImg && vEnlace) linkImg.href = vEnlace;
 
-  // 3) precios
   const precioActual = ficha.querySelector('.precio-actual');
   if (precioActual) precioActual.textContent = vPrecio || '';
 
@@ -1216,7 +1225,6 @@ function onVariantClick(btn) {
     }
   }
 
-  // 4) galería de miniaturas
   const galeria = ficha.querySelector('.galeria-miniaturas');
   const imagenesAttr = btn.getAttribute('data-imagenes') || '[]';
   if (galeria) {
@@ -1224,7 +1232,6 @@ function onVariantClick(btn) {
       const imagenes = JSON.parse(imagenesAttr);
       galeria.innerHTML = '';
 
-      // miniatura principal
       if (vImg) {
         const mini = document.createElement('img');
         mini.src = vImg;
@@ -1236,7 +1243,6 @@ function onVariantClick(btn) {
         galeria.appendChild(mini);
       }
 
-      // resto de miniaturas
       imagenes.forEach(iv=>{
         const m = document.createElement('img');
         m.src = iv.url;
@@ -1246,7 +1252,7 @@ function onVariantClick(btn) {
         m.onclick = function(){ seleccionarMiniatura(this); };
         galeria.appendChild(m);
       });
-    } catch(e) { /* silencio intencional */ }
+    } catch(e) { /* silencio */ }
   }
 }
 
@@ -1254,7 +1260,7 @@ function onVariantClick(btn) {
 document.addEventListener('keydown', function(e){
   if (e.key !== 'Enter' && e.key !== ' ') return;
   const tgt = e.target;
-  if (tgt.classList && tgt.classList.contains('var-btn')) {
+  if (tgt.classList && tgt.classList.contains('var-btn') && tgt.tagName === 'BUTTON') {
     e.preventDefault();
     onVariantClick(tgt);
   }
@@ -1266,7 +1272,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="SteelSeries Alias Pro Kit">SteelSeries Alias Pro Kit</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1278,7 +1284,7 @@ document.addEventListener('keydown', function(e){
           data-title="Alias Pro XLR Mic + Stream Mixer - XLR - Negro"
           data-imagen="https://m.media-amazon.com/images/I/41eRGqCR0JL._SL500_.jpg"
           data-enlace="https://amzn.to/437YlPF?tag=recomendadorn-21&th=1"
-          data-precio="213,09 €"
+          data-precio="212,85 €"
           data-precio-original="226,66 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41vTwM0Wf4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51UK4iBqcQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51hMEVg0TKL._SL500_.jpg","width":426,"height":500},{"url":"https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4177vcaH7mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41t0kd0M2sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z6EmhDCRL._SL500_.jpg","width":392,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z0YKB+UPL._SL500_.jpg","width":393,"height":500},{"url":"https://m.media-amazon.com/images/I/41JLQgbSV+L._SL500_.jpg","width":335,"height":500},{"url":"https://m.media-amazon.com/images/I/411j3fO+FaL._SL500_.jpg","width":335,"height":500}]'
@@ -1290,7 +1296,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Alias Pro XLR Mic + Stream Mixer - XLR - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1311,7 +1317,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41CpQpGK85L._SL500_.jpg" alt="Alias - USB - Negro" loading="lazy" />
             
             <span class="var-label">Alias - USB - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1325,7 +1334,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="SteelSeries Alias Pro Kit"
-              
               loading="eager"
             />
           </a>
@@ -1463,7 +1471,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          213,09 €
+          212,85 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -1505,7 +1513,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Logitech for Creators Blue Yeti">Logitech for Creators Blue Yeti</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1529,7 +1537,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Micrófono - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1603,7 +1611,7 @@ document.addEventListener('keydown', function(e){
             data-title="Micrófono - Azul"
             data-imagen="https://m.media-amazon.com/images/I/31DaRb7oyoL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B01LY6Z2M6?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="116,46 €"
+            data-precio="113,78 €"
             data-precio-original="139,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51j1+laf17L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Q1MM5tUmL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41rL9qwTwYL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/514FY6ZU-UL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51VHUToLmAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41A9OmXd7xL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41mjoEWX+5L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51aPnO40WqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41MONmC2JML._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41G0J3iiUfL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51WnI8IK3ML._SL500_.jpg","width":500,"height":500}]'
@@ -1613,28 +1621,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31DaRb7oyoL._SL500_.jpg" alt="Micrófono - Azul" loading="lazy" />
             
             <span class="var-label">Micrófono - Azul</span>
-          </button><button
-            type="button"
-            class="var-btn"
-            aria-pressed="false"
-            onclick="onVariantClick(this)"
-            role="button"
-            tabindex="0"
-            title="Yeticaster Kit - Negro"
-            data-title="Yeticaster Kit - Negro"
-            data-imagen="https://m.media-amazon.com/images/I/314D8z3E+5L._SL500_.jpg"
-            data-enlace="https://www.amazon.es/dp/B078MHS3SC?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="110,90 €"
-            data-precio-original="229,99 €"
-            
-              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51A-N8uV2sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41GHe0Ns4ML._SL500_.jpg","width":500,"height":500}]'
-            
-          >
-            
-              <img src="https://m.media-amazon.com/images/I/314D8z3E+5L._SL500_.jpg" alt="Yeticaster Kit - Negro" loading="lazy" />
-            
-            <span class="var-label">Yeticaster Kit - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1648,7 +1638,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Logitech for Creators Blue Yeti"
-              
               loading="eager"
             />
           </a>
@@ -1828,7 +1817,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Elgato Wave:3">Elgato Wave:3</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -1852,7 +1841,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Negro - Microfono</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -1894,7 +1883,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41YVSy2W7JL._SL500_.jpg" alt="Blanco - Starter Kit" loading="lazy" />
             
             <span class="var-label">Blanco - Starter Kit</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -1908,7 +1900,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Elgato Wave:3"
-              
               loading="eager"
             />
           </a>
@@ -2088,7 +2079,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Elgato Wave DX">Elgato Wave DX</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2112,7 +2103,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Wave DX</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2133,7 +2124,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31I2ip+bS4L._SL500_.jpg" alt="Wave DX con Cable" loading="lazy" />
             
             <span class="var-label">Wave DX con Cable</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2147,7 +2141,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Elgato Wave DX"
-              
               loading="eager"
             />
           </a>
@@ -2307,7 +2300,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HyperX QuadCast">HyperX QuadCast</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2331,7 +2324,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">QuadCast - Individual - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2352,7 +2345,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31y5TD6sEmL._SL500_.jpg" alt="ProCast - Individual - Negro" loading="lazy" />
             
             <span class="var-label">ProCast - Individual - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2366,7 +2362,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HyperX QuadCast"
-              
               loading="eager"
             />
           </a>
@@ -2506,7 +2501,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="SteelSeries Alias">SteelSeries Alias</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2530,7 +2525,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Alias - USB - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2541,7 +2536,7 @@ document.addEventListener('keydown', function(e){
             data-title="Alias Pro XLR Mic + Stream Mixer - XLR - Negro"
             data-imagen="https://m.media-amazon.com/images/I/41eRGqCR0JL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0CJ36GTW3?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="213,09 €"
+            data-precio="212,85 €"
             data-precio-original="226,66 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41vTwM0Wf4L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51UK4iBqcQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51hMEVg0TKL._SL500_.jpg","width":426,"height":500},{"url":"https://m.media-amazon.com/images/I/41tK-0Q2P2L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4177vcaH7mL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41t0kd0M2sL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZhCFf33FL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z6EmhDCRL._SL500_.jpg","width":392,"height":500},{"url":"https://m.media-amazon.com/images/I/41Z0YKB+UPL._SL500_.jpg","width":393,"height":500},{"url":"https://m.media-amazon.com/images/I/41JLQgbSV+L._SL500_.jpg","width":335,"height":500},{"url":"https://m.media-amazon.com/images/I/411j3fO+FaL._SL500_.jpg","width":335,"height":500}]'
@@ -2551,7 +2546,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41eRGqCR0JL._SL500_.jpg" alt="Alias Pro XLR Mic + Stream Mixer - XLR - Negro" loading="lazy" />
             
             <span class="var-label">Alias Pro XLR Mic + Stream Mixer - XLR - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2565,7 +2563,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="SteelSeries Alias"
-              
               loading="eager"
             />
           </a>
@@ -2725,7 +2722,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Logitech G Yeti GX">Logitech G Yeti GX</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2749,7 +2746,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Modelo principal</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2770,7 +2767,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/214H7IXocjL._SL500_.jpg" alt="Negro - Micrófono + Brazo articulado" loading="lazy" />
             
             <span class="var-label">Negro - Micrófono + Brazo articulado</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -2784,7 +2784,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Logitech G Yeti GX"
-              
               loading="eager"
             />
           </a>
@@ -2914,7 +2913,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Razer Seiren V3 Chroma">Razer Seiren V3 Chroma</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -2922,8 +2921,8 @@ document.addEventListener('keydown', function(e){
           onclick="onVariantClick(this)"
           role="button"
           tabindex="0"
-          title="Modelo principal"
-          data-title="Modelo principal"
+          title="V3 Chroma - Blanco"
+          data-title="V3 Chroma - Blanco"
           data-imagen="https://m.media-amazon.com/images/I/31nkZmq0s8L._SL500_.jpg"
           data-enlace="https://amzn.to/3RIBHai?tag=recomendadorn-21&th=1"
           data-precio="119,00 €"
@@ -2933,12 +2932,12 @@ document.addEventListener('keydown', function(e){
           
         >
           
-            <img src="https://m.media-amazon.com/images/I/31nkZmq0s8L._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+            <img src="https://m.media-amazon.com/images/I/31nkZmq0s8L._SL500_.jpg" alt="V3 Chroma - Blanco" loading="lazy" />
           
-          <span class="var-label">Modelo principal</span>
+          <span class="var-label">V3 Chroma - Blanco</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -2949,7 +2948,7 @@ document.addEventListener('keydown', function(e){
             data-title="Mini - Negro"
             data-imagen="https://m.media-amazon.com/images/I/21PMFQjj-1S._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B00PADOYP4?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="44,98 €"
+            data-precio="44,97 €"
             data-precio-original="59,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/21CEhAdtMoS._SL500_.jpg","width":500,"height":423},{"url":"https://m.media-amazon.com/images/I/21oT9sDE9VS._SL500_.jpg","width":500,"height":423},{"url":"https://m.media-amazon.com/images/I/41WH9fPSYlS._SL500_.jpg","width":500,"height":333}]'
@@ -3012,7 +3011,7 @@ document.addEventListener('keydown', function(e){
             data-title="V2 Pro - Negro"
             data-imagen="https://m.media-amazon.com/images/I/31YWSdrJmDL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B09F6VX4XG?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="113,89 €"
+            data-precio="114,72 €"
             data-precio-original="84,99 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51PWeCiwDAL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41C4fObFiqL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Zaq-mcVBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41FGkqd9snL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51C8mSRJ9fL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4163Hx+JWnL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51rzPyj7omL._SL500_.jpg","width":500,"height":500}]'
@@ -3096,7 +3095,7 @@ document.addEventListener('keydown', function(e){
             data-title="V3 Chroma - Rosa"
             data-imagen="https://m.media-amazon.com/images/I/31fP65P9bSL._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0CVRZ9DSR?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="119,00 €"
+            data-precio="100,24 €"
             data-precio-original="No especificado"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/41K5mjSAZZL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41zP4ogwAtL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41iVaQ+SohL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41PCiPPAPaL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/514+HNu7QUL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41NMWWZ6tOL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31ZGWFKZXHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/4144t0OLxSL._SL500_.jpg","width":500,"height":500}]'
@@ -3117,7 +3116,7 @@ document.addEventListener('keydown', function(e){
             data-title="V3 Chroma - Negro"
             data-imagen="https://m.media-amazon.com/images/I/41BL4X2ec1L._SL500_.jpg"
             data-enlace="https://www.amazon.es/dp/B0CNXKMSJG?tag=recomendadorn-21&th=1&psc=1"
-            data-precio="115,27 €"
+            data-precio="115,26 €"
             data-precio-original="118,98 €"
             
               data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51j2pO3Pc1L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51v-q-lxxxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51xbGQr-goL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41F3p24tK-L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51QbUvzJYHL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41ZgyrNejgL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31Rcj29HkGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41uDLa8FBBL._SL500_.jpg","width":500,"height":500}]'
@@ -3148,7 +3147,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/31CZkHfx-5L._SL500_.jpg" alt="Mini V3 - Blanco" loading="lazy" />
             
             <span class="var-label">Mini V3 - Blanco</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3162,7 +3164,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Razer Seiren V3 Chroma"
-              
               loading="eager"
             />
           </a>
@@ -3312,7 +3313,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="HyperX SoloCast">HyperX SoloCast</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3324,7 +3325,7 @@ document.addEventListener('keydown', function(e){
           data-title="Solocast - Negro"
           data-imagen="https://m.media-amazon.com/images/I/31OYvMU6ECL._SL500_.jpg"
           data-enlace="https://amzn.to/4dnKkRj?tag=recomendadorn-21&th=1"
-          data-precio="39,50 €"
+          data-precio="39,99 €"
           data-precio-original="39,99 €"
           
             data-imagenes='[{"url":"https://m.media-amazon.com/images/I/31dS9T5zjsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/318tRBd9hCL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31xxXaxt-KL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/416iTqiQwTL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31FL+DXsctL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/31PAGZasHGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/314SRu-GENL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/41WesbWSU8L._SL500_.jpg","width":500,"height":500}]'
@@ -3336,7 +3337,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Solocast - Negro</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3357,7 +3358,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/3196rMjRb2L._SL500_.jpg" alt="Quadcast 2 S - Negro" loading="lazy" />
             
             <span class="var-label">Quadcast 2 S - Negro</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3371,7 +3375,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="HyperX SoloCast"
-              
               loading="eager"
             />
           </a>
@@ -3479,7 +3482,7 @@ document.addEventListener('keydown', function(e){
       <p class="precio-producto" style="margin-top: 6px;">
         <span style="color: #1a8917; font-weight: bold;">Precio actual:</span>
         <span class="precio-actual" style="font-size: 1.2em; font-weight: bold; color: #1a8917; margin-left: 5px;">
-          39,50 €
+          39,99 €
         </span>
         <span class="precio-original"
               style="margin-left: 12px; font-size: 1.1em; font-weight: 600; color: #c0392b;
@@ -3521,7 +3524,7 @@ document.addEventListener('keydown', function(e){
     <article class="ficha-teclado">
       <h3 id="Trust Gaming GXT 252 Emita Plus">Trust Gaming GXT 252 Emita Plus</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
 
-        <!-- Botón del MODELO PRINCIPAL (marcado por defecto) -->
+        <!-- Botón del MODELO PRINCIPAL -->
         <button
           type="button"
           class="var-btn"
@@ -3545,7 +3548,7 @@ document.addEventListener('keydown', function(e){
           <span class="var-label">Emita Plus micrófono con brazo ajustable</span>
         </button>
 
-        <!-- Botones de VARIANTES (ninguno marcado por defecto) --><button
+        <!-- Botones de VARIANTES --><button
             type="button"
             class="var-btn"
             aria-pressed="false"
@@ -3629,7 +3632,10 @@ document.addEventListener('keydown', function(e){
               <img src="https://m.media-amazon.com/images/I/41sm5vm6K6L._SL500_.jpg" alt="Rudox micrófono con pantalla absorbente" loading="lazy" />
             
             <span class="var-label">Rudox micrófono con pantalla absorbente</span>
-          </button></div><div class="imagen-con-miniaturas">
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
@@ -3643,7 +3649,6 @@ document.addEventListener('keydown', function(e){
               width="500"
               height="500"
               alt="Trust Gaming GXT 252 Emita Plus"
-              
               loading="eager"
             />
           </a>
