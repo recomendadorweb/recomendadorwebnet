@@ -57,6 +57,13 @@ productos:
       ATAA Aprilia Dorsoduro 12v Moto eléctrica Infantil Increíble Moto eléctrica para niños y niñas, con Dos Motores de
       12v
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B085H35QJG
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -167,7 +174,7 @@ productos:
           Moto Eléctrica Niños 3 Años 4 Años 5 Años Honda Competición 12V – Moto a Batería para Niños con Ruedas de
           Entrenamiento - Luces y Sonidos - Licencia de Marca – INJUSA
         brand: INJUSA
-        precio: "259,99\_€"
+        precio: "259,95\_€"
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41HXPbRW94L._SL500_.jpg
@@ -225,6 +232,13 @@ productos:
       Moto Eléctrica Niños 3 Años 4 Años 5 Años Repsol 12V – Moto a Batería para Niños con Ruedas de Apoyo - Luces y
       Sonidos - Licencia de Marca – INJUSA
     condicion: new
+    variantes_info:
+      total_en_stock: 2
+      mostradas: 2
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B084VTCVYF
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -285,6 +299,13 @@ productos:
       Moto Eléctrica Niños 3 Años 4 Años 5 Años CR 6V Verde – Moto a Batería para Niños con Ruedas de Apoyo - Puño
       Acelerador - 5-6 km/h – INJUSA
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0CBQ174WS
     a_tener_en_cuenta: 3 a 6 años
     brand: INJUSA
@@ -361,6 +382,13 @@ productos:
       Moto Eléctrica Niños 3 Años 4 Años 5 Años 6 Años Thunder MAX VX 12V – Moto a Batería para Niños con Ruedas de
       Apoyo - Puño Acelerador - 5-6 km/h - Roja – INJUSA
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0B1JGL7Q3
     a_tener_en_cuenta: 3 a 6 años
     brand: Babycar
@@ -503,4 +531,11 @@ productos:
       - name: color_name
         value: Rojo
     condicion: ''
-actualizacion: '2025-09-14'
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
+actualizacion: '2025-09-15'

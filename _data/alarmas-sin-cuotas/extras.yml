@@ -47,6 +47,13 @@ productos:
     variantes: []
     nombreCompleto: Teclado de la Ring Alarm (2.ª generación)
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B08J6C5JJN
     a_tener_en_cuenta:
       - Requiere estación base de Ring Alarm
@@ -95,6 +102,13 @@ productos:
     variantes: []
     nombreCompleto: Detector de movimiento de Ring Alarm (2.ª generación)
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B08J6SJBFD
     a_tener_en_cuenta:
       - Requiere estación base Ring Alarm
@@ -139,6 +153,13 @@ productos:
     variantes: []
     nombreCompleto: Sensor de contacto de Ring Alarm (2.ª generación)
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0923BB6KQ
     a_tener_en_cuenta:
       - Funciona con pilas
@@ -199,6 +220,13 @@ productos:
     variantes: []
     nombreCompleto: Sensor de contacto de exteriores de la Ring Alarm
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B08J67ZNCD
     a_tener_en_cuenta:
       - No funciona sin estación base
@@ -238,6 +266,13 @@ productos:
     variantes: []
     nombreCompleto: Extensor de alcance de la Ring Alarm (2.ª generación)
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B08HGYR7JC
     a_tener_en_cuenta:
       - Necesita fuente de energía adicional (no incluida)
@@ -299,6 +334,13 @@ productos:
     variantes: []
     nombreCompleto: Sirena para exteriores Ring Alarm de Amazon
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B09NXP9QBL
     a_tener_en_cuenta:
       - Requiere Ring Home Standard para alertas avanzadas
@@ -357,6 +399,13 @@ productos:
     variantes: []
     nombreCompleto: Botón del pánico Ring de Amazon
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B09LFGXM5K
     a_tener_en_cuenta:
       - No es un dispositivo electrónico
@@ -380,7 +429,7 @@ productos:
     valoracion: 5
     precio: "9,99\_€"
     precioOriginal: No especificado
-    disponibilidad: Envío en 3 a 6 meses
+    disponibilidad: ' Temporalmente sin stock.  Puedes comprarlo ya y te lo enviaremos cuando tengamos stock. Recibirás un e-mail con la fecha de entrega cuando tengamos más información.'
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41Gr7UKw-KL._SL500_.jpg
         width: 500
@@ -402,6 +451,13 @@ productos:
     variantes: []
     nombreCompleto: Placa de seguridad Ring
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B08TGJTVG6
     a_tener_en_cuenta:
       - Requiere Ring Home Standard para grabación
@@ -428,7 +484,7 @@ productos:
     valoracion: 5
     precio: "45,99\_€"
     precioOriginal: No especificado
-    disponibilidad: Disponible para envío en 1 o 2 días
+    disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/11xrHAudLzL._SL500_.jpg
         width: 500
@@ -461,6 +517,13 @@ productos:
     variantes: []
     nombreCompleto: Sensor de rotura de cristales para Ring Alarm
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0B6GKHS2S
     a_tener_en_cuenta:
       - No incluye almacenamiento sin Ring Home Standard
@@ -755,6 +818,75 @@ productos:
             value: 1 Cámara
         ParentASIN: B0C62PV871
         condicion: new
+      - ASIN: B0CRMBP1W6
+        title: >-
+          Ring Cámara interior (Indoor Camera 2.ª gen.) | Cámara de vigilancia wifi con enchufe para mascotas | Vídeo
+          1080p HD, comunicación bidireccional, cubierta de privacidad | Ring Protect 30 días gratis
+        brand: Ring
+        precio: "49,99\_€"
+        precioOriginal: "59,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/311S0TvSEXL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41beJm5sdEL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ici98-v4L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41dFz6p9U+L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41HhuvT-NVL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Xi0FYVsvL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51mjPfkZEuL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CRMBP1W6?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            VÍDEO EN DIRECTO Y COMUNICACIÓN BIDIRECCIONAL: Una mini cámara de vigilancia para interiores con enchufe que
+            te permite vigilar a tus mascotas y saludarlas estés donde estés gracias al vídeo en directo HD y la
+            comunicación bidireccional.
+          - 'VÍDEO HD 1080p: Vigila a tus mascotas estés donde estés gracias al vídeo en directo con resolución HD 1080p.'
+          - >-
+            COMUNICACIÓN BIDIRECCIONAL: Habla a tus mascotas y hazles saber que estás pendiente de ellas a través de la
+            comunicación bidireccional.
+          - >-
+            CUBIERTA DE PRIVACIDAD EXTRAÍBLE: Gira la cubierta de privacidad si quieres tapar la cámara y apagar el
+            micrófono para mantener el control de todo lo que ve, oye y graba la Cámara interior Ring (2.ª gen.).
+          - >-
+            INSTALACIÓN FLEXIBLE: Coloca la Cámara interior Ring (2.ª gen.) en una superficie plana o fíjala a cualquier
+            pared con el soporte de montaje versátil.
+          - >-
+            CONFIGURACIÓN SENCILLA: La Cámara interior Ring (2.ª gen.) es fácil de instalar, ya que solo tienes que
+            enchufarla a cualquier toma eléctrica estándar y conectarla a la red wifi de tu domicilio.
+          - >-
+            MODO MANOS LIBRES: vincula un dispositivo compatible con Alexa y utiliza la comunicación bidireccional para
+            averiguar lo que ocurre en tu hogar estés donde estés.
+          - >-
+            VINCULA TUS DISPOSITIVOS: La app de Ring te permite conectar por wifi todos tus dispositivos, ajustar su
+            configuración y utilizar los diferentes modos para armarlos o desarmarlos en tu domicilio desde cualquier
+            lugar. Se requiere una suscripción a Ring Home (a la venta por separado).
+          - >-
+            MÁS VISIÓN,MÁS INFORMACIÓNY MÁS PROTECCIÓN: guarda las grabaciones de tus vídeos hasta 180 días para volver
+            a verlas en cualquier momento, recibe alertas cuando se detecte a una persona y mucho más con una
+            suscripción a Ring Home (a la venta por separado)*.
+        variationAttributes:
+          - name: color_name
+            value: Carbón
+          - name: style_name
+            value: Solo Cámara
+          - name: configuration
+            value: 1 Cámara
+        ParentASIN: B0C62PV871
     ParentASIN: B0C62PV871
     variationAttributes:
       - name: color_name
@@ -767,4 +899,11 @@ productos:
       Ring Cámara interior (Indoor Camera 2.ª gen.) | Cámara de vigilancia wifi con enchufe para mascotas | Vídeo 1080p
       HD, comunicación bidireccional, cubierta de privacidad | 30 días gratis de Ring Home
     condicion: new
-actualizacion: '2025-09-14'
+    variantes_info:
+      total_en_stock: 4
+      mostradas: 4
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
+actualizacion: '2025-09-15'

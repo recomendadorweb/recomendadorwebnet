@@ -246,6 +246,13 @@ productos:
       - name: pattern_name
         value: Pollitos
     condicion: new
+    variantes_info:
+      total_en_stock: 3
+      mostradas: 3
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B084GDD5WB
     nombreCompleto: Body bebe personalizado ¿Es muy pronto para pedir una moto? Unisex motorista divertido
     valoracion: 4.9
@@ -291,6 +298,13 @@ productos:
     title: Body bebe personalizado ¿Es muy pronto para pedir una moto? Unisex motorista divertido
     variantes: []
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0D4ZHC2M1
     nombreCompleto: Latostadora Body Bebe Personalizado - Ropa para Niño y Niña Recién Nacido - Body Friki para Bebés
     valoracion: 4.8
@@ -942,6 +956,24 @@ productos:
         condicion: new
     ParentASIN: B0CMXWVVWF
     condicion: new
+    variationAttributes:
+      - name: color_name
+        value: Blanco
+      - name: size_name
+        value: 3 meses
+    variantes_info:
+      total_en_stock: 13
+      mostradas: 10
+      restantes: 3
+      truncado: true
+    variantes_restantes_asins:
+      - B0D4ZFBRPP
+      - B0D4ZHCPKQ
+      - B0D4ZHJTZ3
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0D4ZFBRPP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D4ZHCPKQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D4ZHJTZ3?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0DTJ611J3
     nombreCompleto: >-
       Body Bebe Personalizado/Niño Niña - Body Personalizable Bebe Recien Nacido - Ropa Recién Nacido Niños - Bodys
@@ -1316,6 +1348,13 @@ productos:
       - name: color_name
         value: Blanco
     condicion: new
+    variantes_info:
+      total_en_stock: 7
+      mostradas: 7
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0F5Z5JGTP
     nombreCompleto: Pack 2 Body personalizado bebe '¿Quieres ser mi Padrino/Madrina?'
     valoracion: 4.1
@@ -1371,6 +1410,13 @@ productos:
     title: Pack 2 Body Bebe personalizado '¿Quieres ser mi Padrino/Madrina?'
     variantes: []
     condicion: ''
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0F63KSPY2
     nombreCompleto: Body personalizado bebe '¿Quieres ser mi Padrino/Madrina?
     valoracion: 4.1
@@ -1429,4 +1475,11 @@ productos:
     title: Body Bebe personalizado '¿Quieres ser mi Padrino/Madrina?
     variantes: []
     condicion: ''
-actualizacion: '2025-09-14'
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
+actualizacion: '2025-09-15'

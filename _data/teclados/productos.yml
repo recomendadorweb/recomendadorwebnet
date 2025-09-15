@@ -175,7 +175,7 @@ productos:
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
-        precio: "128,21\_€"
+        precio: "129,51\_€"
         precioOriginal: "129,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -282,7 +282,7 @@ productos:
         brand: Razer
         precio: "117,43\_€"
         precioOriginal: "129,99\_€"
-        disponibilidad: En stock
+        disponibilidad: Envío en 3 a 7 meses
         imagen: https://m.media-amazon.com/images/I/41m8BNuVVXL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -597,6 +597,68 @@ productos:
             value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
         condicion: new
+      - ASIN: B097F2PD7Q
+        title: >-
+          Huntsman Mini (Red Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores opto-mecánicos
+          (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
+        brand: Razer
+        precio: "99,99\_€"
+        precioOriginal: "139,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 308
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51REl2pSzaL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/511TzLIInxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51E6rgZg01L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QMGlY9QOL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QMFIxQR+L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B097F2PD7Q?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Switches ópticos Razer - para un accionamiento a la velocidad de la luz: Ofrece un accionamiento más rápido,
+            ligero y fluido que los switches mecánicos, así como mayor durabilidad ya que necesita menos piezas móviles
+            que funcionan con menos fricción - Disponible en dos variantes: lineal y con sonido click
+          - >-
+            Teclas de PBT de doble inyección con funciones secundarias impresas en el lateral - para una calidad con
+            textura premium: Diseñado para una mayor durabilidad, no se va a deteriorar nunca con un acabado brillante
+            ni se van a desgastar las etiquetas por el uso intense - Funciones secundarias impresas en el lateral para
+            facilitar la referencia
+          - >-
+            Memoria integrada y preajustes de iluminación - para llevar tu configuración donde quieras: Guarda y activa
+            hasta 5 perfiles de teclado sin necesidad de software, mientras lo personalizas más con un paquete de
+            efectos de iluminación Razer Chroma RGB ya instalado en el teclado
+          - >-
+            Diseño compacto 60 % - para una experiencia de juego portátil y sencilla: Ideal para escritorios pequeños o
+            minimalistas en los que el espacio es primordial - Su diseño compacto significa que te lo puedes llevar sin
+            problemas y es fácil de colocar para jugar, lo que te permite que juegues con mayor comodidad
+          - >-
+            Cable tipo C desmontable - para instalar y guardar tu teclado fácilmente: Conecta tu teclado y juega al
+            instante sin líos para tus LAN parties y torneos. Un cierre de seguridad mantiene el cable conectado durante
+            toda la partida
+          - >-
+            Estructura de aluminio - para mayor durabilidad: La carcasa es lo suficientemente resistente como para
+            aguantar horas de uso intenso y continuo, además de tener un acabado limpio en mate
+        variationAttributes:
+          - name: style_name
+            value: Huntsman Mini
+          - name: size_name
+            value: Diseño ES
+          - name: color_name
+            value: Interruptor Rojo Linear
+        ParentASIN: B0F9Q1MJLF
     ParentASIN: B0F9Q1MJLF
     variationAttributes:
       - name: style_name
@@ -609,6 +671,35 @@ productos:
       Razer Huntsman V2 Analog - Teclado Premium para juegos con interruptores ópticos analógicos (reposamuñecas,
       control giratorio digital, 4 teclas multimedia, Chroma RGB) Teclado Español - Negro
     condicion: used
+    variantes_info:
+      total_en_stock: 21
+      mostradas: 10
+      restantes: 11
+      truncado: true
+    variantes_restantes_asins:
+      - B097F37JBK
+      - B097F3GVH4
+      - B097F3HGC4
+      - B097F3KDS3
+      - B0BDZBXF63
+      - B0CDBXR2B2
+      - B0CDBYCF7D
+      - B0CDBYFZDD
+      - B0CVS74DSZ
+      - B0D2P9KPJ7
+      - B0DT9LJ177
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B097F37JBK?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B097F3GVH4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B097F3HGC4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B097F3KDS3?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BDZBXF63?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CDBXR2B2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CDBYCF7D?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CDBYFZDD?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CVS74DSZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D2P9KPJ7?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DT9LJ177?tag=recomendadorn-21&th=1&psc=1
   - nombre: Razer BlackWidow V4 X
     lo_mejor: Switches mecánicos Green muy responsivos, RGB por tecla, rueda multifunción, teclas multimedia dedicadas
     a_tener_en_cuenta: No incluye reposamuñecas, pero excelente calidad-precio dentro de gama media-alta
@@ -699,7 +790,7 @@ productos:
           Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
           mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
         brand: Razer
-        precio: "112,10\_€"
+        precio: "112,13\_€"
         precioOriginal: "119,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
@@ -1104,11 +1195,200 @@ productos:
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
         condicion: used
+      - ASIN: B08Z8L965V
+        title: >-
+          Razer BlackWidow V3 Mini HyperSpeed (Yellow Switch) - Teclado para juegos 65% compacto con interruptores
+          mecánicos (lineales y de clic, iluminación RGB Chroma) Teclado Español - Negro
+        brand: Razer
+        precio: "180,36\_€"
+        precioOriginal: "189,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41llET8nyDL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Praxn7+dS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/512p1xYIlIS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41GxioxSMfS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31ai6AZShNS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41kLHA3aPyS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ZUCwCgvDS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/4197mV9D5LL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41LQDjWNoAL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31HTLFTlt3L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08Z8L965V?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Diseño compacto de 65 % para un rendimiento compacto y elegante: Su estructura compacta conserva las teclas
+            de flecha para ofrecer una mayor funcionalidad y es ideal para escritorios pequeños o minimalistas en los
+            que el espacio es primordial.
+          - >-
+            3 modos de conexión mediante Razer HyperSpeed (2,4 GHz wireless), Bluetooth o USB-C: Alterna de forma ágil
+            entre el Bluetooth y el juego inalámbrico de baja latencia y conecta hasta 3 dispositivos. Incluye un cable
+            USB-C desmontable para cargarlo durante el uso.
+          - >-
+            Switches mecánicos amarillos Razer para una ejecución rápida, silenciosa y suave: Estos switches producen un
+            tecleado supersuave gracias a los amortiguadores de sonido que reducen aún más su perfil silencioso y se
+            combinan con teclas de altura completa para no poner en riesgo la experiencia de juego
+          - >-
+            Con tecnología Razer Chroma RGB para efectos de iluminación avanzados y mayor inmersión en el juego: Con
+            16,8 millones de colores y una amplia gama de efectos para elegir, puedes sincronizar el brillo de cada
+            tecla con el resto del equipo y
+          - >-
+            Hasta 200 horas de duración de la batería para un rendimiento duradero: Disfruta de un uso sin
+            interrupciones tanto si estás en modo Razer HyperSpeed Wireless o en modo Bluetooth y minimiza el tiempo de
+            inactividad gracias a la carga que se completa en menos de 5 horas.
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3 Mini HyperSpeed
+          - name: size_name
+            value: Diseño ES
+          - name: color_name
+            value: Interruptor Amarillo Silent
+        ParentASIN: B0DPC8X1VJ
+      - ASIN: B092RDJ2LQ
+        title: >-
+          Razer BlackWidow V3 Mini HyperSpeed (Interruptor Verde) - Teclado Mecánico Inalámbrico para Juegos 65%
+          (Interruptores Mecánicos Clicky, Teclas Fantasma, Bluetooth, USB-C) Diseño US| Phantom Ed.
+        brand: Razer
+        precio: "129,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/416HMcs0NqL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41jdDZc2vyL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/413hnoqZc-L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411PLoyy8hL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41GxioxSMfS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QYFCPj8GL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41t2S-MefxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CELjVWq+L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B092RDJ2LQ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - x
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3 Mini HyperSpeed Phantom Ed.
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Vierde Clicky
+        ParentASIN: B0DPC8X1VJ
+      - ASIN: B092RG1X26
+        title: >-
+          Razer BlackWidow V3 Mini HyperSpeed (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos 65%
+          (Interruptores Mecánicos Silenciosos, Teclas Fantasma, Bluetooth, USB-C) Diseño US, Phantom Ed
+        brand: Razer
+        precio: "129,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/416HMcs0NqL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/413hnoqZc-L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411PLoyy8hL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41GxioxSMfS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QYFCPj8GL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41t2S-MefxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CELjVWq+L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B092RG1X26?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - x
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3 Mini HyperSpeed Phantom Ed.
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Amarillo Silent
+        ParentASIN: B0DPC8X1VJ
     ParentASIN: B0DPC8X1VJ
     nombreCompleto: >-
       Razer BlackWidow V4 X, Teclado gaming con Razer Chroma RGB (Switches mecánicos amarillos , 6 teclas macro
       dedicadas de ABS de doble inyección) ES-Layout, Negro
     condicion: new
+    variationAttributes:
+      - name: style_name
+        value: BlackWidow V4 X
+      - name: size_name
+        value: Diseño ES
+      - name: color_name
+        value: Interruptor Amarillo Silent
+    variantes_info:
+      total_en_stock: 19
+      mostradas: 10
+      restantes: 9
+      truncado: true
+    variantes_restantes_asins:
+      - B097F5QSTB
+      - B0BSTNTLR1
+      - B0C6DWV86F
+      - B0C6DZ94Q6
+      - B0C6MFJ63D
+      - B0C6MJL7KQ
+      - B0C6V2DZZC
+      - B0D31XQVRS
+      - B0DVCHFYJ6
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B097F5QSTB?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BSTNTLR1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6DWV86F?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6DZ94Q6?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6MFJ63D?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6MJL7KQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6V2DZZC?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D31XQVRS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DVCHFYJ6?tag=recomendadorn-21&th=1&psc=1
   - nombre: Razer Ornata V3 X
     lo_mejor: Membrana silenciosa, diseño fino y cómodo, teclas planas y resistentes al agua, ideal para trabajar y jugar
     a_tener_en_cuenta: Buena opción económica si no necesitas un teclado mecánico
@@ -1247,6 +1527,13 @@ productos:
       Razer Ornata V3 X - Teclado para Juegos de Bajo Perfil (Interruptores de Membrana Silenciosos, Teclas Recubiertas
       de rayos UV, Diseño Duradero y Resistente a Derrames) Diseño ES, Negro
     condicion: new
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - nombre: Razer Apex 3
     lo_mejor: Teclado silencioso con resistencia IP32 al agua, RGB por zonas y controles multimedia dedicados
     a_tener_en_cuenta: Perfecto para setups compartidos o nocturnos; sin iluminación por tecla
@@ -1359,6 +1646,13 @@ productos:
       SteelSeries Apex 3 - Teclado Gaming - Iluminación RGB de 10 zonas - Resistencia al agua IP32 - Reposamuñecas
       magnético superior - Teclado QWERTY Español
     condicion: new
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - nombre: Mars Gaming MKPRO
     lo_mejor: Switches mecánicos OUTEMU, chasis de aluminio, RGB completo y reposamuñecas desmontable
     a_tener_en_cuenta: Excelente para empezar en mecánicos sin gastar mucho
@@ -1378,7 +1672,7 @@ productos:
       - Formato completo con anti-ghosting
     brand: Mars Gaming
     ASIN: B0F383W18C
-    precio: "41,90\_€"
+    precio: "41,87\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -1433,8 +1727,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "19,90\_€"
-        precioOriginal: No especificado
+        precio: "17,66\_€"
+        precioOriginal: "19,90\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -1650,11 +1944,329 @@ productos:
             value: MKMINIWRES
         ParentASIN: B0DZ752MKH
         condicion: new
+      - ASIN: B08F591M3H
+        title: >-
+          Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
+          Negro
+        brand: Mars Gaming
+        precio: "22,94\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Cd3DI1U0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51t+6I-FdfL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08F591M3H?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TECLADO COMPACTO: El teclado MKAX ofrece un formato reducido prescindiendo del panel numérico, reduciendo el
+            espacio que ocupa y dejando mayor espacio al ratón; Estructura ABS resistente que aumenta la durabilidad del
+            teclado; Control de volumen avanzado a través de una ruleta situada en la parte superior derecha del
+            teclado; Layout Español
+          - >-
+            TECLADO ILUMINACIÓN RGB CONTROL: El sistema de iluminación RGB Control del MKAX te permite elegir entre 9
+            efectos distintos para combinar y potenciar el aspecto de tu setup de forma fácil y rápida; Desde Rainbow
+            hasta Breathing, 7 tonos sólidos y perfil personalizado. ; Dispone de modo reactivo al sonido ambiental, que
+            te permite experimentar con la iluminación y voz durante la partida
+          - >-
+            DISEÑO ERGONÓMICO: El teclado MKAX incluye un reposamuñecas avanzado de gel de memoria que amortigua la
+            presión en las manos al teclear; Equipado con una base de goma que lo mantiene fijo en su posición, su
+            diseño independiente te permite colocarlo donde prefieras para adaptar tu experiencia
+          - >-
+            TECNOLOGÍA H-MECH: La tecnología H-Mech combina la suavidad e los sistemas de membrana y la precisión y
+            velocidad de los teclados mecánicos, sacando lo mejor de cada jugador en un teclado compacto y cómodo
+          - 'COMPATIBILIDAD MULTIPLATAFORMA: Windows, Linux, Mac, PS4, PS5, XBOX ONE, XBOX SERIES X-S, Nintendo Switch'
+        variationAttributes:
+          - name: style_name
+            value: MKAXES
+        ParentASIN: B0DZ752MKH
+      - ASIN: B08F5941V2
+        title: >-
+          Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
+          Blanco
+        brand: Mars Gaming
+        precio: "19,08\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41ps7oZqjdL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51rJgFKHACL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08F5941V2?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TECLADO COMPACTO: El teclado MKAX ofrece un formato reducido prescindiendo del panel numérico, reduciendo el
+            espacio que ocupa y dejando mayor espacio al ratón; Estructura ABS resistente que aumenta la durabilidad del
+            teclado; Control de volumen avanzado a través de una ruleta situada en la parte superior derecha del
+            teclado; Layout Español
+          - >-
+            TECLADO ILUMINACIÓN RGB CONTROL: El sistema de iluminación RGB Control del MKAX te permite elegir entre 9
+            efectos distintos para combinar y potenciar el aspecto de tu setup de forma fácil y rápida; Desde Rainbow
+            hasta Breathing, 7 tonos sólidos y perfil personalizado. ; Dispone de modo reactivo al sonido ambiental, que
+            te permite experimentar con la iluminación y voz durante la partida
+          - >-
+            DISEÑO ERGONÓMICO: El teclado MKAX incluye un reposamuñecas avanzado de gel de memoria que amortigua la
+            presión en las manos al teclear; Equipado con una base de goma que lo mantiene fijo en su posición, su
+            diseño independiente te permite colocarlo donde prefieras para adaptar tu experiencia
+          - >-
+            TECNOLOGÍA H-MECH: La tecnología H-Mech combina la suavidad e los sistemas de membrana y la precisión y
+            velocidad de los teclados mecánicos, sacando lo mejor de cada jugador en un teclado compacto y cómodo
+          - 'COMPATIBILIDAD MULTIPLATAFORMA: Windows, Linux, Mac, PS4, PS5, XBOX ONE, XBOX SERIES X-S, Nintendo Switch'
+        variationAttributes:
+          - name: style_name
+            value: MKAXWES
+        ParentASIN: B0DZ752MKH
+      - ASIN: B08F59JFKF
+        title: >-
+          Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
+          Rosa
+        brand: Mars Gaming
+        precio: "11,90\_€"
+        precioOriginal: "15,90\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51Wn-X-AMwL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415GlQYMFnL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51rpmHAcpuL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51mpPuhKT7L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51IMRUCdLcL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08F59JFKF?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TECLADO COMPACTO: El teclado MKAX ofrece un formato reducido prescindiendo del panel numérico, reduciendo el
+            espacio que ocupa y dejando mayor espacio al ratón; Estructura ABS resistente que aumenta la durabilidad del
+            teclado; Control de volumen avanzado a través de una ruleta situada en la parte superior derecha del
+            teclado; Layout Español
+          - >-
+            TECLADO ILUMINACIÓN RGB CONTROL: El sistema de iluminación RGB Control del MKAX te permite elegir entre 9
+            efectos distintos para combinar y potenciar el aspecto de tu setup de forma fácil y rápida; Desde Rainbow
+            hasta Breathing, 7 tonos sólidos y perfil personalizado. ; Dispone de modo reactivo al sonido ambiental, que
+            te permite experimentar con la iluminación y voz durante la partida
+          - >-
+            DISEÑO ERGONÓMICO: El teclado MKAX incluye un reposamuñecas avanzado de gel de memoria que amortigua la
+            presión en las manos al teclear; Equipado con una base de goma que lo mantiene fijo en su posición, su
+            diseño independiente te permite colocarlo donde prefieras para adaptar tu experiencia
+          - >-
+            TECNOLOGÍA H-MECH: La tecnología H-Mech combina la suavidad e los sistemas de membrana y la precisión y
+            velocidad de los teclados mecánicos, sacando lo mejor de cada jugador en un teclado compacto y cómodo
+          - 'COMPATIBILIDAD MULTIPLATAFORMA: Windows, Linux, Mac, PS4, PS5, XBOX ONE, XBOX SERIES X-S, Nintendo Switch'
+        variationAttributes:
+          - name: style_name
+            value: MKAXPES
+        ParentASIN: B0DZ752MKH
+      - ASIN: B08P51RW1M
+        title: >-
+          Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
+          Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
+        brand: Mars Gaming
+        precio: "26,23\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51EpVViIUXL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51EP9gSgb8L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/511-Ki5TuHL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51X5vQ16lkL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08P51RW1M?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TECLADO GAMING TKL+ PAD NUMÉRICO: El teclado Mars Gaming MKREVOPRO es un teclado revolucionario de tamaño
+            compacto TKL con pad numérico incluido, ofreciéndote todas las posibilidades de un teclado estándar en un
+            tamaño reducido y aprovechando así sus posibilidades; Con tecnología H-MECH, este teclado te ofrece una
+            combinación de los teclados mecánicos y membrana para ofrecerte un rendimiento óptimo y adaptarse a tu forma
+            de juego en cada momento
+          - >-
+            ILUMINACIÓN FULL RGB: Con 12 efectos de iluminación diferentes controlables, podrás personalizar tu
+            escritorio y potenciar su estética a tu gusto; Controla cómodamente el volumen e iluminación de tu teclado
+            mediante la rueda de control situada en la parte superior derecha de tu teclado
+          - >-
+            DURABILIDAD Y RENDIMIENTO: Cuenta con tecnología anti-ghosting , cable de doble nylon reforzado
+            ultra-resistente y conector USB chapado en oro para ofrecerte una conectividad rápida y precisa; El teclado
+            ha sido diseñado con materiales de calidad para asegurar una vida útil extendida y un rendimiento óptimo
+          - >-
+            COMPATIBILIDAD TOTAL: Con un compatibilidad multiplataforma, podrás utilizar el MKREVO en PS5, PS4, Switch,
+            XBOX ONE, XBOX SERIES S/X, PC y Mac, y disfruta de sus infinitas posibilidades
+          - Teclado con Layout Español
+        variationAttributes:
+          - name: style_name
+            value: MKREVOES
+        ParentASIN: B0DZ752MKH
+      - ASIN: B08RJ49RQJ
+        title: >-
+          Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
+          RGB, Chip Vision MCU, Software, Idioma Español, Negro
+        brand: Mars Gaming
+        precio: "21,90\_€"
+        precioOriginal: "26,90\_€"
+        disponibilidad: Disponible para envío en 1 o 2 días
+        imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51yb1rpz0FL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51KcglPDGGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51H32TESONL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51-3PxleiaL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08RJ49RQJ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [TECLADO GAMING TKL+ PAD NUMÉRICO] El teclado Mars Gaming MKREVOPRO es un teclado revolucionario de tamaño
+            compacto TKL con pad numérico incluido, ofreciéndote todas las posibilidades de un teclado estándar en un
+            tamaño reducido y aprovechando así sus posibilidades; Con tecnología H-MECH, este teclado te ofrece una
+            combinación de los teclados mecánicos y membrana para ofrecerte un rendimiento óptimo y adaptarse a tu forma
+            de juego en cada momento
+          - >-
+            [DURABILIDAD Y RENDIMIENTO] El teclado MKREVOPRO cuenta con materiales de gran calidad y la más avanzada
+            tecnología full antighosting; Switches OUTEMU PRO, que aseguran una precisión y durabilidad máximas y Chip
+            integrado de alto rendimiento VISION MCU con arquitectura ARM de nivel 5-5, 32K ROM de almacenamiento y
+            frecuencia de trabajo de 48MHZ; Cable de doble nylon reforzado ultra-resistente y USB chapado en oro para
+            garantizar una conectividad rápida y precisa
+          - >-
+            [ILUMINACIÓN FULL RGB] Este teclado mecánico de Mars Gaming cuenta con un sistema de iluminación LED RGB de
+            hasta 16.8 millones de colores con software de control; Escoge entre los diferentes perfiles personalizables
+            y los múltiples efectos disponibles para obtener una iluminación a tu gusto
+          - >-
+            [SWITCH OUTEMU PRO AZUL] El switch azul cuenta con la característica pulsación de los teclados mecánicos: el
+            clásico "click" indica el momento exacto de la pulsación, ofreciéndote una sensación firme y una precisión
+            inimitable, perfecto para usuarios que suelen escribir a ordenador
+          - >-
+            [COMPATIBILIDAD TOTAL MULTIPLATAFORMA] Teclado compatible con PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX
+            SERIES S/X
+          - LAYOUT ESPAÑOL
+        variationAttributes:
+          - name: style_name
+            value: MKREVOPROBES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
       de Control, Software Avanzado, Multiplataforma, Switch Silent, Español, Negro
     condicion: new
+    variationAttributes:
+      - name: style_name
+        value: MKPROYES
+    variantes_info:
+      total_en_stock: 34
+      mostradas: 10
+      restantes: 24
+      truncado: true
+    variantes_restantes_asins:
+      - B0972YTB9P
+      - B0972ZH4KN
+      - B099ZCZVGM
+      - B09MJ7CGCL
+      - B09MJ7P1NR
+      - B09MJ91LDZ
+      - B09MJC4XL5
+      - B09MJCY4LZ
+      - B0BDFBVYG3
+      - B0BDFGWCMX
+      - B0BGLG8WC8
+      - B0CP9PLXPK
+      - B0CP9Q9M7D
+      - B0CP9QPH67
+      - B0DHCNKM3C
+      - B0DHCPC81Z
+      - B0DHCPF5VB
+      - B0DHCPPNJ2
+      - B0DHCPZ9N1
+      - B0DQCS18HZ
+      - B0DQCS8FJ8
+      - B0F37YZTSG
+      - B0F382BN14
+      - B0F3839TXY
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09MJ7P1NR?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09MJ91LDZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09MJC4XL5?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09MJCY4LZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DHCPC81Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DHCPF5VB?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G213 Prodigy
     lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado, resistente a líquidos
     a_tener_en_cuenta: Alternativa silenciosa y cómoda si no necesitas mecánico
@@ -1729,6 +2341,13 @@ productos:
       Logitech G213 Prodigy Teclado Gaming con Reposamuñecas, RGB LIGHTSYNC, Teclas Retroiluminadas y Personalizables,
       Resistente a Salpicaduras, Controles Multimedia Dedicados, Disposición QWERTY ES
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - nombre: Corsair K55 RGB PRO
     lo_mejor: Teclas macro y multimedia dedicadas, resistencia IP42, RGB por zonas y compatible con iCUE
     a_tener_en_cuenta: Ideal para productividad y MMO si no necesitas switches mecánicos
@@ -1812,6 +2431,13 @@ productos:
       Corsair K55 RGB PRO Teclado para Juegos con Teclas de Membrana, Retroiluminación RGB Dinámica, 6 Teclas Macro con
       Integración el Software Elgato, Resistencia al Polvo y los Derrames, QWERTY, Negro
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - nombre: Razer BlackWidow V3 TKL
     valoracion: 5
     caracteristicas:
@@ -1961,7 +2587,7 @@ productos:
           Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
           mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
         brand: Razer
-        precio: "112,10\_€"
+        precio: "112,13\_€"
         precioOriginal: "119,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
@@ -2301,11 +2927,200 @@ productos:
             value: Interruptor Amarillo Silent
         ParentASIN: B0DPC8X1VJ
         condicion: used
+      - ASIN: B08Z8L965V
+        title: >-
+          Razer BlackWidow V3 Mini HyperSpeed (Yellow Switch) - Teclado para juegos 65% compacto con interruptores
+          mecánicos (lineales y de clic, iluminación RGB Chroma) Teclado Español - Negro
+        brand: Razer
+        precio: "180,36\_€"
+        precioOriginal: "189,99\_€"
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41llET8nyDL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Praxn7+dS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/512p1xYIlIS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41GxioxSMfS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31ai6AZShNS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41kLHA3aPyS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ZUCwCgvDS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/4197mV9D5LL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41LQDjWNoAL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31HTLFTlt3L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08Z8L965V?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Diseño compacto de 65 % para un rendimiento compacto y elegante: Su estructura compacta conserva las teclas
+            de flecha para ofrecer una mayor funcionalidad y es ideal para escritorios pequeños o minimalistas en los
+            que el espacio es primordial.
+          - >-
+            3 modos de conexión mediante Razer HyperSpeed (2,4 GHz wireless), Bluetooth o USB-C: Alterna de forma ágil
+            entre el Bluetooth y el juego inalámbrico de baja latencia y conecta hasta 3 dispositivos. Incluye un cable
+            USB-C desmontable para cargarlo durante el uso.
+          - >-
+            Switches mecánicos amarillos Razer para una ejecución rápida, silenciosa y suave: Estos switches producen un
+            tecleado supersuave gracias a los amortiguadores de sonido que reducen aún más su perfil silencioso y se
+            combinan con teclas de altura completa para no poner en riesgo la experiencia de juego
+          - >-
+            Con tecnología Razer Chroma RGB para efectos de iluminación avanzados y mayor inmersión en el juego: Con
+            16,8 millones de colores y una amplia gama de efectos para elegir, puedes sincronizar el brillo de cada
+            tecla con el resto del equipo y
+          - >-
+            Hasta 200 horas de duración de la batería para un rendimiento duradero: Disfruta de un uso sin
+            interrupciones tanto si estás en modo Razer HyperSpeed Wireless o en modo Bluetooth y minimiza el tiempo de
+            inactividad gracias a la carga que se completa en menos de 5 horas.
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3 Mini HyperSpeed
+          - name: size_name
+            value: Diseño ES
+          - name: color_name
+            value: Interruptor Amarillo Silent
+        ParentASIN: B0DPC8X1VJ
+      - ASIN: B092RDJ2LQ
+        title: >-
+          Razer BlackWidow V3 Mini HyperSpeed (Interruptor Verde) - Teclado Mecánico Inalámbrico para Juegos 65%
+          (Interruptores Mecánicos Clicky, Teclas Fantasma, Bluetooth, USB-C) Diseño US| Phantom Ed.
+        brand: Razer
+        precio: "129,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/416HMcs0NqL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41jdDZc2vyL._SL500_.jpg
+            width: 500
+            height: 333
+          - url: https://m.media-amazon.com/images/I/413hnoqZc-L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411PLoyy8hL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41GxioxSMfS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QYFCPj8GL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41t2S-MefxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CELjVWq+L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B092RDJ2LQ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - x
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3 Mini HyperSpeed Phantom Ed.
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Vierde Clicky
+        ParentASIN: B0DPC8X1VJ
+      - ASIN: B092RG1X26
+        title: >-
+          Razer BlackWidow V3 Mini HyperSpeed (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos 65%
+          (Interruptores Mecánicos Silenciosos, Teclas Fantasma, Bluetooth, USB-C) Diseño US, Phantom Ed
+        brand: Razer
+        precio: "129,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/416HMcs0NqL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/413hnoqZc-L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411PLoyy8hL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41GxioxSMfS._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51QYFCPj8GL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41t2S-MefxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CELjVWq+L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B092RG1X26?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - x
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V3 Mini HyperSpeed Phantom Ed.
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Amarillo Silent
+        ParentASIN: B0DPC8X1VJ
     ParentASIN: B0DPC8X1VJ
     nombreCompleto: >-
       Razer BlackWidow V3 Tenkeyless (Yellow Switch) - Teclado compacto para juegos con interruptores mecánicos (teclas
       ABS, iluminación RGB Chroma) Teclado Español - Negro
     condicion: new
+    variationAttributes:
+      - name: style_name
+        value: BlackWidow V3 TKL
+      - name: size_name
+        value: Diseño ES
+      - name: color_name
+        value: Interruptor Vierde Clicky
+    variantes_info:
+      total_en_stock: 19
+      mostradas: 10
+      restantes: 9
+      truncado: true
+    variantes_restantes_asins:
+      - B0BSTNTLR1
+      - B0C6DWV86F
+      - B0C6DZ94Q6
+      - B0C6MFJ63D
+      - B0C6MJL7KQ
+      - B0C6MTPKQ1
+      - B0C6V2DZZC
+      - B0D31XQVRS
+      - B0DVCHFYJ6
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0BSTNTLR1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6DWV86F?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6DZ94Q6?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6MFJ63D?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6MJL7KQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6MTPKQ1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0C6V2DZZC?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D31XQVRS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DVCHFYJ6?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G512
     lo_mejor: Switches GX (Brown, Red o Blue), chasis de aluminio, RGB por tecla y puerto USB integrado
     a_tener_en_cuenta: Equilibrio perfecto entre calidad, rendimiento y estética
@@ -2377,6 +3192,13 @@ productos:
       Logitech G512 Teclado Gaming Mecánico, RGB LIGHTSYNC, Teclas retroiluminadas, GX-Táctil Marrón, Aleación de
       Aluminio, Teclas F Personalizables, Paso de USB, Disposición QWERTY ES - Carbón/Negro
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - nombre: Logitech G413 TKL SE
     lo_mejor: Diseño TKL compacto, retroiluminación blanca clara, carcasa de aluminio y switches táctiles
     a_tener_en_cuenta: Diseño limpio y resistente para setups minimalistas
@@ -2629,4 +3451,11 @@ productos:
       - name: pattern_name
         value: G413 SE TKL (Gen 2)
     condicion: new
-actualizacion: '2025-09-14'
+    variantes_info:
+      total_en_stock: 3
+      mostradas: 3
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
+actualizacion: '2025-09-15'

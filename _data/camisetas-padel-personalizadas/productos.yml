@@ -526,6 +526,13 @@ productos:
 
       Por último, saber que está confeccionada en Italia me transmitió confianza en la calidad del acabado.
     condicion: new
+    variantes_info:
+      total_en_stock: 9
+      mostradas: 9
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0CJCJRBF4
     title: >-
       Zena Padel Camiseta personalizada, camiseta de pádel técnica, tejido elástico transpirable Dry Fit, Padel Hombre y
@@ -1292,6 +1299,70 @@ productos:
       El color Rainbow 01 (Negro/Naranja) es llamativo y la marca indica que está fabricada en Italia.
       Recomiendo lavar a baja temperatura y evitar lejía para conservar el tejido.
     condicion: new
+    variationAttributes:
+      - name: size_name
+        value: S
+      - name: color_name
+        value: Negro/Naranja
+    variantes_info:
+      total_en_stock: 36
+      mostradas: 10
+      restantes: 26
+      truncado: true
+    variantes_restantes_asins:
+      - B0CJCHDVN6
+      - B0CJCHGXY6
+      - B0CJCHJZ6Z
+      - B0CJCHP293
+      - B0CJCHT8NS
+      - B0CJCHTNJ3
+      - B0CJCHYZBG
+      - B0CJCJ146M
+      - B0CJCJ2FKW
+      - B0CJCJ6CM2
+      - B0CJCJHQ6G
+      - B0CJCJNB86
+      - B0CJCJPHGT
+      - B0CJCJPLB2
+      - B0CJCJR339
+      - B0CJCJT9NF
+      - B0CJCJV8HS
+      - B0CJCK1SX3
+      - B0CJCK5L52
+      - B0CJCK6L7K
+      - B0CJCKB63N
+      - B0CJCKH8NF
+      - B0CJCKL3RZ
+      - B0CJCKVN2Z
+      - B0CJCLDKY5
+      - B0DGTWVZ5S
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0CJCHDVN6?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCHGXY6?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCHJZ6Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCHP293?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCHT8NS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCHTNJ3?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCHYZBG?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJ146M?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJ2FKW?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJ6CM2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJHQ6G?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJNB86?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJPHGT?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJPLB2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJR339?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJT9NF?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCJV8HS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCK1SX3?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCK5L52?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCK6L7K?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCKB63N?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCKH8NF?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCKL3RZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCKVN2Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CJCLDKY5?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DGTWVZ5S?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0CRVV39L5
     title: >-
       ZENA Conjunto Personalizado Padel Hombre | Camiseta y Pantalón Corto en Tejido Dry Fit | Elástico y Transpirable |
@@ -1862,4 +1933,74 @@ productos:
       El pantalón tiene cintura elástica, cordón y bolsillos prácticos; en mi caso fue muy funcional.
       Por último, valoro que sea un producto fabricado en Italia y su diseño negro/dorado.
     condicion: new
-actualizacion: '2025-09-14'
+    variationAttributes:
+      - name: color_name
+        value: Negro y dorado.
+      - name: size_name
+        value: L
+    variantes_info:
+      total_en_stock: 39
+      mostradas: 10
+      restantes: 29
+      truncado: true
+    variantes_restantes_asins:
+      - B0CRVSTGRV
+      - B0CRVSVS15
+      - B0CRVSX6J8
+      - B0CRVSYF96
+      - B0CRVSYF97
+      - B0CRVT2174
+      - B0CRVT37PX
+      - B0CRVT4261
+      - B0CRVT6HD4
+      - B0CRVT8MKP
+      - B0CRVTF6W9
+      - B0CRVTMQGG
+      - B0CRVTXCT5
+      - B0CRVTZ2JP
+      - B0CRVV21SR
+      - B0CRVV6533
+      - B0CRVV85XN
+      - B0CRVVBSHL
+      - B0CRVVG1FK
+      - B0CRVVGG4Z
+      - B0CRVVGS35
+      - B0CRVVKF6B
+      - B0CRVVKGWY
+      - B0CRVVT485
+      - B0CRVVZQQ7
+      - B0CRVW71SG
+      - B0CRVWC9XY
+      - B0CRVWK58P
+      - B0CRVWTNJG
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0CRVSTGRV?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVSVS15?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVSX6J8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVSYF96?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVSYF97?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVT2174?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVT37PX?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVT4261?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVT6HD4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVT8MKP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVTF6W9?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVTMQGG?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVTXCT5?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVTZ2JP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVV21SR?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVV6533?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVV85XN?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVBSHL?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVG1FK?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVGG4Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVGS35?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVKF6B?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVKGWY?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVT485?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVVZQQ7?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVW71SG?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVWC9XY?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVWK58P?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CRVWTNJG?tag=recomendadorn-21&th=1&psc=1
+actualizacion: '2025-09-15'

@@ -213,6 +213,13 @@ productos:
       Kit de Ring Alarm - S | Sistema de seguridad para el hogar con alarma y vigilancia asistida opcional - Sin
       compromisos a largo plazo | Compatible con Alexa | 30 días gratis de Ring Home
     condicion: new
+    variantes_info:
+      total_en_stock: 2
+      mostradas: 2
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B092B6K1KJ
     a_tener_en_cuenta: 📦 No incluye sirena exterior por defecto
     brand: Ring
@@ -493,6 +500,13 @@ productos:
       Kit de Ring Alarm - M | Sistema de seguridad para el hogar con alarma y vigilancia asistida opcional - Sin
       compromisos a largo plazo | Compatible con Alexa | 30 días gratis de Ring Home
     condicion: new
+    variantes_info:
+      total_en_stock: 3
+      mostradas: 3
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0929TGRZF
     a_tener_en_cuenta: 🔊 Sirena exterior no incluida
     brand: Ring
@@ -774,6 +788,13 @@ productos:
       Kit de Ring Alarm - L | Sistema de seguridad para el hogar con alarma y vigilancia asistida opcional - Sin
       compromisos a largo plazo | Compatible con Alexa | 30 días gratis de Ring Home
     condicion: new
+    variantes_info:
+      total_en_stock: 3
+      mostradas: 3
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B092BBK1GF
     a_tener_en_cuenta: 🏗️ Volumen de sensores elevado, requiere tiempo para instalar
     brand: Ring
@@ -924,4 +945,11 @@ productos:
       Kit de Ring Alarm - XL con sirena exterior | Sistema de seguridad para el hogar con alarma y vigilancia asistida
       opcional - Sin compromisos a largo plazo | 30 días gratis de Ring Home
     condicion: new
-actualizacion: '2025-09-14'
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
+actualizacion: '2025-09-15'

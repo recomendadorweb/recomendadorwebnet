@@ -134,7 +134,7 @@ productos:
           HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas
           Motocicleta Infantil con Licencia 66,5x38x52 cm Rosa
         brand: HOMCOM
-        precio: "67,14\_€"
+        precio: "81,99\_€"
         precioOriginal: "81,99\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/419BPHyaNdL._SL500_.jpg
@@ -261,6 +261,13 @@ productos:
       HOMCOM Moto Eléctrica Vespa para Niños de 18-36 Meses Moto de Batería 6V con Faro Bocina y 4 Ruedas Motocicleta
       Infantil con Licencia 66,5x38x52 cm Blanco
     condicion: new
+    variantes_info:
+      total_en_stock: 3
+      mostradas: 3
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B07MT59Z1D
     a_tener_en_cuenta: 1 a 3 años
     brand: HOMCOM
@@ -454,6 +461,13 @@ productos:
       HOMCOM Moto Eléctrica para Niños de 18-36 Meses con Licencia BMW S1000RR Motocicleta de Batería 6V Moto Infantil
       con Música Carga 20 kg Rojo
     condicion: new
+    variantes_info:
+      total_en_stock: 2
+      mostradas: 2
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B08J82PGH6
     a_tener_en_cuenta: A partir de 2 años
     brand: TURBO CHALLENGE
@@ -520,6 +534,13 @@ productos:
     variantes: []
     nombreCompleto: TURBO CHALLENGE Baby Driver Vespa GTS, Color Verde Aguamarina, Large (MGM 119151)
     condicion: new
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0BJDKDV86
     a_tener_en_cuenta: A partir de 2 años
     brand: HOMCOM
@@ -661,6 +682,13 @@ productos:
       HOMCOM Moto Eléctrica BMW HP4 para Niños de +18 Meses Motocicleta de Batería 6V con Música USB Velocidad 2,5 km/h
       Avance y Retroceso Carga 30 kg 82,5x42x54 cm Azul
     condicion: new
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0DJM8FKMR
     a_tener_en_cuenta: A partir de 2 años
     brand: AIYAPLAY
@@ -801,5 +829,12 @@ productos:
       AIYAPLAY Moto Eléctrica para Niños de +2 Años Moto de Batería para Niños 6V con Función de Soplar Burbujas Faros
       Música Velocidad 3 km/h Carga 30 kg Verde
     condicion: new
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
 titulo_a_tener_en_cuenta: Edad recomendada
-actualizacion: '2025-09-14'
+actualizacion: '2025-09-15'

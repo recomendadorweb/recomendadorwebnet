@@ -18,7 +18,7 @@ productos:
     lo_mejor: Pantalla muy brillante y fluida, gran autonomía y funciones completas de salud en un diseño súper ligero.
     nombre: Xiaomi Smart Band 9
     valoracion: 4.4
-    precio: "46,30\_€"
+    precio: "48,20\_€"
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -199,7 +199,14 @@ productos:
     nombreCompleto: >-
       Xiaomi Smart Band 9 - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED con tasa de refresco de 60
       Hz, Sensor de Frecuencia Cardíaca, Negro
-    condicion: new
+    condicion: used
+    variantes_info:
+      total_en_stock: 3
+      mostradas: 3
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0DK6ZC5ZC
     a_tener_en_cuenta: No tiene pantalla AMOLED ni GPS; algunos datos de salud no son tan precisos como en gamas más altas.
     brand: XIAOMI
@@ -566,6 +573,13 @@ productos:
       Xiaomi Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa de
       refresco de 60 Hz, 5ATM, App Mi Fitness, Negro (Versión ES)
     condicion: new
+    variantes_info:
+      total_en_stock: 4
+      mostradas: 4
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0B6WRFY5S
     a_tener_en_cuenta: No tiene GPS ni funciones deportivas avanzadas; algunas funciones requieren Fitbit Premium.
     brand: Fitbit
@@ -585,7 +599,7 @@ productos:
     lo_mejor: Buena precisión en los datos de salud y excelente para quienes priorizan el bienestar y el descanso.
     nombre: Google Fitbit Inspire 3
     valoracion: 4.2
-    precio: "74,99\_€"
+    precio: "89,99\_€"
     precioOriginal: "99,95\_€"
     disponibilidad: En stock
     imagenesVariantes:
@@ -646,7 +660,7 @@ productos:
           Fitbit Inspire 3, la pulsera de salud y actividad física con hasta 10 días de batería y compatible con Android
           e iOS, Lavanda
         brand: Fitbit
-        precio: "74,99\_€"
+        precio: "89,99\_€"
         precioOriginal: "99,95\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31kOuVOqbcL._SL500_.jpg
@@ -711,7 +725,7 @@ productos:
           Fitbit Inspire 3, la pulsera de salud y actividad física con hasta 10 días de batería y compatible con Android
           e iOS, Amarillo ocre
         brand: Fitbit
-        precio: "74,99\_€"
+        precio: "87,99\_€"
         precioOriginal: "99,95\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31OwZCIj26L._SL500_.jpg
@@ -779,6 +793,13 @@ productos:
         value: Negro
     nombreCompleto: Fitbit Inspire 3,Black/Midnight Zen Activity Tracker, Unisex-Adult, Negro, One Size
     condicion: new
+    variantes_info:
+      total_en_stock: 2
+      mostradas: 2
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0CHBMLYLL
     a_tener_en_cuenta: No incluye GPS; algunas funciones requieren app Mi Fitness.
     brand: NK
@@ -852,6 +873,13 @@ productos:
       Mi Smart Band 8 - Pulsera de Actividad, Pantalla AMOLED, Monitorización de Frecuencia Cardíaca, 190 MAh, 150+
       Modos Deportivos, hasta 16 Días de Autonomía, Negro
     condicion: ''
+    variantes_info:
+      total_en_stock: 0
+      mostradas: 0
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0C4LLK48F
     a_tener_en_cuenta: Sin GPS; algunas funciones avanzadas requieren app Huawei Health.
     brand: HUAWEI
@@ -1052,6 +1080,13 @@ productos:
       HUAWEI Band 8 Smart Watch, Diseño fino, Seguimiento Preciso del Sueño, Batería de 14 días, Compatible con Android
       e iOS, para Salud y Bienestar,Versión Española, Negro
     condicion: used
+    variantes_info:
+      total_en_stock: 2
+      mostradas: 2
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0DY1JKTRD
     a_tener_en_cuenta: No tiene GPS ni NFC, y requiere app de Huawei para estadísticas detalladas.
     brand: HUAWEI
@@ -1645,7 +1680,7 @@ productos:
           HUAWEI Band 9, 1.47”AMOLED,Larga Duración de 2 semanas, Ajuste de Brillo automático, Mayor precisión de
           medición,Altamente compatible,100 modos de entrenamiento diferentes,Blanco
         brand: HUAWEI
-        precio: "32,02\_€"
+        precio: "31,21\_€"
         precioOriginal: "59,00\_€"
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41CmuwEMV7L._SL500_.jpg
@@ -1706,6 +1741,71 @@ productos:
           - name: color_name
             value: Blanco Polímeros
         ParentASIN: B0F2J23SQ7
+      - ASIN: B0DY1RK1R1
+        title: >-
+          HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional,
+          VFC Promedio Durante el Sueño, 14 Días, Carcasa de Aleación de Aluminio, iOS & Android
+        brand: HUAWEI
+        precio: "44,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41ezizqfsbL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/415hUPUnfUL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Qze7cRrML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41d5q7Gnw6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51BWO-95qoL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41XPtCJzpxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ZjP1Lo2vL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41+C8qaaH+L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417VlvO2qZL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0DY1RK1R1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Carcasa de aleación de aluminio: Siente las superficies texturizadas y los impresionantes detalles de una
+            carcasa de aleación de aluminio elaborada a mano, pulida mediante procesos de corte y perforación CNC para
+            lucir un aspecto maravilloso
+          - >-
+            Cómoda de usar durante todo el día: Ultrafina 8,99 mm, Ultraligera 15 g, Diseñada para un ajuste no apretado
+            y combinada con correas de fluoroelastómero respetuosas con la piel, HUAWEI Band 10 se puede usar a todas
+            horas sin molestias, ya estés en activo o descansando
+          - >-
+            Análisis del sueño a nivel profesional: Controla tu frecuencia cardíaca, la saturación de oxígeno en sangre
+            SpO2, la frecuencia respiratoria e irregularidades en la respiración mientras duermes, para que tu mente se
+            mantenga tranquila todo el tiempo
+          - >-
+            Monitorización de actividad física con IA: Generados por un sensor avanzado de nueve ejes y tecnología de
+            identificación de brazada mejorada con IA, HUAWEI Band 10 ofrece una sensación de ligereza, gestión
+            científica del sueño y 100 modos deportivos
+          - >-
+            Batería de larga duración: ¡Carga tu pulsera durante cinco minutos y úsala durante hasta dos días, o bien
+            cárgala al máximo durante 45 minutos y úsala hasta nueve días seguidos! Disfruta de hasta 8 días de duración
+            de batería con un uso típico y hasta 14 días cuando más lo necesites
+        variationAttributes:
+          - name: style_name
+            value: Band 10
+          - name: color_name
+            value: Verde Aleación de Aluminio
+        ParentASIN: B0F2J23SQ7
     ParentASIN: B0F2J23SQ7
     variationAttributes:
       - name: style_name
@@ -1716,6 +1816,13 @@ productos:
       HUAWEI Band 10 Smartwatch, Monitorización de Actividad Física con IA, Análisis del Sueño a Nivel Profesional, VFC
       Promedio Durante el Sueño y Datos sobre el Sueño, 14 Días, iOS & Android
     condicion: new
+    variantes_info:
+      total_en_stock: 10
+      mostradas: 10
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0CVN3NK42
     a_tener_en_cuenta: No tiene GPS ni NFC; requiere Samsung Health para seguimiento completo.
     brand: Samsung
@@ -1839,4 +1946,11 @@ productos:
       Samsung Galaxy Fit3 - Reloj inteligente con pantalla AMOLED de 40 mm, cuerpo de aluminio, seguimiento completo de
       la actividad física y la salud, batería hasta 13 días, carga rápida, 5 ATM, gris
     condicion: new
-actualizacion: '2025-09-14'
+    variantes_info:
+      total_en_stock: 2
+      mostradas: 2
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
+actualizacion: '2025-09-15'

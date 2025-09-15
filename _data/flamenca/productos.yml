@@ -78,6 +78,13 @@ productos:
       - name: color_name
         value: Rojo Con Lunares Negros
     condicion: new
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0F5BWR1DM
     nombre: Vestido Flamenco Mujer con Volantes
     brand: AMARU SANCHESU
@@ -434,6 +441,34 @@ productos:
       Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral (FR/ES,
       Letras, M, Regular, Regular, Negro Multicolor)
     condicion: new
+    variationAttributes:
+      - name: size_name
+        value: M
+      - name: color_name
+        value: Negro Multicolor
+    variantes_info:
+      total_en_stock: 18
+      mostradas: 10
+      restantes: 8
+      truncado: true
+    variantes_restantes_asins:
+      - B0F5BT5V63
+      - B0F5BTDJVT
+      - B0F5BV17M1
+      - B0F5BV2GV4
+      - B0F5BV5DK2
+      - B0F5BVKW39
+      - B0F5BVQZSP
+      - B0F5BWQWNX
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0F5BT5V63?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BTDJVT?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BV17M1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BV2GV4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BV5DK2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BVKW39?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BVQZSP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BWQWNX?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B08BDDT63M
     nombre: Traje Profesional 2 Piezas Lunares Gojoy Shop
     brand: Gojoy shop
@@ -899,6 +934,52 @@ productos:
             value: Azul
         ParentASIN: B08BDPFZ76
         condicion: new
+      - ASIN: B08BDJYXM1
+        title: >-
+          Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con
+          Doble Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (M, Azul)
+        brand: Gojoy shop
+        precio: "39,99\_€"
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg
+        imagenWidth: 361
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41dCyzxZM0L._SL500_.jpg
+            width: 500
+            height: 447
+          - url: https://m.media-amazon.com/images/I/41L6TarE+yL._SL500_.jpg
+            width: 500
+            height: 474
+          - url: https://m.media-amazon.com/images/I/41lyptlmsAL._SL500_.jpg
+            width: 492
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Ns1a6bFFL._SL500_.jpg
+            width: 369
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411ee6j7qvL._SL500_.jpg
+            width: 361
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08BDJYXM1?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Nuestra tienda en Amazon: Gojoy Shop, tenemos varios modelos de disfraces vestidos de baile para adultos y
+            niños. Este Traje de Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores
+            Disponibles. Ideal para Baile Danza Flamenco o Sevillanas para Mujer.
+          - Tejido de alta calidad y elástico.
+          - >-
+            <br> Fácil de usar: nuestras prendas están hechas de tejido elástico para un uso fácil de vestirse o
+            quitarse.
+          - Este artículo cumple las normas vigentes de la C.E..
+          - Contiene Body con Doble Volantes en Manga y Falda de Lunares con Un Volante en 6 Colores Disponibles.
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Azul
+        ParentASIN: B08BDPFZ76
     ParentASIN: B08BDPFZ76
     variationAttributes:
       - name: size_name
@@ -909,6 +990,147 @@ productos:
       Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con Doble
       Volantes en Manga y Falda de Lunares en 6 Colores Disponibles) (M, Rojo)
     condicion: new
+    variantes_info:
+      total_en_stock: 77
+      mostradas: 10
+      restantes: 67
+      truncado: true
+    variantes_restantes_asins:
+      - B08BDLNRGW
+      - B08BDLNRGX
+      - B08BDLPKD8
+      - B08BDLRZWP
+      - B08BDLRZWQ
+      - B08BDMH6T9
+      - B08BDMXYZ2
+      - B08BDN5GST
+      - B08BDNKD8L
+      - B08BDQDF7H
+      - B08BDSFP32
+      - B08BDSGQR5
+      - B08BDT22TX
+      - B08BDWGLP9
+      - B08BDX1VWN
+      - B08BDXYNMR
+      - B08BDY47R8
+      - B08BF22WV8
+      - B08BF23Y4Z
+      - B09SFBW4WT
+      - B09SFBY8KC
+      - B09SFC2GKN
+      - B09SFC3MWH
+      - B09SFC46R2
+      - B09SFC4NH4
+      - B09SFC5MGR
+      - B09SFC87PJ
+      - B09SFC91ST
+      - B09SFCBBP7
+      - B09SFCBW4S
+      - B09SFCDPWH
+      - B09SFCHR8W
+      - B09SFCJ1Y8
+      - B09SFCK8LY
+      - B09SFCKF3V
+      - B09SFCM183
+      - B09SFCNQ29
+      - B09SFCQLDT
+      - B09SFCQT8X
+      - B09SFCV7Y5
+      - B09SFCVQ68
+      - B09SFCYHJM
+      - B09SFCYN97
+      - B09SFCYVMN
+      - B09SFCZ2MR
+      - B09SFCZ64H
+      - B09SFD11F4
+      - B09SFD1SHX
+      - B09SFD2M8F
+      - B09SFD3Q55
+      - B09SFD4ZZ3
+      - B09SFD7R1P
+      - B09SFD7TGQ
+      - B09SFD877L
+      - B09SFD877M
+      - B09SFDB3YH
+      - B09SFDC74X
+      - B09SFDCNB4
+      - B09SFDF7PC
+      - B09SFDF82L
+      - B09SFDG23Z
+      - B09SFDKDBZ
+      - B09SFDXC7Y
+      - B09SFDXC7Z
+      - B09SFDXLBD
+      - B09SFF4J15
+      - B09SFFCTT5
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B08BDLNRGW?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDLNRGX?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDLPKD8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDLRZWP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDLRZWQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDMH6T9?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDMXYZ2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDN5GST?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDNKD8L?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDQDF7H?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDSFP32?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDSGQR5?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDT22TX?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDWGLP9?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDX1VWN?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDXYNMR?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BDY47R8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BF22WV8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BF23Y4Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFBW4WT?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFBY8KC?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFC2GKN?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFC3MWH?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFC46R2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFC4NH4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFC5MGR?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFC87PJ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFC91ST?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCBBP7?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCBW4S?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCDPWH?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCHR8W?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCJ1Y8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCK8LY?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCKF3V?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCM183?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCNQ29?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCQLDT?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCQT8X?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCV7Y5?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCVQ68?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCYHJM?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCYN97?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCYVMN?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCZ2MR?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFCZ64H?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD11F4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD1SHX?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD2M8F?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD3Q55?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD4ZZ3?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD7R1P?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD7TGQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD877L?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFD877M?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDB3YH?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDC74X?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDCNB4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDF7PC?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDF82L?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDG23Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDKDBZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDXC7Y?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDXC7Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFDXLBD?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFF4J15?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09SFFCTT5?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0829SK8LN
     nombre: Vestido Flamenco Rojo Lunares Negro (Niñas)
     brand: Flamifeel
@@ -1088,6 +1310,13 @@ productos:
         value: Rojo
     nombreCompleto: Flamifeel Vestido Flamenco Rojo Lunares Negro, rojo, 6 años
     condicion: new
+    variantes_info:
+      total_en_stock: 4
+      mostradas: 4
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B0CKM95RTP
     nombre: Vestido Flamenca con Flor (Niñas)
     brand: ReliBeauty
@@ -1417,6 +1646,13 @@ productos:
       ReliBeauty Disfraz Flamenca Niña Vestido Sevillana Traje Flamenca con Tocado de Flor Carnaval Feria de Abril, 5-6
       años(110cm)
     condicion: new
+    variantes_info:
+      total_en_stock: 5
+      mostradas: 5
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B08BCS4PG4
     nombre: Traje Profesional 2 Piezas Volante en Manga
     brand: Gojoy shop
@@ -1936,6 +2172,136 @@ productos:
       Gojoy shop- Traje Profesional de Baile Danza Flamenco o Sevillanas para Mujer de 2 Piezas (Contiene Body con Doble
       Volante en Manga y Falda en 6 Colores Disponibles) (Rojo, M)
     condicion: new
+    variationAttributes:
+      - name: color_name
+        value: Rojo
+      - name: size_name
+        value: M
+    variantes_info:
+      total_en_stock: 69
+      mostradas: 10
+      restantes: 59
+      truncado: true
+    variantes_restantes_asins:
+      - B08BCS1L5H
+      - B08BCS2HSP
+      - B08BCS33YY
+      - B08BCSBF3N
+      - B08BCSDHKM
+      - B08BCSFDP4
+      - B08BCSK7N4
+      - B08BCSQJH1
+      - B08BCSTJGT
+      - B08BCSTNRL
+      - B08BCSVKVY
+      - B08BCT11GK
+      - B08BCT2B75
+      - B08BCT4GC8
+      - B08BCT8W8Z
+      - B08BCTDHZP
+      - B08BCTFF18
+      - B08BCTHPY8
+      - B08BCTR17B
+      - B09RBDWT61
+      - B09RBF3FLW
+      - B09RBF411R
+      - B09RBF5H9W
+      - B09RBFDJJX
+      - B09RBFGR3B
+      - B09RBFHCVN
+      - B09RBFJ5D1
+      - B09RBFL5VJ
+      - B09RBFN6CQ
+      - B09RBFVTTH
+      - B09RBFWH8R
+      - B09RBFWWXP
+      - B09RBFYBB7
+      - B09RBG2HV8
+      - B09RBG2HVL
+      - B09RBG4SC2
+      - B09RBG72RD
+      - B09RBG85P9
+      - B09RBG8C6V
+      - B09RBG8G49
+      - B09RBG9S3R
+      - B09RBGBTTC
+      - B09RBGCV1Q
+      - B09RBGHR67
+      - B09RBGJS7P
+      - B09RBGJY7V
+      - B09RBGKLNS
+      - B09RBGMYS2
+      - B09RBGN6VX
+      - B09RBGNLFC
+      - B09RBGT4QZ
+      - B09RBGV9RZ
+      - B09RBGW42V
+      - B09RBGWKCS
+      - B09RBGWSHP
+      - B09RBGZ3PJ
+      - B09RBH32FJ
+      - B09RBH7CK7
+      - B09RBHMJG5
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B08BCS1L5H?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCS2HSP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCS33YY?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSBF3N?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSDHKM?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSFDP4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSK7N4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSQJH1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSTJGT?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSTNRL?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCSVKVY?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCT11GK?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCT2B75?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCT4GC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCT8W8Z?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCTDHZP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCTFF18?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCTHPY8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BCTR17B?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBDWT61?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBF3FLW?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBF411R?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBF5H9W?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFDJJX?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFGR3B?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFHCVN?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFJ5D1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFL5VJ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFN6CQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFVTTH?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFWH8R?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFWWXP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBFYBB7?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG2HV8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG2HVL?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG4SC2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG72RD?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG85P9?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG8C6V?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG8G49?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBG9S3R?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGBTTC?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGCV1Q?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGHR67?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGJS7P?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGJY7V?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGKLNS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGMYS2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGN6VX?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGNLFC?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGT4QZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGV9RZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGW42V?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGWKCS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGWSHP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBGZ3PJ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBH32FJ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBH7CK7?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09RBHMJG5?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B09YT8TL7J
     nombre: Vestido de Flamenco Largo y Elegante
     brand: Tandada
@@ -2504,6 +2870,63 @@ productos:
             value: S
         ParentASIN: B09YTHZ8W2
         condicion: new
+      - ASIN: B09YTDH9PH
+        title: >-
+          Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
+          Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Blue,XXXL)
+        brand: Tandada
+        precio: "58,00\_€"
+        precioOriginal: No especificado
+        disponibilidad: Envío en 2 a 3 días
+        imagen: https://m.media-amazon.com/images/I/41hQCINE1WL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41aRPEhuPPL._SL500_.jpg
+            width: 500
+            height: 491
+          - url: https://m.media-amazon.com/images/I/41j8CDQHKvL._SL500_.jpg
+            width: 396
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41iVhnsj++L._SL500_.jpg
+            width: 366
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411olGgqoxL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41tZ-3adcTL._SL500_.jpg
+            width: 457
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41yI4bMcP6L._SL500_.jpg
+            width: 500
+            height: 241
+        condicion: new
+        enlace: https://www.amazon.es/dp/B09YTDH9PH?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            [Calidad creíble] Hecho de tela de alta calidad, gran sensación de drapeado, transpirable y agradable para
+            la piel, ofrece comodidad durante todo el día al bailar, adecuado para todos los amantes del baile.
+          - >-
+            [Diseño elegante] Falda completa simple y elegante, la falda larga y grande puede alcanzar los 360 grados
+            para adaptarse a sus diferentes posturas de baile, perfectas para girar y hacer movimientos dinámicos. La
+            elección perfecta para bailarines de ballet/líricos modernos.
+          - >-
+            [Multipropósito] Perfecto para danza lírica moderna, ceremonia, latín, vals, clase de baile, ballet, baile
+            estándar nacional, banquete, etc. También es ideal para usar en vacaciones, gimnasia, playa, cócteles,
+            fiestas nocturnas, representaciones teatrales, bailes, accesorios fotográficos y otras ocasiones especiales.
+          - >-
+            [Cómodas] Son suaves y elegantes. En la práctica de la danza, el vestido hace que el practicante se sienta
+            cómodo y cumpla con los requisitos de la práctica de la danza.
+          - >-
+            [Talla y servicio]Mujer talla S, M, L, XL, XXL. Consulta la tabla de tallas antes de comprar. La
+            satisfacción del cliente es nuestra principal prioridad. No dude en enviar un correo electrónico a nuestro
+            equipo de posventa si tiene alguna pregunta o inquietud.
+        variationAttributes:
+          - name: color_name
+            value: Blue
+          - name: size_name
+            value: 3XL
+        ParentASIN: B09YTHZ8W2
     ParentASIN: B09YTHZ8W2
     variationAttributes:
       - name: color_name
@@ -2514,6 +2937,27 @@ productos:
       Vestido de Baile de Salón para Mujer Traje con Volantes Manga Corta Competición Profesional Vestido Moderno de
       Vals Cha Cha Vestido de Flamenco Vestido de Rendimiento de (Red,M)
     condicion: new
+    variantes_info:
+      total_en_stock: 17
+      mostradas: 10
+      restantes: 7
+      truncado: true
+    variantes_restantes_asins:
+      - B09YTDZP2Y
+      - B09YTFXTMR
+      - B09YTJ9HP4
+      - B09YTLQ214
+      - B09YTN2RJ8
+      - B09YTNCX8S
+      - B09YTNHZRQ
+    variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B09YTDZP2Y?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09YTFXTMR?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09YTJ9HP4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09YTLQ214?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09YTN2RJ8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09YTNCX8S?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09YTNHZRQ?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0DZ75Y8TJ
     nombre: Traje de Flamenca Mujer Verde
     brand: Partilandia
@@ -2599,6 +3043,13 @@ productos:
         value: M
     nombreCompleto: Partilandia | Disfraz de Sevillana verde con lunares blancos para mujer (Talla M)
     condicion: new
+    variantes_info:
+      total_en_stock: 2
+      mostradas: 2
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
   - ASIN: B019A3UAI4
     nombre: Traje de Flamenca Mujer Rojo
     brand: FIESTAS GUIRCA
@@ -2692,4 +3143,11 @@ productos:
         value: 38-40
     nombreCompleto: Guirca - Disfraz adulta flamenca, Talla 38-40 (80629.0)
     condicion: new
-actualizacion: '2025-09-14'
+    variantes_info:
+      total_en_stock: 1
+      mostradas: 1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
+actualizacion: '2025-09-15'
