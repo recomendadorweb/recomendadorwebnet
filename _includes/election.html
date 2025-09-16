@@ -1,0 +1,184 @@
+{%- assign ns            = include.ns | default: tipo | default: '' -%}
+{%- assign election_key  = include.election  | default: 'cual_compraria_yo' -%}
+{%- assign productos_key = include.productos | default: 'productos' -%}
+{%- assign max_bullets   = include.max_bullets | default: 5 -%}
+{%- assign btn_text      = include.btn_text    | default: 'Comprar en Amazon' -%}
+{%- assign show_css      = include.show_css    | default: true -%}
+{%- assign strict        = include.strict      | default: false -%}
+{%- assign debug         = include.debug       | default: false -%}
+
+{%- if ns == '' -%}
+  {%- assign election_data  = site.data[election_key] -%}
+  {%- assign productos_data = site.data[productos_key] -%}
+{%- else -%}
+  {%- assign election_data  = site.data[ns][election_key] | default: site.data[ns] -%}
+  {%- assign productos_data = site.data[ns][productos_key] | default: site.data[ns] -%}
+{%- endif -%}
+
+{%- assign election_list  = election_data.elecciones | default: election_data -%}
+{%- assign productos_list = productos_data.productos | default: productos_data -%}
+
+{%- capture _ribbon_labels -%}Opción Recomendador.net|Opción Premium|Opción Económica{%- endcapture -%}
+{%- assign _ribbons = _ribbon_labels | split: '|' -%}
+
+{%- assign datos = site.data[ns][election_key] | default: nil -%}
+
+{%- if include.mostrar_texto and datos -%}
+  {%- if datos.titulo -%}
+    <h2 id="mi-eleccion">{{ datos.titulo }}</h2>
+  {%- endif -%}
+  {%- if datos.intro -%}
+    <p>{{ datos.intro | markdownify }}</p>
+  {%- endif -%}
+{%- endif -%}
+
+<div class="cards-grid">
+  {%- if election_list and election_list.size > 0 -%}
+    {%- for item in election_list -%}
+      {%- assign target_name = item.nombre | default: item.modelo | default: item.producto | default: item | strip -%}
+      {%- assign ribbon = item.ribbon | default: item.categoria | default: _ribbons[forloop.index0] | default: 'Elección destacada' -%}
+
+      {%- assign prod_match = nil -%}
+      {%- if productos_list and productos_list.size > 0 -%}
+        {%- for p in productos_list -%}
+          {%- assign _p   = p[1] | default: p -%}
+          {%- assign cand = _p.nombre | default: _p.nombreCompleto | default: _p.title -%}
+          {%- if cand and target_name -%}
+            {%- assign lc_cand = cand | downcase | strip -%}
+            {%- assign lc_tgt  = target_name | downcase | strip -%}
+            {%- if strict -%}
+              {%- if lc_cand == lc_tgt -%}
+                {%- assign prod_match = _p -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- else -%}
+              {%- if lc_cand == lc_tgt or lc_cand contains lc_tgt or lc_tgt contains lc_cand -%}
+                {%- assign prod_match = _p -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+      {%- if prod_match -%}
+        {%- assign img     = prod_match.imagen | default: prod_match.image | default: '' -%}
+        {%- assign title   = prod_match.nombre | default: prod_match.nombreCompleto | default: prod_match.title | default: target_name -%}
+        {%- assign link    = prod_match.enlace | default: prod_match.url | default: '#' -%}
+        {%- assign bullets = prod_match.caracteristicas | default: prod_match.lo_mejor | default: prod_match.a_tener_en_cuenta -%}
+
+        <article class="card">
+          <div class="ribbon">{{ ribbon }}</div>
+          <div class="card-inner">
+            {%- if img != '' -%}
+              <img src="{{ img }}" alt="{{ title | escape }}">
+            {%- endif -%}
+            <div class="card-content">
+              <h3>{{ title }}</h3>
+              {%- if bullets and bullets.size > 0 -%}
+                <ul>
+                  {%- for b in bullets limit: max_bullets -%}
+                    <li>{{ b }}</li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+              <a href="{{ link }}" class="btn" rel="nofollow sponsored noopener" target="_blank">{{ btn_text }}</a>
+            </div>
+          </div>
+        </article>
+      {%- else -%}
+        <!-- No se encontró en {{ productos_key }} el producto "{{ target_name }}" -->
+      {%- endif -%}
+    {%- endfor -%}
+  {%- else -%}
+    <!-- {{ election_key }} está vacío o no existe -->
+  {%- endif -%}
+</div>
+
+{%- if show_css -%}
+<style>
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.cards-grid .card {
+  width: 80%;
+  min-width: 280px;
+  box-sizing: border-box;
+}
+.card {
+  position: relative;
+  background: #fff;
+  border: 4px solid #2a64ff;
+  border-radius: 8px;
+  padding: 0;
+  overflow: visible;
+  box-shadow: 0 6px 18px rgba(15,23,42,.08);
+}
+.card-inner {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.card-inner img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+.card-content h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+.card-content ul {
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+.card-content ul li {
+  font-size: 15px;
+}
+.card-content .btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #0b0b0b;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.ribbon {
+  --f:.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1.8;
+  padding: 0 2em;
+  padding-bottom: var(--f);
+  font: bold 18px/1.8 Arial, sans-serif;
+  color: #fff;
+  background: #0073e6;
+  border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+  clip-path: polygon(
+    100% calc(100% - var(--f)),100% 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    var(--f) calc(100% - var(--f)),0 100%,0 calc(100% - var(--f)),
+    999px calc(100% - var(--f) - 999px),
+    calc(100% - 999px) calc(100% - var(--f) - 999px)
+  );
+  transform: translate(-29.289%, -100%) rotate(-45deg);
+  transform-origin: 100% 100%;
+  z-index: 2;
+}
+@media (max-width: 768px) {
+  .card-inner img { max-height: 260px; }
+}
+</style>
+{%- endif -%}

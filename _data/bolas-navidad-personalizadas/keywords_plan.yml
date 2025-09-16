@@ -1,0 +1,88 @@
+cabecera:
+  # KW_ATACADA: bolas navidad personalizadas | VOL: 2400
+  principal: bolas de navidad personalizadas
+  meta:
+    vol: 2400
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: bolas navidad personalizadas | VOL: 2400
+  - bolas de navidad personalizadas
+  # KW_ATACADA: bola navidad personalizada | VOL: 1900
+  - bola de navidad personalizada
+  # KW_ATACADA: bola de navidad personalizada | VOL: 1600
+  - bola de navidad personalizada
+  # KW_ATACADA: bolas de navidad originales | VOL: 720
+  - bolas de navidad originales
+secciones:
+  - kw: bolas navidad personalizadas
+    # KW_ATACADA: bolas navidad personalizadas | VOL: 2400
+    titulo: bolas de navidad personalizadas
+    id: bolas-navidad-personalizadas
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2400
+    diff: 0
+    intent: I
+  - kw: bola navidad personalizada
+    # KW_ATACADA: bola navidad personalizada | VOL: 1900
+    titulo: bola de navidad personalizada
+    id: bola-navidad-personalizada
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1900
+    diff: 0
+    intent: I
+  - kw: bola de navidad personalizada
+    # KW_ATACADA: bola de navidad personalizada | VOL: 1600
+    titulo: bola de navidad personalizada
+    id: bola-de-navidad-personalizada
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1600
+    diff: 0
+    intent: I
+  - kw: bolas de navidad originales
+    # KW_ATACADA: bolas de navidad originales | VOL: 720
+    titulo: bolas de navidad originales
+    id: bolas-de-navidad-originales
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 720
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: bolas navidad personalizadas | VOL: 2400
+  - bolas de navidad personalizadas
+  # KW_ATACADA: bola navidad personalizada | VOL: 1900
+  - bola de navidad personalizada
+  # KW_ATACADA: bola de navidad personalizada | VOL: 1600
+  - bola de navidad personalizada
+  # KW_ATACADA: bolas de navidad originales | VOL: 720
+  - bolas de navidad originales
+  # KW_ATACADA: bolas personalizadas navidad | VOL: 480
+  - bolas de navidad personalizadas
+  # KW_ATACADA: adorno navidad personalizado | VOL: 390
+  - adorno de navidad personalizado
+  # KW_ATACADA: bolas de navidad con nombre | VOL: 390
+  - bolas de navidad con nombre
+html_map:
+  h1: bolas de navidad personalizadas
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - bolas de navidad personalizadas
+  - bola de navidad personalizada
+  - bola de navidad personalizada
+  - bolas de navidad originales
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 7
+  total_brands_detected: 71
