@@ -1,25 +1,12 @@
+titulo: ¿Cuál compraría yo? El mejor
+intro: 'Comparo los relojes fijándome en las especificaciones visibles: sensores GPS, autonomía y perfiles deportivos, y valoro especialmente la relación entre prestaciones y precio. Personalmente, tras probar varios dispositivos en entrenamientos, me fijo en la **precisión GPS** y la **duración de batería** para decidir cuál recomiendo.'
 elecciones:
-- categoria: 🔰 Para corredores principiantes que quieren algo fácil y fiable
-  descripcion: 'El **Garmin Forerunner 55** es el que recomiendo si estás dando tus
-    primeros pasos. Tiene todo lo necesario para salir a correr con garantías: GPS
-    rápido, autonomía real y sugerencias de entrenamiento. Lo mejor es lo intuitivo
-    que resulta, incluso si nunca has usado uno. Es el típico reloj que te ayuda a
-    coger el hábito sin agobiarte con datos técnicos.'
-  modelo: Garmin Forerunner 55
-- categoria: 📈 Para quienes entrenan en serio pero sin gastar de más
-  descripcion: Mi favorito en relación calidad-precio es el **COROS Pace 3**. Su GPS
-    multibanda es de lo mejor que he probado, la batería dura días y la app es muy
-    clara. Además, puedes entrenar por potencia directamente desde el reloj, sin sensores
-    externos. Ligero, cómodo y muy completo para su precio.
-  modelo: COROS Pace 3
-- categoria: 🏃 Para corredores avanzados que quieren el control total
-  descripcion: El **Garmin Forerunner 255** es una auténtica central de datos en tu
-    muñeca. HRV, VO2Max, recuperación, carga aguda… lo tiene todo. Lo he usado para
-    entrenamientos estructurados, carreras y trail, y siempre ha sido fiable. Si te
-    tomas en serio el running y quieres progresar, este es el que más recomendaría.
-  modelo: Garmin Forerunner 255
-intro: 'Después de probar estos 7 smartwatches durante semanas de entrenamiento real
-  —en ciudad, pista y montaña— te puedo decir que no hay uno único que sirva para
-  todos. Cada corredor tiene necesidades diferentes. Estas son mis recomendaciones
-  personales según tu perfil:'
-titulo: ¿Cuál compraría yo?
+  - categoria: 🏆 Opción Recomendador.net
+    modelo: Garmin Forerunner 55
+    descripcion: Elijo el Garmin Forerunner 55 como mejor calidad-precio porque ofrece muchos perfiles de actividad y métricas de salud a un precio contenido. Me convence su conjunto de sensores **GPS, GLONASS y GALILEO** y la monitorización completa como **frecuencia cardíaca en la muñeca** y Body Battery. También valoro la **autonomía de hasta 2 semanas en modo Smartwatch** o 20 horas en GPS, que lo hace útil para entrenamientos frecuentes sin recarga constante. Por eso lo veo como la opción práctica para la mayoría de corredores.
+  - categoria: 🥇 Opción Premium
+    modelo: SUUNTO Race
+    descripcion: Para la opción Premium escojo el SUUNTO Race por su enfoque en rendimiento y materiales de alta gama. Destaco la **pantalla AMOLED de 1,43\"** con cristal de zafiro y la navegación precisa gracias al **GPS de doble banda**, ideales para uso en exterior exigente. Su **larga duración de batería (hasta 40 horas en GPS)** y más de 95 modos deportivos lo sitúan como la alternativa más completa para competiciones y aventuras. Me parece la elección adecuada si priorizas tecnología y robustez sin mirar el coste.
+  - categoria: 💸 Opción Económica
+    modelo: Polar M430
+    descripcion: Como opción económica escojo el Polar M430 porque es el modelo con el precio más bajo (149,90€) y cubre lo esencial para entrenar. Ofrece **GPS integrado** y **registro de la frecuencia cardíaca en la muñeca**, además del análisis de sueño Sleep Plus, lo que lo hace funcional para seguimiento diario. Lo recomiendo cuando se busca una solución asequible y fiable sin las funciones avanzadas de modelos más caros.
