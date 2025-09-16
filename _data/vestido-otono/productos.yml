@@ -529,60 +529,57 @@ productos:
             value: A-rojo
         ParentASIN: B0CZ9BXSVC
         condicion: new
-      - ASIN: B0CZ9C4MCC
+      - ASIN: B0D53B3LZ9
         title: >-
           LIAMERHE Vestido Sin Mangas Mujer Casual Verano Vestidos Cuello en V Elegante Vestido Largo hasta la Rodilla
-          Azul Marino M
+          Azul L
         brand: LIAMERHE
-        precio: 23,99€
-        precioOriginal: 26,99€
+        precio: 21,99€
+        precioOriginal: 24,99€
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41xmxaeoqRL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/414zbs2etLL._SL500_.jpg
         imagenWidth: 375
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41643jIVt2L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51TnnlUCAqL._SL500_.jpg
             width: 375
             height: 500
-          - url: https://m.media-amazon.com/images/I/41347YEyOfL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51N5ggMq3bL._SL500_.jpg
             width: 375
             height: 500
-          - url: https://m.media-amazon.com/images/I/5134dLgdPkL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41k3SZ7i86L._SL500_.jpg
+            width: 417
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415oNl0sK+L._SL500_.jpg
             width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51TO19ThCCL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41eLzS6lguL._SL500_.jpg
-            width: 375
-            height: 500
+            height: 237
         condicion: new
-        enlace: https://www.amazon.es/dp/B0CZ9C4MCC?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B0D53B3LZ9?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
-            Material del vestido de verano: los vestidos con estampado floral para mujer están hechos de 95% poliéster y
-            5% elastano, tela de alta calidad con exquisita mano de obra, bien cosidos, cómodos de llevar. Ideal para
-            primavera y verano.
+            【Material del Vestido de Verano】Los vestidos con estampado floral para mujer están hechos de 95% poliéster y
+            5% spandex, tela de alta calidad con mano de obra exquisita, bien cosida, cómoda de llevar. Bueno para la
+            primavera y el verano. Diseño de manga de mariposa, puede cubrir la carne del brazo, ¡muy delgado!
           - >-
-            Diseño del vestido: el vestido casual cuenta con corte clásico, cintura alta, cuello en V, cintura elástica,
-            estilo simple y sexy para niñas. El vestido viene en vibrantes estampados florales que le dan un aspecto
-            único.
+            【Design del Vestito】El vestido casual cuenta con un corte clásico de línea A de cintura alta, cuello en V
+            profundo, cintura elástica, estilo sexy simple para niñas. Disponible en colores florales y sólidos, ¡este
+            vestido es versátil y elegante!
           - >-
-            Combinación: vestido casual para mujer, combina bien con blazer, chaqueta, cárdigan, calcetines, bolsos,
-            sandalias, tacones altos y zapatos planos para crear una variedad de estilos. La longitud de este vestido de
-            verano sin mangas está justo debajo de la rodilla y se adapta bien a cualquier forma de cuerpo.
+            【Fitting】Vestido de las mujeres de ocio, va bien con blazer, chaqueta, chaqueta de punto, medias, bolso,
+            sandalias, zapatos de tacón alto y zapatos planos para crear una variedad de miradas. Este vestido de verano
+            de manga corta es por encima de la rodilla, juguetón y bonito, adecuado para todo tipo de cuerpos.
           - >-
-            Ocasiones: perfecto para vacaciones, playa, citas, salir, uso diario, trabajo, Hawaii, crucero, noche,
-            fiesta, boda. Combínalos con pequeños accesorios de diferentes estilos para crear una variedad de estilos.
+            【Occasions】Perfecto para vacaciones, playa, citas, salir, desgaste diario, trabajo, Hawaii, crucero, noche,
+            fiesta, boda. Combínalos con diferentes estilos pequeños accesorios para crear una variedad de estilos.
           - >-
-            Tabla de tallas: según las opiniones de nuestros clientes, te recomendamos que sigas nuestra tabla de tallas
-            (no la tabla de tallas de Amazon) en nuestras fotos o descripciones del producto para elegir la talla
-            correcta de acuerdo con las medidas de tu cuerpo antes de comprar. Muchas gracias
+            【Tabla de Tallas】De acuerdo con los comentarios de nuestros clientes, le recomendamos que siga nuestra tabla
+            de tallas (no la tabla de tallas de Amazon) en nuestras fotos o descripciones del producto para elegir el
+            tamaño correcto en función de sus propias medidas corporales antes de comprar. ¡Muchas gracias!
         variationAttributes:
           - name: size_name
-            value: M
+            value: L
           - name: color_name
-            value: A-azul Marino
+            value: A-azul
         ParentASIN: B0CZ9BXSVC
     nombre: LIAMERHE vestido invitada otoño Burdeos S
     caracteristicas:
@@ -651,12 +648,11 @@ productos:
       - name: color_name
         value: B-burdeos
     variantes_info:
-      total_en_stock: 98
+      total_en_stock: 95
       mostradas: 10
-      restantes: 88
+      restantes: 85
       truncado: true
     variantes_restantes_asins:
-      - B0D53B3LZ9
       - B0D53CSFQK
       - B0D53CSFQL
       - B0D53DGW4Q
@@ -690,7 +686,6 @@ productos:
       - B0DXPW9MVZ
       - B0DXPWBZWB
       - B0DXPWDS21
-      - B0DXPWFFY9
       - B0DXPWG133
       - B0DXPWJCS8
       - B0DXPWKP89
@@ -706,7 +701,6 @@ productos:
       - B0DXPXTWM9
       - B0DXPY1YXC
       - B0DXPY36KB
-      - B0DXPY8D5D
       - B0DXPYCFM5
       - B0DXPYM1V6
       - B0DXPYTFB8
@@ -745,7 +739,6 @@ productos:
       - B0FHH4CC4P
       - B0FHH8NYPL
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0D53B3LZ9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53CSFQK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53CSFQL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53DGW4Q?tag=recomendadorn-21&th=1&psc=1
@@ -779,7 +772,6 @@ productos:
       - https://www.amazon.es/dp/B0DXPW9MVZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWBZWB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWDS21?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DXPWFFY9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWG133?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWJCS8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWKP89?tag=recomendadorn-21&th=1&psc=1
@@ -795,7 +787,6 @@ productos:
       - https://www.amazon.es/dp/B0DXPXTWM9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPY1YXC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPY36KB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DXPY8D5D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYCFM5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYM1V6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYTFB8?tag=recomendadorn-21&th=1&psc=1
@@ -1541,9 +1532,9 @@ productos:
     ParentASIN: B0D4M9QDLN
     condicion: new
     variantes_info:
-      total_en_stock: 93
+      total_en_stock: 92
       mostradas: 10
-      restantes: 83
+      restantes: 82
       truncado: true
     variantes_restantes_asins:
       - B0D4LWDWD6
@@ -1556,7 +1547,6 @@ productos:
       - B0D83CGC57
       - B0D83GGPCN
       - B0D83GGPCS
-      - B0D83GTZ7Q
       - B0D83H9JNP
       - B0D83HFBQ8
       - B0D83HNNN5
@@ -1586,7 +1576,6 @@ productos:
       - B0DF77VBG3
       - B0DF77ZD2M
       - B0DF781VCM
-      - B0DFC55Q79
       - B0DFC5H6FL
       - B0DFC5SZMY
       - B0DFC5Z4GJ
@@ -1599,6 +1588,7 @@ productos:
       - B0DFC99Y1J
       - B0DFC9FFY8
       - B0DFCBRCRS
+      - B0DWMP4FS9
       - B0DWMPGRTG
       - B0DWMQ452K
       - B0DWMQ7441
@@ -1640,7 +1630,6 @@ productos:
       - https://www.amazon.es/dp/B0D83CGC57?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83GGPCN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83GGPCS?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D83GTZ7Q?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83H9JNP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HFBQ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HNNN5?tag=recomendadorn-21&th=1&psc=1
@@ -1670,7 +1659,6 @@ productos:
       - https://www.amazon.es/dp/B0DF77VBG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF77ZD2M?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF781VCM?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFC55Q79?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5H6FL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5SZMY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5Z4GJ?tag=recomendadorn-21&th=1&psc=1
@@ -1683,6 +1671,7 @@ productos:
       - https://www.amazon.es/dp/B0DFC99Y1J?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC9FFY8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFCBRCRS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DWMP4FS9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMPGRTG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQ452K?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQ7441?tag=recomendadorn-21&th=1&psc=1
@@ -3277,7 +3266,7 @@ productos:
       Cintura Elástica Casual Vestido en Capas Vestido Línea A(Azul Marino, L)
     brand: CMTOP
     precio: 24,99€
-    precioOriginal: 32,99€
+    precioOriginal: 33,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/31TSrFMO8eL._SL500_.jpg
     imagenWidth: 385
@@ -3959,8 +3948,8 @@ productos:
         condicion: new
     nombre: Neteson vestidos invitada boda otoño 2024 jersey punto A-Line
     caracteristicas:
-      - "Tejido cómodo: 95% poliéster y 5% elastano, cálido y elástico."
-      - "Diseño que alarga: rayas verticales y cuello redondo clásico."
+      - 'Tejido cómodo: 95% poliéster y 5% elastano, cálido y elástico.'
+      - 'Diseño que alarga: rayas verticales y cuello redondo clásico.'
       - Silueta A-line con pliegues; caída y movimiento elegante.
       - Versátil para capas y múltiples ocasiones otoñales/invernales.
     a_tener_en_cuenta:
@@ -4835,62 +4824,6 @@ productos:
             value: Marrón
         ParentASIN: B0DHK79X2B
         condicion: new
-      - ASIN: B0DHKGQYXG
-        nombreCompleto: >-
-          fdsmall Vestidos Midi de Cuello V de otoño para Mujeres Vestidos Bohemios de Manga Larga Elegantes y elásticos
-          Casuales de Cintura Alta en Forma de a (FR/ES, Letras, M, Regular, Regular, Marrón)
-        valoracion: 4.5
-        salesrank: 28202
-        enlace: https://www.amazon.es/dp/B0DHKGQYXG?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
-        title: >-
-          fdsmall Vestidos Midi de Cuello V de otoño para Mujeres Vestidos Bohemios de Manga Larga Elegantes y elásticos
-          Casuales de Cintura Alta en Forma de a (FR/ES, Letras, M, Regular, Regular, Marrón)
-        brand: fdsmall
-        precio: 21,99€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41-aXICxlCL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51pEuYcFa6L._SL500_.jpg
-            width: 376
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51m3yr4FXKL._SL500_.jpg
-            width: 376
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51j4LKyl7NL._SL500_.jpg
-            width: 376
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51EVoOAYJfL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41cuxOHofnL._SL500_.jpg
-            width: 500
-            height: 500
-        caracteristicasAmazon:
-          - >-
-            Material: este vestido largo de otoño está hecho de poliéster transpirable y pro - piel, suave y cómodo, no
-            es fácil de arrugar, elástico, suave
-          - >-
-            Diseño: este vestido largo de otoño cuenta con un diseño único, cuello en V y cintura elástica,
-            complementado con hermosos estampados y un look relajado en forma de vestido a, único y encantador
-          - >-
-            Features: vestidos de mujer / vestidos de primavera y otoño de mujer / vestidos estampados / vestidos de
-            cintura elástica / vestidos de cuello V profundo / tejidos para la piel / vestidos hasta la rodilla / faldas
-            en A
-          - >-
-            Ocasión: este vestido es muy adecuado para ocasiones como graduaciones, bodas, vacaciones en la playa,
-            fiestas de té, bailes, etc. también se puede combinar con el abrigo que se usa diariamente en primavera y
-            otoño.
-          - 'Cuidado de la ropa: lavar regularmente, se recomienda lavar con agua fría, no usar lejía, no secar en tambor'
-        variationAttributes:
-          - name: size_name
-            value: M
-          - name: color_name
-            value: Marrón
-        ParentASIN: B0DHK79X2B
-        condicion: new
       - ASIN: B0DHK2PZ6H
         nombreCompleto: >-
           fdsmall Vestidos Midi de Cuello V de otoño para Mujeres Vestidos Bohemios de Manga Larga Elegantes y elásticos
@@ -5334,6 +5267,57 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0DHK79X2B
+      - ASIN: B0DHKSTNP3
+        title: >-
+          fdsmall Vestidos Midi de Cuello V de otoño para Mujeres Vestidos Bohemios de Manga Larga Elegantes y elásticos
+          Casuales de Cintura Alta en Forma de a (FR/ES, Letras, M, Regular, Regular, Negro)
+        brand: fdsmall
+        precio: 21,99€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51CC1EuCF5L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51GXqW+3t3L._SL500_.jpg
+            width: 376
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51s+BV83PhL._SL500_.jpg
+            width: 418
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51pv64en1fL._SL500_.jpg
+            width: 376
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51WYeZjb9FL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41cuxOHofnL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0DHKSTNP3?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Material: este vestido largo de otoño está hecho de poliéster transpirable y pro - piel, suave y cómodo, no
+            es fácil de arrugar, elástico, suave
+          - >-
+            Diseño: este vestido largo de otoño cuenta con un diseño único, cuello en V y cintura elástica,
+            complementado con hermosos estampados y un look relajado en forma de vestido a, único y encantador
+          - >-
+            Features: vestidos de mujer / vestidos de primavera y otoño de mujer / vestidos estampados / vestidos de
+            cintura elástica / vestidos de cuello V profundo / tejidos para la piel / vestidos hasta la rodilla / faldas
+            en A
+          - >-
+            Ocasión: este vestido es muy adecuado para ocasiones como graduaciones, bodas, vacaciones en la playa,
+            fiestas de té, bailes, etc. también se puede combinar con el abrigo que se usa diariamente en primavera y
+            otoño.
+          - 'Cuidado de la ropa: lavar regularmente, se recomienda lavar con agua fría, no usar lejía, no secar en tambor'
+        variationAttributes:
+          - name: size_name
+            value: M
+          - name: color_name
+            value: Negro
+        ParentASIN: B0DHK79X2B
     nombre: fdsmall vestido invitada boda otoño 2024 Midi Marrón L
     caracteristicas:
       - Tejido de poliéster suave y elástico
@@ -5407,17 +5391,15 @@ productos:
       - name: color_name
         value: Marrón
     variantes_info:
-      total_en_stock: 14
+      total_en_stock: 13
       mostradas: 10
-      restantes: 4
+      restantes: 3
       truncado: true
     variantes_restantes_asins:
-      - B0DHKSTNP3
       - B0DHKVD9JP
       - B0DRNX4LBB
       - B0DRNY32BN
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0DHKSTNP3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHKVD9JP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DRNX4LBB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DRNY32BN?tag=recomendadorn-21&th=1&psc=1
@@ -5746,7 +5728,7 @@ productos:
       - Manga 3/4
       - Corte recto y corto
       - Color Negro (Black Black)
-      - "Talla fabricante: Medium (40)"
+      - 'Talla fabricante: Medium (40)'
     a_tener_en_cuenta:
       - Revisa la talla
       - Corte recto
@@ -7274,4 +7256,4 @@ productos:
       - https://www.amazon.es/dp/B0FH6TSTHF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TW7C2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TWFRJ?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-16'
+actualizacion: '2025-09-17'

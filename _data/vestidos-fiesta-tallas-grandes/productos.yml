@@ -1178,8 +1178,8 @@ productos:
     nombre: 72styles Vestidos fiesta tallas grandes Infinito Convertible (Tallas 0–24)
     caracteristicas:
       - Vestido infinito convertible multiposición.
-      - "Tallas: única 0–16; talla grande 18–24."
-      - "Tejido SUPPER: elástico 4 direcciones y transpirable."
+      - 'Tallas: única 0–16; talla grande 18–24.'
+      - 'Tejido SUPPER: elástico 4 direcciones y transpirable.'
       - Incluye camiseta tubular SEABRA como regalo.
       - Resistente a arrugas y colores intensos.
     a_tener_en_cuenta:
@@ -2669,68 +2669,6 @@ productos:
             value: 50 Grande
         ParentASIN: B0DBXDT646
         condicion: new
-      - ASIN: B0D72LMGVF
-        title: >-
-          Hanna Nikole Vestido de cóctel de dos piezas para mujer, de gasa, elegante, línea A, sin mangas, cuello
-          redondo, con volantes de tul, cardigan, gris, 46
-        brand: Hanna Nikole
-        precio: 58,18€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31UASPBSs-L._SL500_.jpg
-        imagenWidth: 313
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41kz3aYhleL._SL500_.jpg
-            width: 464
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41KU5buFp3L._SL500_.jpg
-            width: 464
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41-IJz7ffTL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41xBTXim3sL._SL500_.jpg
-            width: 333
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41aRtKYXV3L._SL500_.jpg
-            width: 385
-            height: 500
-          - url: https://m.media-amazon.com/images/I/419Bgli88OL._SL500_.jpg
-            width: 333
-            height: 500
-        condicion: used
-        enlace: https://www.amazon.es/dp/B0D72LMGVF?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Sobre la talla: nuestras tallas son tallas de EE. UU., las tallas correspondientes en alemán son las
-            siguientes: US 16 = DE 46, US 18 = DE 48, US 20 = ES 50, US 22 = ES 52, US 24 = 54.
-          - >-
-            Características: (1) El juego de vestido de gasa de dos piezas se compone de un vestido sin mangas y un
-            cárdigan a juego. (2)Vestido: vestido de lentejuelas sin mangas con cuello redondo. El material de gasa que
-            fluye le da al vestido un toque elegante y femenino. Los adornos de lentejuelas están cuidadosamente cosidos
-            en la gasa y le dan al vestido un toque de brillo y glamour. (3) La chaqueta de gasa tiene un diseño único,
-            suelto y cómodo y te hace más elegante.
-          - >-
-            Material fino: tejido principal: 98 % poliéster+2 % viscosa. Este vestido de cóctel de lentejuelas de cuello
-            redondo para mujer está hecho de tela cómoda de alta calidad, se siente suave, fluida y fácil de llevar.
-          - >-
-            Combinación: puedes usarlo solo para acentuar tu figura o con la chaqueta de punto de manga 3/4 para un
-            aspecto moderno. para un look moderno, puede combinar un vestido de gasa con elegantes tacones y accesorios
-            brillantes. para un look casual, también puedes combinarlo con sandalias planas y una bolsa de hombro
-            ligera. Este cárdigan también se puede usar solo con otras prendas para darle a tu look un aspecto más
-            sofisticado.
-          - >-
-            Ocasiones: Cardigan de dos piezas con volantes, vestidos de madres de novia perfectos para todas las
-            ocasiones: oficina, trabajo, fiesta, citas, vacaciones, boda, iglesia, salir, Navidad, fiesta de baile,
-            fiesta de disfraces, espectáculos, Año Nuevo, aniversario, discoteca, Halloween, etc. y para uso diario y es
-            adecuado tanto para ocasiones casuales como comerciales.
-        variationAttributes:
-          - name: color_name
-            value: Gris
-          - name: size_name
-            value: 48 Grande
-        ParentASIN: B0DBXDT646
       - ASIN: B0D73BCKK4
         title: >-
           Hanna Nikole Vestido de cóctel de gasa de dos piezas para mujer, talla grande, con lentejuelas, elegante,
@@ -2816,8 +2754,8 @@ productos:
       brillante.
     condicion: ''
     variantes_info:
-      total_en_stock: 3
-      mostradas: 3
+      total_en_stock: 2
+      mostradas: 2
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -3946,32 +3884,30 @@ productos:
           - name: size_name
             value: 46 Grande
         ParentASIN: B0DXDZMP4C
-      - ASIN: B0DSJF8PVD
-        title: >-
-          Hanna Nikole Vestido De Gasa Plisado con Escote Redondo Y Corte En A De Talla Grande para Mujer Azul Grisáceo
-          20W
+      - ASIN: B0DSJG86MW
+        title: Hanna Nikole Vestido De Gasa Plisado con Escote Redondo Y Corte En A De Talla Grande para Mujer Negro 16W
         brand: Hanna Nikole
-        precio: 34,27€
-        precioOriginal: 46,99€
+        precio: 46,99€
+        precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31VRlFHfhgL._SL500_.jpg
-        imagenWidth: 441
+        imagen: https://m.media-amazon.com/images/I/31zjAX-bC9L._SL500_.jpg
+        imagenWidth: 444
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/319dl24eGXL._SL500_.jpg
-            width: 344
+          - url: https://m.media-amazon.com/images/I/31KYOKk+QsL._SL500_.jpg
+            width: 342
             height: 500
-          - url: https://m.media-amazon.com/images/I/41iBFM3-YKL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41mHugqijiL._SL500_.jpg
             width: 375
             height: 500
-          - url: https://m.media-amazon.com/images/I/41V6RPoL6AL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41exfzLUVgL._SL500_.jpg
             width: 500
             height: 500
           - url: https://m.media-amazon.com/images/I/314Wy9elc1L._SL500_.jpg
             width: 500
             height: 267
-        condicion: used
-        enlace: https://www.amazon.es/dp/B0DSJF8PVD?tag=recomendadorn-21&th=1&psc=1
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0DSJG86MW?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
             Diseño: El vestido es de tamaño cómodo y tiene un ajuste holgado para adaptarse mejor al cuerpo y garantizar
@@ -3989,9 +3925,9 @@ productos:
           - 'Tamaño: consulte atentamente la tabla de tallas para elegir la talla adecuada antes de comprar.'
         variationAttributes:
           - name: color_name
-            value: Azul Grisáceo
+            value: Negro
           - name: size_name
-            value: 50 Grande
+            value: 46 Grande
         ParentASIN: B0DXDZMP4C
     nombre: Hanna Nikole vestidos fiesta tallas grandes De Gasa Plisado Azul Marino 22W
     caracteristicas:
@@ -4015,17 +3951,15 @@ productos:
       En general lo valoro por su suavidad y caída, ideal si buscas un vestido cómodo para el día a día.
     condicion: new
     variantes_info:
-      total_en_stock: 14
+      total_en_stock: 13
       mostradas: 10
-      restantes: 4
+      restantes: 3
       truncado: true
     variantes_restantes_asins:
-      - B0DSJG86MW
       - B0DSJH5WBM
       - B0DSJHJ2PJ
       - B0DSJJJW91
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0DSJG86MW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJH5WBM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJHJ2PJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJJJW91?tag=recomendadorn-21&th=1&psc=1
@@ -6332,66 +6266,6 @@ productos:
             value: 48 Grande
         ParentASIN: B0DCWXL61P
         condicion: new
-      - ASIN: B0D7LSWDTK
-        title: >-
-          Hanna Nikole Conjunto de traje de noche de gasa para mujer, talla grande, para cóctel, fiesta, elegante,
-          conjunto de 2 piezas, cuello redondo, mangas cortas y pantalones de cintura alta, traje de dos
-        brand: Hanna Nikole
-        precio: 57,15€
-        precioOriginal: 67,31€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31bisqL4JSL._SL500_.jpg
-        imagenWidth: 313
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31Sq21KtbAL._SL500_.jpg
-            width: 371
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31ItmIsJEoL._SL500_.jpg
-            width: 361
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31EZxZ3UvnL._SL500_.jpg
-            width: 376
-            height: 500
-          - url: https://m.media-amazon.com/images/I/411mFYt13VL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg
-            width: 385
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31kq-QnPvgL._SL500_.jpg
-            width: 370
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31I3VNLKBxL._SL500_.jpg
-            width: 371
-            height: 500
-        enlace: https://www.amazon.es/dp/B0D7LSWDTK?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Sobre las tallas: nuestras tallas son tallas de EE. UU., las tallas correspondientes del Reino Unido son las
-            siguientes: US 16 = UK 20, US 18 = UK 22, US 20 = UK 24, US 22 = UK 26, US 26 = UK 28.
-          - >-
-            Características: cuello redondo de gasa, manga derecha con diseño de abertura, cintura alta, dobladillo
-            irregular, elegante, vintage, color sólido, traje de dos piezas, pantalones de traje de 2 piezas, trajes de
-            noche, pantalones de gasa para mujer, traje elegante de 2 piezas.
-          - >-
-            Material de alta calidad: tejido principal: 98% poliéster + 2% viscosa. Nuestras mangas cortas largas de
-            gasa para mujer son principalmente material de gasa, mano de obra de alta calidad, material suave y cómodo,
-            elegante de llevar, muestra tu noble imagen de mujer.
-          - >-
-            Combinación: los pantalones de cóctel de talla grande se pueden combinar con accesorios brillantes. Para un
-            look casual, también puedes combinarlo con sandalias planas y un bolso de hombro ligero.
-          - >-
-            Ocasión: perfecto como traje de madre de la novia, traje de boda, traje de noche, vestido de baile, vestido
-            de invitada de boda, vestido de fiesta, vestido de madre del novio, baile de carnaval, baile, vestido de
-            vacaciones, para ocasiones formales, etc.
-        variationAttributes:
-          - name: color_name
-            value: Azul Oscuro
-          - name: size_name
-            value: 28 Plus
-        ParentASIN: B0DCWXL61P
-        condicion: new
       - ASIN: B0F8TPXKZH
         title: >-
           Hanna Nikole Traje de noche de gasa para mujer, tallas grandes, conjuntos de cóctel, fiesta, festivo,
@@ -6682,6 +6556,64 @@ productos:
           - name: size_name
             value: 50 Grande
         ParentASIN: B0DCWXL61P
+      - ASIN: B0F8VJ4DVP
+        title: >-
+          Hanna Nikole Traje de noche de gasa para mujer, tallas grandes, conjuntos de cóctel, fiesta, festivo,
+          elegante, 2 piezas, cuello redondo, manga corta y cintura alta, traje de pantalón de dos piezas
+        brand: Hanna Nikole
+        precio: 67,49€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41zddOC1-3L._SL500_.jpg
+        imagenWidth: 226
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41tT4BVBeyL._SL500_.jpg
+            width: 371
+            height: 500
+          - url: https://m.media-amazon.com/images/I/414zNpuqWwL._SL500_.jpg
+            width: 360
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41N8ekcxOML._SL500_.jpg
+            width: 370
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51qLGH7o4HL._SL500_.jpg
+            width: 387
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41DHKyDbgjL._SL500_.jpg
+            width: 371
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51e4BPtQfoL._SL500_.jpg
+            width: 385
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0F8VJ4DVP?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Sobre la talla: nuestras tallas son tallas de EE. UU., las tallas correspondientes en alemán son las
+            siguientes: US 16 = DE 46, US 18 = DE 48, US 20 = DE 50, US 22 = DE 52, US 24 = 54.
+          - >-
+            Características: cuello redondo de gasa, manga derecha con diseño de ranura, cintura alta, dobladillo
+            irregular, elegante, vintage, monocolor, traje de dos piezas, traje de pantalón de 2 piezas, traje de
+            pantalón de noche para mujer, traje de pantalones de gasa para mujer, traje de pantalón elegante de 2
+            piezas.
+          - >-
+            Material de alta calidad: tejido principal: 98%poliéster+2%viscosa. Unser chiffon vorne Kurz Hinter Lang
+            kurzärmel für damen abendmode ist hauptsächlich Chiffon-Material, hochwertige Verarbeitung, weiches bequem,
+            elegant zu tragen, zeigt Ihre edle Frau Bild
+          - >-
+            Coincidencia: los trajes de cóctel de talla grande se pueden combinar con accesorios brillantes. para un
+            look casual, también puedes combinarlo con sandalias planas y una bolsa de hombro ligera.
+          - >-
+            Ocasión: perfecto como traje de pantalón de madre de la novia, traje de pantalones de boda, traje de noche,
+            vestido de baile, vestido de invitada de boda, vestido de fiesta, vestido de madre del novio, vestido de
+            carnaval, baile de graduación, vestido de fiesta, vestido formal, etc.
+        variationAttributes:
+          - name: color_name
+            value: borgoña
+          - name: size_name
+            value: 52 Grande
+        ParentASIN: B0DCWXL61P
     nombreCompleto: >-
       Hanna Nikole Traje de noche de gasa para mujer, tallas grandes, conjuntos de cóctel, fiesta, festivo, elegante, 2
       piezas, cuello redondo, manga corta y cintura alta, traje de pantalón de dos piezas,
@@ -6710,15 +6642,13 @@ productos:
       de tallas antes de pedir.
     condicion: new
     variantes_info:
-      total_en_stock: 12
+      total_en_stock: 11
       mostradas: 10
-      restantes: 2
+      restantes: 1
       truncado: true
     variantes_restantes_asins:
-      - B0F8VJ4DVP
       - B0F8VJ7B8R
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0F8VJ4DVP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F8VJ7B8R?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B01J2VTZWQ
     title: Ever-Pretty Vestido de Novia Largo para Mujer A-línea Escote en V Manga Corta Corte Imperio Gasa Blanco 48
@@ -7248,11 +7178,12 @@ productos:
       - name: color_name
         value: Blanco
     variantes_info:
-      total_en_stock: 363
+      total_en_stock: 364
       mostradas: 10
-      restantes: 353
+      restantes: 354
       truncado: true
     variantes_restantes_asins:
+      - B01HPOD97Y
       - B01HPOG82C
       - B01HPOGWQE
       - B01HPOHHCM
@@ -7401,6 +7332,7 @@ productos:
       - B08N4BZCX8
       - B08N4GTPSR
       - B08N4H7QS3
+      - B08N4K9RK1
       - B08N4KP2MZ
       - B08N4LV777
       - B08N4MMLRT
@@ -7602,11 +7534,11 @@ productos:
       - B0D4DKDR7Y
       - B0D4DLRKC1
       - B0D4DMSFPJ
+      - B0D4DR23XS
       - B0D4DRS2Y8
       - B0D4DS49B7
-      - B0F9P3LHTG
-      - B0F9P8J6HZ
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B01HPOD97Y?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01HPOG82C?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01HPOGWQE?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01HPOHHCM?tag=recomendadorn-21&th=1&psc=1
@@ -7755,6 +7687,7 @@ productos:
       - https://www.amazon.es/dp/B08N4BZCX8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08N4GTPSR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08N4H7QS3?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08N4K9RK1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08N4KP2MZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08N4LV777?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08N4MMLRT?tag=recomendadorn-21&th=1&psc=1
@@ -7956,10 +7889,9 @@ productos:
       - https://www.amazon.es/dp/B0D4DKDR7Y?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4DLRKC1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4DMSFPJ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D4DR23XS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4DRS2Y8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4DS49B7?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F9P3LHTG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F9P8J6HZ?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B07PRGCH1L
     title: >-
       Vestidos De Ceremonia Fiesta Largo para Mujer Manga Largas Boda Encaje Tallas Grandes Cuello Redondo Vestido Noche
@@ -9504,4 +9436,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-16'
+actualizacion: '2025-09-17'

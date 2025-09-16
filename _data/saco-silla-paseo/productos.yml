@@ -107,9 +107,9 @@ productos:
       - 【SEGURIDAD】El tejido es antialergénico ofreciendo el máximo confort y calidad a la prenda.
     nombre: mibebestore Saco Silla Paseo Universal Cactus Verde
     caracteristicas:
-      - "Interior de microfibra polar: cálido y transpirable"
+      - 'Interior de microfibra polar: cálido y transpirable'
       - Tejido exterior impermeable y antideslizante
-      - "Cremalleras laterales dobles: desmontable y lavable"
+      - 'Cremalleras laterales dobles: desmontable y lavable'
       - Adaptable a la mayoría de sillas (no válido para Jané)
       - Tamaño grande aproximado 90×44 cm
     a_tener_en_cuenta:
@@ -2845,13 +2845,15 @@ productos:
       - name: style_name
         value: Todo el año
     variantes_info:
-      total_en_stock: 11
+      total_en_stock: 12
       mostradas: 10
-      restantes: 1
+      restantes: 2
       truncado: true
     variantes_restantes_asins:
+      - B0DR8W3HLF
       - B0F2F8TPMT
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0DR8W3HLF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F2F8TPMT?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0B7BDSL1N
     nombreCompleto: >-
@@ -3319,7 +3321,7 @@ productos:
         también a la moda.
     nombre: Interbaby Saco Silla Paseo Universal - Marino/Rosa, Desmontable
     caracteristicas:
-      - "Universal: compatible con la mayoría de carros"
+      - 'Universal: compatible con la mayoría de carros'
       - Interior afelpado y transpirable, mantiene el calor
       - Exterior impermeable y trasera antideslizante
       - Desmontable con doble cremallera para apertura total
@@ -3716,4 +3718,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-16'
+actualizacion: '2025-09-17'

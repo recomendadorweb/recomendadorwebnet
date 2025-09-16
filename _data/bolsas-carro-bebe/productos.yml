@@ -7,7 +7,7 @@ productos:
     salesrank: 533
     enlace: https://www.amazon.es/dp/B0DT4RLBBM?tag=recomendadorn-21&linkCode=osi&th=1&psc=1
     brand: Walking Mum
-    precio: 21,90€
+    precio: 25,00€
     precioOriginal: 28,90€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41-eQusu+VL._SL500_.jpg
@@ -345,6 +345,9 @@ productos:
             height: 459
           - url: https://m.media-amazon.com/images/I/41od1irh-cL._SL500_.jpg
             width: 469
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41iWelZGuuL._SL500_.jpg
+            width: 500
             height: 500
           - url: https://m.media-amazon.com/images/I/514My7GXCEL._SL500_.jpg
             width: 361
@@ -1380,7 +1383,7 @@ productos:
     nombre: variouss Bolso Talega Lactancia Polipiel Blanco/Azul
     caracteristicas:
       - Personalizable con nombre bordado
-      - "Medidas: 38 x 33 x 11 cm"
+      - 'Medidas: 38 x 33 x 11 cm'
       - Bolsillo exterior y dos compartimentos interiores
       - Cierre con cremallera; polipiel de fácil limpieza
     a_tener_en_cuenta:
@@ -1591,7 +1594,7 @@ productos:
         en cualquier parte del carrito de bebé.
     nombre: Walking Mum I Love Vichy - Bolso cambiador negro 42x36x13 cm
     caracteristicas:
-      - "Uso versátil: colgar al hombro o fijar al carrito"
+      - 'Uso versátil: colgar al hombro o fijar al carrito'
       - Tejido 100% algodón plastificado, seguro y resistente
       - Gran capacidad con múltiples bolsillos e incluye cambiador
       - Asas cortas y correa larga; fácil limpieza

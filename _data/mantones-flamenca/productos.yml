@@ -1448,7 +1448,7 @@ productos:
           MUNDDY® - Mantón Bordado en Flores Para niña. Mantones Flamenco Sevillana.Color Rojo Negro Rosa Blanco
           Amarillo Azul. Envio desde madrid con seguimiento. … (Morado)
         brand: MUNDDY
-        precio: 6,99€
+        precio: 11,50€
         precioOriginal: 11,50€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51BpSdsscCL._SL500_.jpg
@@ -2523,11 +2523,12 @@ productos:
       Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
     condicion: new
     variantes_info:
-      total_en_stock: 20
+      total_en_stock: 21
       mostradas: 10
-      restantes: 10
+      restantes: 11
       truncado: true
     variantes_restantes_asins:
+      - B07BD1YF4Y
       - B07JG5GV2L
       - B07JGPSHGJ
       - B07Q7YNGYZ
@@ -2539,6 +2540,7 @@ productos:
       - B09QCV8RL2
       - B09QGWN9Q7
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07BD1YF4Y?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JG5GV2L?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JGPSHGJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07Q7YNGYZ?tag=recomendadorn-21&th=1&psc=1
@@ -3088,12 +3090,13 @@ productos:
       - name: color_name
         value: Rojo Dorado
     variantes_info:
-      total_en_stock: 22
+      total_en_stock: 23
       mostradas: 10
-      restantes: 12
+      restantes: 13
       truncado: true
     variantes_restantes_asins:
       - B06XY1DGRK
+      - B07BCZL7WZ
       - B07BH2T6PG
       - B07BTZ3PX1
       - B07CNCY9W3
@@ -3107,6 +3110,7 @@ productos:
       - B09SGC42V2
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B06XY1DGRK?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B07BCZL7WZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07BH2T6PG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07BTZ3PX1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07CNCY9W3?tag=recomendadorn-21&th=1&psc=1
@@ -3277,4 +3281,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-16'
+actualizacion: '2025-09-17'
