@@ -2575,7 +2575,57 @@ document.addEventListener('keydown', function(e){
     
   
     <article class="ficha-teclado">
-      <h3 id="VARUN Bicicleta Electrica Plegable, 20"">VARUN Bicicleta Electrica Plegable, 20"</h3><div class="imagen-con-miniaturas">
+      <h3 id="VARUN Bicicleta Electrica Plegable, 20"">VARUN Bicicleta Electrica Plegable, 20"</h3><div class="selector-variantes" role="group" aria-label="Selecciona variante">
+
+        <!-- Botón del MODELO PRINCIPAL -->
+        <button
+          type="button"
+          class="var-btn"
+          aria-pressed="true"
+          onclick="onVariantClick(this)"
+          role="button"
+          tabindex="0"
+          title="Modelo principal"
+          data-title="Modelo principal"
+          data-imagen="https://m.media-amazon.com/images/I/51dhncbC4oL._SL500_.jpg"
+          data-enlace="https://amzn.to/44Slc2J?tag=recomendadorn-21&th=1"
+          data-precio="Sin precio"
+          data-precio-original="No especificado"
+          
+            data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51nPoYTjtdL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51Xm+vTtJxL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51C-Na4JfsL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51M+b4Z9x7L._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51x7viH-0PL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51ugm0Eqd5L._SL500_.jpg","width":500,"height":500}]'
+          
+        >
+          
+            <img src="https://m.media-amazon.com/images/I/51dhncbC4oL._SL500_.jpg" alt="Modelo principal" loading="lazy" />
+          
+          <span class="var-label">Modelo principal</span>
+        </button>
+
+        <!-- Botones de VARIANTES --><button
+            type="button"
+            class="var-btn"
+            aria-pressed="false"
+            onclick="onVariantClick(this)"
+            role="button"
+            tabindex="0"
+            title="S20-1 PLUS - Blanco"
+            data-title="S20-1 PLUS - Blanco"
+            data-imagen="https://m.media-amazon.com/images/I/51LNkC8Z8mL._SL500_.jpg"
+            data-enlace="https://www.amazon.es/dp/B0FD9QBN7B?tag=recomendadorn-21&th=1&psc=1"
+            data-precio="1.029,00€"
+            data-precio-original="No especificado"
+            
+              data-imagenes='[{"url":"https://m.media-amazon.com/images/I/51JNHKeJKBL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51+tWUVGEkL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51q3qaPsqIL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51xzFiIHcGL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/5115aVS2AQL._SL500_.jpg","width":500,"height":500},{"url":"https://m.media-amazon.com/images/I/51cqV6MRIcL._SL500_.jpg","width":500,"height":500}]'
+            
+          >
+            
+              <img src="https://m.media-amazon.com/images/I/51LNkC8Z8mL._SL500_.jpg" alt="S20-1 PLUS - Blanco" loading="lazy" />
+            
+            <span class="var-label">S20-1 PLUS - Blanco</span>
+          </button>
+
+
+      </div><div class="imagen-con-miniaturas">
         <div class="lupa-imagen"
           onmousemove="moverZoomFlotante(event, this)"
           onmouseenter="mostrarZoomFlotante(this)"
