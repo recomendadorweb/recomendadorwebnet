@@ -814,6 +814,34 @@ body {
 @media (max-width: 768px) {
   .card-inner img { max-height: 260px; }
 }
+@media (max-width: 768px) {
+  .card-inner {
+    grid-template-columns: 1fr; /* Imagen arriba, texto abajo */
+  }
+  .card-content h3 {
+    font-size: 18px;             /* Título más pequeño en móvil */
+    word-break: break-word;      /* Evita desbordamiento del texto */
+    text-align: center;          /* Centra solo el nombre del producto */
+  }
+  .card-content ul {
+    padding-left: 20px;          /* Bullets alineados a la izquierda */
+    list-style-position: outside;
+    text-align: left;            /* Asegura que los bullets sigan a la izquierda */
+  }
+  .card-content .btn {
+    display: block;
+    margin: 10px auto 0;         /* Centra el botón horizontalmente */
+    text-align: center;
+  }
+}
+/* Fix ribbon en móvil: limita ancho y recorta con puntos suspensivos */
+@media (max-width: 768px) {
+  .ribbon {
+    font-size: 14px;           /* Más pequeño para móvil */
+  }
+}
+
+
 </style>
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 <div class="separador"></div>
@@ -4542,6 +4570,34 @@ Me resultó versátil para combinar con accesorios sencillos y darle un toque m�
 @media (max-width: 768px) {
   .card-inner img { max-height: 260px; }
 }
+@media (max-width: 768px) {
+  .card-inner {
+    grid-template-columns: 1fr; /* Imagen arriba, texto abajo */
+  }
+  .card-content h3 {
+    font-size: 18px;             /* Título más pequeño en móvil */
+    word-break: break-word;      /* Evita desbordamiento del texto */
+    text-align: center;          /* Centra solo el nombre del producto */
+  }
+  .card-content ul {
+    padding-left: 20px;          /* Bullets alineados a la izquierda */
+    list-style-position: outside;
+    text-align: left;            /* Asegura que los bullets sigan a la izquierda */
+  }
+  .card-content .btn {
+    display: block;
+    margin: 10px auto 0;         /* Centra el botón horizontalmente */
+    text-align: center;
+  }
+}
+/* Fix ribbon en móvil: limita ancho y recorta con puntos suspensivos */
+@media (max-width: 768px) {
+  .ribbon {
+    font-size: 14px;           /* Más pequeño para móvil */
+  }
+}
+
+
 </style>
 <div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
 <div class="separador"></div>
