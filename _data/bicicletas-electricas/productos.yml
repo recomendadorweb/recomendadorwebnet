@@ -19,8 +19,8 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 55 km con asistencia, 🛞 Ruedas de 27,5'''', ⚙️ Cambio Shimano de 7 velocidades'
     nombre: Cecotec Bicicleta Eléctrica de Montaña
     valoracion: 5
-    precio: "629,00€"
-    precioOriginal: "649,00€"
+    precio: 629,00€
+    precioOriginal: 649,00€
     disponibilidad: En stock
     imagenHeight: 500
     imagenWidth: 500
@@ -69,7 +69,7 @@ productos:
           Cecotec Bicicleta Eléctrica de Montaña Mountain Ventus. Ruedas de 27,5", 90Km de Autonomía, Suspensión
           Delantera, Cambio Shimano 24 Velocidades y Doble Disco de Freno Hidráulico
         brand: Cecotec
-        precio: "899,00€"
+        precio: 899,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41JIA6I7QSL._SL500_.jpg
@@ -133,7 +133,7 @@ productos:
           Cecotec Bicicleta Eléctrica de Montaña 29" Supreme. 120Km de Autonomía, Doble Suspensión, Cambio Shimano Cues
           de 10 Velocidades y Doble Disco de Freno Hidráulico Tektro
         brand: Cecotec
-        precio: "1.299,00€"
+        precio: 1.299,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/411JxkoDpwL._SL500_.jpg
@@ -197,7 +197,7 @@ productos:
           Cecotec Bicicleta Eléctrica de Montaña 29" Avanti. 120Km de Autonomía, Suspensión Delantera SR Suntour, Cambio
           Shimano Cues de 10 Velocidades y Doble Disco de Freno Hidráulico Tektro
         brand: Cecotec
-        precio: "1.199,00€"
+        precio: 1.199,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/419n30BaI1L._SL500_.jpg
@@ -294,7 +294,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 100 km'
     nombre: Eleglide Bicicleta eléctrica 27,5''
     valoracion: 4
-    precio: "809,00€"
+    precio: 809,00€
     precioOriginal: No especificado
     disponibilidad: Envío en 4 a 5 semanas
     imagenHeight: 500
@@ -366,7 +366,7 @@ productos:
           Eleglide Bicicleta eléctrica, Mopride 2 29", con Freno hidráulico de Disco, Bicicleta de montaña de 29
           Pulgadas, batería Desmontable de 15Ah, transmisión de 21 velocidades, autonomía de 125 km (29")
         brand: Eleglide
-        precio: "819,00€"
+        precio: 819,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 4 a 5 semanas
         imagen: https://m.media-amazon.com/images/I/51FbD2s0ZnL._SL500_.jpg
@@ -467,7 +467,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 100 km'
     nombre: Eleglide Bicicleta eléctrica 29''
     valoracion: 4
-    precio: "819,00€"
+    precio: 819,00€
     precioOriginal: No especificado
     disponibilidad: Envío en 4 a 5 semanas
     imagenHeight: 500
@@ -536,7 +536,7 @@ productos:
           Eleglide Bicicleta eléctrica, Mopride 2, con Freno hidráulico de Disco, Bicicleta de montaña de 27,5 Pulgadas,
           batería Desmontable de 15Ah, transmisión 21 velocidades, autonomía de 125 km (27,5")
         brand: Eleglide
-        precio: "809,00€"
+        precio: 809,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 4 a 5 semanas
         imagen: https://m.media-amazon.com/images/I/51FbD2s0ZnL._SL500_.jpg
@@ -640,7 +640,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 90 km, 🛞 Ruedas de 26'''', 🧺 Incluye cesta y portaequipajes'
     nombre: Cecotec Bicicleta Eléctrica de Ciudad
     valoracion: 5
-    precio: "939,00€"
+    precio: 939,00€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenHeight: 500
@@ -692,7 +692,7 @@ productos:
           Cecotec Bicicleta Eléctrica de Ciudad Capital. 80 km de Autonomía, Batería 468 WH, Suspensión Delantera,
           Cambio Shimano de 6 Velocidades y Doble Disco de Freno
         brand: Cecotec
-        precio: "739,00€"
+        precio: 739,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJEnw9qFL._SL500_.jpg
@@ -756,7 +756,7 @@ productos:
           Cecotec Bicicleta Eléctrica de Ciudad Sprint Silver. 250W, Ruedas de 28", 70Km de Autonomía, Batería 360 WH,
           Cambio Shimano Altus de 8 Velocidades y Doble Disco de Freno Hidráulico
         brand: Cecotec
-        precio: "849,00€"
+        precio: 849,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51DoHasN2XL._SL500_.jpg
@@ -805,70 +805,6 @@ productos:
             value: Gris
         ParentASIN: B0FDH6N923
         condicion: new
-      - ASIN: B0BPYZ51RN
-        title: >-
-          Cecotec Bicicleta Eléctrica Plegable Flexy. 35km de Autonomía, Ruedas de 20", Batería 270Wh, Doble Disco de
-          Freno, Display, Cuadro de Acero Hi-Ten
-        brand: Cecotec
-        precio: "565,00€"
-        precioOriginal: No especificado
-        disponibilidad: Envío en 3 a 7 meses
-        imagen: https://m.media-amazon.com/images/I/41wJ2H3lhaL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41HudH4t-6L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5131v7-P0NL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51HaVK3znvL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41IF1+oRbGL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51c3L61hrAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/61zgIr8WOFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41LpS0doZNL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51IyW+jBUWL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Eh+Kn2wZL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0BPYZ51RN?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            35 km de autonomía: recorre grandes distancias sin preocuparte por la batería. Batería 270 Wh (36 V y 7,5
-            AH): gran potencia de batería que permite recorrer largas distancias con cada carga.
-          - >-
-            Ruedas de 20": gran agarre y adherencia para poder circular con seguridad. Sistema de frenado: doble freno
-            de disco que aporta la máxima seguridad en cada trayecto.
-          - >-
-            Frena cuando quieras y con la máxima fiabilidad gracias a su sistema con doble freno de disco, que aporta la
-            máxima seguridad en cada trayecto para que no tengas imprevistos en ninguno de tus desplazamientos.
-          - >-
-            Nuestra bicicleta eléctrica Flexy incorpora un display que controla entre 3 niveles de asistencia, nivel de
-            batería, encendido/apagado, modo peatón y luces. Controla de un vistazo todas las funciones y domina las
-            calles.
-          - >-
-            Dispone de un cuadro de acero Hi-Ten, material que le otorga una gran resistencia y durabilidad, para
-            convertir a la bicicleta en tu acompañante más fiel.
-        variationAttributes:
-          - name: style_name
-            value: 35 km Autonomía
-          - name: color_name
-            value: Gris
-        ParentASIN: B0FDH6N923
-        condicion: new
     ParentASIN: B0FDH6N923
     variationAttributes:
       - name: style_name
@@ -880,8 +816,8 @@ productos:
       Delantera, Cambio Shimano de 7 Velocidades y Doble Disco de Freno
     condicion: new
     variantes_info:
-      total_en_stock: 3
-      mostradas: 3
+      total_en_stock: 2
+      mostradas: 2
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -905,7 +841,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 100 km, 🛞 Ruedas de 26'''', 💡 Luces LED delantera y trasera'
     nombre: Milecity1 26"
     valoracion: 4
-    precio: "699,00€"
+    precio: 699,00€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenHeight: 500
@@ -968,7 +904,7 @@ productos:
           Milecity1 26" Bicicleta Eléctrica para Adultos, Bici Electrica De 7 Velocidades con Batería Extraíble De 36V
           13Ah, 25 Km/H Y Alcance De 80-100Km E Bike para Viajeros Urbanos, Resistente Al Agua Ip65
         brand: HillMiles
-        precio: "699,00€"
+        precio: 699,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51qX+LBGCAL._SL500_.jpg
@@ -1069,7 +1005,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 70 km, 🛞 Ruedas de 29'''', 💪 Suspensión con horquilla reforzada'
     nombre: Touroll Bicicleta eléctrica 29''
     valoracion: 4
-    precio: "589,00€"
+    precio: 589,00€
     precioOriginal: No especificado
     disponibilidad: Envío en 7 a 8 días
     imagenHeight: 407
@@ -1143,7 +1079,7 @@ productos:
           Touroll Bicicleta eléctrica, U1, Autonomía de 65 a 30 km, Motor 36V 45Nm, 13Ah Batería Desmontable, Bici
           electrica Equipada con un Amortiguador Delantero (U1 26")
         brand: Touroll
-        precio: "569,00€"
+        precio: 569,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 7 a 8 días
         imagen: https://m.media-amazon.com/images/I/51Jmq9nqp9L._SL500_.jpg
@@ -1250,7 +1186,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 70 km, 🛞 Ruedas de 26'''', 🧍 Cuadro más bajo, ideal para personas bajitas'
     nombre: Touroll Bicicleta eléctrica 26''
     valoracion: 5
-    precio: "569,00€"
+    precio: 569,00€
     precioOriginal: No especificado
     disponibilidad: Envío en 7 a 8 días
     imagenHeight: 407
@@ -1324,7 +1260,7 @@ productos:
           Touroll Bicicleta eléctrica, U1, Autonomía de 65 a 30 km, Motor 36V 45Nm, 13Ah Batería Desmontable, Bici
           electrica Equipada con un Amortiguador Delantero (U1 29")
         brand: Touroll
-        precio: "589,00€"
+        precio: 589,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 7 a 8 días
         imagen: https://m.media-amazon.com/images/I/51Jmq9nqp9L._SL500_.jpg
@@ -1535,8 +1471,8 @@ productos:
     lo_mejor: '🔋 Autonomía: 60–80 km en modo Eco, 🛞 Ruedas de 27,5'''', 🧱 Cuadro robusto de aleación de aluminio'
     nombre: RZOGUWEX Bicicleta Eléctrica
     valoracion: 4
-    precio: "1.599,00€"
-    precioOriginal: "1.349,00€"
+    precio: 1.599,00€
+    precioOriginal: 1.349,00€
     disponibilidad: Envío en 3 a 4 días
     imagenHeight: 500
     imagenWidth: 500
@@ -1623,7 +1559,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 100 km'
     nombre: ENGWE E26 Step-Thru
     valoracion: 5
-    precio: "1.499,00€"
+    precio: 1.499,00€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenHeight: 500
@@ -1684,7 +1620,7 @@ productos:
           ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería
           de 48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (Step-Thru, Amarillo)
         brand: ENGWE
-        precio: "1.499,00€"
+        precio: 1.499,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51IzPvEvveL._SL500_.jpg
@@ -1746,6 +1682,73 @@ productos:
           - name: color_name
             value: Amarillo
         ParentASIN: B0CN92LJC7
+      - ASIN: B0CHW1F2BQ
+        title: >-
+          ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería
+          de 48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (High-Step, Azul Gema)
+        brand: ENGWE
+        precio: 1.499,00€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51QzK+V3wTL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg
+            width: 375
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CHW1F2BQ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            【Batería Extraíble de Alta Capacidad】: La ENGWE E26 cuenta con una batería de 48V 16Ah de iones de litio,
+            brindando una gran reserva de energía. Ofrece un alcance de hasta 60 km en modo eléctrico y hasta 140 km en
+            modo asistencia.
+          - >-
+            【Motor de 250W y 5 Modos】: Equipada con un motor sin escobillas de 250W que alcanza los 25KM/H, esta
+            bicicleta eléctrica tiene 5 niveles de asistencia, permitiendo un fácil desplazamiento sin necesidad de
+            pedalear.
+          - >-
+            【Comodidad y Seguridad】: Con neumáticos gruesos de 26x4 pulgadas, suspensión dual de alta resistencia, 7
+            velocidades, luces duales, pantalla LCD y frenos de disco mecánicos, esta bicicleta te ofrece comodidad y
+            seguridad en cualquier terreno.
+          - >-
+            【Manejo y Durabilidad】: ENGWE E26 combina neumáticos gruesos con un resistente marco de aluminio para un
+            manejo excepcional y durabilidad. Los neumáticos proporcionan tracción y el marco garantiza estabilidad en
+            tus aventuras.
+          - >-
+            【Pantalla LCD Inteligente】: La pantalla LCD muestra información en tiempo real, incluyendo estado de la
+            batería, velocidad, distancia, potencia y tiempo de viaje, además de detectar y reportar errores y controlar
+            la iluminación de la bicicleta para una experiencia segura y conveniente.
+          - >-
+            【Servicio de Atención al Cliente 24/7】: La bicicleta eléctrica ENGWE se entrega 85% preensamblada para
+            facilitar el montaje. Nuestro equipo de soporte está disponible las 24 horas del día, los 7 días de la
+            semana, para ayudarte con cualquier consulta. Garantizamos un servicio confiable y ofrecemos una garantía de
+            un año para motores, baterías y controladores.
+        variationAttributes:
+          - name: size_name
+            value: High-Step
+          - name: color_name
+            value: Azul Gema
+        ParentASIN: B0CN92LJC7
     ParentASIN: B0CN92LJC7
     variationAttributes:
       - name: size_name
@@ -1757,8 +1760,8 @@ productos:
       48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (Step-Thru, Gris)
     condicion: new
     variantes_info:
-      total_en_stock: 1
-      mostradas: 1
+      total_en_stock: 2
+      mostradas: 2
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1782,7 +1785,7 @@ productos:
     lo_mejor: '🔋 Autonomía: Hasta 70 km reales, 🛞 Ruedas de 26'''', 🏔️ Ideal para rutas largas o montaña'
     nombre: ENGWE E26 High-step
     valoracion: 4
-    precio: "1.499,00€"
+    precio: 1.499,00€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenHeight: 500
@@ -1838,79 +1841,12 @@ productos:
       ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería de
       48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (High-Step, Azul Gema)
     variantes:
-      - ASIN: B0CHW4JCFR
-        title: >-
-          ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería
-          de 48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (Step-Thru, Gris)
-        brand: ENGWE
-        precio: "1.499,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51Lva6IUlzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41uX9BwaLiL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41bNNEZmvAL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51u3S5L9lRL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41VMaeDN8EL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41tJl5kpijL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51rGCrvfCkL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/417fybwqS+L._SL500_.jpg
-            width: 375
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0CHW4JCFR?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Batería Extraíble de Alta Capacidad】: La ENGWE E26 cuenta con una batería de 48V 16Ah de iones de litio,
-            brindando una gran reserva de energía. Ofrece un alcance de hasta 60 km en modo eléctrico y hasta 140 km en
-            modo asistencia.
-          - >-
-            【Motor de 250W y 5 Modos】: Equipada con un motor sin escobillas de 250W que alcanza los 25KM/H, esta
-            bicicleta eléctrica tiene 5 niveles de asistencia, permitiendo un fácil desplazamiento sin necesidad de
-            pedalear.
-          - >-
-            【Comodidad y Seguridad】: Con neumáticos gruesos de 26x4 pulgadas, suspensión dual de alta resistencia, 7
-            velocidades, luces duales, pantalla LCD y frenos de disco mecánicos, esta bicicleta te ofrece comodidad y
-            seguridad en cualquier terreno.
-          - >-
-            【Manejo y Durabilidad】: ENGWE E26 combina neumáticos gruesos con un resistente marco de aluminio para un
-            manejo excepcional y durabilidad. Los neumáticos proporcionan tracción y el marco garantiza estabilidad en
-            tus aventuras.
-          - >-
-            【Pantalla LCD Inteligente】: La pantalla LCD muestra información en tiempo real, incluyendo estado de la
-            batería, velocidad, distancia, potencia y tiempo de viaje, además de detectar y reportar errores y controlar
-            la iluminación de la bicicleta para una experiencia segura y conveniente.
-          - >-
-            【Servicio de Atención al Cliente 24/7】: La bicicleta eléctrica ENGWE se entrega 85% preensamblada para
-            facilitar el montaje. Nuestro equipo de soporte está disponible las 24 horas del día, los 7 días de la
-            semana, para ayudarte con cualquier consulta. Garantizamos un servicio confiable y ofrecemos una garantía de
-            un año para motores, baterías y controladores.
-        variationAttributes:
-          - name: size_name
-            value: Step-Thru
-          - name: color_name
-            value: Gris Oscuro
-        ParentASIN: B0CN92LJC7
       - ASIN: B0CJ2Z7N76
         title: >-
           ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería
           de 48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (Step-Thru, Amarillo)
         brand: ENGWE
-        precio: "1.499,00€"
+        precio: 1.499,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51IzPvEvveL._SL500_.jpg
@@ -1981,12 +1917,12 @@ productos:
     nombreCompleto: >-
       ENGWE E26 Bicicleta Eléctrica para Adultos, 26"x4.0" Fat Tire, Bicicleta de Montaña Eléctrica de 250W, Batería de
       48V 16Ah, Alcance de hasta 140KM, 7 velocidades, (High-Step, Azul Gema)
-    condicion: ''
+    condicion: new
     variantes_info:
-      total_en_stock: 2
-      mostradas: 2
+      total_en_stock: 1
+      mostradas: 1
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-15'
+actualizacion: '2025-09-16'

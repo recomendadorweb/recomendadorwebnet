@@ -74,7 +74,7 @@ productos:
           ENGWE T14 Mini Bici Eléctrica Plegable para Adultos o Adolescentes, Neumáticos de 14'', Motor de 250W, Batería
           de 48V 10AH, Velocidad hasta 25KM/H, Bicicleta Urbana de Paseo (Gris) (Azul)
         brand: ENGWE
-        precio: "599,00€"
+        precio: 599,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41P6V6e54WL._SL500_.jpg
@@ -141,7 +141,7 @@ productos:
           ENGWE T14 Mini Bici Eléctrica Plegable para Adultos o Adolescentes, Neumáticos de 14'', Motor de 250W, Batería
           de 48V 10AH, Velocidad hasta 25KM/H, Bicicleta Urbana de Paseo (Gris) (Naranja)
         brand: ENGWE
-        precio: "599,00€"
+        precio: 599,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/41kXnARepAL._SL500_.jpg
@@ -381,7 +381,7 @@ productos:
       - 🚴‍♂️ Ruedas de 20
       - 🛞 Buena suspensión
     nombre: ENGWE M20/M1 Bicicleta Electrica Hombre
-    precio: "1.299,00€"
+    precio: 1.299,00€
     precioOriginal: No especificado
     valoracion: 4.7
     variantes:
@@ -390,7 +390,7 @@ productos:
           ENGWE M20 Bicicleta Electrica Hombre | 20"×4.0 Fat Tire Bici Eléctrica | Autonomía máxima de 75 KM/150 KM con
           48V 13Ah/26Ah Batería | 7 Velocità | E-MTB Adultos Urbana ebike
         brand: ENGWE
-        precio: "1.099,00€"
+        precio: 1.099,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/417S7WGozsL._SL500_.jpg
@@ -460,7 +460,7 @@ productos:
           ENGWE M20 Bicicleta Eléctrica para Hombres | 20" x 4.0 Neumático Ancho | Batería 48V 13Ah | 7 Velocidades |
           Suspensión Total | Autonomía máxima de hasta 75KM | Todo Terreno E-Bike
         brand: ENGWE
-        precio: "1.099,00€"
+        precio: 1.099,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41KWUMpWGJL._SL500_.jpg
@@ -628,7 +628,7 @@ productos:
       - 🚴‍♂️ Ruedas compactas para ciudad
       - 🛞 Buena suspensión
     nombre: ENGWE Bicicleta Eléctrica Plegable 250W E-Bike
-    precio: "1.299,00€"
+    precio: 1.299,00€
     precioOriginal: No especificado
     valoracion: 4.2
     variantes:
@@ -637,7 +637,7 @@ productos:
           ENGWE Bicicleta Eléctrica Plegable 250W E-Bike, 20×4.0 Inch Off-Road Fat Tire, Batería de 48V 13Ah Alcance
           hasta 120km, 25KM/H 7 Velocidades Suspensión Completa Engine X
         brand: ENGWE
-        precio: "1.299,00€"
+        precio: 1.299,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41mbc2KWQoL._SL500_.jpg
@@ -802,8 +802,8 @@ productos:
       - 🚴‍♂️ Ruedas de 14
       - 🛞 Buena suspensión
     nombre: Bodywel T16PRO Bicicleta Eléctrica Plegable, 14"
-    precio: "409,99€"
-    precioOriginal: "409,99€"
+    precio: 409,99€
+    precioOriginal: 409,99€
     valoracion: 4.2
     variantes: []
     title: >-
@@ -893,7 +893,7 @@ productos:
       - 🔋 Autonomía hasta 70 km
       - 🚴‍♂️ Ruedas de 26
     nombre: VARUN - Bicicleta Electrica Plegable
-    precio: "619,00€"
+    precio: 619,00€
     precioOriginal: No especificado
     valoracion: 4.2
     variantes: []
@@ -992,7 +992,84 @@ productos:
     precio: Sin precio
     precioOriginal: No especificado
     valoracion: 4.2
-    variantes: []
+    variantes:
+      - ASIN: B0FD9QBN7B
+        title: >-
+          VARUN Bicicleta Electrica Plegable, 20"*4.0" Fat Tire Bicicleta Eléctrica Adulto con Batería Extraíble 48V
+          13Ah, Alcance de 60-120KM, E Bike con 7 Velocidades
+        brand: VARUN
+        precio: 1.029,00€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51LNkC8Z8mL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51JNHKeJKBL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51+tWUVGEkL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51q3qaPsqIL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51xzFiIHcGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/5115aVS2AQL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51cqV6MRIcL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0FD9QBN7B?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            𝐏𝐨𝐭𝐞𝐧𝐜𝐢𝐚 𝐂𝐨𝐧𝐟𝐨𝐫𝐦𝐞 𝐚 𝐋𝐚𝐬 𝐍𝐨𝐫𝐦𝐚𝐬 𝐃𝐞 𝐋𝐚 𝐔𝐞:La bicicleta electrica está
+            propulsada por un motor de 𝟐𝟓𝟎 𝐖 que cumple la normativa de la UE y no requiere licencia, por lo que
+            puede desplazarse legalmente a cualquier lugar. Con una batería extraíble de 𝟒𝟖 𝐕 y 𝟏𝟑 𝐀𝐡 y una
+            autonomía de hasta 60-𝟏𝟐𝟎 𝐤𝐦 en modo de pedaleo asistido, es fácil satisfacer las exigencias de los
+            desplazamientos urbanos
+          - >-
+            𝐂𝐨𝐧𝐪𝐮𝐢𝐬𝐭𝐚𝐝𝐨𝐫 𝐃𝐞 𝐓𝐨𝐝𝐨 𝐓𝐞𝐫𝐫𝐞𝐧𝐨: La renovada bicicletas eléctricas S20-1 PLUS cuenta
+            con suspensión delantera y un amortiguador montado en el centro que absorbe eficazmente el impacto de los
+            baches del pavimento, proporcionando un confort de marcha comparable al de un todoterreno profesional. Los
+            neumáticos gordos todoterreno de 20 pulgadas, con su banda de rodadura más ancha y su textura convexa,
+            proporcionan un agarre total. Facilitando la conducción en terrenos difíciles como caminos de grava y zonas
+            embarradas
+          - >-
+            𝐂𝐨𝐧𝐜𝐞𝐧𝐭𝐫𝐚𝐝𝐨𝐫 𝐃𝐞 𝐂𝐨𝐧𝐝𝐮𝐜𝐜𝐢ó𝐧 𝐈𝐧𝐭𝐞𝐥𝐢𝐠𝐞𝐧𝐭𝐞: Esta bicicleta eléctrica plegable
+            la transmisión de 𝟕 𝐯𝐞𝐥𝐨𝐜𝐢𝐝𝐚𝐝𝐞𝐬 cambia de marcha con precisión y se desplaza por terrenos
+            accidentados con facilidad. Los frenos de disco delanteros y traseros son sensibles y frenan con rapidez,
+            garantizando la seguridad al conducir en días lluviosos. La pantalla inteligente muestra datos en tiempo
+            real como la velocidad, la potencia y el kilometraje. Le permite comprender plenamente sus datos de
+            conducción
+          - >-
+            𝐀𝐝𝐚𝐩𝐭𝐚𝐛𝐢𝐥𝐢𝐝𝐚𝐝 𝐚 𝐂𝐮𝐚𝐥𝐪𝐮𝐢𝐞𝐫 𝐂𝐥𝐢𝐦𝐚: El sillín y el manillar ajustables de la ebike
+            resuelven el problema del ciclismo con diferentes alturas. El faro delantero iluminado y la luz de
+            advertencia trasera garantizan una conducción segura en la oscuridad. Las aletas de cobertura total soportan
+            los días lluviosos para una conducción más limpia en caminos embarrados
+          - >-
+            𝐂𝐮𝐚𝐭𝐫𝐨 𝐌𝐨𝐝𝐨𝐬, 𝐌𝐮𝐥𝐭𝐢𝐟𝐮𝐧𝐜𝐢𝐨𝐧𝐚𝐥𝐢𝐝𝐚𝐝: las bici electrica tienen cuatro modos de
+            conducción. 𝐌𝐨𝐝𝐨 𝐝𝐞 𝐚𝐬𝐢𝐬𝐭𝐞𝐧𝐜𝐢𝐚 - ajuste de potencia de 5 velocidades (de 0 a 25 km/h).
+            𝐏𝐮𝐬𝐡 𝐚𝐬𝐬𝐢𝐬𝐭 - La activación con un solo toque de la asistencia eléctrica en pendiente facilita la
+            conducción con carga. 𝐌𝐨𝐝𝐨 𝐧𝐨𝐫𝐦𝐚𝐥 - sin asistencia, fitness/ahorro de energía para cambiar
+            libremente. 𝐂𝐨𝐧𝐭𝐫𝐨𝐥 𝐝𝐞 𝐜𝐫𝐮𝐜𝐞𝐫𝐨 - montar largas distancias en línea recta, liberar las
+            piernas, reducir la fatiga
+          - >-
+            𝐒𝐞𝐫𝐯𝐢𝐜𝐢𝐨 𝐀𝐥 𝐂𝐥𝐢𝐞𝐧𝐭𝐞 𝐃𝐞 𝐂𝐚𝐥𝐢𝐝𝐚𝐝: Este bicicleta electrica plegable es 85 %
+            pre-ensamblado, se puede montar fácilmente por sí mismo de acuerdo con el manual de instrucciones y
+            video.VARUN ofrece un año de servicio de garantía, si hay algún problema, por favor no dude en contactar con
+            nosotros, después de las ventas del equipo de servicio al cliente le proporcionará una solución dentro de
+            las 24 horas
+        variationAttributes:
+          - name: size_name
+            value: S20-1 PLUS
+          - name: color_name
+            value: Blanco
+        ParentASIN: B0FDJWWBLD
     title: >-
       VARUN Bicicleta Electrica Plegable, 20"*4.0" Fat Tire Bicicleta Eléctrica Adulto con Batería Extraíble 48V 13Ah,
       Alcance de 60-120KM, E Bike con 7 Velocidades
@@ -1002,8 +1079,8 @@ productos:
       Alcance de 60-120KM, E Bike con 7 Velocidades
     condicion: ''
     variantes_info:
-      total_en_stock: 0
-      mostradas: 0
+      total_en_stock: 1
+      mostradas: 1
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1172,8 +1249,8 @@ productos:
       - 🔋 Autonomía hasta 70 km
       - 🚴‍♂️ Ruedas de 16
     nombre: HITWAY 16" Bicicleta eléctrica
-    precio: "649,99€"
-    precioOriginal: "699,99€"
+    precio: 649,99€
+    precioOriginal: 699,99€
     valoracion: 4.2
     variantes: []
     title: >-
@@ -1272,7 +1349,7 @@ productos:
           HITWAY Bicicleta eléctrica 20"*3,0/20"*4,0 Bicicleta Montaña Plegable Ebike Fatbike,36V 12Ah/48V 15Ah Batería,
           250W Motor, 7 Vel, E-MTB, Pedal Assist Alcance 35-90KM/45-100KM
         brand: HITWAY
-        precio: "999,99€"
+        precio: 999,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41IZhFzDe7L._SL500_.jpg
@@ -1337,7 +1414,7 @@ productos:
           HITWAY Bicicleta eléctrica 20"*3,0/20"*4,0 Bicicleta Montaña Plegable Ebike Fatbike,36V 12Ah/48V 15Ah Batería,
           250W Motor, 7 Vel, E-MTB, Pedal Assist Alcance 35-90KM/45-100KM
         brand: HITWAY
-        precio: "999,99€"
+        precio: 999,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/516O17BJE9L._SL500_.jpg
@@ -1472,7 +1549,7 @@ productos:
       - 🔋 Autonomía hasta 40 km
       - 🚴‍♂️ Ruedas de 20
     nombre: SAMEBIKE 250W 50NM Bicicleta Eléctrica Adultos, 20’’
-    precio: "639,00€"
+    precio: 639,00€
     precioOriginal: No especificado
     valoracion: 4.2
     variantes:
@@ -1481,7 +1558,7 @@ productos:
           SAMEBIKE Bicicleta Eléctrica Adultos, 20'’ E-Bike con pedaleo asistido Batería 36V 12AH Bici Eléctricas de
           Montaña con Marco Frontal y Soporte para teléfono (White)
         brand: SAMEBIKE
-        precio: "639,00€"
+        precio: 639,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/511zsOsEJYL._SL500_.jpg
@@ -1538,7 +1615,7 @@ productos:
           SAMEBIKE Bicicleta Eléctrica Adultos, 20'’ E-Bike con pedaleo asistido Batería 36V 12AH Bici Eléctricas de
           Montaña con Marco Frontal y Soporte para teléfono (Deep Blue)
         brand: SAMEBIKE
-        precio: "699,00€"
+        precio: 699,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/51g7V0Igd1L._SL500_.jpg
@@ -1670,7 +1747,7 @@ productos:
       - 🔋 Autonomía hasta 40 km
       - 🚴‍♂️ Ruedas de 14
     nombre: DYU Bicicleta Eléctrica Plegable, 14"
-    precio: "549,00€"
+    precio: 549,00€
     precioOriginal: No especificado
     valoracion: 4.2
     variantes: []
@@ -1768,7 +1845,7 @@ productos:
       - 🔋 Autonomía hasta 120 km
       - 🚴‍♂️ Ruedas de 20''
     nombre: Fafrees Bicicleta eléctrica 20"
-    precio: "759,00€"
+    precio: 759,00€
     precioOriginal: No especificado
     valoracion: 4.2
     variantes:
@@ -1777,7 +1854,7 @@ productos:
           Fafrees F20 Light Bicicleta eléctrica, 20" Bicicleta Urbana eléctrica Plegable, Motor 250W, 14.5AH/522WH
           Batería extraíble, ebike de Asistencia de Pedal para Adultos, Alcance 55-110 km (Azul-1)
         brand: Fafrees
-        precio: "759,00€"
+        precio: 759,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41VhcXGrR6L._SL500_.jpg
@@ -1868,4 +1945,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-15'
+actualizacion: '2025-09-16'

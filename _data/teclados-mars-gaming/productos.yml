@@ -19,8 +19,8 @@ productos:
     lo_mejor: Switches OUTEMU SQ azules, diseño TKL robusto, reposamuñecas ergonómico, y retroiluminación RGB dinámica
     nombre: Mars Gaming MKXTKL
     valoracion: 4
-    precio: "22,90€"
-    precioOriginal: "24,90€"
+    precio: 22,90€
+    precioOriginal: 24,90€
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51+QYTGvEFL._SL500_.jpg
@@ -67,7 +67,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -110,8 +110,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -165,8 +165,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -202,7 +202,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -240,58 +240,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -343,7 +297,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -395,8 +349,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -447,7 +401,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -496,8 +450,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -546,6 +500,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     variationAttributes:
       - name: style_name
@@ -553,12 +547,11 @@ productos:
     nombreCompleto: Mars Gaming MKXTKL, teclado mecánico switch azul, LED 5 colores 10 efectos, ES
     condicion: new
     variantes_info:
-      total_en_stock: 35
+      total_en_stock: 32
       mostradas: 10
-      restantes: 25
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -569,7 +562,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -580,11 +572,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -595,7 +585,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -606,7 +595,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B09MJC4XL5
@@ -629,8 +617,8 @@ productos:
     lo_mejor: Formato 96%, switches OUTEMU SQ rojos silenciosos, teclas PBT pudding, y software para personalización RGB
     nombre: Mars Gaming MKULTRA
     valoracion: 5
-    precio: "71,52€"
-    precioOriginal: "59,90€"
+    precio: 88,92€
+    precioOriginal: 59,90€
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51FmcV-qGzL._SL500_.jpg
@@ -674,7 +662,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -717,8 +705,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -772,8 +760,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -809,7 +797,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -847,58 +835,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -950,7 +892,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -1002,8 +944,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -1054,7 +996,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -1103,8 +1045,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -1153,6 +1095,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: Mars Gaming MKULTRA, Teclado Mecánico Negro RGB, Compacto 96%, Switch Outemu SQ Rojo, Español -US
     condicion: new
@@ -1160,12 +1142,11 @@ productos:
       - name: style_name
         value: MKULTRARES
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 31
       mostradas: 10
-      restantes: 24
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -1175,7 +1156,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -1186,11 +1166,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -1200,7 +1178,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -1211,7 +1188,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0BGLKLRNP
@@ -1279,7 +1255,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -1324,8 +1300,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -1361,8 +1337,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -1414,7 +1390,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -1452,58 +1428,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -1555,7 +1485,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -1607,8 +1537,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -1659,7 +1589,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -1708,8 +1638,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -1758,6 +1688,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MK80, Teclado Gaming Mecánico TKL Compacto con Switch Azul, Iluminación Rainbow RGB, Teclas Doble
@@ -1767,12 +1737,11 @@ productos:
       - name: style_name
         value: MK80BES
     variantes_info:
-      total_en_stock: 35
+      total_en_stock: 32
       mostradas: 10
-      restantes: 25
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -1783,7 +1752,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -1794,11 +1762,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -1809,7 +1775,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -1820,7 +1785,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0DHCNKM3C
@@ -1842,8 +1806,8 @@ productos:
     lo_mejor: Formato 60%, switches hot-swap, RGB envolvente y cable USB-C extraíble
     nombre: Mars Gaming MKMINIPRO
     valoracion: 4
-    precio: "26,90€"
-    precioOriginal: "29,90€"
+    precio: 26,90€
+    precioOriginal: 29,90€
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41zZY7GCiiL._SL500_.jpg
@@ -1891,7 +1855,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -1934,8 +1898,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -1989,8 +1953,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -2026,7 +1990,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -2064,58 +2028,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -2167,7 +2085,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -2219,8 +2137,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -2271,7 +2189,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -2320,8 +2238,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -2370,6 +2288,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKMINIPRO, Teclado Mecánico Ultra-Compacto 60%, Switches Mecánicos Hot-Swappable, Iluminación RGB
@@ -2379,12 +2337,11 @@ productos:
       - name: style_name
         value: MKMINIPROYES
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 31
       mostradas: 10
-      restantes: 24
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -2395,7 +2352,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCPC81Z
@@ -2405,11 +2361,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -2420,7 +2374,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPC81Z?tag=recomendadorn-21&th=1&psc=1
@@ -2430,7 +2383,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0F383W18C
@@ -2453,8 +2405,8 @@ productos:
     lo_mejor: Switches hot-swap, RGB Chroma completo, chasis de aluminio y rueda de control multifunción
     nombre: Mars Gaming MKPRO
     valoracion: 5
-    precio: "41,87€"
-    precioOriginal: No especificado
+    precio: 35,90€
+    precioOriginal: 41,02€
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41rFx5MEjSL._SL500_.jpg
@@ -2506,7 +2458,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -2551,8 +2503,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -2588,8 +2540,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -2641,7 +2593,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -2679,58 +2631,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -2782,7 +2688,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -2834,8 +2740,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -2886,7 +2792,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -2935,8 +2841,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -2985,6 +2891,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
@@ -2994,12 +2940,11 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 31
       mostradas: 10
-      restantes: 24
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -3010,7 +2955,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -3021,10 +2965,8 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -3035,7 +2977,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -3046,7 +2987,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0972ZH4KN
     a_tener_en_cuenta: No tiene teclas dedicadas ni pad numérico; pensado para setups reducidos
@@ -3067,8 +3007,8 @@ productos:
     lo_mejor: Diseño 60% minimalista, switches OUTEMU PRO, retroiluminación RGB personalizable y gran portabilidad
     nombre: Mars Gaming MKMINIBES
     valoracion: 4
-    precio: "39,36€"
-    precioOriginal: "43,73€"
+    precio: 39,36€
+    precioOriginal: 43,73€
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51VQpud9GrS._SL500_.jpg
@@ -3107,7 +3047,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -3150,8 +3090,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -3205,8 +3145,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -3242,7 +3182,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -3280,58 +3220,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -3383,7 +3277,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -3435,8 +3329,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -3487,7 +3381,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -3536,8 +3430,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -3586,6 +3480,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKMINIBES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Azul, Negro, Idioma
@@ -3595,12 +3529,11 @@ productos:
       - name: style_name
         value: MKMINIBES
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 31
       mostradas: 10
-      restantes: 24
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B099ZCZVGM
       - B09MJ7CGCL
       - B09MJ7P1NR
@@ -3610,7 +3543,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -3621,11 +3553,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7P1NR?tag=recomendadorn-21&th=1&psc=1
@@ -3635,7 +3565,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -3646,7 +3575,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0BDFGWCMX
@@ -3668,7 +3596,7 @@ productos:
     lo_mejor: Formato 60% blanco, switches mecánicos antipolvo, retroiluminación FRGB vibrante
     nombre: Mars Gaming MK60 Rainbow White
     valoracion: 4.5
-    precio: "59,14€"
+    precio: 59,14€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagenesVariantes:
@@ -3712,8 +3640,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -3765,7 +3693,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -3810,8 +3738,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -3847,7 +3775,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -3885,58 +3813,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -3988,7 +3870,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -4040,8 +3922,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -4092,7 +3974,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -4141,8 +4023,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -4191,6 +4073,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: Mars Gaming T. Mecanico MK60 Rainbow. White
     condicion: new
@@ -4198,12 +4120,11 @@ productos:
       - name: style_name
         value: MK60WBRES
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 31
       mostradas: 10
-      restantes: 24
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -4213,7 +4134,6 @@ productos:
       - B09MJCY4LZ
       - B0BDFBVYG3
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -4224,11 +4144,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -4238,7 +4156,6 @@ productos:
       - https://www.amazon.es/dp/B09MJCY4LZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -4249,7 +4166,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B09MJ7CGCL
@@ -4271,8 +4187,8 @@ productos:
     lo_mejor: Versión blanca con switches OUTEMU SQ, teclas PBT pudding y RGB Chroma con software
     nombre: Mars Gaming MKULTRA Blanco
     valoracion: 5
-    precio: "68,12€"
-    precioOriginal: "60,90€"
+    precio: 68,12€
+    precioOriginal: 60,90€
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/514GVGtU1rL._SL500_.jpg
@@ -4316,8 +4232,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -4369,7 +4285,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -4414,8 +4330,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -4451,7 +4367,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -4489,58 +4405,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -4592,7 +4462,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -4644,8 +4514,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -4696,7 +4566,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -4745,8 +4615,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -4795,6 +4665,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: Mars Gaming Teclado MECANICO MKULTRA Blanco - Switch Rojo
     condicion: new
@@ -4802,12 +4712,11 @@ productos:
       - name: style_name
         value: MKULTRAWRES
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 31
       mostradas: 10
-      restantes: 24
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7P1NR
@@ -4817,7 +4726,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -4828,11 +4736,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7P1NR?tag=recomendadorn-21&th=1&psc=1
@@ -4842,7 +4748,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -4853,7 +4758,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B09SV594P2
@@ -4917,7 +4821,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -4960,8 +4864,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -5015,8 +4919,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -5052,7 +4956,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -5090,58 +4994,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -5193,7 +5051,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -5245,8 +5103,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -5297,7 +5155,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -5346,8 +5204,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -5396,18 +5254,57 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKCLOUDPRES, Teclado Mecánico Inalámbrico RGB Rosa, Ultra-Compacto 75%, Switch Outemu SQ Pro Rojo,
       Idioma Español+US
     condicion: ''
     variantes_info:
-      total_en_stock: 35
+      total_en_stock: 32
       mostradas: 10
-      restantes: 25
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -5418,7 +5315,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -5429,11 +5325,9 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -5444,7 +5338,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -5455,7 +5348,6 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0F3839TXY
@@ -5477,8 +5369,8 @@ productos:
     lo_mejor: Diseño completo en blanco, switches hot-swap, RGB Chroma y rueda de control
     nombre: Mars Gaming MKPRO Blanco
     valoracion: 5
-    precio: "40,05€"
-    precioOriginal: "41,89€"
+    precio: 40,05€
+    precioOriginal: 41,89€
     disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41xElGEWUjL._SL500_.jpg
@@ -5530,7 +5422,7 @@ productos:
       - ASIN: B07W66C19H
         title: Mars Gaming MKTKL, teclado H-mecánico Negro RGB 8 efectos, antighosting, español
         brand: Mars Gaming
-        precio: "21,70€"
+        precio: 21,70€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41yTpj7YepL._SL500_.jpg
@@ -5573,8 +5465,8 @@ productos:
       - ASIN: B07WDC84BJ
         title: Mars Gaming MKXTKL, teclado mecánico switch rojo, LED 5 colores 10 efectos, ES
         brand: Mars Gaming
-        precio: "37,12€"
-        precioOriginal: "24,90€"
+        precio: 37,12€
+        precioOriginal: 24,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/510yeEk7wkL._SL500_.jpg
         imagenWidth: 500
@@ -5628,8 +5520,8 @@ productos:
           Mars Gaming MK320, Teclado Gaming Completo H-Mech, 13 Modos RGB y Halo, Reposamuñecas Acolchado, Antighosting,
           Idioma Español, Negro
         brand: Mars Gaming
-        precio: "17,66€"
-        precioOriginal: "19,90€"
+        precio: 17,66€
+        precioOriginal: 19,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31waxuF5b2S._SL500_.jpg
         imagenWidth: 500
@@ -5665,7 +5557,7 @@ productos:
       - ASIN: B076Q7YL68
         title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
         brand: Mars Gaming
-        precio: "18,65€"
+        precio: 18,65€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
@@ -5703,58 +5595,12 @@ productos:
             value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
-      - ASIN: B00IXZFQHG
-        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
-        brand: Mars Gaming
-        precio: "34,00€"
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
-            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
-            layout Español
-          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
-          - >-
-            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
-            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
-          - >-
-            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
-            tu experiencia como más te guste
-          - >-
-            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
-            XBOX ONE, XBOX SERIES SX
-        variationAttributes:
-          - name: style_name
-            value: MKMINIWRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
       - ASIN: B08F591M3H
         title: >-
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Negro
         brand: Mars Gaming
-        precio: "22,94€"
+        precio: 22,94€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51SQdsvGkjL._SL500_.jpg
@@ -5806,7 +5652,7 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Blanco
         brand: Mars Gaming
-        precio: "19,08€"
+        precio: 19,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/518hmCQySyL._SL500_.jpg
@@ -5858,8 +5704,8 @@ productos:
           Mars Gaming MKAX, Teclado Compacto TKL H-Mech, Iluminación RGB 9 Efectos, Reposamuñecas Gel, Idioma Español,
           Rosa
         brand: Mars Gaming
-        precio: "11,90€"
-        precioOriginal: "15,90€"
+        precio: 11,90€
+        precioOriginal: 15,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51UkkwI1snL._SL500_.jpg
         imagenWidth: 500
@@ -5910,7 +5756,7 @@ productos:
           Mars Gaming MKREVOES, Teclado Gaming Compacto, Formato TKL y Pad Numérico, Iluminación Full RGB 12 Efectos,
           Tecnología H-Mech, Multiplataforma, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "26,23€"
+        precio: 26,23€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51U73cyeMdL._SL500_.jpg
@@ -5959,8 +5805,8 @@ productos:
           Mars Gaming MKREVOPRO, Teclado Mecánico Gaming TKL con Pad Numérico, Switch OUTEMU Pro Azul, Iluminación Full
           RGB, Chip Vision MCU, Software, Idioma Español, Negro
         brand: Mars Gaming
-        precio: "21,90€"
-        precioOriginal: "26,90€"
+        precio: 21,90€
+        precioOriginal: 26,90€
         disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
@@ -6009,6 +5855,46 @@ productos:
           - name: style_name
             value: MKREVOPROBES
         ParentASIN: B0DZ752MKH
+      - ASIN: B0972YTB9P
+        title: >-
+          Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
+          Idioma Español
+        brand: Mars Gaming
+        precio: 23,80€
+        precioOriginal: 33,90€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes: []
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            TAMAÑO ULTRA-COMPACTO 60%: Con el mínimo tamaño operativo del 60% pero las máximas prestaciones tecnológicas
+            y una calidad superior, el MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde
+            quieras como nunca antes; Layout Español
+          - >-
+            SWITCHES MECÁNICOS OUTEMU PRO: Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima
+            durabilidad; Además, puedes elegir entre tres tipos diferentes de switch: Rojo, Azul o Marrón; Personaliza
+            tu experiencia al máximo y consigue el teclado perfecto para ti; Switch Marrón
+          - >-
+            ILUMINACIÓN FULL RGB CHROMA: El sistema de iluminación Led RGB del MKMINI te ofrece hasta 16.8 millones de
+            colores gracias a su software de control; Elige entre sus múltiples efectos especiales y perfiles
+            personalizables para diseñar la iluminación a tu gusto: todas las opciones posibles para conseguir
+            exactamente el teclado que quieres
+          - >-
+            SOFTWARE DE CONTROL PROFESIONAL: Hay un MKMINI para cada tipo de jugador: no sólo podrás elegir el tipo de
+            switch, además, su software de control ofrece múltiples posibilidades para que personalices tu experiencia
+            como más te guste, permitiéndote ajustar todos los parámetros de tu teclado a tu medida, desde su
+            iluminación hasta la creación de macros especializadas
+          - >-
+            COMPATIBILIDAD TOTAL MULTIPLATAFORMA: Disfruta de infinitas posibilidades gracias a su total compatibilidad
+            multiplataforma: PC, Mac, PS5, PS4, Switch, XBOX ONE, XBOX SERIES S/X
+        variationAttributes:
+          - name: style_name
+            value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
       Mars Gaming MKPRO, Teclado Mecánico Gaming Completo, RGB Chroma, Switches Hot-Swap Mecánicos, Antighosting, Rueda
@@ -6018,12 +5904,11 @@ productos:
       - name: style_name
         value: MKPROWYES
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 31
       mostradas: 10
-      restantes: 24
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
-      - B0972YTB9P
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -6034,7 +5919,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -6045,10 +5929,8 @@ productos:
       - B0DQCS18HZ
       - B0DQCS8FJ8
       - B0F37YZTSG
-      - B0F382BN14
       - B0F383W18C
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0972YTB9P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -6059,7 +5941,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -6070,6 +5951,5 @@ productos:
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-15'
+actualizacion: '2025-09-16'
