@@ -427,7 +427,7 @@ productos:
         brand: Razer
         precio: 129,08€
         precioOriginal: 189,99€
-        disponibilidad: Envío en 8 a 9 días
+        disponibilidad: Envío en 9 a 10 días
         imagen: https://m.media-amazon.com/images/I/41AyGvdnS9L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -784,45 +784,6 @@ productos:
       Razer BlackWidow V4 X, Teclado gaming con Razer Chroma RGB (Switches mecánicos amarillos , 6 teclas macro
       dedicadas de ABS de doble inyección) ES-Layout, Negro
     variantes:
-      - ASIN: B08CHLZVFP
-        title: >-
-          Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
-          mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
-        brand: Razer
-        precio: 112,17€
-        precioOriginal: 119,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31H0C2NjpKL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/21Jn-senIzL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/419f9R-AGYL._SL500_.jpg
-            width: 500
-            height: 246
-          - url: https://m.media-amazon.com/images/I/31CThhpTjGL._SL500_.jpg
-            width: 500
-            height: 333
-        enlace: https://www.amazon.es/dp/B08CHLZVFP?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Diseño funcional
-          - Alta calidad
-          - Rendimiento superior
-          - De la marca Razer
-        variationAttributes:
-          - name: style_name
-            value: BlackWidow V3 TKL
-          - name: size_name
-            value: Diseño US
-          - name: color_name
-            value: Interruptor Vierde Clicky
-        ParentASIN: B0DPC8X1VJ
-        condicion: new
       - ASIN: B08GCS5VKG
         title: >-
           Razer BlackWidow V3 Pro (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
@@ -1360,6 +1321,74 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+      - ASIN: B0C6DWV86F
+        title: >-
+          Razer BlackWidow V4 - Teclado mecánico gaming con Chroma RGB (Switches mecánicos verdes , 6 teclas macro
+          dedicadas, ABS de doble inyección) US-Layout | Negro
+        brand: Razer
+        precio: 179,45€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51NlhmmBtRL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51NlhmmBtRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51X0daQYfxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51J2Be3XjhL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51y21LAYAGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51MqGjygePL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41wlO0r+g2L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51yf5bMVr6L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0C6DWV86F?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Switches mecánicos verdes Razer para una ejecución precisa con una sensación de clic al tacto, Con un punto
+            de accionamiento de 1,9 mm que tan solo requiere 50 g de fuerza, experimenta el binomio óptimo de presión y
+            tiempo de respuesta para lograr una entrada precisa con una respuesta táctil y satisfactoria
+          - >-
+            Iluminación inferior de 2 lados e iluminación individual de cada tecla con tecnología Razer Chroma RGB, Con
+            la iluminación individual de cada tecla y una llamativa iluminación inferior que resalta el teclado desde
+            más ángulos, sincronízalo con tu estación de combate y disfruta de una buena inmersión en cientos de juegos
+            integrados
+          - >-
+            6 teclas macro dedicadas para un control personalizable al alcance de tu mano, Desde lanzar tu ulti hasta
+            optimizar tu rotación de habilidades, amplía tu arsenal de comandos con un conjunto de teclas macro de fácil
+            acceso que pueden programarse según tu estilo de juego
+          - >-
+            Reposamuñecas magnético de piel sintética afelpada para una buena comodidad de juego, Con un reposamuñecas
+            suave y acolchado que se acopla de forma segura al teclado, disfruta de una comodidad duradera que te ayuda
+            a superar ls maratones de juego más intensas
+          - >-
+            Teclas de ABS de doble inyección para resistir el uso intenso, Gracias al proceso de moldeado de doble
+            inyección para asegurar que no se desgasten las etiquetas, las teclas también cuentan con paredes gruesas
+            capaces de soportar un juego intenso
+          - >-
+            Rueda multifunción y 4 teclas multimedia para un control práctico, Pausa, reproduce, salta y retoca todo,
+            desde el brillo hasta el volumen: la comodidad definitiva para que disfrutes de tu ocio
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V4
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Vierde Clicky
+        ParentASIN: B0DPC8X1VJ
     ParentASIN: B0DPC8X1VJ
     nombreCompleto: >-
       Razer BlackWidow V4 X, Teclado gaming con Razer Chroma RGB (Switches mecánicos amarillos , 6 teclas macro
@@ -1373,12 +1402,11 @@ productos:
       - name: color_name
         value: Interruptor Amarillo Silent
     variantes_info:
-      total_en_stock: 17
+      total_en_stock: 16
       mostradas: 10
-      restantes: 7
+      restantes: 6
       truncado: true
     variantes_restantes_asins:
-      - B0C6DWV86F
       - B0C6DZ94Q6
       - B0C6MFJ63D
       - B0C6MJL7KQ
@@ -1386,7 +1414,6 @@ productos:
       - B0D31XQVRS
       - B0DVCHFYJ6
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0C6DWV86F?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6DZ94Q6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MFJ63D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MJL7KQ?tag=recomendadorn-21&th=1&psc=1
@@ -2051,7 +2078,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -2448,45 +2475,6 @@ productos:
       Razer BlackWidow V3 Tenkeyless (Yellow Switch) - Teclado compacto para juegos con interruptores mecánicos (teclas
       ABS, iluminación RGB Chroma) Teclado Español - Negro
     variantes:
-      - ASIN: B08CHLZVFP
-        title: >-
-          Razer BlackWidow V3 Tenkeyless - Teclado mecánico para juegos, Teclado Gaming Compacto con interruptores
-          mecánicos, iluminación cromática RGB, gestión de cables, Teclado US
-        brand: Razer
-        precio: 112,17€
-        precioOriginal: 119,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/418PoykAGwL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/31H0C2NjpKL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/21Jn-senIzL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/419f9R-AGYL._SL500_.jpg
-            width: 500
-            height: 246
-          - url: https://m.media-amazon.com/images/I/31CThhpTjGL._SL500_.jpg
-            width: 500
-            height: 333
-        enlace: https://www.amazon.es/dp/B08CHLZVFP?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Diseño funcional
-          - Alta calidad
-          - Rendimiento superior
-          - De la marca Razer
-        variationAttributes:
-          - name: style_name
-            value: BlackWidow V3 TKL
-          - name: size_name
-            value: Diseño US
-          - name: color_name
-            value: Interruptor Vierde Clicky
-        ParentASIN: B0DPC8X1VJ
-        condicion: new
       - ASIN: B08GCS5VKG
         title: >-
           Razer BlackWidow V3 Pro (Interruptor Amarillo) - Teclado Mecánico Inalámbrico para Juegos de Altura Completa
@@ -3020,6 +3008,84 @@ productos:
           - name: color_name
             value: Interruptor Vierde Clicky
         ParentASIN: B0DPC8X1VJ
+      - ASIN: B0C6DZ94Q6
+        title: >-
+          Razer BlackWidow V4, Teclado mecánico gaming con Razer Chroma RGB (Switches mecánicos amarillos Razer, 6
+          teclas macro dedicadas, Teclas de ABS de doble inyección) US-Layout, Negro
+        brand: Razer
+        precio: 183,99€
+        precioOriginal: 189,99€
+        disponibilidad: Envío en 3 a 7 meses
+        imagen: https://m.media-amazon.com/images/I/51NlhmmBtRL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51X0daQYfxL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51J2Be3XjhL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51y21LAYAGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51MqGjygePL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41wlO0r+g2L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51yf5bMVr6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41I3UjosGNL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41A8eM9GBgL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41OH1wiQDoL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/3146IpzIVOL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0C6DZ94Q6?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Switches mecánicos amarillos Razer para una ejecución fluida y óptima, a la vez que silenciosa, Con una
+            distancia cero entre los puntos de accionamiento y reposición de 1,2 mm y solo 45 g de fuerza requerida,
+            disfruta de entradas instantáneas y óptimas que son igual de silenciosas gracias a los amortiguadores de
+            sonido incorporados
+          - >-
+            Iluminación inferior de 2 lados e iluminación individual de cada tecla con tecnología Razer Chroma RGB, Con
+            la iluminación individual de cada tecla y una llamativa iluminación inferior que resalta el teclado desde
+            más ángulos, sincronízalo con tu estación de combate y disfruta de una buena inmersión en cientos de juegos
+            integrados
+          - >-
+            6 teclas macro dedicadas para un control personalizable al alcance de tu mano, Desde lanzar tu ulti hasta
+            optimizar tu rotación de habilidades, amplía tu arsenal de comandos con un conjunto de teclas macro de fácil
+            acceso que pueden programarse según tu estilo de juego
+          - >-
+            Reposamuñecas magnético de piel sintética afelpada para una buena comodidad de juego, Con un reposamuñecas
+            suave y acolchado que se acopla de forma segura al teclado, disfruta de una comodidad duradera que te ayuda
+            a superar ls maratones de juego más intensas
+          - >-
+            Teclas de ABS de doble inyección para resistir el uso intenso, Gracias al proceso de moldeado de doble
+            inyección para asegurar que no se desgasten las etiquetas, las teclas también cuentan con paredes gruesas
+            capaces de soportar un juego intenso
+          - >-
+            Rueda multifunción y 4 teclas multimedia para un control práctico, Pausa, reproduce, salta y retoca todo,
+            desde el brillo hasta el volumen: la comodidad definitiva para que disfrutes de tu ocio
+        variationAttributes:
+          - name: style_name
+            value: BlackWidow V4
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Amarillo Silent
+        ParentASIN: B0DPC8X1VJ
     ParentASIN: B0DPC8X1VJ
     nombreCompleto: >-
       Razer BlackWidow V3 Tenkeyless (Yellow Switch) - Teclado compacto para juegos con interruptores mecánicos (teclas
@@ -3033,12 +3099,11 @@ productos:
       - name: color_name
         value: Interruptor Vierde Clicky
     variantes_info:
-      total_en_stock: 17
+      total_en_stock: 16
       mostradas: 10
-      restantes: 7
+      restantes: 6
       truncado: true
     variantes_restantes_asins:
-      - B0C6DZ94Q6
       - B0C6MFJ63D
       - B0C6MJL7KQ
       - B0C6MTPKQ1
@@ -3046,7 +3111,6 @@ productos:
       - B0D31XQVRS
       - B0DVCHFYJ6
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0C6DZ94Q6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MFJ63D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MJL7KQ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MTPKQ1?tag=recomendadorn-21&th=1&psc=1
@@ -3072,7 +3136,7 @@ productos:
       - Compatible con Logitech G HUB
     brand: Logitech G
     ASIN: B07W7M8CLV
-    precio: 95,00€
+    precio: 93,00€
     precioOriginal: 139,00€
     disponibilidad: En stock
     imagenesVariantes:

@@ -19,7 +19,7 @@ productos:
     lo_mejor: 🔊 Sonido THX posicional, ⚡ Conexión HyperSpeed, 🔋 Batería 70h
     nombre: Razer BlackShark V2 HyperSpeed
     valoracion: 5
-    precio: 126,42€
+    precio: 123,30€
     precioOriginal: 149,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -564,7 +564,7 @@ productos:
           Razer BlackShark V2 Pro (2023) para PC - Auriculares inalámbricos premium para deportes electrónicos
           (micrófono HyperClear Super Wideband, TriForce Titanium 50 mm, Bluetooth) Negro
         brand: Razer
-        precio: 169,99€
+        precio: 164,94€
         precioOriginal: 229,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41fleBAPLGL._SL500_.jpg
@@ -1292,7 +1292,7 @@ productos:
           Razer BlackShark V2 Pro (2023) para PC - Auriculares inalámbricos premium para deportes electrónicos
           (micrófono HyperClear Super Wideband, TriForce Titanium 50 mm, Bluetooth) Negro
         brand: Razer
-        precio: 169,99€
+        precio: 164,94€
         precioOriginal: 229,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41fleBAPLGL._SL500_.jpg
@@ -1454,7 +1454,7 @@ productos:
           Razer BlackShark V2 HyperSpeed para PC - Auriculares para esports inalámbricos y ligeros (280 g, Micrófono
           HyperClear, Diafragmas TriForce de titanio de 50 mm, Bluetooth) Negro
         brand: Razer
-        precio: 126,42€
+        precio: 123,30€
         precioOriginal: 149,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg
@@ -1735,7 +1735,7 @@ productos:
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Quartz
         brand: Razer
-        precio: 70,66€
+        precio: 69,63€
         precioOriginal: 99,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -2173,7 +2173,7 @@ productos:
           Razer Barracuda - Auriculares Inalámbricos para Móvil y Juegos Multiplataparama (Modos Inalámbricos Dobles
           SmartSwitch, Micrófonos con Cancelación de Ruido, Triforce Driver 50mm) Negro
         brand: Razer
-        precio: 137,07€
+        precio: 131,76€
         precioOriginal: 189,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41PojmhGqmL._SL500_.jpg
@@ -3406,7 +3406,7 @@ productos:
     lo_mejor: 💰 Precio asequible, 🎧 Sonido 7.1 DTS:X
     nombre: Logitech G432
     valoracion: 4
-    precio: 51,90€
+    precio: 38,90€
     precioOriginal: 52,90€
     disponibilidad: En stock
     imagenesVariantes:
@@ -3679,7 +3679,7 @@ productos:
       - ASIN: B00SAYCXWG
         title: HyperX KHX-HSCP-RD Cloud II - Cascos de Gaming para PC/PS4/Mac, Negro/Rojo
         brand: HyperX
-        precio: 81,03€
+        precio: 80,85€
         precioOriginal: 99,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41SkA5j2l-L._SL500_.jpg
@@ -3807,6 +3807,70 @@ productos:
             value: Cloud II
         ParentASIN: B0F6CRD2YL
         condicion: new
+      - ASIN: B08NTYB4M7
+        title: >-
+          HyperX Cloud II Wireless – Auriculares inalámbricos para PC, PS4, PS5*, Nintendo Switch, batería duradera de
+          hasta 30 horas, sonido envolvente 7.1, micrófono con cancelación de ruido
+        brand: HyperX
+        precio: 149,99€
+        precioOriginal: 168,22€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41SkA5j2l-L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41QYrAKaS0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Ah7A4464L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41M9u7LTB9L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/518f6-RKJ4L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41geWMT+SHL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41+10LMubML._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41zcI9sb0ML._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08NTYB4M7?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Auriculares inalámbricos para juegos con batería de larga duración, controladores de 53 mm para un sonido
+            impresionante
+          - El legendario HyperX Komfort, sonido envolvente HyperX 7.1**
+          - Robusto marco de aluminio
+          - Micrófono desmontable con cancelación de ruido e indicador LED de silencio
+          - Monitorización de micrófono integrada
+          - >-
+            Utilice NGENUITY para obtener un mejor rendimiento. Instale el controlador DTS correctamente y reinicie el
+            PC antes de usarlo
+          - >-
+            Los auriculares pueden emitir un ligero sonido de inactividad cuando no se emite ningún sonido. Cualquier
+            sonido reproducido debe cancelarlo.
+          - >-
+            Abra el Panel de control y seleccione Hardware y sonido y, a continuación, seleccione Sonido. Si «HyperX 7.1
+            Audio» no es actualmente el dispositivo de audio predeterminado, haga clic con el botón derecho en la opción
+            y seleccione «Establecer como dispositivo predeterminado». Esto debería colocar una marca de verificación
+            verde junto al dispositivo de audio predeterminado. Repita los mismos pasos para la parte del micrófono de
+            los auriculares, que se encuentra en la pestaña «Grabación» (también disponible en el programa de sonido del
+            panel de control).
+        variationAttributes:
+          - name: color_name
+            value: Negro y rojo
+          - name: connectivity_technology
+            value: Inalámbrico
+          - name: configuration
+            value: Cloud II
+        ParentASIN: B0F6CRD2YL
     ParentASIN: B0F6CRD2YL
     variationAttributes:
       - name: color_name
@@ -3820,8 +3884,8 @@ productos:
       DTS, espuma con memoria, marco resistente, micrófono nítido de 10 mm, USB-C, USB-A
     condicion: new
     variantes_info:
-      total_en_stock: 3
-      mostradas: 3
+      total_en_stock: 4
+      mostradas: 4
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -3845,7 +3909,7 @@ productos:
     lo_mejor: 🧊 Diseño ligero, 🔊 Sonido 7.1 con adaptador USB
     nombre: Corsair HS55 SURROUND
     valoracion: 4
-    precio: 68,32€
+    precio: 67,37€
     precioOriginal: 79,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -4032,4 +4096,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-16'
+actualizacion: '2025-09-17'

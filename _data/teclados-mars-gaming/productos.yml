@@ -452,7 +452,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -562,6 +562,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -570,7 +571,6 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
@@ -585,6 +585,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -593,7 +594,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -1047,7 +1047,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1142,11 +1142,12 @@ productos:
       - name: style_name
         value: MKULTRARES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -1156,6 +1157,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -1164,11 +1166,11 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -1178,6 +1180,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -1186,7 +1189,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -1640,7 +1642,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1737,11 +1739,12 @@ productos:
       - name: style_name
         value: MK80BES
     variantes_info:
-      total_en_stock: 32
+      total_en_stock: 33
       mostradas: 10
-      restantes: 22
+      restantes: 23
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -1752,6 +1755,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -1760,11 +1764,11 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -1775,6 +1779,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -1783,7 +1788,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -1806,7 +1810,7 @@ productos:
     lo_mejor: Formato 60%, switches hot-swap, RGB envolvente y cable USB-C extraíble
     nombre: Mars Gaming MKMINIPRO
     valoracion: 4
-    precio: 26,90€
+    precio: 29,90€
     precioOriginal: 29,90€
     disponibilidad: En stock
     imagenesVariantes:
@@ -2240,7 +2244,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -2337,11 +2341,12 @@ productos:
       - name: style_name
         value: MKMINIPROYES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -2352,6 +2357,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCPC81Z
@@ -2359,11 +2365,11 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -2374,6 +2380,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPC81Z?tag=recomendadorn-21&th=1&psc=1
@@ -2381,7 +2388,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -2405,7 +2411,7 @@ productos:
     lo_mejor: Switches hot-swap, RGB Chroma completo, chasis de aluminio y rueda de control multifunción
     nombre: Mars Gaming MKPRO
     valoracion: 5
-    precio: 35,90€
+    precio: 41,87€
     precioOriginal: 41,02€
     disponibilidad: En stock
     imagenesVariantes:
@@ -2843,7 +2849,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -2940,11 +2946,12 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -2955,6 +2962,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -2963,10 +2971,10 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -2977,6 +2985,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -2985,7 +2994,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0972ZH4KN
@@ -3432,7 +3440,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -3529,11 +3537,12 @@ productos:
       - name: style_name
         value: MKMINIBES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B099ZCZVGM
       - B09MJ7CGCL
       - B09MJ7P1NR
@@ -3543,6 +3552,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -3551,11 +3561,11 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7P1NR?tag=recomendadorn-21&th=1&psc=1
@@ -3565,6 +3575,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -3573,7 +3584,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -4025,7 +4035,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -4120,11 +4130,12 @@ productos:
       - name: style_name
         value: MK60WBRES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -4134,6 +4145,7 @@ productos:
       - B09MJCY4LZ
       - B0BDFBVYG3
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -4142,11 +4154,11 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -4156,6 +4168,7 @@ productos:
       - https://www.amazon.es/dp/B09MJCY4LZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -4164,7 +4177,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -4187,7 +4199,7 @@ productos:
     lo_mejor: Versión blanca con switches OUTEMU SQ, teclas PBT pudding y RGB Chroma con software
     nombre: Mars Gaming MKULTRA Blanco
     valoracion: 5
-    precio: 68,12€
+    precio: 63,03€
     precioOriginal: 60,90€
     disponibilidad: En stock
     imagenesVariantes:
@@ -4617,7 +4629,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -4712,11 +4724,12 @@ productos:
       - name: style_name
         value: MKULTRAWRES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7P1NR
@@ -4726,6 +4739,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -4734,11 +4748,11 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7P1NR?tag=recomendadorn-21&th=1&psc=1
@@ -4748,6 +4762,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -4756,7 +4771,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -5206,7 +5220,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -5300,11 +5314,12 @@ productos:
       Idioma Español+US
     condicion: ''
     variantes_info:
-      total_en_stock: 32
+      total_en_stock: 33
       mostradas: 10
-      restantes: 22
+      restantes: 23
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -5315,6 +5330,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -5323,11 +5339,11 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F3839TXY
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -5338,6 +5354,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -5346,7 +5363,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
@@ -5807,7 +5823,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -5904,11 +5920,12 @@ productos:
       - name: style_name
         value: MKPROWYES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
+      - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
       - B09MJ7CGCL
@@ -5919,6 +5936,7 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
+      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -5927,10 +5945,10 @@ productos:
       - B0DHCPPNJ2
       - B0DHCPZ9N1
       - B0DQCS18HZ
-      - B0DQCS8FJ8
       - B0F37YZTSG
       - B0F383W18C
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
@@ -5941,6 +5959,7 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -5949,7 +5968,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS8FJ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F383W18C?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-16'
+actualizacion: '2025-09-17'

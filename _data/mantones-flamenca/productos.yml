@@ -484,11 +484,12 @@ productos:
       - name: color_name
         value: Negro/Rojo
     variantes_info:
-      total_en_stock: 21
+      total_en_stock: 22
       mostradas: 10
-      restantes: 11
+      restantes: 12
       truncado: true
     variantes_restantes_asins:
+      - B0DYYKNZGG
       - B0DYYM65H4
       - B0DYYM6JM7
       - B0DYYML3XP
@@ -501,6 +502,7 @@ productos:
       - B0F8R4HTTD
       - B0F8R4MNW6
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0DYYKNZGG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM65H4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM6JM7?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYML3XP?tag=recomendadorn-21&th=1&psc=1
@@ -2523,9 +2525,9 @@ productos:
       Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
     condicion: new
     variantes_info:
-      total_en_stock: 21
+      total_en_stock: 22
       mostradas: 10
-      restantes: 11
+      restantes: 12
       truncado: true
     variantes_restantes_asins:
       - B07BD1YF4Y
@@ -2537,6 +2539,7 @@ productos:
       - B07QGNK295
       - B07ZZ23GJR
       - B09Q8YBM98
+      - B09Q98JVGF
       - B09QCV8RL2
       - B09QGWN9Q7
     variantes_restantes_enlaces:
@@ -2549,6 +2552,7 @@ productos:
       - https://www.amazon.es/dp/B07QGNK295?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07ZZ23GJR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09Q8YBM98?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09Q98JVGF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09QCV8RL2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09QGWN9Q7?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B07JGYWHQY
@@ -3090,12 +3094,13 @@ productos:
       - name: color_name
         value: Rojo Dorado
     variantes_info:
-      total_en_stock: 23
+      total_en_stock: 24
       mostradas: 10
-      restantes: 13
+      restantes: 14
       truncado: true
     variantes_restantes_asins:
       - B06XY1DGRK
+      - B0717359SS
       - B07BCZL7WZ
       - B07BH2T6PG
       - B07BTZ3PX1
@@ -3110,6 +3115,7 @@ productos:
       - B09SGC42V2
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B06XY1DGRK?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0717359SS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07BCZL7WZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07BH2T6PG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07BTZ3PX1?tag=recomendadorn-21&th=1&psc=1

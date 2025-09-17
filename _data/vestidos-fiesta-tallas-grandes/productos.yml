@@ -988,7 +988,7 @@ productos:
           72styles Vestido Dama De Honor Multiposicion, Invitada Boda De Fiesta Mujer Elegantes Largos Talla Grande
           Infinito Cruzado Convertible Graduación Ceremonia Eventos
         brand: 72styles
-        precio: 81,69€
+        precio: 85,99€
         precioOriginal: 89,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Nlo8plSxL._SL500_.jpg
@@ -1036,7 +1036,7 @@ productos:
           72styles Vestido Dama De Honor Multiposicion, Invitada Boda De Fiesta Mujer Elegantes Largos Talla Grande
           Infinito Cruzado Convertible Graduación Ceremonia Eventos
         brand: 72styles
-        precio: 81,69€
+        precio: 85,99€
         precioOriginal: 89,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41zzZO5yLaL._SL500_.jpg
@@ -3425,6 +3425,11 @@ productos:
       - https://www.amazon.es/dp/B0DSJHTFGZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJJ35C2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJJFFR7?tag=recomendadorn-21&th=1&psc=1
+    variationAttributes:
+      - name: color_name
+        value: beige
+      - name: size_name
+        value: 52 Grande
   - ASIN: B0DSJDXMBM
     nombreCompleto: Hanna Nikole Vestido De Gasa Plisado con Escote Redondo Y Corte En A De Talla Grande para Mujer Azul Marino 22W
     valoracion: 4.6
@@ -3951,17 +3956,21 @@ productos:
       En general lo valoro por su suavidad y caída, ideal si buscas un vestido cómodo para el día a día.
     condicion: new
     variantes_info:
-      total_en_stock: 13
+      total_en_stock: 15
       mostradas: 10
-      restantes: 3
+      restantes: 5
       truncado: true
     variantes_restantes_asins:
+      - B0DSJDTZXW
       - B0DSJH5WBM
       - B0DSJHJ2PJ
+      - B0DSJHJ6VC
       - B0DSJJJW91
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0DSJDTZXW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJH5WBM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJHJ2PJ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DSJHJ6VC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJJJW91?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0F1JMHMKN
     nombreCompleto: >-
@@ -7206,6 +7215,7 @@ productos:
       - B01HPOM7A4
       - B01HPOM9FC
       - B01HPOMCB8
+      - B01HPOMDXU
       - B01HPOMFMY
       - B01HPOMHMC
       - B01J2VTGHA
@@ -7284,7 +7294,6 @@ productos:
       - B07NZS34WH
       - B07P1WYJG9
       - B07P1XC47K
-      - B07P1Y4GPL
       - B07P1YHWXW
       - B07P1ZXMDM
       - B07P33587Z
@@ -7561,6 +7570,7 @@ productos:
       - https://www.amazon.es/dp/B01HPOM7A4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01HPOM9FC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01HPOMCB8?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B01HPOMDXU?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01HPOMFMY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01HPOMHMC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B01J2VTGHA?tag=recomendadorn-21&th=1&psc=1
@@ -7639,7 +7649,6 @@ productos:
       - https://www.amazon.es/dp/B07NZS34WH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07P1WYJG9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07P1XC47K?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B07P1Y4GPL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07P1YHWXW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07P1ZXMDM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07P33587Z?tag=recomendadorn-21&th=1&psc=1
@@ -9349,7 +9358,7 @@ productos:
       - ASIN: B0BB7LTPYV
         title: Trendyol Women Midi A-Line Fitted Woven Plus Size Dress Mujer, Fuchsia, 42
         brand: Trendyol
-        precio: 46,07€
+        precio: 36,33€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31ZQ7fYFW1L._SL500_.jpg
