@@ -175,7 +175,7 @@ productos:
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
-        precio: 119,00€
+        precio: 122,22€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -481,7 +481,7 @@ productos:
           Huntsman Mini (Red Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores opto-mecánicos
           (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
         brand: Razer
-        precio: 99,99€
+        precio: 93,90€
         precioOriginal: 139,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
@@ -924,7 +924,7 @@ productos:
           Razer BlackWidow V3 Tenkeyless (Interruptor Amarillo) - Teclado Mecánico Compacto para Juegos (Interruptores
           Mecánicos Silenciosos, Teclas Totalmente Programables) Diseño US| Negro
         brand: Razer
-        precio: 89,99€
+        precio: 119,00€
         precioOriginal: 119,99€
         disponibilidad: Envío en 6 a 7 meses
         imagen: https://m.media-amazon.com/images/I/41X5XeU+flL._SL500_.jpg
@@ -1402,11 +1402,13 @@ productos:
       - name: color_name
         value: Interruptor Amarillo Silent
     variantes_info:
-      total_en_stock: 16
+      total_en_stock: 18
       mostradas: 10
-      restantes: 6
+      restantes: 8
       truncado: true
     variantes_restantes_asins:
+      - B08CHLZVFP
+      - B08G577XZF
       - B0C6DZ94Q6
       - B0C6MFJ63D
       - B0C6MJL7KQ
@@ -1414,6 +1416,8 @@ productos:
       - B0D31XQVRS
       - B0DVCHFYJ6
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B08CHLZVFP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08G577XZF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6DZ94Q6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MFJ63D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MJL7KQ?tag=recomendadorn-21&th=1&psc=1
@@ -1559,53 +1563,7 @@ productos:
     title: >-
       SteelSeries Apex 3 - Teclado Gaming - Iluminación RGB de 10 zonas - Resistencia al agua IP32 - Reposamuñecas
       magnético superior - Teclado QWERTY Español
-    variantes:
-      - ASIN: B08TBT2MHW
-        title: >-
-          SteelSeries Apex 3 - Teclado RGB para gaming - Iluminación RGB de 10 zonas - Resistencia al agua IP32 -
-          Reposamuñecas magnético superior - Teclado QWERTY Nórdico
-        brand: SteelSeries
-        precio: 79,99€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/413IejMcEwL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51dN8rt7XcL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/410J4im3SeL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5100IHCiFGL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51fBWLO03ZL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41N4XiSwrNL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51NYFKkczWL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B08TBT2MHW?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - 'Resistencia al agua IP32: evita daños accidentales por líquidos vertidos'
-          - 'Iluminación RGB de 10 zonas: impresionante esquema de color y efectos reactivos'
-          - 'Switches silenciosos para gaming: 20 millones de pulsaciones con un bajo nivel de fricción y ruido'
-          - 'Reposamuñecas magnético superior: brinda confort y soporte completo para las palmas de las manos'
-          - 'Controles dedicados para multimedia: ajusta el volumen y la configuración sobre la marcha'
-          - >-
-            La distribución de teclado de este producto es Nórdico qwerty; la distribución diferirá de las imágenes del
-            producto, que tienen el teclado americano qwerty
-          - 'Nota: es recomendable que el firmware se actualice regularmente usango Steelseries Engine'
-        variationAttributes:
-          - name: style_name
-            value: QWERTY nórdico
-        ParentASIN: B0D4QT9BHJ
-        condicion: new
+    variantes: []
     ParentASIN: B0D4QT9BHJ
     variationAttributes:
       - name: style_name
@@ -1615,8 +1573,8 @@ productos:
       magnético superior - Teclado QWERTY Español
     condicion: new
     variantes_info:
-      total_en_stock: 1
-      mostradas: 1
+      total_en_stock: 0
+      mostradas: 0
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -2078,7 +2036,7 @@ productos:
         brand: Mars Gaming
         precio: 21,90€
         precioOriginal: 26,90€
-        disponibilidad: En stock
+        disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/51NfYojmZaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -2175,9 +2133,9 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 33
+      total_en_stock: 31
       mostradas: 10
-      restantes: 23
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
       - B07WFGYJ6R
@@ -2199,8 +2157,6 @@ productos:
       - B0DHCPF5VB
       - B0DHCPPNJ2
       - B0DHCPZ9N1
-      - B0DQCS18HZ
-      - B0F37YZTSG
       - B0F382BN14
       - B0F3839TXY
     variantes_restantes_enlaces:
@@ -2223,8 +2179,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCPF5VB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G213 Prodigy
@@ -2271,27 +2225,14 @@ productos:
     imagenHeight: 500
     imagenWidth: 500
     caracteristicasAmazon:
-      - >-
-        Rendimiento para Gaming: El teclado G213 para PC está dotado de teclas Logitech G Mech-Dome ajustadas
-        especialmente para ofrecer un perfil de rendimiento global similar al de un teclado mecánico
-      - >-
-        Resistente a Salpicaduras y Duradero: La membrana y el armazón de teclas del teclado USB G213 ofrece resistencia
-        a salpicaduras probada con hasta 60 ml de líquido
-      - >-
-        Teclas Inteligente para el Gaming: El teclado para gaming Logitech G213 ofrece una matriz de prevención de
-        efecto fantasma programada para controlar varias teclas
-      - >-
-        Controles Multimedia: Los controles multimedia de G213 permiten reproducir, poner en pausa y silenciar música y
-        vídeos al instante
-      - >-
-        Reposamanos Integrados y Patas Ajustables: El ajuste de ángulo en dos niveles te permite colocar el teclado tal
-        y como quieres, mientras el reposamanos integrado alivia la incomodidad o la fatiga
-      - >-
-        La marca de accesorios para gaming más vendida del mundo: Basado en datos de ventas agregados independientes
-        (febr. 2019 - febr. 2020) de teclados, ratones y auriculares para PC gaming en unidades
+      - Más de 16,8 millones de colores para personalizar 5 zonas de iluminación
+      - Teclado RGB de tamaño normal diseñado para gaming y productividad
+      - Teclas pensadas especialmente para jugadores que repele líquidos y suciedad
+      - Matriz de prevención de efecto fantasma programada para controlar varias teclas
+      - Controla la banda sonora de fondo sin desconectarte del juego
     title: >-
-      Logitech G213 Prodigy Teclado Gaming con Reposamuñecas, RGB LIGHTSYNC, Teclas Retroiluminadas y Personalizables,
-      Resistente a Salpicaduras, Controles Multimedia Dedicados, Disposición QWERTY ES
+      Logitech G G213 Prodigy Teclado Gaming, RGB LIGHTSYNC, Teclas retroiluminadas, Resistente a Salpicaduras, Teclas
+      personalizables, Controles Multimedia Dedicados, Disposición QWERTY ES - Negro
     variantes: []
     ParentASIN: B0DG4G2GY4
     variationAttributes:
@@ -2557,7 +2498,7 @@ productos:
           Razer BlackWidow V3 Tenkeyless (Interruptor Amarillo) - Teclado Mecánico Compacto para Juegos (Interruptores
           Mecánicos Silenciosos, Teclas Totalmente Programables) Diseño US| Negro
         brand: Razer
-        precio: 89,99€
+        precio: 119,00€
         precioOriginal: 119,99€
         disponibilidad: Envío en 6 a 7 meses
         imagen: https://m.media-amazon.com/images/I/41X5XeU+flL._SL500_.jpg
@@ -3101,11 +3042,13 @@ productos:
       - name: color_name
         value: Interruptor Vierde Clicky
     variantes_info:
-      total_en_stock: 16
+      total_en_stock: 18
       mostradas: 10
-      restantes: 6
+      restantes: 8
       truncado: true
     variantes_restantes_asins:
+      - B08CHLZVFP
+      - B08G577XZF
       - B0C6MFJ63D
       - B0C6MJL7KQ
       - B0C6MTPKQ1
@@ -3113,6 +3056,8 @@ productos:
       - B0D31XQVRS
       - B0DVCHFYJ6
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B08CHLZVFP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08G577XZF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MFJ63D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MJL7KQ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0C6MTPKQ1?tag=recomendadorn-21&th=1&psc=1

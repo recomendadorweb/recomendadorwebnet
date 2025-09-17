@@ -1529,11 +1529,12 @@ productos:
     ParentASIN: B0D4M9QDLN
     condicion: new
     variantes_info:
-      total_en_stock: 91
+      total_en_stock: 92
       mostradas: 10
-      restantes: 81
+      restantes: 82
       truncado: true
     variantes_restantes_asins:
+      - B0D4LTBFV9
       - B0D4LWDWD6
       - B0D4LYPCV2
       - B0D4LYRYDC
@@ -1616,6 +1617,7 @@ productos:
       - B0FH6TWVFR
       - B0FH6V46KG
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0D4LTBFV9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4LWDWD6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4LYPCV2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4LYRYDC?tag=recomendadorn-21&th=1&psc=1
@@ -3261,7 +3263,7 @@ productos:
       Cintura Elástica Casual Vestido en Capas Vestido Línea A(Azul Marino, L)
     brand: CMTOP
     precio: 24,99€
-    precioOriginal: 33,99€
+    precioOriginal: 32,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/31TSrFMO8eL._SL500_.jpg
     imagenWidth: 385

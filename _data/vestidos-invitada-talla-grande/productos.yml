@@ -726,7 +726,6 @@ productos:
       - B07RG49ZQ2
       - B07RG5137Q
       - B07RH6BR3T
-      - B07RH6FBQ3
       - B07RH7T434
       - B07XLHVX1S
       - B07XLJHMDG
@@ -858,6 +857,7 @@ productos:
       - B0D6TV2N6B
       - B0D6TXDKZ8
       - B0D6V2M5PQ
+      - B0D6V3PT6W
       - B0D6V4NQF5
       - B0D6V4X3SV
       - B0D6V5Q622
@@ -951,7 +951,6 @@ productos:
       - https://www.amazon.es/dp/B07RG49ZQ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RG5137Q?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RH6BR3T?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B07RH6FBQ3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RH7T434?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07XLHVX1S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07XLJHMDG?tag=recomendadorn-21&th=1&psc=1
@@ -1083,6 +1082,7 @@ productos:
       - https://www.amazon.es/dp/B0D6TV2N6B?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D6TXDKZ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D6V2M5PQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D6V3PT6W?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D6V4NQF5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D6V4X3SV?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D6V5Q622?tag=recomendadorn-21&th=1&psc=1
@@ -1877,9 +1877,9 @@ productos:
       - name: size_name
         value: 54 Grande
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 30
       mostradas: 10
-      restantes: 21
+      restantes: 20
       truncado: true
     variantes_restantes_asins:
       - B0D78TBYG2
@@ -1894,7 +1894,6 @@ productos:
       - B0DG319R96
       - B0DG32R1CV
       - B0DG33CSFB
-      - B0DG33QS9S
       - B0DG33XHGS
       - B0DG33XHH6
       - B0DG3561MM
@@ -1916,7 +1915,6 @@ productos:
       - https://www.amazon.es/dp/B0DG319R96?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG32R1CV?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG33CSFB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DG33QS9S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG33XHGS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG33XHH6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG3561MM?tag=recomendadorn-21&th=1&psc=1
@@ -6663,4 +6661,4 @@ productos:
       - https://www.amazon.es/dp/B0F32X33QP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F32X77ZH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F32XKCJB?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-17'
+actualizacion: '2025-09-18'

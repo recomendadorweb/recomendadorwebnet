@@ -107,78 +107,6 @@ productos:
     salesrank: 5194
     enlace: https://www.amazon.es/dp/B0D11BYKGW?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1
     variantes:
-      - ASIN: B0D11FD5RF
-        nombreCompleto: >-
-          ENGWE Bicicleta eléctrica Plegable |768Wh 16AH Durabilidad 110KM | 20" × 4.0" Fat Tire Bicicleta Eléctrica |
-          Sensor de Par | Suspensión Completa | 8-Velocidades | Engine Pro 2.0
-        valoracion: 4.5
-        salesrank: 5194
-        enlace: https://www.amazon.es/dp/B0D11FD5RF?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
-        title: >-
-          ENGWE Bicicleta eléctrica Plegable |768Wh 16AH Durabilidad 110KM | 20" × 4.0" Fat Tire Bicicleta Eléctrica |
-          Sensor de Par | Suspensión Completa | 8-Velocidades | Engine Pro 2.0
-        brand: ENGWE
-        precio: 1.499,00€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41Svn4xtNRL._SL500_.jpg
-        imagenWidth: 375
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Ey1Mx6-WL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41x8GheQafL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/412mHfVvnrL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41KIu70r3mL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Y1u-ofimL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51zPLIm9r2L._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/518irU2hApL._SL500_.jpg
-            width: 375
-            height: 500
-        condicion: new
-        caracteristicasAmazon:
-          - >-
-            【2025 Actualización de largo alcance】 Equipada con una batería de alta capacidad de 768Wh y 16Ah, ofrece una
-            autonomía de hasta 110km. Equipada con un potente motor brushless de alta velocidad capaz de proporcionar
-            75NM de par motor, es ideal para afrontar subidas y terrenos abruptos. ¡Empieza ya a explorar donde quieras!
-          - >-
-            【Sensor de par + Suspensión completa 】El ENGINE Pro 2.0 está equipado con un sensor de par para garantizar
-            una conducción suave y sensible. La suspensión completa, que incluye horquilla delantera hidráulica y
-            amortiguador trasero de aire, garantiza una excelente capacidad de absorción de impactos. Además, el cuadro
-            de aleación de aluminio 6061 minimiza las vibraciones para una conducción más cómoda y estable.
-          - >-
-            【Upgrade to Hydraulic Brake + 4.0" Wide Tyres】La bicicleta eléctrica está equipada con frenos de disco
-            hidráulicos, proporcionando una respuesta de frenado más rápida para viajes más seguros. Gracias a los
-            neumáticos anchos de 20*4,0 pulgadas, abordar terrenos extremos se vuelve extremadamente fácil.
-          - >-
-            【Pantalla LCD inteligente】La pantalla LCD inteligente de esta ENGWE Ebike muestra datos en tiempo real como
-            energía, velocidad, kilometraje, potencia y tiempo de conducción. Detección instantánea y notificación de
-            errores. Se puede ajustar para mantener una velocidad constante en terreno llano.
-          - >-
-            【Bicicleta Plegable】 La bicicleta eléctrica ENGINE PRO 2.0 para adultos pesa 31 kg y puede transportar hasta
-            150 kg de carga. Su tamaño plegado es de 40×21×33 pulgadas. Gracias al sistema de liberación rápida, se
-            puede plegar fácilmente por una persona, ahorrando espacio. Puede guardarse cómodamente en un rincón de la
-            casa o en el maletero del coche cuando se viaja.
-          - >-
-            【Servicio de atención al cliente fiable 24/7】. La bicicleta eléctrica ENGWE se entrega premontada al 85% e
-            incluye dos pedales y un asiento. Su pedido será entregado dentro de 5-10 días. Nuestro equipo de atención
-            al cliente está disponible 24/7 para ayudarle con preguntas o inquietudes. Garantizamos un servicio
-            confiable y ofrecemos un año de garantía para motores, baterías y controladores.
-        variationAttributes:
-          - name: color_name
-            value: Azul Noche
-        ParentASIN: B0D11SYKDS
       - ASIN: B0D11BJC76
         nombreCompleto: >-
           ENGWE Bicicleta eléctrica Plegable | 768Wh 16AH Durabilidad 110KM | 20" × 4.0" Fat Tire Bicicleta Eléctrica |
@@ -317,8 +245,8 @@ productos:
       - name: color_name
         value: Verde Montaña
     variantes_info:
-      total_en_stock: 2
-      mostradas: 2
+      total_en_stock: 1
+      mostradas: 1
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
