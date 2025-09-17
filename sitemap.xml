@@ -6,7 +6,16 @@ permalink: /sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% assign baseurl = site.url | append: site.baseurl %}
-  
+  {% assign latest_post = site.posts | first %}
+
+  <!-- Homepage con fecha del último post -->
+  <url>
+    <loc>{{ baseurl }}/</loc>
+    {% if latest_post %}
+      <lastmod>{{ latest_post.date | date_to_xmlschema }}</lastmod>
+    {% endif %}
+  </url>
+
   {%- for page in site.pages -%}
     {%- unless page.url contains '/categoria/' 
     or page.url contains '/tag/' 
@@ -16,7 +25,8 @@ permalink: /sitemap.xml
     or page.url contains '/autor/'
     or page.url contains '/gracias/'
     or page.url contains '/sobre-nosotros'
-    or page.sitemap == false -%}
+    or page.sitemap == false 
+    or page.url == '/' -%} <!-- Evitamos duplicar la homepage -->
       <url>
         <loc>{{ baseurl }}{{ page.url | replace:'index.html','' }}</loc>
         {%- if page.date -%}
