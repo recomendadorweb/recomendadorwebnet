@@ -2175,9 +2175,9 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 32
+      total_en_stock: 33
       mostradas: 10
-      restantes: 22
+      restantes: 23
       truncado: true
     variantes_restantes_asins:
       - B07WFGYJ6R
@@ -2201,6 +2201,7 @@ productos:
       - B0DHCPZ9N1
       - B0DQCS18HZ
       - B0F37YZTSG
+      - B0F382BN14
       - B0F3839TXY
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
@@ -2224,6 +2225,7 @@ productos:
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G213 Prodigy
     lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado, resistente a líquidos

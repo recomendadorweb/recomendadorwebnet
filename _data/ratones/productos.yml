@@ -19,7 +19,7 @@ productos:
     lo_mejor: 🎯 Sensor HERO 25K con peso ajustable y 11 botones
     nombre: Logitech G502 HERO
     valoracion: 5
-    precio: 43,00€
+    precio: 40,99€
     precioOriginal: 92,99€
     disponibilidad: En stock
     imagenesVariantes: []
@@ -60,7 +60,7 @@ productos:
     nombreCompleto: >-
       Logitech G502 HERO Ratón Gaming con Cable Alto Rendimiento, Captor HERO 25K, 25,600 DPI, RGB, Peso Personalizable,
       11 Botones Programables, Memoria Integrada, PC/Mac - Negro
-    condicion: used
+    condicion: new
     variantes_info:
       total_en_stock: 0
       mostradas: 0
@@ -1834,7 +1834,7 @@ productos:
     lo_mejor: 🪶 Ultraligero y perforado, IP54
     nombre: SteelSeries Aerox 5 Wireless
     valoracion: 4.5
-    precio: 110,48€
+    precio: 110,36€
     precioOriginal: 99,00€
     disponibilidad: En stock
     imagenesVariantes:
@@ -1905,7 +1905,7 @@ productos:
           SteelSeries Aerox 5 - Raton Gaming Con Cable - Diseño ultraligero resistente al agua - RGB - Sensor óptico
           TrueMove Air 18K DPI
         brand: SteelSeries
-        precio: 67,84€
+        precio: 63,90€
         precioOriginal: 89,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Ub62UybmL._SL500_.jpg
@@ -2212,7 +2212,7 @@ productos:
           Razer Viper V2 Pro - Ratón Inalámbrico Ultraligero para Juegos de Deportes Electrónicos de 59g (Sensor Óptico
           de 30K DPI, HyperSpeed, Interruptores de Ratón Óptico Gen-3, Opciones de 5 DPI) Blanco
         brand: Razer
-        precio: 182,24€
+        precio: 182,28€
         precioOriginal: No especificado
         disponibilidad: Envío en 2 a 3 días
         imagen: https://m.media-amazon.com/images/I/315gWjg3mHL._SL500_.jpg
@@ -2357,7 +2357,7 @@ productos:
           Razer Viper Mini - Ratón para Juegos (Ratón Gaming, Ambidiestro, 61g de peso, Cable Speedflex, Sensor Óptico
           de 8.500 ppp e Iluminación Chroma RGB) - Negro
         brand: Razer
-        precio: 53,45€
+        precio: 53,33€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31lMWsSgoSL._SL500_.jpg
@@ -2421,7 +2421,7 @@ productos:
           Razer Viper V3 Pro - Ratón inalámbrico Ultraligero Esports Gaming (8K Hz HyperPolling, diseño Ligero de 54g,
           Sensor Focus Pro 35K dpi, HyperSpeed Wireless, 95 Horas de duración) Negro
         brand: Razer
-        precio: 171,00€
+        precio: 161,90€
         precioOriginal: 179,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31f-at+es2L._SL500_.jpg
@@ -3140,7 +3140,7 @@ productos:
           Razer DeathAdder V3 Pro - Ratón Ligero Inalámbrico Ergonómico para Deportes Electrónicos (63 Gramos, Sensor
           Óptico Focus Pro 30K, Interruptores de Ratón Gen-3, Hyperspeed Wireless) Edición Faker
         brand: Razer
-        precio: 239,92€
+        precio: 239,52€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/412jmAevBeL._SL500_.jpg
@@ -3686,12 +3686,10 @@ productos:
       Interruptores Ópticos de Ratón Gen-3, Tecnología Hyperpolling De 8000 Hz) Negro
     condicion: new
     variantes_info:
-      total_en_stock: 11
+      total_en_stock: 10
       mostradas: 10
-      restantes: 1
-      truncado: true
-    variantes_restantes_asins:
-      - B081QX9V2Y
-    variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B081QX9V2Y?tag=recomendadorn-21&th=1&psc=1
+      restantes: 0
+      truncado: false
+    variantes_restantes_asins: []
+    variantes_restantes_enlaces: []
 actualizacion: '2025-09-17'
