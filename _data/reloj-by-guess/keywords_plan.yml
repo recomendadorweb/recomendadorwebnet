@@ -1,0 +1,40 @@
+cabecera:
+  # KW_ATACADA: reloj by guess | VOL: 4400
+  principal: reloj by guess
+  meta:
+    vol: 4400
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: reloj by guess | VOL: 4400
+  - reloj by guess
+secciones:
+  - kw: reloj by guess
+    # KW_ATACADA: reloj by guess | VOL: 4400
+    titulo: reloj by guess
+    id: reloj-by-guess
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 4400
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: reloj by guess | VOL: 4400
+  - reloj by guess
+html_map:
+  h1: reloj by guess
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - reloj by guess
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 1
+  total_brands_detected: 33
