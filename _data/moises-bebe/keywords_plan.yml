@@ -1,0 +1,92 @@
+cabecera:
+  # KW_ATACADA: moises bebe | VOL: 6600
+  principal: moisés para bebé
+  meta:
+    vol: 6600
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: moises bebe | VOL: 6600
+  - moisés para bebé
+  # KW_ATACADA: moises bebes | VOL: 2900
+  - moisés para bebés
+  # KW_ATACADA: moises para bebe | VOL: 1600
+  - moisés para bebé
+  # KW_ATACADA: moises para bebes | VOL: 590
+  - moisés para bebés
+secciones:
+  - kw: moises bebe
+    # KW_ATACADA: moises bebe | VOL: 6600
+    titulo: moisés para bebé
+    id: moises-bebe
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 6600
+    diff: 0
+    intent: I
+  - kw: moises bebes
+    # KW_ATACADA: moises bebes | VOL: 2900
+    titulo: moisés para bebés
+    id: moises-bebes
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 2900
+    diff: 0
+    intent: I
+  - kw: moises para bebe
+    # KW_ATACADA: moises para bebe | VOL: 1600
+    titulo: moisés para bebé
+    id: moises-para-bebe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1600
+    diff: 0
+    intent: I
+  - kw: moises para bebes
+    # KW_ATACADA: moises para bebes | VOL: 590
+    titulo: moisés para bebés
+    id: moises-para-bebes
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 590
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: moises bebe | VOL: 6600
+  - moisés para bebé
+  # KW_ATACADA: moises bebes | VOL: 2900
+  - moisés para bebés
+  # KW_ATACADA: moises para bebe | VOL: 1600
+  - moisés para bebé
+  # KW_ATACADA: moises para bebes | VOL: 590
+  - moisés para bebés
+  # KW_ATACADA: bebe moises | VOL: 480
+  - moisés para bebé
+  # KW_ATACADA: moises bebe mimbre | VOL: 390
+  - moisés para bebé de mimbre 
+  # KW_ATACADA: moises de bebe | VOL: 320
+  - moisés de bebé
+  # KW_ATACADA: cuna moises bebe | VOL: 210
+  - cuna moisés para bebé
+  # KW_ATACADA: moises bebe con ruedas | VOL: 210
+  - moisés para bebé con ruedas
+html_map:
+  h1: moisés para bebé
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - moisés para bebé
+  - moisés para bebés
+  - moisés para bebé
+  - moisés para bebés
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 9
+  total_brands_detected: 92
