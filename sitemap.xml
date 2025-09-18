@@ -26,7 +26,7 @@ permalink: /sitemap.xml
     or page.url contains '/gracias/'
     or page.url contains '/sobre-nosotros'
     or page.sitemap == false 
-    or page.url == '/' -%} <!-- Evitamos duplicar la homepage -->
+    or page.url == '/' -%}
       <url>
         <loc>{{ baseurl }}{{ page.url | replace:'index.html','' }}</loc>
         {%- if page.date -%}
