@@ -648,11 +648,12 @@ productos:
       - name: color_name
         value: B-burdeos
     variantes_info:
-      total_en_stock: 96
+      total_en_stock: 97
       mostradas: 10
-      restantes: 86
+      restantes: 87
       truncado: true
     variantes_restantes_asins:
+      - B0CZ8YGLRH
       - B0D53CSFQK
       - B0D53CSFQL
       - B0D53DGW4Q
@@ -740,6 +741,7 @@ productos:
       - B0FHH4CC4P
       - B0FHH8NYPL
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0CZ8YGLRH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53CSFQK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53CSFQL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53DGW4Q?tag=recomendadorn-21&th=1&psc=1
@@ -1529,9 +1531,9 @@ productos:
     ParentASIN: B0D4M9QDLN
     condicion: new
     variantes_info:
-      total_en_stock: 92
+      total_en_stock: 93
       mostradas: 10
-      restantes: 82
+      restantes: 83
       truncado: true
     variantes_restantes_asins:
       - B0D4LTBFV9
@@ -1545,6 +1547,7 @@ productos:
       - B0D83CGC57
       - B0D83GGPCN
       - B0D83GGPCS
+      - B0D83GTZ7Q
       - B0D83H9JNP
       - B0D83HF6HH
       - B0D83HFBQ8
@@ -1628,6 +1631,7 @@ productos:
       - https://www.amazon.es/dp/B0D83CGC57?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83GGPCN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83GGPCS?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D83GTZ7Q?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83H9JNP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HF6HH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HFBQ8?tag=recomendadorn-21&th=1&psc=1
@@ -5344,7 +5348,7 @@ productos:
       fdsmall Vestidos Midi de Cuello V de otoño para Mujeres Vestidos Bohemios de Manga Larga Elegantes y elásticos
       Casuales de Cintura Alta en Forma de a (FR/ES, Letras, L, Regular, Regular, Marrón)
     brand: fdsmall
-    precio: 21,89€
+    precio: 21,99€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41-aXICxlCL._SL500_.jpg
@@ -5797,9 +5801,9 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, S
         brand: DSAoTeng
-        precio: 10,53€
+        precio: 15,26€
         precioOriginal: No especificado
-        disponibilidad: En stock
+        disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
         imagenHeight: 500
@@ -7139,11 +7143,12 @@ productos:
       - name: color_name
         value: A-verde
     variantes_info:
-      total_en_stock: 64
+      total_en_stock: 65
       mostradas: 10
-      restantes: 54
+      restantes: 55
       truncado: true
     variantes_restantes_asins:
+      - B0CDKQG4L5
       - B0CDKS7843
       - B0CDKTH4XF
       - B0CDKTJN75
@@ -7199,6 +7204,7 @@ productos:
       - B0FH6TW7C2
       - B0FH6TWFRJ
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0CDKQG4L5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKS7843?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKTH4XF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKTJN75?tag=recomendadorn-21&th=1&psc=1
@@ -7253,4 +7259,4 @@ productos:
       - https://www.amazon.es/dp/B0FH6TSTHF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TW7C2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TWFRJ?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-17'
+actualizacion: '2025-09-18'

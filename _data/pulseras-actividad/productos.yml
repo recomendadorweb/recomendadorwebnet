@@ -236,7 +236,7 @@ productos:
         brand: XIAOMI
         precio: 19,99€
         precioOriginal: 24,99€
-        disponibilidad: En stock
+        disponibilidad: Disponible para envío en 1 o 2 días
         imagen: https://m.media-amazon.com/images/I/41aMomVkdzL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -979,7 +979,7 @@ productos:
       XIAOMI Smart Band 9 Pro - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED de 1,74",
       Monitorización del sueño, 150+ Modos Deportivos, 5ATM, GPS y brújula, App Mi Fitness, Negro
     brand: XIAOMI
-    precio: 56,99€
+    precio: 57,02€
     precioOriginal: 69,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41POgVKhQ-L._SL500_.jpg
@@ -1276,7 +1276,7 @@ productos:
           Xiaomi Smart Band 8 Pro - Pulsera de Actividad de 1.74", Cuerpo Ligero y Ultrafino de 9.99 mm, +150 Modos
           Deportivos, SpO2, 5ATM, batería de hasta 14 días, Negro (Versión ES)
         brand: XIAOMI
-        precio: 55,85€
+        precio: 55,80€
         precioOriginal: 69,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41JMk0FRdPL._SL500_.jpg
@@ -1428,7 +1428,7 @@ productos:
       Xiaomi Smart Band 8 - Pulsera de Actividad, Autonomía de hasta 16 días, Pantalla AMOLED con Tasa de refresco de 60
       Hz, 5 ATM, 150 Modos Deportivos, Blanco (Versión ES
     brand: XIAOMI
-    precio: 40,99€
+    precio: 40,54€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/411Yhvqt0BL._SL500_.jpg
@@ -1636,7 +1636,7 @@ productos:
         ParentASIN: B0BB7RXDQZ
     title: Fitbit Inspire 3,Black/Midnight Zen Activity Tracker, Unisex-Adult, Negro, One Size
     brand: Fitbit
-    precio: 89,99€
+    precio: 85,99€
     precioOriginal: 99,95€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/31wwOV2YnzL._SL500_.jpg
@@ -1922,4 +1922,4 @@ productos:
       aporta tranquilidad en agua, aunque conviene actualizar el firmware para acceder a todas las mejoras. En mi caso
       el color Ivory resulta cómodo y discreto, por eso recomiendo esta Redmi Smartband 2 a quien busque una pulsera
       sencilla con funciones de salud avanzadas.
-actualizacion: '2025-09-17'
+actualizacion: '2025-09-18'

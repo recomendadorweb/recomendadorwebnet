@@ -1339,9 +1339,9 @@ productos:
       - name: color_name
         value: Azul
     variantes_info:
-      total_en_stock: 32
+      total_en_stock: 33
       mostradas: 10
-      restantes: 22
+      restantes: 23
       truncado: true
     variantes_restantes_asins:
       - B0B6PDXKYT
@@ -1359,6 +1359,7 @@ productos:
       - B0BPYW4ZJ9
       - B0BPZ157H5
       - B0BPZQZWR4
+      - B0BQ13514F
       - B0BQ19C3MW
       - B0BQ19VTQL
       - B0BQ1NM4QR
@@ -1382,6 +1383,7 @@ productos:
       - https://www.amazon.es/dp/B0BPYW4ZJ9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZ157H5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZQZWR4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BQ13514F?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ19C3MW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ19VTQL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ1NM4QR?tag=recomendadorn-21&th=1&psc=1
@@ -8305,7 +8307,7 @@ productos:
     lo_mejor: Media-Alta
     nombre: Imperial Confort - ViscoBayscent Grafeno
     valoracion: 4.4
-    precio: 326,57€
+    precio: 326,74€
     precioOriginal: 331,47€
     disponibilidad: En stock
     imagenesVariantes:
@@ -11185,4 +11187,4 @@ productos:
     variantes_restantes_enlaces: []
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-17'
+actualizacion: '2025-09-18'

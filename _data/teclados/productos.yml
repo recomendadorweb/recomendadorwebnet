@@ -21,7 +21,7 @@ productos:
       - Cuerpo de aluminio con acabado premium
     brand: Razer
     ASIN: B08P52KQ8G
-    precio: 151,79€
+    precio: 151,78€
     precioOriginal: 269,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -74,7 +74,7 @@ productos:
           Razer Huntsman Tournament Edition (Interruptor Rojo) - Teclado para Juegos sin Llave (Teclas Ópticas-Mecánicas
           Lineales, Teclas PBT de Doble Disparo) Intl. Diseño US (ISO) | Negro
         brand: Razer
-        precio: 149,99€
+        precio: 145,34€
         precioOriginal: 148,20€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41oO-6N59QL._SL500_.jpg
@@ -175,7 +175,7 @@ productos:
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
-        precio: 122,22€
+        precio: 128,33€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -332,92 +332,6 @@ productos:
             value: Diseño ES
           - name: color_name
             value: Interruptor Morado Clicky
-        ParentASIN: B0F9Q1MJLF
-        condicion: new
-      - ASIN: B08P54ZK97
-        title: >-
-          Razer Huntsman V2 (Interruptor Analógico) - Teclado Óptico para Juegos con Latencia de Entrada Casi Nula
-          (Interruptores Óptico-Mecánicos Analógicos, Teclas PBT) Diseño US | Negro
-        brand: Razer
-        precio: 316,13€
-        precioOriginal: 269,99€
-        disponibilidad: Envío en 2 a 3 días
-        imagen: https://m.media-amazon.com/images/I/41n6ygqqkOL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/512hbwOMPnL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51bHD4eB8sL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41J0hMuv9kL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oA1-58VaL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51HSRqYMtzL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41W6iBDh6KL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41b295g14PL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oXEN7VjUL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41fPn1dTHKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51C-zsacO9L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41URUw1XUKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/310sRB5+J+L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/317F1ye5X9L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41bM7PgolzL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B08P54ZK97?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Conmutadores ópticos analógicos Razer para pulsaciones de teclas con puntos de actuación variables:
-            Configura el punto de accionamiento que desees para adaptarlo a tu estilo de juego, o utiliza la entrada
-            analógica para un control más suave y lleno de matices, prescindiendo del rígido movimiento WASD de 8
-            direcciones para conseguir un verdadero movimiento de 360 grados.
-          - >-
-            Teclados PBT de doble disparo para un acabado resistente y texturizado: más duros y duraderos que los de
-            ABS, estos resistentes teclados no se desgastarán hasta un acabado brillante y tienen etiquetas que nunca se
-            decolorarán gracias a su proceso de moldeado de doble disparo.
-          - >-
-            Potenciado por Razer Chroma RGB con iluminación por tecla y bajo brillo: Con 16,8 millones de colores y un
-            conjunto de efectos, sincroniza sus teclas y underglow con el resto de tu battlestation, y disfruta de una
-            mayor inmersión ya que reacciona dinámicamente con más de 150 juegos integrados.
-          - >-
-            Reposamuñecas magnético de polipiel para una mayor comodidad de juego: Con Razer Chroma RGB underglow, el
-            reposamuñecas suave y acolchado se acopla magnéticamente al teclado para aliviar la presión en las muñecas,
-            de modo que te sientas menos fatigado cuando juegues durante largos periodos.
-          - >-
-            Dial digital multifunción y 4 teclas multimedia para un control cómodo: Configúrelos para pausar,
-            reproducir, saltar y ajustar todo, desde el brillo hasta el volumen: la máxima comodidad mientras disfruta
-            de su entretenimiento.
-        variationAttributes:
-          - name: style_name
-            value: Huntsman V2
-          - name: size_name
-            value: Diseño US
-          - name: color_name
-            value: Interruptor Analog Optical
         ParentASIN: B0F9Q1MJLF
         condicion: new
       - ASIN: B097F2KHX4
@@ -662,6 +576,50 @@ productos:
           - name: color_name
             value: Interruptor Rojo Linear
         ParentASIN: B0F9Q1MJLF
+      - ASIN: B097F3HGC4
+        title: >-
+          Razer Huntsman V2 Tenkeyless (Interruptor Rojo) - Teclado Óptico para Juegos (Interruptores Ópticos Lineales
+          Gen-2, Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
+        brand: Razer
+        precio: 160,90€
+        precioOriginal: 189,99€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41NA4I97ZrL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 389
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/418q1qNku0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31CLWqGP2KL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Qocv9KilL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41TovfvT7HL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41okZ74vhZL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41L-j0z+9qL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B097F3HGC4?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Fácil de instalar
+          - Teclado con reposamuñecas
+          - Ofrece un tecleo suave y silencioso
+        variationAttributes:
+          - name: style_name
+            value: Huntsman V2 TKL
+          - name: size_name
+            value: Diseño US
+          - name: color_name
+            value: Interruptor Rojo Linear
+        ParentASIN: B0F9Q1MJLF
     ParentASIN: B0F9Q1MJLF
     variationAttributes:
       - name: style_name
@@ -675,12 +633,11 @@ productos:
       control giratorio digital, 4 teclas multimedia, Chroma RGB) Teclado Español - Negro
     condicion: used
     variantes_info:
-      total_en_stock: 19
+      total_en_stock: 18
       mostradas: 10
-      restantes: 9
+      restantes: 8
       truncado: true
     variantes_restantes_asins:
-      - B097F3HGC4
       - B097F3KDS3
       - B0BDZBXF63
       - B0CDBXR2B2
@@ -690,7 +647,6 @@ productos:
       - B0D2P9KPJ7
       - B0DT9LJ177
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B097F3HGC4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B097F3KDS3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDZBXF63?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDBXR2B2?tag=recomendadorn-21&th=1&psc=1
@@ -2133,9 +2089,9 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 32
       mostradas: 10
-      restantes: 21
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
       - B07WFGYJ6R
@@ -2149,7 +2105,6 @@ productos:
       - B0BDFBVYG3
       - B0BDFGWCMX
       - B0BGLG8WC8
-      - B0CP9PLXPK
       - B0CP9Q9M7D
       - B0CP9QPH67
       - B0DHCNKM3C
@@ -2157,6 +2112,8 @@ productos:
       - B0DHCPF5VB
       - B0DHCPPNJ2
       - B0DHCPZ9N1
+      - B0DQCS18HZ
+      - B0F37YZTSG
       - B0F382BN14
       - B0F3839TXY
     variantes_restantes_enlaces:
@@ -2171,7 +2128,6 @@ productos:
       - https://www.amazon.es/dp/B0BDFBVYG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDFGWCMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BGLG8WC8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CP9PLXPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9Q9M7D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CP9QPH67?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
@@ -2179,6 +2135,8 @@ productos:
       - https://www.amazon.es/dp/B0DHCPF5VB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G213 Prodigy
@@ -3353,4 +3311,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-17'
+actualizacion: '2025-09-18'

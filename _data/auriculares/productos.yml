@@ -19,9 +19,9 @@ productos:
     lo_mejor: 🔊 Sonido THX posicional, ⚡ Conexión HyperSpeed, 🔋 Batería 70h
     nombre: Razer BlackShark V2 HyperSpeed
     valoracion: 5
-    precio: 116,97€
+    precio: 121,97€
     precioOriginal: 149,99€
-    disponibilidad: Envío en 5 a 6 días
+    disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51SJ-5TAOHL._SL500_.jpg
         width: 500
@@ -109,9 +109,9 @@ productos:
           Razer BlackShark V2 X - Auriculares Gaming (Auriculares con cable con controlador de 50 mm, supresión de ruido
           para PC, Mac, PS4, Xbox One y Switch) Negro
         brand: Razer
-        precio: 49,99€
+        precio: 45,16€
         precioOriginal: 79,99€
-        disponibilidad: Envío en 3 a 4 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41MgKCuwOaL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -170,74 +170,6 @@ productos:
         variationAttributes:
           - name: style_name
             value: Blackshark V2 X
-          - name: color_name
-            value: Negro
-        ParentASIN: B0D1FMKM76
-        condicion: new
-      - ASIN: B089SSH6L6
-        title: >-
-          Razer BlackShark V2 - Auriculares Gaming con tarjeta de sonido USB,(cable de mando de 50 mm, reducción de
-          ruido, para PC, Mac, PS4, Xbox One y Switch) Negro
-        brand: Razer
-        precio: 143,67€
-        precioOriginal: 119,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41R9mkrpC1L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41VFkh+oY5L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41a-yH4BPiL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41mhL2mNbkL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YRUnsP3GL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41OkmBfYh5L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41q35gTlCwL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31PLWzWszWL._SL500_.jpg
-            width: 500
-            height: 375
-          - url: https://m.media-amazon.com/images/I/21C6rx4bWrL._SL500_.jpg
-            width: 500
-            height: 375
-          - url: https://m.media-amazon.com/images/I/31bCNIY0rwL._SL500_.jpg
-            width: 500
-            height: 354
-        enlace: https://www.amazon.es/dp/B089SSH6L6?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            DIAFRAGMAS DE TITANIO DE 50 MM RAZER TRIFORCE: Nuestro diseño , con diafragmas con revestimiento de titanio
-            para una nitidez añadida, divide el diafragma en 3 partes para la afinación de los agudos, los medios y los
-            graves
-          - >-
-            MICRÓFONO CARDIOIDE RAZER HYPERCLEAR CON TARJETA DE SONIDO USB: Sácale partido al micrófono extraíble con
-            tarjeta de sonido USB, optimizado para que tenga un área de recogida de voz más centrada, permitiéndote
-            editar
-          - >-
-            CANCELACIÓN PASIVA DE RUIDO MODERNA: Ya sea el clamor de la multitud o el zumbido de tu equipo, podrás
-            aislarte del ruido con los auriculares cerrados que cubren por completo las orejas, gracias a las
-            almohadillas afelpadas
-          - >-
-            ALMOHADILLAS DE ESPUMA SUAVE TRANSPIRABLE: Envueltos en cuero sintético afelpado, la densidad y firmeza
-            optimizada de la espuma reducen considerablemente la fuerza de fijación a la cabeza y orejas, por lo que te
-            sentirás menos cansado al jugar a un torneo durante todo el día
-          - >-
-            COMPATIBILIDAD MULTIPLATAFORMA: Los auriculares funcionan con PC, Mac, PS4, Xbox One, Nintendo Switch y
-            dispositivos móviles, lo que te proporciona una ventaja de audio que ralla lo injusto en prácticamente todas
-            las plataformas
-        variationAttributes:
-          - name: style_name
-            value: Blackshark V2
           - name: color_name
             value: Negro
         ParentASIN: B0D1FMKM76
@@ -658,7 +590,7 @@ productos:
           Razer BlackShark V2 Pro (2023) para PC - Auriculares inalámbricos premium para deportes electrónicos
           (micrófono HyperClear Super Wideband, TriForce Titanium 50 mm, Bluetooth) Blanco
         brand: Razer
-        precio: 189,20€
+        precio: 186,06€
         precioOriginal: 229,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41rBaCbsqtL._SL500_.jpg
@@ -726,7 +658,7 @@ productos:
           Razer Blackshark V2 Hyperspeed - PC Auriculares Inalámbricos para Juegos E-Sports Ligeros 280g (Micrófono de
           Banda Superancha, Diafragma Triforce 50mm, Espuma Aislante del Sonido, 70 Horas) Blanco
         brand: Razer
-        precio: 126,09€
+        precio: 125,97€
         precioOriginal: 149,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41S-Dc88gwL._SL500_.jpg
@@ -798,6 +730,84 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0D1FMKM76
+      - ASIN: B0F93QP4RK
+        title: >-
+          Razer BlackShark V3 - Auriculares inalámbricos para Esports - Controlador de 50 mm - Micrófono Desmontable -
+          Audio THX - Wireless 2,4 GHz y Bluetooth - Perfiles FPS - PC/Mac | Blanco
+        brand: Razer
+        precio: 169,99€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41c298EGnEL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Nh8MUKSfL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41-d8kpwikL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ppeu4BIcL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411UsK-V2DL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411MhE3DmWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/4149DiMHw7L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Jen-bpqKL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31Ntf3FCaEL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31Zn56nHfWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41cl+IxgGoL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0F93QP4RK?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Razer HyperSpeed Wireless de 2.ª generación - Velocidad y fiabilidad líderes del sector: Supera a toda la
+            competencia con la tecnología inalámbrica más rápida, optimizada para una latencia ultrabaja de tan solo 10
+            ms, que ofrece un audio casi instantáneo. Perfecta para jugadas clave y decisiones que debes tomar en
+            fracciones de segundo.
+          - >-
+            Diafragmas Razer TriForce de titanio de 50 mm de 2.ª generación - para un audio competitivo potente y
+            ultranítido: Ajustados para mayor nitidez y rendimiento posicional, los diafragmas de 2.ª generación
+            incluyen un diafragma recubierto de titanio altamente receptivo que reproduce las pisadas y las señales de
+            audio con un detalle asombroso.
+          - >-
+            Micrófono de gran banda ancha extraíble Razer HyperClear de 9,9 mm - para una calidad de voz de alta
+            definición y de nivel profesional: Al abarcar muchas frecuencias de sonido, este micrófono extraíble capta
+            una gran cantidad de detalles en tu voz, para que cada instrucción a tu equipo suene clara, viva y natural.
+          - >-
+            3 modos de conectividad - Simultánea de 2,4 GHz/ Bluetooth | USB: Consigue una ventaja competitiva cuando
+            juegues en PC, consola o móvil. Mezcla simultáneamente audio de 2,4 GHz y Bluetooth en 2 dispositivos a la
+            vez o utiliza el cable para jugar sin parar con USB.
+          - >-
+            THX Spatial Audio - para un sonido posicional 3D preciso: Disfruta de la máxima conciencia del entorno en la
+            competición gracias a un escenario sonoro ampliado. Activa el sonido envolvente 7.1.4 y disfruta de un audio
+            cenital preciso con un motor actualizado potenciado por los últimos algoritmos espaciales.
+          - >-
+            Perfiles ajustados de forma profesional para FPS y ecualizador personalizable - para disfrutar de tus
+            ajustes de audio óptimos en la competición: Aumenta tu ventaja de audio con perfiles de ecualizador
+            específicos para cada juego, ajustados con precisión con los mejores campeones de esports de Razer. Crea tus
+            propios ecualizadores, guárdalos en los auriculares y prepárate para competir en cualquier momento.
+        variationAttributes:
+          - name: style_name
+            value: BlackShark V3
+          - name: color_name
+            value: Blanco
+        ParentASIN: B0D1FMKM76
     ParentASIN: B0D1FMKM76
     nombreCompleto: >-
       Razer BlackShark V2 HyperSpeed para PC - Auriculares para esports inalámbricos y ligeros (280 g, Micrófono
@@ -809,18 +819,16 @@ productos:
       - name: color_name
         value: Negro
     variantes_info:
-      total_en_stock: 15
+      total_en_stock: 14
       mostradas: 10
-      restantes: 5
+      restantes: 4
       truncado: true
     variantes_restantes_asins:
-      - B0F93QP4RK
       - B0F93SPR88
       - B0F93SY4BH
       - B0F93TKTGY
       - B0F93VMJ93
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0F93QP4RK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F93SPR88?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F93SY4BH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F93TKTGY?tag=recomendadorn-21&th=1&psc=1
@@ -844,9 +852,9 @@ productos:
     lo_mejor: 💰 Calidad-precio brutal, 🎮 Sonido envolvente 7.1
     nombre: Razer BlackShark V2 X
     valoracion: 4.5
-    precio: 49,99€
+    precio: 45,16€
     precioOriginal: 79,99€
-    disponibilidad: Envío en 3 a 4 días
+    disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41bqkjnT7SL._SL500_.jpg
         width: 500
@@ -950,74 +958,6 @@ productos:
             value: Blanco
         ParentASIN: B0D1FMKM76
         condicion: new
-      - ASIN: B089SSH6L6
-        title: >-
-          Razer BlackShark V2 - Auriculares Gaming con tarjeta de sonido USB,(cable de mando de 50 mm, reducción de
-          ruido, para PC, Mac, PS4, Xbox One y Switch) Negro
-        brand: Razer
-        precio: 143,67€
-        precioOriginal: 119,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41R9mkrpC1L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41VFkh+oY5L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41a-yH4BPiL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41mhL2mNbkL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41YRUnsP3GL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41OkmBfYh5L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41q35gTlCwL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31PLWzWszWL._SL500_.jpg
-            width: 500
-            height: 375
-          - url: https://m.media-amazon.com/images/I/21C6rx4bWrL._SL500_.jpg
-            width: 500
-            height: 375
-          - url: https://m.media-amazon.com/images/I/31bCNIY0rwL._SL500_.jpg
-            width: 500
-            height: 354
-        enlace: https://www.amazon.es/dp/B089SSH6L6?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            DIAFRAGMAS DE TITANIO DE 50 MM RAZER TRIFORCE: Nuestro diseño , con diafragmas con revestimiento de titanio
-            para una nitidez añadida, divide el diafragma en 3 partes para la afinación de los agudos, los medios y los
-            graves
-          - >-
-            MICRÓFONO CARDIOIDE RAZER HYPERCLEAR CON TARJETA DE SONIDO USB: Sácale partido al micrófono extraíble con
-            tarjeta de sonido USB, optimizado para que tenga un área de recogida de voz más centrada, permitiéndote
-            editar
-          - >-
-            CANCELACIÓN PASIVA DE RUIDO MODERNA: Ya sea el clamor de la multitud o el zumbido de tu equipo, podrás
-            aislarte del ruido con los auriculares cerrados que cubren por completo las orejas, gracias a las
-            almohadillas afelpadas
-          - >-
-            ALMOHADILLAS DE ESPUMA SUAVE TRANSPIRABLE: Envueltos en cuero sintético afelpado, la densidad y firmeza
-            optimizada de la espuma reducen considerablemente la fuerza de fijación a la cabeza y orejas, por lo que te
-            sentirás menos cansado al jugar a un torneo durante todo el día
-          - >-
-            COMPATIBILIDAD MULTIPLATAFORMA: Los auriculares funcionan con PC, Mac, PS4, Xbox One, Nintendo Switch y
-            dispositivos móviles, lo que te proporciona una ventaja de audio que ralla lo injusto en prácticamente todas
-            las plataformas
-        variationAttributes:
-          - name: style_name
-            value: Blackshark V2
-          - name: color_name
-            value: Negro
-        ParentASIN: B0D1FMKM76
-        condicion: new
       - ASIN: B09BD75Y21
         title: >-
           Razer BlackShark V2 X - Auriculares Gaming (altavoces de titanio de 50 mm, micrófono cardioide, cancelación de
@@ -1386,7 +1326,7 @@ productos:
           Razer BlackShark V2 Pro (2023) para PC - Auriculares inalámbricos premium para deportes electrónicos
           (micrófono HyperClear Super Wideband, TriForce Titanium 50 mm, Bluetooth) Blanco
         brand: Razer
-        precio: 189,20€
+        precio: 186,06€
         precioOriginal: 229,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41rBaCbsqtL._SL500_.jpg
@@ -1454,9 +1394,9 @@ productos:
           Razer BlackShark V2 HyperSpeed para PC - Auriculares para esports inalámbricos y ligeros (280 g, Micrófono
           HyperClear, Diafragmas TriForce de titanio de 50 mm, Bluetooth) Negro
         brand: Razer
-        precio: 116,97€
+        precio: 121,97€
         precioOriginal: 149,99€
-        disponibilidad: Envío en 5 a 6 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1549,7 +1489,7 @@ productos:
           Razer Blackshark V2 Hyperspeed - PC Auriculares Inalámbricos para Juegos E-Sports Ligeros 280g (Micrófono de
           Banda Superancha, Diafragma Triforce 50mm, Espuma Aislante del Sonido, 70 Horas) Blanco
         brand: Razer
-        precio: 126,09€
+        precio: 125,97€
         precioOriginal: 149,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41S-Dc88gwL._SL500_.jpg
@@ -1621,6 +1561,84 @@ productos:
           - name: color_name
             value: Blanco
         ParentASIN: B0D1FMKM76
+      - ASIN: B0F93QP4RK
+        title: >-
+          Razer BlackShark V3 - Auriculares inalámbricos para Esports - Controlador de 50 mm - Micrófono Desmontable -
+          Audio THX - Wireless 2,4 GHz y Bluetooth - Perfiles FPS - PC/Mac | Blanco
+        brand: Razer
+        precio: 169,99€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41c298EGnEL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Nh8MUKSfL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41-d8kpwikL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ppeu4BIcL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411UsK-V2DL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411MhE3DmWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/4149DiMHw7L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Jen-bpqKL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31Ntf3FCaEL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31Zn56nHfWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41cl+IxgGoL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0F93QP4RK?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Razer HyperSpeed Wireless de 2.ª generación - Velocidad y fiabilidad líderes del sector: Supera a toda la
+            competencia con la tecnología inalámbrica más rápida, optimizada para una latencia ultrabaja de tan solo 10
+            ms, que ofrece un audio casi instantáneo. Perfecta para jugadas clave y decisiones que debes tomar en
+            fracciones de segundo.
+          - >-
+            Diafragmas Razer TriForce de titanio de 50 mm de 2.ª generación - para un audio competitivo potente y
+            ultranítido: Ajustados para mayor nitidez y rendimiento posicional, los diafragmas de 2.ª generación
+            incluyen un diafragma recubierto de titanio altamente receptivo que reproduce las pisadas y las señales de
+            audio con un detalle asombroso.
+          - >-
+            Micrófono de gran banda ancha extraíble Razer HyperClear de 9,9 mm - para una calidad de voz de alta
+            definición y de nivel profesional: Al abarcar muchas frecuencias de sonido, este micrófono extraíble capta
+            una gran cantidad de detalles en tu voz, para que cada instrucción a tu equipo suene clara, viva y natural.
+          - >-
+            3 modos de conectividad - Simultánea de 2,4 GHz/ Bluetooth | USB: Consigue una ventaja competitiva cuando
+            juegues en PC, consola o móvil. Mezcla simultáneamente audio de 2,4 GHz y Bluetooth en 2 dispositivos a la
+            vez o utiliza el cable para jugar sin parar con USB.
+          - >-
+            THX Spatial Audio - para un sonido posicional 3D preciso: Disfruta de la máxima conciencia del entorno en la
+            competición gracias a un escenario sonoro ampliado. Activa el sonido envolvente 7.1.4 y disfruta de un audio
+            cenital preciso con un motor actualizado potenciado por los últimos algoritmos espaciales.
+          - >-
+            Perfiles ajustados de forma profesional para FPS y ecualizador personalizable - para disfrutar de tus
+            ajustes de audio óptimos en la competición: Aumenta tu ventaja de audio con perfiles de ecualizador
+            específicos para cada juego, ajustados con precisión con los mejores campeones de esports de Razer. Crea tus
+            propios ecualizadores, guárdalos en los auriculares y prepárate para competir en cualquier momento.
+        variationAttributes:
+          - name: style_name
+            value: BlackShark V3
+          - name: color_name
+            value: Blanco
+        ParentASIN: B0D1FMKM76
     ParentASIN: B0D1FMKM76
     variationAttributes:
       - name: style_name
@@ -1632,18 +1650,16 @@ productos:
       para PC, Mac, PS4, Xbox One y Switch) Negro
     condicion: new
     variantes_info:
-      total_en_stock: 15
+      total_en_stock: 14
       mostradas: 10
-      restantes: 5
+      restantes: 4
       truncado: true
     variantes_restantes_asins:
-      - B0F93QP4RK
       - B0F93SPR88
       - B0F93SY4BH
       - B0F93TKTGY
       - B0F93VMJ93
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0F93QP4RK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F93SPR88?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F93SY4BH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F93TKTGY?tag=recomendadorn-21&th=1&psc=1
@@ -1735,7 +1751,7 @@ productos:
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Quartz
         brand: Razer
-        precio: 69,56€
+        precio: 70,32€
         precioOriginal: 99,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -3447,10 +3463,10 @@ productos:
         Comodidad para Largas Sesiones de Gaming: Todo en estos auriculares es comodidad, las ligeras copas y diadema de
         piel sintética de lujo se han creado para eliminar la presión en las orejas
     title: >-
-      Logitech G G432 Auriculares Gaming con Cable, Sonido 7.1 Surround, DTS Headphone:X 2.0, Transductores 50mm, USB y
-      Jack Audio 3,5mm, Microfóno Volteable, Peso Ligero, PC/Mac/Xbox One/PS4/Switch - Negro
+      Logitech G432 Auriculares Gaming con Cable, Sonido 7.1 Surround DTS:X 2.0, Transductores 50mm USB y Jack Audio
+      3.5mm, Micrófono Volteable, Peso Ligero, PC/Mac/Xbox One/PS4/Switch- Azul/Negro
     variantes: []
-    ParentASIN: B0FR3N9M7X
+    ParentASIN: B0FR7GD3MF
     variationAttributes:
       - name: style_name
         value: G432
@@ -3551,7 +3567,7 @@ productos:
         imagenWidth: 500
         imagenHeight: 436
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/319jl4tSqhL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/31xkFc6pbAL._SL500_.jpg
             width: 500
             height: 333
           - url: https://m.media-amazon.com/images/I/51uVUZ9PCVL._SL500_.jpg
@@ -3955,7 +3971,7 @@ productos:
     lo_mejor: 🧊 Diseño ligero, 🔊 Sonido 7.1 con adaptador USB
     nombre: Corsair HS55 SURROUND
     valoracion: 4
-    precio: 67,37€
+    precio: 67,33€
     precioOriginal: 79,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -4142,4 +4158,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-17'
+actualizacion: '2025-09-18'

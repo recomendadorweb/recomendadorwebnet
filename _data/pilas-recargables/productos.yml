@@ -16,7 +16,7 @@ productos:
           Amazon Basics paquete de 24 pilas AAA NiMH recargables, 800 mAh, 1,2 V, se recargan hasta 1000 veces,
           precargadas
         brand: Amazon Basics
-        precio: 18,25€
+        precio: 18,33€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/519ZzELpz4L._SL500_.jpg
@@ -82,7 +82,7 @@ productos:
           Amazon Basics paquete de 24 pilas AA NiMH recargables, 2000 mAh, 1,2 V, se recargan hasta 1000 veces,
           precargadas
         brand: Amazon Basics
-        precio: 25,94€
+        precio: 26,05€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41ENIJrVIPL._SL500_.jpg
@@ -201,7 +201,7 @@ productos:
           Amazon Basics paquete de 8 baterías AAA recargables de NiMH de alto rendimiento, 800 mAh, 1,2 V, se recargan
           hasta 1000 veces, precargadas
         brand: Amazon Basics
-        precio: 9,60€
+        precio: 9,64€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41U2eweiL7L._SL500_.jpg
@@ -270,7 +270,7 @@ productos:
           Amazon Basics paquete de 16 pilas AA NiMH recargables, 2000 mAh, 1,2 V, se recargan hasta 1000 veces,
           precargadas
         brand: Amazon Basics
-        precio: 21,13€
+        precio: 21,22€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41clFRjVMcL._SL500_.jpg
@@ -390,7 +390,7 @@ productos:
           Amazon Basics paquete de 4 pilas AAA NiMH recargables, 800 mAh, 1,2 V, se recargan hasta 1000 veces,
           precargadas
         brand: Amazon Basics
-        precio: 7,68€
+        precio: 7,71€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41O002W6YKL._SL500_.jpg
@@ -459,7 +459,7 @@ productos:
           Amazon Basics paquete de 16 pilas AAA NiMH recargables de alto rendimiento, 800 mAh, 1,2 V, se recargan hasta
           1000 veces, precargadas
         brand: Amazon Basics
-        precio: 14,41€
+        precio: 14,47€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51kxazOH3ML._SL500_.jpg
@@ -1767,6 +1767,9 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
+    variationAttributes:
+      - name: size_name
+        value: 8 Unidades
   - ASIN: B01CZR83UO
     nombreCompleto: >-
       EBL 2800mAh AA de Alta Capacidad Ni-MH ProCyco con 1200 Tech de Pilas Recargables de 1,2V para los Equipos
@@ -2141,4 +2144,4 @@ productos:
       progreso. También me tranquilizó que detectara pilas defectuosas y ofreciera protección contra sobrecarga y
       polaridad inversa. Por eso lo recomendaría si buscas algo versátil y portátil; solo asegúrate de usar un adaptador
       de 2.0A como indican.
-actualizacion: '2025-09-17'
+actualizacion: '2025-09-18'

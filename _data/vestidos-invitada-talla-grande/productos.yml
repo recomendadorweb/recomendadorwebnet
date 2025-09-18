@@ -691,9 +691,9 @@ productos:
       - name: color_name
         value: Borgoña
     variantes_info:
-      total_en_stock: 234
+      total_en_stock: 235
       mostradas: 10
-      restantes: 224
+      restantes: 225
       truncado: true
     variantes_restantes_asins:
       - B07QWJMXW8
@@ -726,6 +726,7 @@ productos:
       - B07RG49ZQ2
       - B07RG5137Q
       - B07RH6BR3T
+      - B07RH6FBQ3
       - B07RH7T434
       - B07XLHVX1S
       - B07XLJHMDG
@@ -951,6 +952,7 @@ productos:
       - https://www.amazon.es/dp/B07RG49ZQ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RG5137Q?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RH6BR3T?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B07RH6FBQ3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RH7T434?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07XLHVX1S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07XLJHMDG?tag=recomendadorn-21&th=1&psc=1
@@ -5038,7 +5040,7 @@ productos:
       SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
       Fruncido, Acampanado, con Abertura, Borgoña, XL Más
     brand: SCOMCHIC
-    precio: 50,61€
+    precio: 49,99€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/31-iQaTpErL._SL500_.jpg
@@ -5095,7 +5097,7 @@ productos:
           SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
           Fruncido, Acampanado, con Abertura, Verde Esmeralda, 4XL/Plus
         brand: SCOMCHIC
-        precio: 49,60€
+        precio: 49,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31ZLbHXcVUL._SL500_.jpg
@@ -5158,7 +5160,7 @@ productos:
           SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
           Fruncido, Acampanado, con Abertura, Negro -, XL Más
         brand: SCOMCHIC
-        precio: 50,38€
+        precio: 50,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31RwlYfkseL._SL500_.jpg
@@ -5221,7 +5223,7 @@ productos:
           SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
           Fruncido, Acampanado, con Abertura, Borgoña, XXL Más
         brand: SCOMCHIC
-        precio: 50,94€
+        precio: 49,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31-iQaTpErL._SL500_.jpg
@@ -5284,7 +5286,7 @@ productos:
           SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
           Fruncido, Acampanado, con Abertura, Negro -, 4XL/Plus
         brand: SCOMCHIC
-        precio: 47,76€
+        precio: 46,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31RwlYfkseL._SL500_.jpg
@@ -5347,7 +5349,7 @@ productos:
           SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
           Fruncido, Acampanado, con Abertura, Borgoña, 4XL/Plus
         brand: SCOMCHIC
-        precio: 50,65€
+        precio: 50,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31-iQaTpErL._SL500_.jpg
@@ -5410,7 +5412,7 @@ productos:
           SCOMCHIC Vestido largo de manga corta para mujer, talla grande, escote corazón, invitada de boda, cóctel,
           fruncido, acampanado, con abertura, Verde esmeralda, 3XL/ más
         brand: SCOMCHIC
-        precio: 48,48€
+        precio: 47,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31ZLbHXcVUL._SL500_.jpg
@@ -5473,7 +5475,7 @@ productos:
           SCOMCHIC Vestido largo de manga corta para mujer, talla grande, escote corazón, invitada de boda, cóctel,
           fruncido, acampanado, con abertura, Verde esmeralda, XXL Más
         brand: SCOMCHIC
-        precio: 142,12€
+        precio: 55,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31ZLbHXcVUL._SL500_.jpg
@@ -5536,7 +5538,7 @@ productos:
           SCOMCHIC Vestido largo de manga corta para mujer, talla grande, escote corazón, invitada de boda, cóctel,
           fruncido, acampanado, con abertura, Verde esmeralda, XL Más
         brand: SCOMCHIC
-        precio: 48,48€
+        precio: 52,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31ZLbHXcVUL._SL500_.jpg
@@ -5599,7 +5601,7 @@ productos:
           SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
           Fruncido, Acampanado, con Abertura, Borgoña, 3XL/ más
         brand: SCOMCHIC
-        precio: 47,93€
+        precio: 46,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31-iQaTpErL._SL500_.jpg
@@ -5662,7 +5664,7 @@ productos:
           SCOMCHIC Vestido Largo de Manga Corta para Mujer, Talla Grande, Escote corazón, invitada de Boda, cóctel,
           Fruncido, Acampanado, con Abertura, Negro -, 3XL/ más
         brand: SCOMCHIC
-        precio: 52,81€
+        precio: 51,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31RwlYfkseL._SL500_.jpg
