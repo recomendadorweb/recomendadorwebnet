@@ -1,0 +1,68 @@
+cabecera:
+  # KW_ATACADA: licor de cafe | VOL: 2400
+  principal: licor de café
+  meta:
+    vol: 2400
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: licor de cafe | VOL: 2400
+  - licor de café
+  # KW_ATACADA: licor de café | VOL: 2400
+  - licor de café
+  # KW_ATACADA: licor cafe | VOL: 1900
+  - licor de café
+secciones:
+  - kw: licor de cafe
+    # KW_ATACADA: licor de cafe | VOL: 2400
+    titulo: licor de café
+    id: licor-de-cafe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2400
+    diff: 0
+    intent: I
+  - kw: licor de café
+    # KW_ATACADA: licor de café | VOL: 2400
+    titulo: licor de café
+    id: licor-de-cafe
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2400
+    diff: 0
+    intent: I
+  - kw: licor cafe
+    # KW_ATACADA: licor cafe | VOL: 1900
+    titulo: licor de café
+    id: licor-cafe
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1900
+    diff: 0
+    intent: C
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: licor de cafe | VOL: 2400
+  - licor de café
+  # KW_ATACADA: licor de café | VOL: 2400
+  - licor de café
+  # KW_ATACADA: licor cafe | VOL: 1900
+  - licor de café
+html_map:
+  h1: licor de café
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - licor de café
+  - licor de café
+  - licor de café
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 3
+  total_brands_detected: 57
