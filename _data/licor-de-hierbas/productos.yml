@@ -22,7 +22,9 @@ productos:
         condicion: new
         caracteristicasAmazon:
           - El Jägermeister se bebe puro (y luego helado) o como una bebida mezclada
-          - Además de los clásicos tragos largos con jugo de naranja, cola, etc, hay una variedad de recetas, por ejemplo con cacao o leche
+          - >-
+            Además de los clásicos tragos largos con jugo de naranja, cola, etc, hay una variedad de recetas, por
+            ejemplo con cacao o leche
           - Producto adecuado para regalar o coleccionar
           - Bebida espirituosa
         variationAttributes:
@@ -62,11 +64,23 @@ productos:
             height: 500
         condicion: new
         caracteristicasAmazon:
-          - 'CAPACIDAD: 24 x 0,02l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como regalo de fiesta y como recuerdo. A partir de 18 años.'
-          - '56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.'
-          - 'MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.'
-          - 'ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.'
-          - 'SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.'
+          - >-
+            CAPACIDAD: 24 x 0,02l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como
+            regalo de fiesta y como recuerdo. A partir de 18 años.
+          - >-
+            56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar
+            cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro
+            licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.
+          - >-
+            MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de
+            Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses
+            en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.
+          - >-
+            ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales
+            cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.
+          - >-
+            SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su
+            riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.
         variationAttributes:
           - name: flavor_name
             value: Especia
@@ -104,11 +118,23 @@ productos:
             height: 500
         condicion: new
         caracteristicasAmazon:
-          - 'CAPACIDAD: 10 x 0,02l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como regalo de fiesta y como recuerdo. A partir de 18 años.'
-          - '56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.'
-          - 'MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.'
-          - 'ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.'
-          - 'SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.'
+          - >-
+            CAPACIDAD: 10 x 0,02l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como
+            regalo de fiesta y como recuerdo. A partir de 18 años.
+          - >-
+            56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar
+            cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro
+            licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.
+          - >-
+            MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de
+            Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses
+            en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.
+          - >-
+            ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales
+            cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.
+          - >-
+            SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su
+            riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.
         variationAttributes:
           - name: flavor_name
             value: Especia
@@ -132,7 +158,9 @@ productos:
         condicion: new
         caracteristicasAmazon:
           - El Jägermeister se bebe solo (luego con hielo) o mezclado
-          - Además de los clásicos tragos largos con zumo de naranja, cola, etc, hay una gran variedad de recetas, por ejemplo, con cacao o leche
+          - >-
+            Además de los clásicos tragos largos con zumo de naranja, cola, etc, hay una gran variedad de recetas, por
+            ejemplo, con cacao o leche
           - Producto adecuado para regalar o coleccionar
           - Bebida espirituosa
         variationAttributes:
@@ -172,11 +200,23 @@ productos:
             height: 500
         condicion: new
         caracteristicasAmazon:
-          - 'CAPACIDAD: 1 x 3l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como regalo de fiesta y como recuerdo. A partir de 18 años.'
-          - '56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.'
-          - 'MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.'
-          - 'ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.'
-          - 'SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.'
+          - >-
+            CAPACIDAD: 1 x 3l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como
+            regalo de fiesta y como recuerdo. A partir de 18 años.
+          - >-
+            56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar
+            cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro
+            licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.
+          - >-
+            MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de
+            Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses
+            en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.
+          - >-
+            ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales
+            cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.
+          - >-
+            SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su
+            riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.
         variationAttributes:
           - name: flavor_name
             value: Especia
@@ -202,7 +242,9 @@ productos:
             height: 413
         condicion: new
         caracteristicasAmazon:
-          - El Jägermeister se bebe puro (y luego helado) o como una bebida mezclada; además de los clásicos tragos largos con jugo de naranja, cola, etc., hay una variedad de recetas, por ejemplo con
+          - >-
+            El Jägermeister se bebe puro (y luego helado) o como una bebida mezclada; además de los clásicos tragos
+            largos con jugo de naranja, cola, etc., hay una variedad de recetas, por ejemplo con
           - Perfecto como un regalo
           - Ideal para disfrutar por ti mismo
         variationAttributes:
@@ -236,12 +278,27 @@ productos:
             height: 500
         condicion: new
         caracteristicasAmazon:
-          - 'CAPACIDAD: 1 x 1,75l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como regalo de fiesta y como recuerdo. A partir de 18 años.'
-          - '56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.'
-          - 'MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.'
-          - 'ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.'
-          - 'SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.'
-          - 'OCASIÓN: Ya sea para celebrar en casa, de camino a una fiesta o brindando en una discoteca. Jägermeister siempre está contigo y hace que tus momentos sean inolvidables, porque tenemos el tamaño de botella perfecto para cada ocasión.'
+          - >-
+            CAPACIDAD: 1 x 1,75l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como
+            regalo de fiesta y como recuerdo. A partir de 18 años.
+          - >-
+            56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar
+            cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro
+            licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.
+          - >-
+            MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de
+            Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses
+            en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.
+          - >-
+            ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales
+            cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.
+          - >-
+            SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su
+            riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.
+          - >-
+            OCASIÓN: Ya sea para celebrar en casa, de camino a una fiesta o brindando en una discoteca. Jägermeister
+            siempre está contigo y hace que tus momentos sean inolvidables, porque tenemos el tamaño de botella perfecto
+            para cada ocasión.
         variationAttributes:
           - name: flavor_name
             value: Especia
@@ -302,11 +359,23 @@ productos:
         height: 199
     condicion: new
     caracteristicasAmazon:
-      - 'CAPACIDAD: 1 x 0,7l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como regalo de fiesta y como recuerdo. A partir de 18 años.'
-      - '56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro licor de hierbas. La lista de ingredientes completa es un secreto guardado con celo.'
-      - 'MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses en barricas de roble. Sólo entonces despliega su sabor único e inconfundible.'
-      - 'ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.'
-      - 'SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.'
+      - >-
+        CAPACIDAD: 1 x 0,7l Jägermeister, 35% Vol., imprescindible en cualquier fiesta con amigos. Perfecto como regalo
+        de fiesta y como recuerdo. A partir de 18 años.
+      - >-
+        56 INGREDIENTES NATURALES: Las mejores hierbas, flores, raíces y frutas de todo el mundo se unen para formar
+        cuatro macerados distintos, que después se combinan gracias a la alquimia moderna para elaborar nuestro licor de
+        hierbas. La lista de ingredientes completa es un secreto guardado con celo.
+      - >-
+        MADURADO EN BARRICAS: La maestría no se consigue de la noche a la mañana, ni siquiera en el caso de
+        Jägermeister. Para poder disfrutar de las mejores noches con él, Jägermeister se madura durante varios meses en
+        barricas de roble. Sólo entonces despliega su sabor único e inconfundible.
+      - >-
+        ORIGEN: Jägermeister es un licor de hierbas alemán elaborado a partir de 56 ingredientes naturales
+        cuidadosamente seleccionados, siguiendo la misma receta creada por Curt Mast hace 90 años en Wolfenbüttel.
+      - >-
+        SUGERENCIA DE PRESENTACIÓN: La mejor forma de consumir Jägermeister es en chupito helado (a -18°C), pero su
+        riqueza de matices y su alta calidad lo hacen ideal combinado con zumos, refrescos, y en cóctel.
     ParentASIN: B0FNWRHMWB
     variationAttributes:
       - name: flavor_name
@@ -332,7 +401,12 @@ productos:
     lo_mejor:
       - 🌿 56 ingredientes naturales
       - Madurado en barricas de roble
-    descripcion: Probé Jägermeister como chupito helado y me sorprendió la intensidad de sus matices. Además, se aprecia la complejidad que aportan las 56 ingredientes naturales y el reposo en roble. En mi caso lo disfruté tanto solo como combinado en un cóctel con zumo, por eso resulta versátil. El formato de 700 ml y 35% Vol. es cómodo para reuniones o como regalo en fiestas. Si buscas un licor de hierbas con carácter, éste cumple esa función perfectamente.
+    descripcion: >-
+      Probé Jägermeister como chupito helado y me sorprendió la intensidad de sus matices. Además, se aprecia la
+      complejidad que aportan las 56 ingredientes naturales y el reposo en roble. En mi caso lo disfruté tanto solo como
+      combinado en un cóctel con zumo, por eso resulta versátil. El formato de 700 ml y 35% Vol. es cómodo para
+      reuniones o como regalo en fiestas. Si buscas un licor de hierbas con carácter, éste cumple esa función
+      perfectamente.
   - ASIN: B07VPK9PFP
     nombreCompleto: Ruavieja Licor de Hierbas - 1L
     valoracion: 4.5
@@ -372,11 +446,15 @@ productos:
     condicion: new
     caracteristicasAmazon:
       - El licor de hierbas de Ruavieja es un licor de gran tradición y de origen gallego
-      - Este licor de hierbas se elabora con hierbas naturales previamente seleccionadas, y maceradas en aguardiente gallego de primera calidad; destaca por su aroma de hierbas maceradas en el dulce licor
+      - >-
+        Este licor de hierbas se elabora con hierbas naturales previamente seleccionadas, y maceradas en aguardiente
+        gallego de primera calidad; destaca por su aroma de hierbas maceradas en el dulce licor
       - Tiene un color amarillo intenso con reflejos verdosos
       - La entrada de este licor es dulce, y su sabor combina toques a hierbabuena, mentol y un fondo de camomila
       - El Licor de Hierbas Ruavieja es el acompañante para darle importancia a lo que realmente importa, las personas
-      - Para disfrutar del Licor de Hierbas Ruavieja se recomienda enfriar la botella y servir con hielo en un vaso ancho
+      - >-
+        Para disfrutar del Licor de Hierbas Ruavieja se recomienda enfriar la botella y servir con hielo en un vaso
+        ancho
     variantes_info:
       total_en_stock: 0
       mostradas: 0
@@ -396,7 +474,13 @@ productos:
     lo_mejor:
       - 🌿 Aroma herbáceo distintivo
       - Sabor dulce y mentolado
-    descripcion: Probé el Ruavieja licor de hierbas bien frío y lo primero que me llamó la atención fue su aroma a hierbas maceradas con un fondo dulce muy característico. Al probarlo la entrada resulta claramente dulce y aparecen toques de hierbabuena y mentol, mientras que la camomila aporta un matiz suave al final. Tiene un color amarillo intenso con reflejos verdosos que le da mucha presencia en la copa. En mi caso lo serví en vaso ancho con hielo, tal y como recomiendan, y la baja temperatura realzó aroma y sabor. Por eso lo veo perfecto para compartir en momentos sociales y para quienes buscan un licor de tradición gallega con carácter.
+    descripcion: >-
+      Probé el Ruavieja licor de hierbas bien frío y lo primero que me llamó la atención fue su aroma a hierbas
+      maceradas con un fondo dulce muy característico. Al probarlo la entrada resulta claramente dulce y aparecen toques
+      de hierbabuena y mentol, mientras que la camomila aporta un matiz suave al final. Tiene un color amarillo intenso
+      con reflejos verdosos que le da mucha presencia en la copa. En mi caso lo serví en vaso ancho con hielo, tal y
+      como recomiendan, y la baja temperatura realzó aroma y sabor. Por eso lo veo perfecto para compartir en momentos
+      sociales y para quienes buscan un licor de tradición gallega con carácter.
   - ASIN: B00MTX9UFW
     nombreCompleto: El Afilador – Licor de Hierbas Tradicional – Artesanal con Sabor Suave – Botella de 700 ml
     valoracion: 4.5
@@ -419,11 +503,22 @@ productos:
         imagenesVariantes: []
         condicion: new
         caracteristicasAmazon:
-          - AUTÉNTICO ORUJO GALLEGO. El Afilador fue la primera marca en embotellar aguardiente de Orujo en España (1943) y la primera en darlo a conocer fuera de Galicia (década de los 80).
-          - 'BOTELLA TRANSPARENTE. El Afilador quiere mostrar la limpieza y brillo del orujo y hacer gala del color más sencillo y, a veces, más difícil de conseguir: la ausencia de color.'
-          - SABOR INCONFUNDIBLE. Utiliza Aguardientes 100% naturales. No usa para su elaboración ningún aditivo, ni conservantes.
-          - 'NOTA DE CATA. Con una alta diferenciación en sabor respecto a los principales competidores. Simplemente, sabe al Auténtico Orujo Gallego: gran presencia de aromas frescos y afrutados, aromas y sabores a pasas y notas de higos secos.'
-          - 'ELABORACIÓN TRADICIONAL. Todas sus variedades son elaboradas de manera tradicional: Licor de Hierbas, Crema de Licor, Licor Café, y Tradicional (Aguardiente de Orujo).'
+          - >-
+            AUTÉNTICO ORUJO GALLEGO. El Afilador fue la primera marca en embotellar aguardiente de Orujo en España
+            (1943) y la primera en darlo a conocer fuera de Galicia (década de los 80).
+          - >-
+            BOTELLA TRANSPARENTE. El Afilador quiere mostrar la limpieza y brillo del orujo y hacer gala del color más
+            sencillo y, a veces, más difícil de conseguir: la ausencia de color.
+          - >-
+            SABOR INCONFUNDIBLE. Utiliza Aguardientes 100% naturales. No usa para su elaboración ningún aditivo, ni
+            conservantes.
+          - >-
+            NOTA DE CATA. Con una alta diferenciación en sabor respecto a los principales competidores. Simplemente,
+            sabe al Auténtico Orujo Gallego: gran presencia de aromas frescos y afrutados, aromas y sabores a pasas y
+            notas de higos secos.
+          - >-
+            ELABORACIÓN TRADICIONAL. Todas sus variedades son elaboradas de manera tradicional: Licor de Hierbas, Crema
+            de Licor, Licor Café, y Tradicional (Aguardiente de Orujo).
         variationAttributes:
           - name: style_name
             value: Aguardiente de Orujo
@@ -456,10 +551,20 @@ productos:
             height: 500
         condicion: new
         caracteristicasAmazon:
-          - 'AUTÉNTICO SABOR: auténtico sabor del licor café de siempre. Bebemos de sus raíces gallegas, que sostienen una receta que se ha custodiado por generaciones.'
-          - GRANOS DE CAFÉ DE PRIMERA CALIDAD. Se elabora con granos de café de primera calidad, procedentes de los rincones más exquisitos del mundo. Contiene 30 grados de alcohol.
-          - ELABORACIÓN. El Licor Café de El Afilador se elabora a partir de una mezcla exclusiva de granos de café procedentes de Brasil, Colombia y Puerto Rico. Son tostados el mismo día en que se da paso a su maceración junto con nuestro licor de orujo, lo que eleva al máximo exponente su sabor.
-          - NOTA DE CATA. El aroma del licor de Café El Afilador es intenso, natural y dulce que resulta sedoso y elegante en boca. El café le proporciona fuerza y consistencia. Presenta tonalidades marrones oscuro con reflejos tostados.
+          - >-
+            AUTÉNTICO SABOR: auténtico sabor del licor café de siempre. Bebemos de sus raíces gallegas, que sostienen
+            una receta que se ha custodiado por generaciones.
+          - >-
+            GRANOS DE CAFÉ DE PRIMERA CALIDAD. Se elabora con granos de café de primera calidad, procedentes de los
+            rincones más exquisitos del mundo. Contiene 30 grados de alcohol.
+          - >-
+            ELABORACIÓN. El Licor Café de El Afilador se elabora a partir de una mezcla exclusiva de granos de café
+            procedentes de Brasil, Colombia y Puerto Rico. Son tostados el mismo día en que se da paso a su maceración
+            junto con nuestro licor de orujo, lo que eleva al máximo exponente su sabor.
+          - >-
+            NOTA DE CATA. El aroma del licor de Café El Afilador es intenso, natural y dulce que resulta sedoso y
+            elegante en boca. El café le proporciona fuerza y consistencia. Presenta tonalidades marrones oscuro con
+            reflejos tostados.
           - CONSUMO. Disfruta acompañando este licor con tus postres y dulces en las sobremesas.
         variationAttributes:
           - name: style_name
@@ -494,10 +599,20 @@ productos:
         condicion: new
         caracteristicasAmazon:
           - La siguiente información se aplica a cada unidad del paquete
-          - 'AUTÉNTICO SABOR: auténtico sabor del licor café de siempre. Bebemos de sus raíces gallegas, que sostienen una receta que se ha custodiado por generaciones.'
-          - GRANOS DE CAFÉ DE PRIMERA CALIDAD. Se elabora con granos de café de primera calidad, procedentes de los rincones más exquisitos del mundo. Contiene 30 grados de alcohol.
-          - ELABORACIÓN. El Licor Café de El Afilador se elabora a partir de una mezcla exclusiva de granos de café procedentes de Brasil, Colombia y Puerto Rico. Son tostados el mismo día en que se da paso a su maceración junto con nuestro licor de orujo, lo que eleva al máximo exponente su sabor.
-          - NOTA DE CATA. El aroma del licor de Café El Afilador es intenso, natural y dulce que resulta sedoso y elegante en boca. El café le proporciona fuerza y consistencia. Presenta tonalidades marrones oscuro con reflejos tostados.
+          - >-
+            AUTÉNTICO SABOR: auténtico sabor del licor café de siempre. Bebemos de sus raíces gallegas, que sostienen
+            una receta que se ha custodiado por generaciones.
+          - >-
+            GRANOS DE CAFÉ DE PRIMERA CALIDAD. Se elabora con granos de café de primera calidad, procedentes de los
+            rincones más exquisitos del mundo. Contiene 30 grados de alcohol.
+          - >-
+            ELABORACIÓN. El Licor Café de El Afilador se elabora a partir de una mezcla exclusiva de granos de café
+            procedentes de Brasil, Colombia y Puerto Rico. Son tostados el mismo día en que se da paso a su maceración
+            junto con nuestro licor de orujo, lo que eleva al máximo exponente su sabor.
+          - >-
+            NOTA DE CATA. El aroma del licor de Café El Afilador es intenso, natural y dulce que resulta sedoso y
+            elegante en boca. El café le proporciona fuerza y consistencia. Presenta tonalidades marrones oscuro con
+            reflejos tostados.
           - CONSUMO. Disfruta acompañando este licor con tus postres y dulces en las sobremesas.
         variationAttributes:
           - name: style_name
@@ -537,11 +652,21 @@ productos:
             height: 500
         condicion: new
         caracteristicasAmazon:
-          - 'INGREDIENTES EXCLUSIVOS: Única en el mercado gracias a su base de crema de leche de alta calidad y a una receta exclusiva. Cada sorbo destaca por su suavidad y autenticidad.'
-          - 'SABOR AUTÉNTICO A ORUJO: Aromas suaves de vainilla y pasas que se combinan con el inconfundible sabor a aguardiente de orujo, presente en cada trago.'
-          - 'TEXTURA CREMOSA Y NATURAL: Recuerda a las natillas caseras, con una permanencia afrutada en boca. Su textura es suave, densa y deliciosa.'
-          - 'SIN ADITIVOS NI CONSERVANTES: Elaborada con aguardientes 100% naturales, sin añadir productos químicos, lo que garantiza una experiencia pura y artesanal.'
-          - 'GRADUACIÓN PERFECTA: Contiene 16% de alcohol, ideal para disfrutar como digestivo o en sobremesas. El broche perfecto para cualquier comida.'
+          - >-
+            INGREDIENTES EXCLUSIVOS: Única en el mercado gracias a su base de crema de leche de alta calidad y a una
+            receta exclusiva. Cada sorbo destaca por su suavidad y autenticidad.
+          - >-
+            SABOR AUTÉNTICO A ORUJO: Aromas suaves de vainilla y pasas que se combinan con el inconfundible sabor a
+            aguardiente de orujo, presente en cada trago.
+          - >-
+            TEXTURA CREMOSA Y NATURAL: Recuerda a las natillas caseras, con una permanencia afrutada en boca. Su textura
+            es suave, densa y deliciosa.
+          - >-
+            SIN ADITIVOS NI CONSERVANTES: Elaborada con aguardientes 100% naturales, sin añadir productos químicos, lo
+            que garantiza una experiencia pura y artesanal.
+          - >-
+            GRADUACIÓN PERFECTA: Contiene 16% de alcohol, ideal para disfrutar como digestivo o en sobremesas. El broche
+            perfecto para cualquier comida.
         variationAttributes:
           - name: style_name
             value: Crema de Licor
@@ -581,9 +706,16 @@ productos:
         condicion: new
         caracteristicasAmazon:
           - La siguiente información se aplica a cada unidad del paquete
-          - Distinta a todas las del mercado debido a la exclusividad de sus ingredientes, entre los que destaca la base única de crema de leche que utiliza.
-          - 'De aromas suaves, a vainilla y, sobretodo, en boca algo muy simple que la diferencia de todas las demás: el inconfundible sabor a orujo, a pasas. Contiene 16% de alcohol.'
-          - 'Tiene una consistencia cremosa con notas de vainilla, que nos recuerda las natillas caseras, con una permanencia afrutada. Es quizás, la única crema de orujo del mercado que posee aguardiente de orujo en su composición: De ahí su aroma.'
+          - >-
+            Distinta a todas las del mercado debido a la exclusividad de sus ingredientes, entre los que destaca la base
+            única de crema de leche que utiliza.
+          - >-
+            De aromas suaves, a vainilla y, sobretodo, en boca algo muy simple que la diferencia de todas las demás: el
+            inconfundible sabor a orujo, a pasas. Contiene 16% de alcohol.
+          - >-
+            Tiene una consistencia cremosa con notas de vainilla, que nos recuerda las natillas caseras, con una
+            permanencia afrutada. Es quizás, la única crema de orujo del mercado que posee aguardiente de orujo en su
+            composición: De ahí su aroma.
           - Utiliza Aguardientes 100% naturales. No usa para su elaboración ningún aditivo, ni conservantes.
           - Pon el broche perfecto a cualquier comida con nuestra Crema de Orujo El Afilador.
         variationAttributes:
@@ -601,11 +733,22 @@ productos:
     imagenesVariantes: []
     condicion: new
     caracteristicasAmazon:
-      - AUTÉNTICO ORUJO GALLEGO. Elaborado de forma tradicional, por la 4ª generación de una familia gallega dedicada a la elaboración de licores tradicionales de su tierra de origen utilizando solo las mejores materias primas
-      - HIERBAS Y AROMAS NATURALES. Se elabora en maceración natural con tipos distintos de hierbas naturales cuidadosamente seleccionadas para conseguir el mejor equilibrio y aroma. Sólo utiliza ingredientes 100 percent naturales y está libre de aditivos y conservantes
-      - BENEFICIOS. Utiliza plantas naturales seleccionadas por su aporte aromático y propiedades refrescantes, digestivas y vasodilatadoras
-      - NOTA DE CATA. Nuestro licor es de color oro claro y se distingue por su olor a hierbas digestivas (manzanilla, orégano, menta, hierba buena), dejando un delicioso sabor a hierbas y orujo (cascara) de uva en el paladar
-      - 'MARIDAJE: El Afilador Licor de Hierbas es ideal para tomar después de una comida. Te invitamos a tomarlo con vaso de chupito o servido en una copa con hielo'
+      - >-
+        AUTÉNTICO ORUJO GALLEGO. Elaborado de forma tradicional, por la 4ª generación de una familia gallega dedicada a
+        la elaboración de licores tradicionales de su tierra de origen utilizando solo las mejores materias primas
+      - >-
+        HIERBAS Y AROMAS NATURALES. Se elabora en maceración natural con tipos distintos de hierbas naturales
+        cuidadosamente seleccionadas para conseguir el mejor equilibrio y aroma. Sólo utiliza ingredientes 100 percent
+        naturales y está libre de aditivos y conservantes
+      - >-
+        BENEFICIOS. Utiliza plantas naturales seleccionadas por su aporte aromático y propiedades refrescantes,
+        digestivas y vasodilatadoras
+      - >-
+        NOTA DE CATA. Nuestro licor es de color oro claro y se distingue por su olor a hierbas digestivas (manzanilla,
+        orégano, menta, hierba buena), dejando un delicioso sabor a hierbas y orujo (cascara) de uva en el paladar
+      - >-
+        MARIDAJE: El Afilador Licor de Hierbas es ideal para tomar después de una comida. Te invitamos a tomarlo con
+        vaso de chupito o servido en una copa con hielo
     ParentASIN: B0DXLCFLTF
     variationAttributes:
       - name: style_name
@@ -630,7 +773,12 @@ productos:
     lo_mejor:
       - 🌿 Aromas naturales equilibrados
       - Origen gallego tradicional
-    descripcion: Probé El Afilador tras una comida y me llamó la atención su color oro claro y la fragancia herbácea. Al primer sorbo percibí la combinación de manzanilla, orégano y menta, con un fondo de orujo que se mantiene en el paladar. Lo serví en chupito y también con hielo; en mi caso el chupito permite apreciar mejor los matices. Además valoro que se elabore de forma tradicional por la cuarta generación y con ingredientes 100 percent naturales. Por eso lo recomiendo como digestivo tras la comida si buscas un equilibrio entre aromas herbales y orujo.
+    descripcion: >-
+      Probé El Afilador tras una comida y me llamó la atención su color oro claro y la fragancia herbácea. Al primer
+      sorbo percibí la combinación de manzanilla, orégano y menta, con un fondo de orujo que se mantiene en el paladar.
+      Lo serví en chupito y también con hielo; en mi caso el chupito permite apreciar mejor los matices. Además valoro
+      que se elabore de forma tradicional por la cuarta generación y con ingredientes 100 percent naturales. Por eso lo
+      recomiendo como digestivo tras la comida si buscas un equilibrio entre aromas herbales y orujo.
   - ASIN: B0159C7NDK
     nombreCompleto: Mar de Frades - Licor de Hierbas - 700 ml
     valoracion: 4.5
@@ -659,10 +807,14 @@ productos:
             height: 500
         condicion: new
         caracteristicasAmazon:
-          - Aguardiente procedente de bagazo de uvas gallegas en su mayoría macerado con hierbas y frutas. Obedece a una antigua fórmula artesanal.
+          - >-
+            Aguardiente procedente de bagazo de uvas gallegas en su mayoría macerado con hierbas y frutas. Obedece a una
+            antigua fórmula artesanal.
           - 'Capacidad: 70 CL'
           - Obedece a una antigua fórmula artesanal.
-          - Color ambar cobrizo con destellos anaranjados en el ribete, en nariz despliega aromas a frutas maduras en almibar, hierbas balsamicas y hojas de canela.
+          - >-
+            Color ambar cobrizo con destellos anaranjados en el ribete, en nariz despliega aromas a frutas maduras en
+            almibar, hierbas balsamicas y hojas de canela.
         variationAttributes:
           - name: style_name
             value: Licor Hierbas y Frutas
@@ -704,7 +856,9 @@ productos:
             height: 333
         condicion: new
         caracteristicasAmazon:
-          - Procedente de los corazones de la destilación, por arrastre de vapor, de los bagazos de las mejores uvas gallegas fermentadas.
+          - >-
+            Procedente de los corazones de la destilación, por arrastre de vapor, de los bagazos de las mejores uvas
+            gallegas fermentadas.
           - 'Capacidad: 70 CL'
           - Color blanco brillante, aromas frescos a pieles de frutas maduras y sustancias aromáticas volátiles.
           - Untuoso, con marcada sensacion de calidez, que le confiere amplitud y personalidad.
@@ -729,10 +883,20 @@ productos:
         height: 320
     condicion: new
     caracteristicasAmazon:
-      - Licor de hierbas Mar de Frases es un licor Premium que conserva la manera de hacer y toda la tradición de la elaboración de Orujos Gallegos.
-      - Procede principalmente de la destilación del bagazo de las uvas albariño, a las que se le incorporan hierbas aromáticas en las calderas de los alambiques. El destilado obtenido se macera con otra serie de hierbas que aportan sabor y color.
-      - Atractivo color amarillo verdoso muy intenso, brillante a la vista, limpio y muy herbáceo en la nariz, donde despliega notas anisadas con recuerdos de tomillo, té y manzanilla que le aportan complejidad y gran amplitud aromática.
-      - En boca muestra un moderado dulzor, equilibrado por su fresca acidez, con toques de hierbas y finas notas balsámicas.
+      - >-
+        Licor de hierbas Mar de Frases es un licor Premium que conserva la manera de hacer y toda la tradición de la
+        elaboración de Orujos Gallegos.
+      - >-
+        Procede principalmente de la destilación del bagazo de las uvas albariño, a las que se le incorporan hierbas
+        aromáticas en las calderas de los alambiques. El destilado obtenido se macera con otra serie de hierbas que
+        aportan sabor y color.
+      - >-
+        Atractivo color amarillo verdoso muy intenso, brillante a la vista, limpio y muy herbáceo en la nariz, donde
+        despliega notas anisadas con recuerdos de tomillo, té y manzanilla que le aportan complejidad y gran amplitud
+        aromática.
+      - >-
+        En boca muestra un moderado dulzor, equilibrado por su fresca acidez, con toques de hierbas y finas notas
+        balsámicas.
       - La temperatura ideal de servicio se sitúa entre los 0 y los 5ºC.
     ParentASIN: B09CQMX2NC
     variationAttributes:
@@ -757,7 +921,12 @@ productos:
     lo_mejor:
       - 🌿 Aromas complejos y frescos
       - Toque anisado distintivo
-    descripcion: Probé este licor de hierbas de Mar de Frades bien frío y me sorprendió la intensidad aromática desde la primera copa. En nariz aparecen notas anisadas acompañadas de tomillo, té y un leve fondo de manzanilla que le dan mucha complejidad. En boca se percibe un dulzor moderado perfectamente equilibrado por una acidez fresca y un final con ligeros matices balsámicos. Además, su color amarillo verdoso lo hace muy atractivo al servir y la sensación es limpia y brillante. Por eso, en mi caso lo disfruto frío entre 0 y 5ºC en copas cortas.
+    descripcion: >-
+      Probé este licor de hierbas de Mar de Frades bien frío y me sorprendió la intensidad aromática desde la primera
+      copa. En nariz aparecen notas anisadas acompañadas de tomillo, té y un leve fondo de manzanilla que le dan mucha
+      complejidad. En boca se percibe un dulzor moderado perfectamente equilibrado por una acidez fresca y un final con
+      ligeros matices balsámicos. Además, su color amarillo verdoso lo hace muy atractivo al servir y la sensación es
+      limpia y brillante. Por eso, en mi caso lo disfruto frío entre 0 y 5ºC en copas cortas.
   - ASIN: B00JF4ITF0
     nombreCompleto: Xantiamen Licor De Hierbas, 1 botella de 70 cl
     valoracion: 4.5
@@ -877,7 +1046,9 @@ productos:
     imagenesVariantes: []
     condicion: new
     caracteristicasAmazon:
-      - Obtenida a partir de un ensamblaje de aguardientes de orujo, alcohol de origen agrícola y maceraciones de hierbas y especias
+      - >-
+        Obtenida a partir de un ensamblaje de aguardientes de orujo, alcohol de origen agrícola y maceraciones de
+        hierbas y especias
       - Conservar en lugar fresco y seco
       - Alcohol por volumen de 29%
       - Cantidad del producto de 700 ml
@@ -904,16 +1075,24 @@ productos:
     lo_mejor:
       - 🌿 Sabor herbal equilibrado
       - Textura suave en boca
-    descripcion: |-
-      Probé este licor después de la cena y me llamó la atención el balance entre las notas herbales y las especias. Además, la graduación del 29% aporta calidez sin dominar el conjunto, lo que facilita tomarlo solo o con hielo. En mi caso lo serví ligeramente frío y las maceraciones se mostraron claras y persistentes.
-      La botella de 70 cl es cómoda para compartir y se conserva bien si la guardas en un lugar fresco y seco. Si buscas un digestivo con carácter herbal, este producto ofrece una experiencia honesta y equilibrada.
+    descripcion: >-
+      Probé este licor después de la cena y me llamó la atención el balance entre las notas herbales y las especias.
+      Además, la graduación del 29% aporta calidez sin dominar el conjunto, lo que facilita tomarlo solo o con hielo. En
+      mi caso lo serví ligeramente frío y las maceraciones se mostraron claras y persistentes.
+
+      La botella de 70 cl es cómoda para compartir y se conserva bien si la guardas en un lugar fresco y seco. Si buscas
+      un digestivo con carácter herbal, este producto ofrece una experiencia honesta y equilibrada.
   - ASIN: B0D1G3CJFS
-    nombreCompleto: HERETIC - Licor de Hierbas Premium | 70 cl | Licor Hierbas con Alcohol de los Pirineos | Destilado con 36 Botánicos | Galardonado Mundialmente | Experiencia de Sabor Única | Ideal para Beber Solo
+    nombreCompleto: >-
+      HERETIC - Licor de Hierbas Premium | 70 cl | Licor Hierbas con Alcohol de los Pirineos | Destilado con 36
+      Botánicos | Galardonado Mundialmente | Experiencia de Sabor Única | Ideal para Beber Solo
     valoracion: 4.5
     salesrank: 7872
     enlace: https://www.amazon.es/dp/B0D1G3CJFS?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1
     variantes: []
-    title: HERETIC - Licor de Hierbas Premium | 70 cl | Licor Hierbas con Alcohol de los Pirineos | Destilado con 36 Botánicos | Galardonado Mundialmente | Experiencia de Sabor Única | Ideal para Beber Solo
+    title: >-
+      HERETIC - Licor de Hierbas Premium | 70 cl | Licor Hierbas con Alcohol de los Pirineos | Destilado con 36
+      Botánicos | Galardonado Mundialmente | Experiencia de Sabor Única | Ideal para Beber Solo
     brand: HERETIC herbs liqueur
     precio: 14,99€(21,41€/l)
     precioOriginal: No especificado
@@ -939,11 +1118,31 @@ productos:
         height: 339
     condicion: new
     caracteristicasAmazon:
-      - 🏔️ TRADICIÓN Y PRESTIGIO - Nacido en los Pirineos de Ariège a mediados del siglo XIX, Heretic es el resultado de la destilación de las más selectas hierbas y botánicos de la región, una tradición iniciada por Jean Teichenné y recuperada en nuestros días por su rebisnieto, Marc Teichenné. Este licor no solo es un homenaje a la riqueza natural de su tierra natal, sino también a la habilidad y pasión de su creador, convirtiéndose en un símbolo de calidad y excelencia a través del tiempo.
-      - 🏆 UNA JOYA GALARDONADA - Gracias a su excepcional calidad, ha sido condecorado como el Mejor Licor de Hierbas del Mundo en el año 2021 por la ISWC, y continuó su trayectoria de éxitos obteniendo una Medalla de Oro en el Frankfurt International Trophy 2022. Estos reconocimientos destacan no solo su superioridad sino también consolidan su estatus entre los licores de élite a nivel internacional.
-      - 🌿ESENCIA BOTÁNICA SELECTA - Heretic es una obra maestra de la destilación hecho con 36 tipos de botánicos cuidadosamente seleccionados. Hierbas y botánicos como la genciana, romero, tomillo y el enebro son solo algunos ejemplos de la diversidad que aporta complejidad y una riqueza excepcional a su sabor.
-      - 👃🏼🍃 UN DELEITE PARA LOS SENTIDOS - Su color caoba oscuro, brillante y cristalino, precede a un sabor fino, delicado y sedoso en boca, que equilibra a la perfección los matices dulces y amargos, ofreciendo una experiencia gustativa excepcional.
-      - 🍸 SERVICIO Y MARIDAJE PERFECTO - Para una experiencia óptima, Heretic debe servirse muy frío, entre 1 y 5ºC. Su versatilidad lo hace apto para degustar solo o como componente principal en coctelería de alta gama, elevando cualquier mezcla con su sabor único. La riqueza de sus botánicos y su balance perfecto entre dulce y amargo lo convierten en el complemento ideal para una amplia variedad de aperitivos y postres, prometiendo realzar cualquier ocasión especial.
+      - >-
+        🏔️ TRADICIÓN Y PRESTIGIO - Nacido en los Pirineos de Ariège a mediados del siglo XIX, Heretic es el resultado
+        de la destilación de las más selectas hierbas y botánicos de la región, una tradición iniciada por Jean
+        Teichenné y recuperada en nuestros días por su rebisnieto, Marc Teichenné. Este licor no solo es un homenaje a
+        la riqueza natural de su tierra natal, sino también a la habilidad y pasión de su creador, convirtiéndose en un
+        símbolo de calidad y excelencia a través del tiempo.
+      - >-
+        🏆 UNA JOYA GALARDONADA - Gracias a su excepcional calidad, ha sido condecorado como el Mejor Licor de Hierbas
+        del Mundo en el año 2021 por la ISWC, y continuó su trayectoria de éxitos obteniendo una Medalla de Oro en el
+        Frankfurt International Trophy 2022. Estos reconocimientos destacan no solo su superioridad sino también
+        consolidan su estatus entre los licores de élite a nivel internacional.
+      - >-
+        🌿ESENCIA BOTÁNICA SELECTA - Heretic es una obra maestra de la destilación hecho con 36 tipos de botánicos
+        cuidadosamente seleccionados. Hierbas y botánicos como la genciana, romero, tomillo y el enebro son solo algunos
+        ejemplos de la diversidad que aporta complejidad y una riqueza excepcional a su sabor.
+      - >-
+        👃🏼🍃 UN DELEITE PARA LOS SENTIDOS - Su color caoba oscuro, brillante y cristalino, precede a un sabor fino,
+        delicado y sedoso en boca, que equilibra a la perfección los matices dulces y amargos, ofreciendo una
+        experiencia gustativa excepcional.
+      - >-
+        🍸 SERVICIO Y MARIDAJE PERFECTO - Para una experiencia óptima, Heretic debe servirse muy frío, entre 1 y 5ºC. Su
+        versatilidad lo hace apto para degustar solo o como componente principal en coctelería de alta gama, elevando
+        cualquier mezcla con su sabor único. La riqueza de sus botánicos y su balance perfecto entre dulce y amargo lo
+        convierten en el complemento ideal para una amplia variedad de aperitivos y postres, prometiendo realzar
+        cualquier ocasión especial.
     variantes_info:
       total_en_stock: 0
       mostradas: 0
@@ -964,7 +1163,13 @@ productos:
     lo_mejor:
       - 🌿 36 botánicos selectos
       - Galardonado internacionalmente
-    descripcion: Descubrí este licor tras leer su historia en los Pirineos de Ariège y me apeteció probarlo. Al servirlo muy frío (1–5 °C) se abren capas aromáticas donde la genciana, el romero y el enebro se notan con claridad. En boca resulta sedoso, con un equilibrio preciso entre dulzor y amargor y un color caoba oscuro brillante que anticipa su carácter. Lo he probado solo y en cócteles; en mi caso prefiero degustarlo puro para apreciar su complejidad de 36 botánicos. Saber que fue premiado internacionalmente me da confianza, por eso lo guardo para ocasiones especiales y para regalar.
+    descripcion: >-
+      Descubrí este licor tras leer su historia en los Pirineos de Ariège y me apeteció probarlo. Al servirlo muy frío
+      (1–5 °C) se abren capas aromáticas donde la genciana, el romero y el enebro se notan con claridad. En boca resulta
+      sedoso, con un equilibrio preciso entre dulzor y amargor y un color caoba oscuro brillante que anticipa su
+      carácter. Lo he probado solo y en cócteles; en mi caso prefiero degustarlo puro para apreciar su complejidad de 36
+      botánicos. Saber que fue premiado internacionalmente me da confianza, por eso lo guardo para ocasiones especiales
+      y para regalar.
   - ASIN: B07GZTZL3P
     nombreCompleto: Licor de Hierbas de Orujo Gallego con Denominación de Origen. Aguardiente de Galicia ABADÍA DA ULLA 70cl
     valoracion: 4.5
@@ -991,10 +1196,16 @@ productos:
         height: 340
     condicion: new
     caracteristicasAmazon:
-      - DENOMINACIÓN DE ORIGEN GEOGRÁFICA CERTIFICADA, de los pocos Licor de Hierbas que portan esta calificación con elaboración 100% Gallega y artesanal.
-      - AGRADABLE, con aromas dulces de los cítricos, además de la fragancia que aportan las diferentes plantas aromáticas utilizadas. Graduación 30%.
+      - >-
+        DENOMINACIÓN DE ORIGEN GEOGRÁFICA CERTIFICADA, de los pocos Licor de Hierbas que portan esta calificación con
+        elaboración 100% Gallega y artesanal.
+      - >-
+        AGRADABLE, con aromas dulces de los cítricos, además de la fragancia que aportan las diferentes plantas
+        aromáticas utilizadas. Graduación 30%.
       - LICOR DIGESTIVO, adecuado para fiestas o celebraciones. Disfrútelo con hielo y muy frío.
-      - ORUJO DE HIERBAS, crístalino de color limón maduro. Elaborada mediante maceración en frío y triple destilación de las mejores hierbas.
+      - >-
+        ORUJO DE HIERBAS, crístalino de color limón maduro. Elaborada mediante maceración en frío y triple destilación
+        de las mejores hierbas.
       - ENFRIAR LA BOTELLA, servirla muy fría y con hielo. Final ideal de cualquier comida o sobremesa.
     variantes_info:
       total_en_stock: 0
@@ -1015,5 +1226,10 @@ productos:
     lo_mejor:
       - 🌿 Aromas cítricos y herbales
       - Denominación de Origen
-    descripcion: Probé este licor tras una comida y me sorprendió lo equilibrado que resulta como digestivo. Además, se perciben claramente los cítricos y las notas de plantas aromáticas, lo que lo hace muy agradable. Por su elaboración 100% gallega y su Denominación de Origen, me dio confianza en la calidad artesanal. En mi caso lo serví muy frío con hielo y realzó sus matices, gracias también a la triple destilación. Si buscas un final de sobremesa fresco y herbáceo, este licor cumple esa función.
+    descripcion: >-
+      Probé este licor tras una comida y me sorprendió lo equilibrado que resulta como digestivo. Además, se perciben
+      claramente los cítricos y las notas de plantas aromáticas, lo que lo hace muy agradable. Por su elaboración 100%
+      gallega y su Denominación de Origen, me dio confianza en la calidad artesanal. En mi caso lo serví muy frío con
+      hielo y realzó sus matices, gracias también a la triple destilación. Si buscas un final de sobremesa fresco y
+      herbáceo, este licor cumple esa función.
 actualizacion: '2025-09-18'

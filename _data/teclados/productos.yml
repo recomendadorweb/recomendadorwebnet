@@ -77,20 +77,38 @@ productos:
         precio: 145,34€
         precioOriginal: 148,20€
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41oO-6N59QL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31ouP27WErL._SL500_.jpg
         imagenWidth: 500
-        imagenHeight: 268
+        imagenHeight: 353
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/313XL1loheL._SL500_.jpg
-            width: 500
-            height: 332
-          - url: https://m.media-amazon.com/images/I/51ETwItKMqL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51G9U3haXOL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/4180g+jPJCL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41hElUfvM7L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41XyS6RXXnL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41Hdi09EjgL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/419gIZHqH8L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41MwmWffb1L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Y2XLWi7aL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/411eMAoflfL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ORsFjBz2L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41mQa4I7KVL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/419SCw-VCxL._SL500_.jpg
             width: 500
             height: 500
         enlace: https://www.amazon.es/dp/B07V5VDXW1?tag=recomendadorn-21&th=1&psc=1
@@ -457,7 +475,7 @@ productos:
           Razer Huntsman V2 (Interruptor Morado) - Teclado Óptico para Juegos con Latencia de Entrada Casi Nula
           (Interruptores Ópticos Clicky, Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
         brand: Razer
-        precio: 222,58€
+        precio: 223,42€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41tAmUr3rYL._SL500_.jpg
@@ -581,7 +599,7 @@ productos:
           Razer Huntsman V2 Tenkeyless (Interruptor Rojo) - Teclado Óptico para Juegos (Interruptores Ópticos Lineales
           Gen-2, Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
         brand: Razer
-        precio: 160,90€
+        precio: 168,72€
         precioOriginal: 189,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41NA4I97ZrL._SL500_.jpg
@@ -945,9 +963,9 @@ productos:
           Razer BlackWidow V3 Mini HyperSpeed (Interruptor Verde) - Teclado Mecánico Inalámbrico para Juegos 65%
           (Interruptores Mecánicos Clicky, Bluetooth, USB-C, Teclas ABS de Doble Disparo) Diseño US| Negro
         brand: Razer
-        precio: 184,24€
+        precio: 204,43€
         precioOriginal: 189,99€
-        disponibilidad: Envío en 2 a 3 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41aQlimYVRL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -2089,9 +2107,9 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 32
+      total_en_stock: 26
       mostradas: 10
-      restantes: 22
+      restantes: 16
       truncado: true
     variantes_restantes_asins:
       - B07WFGYJ6R
@@ -2110,12 +2128,6 @@ productos:
       - B0DHCNKM3C
       - B0DHCPC81Z
       - B0DHCPF5VB
-      - B0DHCPPNJ2
-      - B0DHCPZ9N1
-      - B0DQCS18HZ
-      - B0F37YZTSG
-      - B0F382BN14
-      - B0F3839TXY
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
@@ -2133,12 +2145,6 @@ productos:
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPC81Z?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPF5VB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G213 Prodigy
     lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado, resistente a líquidos
     a_tener_en_cuenta: Alternativa silenciosa y cómoda si no necesitas mecánico
@@ -2226,7 +2232,7 @@ productos:
       - Compatible con Corsair iCUE
     brand: Corsair
     ASIN: B08YDJ6DKN
-    precio: 64,89€
+    precio: 64,99€
     precioOriginal: 64,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -2581,9 +2587,9 @@ productos:
           Razer BlackWidow V3 Mini HyperSpeed (Interruptor Verde) - Teclado Mecánico Inalámbrico para Juegos 65%
           (Interruptores Mecánicos Clicky, Bluetooth, USB-C, Teclas ABS de Doble Disparo) Diseño US| Negro
         brand: Razer
-        precio: 184,24€
+        precio: 204,43€
         precioOriginal: 189,99€
-        disponibilidad: Envío en 2 a 3 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41aQlimYVRL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500

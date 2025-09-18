@@ -1879,14 +1879,15 @@ productos:
       - name: size_name
         value: 54 Grande
     variantes_info:
-      total_en_stock: 30
+      total_en_stock: 31
       mostradas: 10
-      restantes: 20
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
       - B0D78TBYG2
       - B0D78TC67N
       - B0D78TD95P
+      - B0D78TFP7R
       - B0D78TGBTQ
       - B0D78TKBS8
       - B0D78TLC7X
@@ -1908,6 +1909,7 @@ productos:
       - https://www.amazon.es/dp/B0D78TBYG2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D78TC67N?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D78TD95P?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D78TFP7R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D78TGBTQ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D78TKBS8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D78TLC7X?tag=recomendadorn-21&th=1&psc=1

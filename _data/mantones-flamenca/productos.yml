@@ -357,7 +357,7 @@ productos:
           Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
           Flamenca de Flor (Negro)
         brand: Yusons
-        precio: 9,99€
+        precio: 13,99€
         precioOriginal: 13,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41rI7OyJfeL._SL500_.jpg
@@ -484,11 +484,12 @@ productos:
       - name: color_name
         value: Negro/Rojo
     variantes_info:
-      total_en_stock: 21
+      total_en_stock: 22
       mostradas: 10
-      restantes: 11
+      restantes: 12
       truncado: true
     variantes_restantes_asins:
+      - B0DYYKNZGG
       - B0DYYM65H4
       - B0DYYM6JM7
       - B0DYYML3XP
@@ -501,6 +502,7 @@ productos:
       - B0F8R4HTTD
       - B0F8R4MNW6
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0DYYKNZGG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM65H4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM6JM7?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYML3XP?tag=recomendadorn-21&th=1&psc=1

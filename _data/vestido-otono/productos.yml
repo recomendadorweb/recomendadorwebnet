@@ -1580,12 +1580,10 @@ productos:
       - B0DF781VCM
       - B0DFC5H6FL
       - B0DFC5SZMY
-      - B0DFC5Z4GJ
       - B0DFC5Z4GK
       - B0DFC662TP
       - B0DFC6D9BS
       - B0DFC7QF86
-      - B0DFC7RF3D
       - B0DFC92KDP
       - B0DFC92Z1P
       - B0DFC99Y1J
@@ -1595,6 +1593,7 @@ productos:
       - B0DWMPGRTG
       - B0DWMQ7441
       - B0DWMQBGXV
+      - B0DWMQT1G2
       - B0DWMRGWFV
       - B0DWMRPRVF
       - B0DWMRSLMP
@@ -1614,6 +1613,7 @@ productos:
       - B0FH6SHN2K
       - B0FH6SMJ2Z
       - B0FH6SWB74
+      - B0FH6T2GPK
       - B0FH6T3DZ8
       - B0FH6TLP5S
       - B0FH6TRMWQ
@@ -1664,12 +1664,10 @@ productos:
       - https://www.amazon.es/dp/B0DF781VCM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5H6FL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5SZMY?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFC5Z4GJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5Z4GK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC662TP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC6D9BS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC7QF86?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFC7RF3D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC92KDP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC92Z1P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC99Y1J?tag=recomendadorn-21&th=1&psc=1
@@ -1679,6 +1677,7 @@ productos:
       - https://www.amazon.es/dp/B0DWMPGRTG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQ7441?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQBGXV?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DWMQT1G2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMRGWFV?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMRPRVF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMRSLMP?tag=recomendadorn-21&th=1&psc=1
@@ -1698,6 +1697,7 @@ productos:
       - https://www.amazon.es/dp/B0FH6SHN2K?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6SMJ2Z?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6SWB74?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0FH6T2GPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6T3DZ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TLP5S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TRMWQ?tag=recomendadorn-21&th=1&psc=1
@@ -5724,6 +5724,37 @@ productos:
           - name: color_name
             value: Port Royale
         ParentASIN: B0CKHXXQPD
+      - ASIN: B0CRF3KY1H
+        title: ONLY Onlbrilliant 3/4 Dress Jrs Noos Vestido, Vintage Indigo, XS para Mujer
+        brand: ONLY
+        precio: 19,90€
+        precioOriginal: No especificado
+        disponibilidad: Disponible para envío en 1 o 2 días
+        imagen: https://m.media-amazon.com/images/I/211UnwqcQ7L._SL500_.jpg
+        imagenWidth: 385
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/31iFDk5CLXL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31acwkmp0TL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31YoQ8b1fyL._SL500_.jpg
+            width: 385
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CRF3KY1H?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Patrón: el diseño de la marca es visible'
+          - 'Código de vestimenta: informal'
+          - 'Temporada: clima cálido'
+        variationAttributes:
+          - name: size_name
+            value: XS
+          - name: color_name
+            value: Vintage Indigo
+        ParentASIN: B0CKHXXQPD
     nombre: ONLY vestidos boda otoño 3/4 Negro - Talla Medium (40)
     caracteristicas:
       - Manga 3/4
@@ -5776,8 +5807,8 @@ productos:
         value: Negro
     condicion: new
     variantes_info:
-      total_en_stock: 8
-      mostradas: 8
+      total_en_stock: 9
+      mostradas: 9
       restantes: 0
       truncado: false
     variantes_restantes_asins: []

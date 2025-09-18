@@ -236,7 +236,7 @@ productos:
         brand: XIAOMI
         precio: 19,99€
         precioOriginal: 24,99€
-        disponibilidad: Disponible para envío en 1 o 2 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41aMomVkdzL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1174,8 +1174,8 @@ productos:
       XIAOMI Smart Band 10 +Correa - Pulsera de Actividad, Autonomía de hasta 21 días, 1.72" Pantalla AMOLED con Tasa de
       refresco de 60 Hz, Sensor de Frecuencia Cardíaca, App Mi Fitness, Negro-(Versión ES)
     brand: XIAOMI
-    precio: 49,95€
-    precioOriginal: No especificado
+    precio: 44,95€
+    precioOriginal: 49,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41JTQp9celL._SL500_.jpg
     imagenWidth: 500
@@ -1199,7 +1199,7 @@ productos:
       - url: https://m.media-amazon.com/images/I/61TBJlJh0YL._SL500_.jpg
         width: 500
         height: 500
-    condicion: new
+    condicion: used
     caracteristicasAmazon:
       - >-
         【2025 Apariencia impresionante,Más brillante y más hermoso】:Xiaomi Smart Band 10, Pantalla cuadrilateral de
@@ -1428,7 +1428,7 @@ productos:
       Xiaomi Smart Band 8 - Pulsera de Actividad, Autonomía de hasta 16 días, Pantalla AMOLED con Tasa de refresco de 60
       Hz, 5 ATM, 150 Modos Deportivos, Blanco (Versión ES
     brand: XIAOMI
-    precio: 40,54€
+    precio: 40,49€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/411Yhvqt0BL._SL500_.jpg
@@ -1505,7 +1505,7 @@ productos:
           Fitbit Inspire 3, la pulsera de salud y actividad física con hasta 10 días de batería y compatible con Android
           e iOS, Lavanda
         brand: Fitbit
-        precio: 89,99€
+        precio: 85,99€
         precioOriginal: 99,95€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31kOuVOqbcL._SL500_.jpg

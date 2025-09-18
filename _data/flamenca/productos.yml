@@ -3180,6 +3180,49 @@ productos:
           - name: size_name
             value: XL
         ParentASIN: B074KR7WWP
+      - ASIN: B0DGGXMBYJ
+        title: Guirca - Disfraz adulto de sevillana (80629)
+        brand: FIESTAS GUIRCA
+        precio: 23,44€
+        precioOriginal: 25,00€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41efHDWplLL._SL500_.jpg
+        imagenWidth: 177
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Ot9fsZhQL._SL500_.jpg
+            width: 273
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+            width: 500
+            height: 441
+          - url: https://m.media-amazon.com/images/I/51CPXAT5V4L._SL500_.jpg
+            width: 500
+            height: 441
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41wMRj4vnmL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IMGR+8LvL._SL500_.jpg
+            width: 320
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0DGGXMBYJ?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Contenido del disfraz de bailarina de flamenco española: Vestido. NO_INCLUIDO: Accesorios'
+          - 'GUÍA DE TALLAS DE DISFRAZ: Mujer S 36-38'
+          - 'MEDIDAS DEL DISFRAZ APROX: Busto 80-90cm, Cintura 67-70cm, Caderas 94-97cm'
+          - Este disfráz está hecho de Poliester y cumple con los estándares de seguridad
+          - 'FIESTAS GUIRCA Disfraces de mujer adulto: una gran elección para tu fiesta temática.'
+        variationAttributes:
+          - name: size_name
+            value: S
+        ParentASIN: B074KR7WWP
     ParentASIN: B074KR7WWP
     variationAttributes:
       - name: size_name
@@ -3187,8 +3230,8 @@ productos:
     nombreCompleto: Guirca - Disfraz adulta flamenca, Talla 38-40 (80629.0)
     condicion: new
     variantes_info:
-      total_en_stock: 2
-      mostradas: 2
+      total_en_stock: 3
+      mostradas: 3
       restantes: 0
       truncado: false
     variantes_restantes_asins: []

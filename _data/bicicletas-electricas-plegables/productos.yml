@@ -1005,74 +1005,7 @@ productos:
     valoracion: 4.5
     salesrank: 36922
     enlace: https://www.amazon.es/dp/B0FJLDH3H9?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1
-    variantes:
-      - ASIN: B0FJKTFCCT
-        title: >-
-          ENGWE Bicicleta Eléctrica Plegable, 48V 13Ah Batería Extraíble, Autonomía de 50-120 km E-Bike，20''×4.0'' Fat
-          Tire 7-Velocidad E-Bike para Cualquier Terreno (EP-2 Boost, Negro)
-        brand: ENGWE
-        precio: 1.099,00€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41uxhjN63uL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51lt8+vn-bL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51d8Q4Z6mjL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qvILT-paL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51BmQD4uPjL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Zb8-h5gdL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51JxDiEPUOL._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0FJKTFCCT?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Conformidad con las normas de tráfico europeas: La bicicleta eléctrica ENGWE EP-2 BOOST cumple totalmente
-            con las normas de tráfico europeas. La potente batería de 48V 13Ah y el motor sin escobillas pueden alcanzar
-            una velocidad de 25 km/h. La autonomía de la bicicleta de pedaleo asistido es de 100 km. La autonomía de la
-            bicicleta de pedaleo asistido es de hasta 100 km. La e-bike ENGWE EP-2 BOOST no tiene acelerador. Si
-            necesita más potencia, basta con pulsar el botón.
-          - >-
-            Conducción suave y cómoda: la e-bike ENGWE EP-2 BOOST está equipada con un sensor de par para una conducción
-            suave y silenciosa. El cuadro de aluminio 6061, la horquilla de suspensión delantera, el sillín ajustable y
-            el manillar garantizan una conducción suave y cómoda a cualquier altura, mientras que las ruedas de aluminio
-            de 20 pulgadas se adaptan a todos los terrenos para ofrecer estabilidad y versatilidad.
-          - >-
-            Diseño plegable y transportable: la bicicleta eléctrica ENGWE EP-2 BOOST es plegable y perfecta para acampar
-            o transportar en coche. El asiento de cuero suave y las ruedas anchas ofrecen una comodidad óptima para sus
-            viajes. Las luces delantera y trasera garantizan una conducción segura incluso de noche.
-          - >-
-            Frenado seguro y velocidad ajustable: la ebike ENGWE EP-2 BOOST está equipada con frenos de disco delanteros
-            y traseros de 180 mm para un frenado seguro y eficaz, mientras que el sistema de cambio de 7 velocidades le
-            permite elegir la velocidad ideal para un pedaleo rápido o fácil, en función de sus necesidades.
-          - >-
-            Seguridad y funcionalidad: el faro ultrabrillante garantiza una conducción segura incluso de noche. La
-            pantalla proporciona toda la información necesaria sobre la bicicleta, incluida la velocidad, la asistencia
-            del motor, la indicación del nivel de batería, etc. La bicicleta ENGWE EP-2 BOOST ofrece una experiencia de
-            conducción cómoda y práctica para el trabajo, los desplazamientos al trabajo o el ocio.
-          - >-
-            Fiable servicio de atención al cliente 24/7: El 85% de las bicicletas eléctricas ENGWE vienen premontadas.
-            Nuestro equipo de atención al cliente está disponible 24/7 para ayudarle con sus preguntas o dudas.
-            Garantizamos un servicio fiable y ofrecemos un año de garantía para el motor, la batería y el controlador.
-        variationAttributes:
-          - name: color_name
-            value: Negro
-          - name: style_name
-            value: EP-2 BOOST
-        ParentASIN: B0FLDNTY4Q
+    variantes: []
     title: >-
       ENGWE Bicicleta Eléctrica Plegable, 48V 13Ah Batería Extraíble, Autonomía de 50-120 km E-Bike，20''×4.0'' Fat Tire
       7-Velocidad E-Bike para Cualquier Terreno (EP-2 Boost, Gris)
@@ -1140,8 +1073,8 @@ productos:
       - name: style_name
         value: EP-2 BOOST
     variantes_info:
-      total_en_stock: 1
-      mostradas: 1
+      total_en_stock: 0
+      mostradas: 0
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
