@@ -1,0 +1,68 @@
+cabecera:
+  # KW_ATACADA: licor de hierbas | VOL: 2900
+  principal: licor de hierbas
+  meta:
+    vol: 2900
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: licor de hierbas | VOL: 2900
+  - licor de hierbas
+  # KW_ATACADA: licor de hierbas ruavieja | VOL: 720
+  - licor de hierbas ruavieja
+  # KW_ATACADA: licor hierbas | VOL: 260
+  - licor de hierbas
+secciones:
+  - kw: licor de hierbas
+    # KW_ATACADA: licor de hierbas | VOL: 2900
+    titulo: licor de hierbas
+    id: licor-de-hierbas
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2900
+    diff: 0
+    intent: I
+  - kw: licor de hierbas ruavieja
+    # KW_ATACADA: licor de hierbas ruavieja | VOL: 720
+    titulo: licor de hierbas ruavieja
+    id: licor-de-hierbas-ruavieja
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 720
+    diff: 0
+    intent: I
+  - kw: licor hierbas
+    # KW_ATACADA: licor hierbas | VOL: 260
+    titulo: licor de hierbas
+    id: licor-hierbas
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 260
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: licor de hierbas | VOL: 2900
+  - licor de hierbas
+  # KW_ATACADA: licor de hierbas ruavieja | VOL: 720
+  - licor de hierbas ruavieja
+  # KW_ATACADA: licor hierbas | VOL: 260
+  - licor de hierbas
+html_map:
+  h1: licor de hierbas
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - licor de hierbas
+  - licor de hierbas de ruavieja
+  - licor de hierbas
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 3
+  total_brands_detected: 45
