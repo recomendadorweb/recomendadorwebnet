@@ -9,6 +9,7 @@ imagen: "/global/images/moises-bebe.webp"
 imagenhome: "/global/images/moises-bebe500.webp"
 autor: "sara"
 categoria: "bebe"
+rol: Analista y madre de dos hijos
 tipo: moises-bebe
 ---
 {% assign tipo = "moises-bebe" %}
@@ -18,6 +19,8 @@ tipo: moises-bebe
 
 <div class="container">
 {% include cabecera.html datafile="cabecera" %}
+{% include listanacimiento.html %}
+
 {% assign autor = site.data.autor.autores.sara %}
 {% include autor.html %}
 {% include actualizacion.html %}
