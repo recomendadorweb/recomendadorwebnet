@@ -1,0 +1,84 @@
+cabecera:
+  # KW_ATACADA: the botanicals gin comprar | VOL: 2900
+  principal: comprar the botanicals gin
+  meta:
+    vol: 2900
+    diff: 0
+    intent: T
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: the botanicals gin comprar | VOL: 2900
+  - comprar the botanicals gin
+  # KW_ATACADA: the botanical's gin comprar | VOL: 1600
+  - comprar the botanical's gin
+  # KW_ATACADA: botanicals ginebra | VOL: 720
+  - ginebra botanicals
+  # KW_ATACADA: ginebra the botanical's | VOL: 590
+  - ginebra the botanical's
+secciones:
+  - kw: the botanicals gin comprar
+    # KW_ATACADA: the botanicals gin comprar | VOL: 2900
+    titulo: comprar the botanicals gin
+    id: the-botanicals-gin-comprar
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2900
+    diff: 0
+    intent: T
+  - kw: the botanical's gin comprar
+    # KW_ATACADA: the botanical's gin comprar | VOL: 1600
+    titulo: comprar the botanical's gin
+    id: the-botanical-s-gin-comprar
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1600
+    diff: 0
+    intent: T
+  - kw: botanicals ginebra
+    # KW_ATACADA: botanicals ginebra | VOL: 720
+    titulo: ginebra botanicals
+    id: botanicals-ginebra
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 720
+    diff: 0
+    intent: I
+  - kw: ginebra the botanical's
+    # KW_ATACADA: ginebra the botanical's | VOL: 590
+    titulo: ginebra the botanical's
+    id: ginebra-the-botanical-s
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 590
+    diff: 0
+    intent: C
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: the botanicals gin comprar | VOL: 2900
+  - comprar the botanicals gin
+  # KW_ATACADA: the botanical's gin comprar | VOL: 1600
+  - comprar the botanical's gin
+  # KW_ATACADA: botanicals ginebra | VOL: 720
+  - ginebra botanicals
+  # KW_ATACADA: ginebra the botanical's | VOL: 590
+  - ginebra the botanical's
+  # KW_ATACADA: the botanicals gin | VOL: 390
+  - the botanicals gin
+html_map:
+  h1: comprar the botanicals gin
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - comprar the botanicals gin
+  - comprar the botanical's gin
+  - ginebra botanicals
+  - ginebra the botanical's
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 5
+  total_brands_detected: 42
