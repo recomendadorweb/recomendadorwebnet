@@ -252,7 +252,7 @@ productos:
     valoracion: 5
     precio: 29,99€
     precioOriginal: No especificado
-    disponibilidad: En stock
+    disponibilidad: Disponible para envío en 1 o 2 días
     imagenesVariantes: []
     imagenHeight: 500
     imagenWidth: 500
@@ -542,7 +542,7 @@ productos:
       Ring Chime para recibir alertas en toda la casa. Con una suscripción Ring Home opcional, se activan funciones como
       grabación continua, historial de eventos y alertas inteligentes.
     enlace: https://amzn.to/466K3AM?tag=recomendadorn-21&th=1
-    imagen: https://m.media-amazon.com/images/I/31Gomnom5tL._SL500_.jpg
+    imagen: https://m.media-amazon.com/images/I/31pD6BHtPpL._SL500_.jpg
     lo_mejor:
       - Calidad de imagen excelente
       - Versatilidad de instalación
@@ -616,7 +616,7 @@ productos:
         precio: 49,99€
         precioOriginal: 59,99€
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31tzZnGHvML._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31i6GBnr7+L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
@@ -688,7 +688,7 @@ productos:
         precio: 49,99€
         precioOriginal: 59,99€
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/3101IQLDlgL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31-ul3wrF6L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
@@ -757,7 +757,7 @@ productos:
         precio: 49,99€
         precioOriginal: 59,99€
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31-B1nEpZfL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31xu+45y5GL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
@@ -826,7 +826,7 @@ productos:
         precio: 49,99€
         precioOriginal: 59,99€
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/311S0TvSEXL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31QHUIr2pqL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
@@ -906,4 +906,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-18'
+actualizacion: '2025-09-19'

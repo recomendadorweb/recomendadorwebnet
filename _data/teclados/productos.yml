@@ -193,7 +193,7 @@ productos:
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
-        precio: 128,33€
+        precio: 128,08€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -298,7 +298,7 @@ productos:
           Razer Huntsman Mini (Purple Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores
           opto-mecánicos (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
         brand: Razer
-        precio: 84,99€
+        precio: 88,98€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
@@ -475,7 +475,7 @@ productos:
           Razer Huntsman V2 (Interruptor Morado) - Teclado Óptico para Juegos con Latencia de Entrada Casi Nula
           (Interruptores Ópticos Clicky, Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
         brand: Razer
-        precio: 223,42€
+        precio: 223,85€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41tAmUr3rYL._SL500_.jpg
@@ -599,7 +599,7 @@ productos:
           Razer Huntsman V2 Tenkeyless (Interruptor Rojo) - Teclado Óptico para Juegos (Interruptores Ópticos Lineales
           Gen-2, Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
         brand: Razer
-        precio: 168,72€
+        precio: 171,23€
         precioOriginal: 189,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41NA4I97ZrL._SL500_.jpg
@@ -2063,7 +2063,7 @@ productos:
           Mars Gaming MKMINIBRES, Teclado Mecánico Ultra-Compacto, Full RGB Chroma, Switch OUTEMU Pro Marrón, Negro,
           Idioma Español
         brand: Mars Gaming
-        precio: 23,80€
+        precio: 23,27€
         precioOriginal: 33,90€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31HuMNEpbiL._SL500_.jpg
@@ -2107,9 +2107,9 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 26
+      total_en_stock: 32
       mostradas: 10
-      restantes: 16
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
       - B07WFGYJ6R
@@ -2128,6 +2128,12 @@ productos:
       - B0DHCNKM3C
       - B0DHCPC81Z
       - B0DHCPF5VB
+      - B0DHCPPNJ2
+      - B0DHCPZ9N1
+      - B0DQCS18HZ
+      - B0F37YZTSG
+      - B0F382BN14
+      - B0F3839TXY
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
@@ -2145,6 +2151,12 @@ productos:
       - https://www.amazon.es/dp/B0DHCNKM3C?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPC81Z?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHCPF5VB?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DHCPPNJ2?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DHCPZ9N1?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DQCS18HZ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F37YZTSG?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F382BN14?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F3839TXY?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G213 Prodigy
     lo_mejor: Membrana con buena respuesta, RGB por zonas, reposamuñecas integrado, resistente a líquidos
     a_tener_en_cuenta: Alternativa silenciosa y cómoda si no necesitas mecánico
@@ -2164,7 +2176,7 @@ productos:
       - Software Logitech G HUB
     brand: Logitech G
     ASIN: B01L6L44NU
-    precio: 55,88€
+    precio: 54,95€
     precioOriginal: 87,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -3236,7 +3248,7 @@ productos:
           Anti-Ghosting, Compatible con Windows, macOS, Disposición QWERTY Español - Negro
         brand: Logitech G
         precio: 69,99€
-        precioOriginal: 69,99€
+        precioOriginal: 94,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31se+wLkZiL._SL500_.jpg
         imagenWidth: 500
@@ -3317,4 +3329,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-18'
+actualizacion: '2025-09-20'

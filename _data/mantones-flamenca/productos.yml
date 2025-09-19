@@ -317,8 +317,8 @@ productos:
           Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
           de Flor (Rojo)
         brand: Yusons
-        precio: 13,99€
-        precioOriginal: No especificado
+        precio: 9,99€
+        precioOriginal: 13,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41zK68qNu0L._SL500_.jpg
         imagenWidth: 500
@@ -2541,8 +2541,8 @@ productos:
       - B07QGNK295
       - B07ZZ23GJR
       - B09Q8YBM98
+      - B09Q98JVGF
       - B09QCV8RL2
-      - B09QGWN9Q7
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B072N5KC6F?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07BD1YF4Y?tag=recomendadorn-21&th=1&psc=1
@@ -2555,8 +2555,8 @@ productos:
       - https://www.amazon.es/dp/B07QGNK295?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07ZZ23GJR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09Q8YBM98?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09Q98JVGF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09QCV8RL2?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B09QGWN9Q7?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B07JGYWHQY
     a_tener_en_cuenta: Requiere saber colocarlo bien por su tamaño
     caracteristicas:
@@ -3289,4 +3289,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-18'
+actualizacion: '2025-09-20'

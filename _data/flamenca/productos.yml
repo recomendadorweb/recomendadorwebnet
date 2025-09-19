@@ -402,10 +402,10 @@ productos:
             value: Lila Blanco
         ParentASIN: B0F5BVQZX5
         condicion: new
-      - ASIN: B0F5BSMTN1
+      - ASIN: B0F5BT5V63
         title: >-
           Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral
-          (FR/ES, Letras, L, Regular, Regular, Lila Blanco)
+          (FR/ES, Letras, S, Regular, Regular, Lila Blanco)
         brand: AMARU SANCHESU
         precio: 49,90€
         precioOriginal: No especificado
@@ -426,16 +426,16 @@ productos:
           - url: https://m.media-amazon.com/images/I/315cE+X4qLL._SL500_.jpg
             width: 500
             height: 258
-        enlace: https://www.amazon.es/dp/B0F5BSMTN1?tag=recomendadorn-21&th=1&psc=1
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0F5BT5V63?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - Diseño entallado con volantes que realzan la silueta y aportan movimiento elegante.
         variationAttributes:
           - name: size_name
-            value: L
+            value: S
           - name: color_name
             value: Lila Blanco
         ParentASIN: B0F5BVQZX5
-        condicion: new
     ParentASIN: B0F5BVQZX5
     nombreCompleto: >-
       Vestido Flamenco Mujer con Volantes - Traje de Feria o Sevillanas con Mangas de Encaje y Estampado Floral (FR/ES,
@@ -447,12 +447,11 @@ productos:
       - name: color_name
         value: Negro Multicolor
     variantes_info:
-      total_en_stock: 18
+      total_en_stock: 17
       mostradas: 10
-      restantes: 8
+      restantes: 7
       truncado: true
     variantes_restantes_asins:
-      - B0F5BT5V63
       - B0F5BTDJVT
       - B0F5BV17M1
       - B0F5BV2GV4
@@ -461,7 +460,6 @@ productos:
       - B0F5BVQZSP
       - B0F5BWQWNX
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0F5BT5V63?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F5BTDJVT?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F5BV17M1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F5BV2GV4?tag=recomendadorn-21&th=1&psc=1
@@ -3236,4 +3234,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-18'
+actualizacion: '2025-09-20'

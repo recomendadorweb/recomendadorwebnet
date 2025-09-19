@@ -19,7 +19,7 @@ productos:
     lo_mejor: 🎙 Calidad de estudio XLR + interfaz incluida 🔧 Control completo 🔊 Sonido cálido 🖥 Ideal para setups avanzados
     nombre: SteelSeries Alias Pro Kit
     valoracion: 5
-    precio: 226,63€
+    precio: 227,35€
     precioOriginal: 226,66€
     disponibilidad: En stock
     imagenesVariantes:
@@ -370,7 +370,7 @@ productos:
           Blue Microphones Yeti, Logitech C920 HD Pro y Litra Glow Logitech For Creators - Combinación de cámara web,
           iluminación y micrófono, para videoconferencias, trabajo desde casa, Zoom, PC y Mac
         brand: Logitech for Creators
-        precio: 231,89€
+        precio: 251,87€
         precioOriginal: 323,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41wTwxkGXxL._SL500_.jpg
@@ -887,7 +887,52 @@ productos:
     title: >-
       HyperX QuadCast - Micrófono de condensador USB, soporte de choque antivibración, cuatro patrones polares, filtro
       pop, control de ganancia, para PC, PS4, PS5 y Mac, Negro y Rojo
-    variantes: []
+    variantes:
+      - ASIN: B0BDPCRYN4
+        title: HyperX ProCast, Micrófono de condensador de diafragma grande ProCast, conexión XLR
+        brand: HyperX
+        precio: 120,71€
+        precioOriginal: 129,00€
+        disponibilidad: Envío en 3 a 7 meses
+        imagen: https://m.media-amazon.com/images/I/31y5TD6sEmL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51YfAlyuQRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51TN4xEE+lL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41URDQ5lB1L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41+8hBPs3YL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51mFWM5Ti6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Xtr7pDybL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41JqfBRym0L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0BDPCRYN4?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Condensador de diafragma grande pulverizado con oro
+          - Suspensión elástica antivibración incorporada
+          - Cableado de brazo de micrófono y soporte de micrófono
+        variationAttributes:
+          - name: style_name
+            value: ProCast
+          - name: pattern_name
+            value: Individual
+          - name: color_name
+            value: Negro
+        ParentASIN: B0DYGNWTM5
     ParentASIN: B0DYGNWTM5
     variationAttributes:
       - name: style_name
@@ -901,8 +946,8 @@ productos:
       pop, control de ganancia, para PC, PS4, PS5 y Mac, Negro y Rojo
     condicion: new
     variantes_info:
-      total_en_stock: 0
-      mostradas: 0
+      total_en_stock: 1
+      mostradas: 1
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -984,7 +1029,7 @@ productos:
           SteelSeries Alias Pro Kit — Micro XLR + Mezclador Stream — cápsula 3 Veces Mayor para Gaming, Streaming y
           pódcast — Interfaz USB/XLR — Controles para personalización — RGB — PC Individual o Dual
         brand: SteelSeries
-        precio: 226,63€
+        precio: 227,35€
         precioOriginal: 226,66€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41eRGqCR0JL._SL500_.jpg
@@ -1241,7 +1286,7 @@ productos:
     lo_mejor: 🌈 RGB dinámico 🤌 Mute táctil 🎧 Captación clara 🎮 Estética gaming cuidada
     nombre: Razer Seiren V3 Chroma
     valoracion: 4.5
-    precio: 119,00€
+    precio: 119,99€
     precioOriginal: 111,77€
     disponibilidad: En stock
     imagenesVariantes:
@@ -1472,7 +1517,7 @@ productos:
           Razer Seiren V2 Pro - Microphone USB professionnel pour streamers (Microphone dynamique 30 mm, filtre
           passe-haut, limiteur de gain, monitoring du microphone) Noir
         brand: Razer
-        precio: 114,36€
+        precio: 114,84€
         precioOriginal: 84,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31YWSdrJmDL._SL500_.jpg
@@ -1729,7 +1774,7 @@ productos:
           Razer Seiren V3 Chroma - Micrófono USB RGB - Micrófono de Condensador supercardioide con Tap-to-Mute
           (iluminación reactiva, limitador de Ganancia Digital y Amortiguador Integrado) Quartz
         brand: Razer
-        precio: 119,00€
+        precio: 119,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31fP65P9bSL._SL500_.jpg
@@ -1802,7 +1847,7 @@ productos:
           Razer Seiren V3 Chroma - Micrófono USB RGB con pulsación para silenciar (Iluminación Reactiva Para Streaming y
           juegos, Micrófono de condensador supercardioide) Negro
         brand: Razer
-        precio: 119,00€
+        precio: 119,99€
         precioOriginal: 118,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41BL4X2ec1L._SL500_.jpg
@@ -1969,7 +2014,7 @@ productos:
     lo_mejor: 🔌 Conexión instantánea 📦 Compacto 🎤 Audio nítido 🖱 Mute con un toque
     nombre: HyperX SoloCast
     valoracion: 4
-    precio: 39,50€
+    precio: 39,99€
     precioOriginal: 39,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -2266,7 +2311,7 @@ productos:
       - ASIN: B06XNQVCKG
         title: Trust Gaming 21753 GXT Emita, Micrófono USB para Estudio, PC, PS4, PS5, Negro
         brand: Trust Gaming
-        precio: 85,79€
+        precio: 85,77€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41o9D0O2hIL._SL500_.jpg
@@ -2406,4 +2451,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-18'
+actualizacion: '2025-09-20'
