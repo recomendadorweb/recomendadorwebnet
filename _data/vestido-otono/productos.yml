@@ -124,66 +124,6 @@ productos:
             value: A-azul Marino
         ParentASIN: B0CZ9BXSVC
         condicion: new
-      - ASIN: B0CZ948G9X
-        nombreCompleto: >-
-          LIAMERHE Vestido Sin Mangas Mujer Casual Verano Vestidos Cuello en V Elegante Vestido Largo hasta la Rodilla
-          Azul Marino L
-        valoracion: 4.5
-        salesrank: 8793
-        enlace: https://www.amazon.es/dp/B0CZ948G9X?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
-        title: >-
-          LIAMERHE Vestido Sin Mangas Mujer Casual Verano Vestidos Cuello en V Elegante Vestido Largo hasta la Rodilla
-          Azul Marino L
-        brand: LIAMERHE
-        precio: 23,99€
-        precioOriginal: 26,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41xmxaeoqRL._SL500_.jpg
-        imagenWidth: 375
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41643jIVt2L._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41347YEyOfL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5134dLgdPkL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51TO19ThCCL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41eLzS6lguL._SL500_.jpg
-            width: 375
-            height: 500
-        caracteristicasAmazon:
-          - >-
-            Material del vestido de verano: los vestidos con estampado floral para mujer están hechos de 95% poliéster y
-            5% elastano, tela de alta calidad con exquisita mano de obra, bien cosidos, cómodos de llevar. Ideal para
-            primavera y verano.
-          - >-
-            Diseño del vestido: el vestido casual cuenta con corte clásico, cintura alta, cuello en V, cintura elástica,
-            estilo simple y sexy para niñas. El vestido viene en vibrantes estampados florales que le dan un aspecto
-            único.
-          - >-
-            Combinación: vestido casual para mujer, combina bien con blazer, chaqueta, cárdigan, calcetines, bolsos,
-            sandalias, tacones altos y zapatos planos para crear una variedad de estilos. La longitud de este vestido de
-            verano sin mangas está justo debajo de la rodilla y se adapta bien a cualquier forma de cuerpo.
-          - >-
-            Ocasiones: perfecto para vacaciones, playa, citas, salir, uso diario, trabajo, Hawaii, crucero, noche,
-            fiesta, boda. Combínalos con pequeños accesorios de diferentes estilos para crear una variedad de estilos.
-          - >-
-            Tabla de tallas: según las opiniones de nuestros clientes, te recomendamos que sigas nuestra tabla de tallas
-            (no la tabla de tallas de Amazon) en nuestras fotos o descripciones del producto para elegir la talla
-            correcta de acuerdo con las medidas de tu cuerpo antes de comprar. Muchas gracias
-        variationAttributes:
-          - name: size_name
-            value: L
-          - name: color_name
-            value: A-azul Marino
-        ParentASIN: B0CZ9BXSVC
-        condicion: new
       - ASIN: B0D52THW7G
         nombreCompleto: >-
           LIAMERHE Vestido Sin Mangas Mujer Casual Verano Vestidos Cuello en V Elegante Vestido Largo hasta la Rodilla
@@ -196,7 +136,7 @@ productos:
           Negro M
         brand: LIAMERHE
         precio: 23,99€
-        precioOriginal: 26,99€
+        precioOriginal: 28,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41rB5SxWOKL._SL500_.jpg
         imagenWidth: 375
@@ -484,7 +424,7 @@ productos:
           Rojo L
         brand: LIAMERHE
         precio: 23,99€
-        precioOriginal: No especificado
+        precioOriginal: 24,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/514cGE-SkAL._SL500_.jpg
         imagenWidth: 375
@@ -581,6 +521,61 @@ productos:
           - name: color_name
             value: A-azul
         ParentASIN: B0CZ9BXSVC
+      - ASIN: B0CZ8YGLRH
+        title: >-
+          LIAMERHE Vestido Sin Mangas Mujer Casual Verano Vestidos Cuello en V Elegante Vestido Largo hasta la Rodilla
+          Azul Marino S
+        brand: LIAMERHE
+        precio: 23,99€
+        precioOriginal: 26,99€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41xmxaeoqRL._SL500_.jpg
+        imagenWidth: 375
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41643jIVt2L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41347YEyOfL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/5134dLgdPkL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51TO19ThCCL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41eLzS6lguL._SL500_.jpg
+            width: 375
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CZ8YGLRH?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            ?Material del vestido de verano?Los vestidos con estampado floral para mujer están hechos de 95 % poliéster
+            y 5 % elastano, tela de alta calidad con una mano de obra exquisita, bien cosida, cómoda de usar. Ideal para
+            primavera y verano.
+          - >-
+            ?Características del diseño de los vestidos de mujer?El vestido casual presenta un corte clásico de cintura
+            alta en forma de A, escote en V, cintura elástica y un estilo simple y sexy para niñas. El vestido está
+            disponible en estampados florales vibrantes que le dan un aspecto único.
+          - >-
+            ?A juego?Vestido casual de mujer, combina bien con blazer, chaqueta, cárdigan, medias, bolso, sandalias,
+            tacones altos y zapatos planos para crear una variedad de looks. Este vestido de verano sin mangas llega
+            justo por encima de la rodilla, lo que lo hace adecuado para todo tipo de cuerpo.
+          - >-
+            ?Ocasiones?Perfecto para vacaciones, playa, citas, salidas, uso diario, trabajo, Hawái, crucero, velada,
+            fiesta, boda. Combínalo con diferentes estilos de accesorios pequeños para crear una variedad de estilos.
+          - >-
+            ?Tabla de tallas?Según las opiniones de nuestros clientes, te recomendamos que sigas nuestra tabla de tallas
+            (no la tabla de tallas de Amazon) en las fotos o descripciones de nuestros productos para elegir la talla
+            correcta en función de tus propias medidas corporales antes de r. Gracias
+        variationAttributes:
+          - name: size_name
+            value: S
+          - name: color_name
+            value: A-azul Marino
+        ParentASIN: B0CZ9BXSVC
     nombre: LIAMERHE vestido invitada otoño Burdeos S
     caracteristicas:
       - Tejido 95% poliéster y 5% spandex, cómodo.
@@ -648,12 +643,11 @@ productos:
       - name: color_name
         value: B-burdeos
     variantes_info:
-      total_en_stock: 96
+      total_en_stock: 94
       mostradas: 10
-      restantes: 86
+      restantes: 84
       truncado: true
     variantes_restantes_asins:
-      - B0CZ8YGLRH
       - B0D53CSFQK
       - B0D53CSFQL
       - B0D53DGW4Q
@@ -669,7 +663,6 @@ productos:
       - B0DFCH2DDD
       - B0DFCH7ZTM
       - B0DFCHCQN4
-      - B0DFCHL4CS
       - B0DFCHXSXX
       - B0DFCJ1D9D
       - B0DFCJ2GFH
@@ -688,6 +681,7 @@ productos:
       - B0DXPW9MVZ
       - B0DXPWBZWB
       - B0DXPWDS21
+      - B0DXPWFW6T
       - B0DXPWG133
       - B0DXPWJCS8
       - B0DXPWKP89
@@ -707,7 +701,6 @@ productos:
       - B0DXPYTFB8
       - B0DXPYVS6S
       - B0DXPZ782Q
-      - B0DXPZCXBL
       - B0DXPZGFX3
       - B0F7LCKWF8
       - B0F7LDVBY2
@@ -740,7 +733,6 @@ productos:
       - B0FHH4CC4P
       - B0FHH8NYPL
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0CZ8YGLRH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53CSFQK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53CSFQL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53DGW4Q?tag=recomendadorn-21&th=1&psc=1
@@ -756,7 +748,6 @@ productos:
       - https://www.amazon.es/dp/B0DFCH2DDD?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFCH7ZTM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFCHCQN4?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFCHL4CS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFCHXSXX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFCJ1D9D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFCJ2GFH?tag=recomendadorn-21&th=1&psc=1
@@ -775,6 +766,7 @@ productos:
       - https://www.amazon.es/dp/B0DXPW9MVZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWBZWB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWDS21?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DXPWFW6T?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWG133?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWJCS8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPWKP89?tag=recomendadorn-21&th=1&psc=1
@@ -794,7 +786,6 @@ productos:
       - https://www.amazon.es/dp/B0DXPYTFB8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYVS6S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPZ782Q?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DXPZCXBL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPZGFX3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F7LCKWF8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F7LDVBY2?tag=recomendadorn-21&th=1&psc=1
@@ -1529,9 +1520,9 @@ productos:
     ParentASIN: B0D4M9QDLN
     condicion: new
     variantes_info:
-      total_en_stock: 90
+      total_en_stock: 86
       mostradas: 10
-      restantes: 80
+      restantes: 76
       truncado: true
     variantes_restantes_asins:
       - B0D4LTBFV9
@@ -1545,13 +1536,10 @@ productos:
       - B0D83CGC57
       - B0D83GGPCN
       - B0D83GGPCS
-      - B0D83GTZ7Q
       - B0D83H9JNP
-      - B0D83HF6HH
       - B0D83HFBQ8
       - B0D83HNNN5
       - B0D83HP8VB
-      - B0D83HT4KF
       - B0D83K4WVM
       - B0D83L5GD9
       - B0D83LM8SS
@@ -1607,7 +1595,6 @@ productos:
       - B0FH6S9R5L
       - B0FH6SHN2K
       - B0FH6SMJ2Z
-      - B0FH6SWB74
       - B0FH6T2GPK
       - B0FH6T3DZ8
       - B0FH6TLP5S
@@ -1626,13 +1613,10 @@ productos:
       - https://www.amazon.es/dp/B0D83CGC57?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83GGPCN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83GGPCS?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D83GTZ7Q?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83H9JNP?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D83HF6HH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HFBQ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HNNN5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HP8VB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D83HT4KF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83K4WVM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83L5GD9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83LM8SS?tag=recomendadorn-21&th=1&psc=1
@@ -1688,7 +1672,6 @@ productos:
       - https://www.amazon.es/dp/B0FH6S9R5L?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6SHN2K?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6SMJ2Z?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0FH6SWB74?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6T2GPK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6T3DZ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TLP5S?tag=recomendadorn-21&th=1&psc=1
@@ -5607,7 +5590,7 @@ productos:
         enlace: https://www.amazon.es/dp/B07SF6YFP9?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: Only Mujer Onlbrilliant 3/4 Dress Jrs Noos vestido,Verde (Pine Grove Pine Grove),S
         brand: ONLY
-        precio: 19,82€
+        precio: 19,90€
         precioOriginal: 26,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21SeqrQTeNL._SL500_.jpg
@@ -7282,4 +7265,4 @@ productos:
       - https://www.amazon.es/dp/B0FH6TSTHF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TW7C2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TWFRJ?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-20'
+actualizacion: '2025-09-21'

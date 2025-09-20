@@ -1091,9 +1091,9 @@ productos:
           Cecotec Colchón Viscoelástico Flow PureVital 1900 160x190. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
           Alta, Capa Viscoelástica VisComfort, Tejido SoftTex, Doble Cara Dual System
         brand: Cecotec
-        precio: 189,00€
+        precio: 283,04€
         precioOriginal: No especificado
-        disponibilidad: En stock
+        disponibilidad: Envío en 3 a 4 días
         imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1339,9 +1339,9 @@ productos:
       - name: color_name
         value: Azul
     variantes_info:
-      total_en_stock: 30
+      total_en_stock: 31
       mostradas: 10
-      restantes: 20
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
       - B0B9BSG8B7
@@ -1351,6 +1351,7 @@ productos:
       - B0B9BW8G35
       - B0B9BX7R2R
       - B0B9BXH28V
+      - B0B9BXQBWJ
       - B0B9BXQYR7
       - B0B9BY5VKL
       - B0BLZ5ZK1B
@@ -1372,6 +1373,7 @@ productos:
       - https://www.amazon.es/dp/B0B9BW8G35?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BX7R2R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXH28V?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0B9BXQBWJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXQYR7?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BY5VKL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BLZ5ZK1B?tag=recomendadorn-21&th=1&psc=1
@@ -7753,7 +7755,7 @@ productos:
     valoracion: 4.5
     precio: 189,90€
     precioOriginal: No especificado
-    disponibilidad: ' Temporalmente sin stock. Estamos trabajando para volver a tener stock. Realiza tu pedido y te mandaremos un email con la fecha de entrega estimada.'
+    disponibilidad: Envío en 6 a 7 meses
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41Lulmv-iyL._SL500_.jpg
         width: 500
@@ -8327,26 +8329,44 @@ productos:
       - name: size_name
         value: 135 x 190 cm
     variantes_info:
-      total_en_stock: 17
+      total_en_stock: 26
       mostradas: 10
-      restantes: 7
+      restantes: 16
       truncado: true
     variantes_restantes_asins:
+      - B08BXK8J5D
+      - B08BXK962R
+      - B08BXNWBPR
+      - B08BXPFCRL
       - B08BXQ7P3D
+      - B09FYC172N
       - B09FYDC9F9
       - B09FYDGXFG
+      - B09FYDH4XN
       - B09FYDQGKN
+      - B09FYDXWH9
       - B09FYF1Y2L
+      - B09FYF4DJL
       - B09FYF4Y6S
-      - B09FYG17M7
+      - B09FYFBXTM
+      - B09FYGVBMW
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B08BXK8J5D?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BXK962R?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BXNWBPR?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B08BXPFCRL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08BXQ7P3D?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYC172N?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYDC9F9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYDGXFG?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYDH4XN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYDQGKN?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYDXWH9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYF1Y2L?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYF4DJL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYF4Y6S?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B09FYG17M7?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYFBXTM?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYGVBMW?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0883KR5BN
     a_tener_en_cuenta: Espuma Viscoelástica + grafeno
     brand: Imperial Confort
@@ -9302,7 +9322,7 @@ productos:
           Antiácaros, Antibacerias e Hipoalergénico, 140x200
         brand: amuéblate online
         precio: 161,14€
-        precioOriginal: No especificado
+        precioOriginal: 174,37€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31fBPMD4O8L._SL500_.jpg
         imagenWidth: 500
@@ -11244,4 +11264,4 @@ productos:
     variantes_restantes_enlaces: []
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-20'
+actualizacion: '2025-09-21'

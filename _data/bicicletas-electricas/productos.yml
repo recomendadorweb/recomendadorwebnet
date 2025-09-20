@@ -808,6 +808,70 @@ productos:
             value: Gris
         ParentASIN: B0FDH6N923
         condicion: new
+      - ASIN: B0BPYZ51RN
+        title: >-
+          Cecotec Bicicleta Eléctrica Plegable Flexy. 35km de Autonomía, Ruedas de 20", Batería 270Wh, Doble Disco de
+          Freno, Display, Cuadro de Acero Hi-Ten
+        brand: Cecotec
+        precio: 565,00€
+        precioOriginal: No especificado
+        disponibilidad: Envío en 3 a 7 meses
+        imagen: https://m.media-amazon.com/images/I/41wJ2H3lhaL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41HudH4t-6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/5131v7-P0NL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51HaVK3znvL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41IF1+oRbGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51c3L61hrAL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/61zgIr8WOFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41LpS0doZNL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51IyW+jBUWL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Eh+Kn2wZL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0BPYZ51RN?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            35 km de autonomía: recorre grandes distancias sin preocuparte por la batería. Batería 270 Wh (36 V y 7,5
+            AH): gran potencia de batería que permite recorrer largas distancias con cada carga.
+          - >-
+            Ruedas de 20": gran agarre y adherencia para poder circular con seguridad. Sistema de frenado: doble freno
+            de disco que aporta la máxima seguridad en cada trayecto.
+          - >-
+            Frena cuando quieras y con la máxima fiabilidad gracias a su sistema con doble freno de disco, que aporta la
+            máxima seguridad en cada trayecto para que no tengas imprevistos en ninguno de tus desplazamientos.
+          - >-
+            Nuestra bicicleta eléctrica Flexy incorpora un display que controla entre 3 niveles de asistencia, nivel de
+            batería, encendido/apagado, modo peatón y luces. Controla de un vistazo todas las funciones y domina las
+            calles.
+          - >-
+            Dispone de un cuadro de acero Hi-Ten, material que le otorga una gran resistencia y durabilidad, para
+            convertir a la bicicleta en tu acompañante más fiel.
+        variationAttributes:
+          - name: style_name
+            value: 35 km Autonomía
+          - name: color_name
+            value: Gris
+        ParentASIN: B0FDH6N923
     ParentASIN: B0FDH6N923
     variationAttributes:
       - name: style_name
@@ -819,8 +883,8 @@ productos:
       Delantera, Cambio Shimano de 7 Velocidades y Doble Disco de Freno
     condicion: new
     variantes_info:
-      total_en_stock: 2
-      mostradas: 2
+      total_en_stock: 3
+      mostradas: 3
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1724,4 +1788,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-19'
+actualizacion: '2025-09-21'

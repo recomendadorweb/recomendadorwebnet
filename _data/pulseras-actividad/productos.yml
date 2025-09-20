@@ -1340,7 +1340,7 @@ productos:
           Xiaomi Smart Band 8 Pro - Pulsera de Actividad de 1.74", Cuerpo Ligero y Ultrafino de 9.99 mm, +150 Modos
           Deportivos, SpO2, 5ATM, batería de hasta 14 días, Negro (Versión ES)
         brand: XIAOMI
-        precio: 58,05€
+        precio: 57,42€
         precioOriginal: 69,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41JMk0FRdPL._SL500_.jpg
@@ -1443,12 +1443,57 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0CW26H28K
+      - ASIN: B0CD2MP728
+        title: >-
+          XIAOMI Smart Band 8 - Pulsera de Actividad, Autonomía de hasta 16 días, Pantalla AMOLED con Tasa de refresco
+          de 60 Hz, 5 ATM, 150 Modos Deportivos, Negro (Versión ES)
+        brand: XIAOMI
+        precio: 59,95€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41UfH9aHdPL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41sgICzu4YL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31niYIsvDaL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41HJoiBCygL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31HX9QRiTZL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ZByDnpYFL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CD2MP728?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Hasta 16 días de duración de la batería para uso diario normal y carga en 1 hora.
+          - Nuevo chipset que admite una tasa de refresco de 60Hz.
+          - >-
+            Seguimiento del nivel de SpO2 durante todo el día, monitoreo continuo del sueño, monitoreo de la frecuencia
+            cardíaca las 24 horas, monitoreo de la respiración del sueño…
+          - +150 modos de entrenamiento para registrar su ritmo cardíaco y calorías quemadas.
+          - >-
+            Múltiples accesorios para usar tu band de una nueva manera: clip en zapatillas para correr, colgante,
+            correas…
+        variationAttributes:
+          - name: style_name
+            value: Band 8
+          - name: color_name
+            value: Negro
+        ParentASIN: B0CW26H28K
     title: >-
       Xiaomi Smart Band 8 - Pulsera de Actividad, Autonomía de hasta 16 días, Pantalla AMOLED con Tasa de refresco de 60
       Hz, 5 ATM, 150 Modos Deportivos, Blanco (Versión ES
     brand: XIAOMI
-    precio: 39,04€
-    precioOriginal: No especificado
+    precio: 34,66€
+    precioOriginal: 39,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/411Yhvqt0BL._SL500_.jpg
     imagenWidth: 500
@@ -1482,8 +1527,8 @@ productos:
       - name: color_name
         value: Blanco marfil
     variantes_info:
-      total_en_stock: 2
-      mostradas: 2
+      total_en_stock: 3
+      mostradas: 3
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1594,7 +1639,7 @@ productos:
           Fitbit Inspire 3, la pulsera de salud y actividad física con hasta 10 días de batería y compatible con Android
           e iOS, Amarillo ocre
         brand: Fitbit
-        precio: 85,99€
+        precio: 84,99€
         precioOriginal: 99,95€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31OwZCIj26L._SL500_.jpg
@@ -1941,4 +1986,4 @@ productos:
       aporta tranquilidad en agua, aunque conviene actualizar el firmware para acceder a todas las mejoras. En mi caso
       el color Ivory resulta cómodo y discreto, por eso recomiendo esta Redmi Smartband 2 a quien busque una pulsera
       sencilla con funciones de salud avanzadas.
-actualizacion: '2025-09-20'
+actualizacion: '2025-09-21'

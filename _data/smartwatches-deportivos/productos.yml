@@ -69,7 +69,7 @@ productos:
           Garmin Forerunner 55 - Reloj Inteligente para Running con GPS, Planes de Entrenamiento, notificaciones y
           Seguimiento del Bienestar, Blanco
         brand: Garmin
-        precio: 159,45€
+        precio: 161,05€
         precioOriginal: 199,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41u06XEXGYL._SL500_.jpg
@@ -110,7 +110,7 @@ productos:
       - ASIN: B0DD542SY9
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: 206,99€
+        precio: 206,98€
         precioOriginal: 239,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21EpcbLQRgL._SL500_.jpg
@@ -146,7 +146,7 @@ productos:
       - ASIN: B0DD5493Q2
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: 204,58€
+        precio: 204,57€
         precioOriginal: 239,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21Jzi-5UdjL._SL500_.jpg
@@ -179,49 +179,6 @@ productos:
             value: con Quick Release Band 3
         ParentASIN: B0DDT9DTD7
         condicion: new
-      - ASIN: B0953VK51D
-        title: >-
-          Garmin Forerunner 55, Reloj inteligente para running con GPS, Planes de entrenamiento, Notificaciones y
-          seguimiento del bienestar, Color Turquesa
-        brand: Garmin
-        precio: 159,72€
-        precioOriginal: 199,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/418-9CmdhNS._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41jgBYeW8xS._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0953VK51D?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Utiliza los perfiles de actividad preinstalados para carrera, carrera pista, natación, virtual run,
-            ciclismo, pilates, HIIT y muchos más.
-          - >-
-            Los entrenamientos diarios recomendados te permiten entrenar según tu nivel de estado físico y el tiempo de
-            recuperación. El pronóstico de carrera te permite tener una orientación de tus tiempos en carrera para 5K,
-            10K, media maratón y maratón.
-          - >-
-            Sensores GPS, GLONASS y GALILEO para una precisión óptima. Crea tu propio entrenamiento o descarga uno de
-            nuestros planes de Garmin Coach.
-          - >-
-            Incluye monitorización de frecuencia cardíaca en la muñeca, seguimiento de estrés, edad fisiológica,
-            respiraciones, hidratación, Body Battery y mucho más para el control de tu salud.
-          - >-
-            Autonomía de hasta 2 semanas en modo Smartwatch o 20 horas en modo GPS. Compatible con las correas de
-            desmontaje rápido de 20 mm.
-          - >-
-            Tamaño de pantalla: 1.04 inches; Tipo de pantalla: Visible a la luz del sol, transflectiva, memoria a nivel
-            de píxeles (MIP)
-        variationAttributes:
-          - name: color_name
-            value: Aqua
-          - name: style_name
-            value: Smartwatch
-        ParentASIN: B0DDT9DTD7
     ParentASIN: B0DDT9DTD7
     variationAttributes:
       - name: color_name
@@ -233,8 +190,8 @@ productos:
       seguimiento del bienestar, Color Negro
     condicion: new
     variantes_info:
-      total_en_stock: 4
-      mostradas: 4
+      total_en_stock: 3
+      mostradas: 3
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -501,6 +458,41 @@ productos:
           - name: color_name
             value: Gris Pizarra
         ParentASIN: B0BYJVH4JP
+      - ASIN: B0B2WY7TTH
+        title: >-
+          Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
+          avanzadas, Pay, Autonomía de hasta 14 Días, Negro
+        brand: Garmin
+        precio: 564,33€
+        precioOriginal: No especificado
+        disponibilidad: Envío en 11 a 12 días
+        imagen: https://m.media-amazon.com/images/I/41wNe-M+lrL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41BZabm6AzL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0B2WY7TTH?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Obtendrás una visión general del sueño, el estado de VFC y la sesión de entrenamiento diaria con tu morning
+            report.
+          - Desafía tus límites con la función de triatlón integrada y más de 30 perfiles de actividad.
+          - >-
+            Planifica tu estrategia con sesiones de entrenamiento diarias recomendadas, detalles del trayecto y mucho
+            más en el widget de carrera.
+          - >-
+            Descarga hasta 500 canciones, así como listas de reproducción, de tus cuentas de Spotify, Deezer o Amazon
+            Music.
+          - Paga el café después del entrenamiento con los pagos contactless de Garmin Pay.
+        variationAttributes:
+          - name: style_name
+            value: Forerunner 255 Música
+          - name: color_name
+            value: Negro
+        ParentASIN: B0BYJVH4JP
     ParentASIN: B0BYJVH4JP
     variationAttributes:
       - name: style_name
@@ -510,8 +502,8 @@ productos:
     nombreCompleto: Garmin Forerunner 255, Reloj Inteligente para Correr con GPS, Garmin Pay, Autonomía de hasta 14 Días, Azul Oscuro
     condicion: new
     variantes_info:
-      total_en_stock: 5
-      mostradas: 5
+      total_en_stock: 6
+      mostradas: 6
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -942,7 +934,7 @@ productos:
           SUUNTO Race Reloj Deportivo - Smartwatch Exteriores, Pantalla AMOLED Brillante De 1,43" Con Cristal De Zafiro,
           Corona Cómoda y Botones De Control, GPS De Doble Frecuencia, Larga Duración De La Batería
         brand: Suunto
-        precio: 389,63€
+        precio: 390,18€
         precioOriginal: 399,00€
         disponibilidad: Envío en 3 a 4 días
         imagen: https://m.media-amazon.com/images/I/41LUmn4Gn7L._SL500_.jpg
@@ -1719,4 +1711,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-20'
+actualizacion: '2025-09-21'

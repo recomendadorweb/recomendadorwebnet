@@ -3370,46 +3370,6 @@ productos:
             value: Pontevedra Collection 8 - Navy
         ParentASIN: B0DK8VPP3J
         condicion: new
-      - ASIN: B0835R2R48
-        title: >-
-          MELIFLUOS DESIGNED IN SPAIN Bufanda y Cuello de Pelo para Mujer: Cuellos de Moda para Otoño e Invierno
-          (SSW01-9)
-        brand: MELIFLUOS DESIGNED IN SPAIN
-        precio: 17,92€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41Qwx6Axm3L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51cJ-cv0QqL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31JxDrDz47L._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B0835R2R48?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            DISEÑO ELEGANTE - Nuestras bufandas están diseñadas por artistas y diseñadores españoles siguiendo las
-            últimas tendencias del mercado.
-          - >-
-            MATERIAL DE CALIDAD - Nuestras bufandas tienen un tamaño muy superior a las de nuestros competidores y están
-            hechas con tejidos de calidad.
-          - >-
-            DIRECTO AL CONSUMIDOR - Trabajamos con las mismas fábricas que las grandes marcas y eliminamos
-            intermediarios.
-          - >-
-            REGALO PERFECTO - Si tienes problemas para encontrar regalos para tu novia, esposa, madre o abuela ya no
-            tienes que buscar más.
-          - >-
-            COMPRA CON SEGURIDAD - Si por algún motivo no estás contento con nuestras bufandas, puedes cambiarlas por
-            otras o te devolvemos tu dinero.
-        variationAttributes:
-          - name: color_name
-            value: Pontevedra Collections 91 - Orange
-        ParentASIN: B0DK8VPP3J
-        condicion: new
       - ASIN: B095JFBFQ8
         title: >-
           MELIFLUOS DESIGNED IN SPAIN Bufanda y Cuello de Pelo para Mujer: Cuellos de Moda para Otoño e Invierno
@@ -3569,8 +3529,8 @@ productos:
       Es un regalo fácil de acertar para amigas o familiares.
     condicion: new
     variantes_info:
-      total_en_stock: 10
-      mostradas: 10
+      total_en_stock: 9
+      mostradas: 9
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -4585,4 +4545,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-20'
+actualizacion: '2025-09-21'
