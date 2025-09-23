@@ -92,7 +92,7 @@ productos:
           XIAOMI Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa
           de refresco de 60 Hz, 5ATM, App Mi Fitness, Rosa (Versión ES)
         brand: XIAOMI
-        precio: 17,99€
+        precio: 19,99€
         precioOriginal: 24,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41oIV8UAacL._SL500_.jpg
@@ -166,7 +166,7 @@ productos:
           XIAOMI Smart Band 9 Active - Pulsera de Actividad, autonomía de hasta 18 días, Pantalla TFT de 1,47" con tasa
           de refresco de 60 Hz, 5ATM, App Mi Fitness, Blanco (Versión ES)
         brand: XIAOMI
-        precio: 17,99€
+        precio: 19,99€
         precioOriginal: 24,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/410R5J3aQNL._SL500_.jpg
@@ -594,7 +594,7 @@ productos:
           XIAOMI Smartband 10,Pantalla AMOLED de 1,72”, Carga rápida, 150+ Modos Deportivos. Monitorización de Salud y
           sueño. HyperOS 2.0. Impermeable 5ATM, Brújula,Blanca Perla.
         brand: XIAOMI
-        precio: 56,90€
+        precio: 53,28€
         precioOriginal: 59,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31StUk-WaJL._SL500_.jpg
@@ -796,7 +796,7 @@ productos:
           XIAOMI Smart Band 9 Pro - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED de 1,74",
           Monitorización del sueño, 150+ Modos Deportivos, 5ATM, GPS y brújula, App Mi Fitness, Plata
         brand: XIAOMI
-        precio: 53,99€
+        precio: 55,85€
         precioOriginal: 69,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41KTRmGVIzL._SL500_.jpg
@@ -891,7 +891,7 @@ productos:
           XIAOMI Smart Band 9 Pro - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED de 1,74",
           Monitorización del sueño, 150+ Modos Deportivos, 5ATM, GPS y brújula, App Mi Fitness, Rosa
         brand: XIAOMI
-        precio: 54,99€
+        precio: 53,85€
         precioOriginal: 69,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41f4ECxLESL._SL500_.jpg
@@ -979,7 +979,7 @@ productos:
       XIAOMI Smart Band 9 Pro - Pulsera de Actividad, Autonomía de hasta 21 días, Pantalla AMOLED de 1,74",
       Monitorización del sueño, 150+ Modos Deportivos, 5ATM, GPS y brújula, App Mi Fitness, Negro
     brand: XIAOMI
-    precio: 57,02€
+    precio: 55,95€
     precioOriginal: 69,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41POgVKhQ-L._SL500_.jpg
@@ -1175,7 +1175,7 @@ productos:
           Xiaomi Smart Band 10 - Pulsera de Actividad, Autonomía de hasta 21 días, 1.72" Pantalla AMOLED con Tasa de
           refresco de 60 Hz, 5ATM,Sensor de Frecuencia Cardíaca, App Mi Fitness, Plata-(Versión ES)
         brand: XIAOMI
-        precio: 49,75€
+        precio: 48,75€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41SPLwC8xEL._SL500_.jpg
@@ -1238,7 +1238,7 @@ productos:
       XIAOMI Smart Band 10 +Correa - Pulsera de Actividad, Autonomía de hasta 21 días, 1.72" Pantalla AMOLED con Tasa de
       refresco de 60 Hz, Sensor de Frecuencia Cardíaca, App Mi Fitness, Negro-(Versión ES)
     brand: XIAOMI
-    precio: 45,99€
+    precio: 49,75€
     precioOriginal: 49,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41JTQp9celL._SL500_.jpg
@@ -1263,7 +1263,7 @@ productos:
       - url: https://m.media-amazon.com/images/I/61TBJlJh0YL._SL500_.jpg
         width: 500
         height: 500
-    condicion: used
+    condicion: new
     caracteristicasAmazon:
       - >-
         【2025 Apariencia impresionante,Más brillante y más hermoso】:Xiaomi Smart Band 10, Pantalla cuadrilateral de
@@ -1340,7 +1340,7 @@ productos:
           Xiaomi Smart Band 8 Pro - Pulsera de Actividad de 1.74", Cuerpo Ligero y Ultrafino de 9.99 mm, +150 Modos
           Deportivos, SpO2, 5ATM, batería de hasta 14 días, Negro (Versión ES)
         brand: XIAOMI
-        precio: 57,42€
+        precio: 58,05€
         precioOriginal: 69,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41JMk0FRdPL._SL500_.jpg
@@ -1488,6 +1488,56 @@ productos:
           - name: color_name
             value: Negro
         ParentASIN: B0CW26H28K
+      - ASIN: B0CHJ2C1YS
+        title: >-
+          XIAOMI Smart Band 8 Active - Pulsera de Actividad, Autonomía de hasta 14 días, Pantalla TFT de 1,47”,
+          Resistente al Agua 5 ATM, Monitorización de Salud, +50 Modos Deportivos, Negro (Versión ES)
+        brand: XIAOMI
+        precio: 48,00€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31lLsiOOdbL._SL500_.jpg
+        imagenWidth: 400
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41o-Qh-B3ZL._SL500_.jpg
+            width: 400
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41h1tihrcEL._SL500_.jpg
+            width: 400
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41H30HzlQ1L._SL500_.jpg
+            width: 400
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31NpIQnuR2L._SL500_.jpg
+            width: 400
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31Zf2Fed2cL._SL500_.jpg
+            width: 400
+            height: 500
+          - url: https://m.media-amazon.com/images/I/416WDMjFjIL._SL500_.jpg
+            width: 400
+            height: 500
+          - url: https://m.media-amazon.com/images/I/3150VYLnsvL._SL500_.jpg
+            width: 400
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41Pe0qEGFqL._SL500_.jpg
+            width: 400
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CHJ2C1YS?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Pantalla grande TFT de 1,47”. Diseño UI/UX para ver la información más detallada. Cuerpo ligero de 9.99mm.
+          - Más de 50 modos deportivos
+          - Monitorización de la frecuencia cardíaca, SpO2 y seguimiento del sueño
+          - Resiste al agua hasta 5ATM con la posibilidad de usar durante la natación
+          - Batería de hasta 14 días de duración
+        variationAttributes:
+          - name: style_name
+            value: Band 8 Active
+          - name: color_name
+            value: Negro
+        ParentASIN: B0CW26H28K
     title: >-
       Xiaomi Smart Band 8 - Pulsera de Actividad, Autonomía de hasta 16 días, Pantalla AMOLED con Tasa de refresco de 60
       Hz, 5 ATM, 150 Modos Deportivos, Blanco (Versión ES
@@ -1527,8 +1577,8 @@ productos:
       - name: color_name
         value: Blanco marfil
     variantes_info:
-      total_en_stock: 3
-      mostradas: 3
+      total_en_stock: 4
+      mostradas: 4
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1986,4 +2036,4 @@ productos:
       aporta tranquilidad en agua, aunque conviene actualizar el firmware para acceder a todas las mejoras. En mi caso
       el color Ivory resulta cómodo y discreto, por eso recomiendo esta Redmi Smartband 2 a quien busque una pulsera
       sencilla con funciones de salud avanzadas.
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'

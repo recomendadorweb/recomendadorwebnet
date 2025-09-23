@@ -312,46 +312,6 @@ productos:
             value: Negro/Fucsia
         ParentASIN: B0DYYM5XJ1
         condicion: new
-      - ASIN: B0DYYKG23V
-        title: >-
-          Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
-          de Flor (Rojo)
-        brand: Yusons
-        precio: 9,99€
-        precioOriginal: 13,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41zK68qNu0L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41ViNIcjjCL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/3183yEMsXPL._SL500_.jpg
-            width: 265
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41uA1FBZ+cL._SL500_.jpg
-            width: 332
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg
-            width: 455
-            height: 500
-        enlace: https://www.amazon.es/dp/B0DYYKG23V?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - 'Material: 100% poliéster. Mantón tradicional popular con estampado de flores.'
-          - 'Mantón de manilla de gran tamaño: Mira foto de medida de cada modelo, son medidas adultos.'
-          - Talla única, una variedad de colores para elegir, fucsia, negro, blanco, rojo......
-          - >-
-            Ligero y suave, úsalo como chal, ya sea sobre los hombros o la cabeza. Ideal para la fiesta de abril, baile
-            de flamenco español tradicional.
-          - >-
-            Regalo perfecto: esta gran bufanda se puede presentar como un regalo a tu familia, amigos e incluso a ti
-            mismo en Acción de Gracias, Navidad, cumpleaños, Día de la Madre o algunos días especiales.
-        variationAttributes:
-          - name: color_name
-            value: Rojo
-        ParentASIN: B0DYYM5XJ1
-        condicion: new
       - ASIN: B0DYYM3QHF
         title: >-
           Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
@@ -475,6 +435,55 @@ productos:
           - name: color_name
             value: Crema
         ParentASIN: B0DYYM5XJ1
+      - ASIN: B0DYYKNZGG
+        title: >-
+          Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de Flamenca
+          de Flor (Fucsia/Morado)
+        brand: Yusons
+        precio: 13,99€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41yywV23s-L._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51UCYmJSn5L._SL500_.jpg
+            width: 489
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41WugIz0ZFL._SL500_.jpg
+            width: 306
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41RyQjx547L._SL500_.jpg
+            width: 403
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41QopB-mg5L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41pjzWI++pL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CRXETlNqL._SL500_.jpg
+            width: 338
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41AZhbwoxnL._SL500_.jpg
+            width: 455
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0DYYKNZGG?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Material: 100% poliéster. Mantón tradicional popular con estampado de flores.'
+          - 'Mantón de manilla de gran tamaño: Mira foto de medida de cada modelo, son medidas adultos.'
+          - Talla única, una variedad de colores para elegir, fucsia, negro, blanco, rojo......
+          - >-
+            Ligero y suave, úsalo como chal, ya sea sobre los hombros o la cabeza. Ideal para la fiesta de abril, baile
+            de flamenco español tradicional.
+          - >-
+            Regalo perfecto: esta gran bufanda se puede presentar como un regalo a tu familia, amigos e incluso a ti
+            mismo en Acción de Gracias, Navidad, cumpleaños, Día de la Madre o algunos días especiales.
+        variationAttributes:
+          - name: color_name
+            value: Fucsia/Morado
+        ParentASIN: B0DYYM5XJ1
     ParentASIN: B0DYYM5XJ1
     nombreCompleto: >-
       Yusons Mantón de Manila Mujer de Pico en Triángulo, Mantones de Flamenca Bordado en Flores, Mantoncillos de
@@ -484,12 +493,11 @@ productos:
       - name: color_name
         value: Negro/Rojo
     variantes_info:
-      total_en_stock: 22
+      total_en_stock: 21
       mostradas: 10
-      restantes: 12
+      restantes: 11
       truncado: true
     variantes_restantes_asins:
-      - B0DYYKNZGG
       - B0DYYM65H4
       - B0DYYM6JM7
       - B0DYYML3XP
@@ -502,7 +510,6 @@ productos:
       - B0F8R4HTTD
       - B0F8R4MNW6
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0DYYKNZGG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM65H4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM6JM7?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYML3XP?tag=recomendadorn-21&th=1&psc=1
@@ -2525,12 +2532,11 @@ productos:
       Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
     condicion: new
     variantes_info:
-      total_en_stock: 23
+      total_en_stock: 22
       mostradas: 10
-      restantes: 13
+      restantes: 12
       truncado: true
     variantes_restantes_asins:
-      - B072N5KC6F
       - B07BD1YF4Y
       - B07JG5GV2L
       - B07JGPSHGJ
@@ -2544,7 +2550,6 @@ productos:
       - B09Q98JVGF
       - B09QCV8RL2
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B072N5KC6F?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07BD1YF4Y?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JG5GV2L?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JGPSHGJ?tag=recomendadorn-21&th=1&psc=1
@@ -3289,4 +3294,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'

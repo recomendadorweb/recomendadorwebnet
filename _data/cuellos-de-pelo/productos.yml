@@ -210,50 +210,6 @@ productos:
             value: '80'
         ParentASIN: B01M03908M
         condicion: new
-      - ASIN: B07W3MD5MJ
-        nombreCompleto: soul young para bufandas De piel de zorro falso de Mujeres de invierno(120cm,Negro&Blanco)
-        valoracion: 5
-        salesrank: 88995
-        enlace: https://www.amazon.es/dp/B07W3MD5MJ?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
-        title: soul young para bufandas De piel de zorro falso de Mujeres de invierno(120cm,Negro&Blanco)
-        brand: soul young
-        precio: 29,99€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41b1lMi7WUL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41abOYV8wEL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41agJQ8ksIL._SL500_.jpg
-            width: 385
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41LfOkunS2L._SL500_.jpg
-            width: 385
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Za9-RdjCL._SL500_.jpg
-            width: 385
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41VTBc60FvL._SL500_.jpg
-            width: 500
-            height: 500
-        caracteristicasAmazon:
-          - Tamaño:120cm*18cm
-          - 'Material súper cálido: piel de zorro artificial, suave y no daña la piel'
-          - Estilo para uso informal o fiesta de noche
-          - >-
-            Look elegante: use la bufanda de piel sintética con su abrigo, suéter, chaleco y parka favoritos para una
-            apariencia deslumbrante y elegante en invierno
-          - Por favor, agitar o golpe con un secador de pelo para hacerlo mullido cuando usted recibe el articulo
-        variationAttributes:
-          - name: color_name
-            value: Negro&blanco,120cm
-          - name: size_name
-            value: '120'
-        ParentASIN: B01M03908M
-        condicion: new
       - ASIN: B07W3MFHR1
         title: soul young para bufandas De piel de zorro falso de Mujeres de invierno(80cm,Mapache)
         brand: soul young
@@ -403,6 +359,50 @@ productos:
           - name: size_name
             value: '120'
         ParentASIN: B01M03908M
+      - ASIN: B07W7BH5FR
+        title: soul young para bufandas De piel de zorro falso de Mujeres de invierno(120cm,Natural)
+        brand: soul young
+        precio: 29,99€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/411-VUVMuNL._SL500_.jpg
+        imagenWidth: 385
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41SrrQAtQ7L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41ft-kARdmL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417CJxX94ZL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41pw9qmVKcL._SL500_.jpg
+            width: 385
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41udCrh1ItL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51OiAyqBnyL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B07W7BH5FR?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - Tamaño:120cm*18cm
+          - 'Material súper cálido: piel de zorro artificial, suave y no daña la piel'
+          - Estilo para uso informal o fiesta de noche
+          - >-
+            Look elegante: use la bufanda de piel sintética con su abrigo, suéter, chaleco y parka favoritos para una
+            apariencia deslumbrante y elegante en invierno
+          - Por favor, agitar o golpe con un secador de pelo para hacerlo mullido cuando usted recibe el articulo
+        variationAttributes:
+          - name: color_name
+            value: Natural,120cm
+          - name: size_name
+            value: '120'
+        ParentASIN: B01M03908M
     title: soul young para bufandas De piel de zorro falso de Mujeres de invierno(80cm,Blanco)
     brand: soul young
     precio: 21,99€
@@ -457,16 +457,14 @@ productos:
       cálido y elegante.
     condicion: new
     variantes_info:
-      total_en_stock: 13
+      total_en_stock: 12
       mostradas: 10
-      restantes: 3
+      restantes: 2
       truncado: true
     variantes_restantes_asins:
-      - B07W7BH5FR
       - B07WKVRZ7R
       - B08JKDJJ95
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B07W7BH5FR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07WKVRZ7R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08JKDJJ95?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B07KC58X34
@@ -4545,4 +4543,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'

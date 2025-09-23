@@ -19,7 +19,7 @@ productos:
     lo_mejor: ✅ Fácil de usar 📡 GPS rápido 🪶 Ligero 🏃 Ideal para principiantes
     nombre: Garmin Forerunner 55
     valoracion: 4
-    precio: 153,49€
+    precio: 152,10€
     precioOriginal: 199,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -69,7 +69,7 @@ productos:
           Garmin Forerunner 55 - Reloj Inteligente para Running con GPS, Planes de Entrenamiento, notificaciones y
           Seguimiento del Bienestar, Blanco
         brand: Garmin
-        precio: 161,05€
+        precio: 165,34€
         precioOriginal: 199,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41u06XEXGYL._SL500_.jpg
@@ -110,7 +110,7 @@ productos:
       - ASIN: B0DD542SY9
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: 206,98€
+        precio: 205,88€
         precioOriginal: 239,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21EpcbLQRgL._SL500_.jpg
@@ -146,7 +146,7 @@ productos:
       - ASIN: B0DD5493Q2
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: 204,57€
+        precio: 203,47€
         precioOriginal: 239,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21Jzi-5UdjL._SL500_.jpg
@@ -256,7 +256,7 @@ productos:
           Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
           avanzadas, Pay, Autonomía de 14 Días, Blanco
         brand: Garmin
-        precio: 285,79€
+        precio: 371,24€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41e6z9PjjXL._SL500_.jpg
@@ -415,7 +415,7 @@ productos:
           Garmin Forerunner 255, Reloj Inteligente para Correr con GPS, Garmin Pay, Autonomía de hasta 14 Días, Gris
           Pizarra
         brand: Garmin
-        precio: 241,91€
+        precio: 223,98€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41oPOwZvB0L._SL500_.jpg
@@ -458,41 +458,6 @@ productos:
           - name: color_name
             value: Gris Pizarra
         ParentASIN: B0BYJVH4JP
-      - ASIN: B0B2WY7TTH
-        title: >-
-          Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
-          avanzadas, Pay, Autonomía de hasta 14 Días, Negro
-        brand: Garmin
-        precio: 564,33€
-        precioOriginal: No especificado
-        disponibilidad: Envío en 11 a 12 días
-        imagen: https://m.media-amazon.com/images/I/41wNe-M+lrL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41BZabm6AzL._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0B2WY7TTH?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Obtendrás una visión general del sueño, el estado de VFC y la sesión de entrenamiento diaria con tu morning
-            report.
-          - Desafía tus límites con la función de triatlón integrada y más de 30 perfiles de actividad.
-          - >-
-            Planifica tu estrategia con sesiones de entrenamiento diarias recomendadas, detalles del trayecto y mucho
-            más en el widget de carrera.
-          - >-
-            Descarga hasta 500 canciones, así como listas de reproducción, de tus cuentas de Spotify, Deezer o Amazon
-            Music.
-          - Paga el café después del entrenamiento con los pagos contactless de Garmin Pay.
-        variationAttributes:
-          - name: style_name
-            value: Forerunner 255 Música
-          - name: color_name
-            value: Negro
-        ParentASIN: B0BYJVH4JP
     ParentASIN: B0BYJVH4JP
     variationAttributes:
       - name: style_name
@@ -502,8 +467,8 @@ productos:
     nombreCompleto: Garmin Forerunner 255, Reloj Inteligente para Correr con GPS, Garmin Pay, Autonomía de hasta 14 Días, Azul Oscuro
     condicion: new
     variantes_info:
-      total_en_stock: 6
-      mostradas: 6
+      total_en_stock: 5
+      mostradas: 5
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -832,6 +797,57 @@ productos:
             value: Azul
         ParentASIN: B0CW13RWZH
         condicion: new
+      - ASIN: B0CT3SGHXL
+        title: Montre connectée Garmin Forerunner 165 Noir Gris fonce
+        brand: Garmin
+        precio: 245,99€
+        precioOriginal: 279,99€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/31lO0J0XTaL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41rrE4czoiL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41c1A5XG5GL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CT7kIAmAL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41r+Tllzb6L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41foABJnOTL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41RfNwy+vRL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0CT3SGHXL?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Consulta todos tus datos en una brillante pantalla táctil AMOLED con control adicional por botones. Elegante
+            y ligero, con un tamaño de caja de 43 mm y diferentes opciones de colores.
+          - >-
+            Con el estado de entrenamiento, verás cómo repercuten tus entrenamientos en tu forma física y verás el
+            principal beneficio obtenido de tu entrenamiento. Alcanza tus objetivos con sugerencias de entrenamientos
+            diarios personalizados que se adaptan en función del rendimiento y la recuperación.
+          - >-
+            Nada más levantarte, obtén el Morning Report con una visión general de tus perspectivas de sueño,
+            recuperación y entrenamiento, junto con el tiempo y el estado de la variabilidad de frecuencia cardíaca.
+          - >-
+            Deja el dinero en efectivo y las tarjetas en casa, los pagos contactless de Garmin Pay te permiten pagar las
+            compras sobre la marcha.
+          - Consigue hasta 11 días de autonomía en modo smartwatch y hasta 19 horas en modo GPS.
+        variationAttributes:
+          - name: configuration
+            value: Non-Music
+          - name: color_name
+            value: Negro
+        ParentASIN: B0CW13RWZH
     ParentASIN: B0CW13RWZH
     variationAttributes:
       - name: configuration
@@ -843,8 +859,8 @@ productos:
       Planes de Entrenamiento, Pay, Autonomía de 11 Días, Negro
     condicion: new
     variantes_info:
-      total_en_stock: 4
-      mostradas: 4
+      total_en_stock: 5
+      mostradas: 5
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -934,9 +950,9 @@ productos:
           SUUNTO Race Reloj Deportivo - Smartwatch Exteriores, Pantalla AMOLED Brillante De 1,43" Con Cristal De Zafiro,
           Corona Cómoda y Botones De Control, GPS De Doble Frecuencia, Larga Duración De La Batería
         brand: Suunto
-        precio: 390,18€
+        precio: 397,00€
         precioOriginal: 399,00€
-        disponibilidad: Envío en 3 a 4 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41LUmn4Gn7L._SL500_.jpg
         imagenWidth: 400
         imagenHeight: 500
@@ -1711,4 +1727,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'

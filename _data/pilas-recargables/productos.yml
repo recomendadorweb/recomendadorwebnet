@@ -1299,7 +1299,7 @@ productos:
         enlace: https://www.amazon.es/dp/B07QT2VKB5?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: Amazon Basics Cargador de Inteligente y Digital de para AA, AAA Pilas, 4 Canales de Carga Individuales, Negro
         brand: Amazon Basics
-        precio: 17,13€
+        precio: 17,01€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31rRwGXH0pL._SL500_.jpg
@@ -1348,7 +1348,7 @@ productos:
           Amazon Basics pilas recargables NiMH con cargador de pilas de 4 ranuras, enchufe de la UE, Paquete de 4 AA
           2000mAh, Negro
         brand: Amazon Basics
-        precio: 15,30€
+        precio: 15,19€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41HcLm-OL8L._SL500_.jpg
@@ -1418,7 +1418,7 @@ productos:
         enlace: https://www.amazon.es/dp/B0CL93863K?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: Amazon Basics Cargador de pilas para pilas recargables AA y AAA NiMh, enchufe de la UE, 4 espacios., Negro
         brand: Amazon Basics
-        precio: 11,47€
+        precio: 11,39€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31WYedwBltL._SL500_.jpg
@@ -1478,7 +1478,7 @@ productos:
           Amazon Basics Paquete de 8 baterías recargables NiMh AA de 2000 mAh con cargador de batería de 8 bahías, sin
           adaptador de CA, puerto USB C
         brand: Amazon Basics
-        precio: 24,86€
+        precio: 24,69€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41K4UQyki5L._SL500_.jpg
@@ -1549,7 +1549,7 @@ productos:
           Amazon Basics Paquete de 8 baterías recargables NiMh AAA 800 mAh + paquete de 8 baterías recargables NiMh AA
           2000 mAh con cargador de batería de 8 bahías sin adaptador CA puerto USB C 16 unidad Negro
         brand: Amazon Basics
-        precio: 33,47€
+        precio: 33,24€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41RYRHasUsL._SL500_.jpg
@@ -1616,7 +1616,7 @@ productos:
       Amazon Basics pilas recargables NiMH, con cargador de pilas de 4 ranuras, enchufe de la UE, Paquete de 8 (4 AAA
       800mAh + 4 AA 2000mAh), Negro
     brand: Amazon Basics
-    precio: 19,12€
+    precio: 18,99€
     precioOriginal: No especificado
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41hwkOZKC1L._SL500_.jpg
@@ -1717,7 +1717,7 @@ productos:
       EBL 1100mAh AAA Ni-MH Pilas Recargables de 1,2V para los Equipos Domésticos con Estuches de Almacenamiento (8
       Piezas)
     brand: EBL
-    precio: 8,99€
+    precio: 9,99€
     precioOriginal: 9,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41fUxLOVdHL._SL500_.jpg
@@ -1836,6 +1836,8 @@ productos:
         variationAttributes:
           - name: size_name
             value: 4 x AA
+          - name: color_name
+            value: AA
         ParentASIN: B0CGNKJVFQ
       - ASIN: B06VSYJ4R9
         nombreCompleto: >-
@@ -1896,224 +1898,8 @@ productos:
         variationAttributes:
           - name: size_name
             value: 16 x AA
-        ParentASIN: B0CGNKJVFQ
-      - ASIN: B01N1X2ACQ
-        title: >-
-          EBL 4 Piezas 1100mAh AAA 1,2V Pilas Recargables Ni-MH Alta Capacidad para Juguete Flash Mando Teléfono Fijo
-          GPS Exterior
-        brand: EBL
-        precio: 7,99€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41Z6odQ6-FL._SL500_.jpg
-        imagenWidth: 382
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Y0hrZrgML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41bVomqq57L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41pRvRcyM-L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41g9CsWu6TL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415RhXLXUTL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51THWuC0FjL._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B01N1X2ACQ?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Embalaje Humanizado】 4 piezas de AAA 1100mAh Ni- MH pilas recargables. También incluye una caja de la pila,
-            protege tu pilas que evita daños.
-          - >-
-            【Económica Duración】 EBL pilas se dedican a la avanzada tecnología de baja autodescarga con ProCyco. Y 1200
-            Tech, ProCyco (Professional recycle) ayuda a maximizar su mejor rendimiento energético durante la carga. Son
-            las excelentes pilas que se adaptan a tu vida.
-          - >-
-            【Baja Autodescarga 】 La estructura de sellado incrustada amplía el espacio de la celosía, hace más espacio
-            para el hidrógeno. Con un núcleo de iones de larga vida, mejorar la baja autodescarga hace que todavía
-            mantienen el 80% de su capacidad después de 3 años de no utilización.
-          - >-
-            【Garantía de Seguridad】 Pila recargable Ni-MH Eco-friendly , no Hg / Cd / Pb, no contamina el medio
-            ambiente. Y utiliza una DBCK cárcasa de acero que puede proteger la pila contra explosiones debido a la
-            sobrepresión y tambien resisten a temperaturas extremas.
-          - >-
-            【Compatibilidad con】 Las pilas son muy adecuado para los equipos domésticos como la cámara digital, el
-            juguete, el control remoto, el juego de la máquina portátil, radios de 2 vías, PDAs, linternas,
-            despertadores, Reloj, LCD-TV, cepillos de dientes, máquinas de afeitar y reproductores de audio portátiles.
-        variationAttributes:
-          - name: size_name
-            value: 4 Unidades-caja
-        ParentASIN: B0CGNKJVFQ
-      - ASIN: B06VT7M4GS
-        title: EBL 1100mAh AAA Pilas Recargables Ni-MH de 1,2V para los Equipos Domésticos (16 Unidades)
-        brand: EBL
-        precio: 17,99€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41UFRdTYs4L._SL500_.jpg
-        imagenWidth: 400
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51BhbrXbUIL._SL500_.jpg
-            width: 400
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Ri5MFPsML._SL500_.jpg
-            width: 400
-            height: 500
-          - url: https://m.media-amazon.com/images/I/413XEx--dtL._SL500_.jpg
-            width: 400
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41oa3N91wTL._SL500_.jpg
-            width: 400
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51jo0BdMKqL._SL500_.jpg
-            width: 400
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51aZJgYcfZL._SL500_.jpg
-            width: 400
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41Wq0nPjfjL._SL500_.jpg
-            width: 400
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B06VT7M4GS?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Tecnología Procyco】 EBL pilas se dedican a la tecnología de baja autodescarga con ProCyco y 1200 Tech. Y
-            ayuda a maximizar su mejor rendimiento energético durante la carga. Es muy conveniente y le permite ahorrar
-            dinero en su larga vida.
-          - >-
-            【Alta Capacidad】 Ya no se preocupe por el rendimiento de las pilas, EBL 1100mAh AAA 1.2V pilas
-            proporcionarán una potencia ultra energía para que sus dispositivos funcionen bien y más duran.
-          - >-
-            【Súper Celosía】 EBL pila recargable fabricadas en tecnología de súper celosía, hacen que sea más espacio
-            interior, proporcionan voltaje constante y el excelente rendimiento en la carga y descarga.
-          - >-
-            【Baja Autodescarga 】 La estructura de sellado incrustada amplía el espacio de la celosía, hace más espacio
-            para el hidrógeno. Mejorar la baja autodescarga hace que todavía mantienen el 80% de su capacidad después de
-            3 años de no utilización.
-          - >-
-            【Garantía de Seguridad】 Pila recargable Ni-MH Eco-friendly , no Hg / Cd / Pb, no contamina el medio
-            ambiente. Y utiliza una DBCK cárcasa de acero que puede proteger la pila contra explosiones debido a la
-            sobrepresión.
-        variationAttributes:
-          - name: size_name
-            value: 16 Unidades
-        ParentASIN: B0CGNKJVFQ
-      - ASIN: B078ZD99LV
-        title: EBL AAA Baterías Recargables de 1100mAh con último Paquete (4 Unidades)
-        brand: EBL
-        precio: 8,99€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/417meZh3AyL._SL500_.jpg
-        imagenWidth: 292
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Y0hrZrgML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41bVomqq57L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41pRvRcyM-L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41g9CsWu6TL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415RhXLXUTL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41BU8Nf1e1L._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B078ZD99LV?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Capacidad Máxima】 4 unidades AAA 1100mAh pilas recargables, la capacidad es más alta en Amazon, alta
-            capacidad y vida útil más larga que las alcalinas.
-          - >-
-            【Baja Autodescarga】 La estructura de sellado incrustada amplía el espacio de la celosía, hace más espacio
-            para el hidrógeno. Con un núcleo de iones de larga vida, mejorar la baja autodescarga hace que todavía
-            mantienen el 80% de su capacidad después de 3 años de no utilización.
-          - >-
-            【Tecnología Procyco】 EBL pilas se dedican a la avanzada tecnología de baja autodescarga con ProCyco. Y 1200
-            Tech, ProCyco (Professional recycle) ayuda a maximizar su mejor rendimiento energético durante la carga. Son
-            las excelentes pilas que se adaptan a tu vida.
-          - >-
-            【Pilas Precargadas】 Todas EBL batería recargables son precargadas, puedes ser utilizado inmediatamente al
-            recibir tu paquete. Las batería recargables Ni-MH sin efecto memoria, puedes estar listas para usar.
-          - >-
-            【Garantía De Seguridad】 Pila recargable Ni-MH de protección ambiental, no Hg / Cd / Pb, no contamina el
-            medio ambiente. Y utiliza una DBCK cárcasa de acero que puede proteger la pila contra explosiones debido a
-            la sobrepresión y tambien resisten a temperaturas extremas.
-        variationAttributes:
-          - name: size_name
-            value: 4 Unidades
-        ParentASIN: B0CGNKJVFQ
-      - ASIN: B08RBHH2WD
-        title: EBL 20 x Pilas AAA Recargables 1100mAh Ni-MH 1,2V Precargadas
-        brand: EBL
-        precio: 23,99€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/51s1KOS+L+L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 493
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Y0hrZrgML._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41bVomqq57L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41pRvRcyM-L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41g9CsWu6TL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415RhXLXUTL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51THWuC0FjL._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B08RBHH2WD?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            🔋Capacidad Máxima: 20PCS AAA 1100mAh pilas recargables, la capacidad es más alta en Amazon, alta capacidad
-            y vida útil más larga que las alcalinas (Incluyendo 5 * cajas de almacenamiento de la pila).
-          - >-
-            🔋Baja Autodescarga: La estructura de sellado incrustada amplía el espacio de la celosía, hace más espacio
-            para el hidrógeno. Mejorar la baja autodescarga hace que todavía mantienen el 80% de su capacidad después de
-            3 años de no utilización.
-          - >-
-            🔋Tecnología Procyco: EBL pilas se dedican a la tecnología de baja autodescarga con ProCyco. Y 1200 Tech,
-            ProCyco (Professional recycle) ayuda a maximizar su mejor rendimiento energético durante la carga. Es muy
-            conveniente y le permite ahorrar dinero en su larga vida.
-          - >-
-            🔋Pilas Precargadas: Todas EBL pilas recargables son precargadas, puedes ser utilizado inmediatamente al
-            recibir tu paquete. Las pilas recargables Ni-MH sin efecto memoria, puedes estar listas para usar.
-          - >-
-            🔋Garantía de Seguridad: Pila recargable Ni-MH Eco-friendly , no Hg / Cd / Pb, no contamina el medio
-            ambiente. Y utiliza una DBCK cárcasa de acero que puede proteger la pila contra explosiones debido a la
-            sobrepresión.
-        variationAttributes:
-          - name: size_name
-            value: 20 x AAA
+          - name: color_name
+            value: AA
         ParentASIN: B0CGNKJVFQ
     title: >-
       EBL 2800mAh AA de Alta Capacidad Ni-MH ProCyco con 1200 Tech de Pilas Recargables de 1,2V para los Equipos
@@ -2174,8 +1960,8 @@ productos:
       - name: color_name
         value: AA
     variantes_info:
-      total_en_stock: 6
-      mostradas: 6
+      total_en_stock: 2
+      mostradas: 2
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -2217,7 +2003,7 @@ productos:
           EBL Cargador Rápido de Pilas con 4 x AA 2800mAh y 4 x AAA 1100mAh, Cargador Inteligente LED Ni-MH USB 5V 2A &
           Protección Múltiple
         brand: EBL
-        precio: 19,94€
+        precio: 20,99€
         precioOriginal: 20,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41g+Ec18TWL._SL500_.jpg
@@ -2276,8 +2062,8 @@ productos:
       EBL Cargador Rápido de Pilas con 8 x AA Pilas Recargables, Cargador 8 Ranuras Independientes, Carga USB y
       Protección Múltiple
     brand: EBL
-    precio: 24,69€
-    precioOriginal: 25,99€
+    precio: 25,99€
+    precioOriginal: 26,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41tN-t60OSL._SL500_.jpg
     imagenWidth: 500
@@ -2358,4 +2144,4 @@ productos:
       progreso. También me tranquilizó que detectara pilas defectuosas y ofreciera protección contra sobrecarga y
       polaridad inversa. Por eso lo recomendaría si buscas algo versátil y portátil; solo asegúrate de usar un adaptador
       de 2.0A como indican.
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'

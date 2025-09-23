@@ -891,7 +891,7 @@ productos:
           Cecotec Colchón Viscoelástico Flow PureVital 1900 Medida 150x200. Multicapa, Altura 21cm, Firmeza Alta, Núcleo
           FoamVital, Doble Cara Dual System para Invierno y Verano
         brand: Cecotec
-        precio: 209,00€
+        precio: 159,00€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
@@ -1280,53 +1280,55 @@ productos:
           - name: color_name
             value: Granate
         ParentASIN: B0CS9KRNNK
-      - ASIN: B0B6PDXKYT
+      - ASIN: B0B9BSG8B7
         title: >-
-          Cecotec Colchón Viscoelástico Flow PureVital 1900 135x200. Multicapa, Altura 21 cm, Núcleo FoamVital, Firmeza
-          Alta, Capa Viscoelástica VisComfort, Tejido SoftTex, Doble Cara Dual System
+          Cecotec Colchón Viscoelástico Flow ViscoCare 1900 105x190cm.Multicapa, Altura 21 cm, Núcleo FoamTech, Firmeza
+          Alta, Capa Viscoelástica ViscoCare, Tejido PureCare, Doble Cara AllPerfect
         brand: Cecotec
-        precio: 215,65€
+        precio: 104,00€
         precioOriginal: No especificado
-        disponibilidad: Envío en 3 a 4 días
-        imagen: https://m.media-amazon.com/images/I/418yjRzEbpL._SL500_.jpg
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41InZTIv-vL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51LEizFDQhL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51Ax9W+Kd2L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41Z9qG-oy0L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/31h8MZKMhQL._SL500_.jpg
+            width: 500
+            height: 205
+          - url: https://m.media-amazon.com/images/I/31Oap+P9pqL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41fByBO6S-L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/31T6fpYFgxL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41-8hZYjwQL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51BOBQ5tSaL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/51BG7S3X17L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415eiqAtPnL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41sE1bJZ+FL._SL500_.jpg
             width: 500
             height: 500
         condicion: new
-        enlace: https://www.amazon.es/dp/B0B6PDXKYT?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B0B9BSG8B7?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - Colchón de firmeza alta y altura total de 21 cm con la medida ideal para tu descanso.
-          - Núcleo FoamVital de espuma HR de 23 Kg/m³ que aporta resistencia y firmeza al conjunto.
+          - Núcleo FoamTech de espuma HR que aporta resistencia y firmeza al conjunto.
           - >-
-            Compuesto por diferentes capas diseñadas para mejorar tu descanso, con Tejido SoftTex y doble cara Dual
-            System de descanso verano e Invierno con sistema de triple protección.
+            Compuesto por diferentes capas diseñadas para mejorar tu descanso, con Tejido Purecare y doble cara
+            AllPerfect de descanso verano e Invierno con sistema de triple protección.
           - >-
-            Capa viscoelástica VisComfort que se adaptará a las curvas de tu cuerpo., permitiendo que la columna
-            vertebral permanezca en una posición neutral.
-          - El colchón se entrega enrollado y envasado al vacío para transportar el colchón de la manera más cómoda.
+            Capa viscoelástica ViscoCare que se adaptará a las curvas de tu cuerpo, permitiendo que la columna vertebral
+            permanezca en una posición neutra.
+          - >-
+            El colchón se entrega enrollado y envasado al vacío para transportar el colchón de la manera más cómoda y
+            segura.
         variationAttributes:
           - name: size_name
-            value: 135 x 200 cm
+            value: 105 x 190 cm
           - name: color_name
-            value: Granate
+            value: Azul
         ParentASIN: B0CS9KRNNK
     ParentASIN: B0CS9KRNNK
     nombreCompleto: >-
@@ -1339,16 +1341,13 @@ productos:
       - name: color_name
         value: Azul
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 29
       mostradas: 10
-      restantes: 21
+      restantes: 19
       truncado: true
     variantes_restantes_asins:
-      - B0B9BSG8B7
-      - B0B9BTJS8M
       - B0B9BVHY6M
       - B0B9BW7W4N
-      - B0B9BW8G35
       - B0B9BX7R2R
       - B0B9BXH28V
       - B0B9BXQBWJ
@@ -1360,17 +1359,15 @@ productos:
       - B0BPYW4ZJ9
       - B0BPZ157H5
       - B0BPZQZWR4
+      - B0BQ19C3MW
       - B0BQ19VTQL
       - B0BQ1NM4QR
       - B0BQ1SG16F
       - B0BQ1TCDT8
       - B0BVRHWFYK
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0B9BSG8B7?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0B9BTJS8M?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BVHY6M?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BW7W4N?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0B9BW8G35?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BX7R2R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXH28V?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXQBWJ?tag=recomendadorn-21&th=1&psc=1
@@ -1382,6 +1379,7 @@ productos:
       - https://www.amazon.es/dp/B0BPYW4ZJ9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZ157H5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZQZWR4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BQ19C3MW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ19VTQL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ1NM4QR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ1SG16F?tag=recomendadorn-21&th=1&psc=1
@@ -5739,9 +5737,9 @@ productos:
       Multicapa Transpirable. Nucleo de Espuma HR ComfortFusion
     condicion: new
     variantes_info:
-      total_en_stock: 34
+      total_en_stock: 36
       mostradas: 10
-      restantes: 24
+      restantes: 26
       truncado: true
     variantes_restantes_asins:
       - B0C7R2KFVN
@@ -5760,10 +5758,12 @@ productos:
       - B0FRNCX5WG
       - B0FRND418H
       - B0FRNDB7FW
+      - B0FRNF38J1
       - B0FRNF38J2
       - B0FRNJJYX9
       - B0FRNJPRB3
       - B0FRNJYHRQ
+      - B0FRNK4VNN
       - B0FRNK7PP2
       - B0FRNK9F92
       - B0FRNL2MT7
@@ -5785,10 +5785,12 @@ productos:
       - https://www.amazon.es/dp/B0FRNCX5WG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRND418H?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNDB7FW?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0FRNF38J1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNF38J2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNJJYX9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNJPRB3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNJYHRQ?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0FRNK4VNN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNK7PP2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNK9F92?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FRNL2MT7?tag=recomendadorn-21&th=1&psc=1
@@ -6937,7 +6939,7 @@ productos:
           Naturalex - Colchón Muelles 160x200 cm - Altura 30 cm - Privilege - Híbrido Muelles Ensacados y Viscoelástica
           - Espuma HR y Blue Látex - Ergonómico, Transpirable, Gran Adaptabilidad - Semifirme
         brand: Naturalex
-        precio: 269,29€
+        precio: 265,48€
         precioOriginal: 299,39€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51-gow4QAmL._SL500_.jpg
@@ -8103,60 +8105,6 @@ productos:
           - name: size_name
             value: 140 x 190 cm
         ParentASIN: B0D9FQ4BKJ
-      - ASIN: B08BXPLK31
-        title: >-
-          LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
-          160x190 cm
-        brand: LUCID
-        precio: 219,90€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41YFczsupqL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41Lulmv-iyL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/418MnLlIOtL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/510khp6b7yL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/410ruwH1I5L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/515U8SQE43L._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B08BXPLK31?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            AJUSTE PERFECTO: Este colchon viscoelastico cuenta con una suave textura de 20 centímetros que es perfecta
-            para las personas que duermen de lado o boca arriba
-          - >-
-            INFUSIÓN DE GEL: La espuma viscoelástica con partículas de gel regula la temperatura y al mismo tiempo se
-            adapta al cuerpo para un confort óptimo durante toda la noche
-          - >-
-            REGULA LA TEMPERATURA: La capa de espuma viscoelástica transpirable cuenta con partículas de gel, por lo que
-            ofrece una experiencia más fresca durante el descanso que la espuma viscoelástica tradicional, ayudando a
-            regular la temperatura corporal
-          - >-
-            ESPUMA CON MEMORIA SUAVE: Una entrecapa de 2,5 cm de espuma viscoelástica se añade a una espuma de mayor
-            firmeza con partículas de carbón de bambú; El carbón de bambú elimina los olores y absorbe el exceso de
-            humedad
-          - >-
-            SEGURO Y DE LARGA DURACIÓN: Utilizamos únicamente espuma viscoelástica con la certificación OEKO-TEX y
-            CertiPUR US que garantiza la seguridad y la comodidad de nuestros clientes; 10 años de garantía limitada del
-            fabricante
-        variationAttributes:
-          - name: style_name
-            value: 20 cm
-          - name: size_name
-            value: 160 x 190 cm
-        ParentASIN: B0D9FQ4BKJ
       - ASIN: B08BXPMZR1
         title: >-
           LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -8318,6 +8266,60 @@ productos:
           - name: size_name
             value: 150 x 190 cm
         ParentASIN: B0D9FQ4BKJ
+      - ASIN: B08BXK8J5D
+        title: >-
+          LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
+          120x200 cm
+        brand: LUCID
+        precio: 174,90€
+        precioOriginal: No especificado
+        disponibilidad: Envío en 6 a 7 meses
+        imagen: https://m.media-amazon.com/images/I/41YFczsupqL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Lulmv-iyL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/418MnLlIOtL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/510khp6b7yL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/410ruwH1I5L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/515U8SQE43L._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08BXK8J5D?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            AJUSTE PERFECTO: Este colchon viscoelastico cuenta con una suave textura de 20 centímetros que es perfecta
+            para las personas que duermen de lado o boca arriba
+          - >-
+            INFUSIÓN DE GEL: La espuma viscoelástica con partículas de gel regula la temperatura y al mismo tiempo se
+            adapta al cuerpo para un confort óptimo durante toda la noche
+          - >-
+            REGULA LA TEMPERATURA: La capa de espuma viscoelástica transpirable cuenta con partículas de gel, por lo que
+            ofrece una experiencia más fresca durante el descanso que la espuma viscoelástica tradicional, ayudando a
+            regular la temperatura corporal
+          - >-
+            ESPUMA CON MEMORIA SUAVE: Una entrecapa de 2,5 cm de espuma viscoelástica se añade a una espuma de mayor
+            firmeza con partículas de carbón de bambú; El carbón de bambú elimina los olores y absorbe el exceso de
+            humedad
+          - >-
+            SEGURO Y DE LARGA DURACIÓN: Utilizamos únicamente espuma viscoelástica con la certificación OEKO-TEX y
+            CertiPUR US que garantiza la seguridad y la comodidad de nuestros clientes; 10 años de garantía limitada del
+            fabricante
+        variationAttributes:
+          - name: style_name
+            value: 20 cm
+          - name: size_name
+            value: 120 x 200 cm
+        ParentASIN: B0D9FQ4BKJ
     ParentASIN: B0D9FQ4BKJ
     nombreCompleto: >-
       LUCID Colchón viscoelástico - Altura 20 cm, blando - Con carbón de bambú - Espuma transpirable y refrescante,
@@ -8329,12 +8331,11 @@ productos:
       - name: size_name
         value: 135 x 190 cm
     variantes_info:
-      total_en_stock: 26
+      total_en_stock: 25
       mostradas: 10
-      restantes: 16
+      restantes: 15
       truncado: true
     variantes_restantes_asins:
-      - B08BXK8J5D
       - B08BXK962R
       - B08BXNWBPR
       - B08BXPFCRL
@@ -8349,9 +8350,8 @@ productos:
       - B09FYF4DJL
       - B09FYF4Y6S
       - B09FYFBXTM
-      - B09FYGVBMW
+      - B09FYG17M7
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B08BXK8J5D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08BXK962R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08BXNWBPR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08BXPFCRL?tag=recomendadorn-21&th=1&psc=1
@@ -8366,7 +8366,7 @@ productos:
       - https://www.amazon.es/dp/B09FYF4DJL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYF4Y6S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYFBXTM?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B09FYGVBMW?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYG17M7?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0883KR5BN
     a_tener_en_cuenta: Espuma Viscoelástica + grafeno
     brand: Imperial Confort
@@ -8460,7 +8460,7 @@ productos:
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT Neutralizer,
           Transpirable y doble cara (invierno/verano), Blanco - Gris, Grosor 30 cm - 150x190
         brand: Imperial Confort
-        precio: 360,69€
+        precio: 355,62€
         precioOriginal: 380,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31HIVwXAOLL._SL500_.jpg
@@ -8620,7 +8620,7 @@ productos:
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
           Transpirable y doble cara (invierno/verano) - Grosor 30 cm - 140x190
         brand: Imperial Confort
-        precio: 353,83€
+        precio: 351,40€
         precioOriginal: 353,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31HIVwXAOLL._SL500_.jpg
@@ -8737,7 +8737,7 @@ productos:
           Imperial Confort ViscoBayscent - Colchón Visco Grafeno de espuma con tratamiento BAYSCENT® Neutralizer -
           Transpirable y doble cara (invierno/verano) - Grosor 30 cm - 90x200
         brand: Imperial Confort
-        precio: 226,57€
+        precio: 228,23€
         precioOriginal: 243,13€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31HIVwXAOLL._SL500_.jpg
@@ -9321,7 +9321,7 @@ productos:
           amuéblate online - Colchón Viscoelástico Visco Red Reversible, Firmeza-Dureza Media-Alta, Grosor 20cm,
           Antiácaros, Antibacerias e Hipoalergénico, 140x200
         brand: amuéblate online
-        precio: 161,14€
+        precio: 174,37€
         precioOriginal: 174,37€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31fBPMD4O8L._SL500_.jpg
@@ -9584,29 +9584,25 @@ productos:
     imagenWidth: 500
     caracteristicasAmazon:
       - >-
-        SISTEMA VISCONFORT: Fabricado de forma sostenible en España, con certificado OEKO-TEX, el colchón viscoelástico
-        aloe vera absorbe los puntos de presión y maximiza el confort durante las horas de descanso. La combinación de
-        Visco acu-point, un material de poro abierto transpirable y duradero que recupera su forma inicial y ofrece
-        independencia de lechos; con Breath Soft una espuma muy transpirable que aumenta la sensación de acogida es
-        equilibrio perfecto. ALTURA TOTAL DEL COLCHÓN: +/-21cm
+        COLCHÓN DE FIRMEZA ALTA CON NÚCLEO GRAVITYFOAM: Este colchón 135x190 viscoelástico ofrece un soporte ergonómico,
+        distribuyendo el peso de forma homogénea, manteniendo la columna alineada y cuidando tu espalda durante el
+        descanso. Fabricado en España con certificado OEKO-TEX.
       - >-
-        REVERSIBLE: Ambas caras del colchón viscoelástico antiácaros están preparadas para ofrecer un confort
-        inigualable, ya que los materiales utilizados son los mismos. Voltear el colchón periódicamente (cada 6 meses)
-        permite que las dos partes reciban el mismo peso y la misma presión, evitando deformaciones prematuras y
-        alargando la vida útil del colchón.
+        SISTEMA REVERSIBLE DUAL SENSE PARA VERANO E INVIERNO: Confort 2 en 1 con doble cara: una cara el colchón
+        viscoelástico 135x190 para verano con tejido Aloe Vera fresco, suave y altamente transpirable; y otra para
+        invierno con tejido Stretch termorregulador que conserva el calor corporal.
       - >-
-        NÚCLEO ERGONÓMICO GRAVITAS CORE. El colchón viscoelástico aloe vera se adapta perfectamente a la curvatura del
-        cuerpo, consiguiendo así una correcta higiene postural durante toda la noche. El núcleo de poro abierto
-        resistente, transpirable y duradero permite un reparto homogéneo del peso en la superficie y aporta una firmeza
-        media-alta idónea para mantener la columna alineada mientras descansas.
+        CONFORT ENVOLVENTE CON VISCOELÁSTICA CLOUDFEEL + XSPIRE: Colchón 135x190 viscoelástico con doble capa de
+        viscoelástica Cloudfeel + Xpire Supersoft. Proporciona sensación efecto nube con una acogida y confort superior,
+        aliviando los puntos de presión para un descanso profundo.
       - >-
-        TEJIDO ALOE VERA STRECH: Tejido suave y agradable que actúa favoreciendo los movimientos en el descanso. Además
-        de ofrecer una alta transpiración, generando un continuo paso de aire, garantiza que el colchón viscoelástico
-        antiácaros se encuentre siempre bien aireado y libre ácaros, humedades y malos olores.
+        COLCHÓN VISCOELÁSTICO 135x190 MULTICAPA 11 AIRSOFT PRO que incorpora la última tecnología de descanso para
+        mejorar la calidad del sueño. Desde tejido Aloe Vera, hasta tejidos 3D transpirables, fibras antiácaros e
+        hipoalergénicas y núcleo de célula abierta.
       - >-
-        PLATABANDA CON TEJIDO 3D AIR PATH TRANSPIRABLE: El tejido 3D permite una circulación continua del aire a través
-        del colchón viscoelástico aloe vera, favoreciendo la mejor transpiración del mismo y evitando la acumulación de
-        calor.
+        HIGIENE Y FRESCOR GARANTIZADOS CON TEJIDO 3D AIR PATH. Este colchón 135x190 viscoelástico con ventilación
+        lateral elimina el calor y la humedad, evitando que genere incomodidad durante el sueño y posibles reacciones
+        alérgicas Para un descanso más limpio y saludable.
     title: Don descanso ZZ Colchón Viscoelástico Aloe Vera Mulhacén, Espuma con Memoria, Gris, 135x190 cm
     variantes:
       - ASIN: B08W65LKR8
@@ -10302,9 +10298,9 @@ productos:
       - name: color_name
         value: Gris
     variantes_info:
-      total_en_stock: 202
+      total_en_stock: 102
       mostradas: 10
-      restantes: 192
+      restantes: 92
       truncado: true
     variantes_restantes_asins:
       - B08W66TZQQ
@@ -10397,108 +10393,8 @@ productos:
       - B0CL4ZSTMK
       - B0CL4ZY6FN
       - B0CL51DGD3
-      - B0D3LJT9JB
-      - B0D3LK7RJC
-      - B0D3LKG98X
-      - B0D3LKG99B
-      - B0D3LKWX2X
-      - B0D3LL18LW
-      - B0D3LL18M5
-      - B0D3LL7BXG
-      - B0D3LL7R1X
-      - B0D3LL8JSZ
-      - B0D3LLGWX7
-      - B0D3LLHC88
-      - B0D3LLHCSV
-      - B0D3LLJMP3
-      - B0D3LLKRM1
-      - B0D3LLL484
-      - B0D3LLPK9S
-      - B0D3LLR5G1
-      - B0D3LLR7KT
-      - B0D3LLV4XC
-      - B0D3LLZQZQ
-      - B0D3LM1N6Q
-      - B0D3LM29B3
-      - B0D3LM2VF2
-      - B0D3LM2Z9P
-      - B0D3LM35M5
-      - B0D3LM3QFS
-      - B0D3LM4VNC
-      - B0D3LM6W1L
-      - B0D3LM87HY
-      - B0D3LM9WCK
-      - B0D3LMB8KS
-      - B0D3LMBDPC
-      - B0D3LMC7HD
-      - B0D3LMCQD8
-      - B0D3LMDZVY
-      - B0D3LMG1M9
-      - B0D3LMGTV2
-      - B0D3LMKWX1
-      - B0D3LMKZNB
-      - B0D3LML3CF
-      - B0D3LML66N
-      - B0D3LMPLKM
-      - B0D3LMPQF4
-      - B0D3LMQLCY
-      - B0D3LMSPFJ
-      - B0D3LMSQFW
-      - B0D3LMSR27
-      - B0D3LMTMX6
-      - B0D3LMVSFG
-      - B0D3LMXKYT
-      - B0D3LMXMDQ
-      - B0D3LMYLWW
-      - B0D3LMYQWW
-      - B0D3LMYZP7
-      - B0D3LMZ3TB
-      - B0D3LN1DF6
-      - B0D3LN1S99
-      - B0D3LN1XPW
-      - B0D3LN2RH6
-      - B0D3LN2Y1G
-      - B0D3LN33R5
-      - B0D3LN3CXF
-      - B0D3LN4GWN
-      - B0D3LN5GXL
-      - B0D3LN669X
-      - B0D3LN8TLD
-      - B0D3LN94N7
-      - B0D3LNB2S7
-      - B0D3LNG45F
-      - B0D3LNGB38
-      - B0D3LNJ3RG
-      - B0D3LNJ3SH
-      - B0D3LNJFRB
-      - B0D3LNK6QS
-      - B0D3LNL128
-      - B0D3LNMMCP
-      - B0D3LNPCKD
-      - B0D3LNQ7Q7
       - B0D3LNQGWQ
-      - B0D3LNQXL2
-      - B0D3LNRK1G
-      - B0D3LNS22L
-      - B0D3LNTJGG
-      - B0D3LNYQZB
-      - B0D3LNZCNX
-      - B0D3LNZWZ6
-      - B0D3LP1DW4
-      - B0D3LP2CJK
-      - B0D3LP2XYZ
-      - B0D3LP3ZM9
-      - B0D3LP49D8
-      - B0D3LP4FXD
-      - B0D3LP4R2K
-      - B0D3LP7T1R
-      - B0D3LP8VVX
       - B0D3LPNK8T
-      - B0D3LPQ7J5
-      - B0D3LPT165
-      - B0D3LQ1PNL
-      - B0D3LQQPBM
-      - B0D3LQQPC7
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B08W66TZQQ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08W66V4DL?tag=recomendadorn-21&th=1&psc=1
@@ -10590,108 +10486,8 @@ productos:
       - https://www.amazon.es/dp/B0CL4ZSTMK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CL4ZY6FN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CL51DGD3?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LJT9JB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LK7RJC?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LKG98X?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LKG99B?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LKWX2X?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LL18LW?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LL18M5?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LL7BXG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LL7R1X?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LL8JSZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLGWX7?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLHC88?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLHCSV?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLJMP3?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLKRM1?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLL484?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLPK9S?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLR5G1?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLR7KT?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLV4XC?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LLZQZQ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM1N6Q?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM29B3?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM2VF2?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM2Z9P?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM35M5?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM3QFS?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM4VNC?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM6W1L?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM87HY?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LM9WCK?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMB8KS?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMBDPC?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMC7HD?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMCQD8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMDZVY?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMG1M9?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMGTV2?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMKWX1?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMKZNB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LML3CF?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LML66N?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMPLKM?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMPQF4?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMQLCY?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMSPFJ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMSQFW?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMSR27?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMTMX6?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMVSFG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMXKYT?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMXMDQ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMYLWW?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMYQWW?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMYZP7?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LMZ3TB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN1DF6?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN1S99?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN1XPW?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN2RH6?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN2Y1G?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN33R5?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN3CXF?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN4GWN?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN5GXL?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN669X?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN8TLD?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LN94N7?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNB2S7?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNG45F?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNGB38?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNJ3RG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNJ3SH?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNJFRB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNK6QS?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNL128?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNMMCP?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNPCKD?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNQ7Q7?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D3LNQGWQ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNQXL2?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNRK1G?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNS22L?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNTJGG?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNYQZB?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNZCNX?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LNZWZ6?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP1DW4?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP2CJK?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP2XYZ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP3ZM9?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP49D8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP4FXD?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP4R2K?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP7T1R?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LP8VVX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D3LPNK8T?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LPQ7J5?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LPT165?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LQ1PNL?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LQQPBM?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D3LQQPC7?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0BWF11KKH
     a_tener_en_cuenta: Viscoelástico
     brand: Dormio
@@ -11264,4 +11060,4 @@ productos:
     variantes_restantes_enlaces: []
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'

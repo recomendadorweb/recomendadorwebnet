@@ -21,7 +21,7 @@ productos:
       - Cuerpo de aluminio con acabado premium
     brand: Razer
     ASIN: B08P52KQ8G
-    precio: 151,78€
+    precio: 151,79€
     precioOriginal: 269,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -193,7 +193,7 @@ productos:
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
-        precio: 128,09€
+        precio: 128,08€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -298,7 +298,7 @@ productos:
           Razer Huntsman Mini (Purple Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores
           opto-mecánicos (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
         brand: Razer
-        precio: 88,98€
+        precio: 92,97€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
@@ -357,9 +357,9 @@ productos:
           Razer Huntsman V2 Tenkeyless (Interruptor Morado) - Teclado Óptico para Juegos (Interruptores Ópticos Clicky,
           Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
         brand: Razer
-        precio: 129,08€
+        precio: 145,72€
         precioOriginal: 189,99€
-        disponibilidad: Envío en 9 a 10 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41AyGvdnS9L._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -413,7 +413,7 @@ productos:
           Huntsman Mini (Red Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores opto-mecánicos
           (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
         brand: Razer
-        precio: 93,90€
+        precio: 99,99€
         precioOriginal: 139,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
@@ -535,7 +535,7 @@ productos:
           Razer Huntsman V2 Tenkeyless (Red Switch) - Teclado óptico para juegos sin teclado numérico (reposa-palmas,
           HyperPolling, teclas Doubleshot PBT) Teclado Español - Negro
         brand: Razer
-        precio: 156,53€
+        precio: 161,97€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41dOmFHBrmL._SL500_.jpg
@@ -594,49 +594,62 @@ productos:
           - name: color_name
             value: Interruptor Rojo Linear
         ParentASIN: B0F9Q1MJLF
-      - ASIN: B097F3HGC4
+      - ASIN: B08BZDLVNN
         title: >-
-          Razer Huntsman V2 Tenkeyless (Interruptor Rojo) - Teclado Óptico para Juegos (Interruptores Ópticos Lineales
-          Gen-2, Teclas PBT Doubleshot, Reposamuñecas Ergonómicos) Diseño US| Negro
+          Razer Huntsman Mini (Interruptor Morado) - 60% Teclado Compacto para Juegos (Interruptores Óptico-Mecánicos
+          Clicky, Teclas PBT Doubleshot, Cable USB-C Desmontable) Diseño US| Blanco Mercury
         brand: Razer
-        precio: 171,23€
-        precioOriginal: 189,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41NA4I97ZrL._SL500_.jpg
+        precio: 116,99€
+        precioOriginal: 129,99€
+        disponibilidad: Envío en 3 a 7 meses
+        imagen: https://m.media-amazon.com/images/I/41m8BNuVVXL._SL500_.jpg
         imagenWidth: 500
-        imagenHeight: 389
+        imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/418q1qNku0L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51QMFIxQR+L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/31CLWqGP2KL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51oiQAqwxyL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41Qocv9KilL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51FBqctLpxL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41TovfvT7HL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51glYStg94L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41okZ74vhZL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41ocnrSdu6L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41L-j0z+9qL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/31D9nPcpArL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/417kgwXqALL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41I9mqeDpRL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41jRIPnwyHL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/514Qb0PjWEL._SL500_.jpg
             width: 500
             height: 500
         condicion: new
-        enlace: https://www.amazon.es/dp/B097F3HGC4?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B08BZDLVNN?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
-          - Fácil de instalar
-          - Teclado con reposamuñecas
-          - Ofrece un tecleo suave y silencioso
+          - Teclas de PBT de doble inyección con funciones secundarias impresas en el lateral
+          - Memoria integrada y preajustes de iluminación
+          - Diseño compacto 60% para una experiencia de juego portátil y sencilla
+          - Estructura de aluminio para una durabilidad óptima
         variationAttributes:
           - name: style_name
-            value: Huntsman V2 TKL
+            value: Huntsman Mini Mercury Ed.
           - name: size_name
             value: Diseño US
           - name: color_name
-            value: Interruptor Rojo Linear
+            value: Interruptor Morado Clicky
         ParentASIN: B0F9Q1MJLF
     ParentASIN: B0F9Q1MJLF
     variationAttributes:
@@ -651,12 +664,11 @@ productos:
       control giratorio digital, 4 teclas multimedia, Chroma RGB) Teclado Español - Negro
     condicion: used
     variantes_info:
-      total_en_stock: 19
+      total_en_stock: 18
       mostradas: 10
-      restantes: 9
+      restantes: 8
       truncado: true
     variantes_restantes_asins:
-      - B08BZDLVNN
       - B097F3KDS3
       - B0BDZBXF63
       - B0CDBXR2B2
@@ -666,7 +678,6 @@ productos:
       - B0D2P9KPJ7
       - B0DT9LJ177
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B08BZDLVNN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B097F3KDS3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BDZBXF63?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDBXR2B2?tag=recomendadorn-21&th=1&psc=1
@@ -1026,7 +1037,7 @@ productos:
           Razer BlackWidow V3 Mini HyperSpeed (Yellow Switch) - Teclado para juegos 65% compacto con interruptores
           mecánicos (lineales y de clic, iluminación RGB Chroma) Teclado Español - Negro
         brand: Razer
-        precio: 180,36€
+        precio: 180,39€
         precioOriginal: 189,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41llET8nyDL._SL500_.jpg
@@ -1302,7 +1313,7 @@ productos:
           Razer BlackWidow V4 - Teclado mecánico gaming con Chroma RGB (Switches mecánicos verdes , 6 teclas macro
           dedicadas, ABS de doble inyección) US-Layout | Negro
         brand: Razer
-        precio: 179,45€
+        precio: 183,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NlhmmBtRL._SL500_.jpg
@@ -1539,7 +1550,53 @@ productos:
     title: >-
       SteelSeries Apex 3 - Teclado Gaming - Iluminación RGB de 10 zonas - Resistencia al agua IP32 - Reposamuñecas
       magnético superior - Teclado QWERTY Español
-    variantes: []
+    variantes:
+      - ASIN: B08TBT2MHW
+        title: >-
+          SteelSeries Apex 3 - Teclado RGB para gaming - Iluminación RGB de 10 zonas - Resistencia al agua IP32 -
+          Reposamuñecas magnético superior - Teclado QWERTY Nórdico
+        brand: SteelSeries
+        precio: 79,99€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/413IejMcEwL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/51dN8rt7XcL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/410J4im3SeL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/5100IHCiFGL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51fBWLO03ZL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41N4XiSwrNL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51NYFKkczWL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B08TBT2MHW?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - 'Resistencia al agua IP32: evita daños accidentales por líquidos vertidos'
+          - 'Iluminación RGB de 10 zonas: impresionante esquema de color y efectos reactivos'
+          - 'Switches silenciosos para gaming: 20 millones de pulsaciones con un bajo nivel de fricción y ruido'
+          - 'Reposamuñecas magnético superior: brinda confort y soporte completo para las palmas de las manos'
+          - 'Controles dedicados para multimedia: ajusta el volumen y la configuración sobre la marcha'
+          - >-
+            La distribución de teclado de este producto es Nórdico qwerty; la distribución diferirá de las imágenes del
+            producto, que tienen el teclado americano qwerty
+          - 'Nota: es recomendable que el firmware se actualice regularmente usango Steelseries Engine'
+        variationAttributes:
+          - name: style_name
+            value: QWERTY nórdico
+        ParentASIN: B0D4QT9BHJ
     ParentASIN: B0D4QT9BHJ
     variationAttributes:
       - name: style_name
@@ -1549,8 +1606,8 @@ productos:
       magnético superior - Teclado QWERTY Español
     condicion: new
     variantes_info:
-      total_en_stock: 0
-      mostradas: 0
+      total_en_stock: 1
+      mostradas: 1
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1574,7 +1631,7 @@ productos:
       - Formato completo con anti-ghosting
     brand: Mars Gaming
     ASIN: B0F383W18C
-    precio: 44,33€
+    precio: 45,66€
     precioOriginal: 41,02€
     disponibilidad: En stock
     imagenesVariantes:
@@ -2109,15 +2166,14 @@ productos:
       - name: style_name
         value: MKPROYES
     variantes_info:
-      total_en_stock: 33
+      total_en_stock: 32
       mostradas: 10
-      restantes: 23
+      restantes: 22
       truncado: true
     variantes_restantes_asins:
       - B07WFGYJ6R
       - B0972ZH4KN
       - B099ZCZVGM
-      - B09MJ7CGCL
       - B09MJ7P1NR
       - B09MJ91LDZ
       - B09MJC4XL5
@@ -2141,7 +2197,6 @@ productos:
       - https://www.amazon.es/dp/B07WFGYJ6R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0972ZH4KN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B099ZCZVGM?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B09MJ7CGCL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ7P1NR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJ91LDZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09MJC4XL5?tag=recomendadorn-21&th=1&psc=1
@@ -2664,7 +2719,7 @@ productos:
           Razer BlackWidow V3 Mini HyperSpeed (Yellow Switch) - Teclado para juegos 65% compacto con interruptores
           mecánicos (lineales y de clic, iluminación RGB Chroma) Teclado Español - Negro
         brand: Razer
-        precio: 180,36€
+        precio: 180,39€
         precioOriginal: 189,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41llET8nyDL._SL500_.jpg
@@ -2868,7 +2923,7 @@ productos:
           Razer BlackWidow V4 - Teclado mecánico gaming con Chroma RGB (Switches mecánicos verdes , 6 teclas macro
           dedicadas, ABS de doble inyección) US-Layout | Negro
         brand: Razer
-        precio: 179,45€
+        precio: 183,99€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51NlhmmBtRL._SL500_.jpg
@@ -3063,7 +3118,7 @@ productos:
       - Compatible con Logitech G HUB
     brand: Logitech G
     ASIN: B07W7M8CLV
-    precio: 93,00€
+    precio: 86,90€
     precioOriginal: 139,00€
     disponibilidad: En stock
     imagenesVariantes:
@@ -3333,4 +3388,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'

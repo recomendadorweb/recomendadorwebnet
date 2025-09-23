@@ -527,7 +527,7 @@ productos:
           Azul Marino S
         brand: LIAMERHE
         precio: 23,99€
-        precioOriginal: 26,99€
+        precioOriginal: 24,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41xmxaeoqRL._SL500_.jpg
         imagenWidth: 375
@@ -643,9 +643,9 @@ productos:
       - name: color_name
         value: B-burdeos
     variantes_info:
-      total_en_stock: 94
+      total_en_stock: 93
       mostradas: 10
-      restantes: 84
+      restantes: 83
       truncado: true
     variantes_restantes_asins:
       - B0D53CSFQK
@@ -697,7 +697,6 @@ productos:
       - B0DXPY1YXC
       - B0DXPY36KB
       - B0DXPYCFM5
-      - B0DXPYM1V6
       - B0DXPYTFB8
       - B0DXPYVS6S
       - B0DXPZ782Q
@@ -782,7 +781,6 @@ productos:
       - https://www.amazon.es/dp/B0DXPY1YXC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPY36KB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYCFM5?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DXPYM1V6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYTFB8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYVS6S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPZ782Q?tag=recomendadorn-21&th=1&psc=1
@@ -1520,13 +1518,11 @@ productos:
     ParentASIN: B0D4M9QDLN
     condicion: new
     variantes_info:
-      total_en_stock: 86
+      total_en_stock: 81
       mostradas: 10
-      restantes: 76
+      restantes: 71
       truncado: true
     variantes_restantes_asins:
-      - B0D4LTBFV9
-      - B0D4LWDWD6
       - B0D4LYPCV2
       - B0D4LYRYDC
       - B0D4M371V4
@@ -1566,21 +1562,19 @@ productos:
       - B0DF781VCM
       - B0DFC5H6FL
       - B0DFC5SZMY
-      - B0DFC5Z4GJ
       - B0DFC5Z4GK
       - B0DFC662TP
       - B0DFC6D9BS
-      - B0DFC7QF86
       - B0DFC92KDP
       - B0DFC92Z1P
       - B0DFC99Y1J
-      - B0DFC9FFY8
       - B0DWMPGRTG
       - B0DWMQ7441
       - B0DWMQBGXV
       - B0DWMQT1G2
       - B0DWMRGWFV
       - B0DWMRSLMP
+      - B0DWMS58TT
       - B0DWMS7JMX
       - B0DWMT8VVM
       - B0FH6QLLG4
@@ -1588,7 +1582,6 @@ productos:
       - B0FH6RBSCM
       - B0FH6RJ81N
       - B0FH6RSRHQ
-      - B0FH6RVWKV
       - B0FH6RWMTC
       - B0FH6S2VCC
       - B0FH6S7DHS
@@ -1602,8 +1595,6 @@ productos:
       - B0FH6TWVFR
       - B0FH6V46KG
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0D4LTBFV9?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0D4LWDWD6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4LYPCV2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4LYRYDC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D4M371V4?tag=recomendadorn-21&th=1&psc=1
@@ -1643,21 +1634,19 @@ productos:
       - https://www.amazon.es/dp/B0DF781VCM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5H6FL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5SZMY?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFC5Z4GJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC5Z4GK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC662TP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC6D9BS?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFC7QF86?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC92KDP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC92Z1P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC99Y1J?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFC9FFY8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMPGRTG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQ7441?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQBGXV?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQT1G2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMRGWFV?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMRSLMP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DWMS58TT?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMS7JMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMT8VVM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6QLLG4?tag=recomendadorn-21&th=1&psc=1
@@ -1665,7 +1654,6 @@ productos:
       - https://www.amazon.es/dp/B0FH6RBSCM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6RJ81N?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6RSRHQ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0FH6RVWKV?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6RWMTC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6S2VCC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6S7DHS?tag=recomendadorn-21&th=1&psc=1
@@ -1678,6 +1666,11 @@ productos:
       - https://www.amazon.es/dp/B0FH6TRMWQ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TWVFR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6V46KG?tag=recomendadorn-21&th=1&psc=1
+    variationAttributes:
+      - name: color_name
+        value: D-burdeos-long
+      - name: size_name
+        value: L
   - ASIN: B0D3PQBZ27
     nombreCompleto: >-
       Enmain Vestido Estilo Camiseta para Mujer de Verano de Manga Corta con Bolsillos túnica Vestido Casuales Bohemios
@@ -2377,9 +2370,9 @@ productos:
         value: Negro
     condicion: new
     variantes_info:
-      total_en_stock: 95
+      total_en_stock: 94
       mostradas: 10
-      restantes: 85
+      restantes: 84
       truncado: true
     variantes_restantes_asins:
       - B0D3PQTS15
@@ -2458,7 +2451,6 @@ productos:
       - B0DSJ7MM62
       - B0DSJ7XNG1
       - B0DSJ7YLM8
-      - B0DSJ8NPXZ
       - B0DSJ8XR6W
       - B0DSJ9BX6F
       - B0DSJ9DVBJ
@@ -2544,7 +2536,6 @@ productos:
       - https://www.amazon.es/dp/B0DSJ7MM62?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJ7XNG1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJ7YLM8?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DSJ8NPXZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJ8XR6W?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJ9BX6F?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DSJ9DVBJ?tag=recomendadorn-21&th=1&psc=1
@@ -5323,9 +5314,9 @@ productos:
       fdsmall Vestidos Midi de Cuello V de otoño para Mujeres Vestidos Bohemios de Manga Larga Elegantes y elásticos
       Casuales de Cintura Alta en Forma de a (FR/ES, Letras, L, Regular, Regular, Marrón)
     brand: fdsmall
-    precio: 21,99€
+    precio: 21,89€
     precioOriginal: No especificado
-    disponibilidad: En stock
+    disponibilidad: ' Temporalmente sin stock. Estamos trabajando para volver a tener stock. Realiza tu pedido y te mandaremos un email con la fecha de entrega estimada.'
     imagen: https://m.media-amazon.com/images/I/41-aXICxlCL._SL500_.jpg
     imagenWidth: 500
     imagenHeight: 500
@@ -5470,7 +5461,7 @@ productos:
         enlace: https://www.amazon.es/dp/B07SD6BDJ6?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: Only Mujer Onlbrilliant 3/4 Dress Jrs Noos vestido,Verde (Pine Grove Pine Grove),XL
         brand: ONLY
-        precio: 16,54€
+        precio: 19,90€
         precioOriginal: 26,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21SeqrQTeNL._SL500_.jpg
@@ -5590,7 +5581,7 @@ productos:
         enlace: https://www.amazon.es/dp/B07SF6YFP9?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: Only Mujer Onlbrilliant 3/4 Dress Jrs Noos vestido,Verde (Pine Grove Pine Grove),S
         brand: ONLY
-        precio: 19,90€
+        precio: 18,80€
         precioOriginal: 26,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21SeqrQTeNL._SL500_.jpg
@@ -5920,7 +5911,7 @@ productos:
           bohemio, elegante, floral, para otoño, para fiesta, Morado (, M
         brand: DSAoTeng
         precio: 10,29€
-        precioOriginal: 15,00€
+        precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
         imagenWidth: 500
@@ -5973,7 +5964,7 @@ productos:
           bohemio, elegante, floral, para otoño, para fiesta, rosso, XL
         brand: DSAoTeng
         precio: 10,29€
-        precioOriginal: 15,00€
+        precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
@@ -6029,7 +6020,7 @@ productos:
           bohemio, elegante, floral, para otoño, para fiesta, rosso, L
         brand: DSAoTeng
         precio: 10,29€
-        precioOriginal: 15,00€
+        precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
@@ -6085,7 +6076,7 @@ productos:
           bohemio, elegante, floral, para otoño, para fiesta, azul oscuro, XXL
         brand: DSAoTeng
         precio: 10,11€
-        precioOriginal: 15,00€
+        precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Iv1-FALEL._SL500_.jpg
         imagenWidth: 268
@@ -6156,7 +6147,7 @@ productos:
           bohemio, elegante, floral, para otoño, para fiesta, azul oscuro, L
         brand: DSAoTeng
         precio: 10,29€
-        precioOriginal: 15,00€
+        precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Iv1-FALEL._SL500_.jpg
         imagenWidth: 268
@@ -6224,10 +6215,10 @@ productos:
         enlace: https://www.amazon.es/dp/B0DPF333CB?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: >-
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
-          bohemio, elegante, floral, para otoño, para fiesta, Morado (, XXL
+          bohemio, floral, ajustado al cuerpo, para otoño, para fiesta
         brand: DSAoTeng
         precio: 10,29€
-        precioOriginal: 15,00€
+        precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
         imagenWidth: 500
@@ -6333,7 +6324,7 @@ productos:
           bohemio, elegante, floral, para otoño, para fiesta, rosso, M
         brand: DSAoTeng
         precio: 10,29€
-        precioOriginal: 15,00€
+        precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
@@ -6400,7 +6391,7 @@ productos:
       elegante, floral, para otoño, para fiesta, verde, L
     brand: DSAoTeng
     precio: 10,29€
-    precioOriginal: 15,00€
+    precioOriginal: 10,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg
     imagenWidth: 222
@@ -7149,13 +7140,12 @@ productos:
       - name: color_name
         value: A-verde
     variantes_info:
-      total_en_stock: 65
+      total_en_stock: 64
       mostradas: 10
-      restantes: 55
+      restantes: 54
       truncado: true
     variantes_restantes_asins:
       - B0CDKQG4L5
-      - B0CDKS7843
       - B0CDKTH4XF
       - B0CDKTJN75
       - B0CDKVF6D3
@@ -7211,7 +7201,6 @@ productos:
       - B0FH6TWFRJ
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B0CDKQG4L5?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0CDKS7843?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKTH4XF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKTJN75?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKVF6D3?tag=recomendadorn-21&th=1&psc=1
@@ -7265,4 +7254,4 @@ productos:
       - https://www.amazon.es/dp/B0FH6TSTHF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TW7C2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TWFRJ?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-21'
+actualizacion: '2025-09-23'
