@@ -537,7 +537,7 @@ aside .popular-box-widget{
       <div class="hero-divider"></div>
     </div>
     <div class="lw-list">
-{% assign latest_posts = site.posts | sort: "date" | reverse %}
+{% assign latest_posts = site.posts | where_exp: "post", "post.destacado != 1" | sort: "date" | reverse %}
 {% for post in latest_posts limit: 5 %}
   <a class="lw-item" href="{{ post.url | relative_url }}">
     <span class="lw-thumb">
