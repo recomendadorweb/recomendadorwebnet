@@ -1,0 +1,82 @@
+cabecera:
+  # KW_ATACADA: dron fpv | VOL: 1900
+  principal: dron fpv
+  meta:
+    vol: 1900
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: dron fpv | VOL: 1900
+  - dron fpv
+  # KW_ATACADA: dron profesional | VOL: 480
+  - dron profesional
+  # KW_ATACADA: drones profesionales | VOL: 320
+  - drones profesionales
+  # KW_ATACADA: fpv dron | VOL: 320
+  - dron fpv
+secciones:
+  - kw: dron fpv
+    # KW_ATACADA: dron fpv | VOL: 1900
+    titulo: dron fpv
+    id: dron-fpv
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1900
+    diff: 0
+    intent: I
+  - kw: dron profesional
+    # KW_ATACADA: dron profesional | VOL: 480
+    titulo: dron profesional
+    id: dron-profesional
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 480
+    diff: 0
+    intent: I
+  - kw: drones profesionales
+    # KW_ATACADA: drones profesionales | VOL: 320
+    titulo: drones profesionales
+    id: drones-profesionales
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 320
+    diff: 0
+    intent: I
+  - kw: fpv dron
+    # KW_ATACADA: fpv dron | VOL: 320
+    titulo: dron fpv
+    id: fpv-dron
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 320
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: dron fpv | VOL: 1900
+  - dron fpv
+  # KW_ATACADA: dron profesional | VOL: 480
+  - dron profesional
+  # KW_ATACADA: drones profesionales | VOL: 320
+  - drones profesionales
+  # KW_ATACADA: fpv dron | VOL: 320
+  - dron fpv
+html_map:
+  h1: dron fpv
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - dron fpv
+  - dron profesional
+  - drones profesionales
+  - dron fpv
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 4
+  total_brands_detected: 130
