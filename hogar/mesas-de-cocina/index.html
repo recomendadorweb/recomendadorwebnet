@@ -1,0 +1,64 @@
+---
+title: "Encuentra las mejores mesas de cocina para tu hogar"
+subtitle: "Todo lo esencial para elegir mesas de cocina con acierto, sin perder tiempo ni dinero"
+description: "Guía de compra de mesas de cocina: comparamos modelos, puntos clave y consejos prácticos para acertar sin perder tiempo."
+keywords: "mesas de cocina, mesa cocina, mesa alta cocina, mesa de cocina, mesa plegable cocina, mesa y sillas cocina, mesas cocina, mesa redonda cocina, mesa cocina pequeña"
+date: 2025-09-23
+canonical: "https://recomendador.net/hogar/mesas-de-cocina/"
+imagen: "/global/images/mesas-de-cocina.webp"
+imagenhome: "/global/images/mesas-de-cocina500.webp"
+autor: "laura"
+categoria: "hogar"
+tipo: mesa-cocina
+---
+{% assign tipo = "mesa-cocina" %}
+
+{% include menu.html %}
+{% include estiloazul.html %}
+
+<div class="container">
+{% include cabecera.html datafile="cabecera" %}
+{% assign autor = site.data.autor.autores.laura %}
+{% include autor.html %}
+{% include actualizacion.html %}
+{% include introduccion.html datafile="indice" %}
+
+{% include indice.html datafile="indice" %}
+<div class="separador"></div>
+
+<h2 id="comparativa">Comparativa rápida: Las mejores mesas de cocina</h2>
+{% include election.html %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+
+{% include seccion-generica.html datafile="secciones" index=0 %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+{% include seccion-generica.html datafile="secciones" index=1 %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Lista de productos con análisis -->
+<h2 id="productos">Comparativa real de las mejores mesas de cocina</h2>
+{% include lista-productos.html datafile="productos" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- ¿Cuál compraría yo? -->
+{% include election.html mostrar_texto=true %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+<div class="separador"></div>
+
+<!-- Preguntas frecuentes -->
+<h2 id="faq">Preguntas Frecuentes (FAQ)</h2>
+{% include faq.html datafile="faq" %}
+<div style="text-align: right; margin-top: 2em;"><a href="#">⬆️ Volver arriba</a></div>
+
+{% include footer.html %}
+</div>
+{% include boton-recomendado.html datafile="cabecera" %}
+
+{% include ld-json-faq.html datafile="faq" %}
+{% include ld-json-productos.html datafile="productos" %}
