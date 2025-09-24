@@ -1,0 +1,68 @@
+cabecera:
+  # KW_ATACADA: abrigo porteo mujer | VOL: 390
+  principal: abrigo de porteo para mujer
+  meta:
+    vol: 390
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: abrigo porteo | VOL: 1000
+  - abrigo de porteo
+  # KW_ATACADA: abrigo porteo mujer | VOL: 390
+  - abrigo de porteo para mujer
+  # KW_ATACADA: abrigo de porteo | VOL: 320
+  - abrigo de porteo
+secciones:
+  - kw: abrigo porteo
+    # KW_ATACADA: abrigo porteo | VOL: 1000
+    titulo: abrigo de porteo
+    id: abrigo-porteo
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1000
+    diff: 0
+    intent: I
+  - kw: abrigo porteo mujer
+    # KW_ATACADA: abrigo porteo mujer | VOL: 390
+    titulo: abrigo de porteo para mujer
+    id: abrigo-porteo-mujer
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 390
+    diff: 0
+    intent: I
+  - kw: abrigo de porteo
+    # KW_ATACADA: abrigo de porteo | VOL: 320
+    titulo: abrigo de porteo
+    id: abrigo-de-porteo
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 320
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: abrigo porteo | VOL: 1000
+  - abrigo de porteo
+  # KW_ATACADA: abrigo porteo mujer | VOL: 390
+  - abrigo de porteo para mujer
+  # KW_ATACADA: abrigo de porteo | VOL: 320
+  - abrigo de porteo
+html_map:
+  h1: abrigo de porteo para mujer
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - abrigo de porteo
+  - abrigo de porteo para mujer
+  - abrigo de porteo
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 3
+  total_brands_detected: 78
