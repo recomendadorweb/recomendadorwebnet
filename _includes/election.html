@@ -71,10 +71,14 @@
           <div class="ribbon">{{ ribbon }}</div>
           <div class="card-inner">
             {%- if img != '' -%}
-              <img src="{{ img }}" alt="{{ title | escape }}">
+              <a href="{{ link }}" rel="nofollow sponsored noopener" target="_blank">
+                <img src="{{ img }}" alt="{{ title | escape }}">
+              </a>
             {%- endif -%}
             <div class="card-content">
-              <h3>{{ title }}</h3>
+              <h3>
+                <a href="{{ link }}" rel="nofollow sponsored noopener" target="_blank">{{ title }}</a>
+              </h3>
               {%- if bullets and bullets.size > 0 -%}
                 <ul>
                   {%- for b in bullets limit: max_bullets -%}
