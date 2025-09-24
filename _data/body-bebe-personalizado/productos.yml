@@ -1356,19 +1356,33 @@ productos:
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
   - ASIN: B09K7F5CK1
-    title: LolaPix Body Bebé Personalizado con Foto - Regalo para Bebés - Manga Larga - Varias Tallas - Talla 3-6 Meses
+    title: >-
+      LolaPix Body Bebe Personalizado con Foto. Bodys Personalizados para Bebes. Regalos Personalizados para bebés. Body
+      Personalizado Bebé Varias Tallas. Manga Larga. Talla 3-6 meses
     brand: LolaPix
     precio: 20,95€
     precioOriginal: No especificado
     disponibilidad: En stock
-    imagen: https://m.media-amazon.com/images/I/31ZRjFve0IL._SL500_.jpg
+    imagen: https://m.media-amazon.com/images/I/31z5q7ThLeL._SL500_.jpg
     imagenWidth: 500
     imagenHeight: 500
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/41S3vaBEkmL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/41kjOUFPxrL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41jXgidMkzL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51y2fqNe1RL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41S4pjwZIEL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51ExHDX1ehL._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/51wY-D+qx4L._SL500_.jpg
+        width: 500
+        height: 500
+      - url: https://m.media-amazon.com/images/I/41dqNQZA76L._SL500_.jpg
         width: 500
         height: 500
     condicion: new
@@ -1376,17 +1390,17 @@ productos:
     enlace: https://www.amazon.es/dp/B09K7F5CK1?tag=recomendadorn-21&th=1
     caracteristicasAmazon:
       - >-
-        🧶 El exterior del body niña personalizado está fabricado en poliéster de punto y tiene el interior con un tacto
+        🧶 El exterior del body bebé personalizado está fabricado en poliéster de punto y tiene el interior con un tacto
         suave, cómodo y agradable.
       - >-
-        🖨️ El método empleado para transferir la imagen al body niña personalizado es el de sublimación. Mediante este
-        sistema, la imagen queda integrado en el tejido por lo que no se percibe al tacto y no pierde la intensidad de
-        su color con el paso del tiempo.
+        🖨️ El método empleado para transferir la imagen al body es el de sublimación. Mediante este sistema, la imagen
+        queda integrada en el tejido por lo que no se percibe al tacto y no pierde la intensidad de su color con el paso
+        del tiempo.
       - >-
-        📐 Al personalizar nuestro body niña personalizado podrás elegir una variedad de tallas que abarcan desde recién
-        nacido hasta los 12 meses.
-      - ℹ️ El color del body niña personalizado es blanco y está fabricado en un tejido de 185 g/m2.
-      - ⚪ El body niña personalizado es de manga larga y tiene un cierre con formato clic en la parte inferior.
+        📐 Al personalizar nuestro body bebé podrás elegir una variedad de tallas que abarcan desde recién nacido hasta
+        los 18 meses.
+      - ℹ️ El color del body bebé es blanco y está fabricado en un tejido de 185 g/m2.
+      - ⚪ El body es de manga larga y tiene un cierre con formato clic en la parte inferior.
     ParentASIN: B09K7HP453
     nombreCompleto: LolaPix Body Bebé Personalizado con Foto - Regalo para Bebés - Manga Larga - Varias Tallas - Talla 3-6 Meses
     variationAttributes:
@@ -1395,20 +1409,32 @@ productos:
     variantes:
       - ASIN: B09K7GJ5D2
         title: >-
-          Body personalizado bebé con foto. Regalos personalizados para bebés. Bodies personalizados Manga larga. Varias
-          tallas. Talla 0-3 meses
+          LolaPix Body Bebe Personalizado con Foto. Bodys Personalizados para Bebes. Regalos Personalizados para bebés.
+          Body Personalizado Bebé Varias Tallas. Manga Larga. Talla 0-3 meses
         brand: LolaPix
         precio: 20,95€
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31ZRjFve0IL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31z5q7ThLeL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41S3vaBEkmL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41kjOUFPxrL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41jXgidMkzL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51y2fqNe1RL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41S4pjwZIEL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ExHDX1ehL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51wY-D+qx4L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41dqNQZA76L._SL500_.jpg
             width: 500
             height: 500
         condicion: new
@@ -1418,91 +1444,115 @@ productos:
             🧶 El exterior del body bebé personalizado está fabricado en poliéster de punto y tiene el interior con un
             tacto suave, cómodo y agradable.
           - >-
-            🖨️ El método empleado para transferir la imagen al body bebé personalizado es el de sublimación. Mediante
-            este sistema, la imagen queda integrado en el tejido por lo que no se percibe al tacto y no pierde la
-            intensidad de su color con el paso del tiempo.
+            🖨️ El método empleado para transferir la imagen al body es el de sublimación. Mediante este sistema, la
+            imagen queda integrada en el tejido por lo que no se percibe al tacto y no pierde la intensidad de su color
+            con el paso del tiempo.
           - >-
-            📐 Al personalizar nuestro body bebé personalizado podrás elegir una variedad de tallas que abarcan desde
-            recién nacido hasta los 12 meses.
-          - ℹ️ El color del body bebé personalizado es blanco y está fabricado en un tejido de 185 g/m2.
-          - ⚪ El body bebé personalizado es de manga larga y tiene un cierre con formato clic en la parte inferior.
+            📐 Al personalizar nuestro body bebé podrás elegir una variedad de tallas que abarcan desde recién nacido
+            hasta los 18 meses.
+          - ℹ️ El color del body bebé es blanco y está fabricado en un tejido de 185 g/m2.
+          - ⚪ El body es de manga larga y tiene un cierre con formato clic en la parte inferior.
         variationAttributes:
           - name: size_name
-            value: talla 0-3m
+            value: Manga Larga 0-3m
         ParentASIN: B09K7HP453
       - ASIN: B0BKG2ZMZJ
         title: >-
-          LolaPix Bodies bebé personalizados con foto. Regalos personalizados para bebés. Bodies personalizados Manga
-          larga. Varias tallas. Talla 6-12 meses
+          LolaPix Body Bebe Personalizado con Foto. Bodys Personalizados para Bebes. Regalos Personalizados para bebés.
+          Body Personalizado Bebé Varias Tallas. Manga Larga. Talla 6-12 meses
         brand: LolaPix
         precio: 20,95€
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31ZRjFve0IL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31z5q7ThLeL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41S3vaBEkmL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41kjOUFPxrL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41jXgidMkzL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51y2fqNe1RL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41S4pjwZIEL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ExHDX1ehL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51wY-D+qx4L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41dqNQZA76L._SL500_.jpg
             width: 500
             height: 500
         condicion: new
         enlace: https://www.amazon.es/dp/B0BKG2ZMZJ?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
-            🧶 El exterior del body personalizado bebé está fabricado en poliéster de punto y tiene el interior con un
+            🧶 El exterior del body bebé personalizado está fabricado en poliéster de punto y tiene el interior con un
             tacto suave, cómodo y agradable.
           - >-
-            🖨️ El método empleado para transferir la imagen al body personalizado bebé es el de sublimación. Mediante
-            este sistema, la imagen queda integrado en el tejido por lo que no se percibe al tacto y no pierde la
-            intensidad de su color con el paso del tiempo.
+            🖨️ El método empleado para transferir la imagen al body es el de sublimación. Mediante este sistema, la
+            imagen queda integrada en el tejido por lo que no se percibe al tacto y no pierde la intensidad de su color
+            con el paso del tiempo.
           - >-
-            📐 Al personalizar nuestro body personalizado bebé podrás elegir una variedad de tallas que abarcan desde
-            recién nacido hasta los 12 meses.
-          - ℹ️ El color del body personalizado bebé es blanco y está fabricado en un tejido de 185 g/m2.
-          - ⚪ El body personalizado bebé es de manga larga y tiene un cierre con formato clic en la parte inferior.
+            📐 Al personalizar nuestro body bebé podrás elegir una variedad de tallas que abarcan desde recién nacido
+            hasta los 18 meses.
+          - ℹ️ El color del body bebé es blanco y está fabricado en un tejido de 185 g/m2.
+          - ⚪ El body es de manga larga y tiene un cierre con formato clic en la parte inferior.
         variationAttributes:
           - name: size_name
-            value: talla 6-12m
+            value: Manga Larga 6-12m
         ParentASIN: B09K7HP453
       - ASIN: B0BKG5JQ2J
         title: >-
-          LolaPix Bodies bebé personalizados con foto. Regalos personalizados para bebés. Bodies personalizados Manga
-          larga. Varias tallas. Talla 12-18 meses
+          LolaPix Body Bebe Personalizado con Foto. Bodys Personalizados para Bebes. Regalos Personalizados para bebés.
+          Body Personalizado Bebé Varias Tallas. Manga Larga. Talla 12-18 meses
         brand: LolaPix
         precio: 20,95€
         precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31ZRjFve0IL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/31z5q7ThLeL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41S3vaBEkmL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41kjOUFPxrL._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41jXgidMkzL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51y2fqNe1RL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41S4pjwZIEL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51ExHDX1ehL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51wY-D+qx4L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41dqNQZA76L._SL500_.jpg
             width: 500
             height: 500
         condicion: new
         enlace: https://www.amazon.es/dp/B0BKG5JQ2J?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
-            🧶 El exterior del body personalizado bebé está fabricado en poliéster de punto y tiene el interior con un
+            🧶 El exterior del body bebé personalizado está fabricado en poliéster de punto y tiene el interior con un
             tacto suave, cómodo y agradable.
           - >-
-            🖨️ El método empleado para transferir la imagen al body personalizado bebé es el de sublimación. Mediante
-            este sistema, la imagen queda integrado en el tejido por lo que no se percibe al tacto y no pierde la
-            intensidad de su color con el paso del tiempo.
+            🖨️ El método empleado para transferir la imagen al body es el de sublimación. Mediante este sistema, la
+            imagen queda integrada en el tejido por lo que no se percibe al tacto y no pierde la intensidad de su color
+            con el paso del tiempo.
           - >-
-            📐 Al personalizar nuestro body personalizado bebé podrás elegir una variedad de tallas que abarcan desde
-            recién nacido hasta los 12 meses.
-          - ℹ️ El color del body personalizado bebé es blanco y está fabricado en un tejido de 185 g/m2.
-          - ⚪ El body personalizado bebé es de manga larga y tiene un cierre con formato clic en la parte inferior.
+            📐 Al personalizar nuestro body bebé podrás elegir una variedad de tallas que abarcan desde recién nacido
+            hasta los 18 meses.
+          - ℹ️ El color del body bebé es blanco y está fabricado en un tejido de 185 g/m2.
+          - ⚪ El body es de manga larga y tiene un cierre con formato clic en la parte inferior.
         variationAttributes:
           - name: size_name
-            value: talla 12-18m
+            value: Manga Larga 12-18m
         ParentASIN: B09K7HP453
     variantes_info:
       total_en_stock: 3

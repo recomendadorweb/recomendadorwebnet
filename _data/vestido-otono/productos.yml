@@ -521,60 +521,57 @@ productos:
           - name: color_name
             value: A-azul
         ParentASIN: B0CZ9BXSVC
-      - ASIN: B0CZ8YGLRH
+      - ASIN: B0D53CSFQK
         title: >-
           LIAMERHE Vestido Sin Mangas Mujer Casual Verano Vestidos Cuello en V Elegante Vestido Largo hasta la Rodilla
-          Azul Marino S
+          Rojo XXL
         brand: LIAMERHE
         precio: 23,99€
-        precioOriginal: 24,99€
+        precioOriginal: No especificado
         disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41xmxaeoqRL._SL500_.jpg
+        imagen: https://m.media-amazon.com/images/I/514cGE-SkAL._SL500_.jpg
         imagenWidth: 375
         imagenHeight: 500
         imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41643jIVt2L._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/517hCLWQkvL._SL500_.jpg
             width: 375
             height: 500
-          - url: https://m.media-amazon.com/images/I/41347YEyOfL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/51GRJa5ZgzL._SL500_.jpg
             width: 375
             height: 500
-          - url: https://m.media-amazon.com/images/I/5134dLgdPkL._SL500_.jpg
+          - url: https://m.media-amazon.com/images/I/41PPKvcXFYL._SL500_.jpg
+            width: 417
+            height: 500
+          - url: https://m.media-amazon.com/images/I/415oNl0sK+L._SL500_.jpg
             width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51TO19ThCCL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41eLzS6lguL._SL500_.jpg
-            width: 375
-            height: 500
+            height: 237
         condicion: new
-        enlace: https://www.amazon.es/dp/B0CZ8YGLRH?tag=recomendadorn-21&th=1&psc=1
+        enlace: https://www.amazon.es/dp/B0D53CSFQK?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
-            ?Material del vestido de verano?Los vestidos con estampado floral para mujer están hechos de 95 % poliéster
-            y 5 % elastano, tela de alta calidad con una mano de obra exquisita, bien cosida, cómoda de usar. Ideal para
-            primavera y verano.
+            【Material del Vestido de Verano】Los vestidos con estampado floral para mujer están hechos de 95% poliéster y
+            5% spandex, tela de alta calidad con mano de obra exquisita, bien cosida, cómoda de llevar. Bueno para la
+            primavera y el verano. Diseño de manga de mariposa, puede cubrir la carne del brazo, ¡muy delgado!
           - >-
-            ?Características del diseño de los vestidos de mujer?El vestido casual presenta un corte clásico de cintura
-            alta en forma de A, escote en V, cintura elástica y un estilo simple y sexy para niñas. El vestido está
-            disponible en estampados florales vibrantes que le dan un aspecto único.
+            【Design del Vestito】El vestido casual cuenta con un corte clásico de línea A de cintura alta, cuello en V
+            profundo, cintura elástica, estilo sexy simple para niñas. Disponible en colores florales y sólidos, ¡este
+            vestido es versátil y elegante!
           - >-
-            ?A juego?Vestido casual de mujer, combina bien con blazer, chaqueta, cárdigan, medias, bolso, sandalias,
-            tacones altos y zapatos planos para crear una variedad de looks. Este vestido de verano sin mangas llega
-            justo por encima de la rodilla, lo que lo hace adecuado para todo tipo de cuerpo.
+            【Fitting】Vestido de las mujeres de ocio, va bien con blazer, chaqueta, chaqueta de punto, medias, bolso,
+            sandalias, zapatos de tacón alto y zapatos planos para crear una variedad de miradas. Este vestido de verano
+            de manga corta es por encima de la rodilla, juguetón y bonito, adecuado para todo tipo de cuerpos.
           - >-
-            ?Ocasiones?Perfecto para vacaciones, playa, citas, salidas, uso diario, trabajo, Hawái, crucero, velada,
-            fiesta, boda. Combínalo con diferentes estilos de accesorios pequeños para crear una variedad de estilos.
+            【Occasions】Perfecto para vacaciones, playa, citas, salir, desgaste diario, trabajo, Hawaii, crucero, noche,
+            fiesta, boda. Combínalos con diferentes estilos pequeños accesorios para crear una variedad de estilos.
           - >-
-            ?Tabla de tallas?Según las opiniones de nuestros clientes, te recomendamos que sigas nuestra tabla de tallas
-            (no la tabla de tallas de Amazon) en las fotos o descripciones de nuestros productos para elegir la talla
-            correcta en función de tus propias medidas corporales antes de r. Gracias
+            【Tabla de Tallas】De acuerdo con los comentarios de nuestros clientes, le recomendamos que siga nuestra tabla
+            de tallas (no la tabla de tallas de Amazon) en nuestras fotos o descripciones del producto para elegir el
+            tamaño correcto en función de sus propias medidas corporales antes de comprar. ¡Muchas gracias!
         variationAttributes:
           - name: size_name
-            value: S
+            value: XXL
           - name: color_name
-            value: A-azul Marino
+            value: A-rojo
         ParentASIN: B0CZ9BXSVC
     nombre: LIAMERHE vestido invitada otoño Burdeos S
     caracteristicas:
@@ -643,12 +640,11 @@ productos:
       - name: color_name
         value: B-burdeos
     variantes_info:
-      total_en_stock: 91
+      total_en_stock: 90
       mostradas: 10
-      restantes: 81
+      restantes: 80
       truncado: true
     variantes_restantes_asins:
-      - B0D53CSFQK
       - B0D53CSFQL
       - B0D53DGW4Q
       - B0D53GSN3G
@@ -730,7 +726,6 @@ productos:
       - B0FHH4CC4P
       - B0FHH8NYPL
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0D53CSFQK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53CSFQL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53DGW4Q?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D53GSN3G?tag=recomendadorn-21&th=1&psc=1
@@ -1514,9 +1509,9 @@ productos:
     ParentASIN: B0D4M9QDLN
     condicion: new
     variantes_info:
-      total_en_stock: 84
+      total_en_stock: 79
       mostradas: 10
-      restantes: 74
+      restantes: 69
       truncado: true
     variantes_restantes_asins:
       - B0D4LTBFV9
@@ -1533,6 +1528,7 @@ productos:
       - B0D83HFBQ8
       - B0D83HNNN5
       - B0D83HP8VB
+      - B0D83HT4KF
       - B0D83K4WVM
       - B0D83L5GD9
       - B0D83LM8SS
@@ -1546,14 +1542,12 @@ productos:
       - B0DF75RMRP
       - B0DF75TBX5
       - B0DF75ZJ3W
-      - B0DF761VNM
       - B0DF76DN3F
       - B0DF76K95C
       - B0DF76VF2P
       - B0DF76VWGF
       - B0DF779BKW
       - B0DF77FBLH
-      - B0DF77RPS9
       - B0DF77VBG3
       - B0DF77ZD2M
       - B0DF781VCM
@@ -1566,18 +1560,14 @@ productos:
       - B0DFC92KDP
       - B0DFC92Z1P
       - B0DFC99Y1J
-      - B0DWMP4FS9
       - B0DWMPGRTG
       - B0DWMQ7441
       - B0DWMQBGXV
-      - B0DWMQT1G2
       - B0DWMRGWFV
       - B0DWMRSLMP
-      - B0DWMS58TT
       - B0DWMS7JMX
       - B0DWMT8VVM
       - B0FH6QLLG4
-      - B0FH6R618C
       - B0FH6RBSCM
       - B0FH6RJ81N
       - B0FH6RSRHQ
@@ -1608,6 +1598,7 @@ productos:
       - https://www.amazon.es/dp/B0D83HFBQ8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HNNN5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83HP8VB?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0D83HT4KF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83K4WVM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83L5GD9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D83LM8SS?tag=recomendadorn-21&th=1&psc=1
@@ -1621,14 +1612,12 @@ productos:
       - https://www.amazon.es/dp/B0DF75RMRP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF75TBX5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF75ZJ3W?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DF761VNM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF76DN3F?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF76K95C?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF76VF2P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF76VWGF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF779BKW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF77FBLH?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DF77RPS9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF77VBG3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF77ZD2M?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF781VCM?tag=recomendadorn-21&th=1&psc=1
@@ -1641,18 +1630,14 @@ productos:
       - https://www.amazon.es/dp/B0DFC92KDP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC92Z1P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC99Y1J?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DWMP4FS9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMPGRTG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQ7441?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMQBGXV?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DWMQT1G2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMRGWFV?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMRSLMP?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DWMS58TT?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMS7JMX?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWMT8VVM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6QLLG4?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0FH6R618C?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6RBSCM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6RJ81N?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6RSRHQ?tag=recomendadorn-21&th=1&psc=1
@@ -5360,18 +5345,16 @@ productos:
       - name: color_name
         value: Marrón
     variantes_info:
-      total_en_stock: 15
+      total_en_stock: 14
       mostradas: 10
-      restantes: 5
+      restantes: 4
       truncado: true
     variantes_restantes_asins:
-      - B0DHJYWP2D
       - B0DHKGQYXG
       - B0DHKVD9JP
       - B0DRNX4LBB
       - B0DRNY32BN
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B0DHJYWP2D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHKGQYXG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DHKVD9JP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DRNX4LBB?tag=recomendadorn-21&th=1&psc=1
@@ -5389,7 +5372,7 @@ productos:
         enlace: https://www.amazon.es/dp/B07CJHV8QL?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: 'ONLY Onlbrilliant 3/4 Dress Jrs Noos, Vestido Mujer, Negro (Black Black), 38 (Talla del Fabricante: Small)'
         brand: ONLY
-        precio: 15,90€
+        precio: 20,24€
         precioOriginal: 21,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+w7wI6JlL._SL500_.jpg
@@ -5509,7 +5492,7 @@ productos:
         enlace: https://www.amazon.es/dp/B07CJRZY8R?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: 'ONLY Onlbrilliant 3/4 Dress Jrs Noos, vestido Mujer, Negro (Black Black), 42 (Talla del fabricante: Large)'
         brand: ONLY
-        precio: 15,90€
+        precio: 20,24€
         precioOriginal: 21,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+w7wI6JlL._SL500_.jpg
@@ -5749,7 +5732,7 @@ productos:
       En mi caso la talla coincidió con lo esperado, por eso recomiendo revisar la guía si dudas entre tallas.
     title: 'ONLY Onlbrilliant 3/4 Dress Jrs Noos, vestido Mujer, Negro (Black Black), 40 (Talla del fabricante: Medium)'
     brand: ONLY
-    precio: 15,90€
+    precio: 20,24€
     precioOriginal: 21,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/31+w7wI6JlL._SL500_.jpg
@@ -5804,9 +5787,9 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, S
         brand: DSAoTeng
-        precio: 15,26€
+        precio: 15,15€
         precioOriginal: No especificado
-        disponibilidad: Envío en 4 a 5 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
         imagenHeight: 500
@@ -5860,9 +5843,9 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, verde, XXL
         brand: DSAoTeng
-        precio: 15,26€
+        precio: 15,16€
         precioOriginal: 15,00€
-        disponibilidad: Envío en 4 a 5 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg
         imagenWidth: 222
         imagenHeight: 500
@@ -5916,7 +5899,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, Morado (, M
         brand: DSAoTeng
-        precio: 10,29€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
@@ -5969,7 +5952,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, XL
         brand: DSAoTeng
-        precio: 10,29€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
@@ -6025,7 +6008,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, L
         brand: DSAoTeng
-        precio: 10,29€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
@@ -6081,7 +6064,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, azul oscuro, XXL
         brand: DSAoTeng
-        precio: 10,11€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Iv1-FALEL._SL500_.jpg
@@ -6152,7 +6135,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, azul oscuro, L
         brand: DSAoTeng
-        precio: 10,29€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Iv1-FALEL._SL500_.jpg
@@ -6223,7 +6206,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, floral, ajustado al cuerpo, para otoño, para fiesta
         brand: DSAoTeng
-        precio: 10,29€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
@@ -6276,7 +6259,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, Morado (, 3XL
         brand: DSAoTeng
-        precio: 10,29€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
@@ -6329,7 +6312,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, M
         brand: DSAoTeng
-        precio: 10,29€
+        precio: 15,00€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
@@ -6396,7 +6379,7 @@ productos:
       DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual, bohemio,
       elegante, floral, para otoño, para fiesta, verde, L
     brand: DSAoTeng
-    precio: 10,29€
+    precio: 15,00€
     precioOriginal: 10,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg
@@ -7146,12 +7129,13 @@ productos:
       - name: color_name
         value: A-verde
     variantes_info:
-      total_en_stock: 64
+      total_en_stock: 65
       mostradas: 10
-      restantes: 54
+      restantes: 55
       truncado: true
     variantes_restantes_asins:
       - B0CDKQG4L5
+      - B0CDKS7843
       - B0CDKTH4XF
       - B0CDKTJN75
       - B0CDKVF6D3
@@ -7207,6 +7191,7 @@ productos:
       - B0FH6TWFRJ
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B0CDKQG4L5?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0CDKS7843?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKTH4XF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKTJN75?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CDKVF6D3?tag=recomendadorn-21&th=1&psc=1
@@ -7260,4 +7245,4 @@ productos:
       - https://www.amazon.es/dp/B0FH6TSTHF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TW7C2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0FH6TWFRJ?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-24'
+actualizacion: '2025-09-25'
