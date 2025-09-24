@@ -691,9 +691,9 @@ productos:
       - name: color_name
         value: Borgoña
     variantes_info:
-      total_en_stock: 233
+      total_en_stock: 232
       mostradas: 10
-      restantes: 223
+      restantes: 222
       truncado: true
     variantes_restantes_asins:
       - B07QWJMXW8
@@ -902,7 +902,6 @@ productos:
       - B0DT6TYH6J
       - B0DT6VJDHY
       - B0DT6X3HD5
-      - B0DT71F8X5
       - B0DT71VHPD
       - B0DT71Y7L5
       - B0DWF8LBZQ
@@ -1126,7 +1125,6 @@ productos:
       - https://www.amazon.es/dp/B0DT6TYH6J?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DT6VJDHY?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DT6X3HD5?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DT71F8X5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DT71VHPD?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DT71Y7L5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DWF8LBZQ?tag=recomendadorn-21&th=1&psc=1
@@ -1875,9 +1873,9 @@ productos:
       - name: size_name
         value: 54 Grande
     variantes_info:
-      total_en_stock: 31
+      total_en_stock: 30
       mostradas: 10
-      restantes: 21
+      restantes: 20
       truncado: true
     variantes_restantes_asins:
       - B0D78TBYG2
@@ -1892,7 +1890,6 @@ productos:
       - B0D78VFXVP
       - B0DG319R96
       - B0DG32R1CV
-      - B0DG332VHB
       - B0DG33CSFB
       - B0DG33XHGS
       - B0DG33XHH6
@@ -1914,7 +1911,6 @@ productos:
       - https://www.amazon.es/dp/B0D78VFXVP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG319R96?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG32R1CV?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DG332VHB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG33CSFB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG33XHGS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DG33XHH6?tag=recomendadorn-21&th=1&psc=1
@@ -6661,4 +6657,4 @@ productos:
       - https://www.amazon.es/dp/B0F32X33QP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F32X77ZH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F32XKCJB?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-24'
+actualizacion: '2025-09-25'
