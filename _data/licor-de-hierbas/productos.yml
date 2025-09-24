@@ -335,7 +335,7 @@ productos:
     variantes: []
     title: Ruavieja Licor de Hierbas - 1L
     brand: Ruavieja
-    precio: 10,55€(10,55€/l)
+    precio: 21,90€(21,90€/l)
     precioOriginal: 14,30€(14,30€/l)
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/21si0ajdS1L._SL500_.jpg
@@ -450,8 +450,8 @@ productos:
         enlace: https://www.amazon.es/dp/B0794VG4DX?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: El Afilador – Licor de Café Tradicional – Elaboración Artesanal y Sabor Auténtico – Botella de 700 ml
         brand: El Afilador
-        precio: 10,82€(15,46€/l)
-        precioOriginal: No especificado
+        precio: 9,50€(13,57€/l)
+        precioOriginal: 10,82€(15,46€/l)
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41aHoWEaWvL._SL500_.jpg
         imagenWidth: 300
@@ -497,8 +497,8 @@ productos:
         enlace: https://www.amazon.es/dp/B0CN2K2P1F?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: El Afilador - Licor de Café - Botella 700 ml (Paquete de 2)
         brand: El Afilador
-        precio: 21,64€(15,46€/l)
-        precioOriginal: No especificado
+        precio: 19,00€(13,57€/l)
+        precioOriginal: 21,64€(15,46€/l)
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41b59V9vyTL._SL500_.jpg
         imagenWidth: 500
@@ -883,7 +883,7 @@ productos:
         enlace: https://www.amazon.es/dp/B01AGFBWNW?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
         title: Xantiamen Licor Limoncello - 1 botella de 70 cl
         brand: Xantiamen
-        precio: 9,50€
+        precio: 12,40€
         precioOriginal: 12,40€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31I3-8PGAJL._SL500_.jpg
@@ -958,7 +958,7 @@ productos:
     brand: Xantiamen
     precio: 8,75€(12,50€/l)
     precioOriginal: No especificado
-    disponibilidad: En stock
+    disponibilidad: Envío en 1 a 3 semanas
     imagen: https://m.media-amazon.com/images/I/21OlYbu6YTL._SL500_.jpg
     imagenWidth: 400
     imagenHeight: 500
@@ -1150,4 +1150,4 @@ productos:
       gallega y su Denominación de Origen, me dio confianza en la calidad artesanal. En mi caso lo serví muy frío con
       hielo y realzó sus matices, gracias también a la triple destilación. Si buscas un final de sobremesa fresco y
       herbáceo, este licor cumple esa función.
-actualizacion: '2025-09-23'
+actualizacion: '2025-09-24'

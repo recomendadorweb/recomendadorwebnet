@@ -193,7 +193,7 @@ productos:
       - ASIN: B089QP4QNB
         title: Razer Huntsman Mini (Purple Switch) Teclado, US Layout, color Negro
         brand: Razer
-        precio: 128,08€
+        precio: 124,63€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41EJWOqzQaL._SL500_.jpg
@@ -413,7 +413,7 @@ productos:
           Huntsman Mini (Red Switch) - Teclado Gaming, compacto para juegos del 60% con interruptores opto-mecánicos
           (tapas de teclas PBT, cable USB-C desmontable) Teclado Español - Negro
         brand: Razer
-        precio: 99,99€
+        precio: 93,90€
         precioOriginal: 139,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41s24yhCpeL._SL500_.jpg
@@ -1389,9 +1389,9 @@ productos:
       - name: color_name
         value: Interruptor Amarillo Silent
     variantes_info:
-      total_en_stock: 18
+      total_en_stock: 19
       mostradas: 10
-      restantes: 8
+      restantes: 9
       truncado: true
     variantes_restantes_asins:
       - B08CHLZVFP
@@ -1402,6 +1402,7 @@ productos:
       - B0C6V2DZZC
       - B0D31XQVRS
       - B0DVCHFYJ6
+      - B0F1TLMS41
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B08CHLZVFP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08G577XZF?tag=recomendadorn-21&th=1&psc=1
@@ -1411,6 +1412,7 @@ productos:
       - https://www.amazon.es/dp/B0C6V2DZZC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D31XQVRS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DVCHFYJ6?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F1TLMS41?tag=recomendadorn-21&th=1&psc=1
   - nombre: Razer Ornata V3 X
     lo_mejor: Membrana silenciosa, diseño fino y cómodo, teclas planas y resistentes al agua, ideal para trabajar y jugar
     a_tener_en_cuenta: Buena opción económica si no necesitas un teclado mecánico
@@ -1631,7 +1633,7 @@ productos:
       - Formato completo con anti-ghosting
     brand: Mars Gaming
     ASIN: B0F383W18C
-    precio: 45,66€
+    precio: 35,90€
     precioOriginal: 41,02€
     disponibilidad: En stock
     imagenesVariantes:
@@ -1814,47 +1816,6 @@ productos:
         variationAttributes:
           - name: style_name
             value: MKXTKLRES
-        ParentASIN: B0DZ752MKH
-        condicion: new
-      - ASIN: B076Q7YL68
-        title: Mars Gaming MRK0, Teclado con Retroiluminación, USB/Alámbrico, Negro
-        brand: Mars Gaming
-        precio: 18,65€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41C7nrtQItL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41fxHBru+hL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/415AaHgZUoL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51O6zE4vU0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51YYkX5nLEL._SL500_.jpg
-            width: 500
-            height: 500
-        enlace: https://www.amazon.es/dp/B076Q7YL68?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            TECLADO GAMING RGB: El MRK0 es un teclado Gaming que te ofrece unas prestaciones de gran calidad y te
-            permite jugar sin límites, proporcionándote una gran comodidad y ergonomía; teclas con pulsación y altura
-            optimizada para gaming, además de contar con 15 teclas extra de función para que tengas control total sobre
-            tus partidas
-          - >-
-            ILUMINACIÓN RGB RAINBOW: Cuenta con iluminación RGB Rainbow con 3 modods de iluminación multicolores
-            diferentes, efectos de respiración y control de intensidad
-          - >-
-            TECNOLOGÍA GAMING: Procesador GAMING de última generación con velocidad de respuesta customizable, Chipset
-            Gaming Profesional con frecuencia de sondeo ultra rápida y capacidad anti-ghosting; Layout Español
-          - 'COMPATIBILIDAD MULTIPLATAFORMA: Compatible con Windows, Linux, Mac, PS4, PS5, XBOX ONE, XBOX SERIES X-S'
-        variationAttributes:
-          - name: style_name
-            value: MRK0
         ParentASIN: B0DZ752MKH
         condicion: new
       - ASIN: B08F591M3H
@@ -2156,6 +2117,52 @@ productos:
         variationAttributes:
           - name: style_name
             value: MKMINIBRES
+        ParentASIN: B0DZ752MKH
+      - ASIN: B00IXZFQHG
+        title: Mars Gaming Teclado MECANICO Ultra Compacto MKMINI White Full RGB Chroma Switch OUTEMU Pro Red
+        brand: Mars Gaming
+        precio: 34,00€
+        precioOriginal: No especificado
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/41l857HADzL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/41Pr-b8YapL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41oyOp9Y1XL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41X6t4HRi0L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41fHRca2fFL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41YIjsk6DQL._SL500_.jpg
+            width: 500
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B00IXZFQHG?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            Con el mínimo tamaño operativo del 60 por ciento pero las optimas prestaciones tecnológicas y calidad, el
+            MKMINI te permitirá optimizar tu escritorio y transportarlo cómodamente donde quieras como nunca antes,
+            layout Español
+          - Los switches mecánicos OUTEMU PRO garantizan una total precisión y máxima durabilidad
+          - >-
+            Elige entre sus múltiples efectos especiales y perfiles personalizables para diseñar la iluminación a tu
+            gusto, todas las opciones posibles para conseguir exactamente el teclado que quieres
+          - >-
+            Podrás elegir el tipo de switch, su software de control ofrece múltiples posibilidades para que personalices
+            tu experiencia como más te guste
+          - >-
+            disfruta de las posibilidades gracias a su total compatibilidad multiplataforma, PC, Mac, PS5, PS4, Switch,
+            XBOX ONE, XBOX SERIES SX
+        variationAttributes:
+          - name: style_name
+            value: MKMINIWRES
         ParentASIN: B0DZ752MKH
     ParentASIN: B0DZ752MKH
     nombreCompleto: >-
@@ -3077,9 +3084,9 @@ productos:
       - name: color_name
         value: Interruptor Vierde Clicky
     variantes_info:
-      total_en_stock: 18
+      total_en_stock: 19
       mostradas: 10
-      restantes: 8
+      restantes: 9
       truncado: true
     variantes_restantes_asins:
       - B08CHLZVFP
@@ -3090,6 +3097,7 @@ productos:
       - B0C6V2DZZC
       - B0D31XQVRS
       - B0DVCHFYJ6
+      - B0F1TLMS41
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B08CHLZVFP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08G577XZF?tag=recomendadorn-21&th=1&psc=1
@@ -3099,6 +3107,7 @@ productos:
       - https://www.amazon.es/dp/B0C6V2DZZC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D31XQVRS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DVCHFYJ6?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F1TLMS41?tag=recomendadorn-21&th=1&psc=1
   - nombre: Logitech G512
     lo_mejor: Switches GX (Brown, Red o Blue), chasis de aluminio, RGB por tecla y puerto USB integrado
     a_tener_en_cuenta: Equilibrio perfecto entre calidad, rendimiento y estética
@@ -3388,4 +3397,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-23'
+actualizacion: '2025-09-24'

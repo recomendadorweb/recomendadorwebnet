@@ -3658,7 +3658,7 @@ productos:
       tacto, ideal para quienes buscan un descanso más natural. Recomiendo este modelo especialmente si valoras la
       higiene y una firmeza media-alta sin renunciar al confort.
     enlace: https://amzn.to/4l8fgYW?tag=recomendadorn-21&th=1
-    imagen: https://m.media-amazon.com/images/I/31svVNxv6dL._SL500_.jpg
+    imagen: https://m.media-amazon.com/images/I/31EGAldo-aL._SL500_.jpg
     lo_mejor: Media-Alta
     nombre: ZZ Don Descanso Mulhacén Viscoelástico
     valoracion: 4.4
@@ -3687,7 +3687,7 @@ productos:
       - url: https://m.media-amazon.com/images/I/41udZf6+XCL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/51xZPGiicnL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51FD62q+whL._SL500_.jpg
         width: 500
         height: 500
     imagenHeight: 500
@@ -5169,13 +5169,16 @@ productos:
       - name: color_name
         value: Azul
     variantes_info:
-      total_en_stock: 29
+      total_en_stock: 31
       mostradas: 10
-      restantes: 19
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
+      - B0B6P3S4MB
       - B0B9BVHY6M
       - B0B9BW7W4N
+      - B0B9BW8G35
+      - B0B9BWJBYS
       - B0B9BXH28V
       - B0B9BXQBWJ
       - B0B9BXQYR7
@@ -5184,7 +5187,6 @@ productos:
       - B0BLZ5ZK1B
       - B0BPYQHQ2R
       - B0BPYSH859
-      - B0BPYW4ZJ9
       - B0BPZ157H5
       - B0BPZQZWR4
       - B0BQ19C3MW
@@ -5194,8 +5196,11 @@ productos:
       - B0BQ1TCDT8
       - B0BVRHWFYK
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0B6P3S4MB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BVHY6M?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BW7W4N?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0B9BW8G35?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0B9BWJBYS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXH28V?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXQBWJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXQYR7?tag=recomendadorn-21&th=1&psc=1
@@ -5204,7 +5209,6 @@ productos:
       - https://www.amazon.es/dp/B0BLZ5ZK1B?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPYQHQ2R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPYSH859?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0BPYW4ZJ9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZ157H5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZQZWR4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ19C3MW?tag=recomendadorn-21&th=1&psc=1
@@ -6189,7 +6193,7 @@ productos:
           PIKOLIN Leah - Colchón viscoelástico y Espuma HR, Altura 24cm, Firmeza Alta, Confort Visco, Calidad Óptima,
           Protección Higiénica Total, 140x190
         brand: PIKOLIN
-        precio: 429,99€
+        precio: 461,00€
         precioOriginal: 456,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41D2T-pgNOL._SL500_.jpg
@@ -6755,4 +6759,4 @@ productos:
       - https://www.amazon.es/dp/B0DW4KY26P?tag=recomendadorn-21&th=1&psc=1
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-23'
+actualizacion: '2025-09-24'

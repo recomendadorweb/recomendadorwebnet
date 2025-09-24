@@ -493,11 +493,12 @@ productos:
       - name: color_name
         value: Negro/Rojo
     variantes_info:
-      total_en_stock: 21
+      total_en_stock: 22
       mostradas: 10
-      restantes: 11
+      restantes: 12
       truncado: true
     variantes_restantes_asins:
+      - B0DYYKG23V
       - B0DYYM65H4
       - B0DYYM6JM7
       - B0DYYML3XP
@@ -510,6 +511,7 @@ productos:
       - B0F8R4HTTD
       - B0F8R4MNW6
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0DYYKG23V?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM65H4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYM6JM7?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DYYML3XP?tag=recomendadorn-21&th=1&psc=1
@@ -2532,35 +2534,31 @@ productos:
       Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
     condicion: new
     variantes_info:
-      total_en_stock: 22
+      total_en_stock: 20
       mostradas: 10
-      restantes: 12
+      restantes: 10
       truncado: true
     variantes_restantes_asins:
       - B07BD1YF4Y
       - B07JG5GV2L
       - B07JGPSHGJ
-      - B07JWBY5DZ
       - B07Q7YNGYZ
       - B07QFLR1FD
       - B07QGMZYRW
       - B07QGNK295
       - B07ZZ23GJR
       - B09Q8YBM98
-      - B09Q98JVGF
       - B09QCV8RL2
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B07BD1YF4Y?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JG5GV2L?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JGPSHGJ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B07JWBY5DZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07Q7YNGYZ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07QFLR1FD?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07QGMZYRW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07QGNK295?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07ZZ23GJR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09Q8YBM98?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B09Q98JVGF?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09QCV8RL2?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B07JGYWHQY
     a_tener_en_cuenta: Requiere saber colocarlo bien por su tamaño
@@ -3101,9 +3099,9 @@ productos:
       - name: color_name
         value: Rojo Dorado
     variantes_info:
-      total_en_stock: 24
+      total_en_stock: 23
       mostradas: 10
-      restantes: 14
+      restantes: 13
       truncado: true
     variantes_restantes_asins:
       - B06XY1DGRK
@@ -3115,7 +3113,6 @@ productos:
       - B07CQNN697
       - B07Q3329C1
       - B08M6D1F6Y
-      - B08M6FV87Z
       - B08M6HBMK1
       - B09QD59DGK
       - B09QGXWVY1
@@ -3130,7 +3127,6 @@ productos:
       - https://www.amazon.es/dp/B07CQNN697?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07Q3329C1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08M6D1F6Y?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B08M6FV87Z?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08M6HBMK1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09QD59DGK?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09QGXWVY1?tag=recomendadorn-21&th=1&psc=1
@@ -3294,4 +3290,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-23'
+actualizacion: '2025-09-24'

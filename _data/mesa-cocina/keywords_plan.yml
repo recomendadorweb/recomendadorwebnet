@@ -1,0 +1,92 @@
+cabecera:
+  # KW_ATACADA: mesas de cocina | VOL: 6600
+  principal: mesas de cocina
+  meta:
+    vol: 6600
+    diff: 0
+    intent: C
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: mesa cocina | VOL: 6600
+  - mesa de cocina
+  # KW_ATACADA: mesas de cocina | VOL: 6600
+  - mesas de cocina
+  # KW_ATACADA: mesa alta cocina | VOL: 4400
+  - mesa alta de cocina
+  # KW_ATACADA: mesa de cocina | VOL: 4400
+  - mesa de cocina
+secciones:
+  - kw: mesa cocina
+    # KW_ATACADA: mesa cocina | VOL: 6600
+    titulo: mesa de cocina
+    id: mesa-cocina
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 6600
+    diff: 0
+    intent: C
+  - kw: mesas de cocina
+    # KW_ATACADA: mesas de cocina | VOL: 6600
+    titulo: mesas de cocina
+    id: mesas-de-cocina
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 6600
+    diff: 0
+    intent: C
+  - kw: mesa alta cocina
+    # KW_ATACADA: mesa alta cocina | VOL: 4400
+    titulo: mesa alta de cocina
+    id: mesa-alta-cocina
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 4400
+    diff: 0
+    intent: I
+  - kw: mesa de cocina
+    # KW_ATACADA: mesa de cocina | VOL: 4400
+    titulo: mesa de cocina
+    id: mesa-de-cocina
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 4400
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: mesa cocina | VOL: 6600
+  - mesa de cocina
+  # KW_ATACADA: mesas de cocina | VOL: 6600
+  - mesas de cocina
+  # KW_ATACADA: mesa alta cocina | VOL: 4400
+  - mesa alta de cocina
+  # KW_ATACADA: mesa de cocina | VOL: 4400
+  - mesa de cocina
+  # KW_ATACADA: mesa plegable cocina | VOL: 2900
+  - mesa plegable de cocina
+  # KW_ATACADA: mesa y sillas cocina | VOL: 2400
+  - mesa y sillas de cocina
+  # KW_ATACADA: mesas cocina | VOL: 2400
+  - mesas de cocina
+  # KW_ATACADA: mesa redonda cocina | VOL: 1900
+  - mesa redonda de cocina
+  # KW_ATACADA: mesa cocina pequeña | VOL: 1600
+  - mesa pequeña de cocina
+html_map:
+  h1: mesas de cocina
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - mesa de cocina
+  - mesas de cocina
+  - mesa alta de cocina
+  - mesa de cocina
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 9
+  total_brands_detected: 97

@@ -231,7 +231,7 @@ productos:
           Kinderkraft Cuna Bebé Lovi, Moisés, Bolsa de Transporte, Juegos, Viaje, Gris & INTERBABY - Juego de sábanas
           para minicuna Love, Beige
         brand: Kinderkraft
-        precio: 81,61€
+        precio: 74,61€
         precioOriginal: 88,57€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/319cJTdmAXL._SL500_.jpg
@@ -288,72 +288,11 @@ productos:
           - name: style_name
             value: + INTERBABY - Juego de sábanas
         ParentASIN: B082YQ5Q72
-      - ASIN: B0829K2Y75
-        title: >-
-          kk Kinderkraft LOVI Cuna bebé con colchón 3 en 1, Cuna mecedora de viaje, Plegable en 5 segundos, Mosquitera,
-          2 juguetes y Bolsa incluye, Capota profunda, Beige
-        brand: Kinderkraft
-        precio: 69,00€
-        precioOriginal: 74,90€
-        disponibilidad: Envío en 3 a 7 meses
-        imagen: https://m.media-amazon.com/images/I/3147UE-xldL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51df85jUwEL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41VmUhH7F-L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ehb-vo7NL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31x09VMjWLL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41JrsetUmaL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41eOwLOusWL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41RqzpT-jjL._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0829K2Y75?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            ✅ CUNA DE VIAJE: para niños desde los primeros días hasta los 9 kg o hasta el momento en que puedam sentarse
-            por sí solos (aprox. 6 meses de vida). Tiene la opción de mecer, una mosquitera incorporada y una cabina
-            ajustable. LOVI es ligera y fácil de plegar y llevar al viaje gracias a una bolsa incluida.
-          - >-
-            ✅ PRÁCTICA: la cuna tiene lados funcionales de malla, gracias a los cuales, el padre nunca pierde al niño de
-            vista. Además, brindan una buena circulación de aire durante los días calurosos. Plegar la cuna toma solo un
-            par de segundos y su tamaño compacto facilita el transporte.
-          - >-
-            ✅ FUNCIONAL: la cuna viene con un colchón cómodo con una funda que se quita y limpia fácilmente. Los patines
-            se pueden bloquear y desbloquear en la función de mecer, y el hecho de que no se requieren herramientas para
-            cambiar de funciones y para plegar la cuna hace que LOVI sea práctica y funcional.
-          - >-
-            ✅ SÓLIDA: el marco de acero hace que la cuna sea sólida y muy resistente. Por otro lado, el revestimiento
-            del colchón está cubierto con algodón que le brinda a la piel una circulación de aire adecuada. La cabina y
-            la funda de la cuna están hechas de un material fácil de mantener limpio.
-          - >-
-            ✅ CON ACCESORIOS: LOVI viene con colchón y juguetes con espejo agradables al tacto. Se pueden desmontar por
-            completo y poner otro orden.
-        variationAttributes:
-          - name: color_name
-            value: Beige
-          - name: style_name
-            value: Kinderkraft Cuna Bebé LOVI,
-        ParentASIN: B082YQ5Q72
     title: >-
       kk Kinderkraft LOVI Cuna mecedora bebé con colchón 3 en 1, Cuna de viaje, Plegable en 5 segundos, Mosquitera,
       incluye 2 juguetes y Bolsa de viaje, Buena Circulación de Aire, Gris
     brand: Kinderkraft
-    precio: 66,00€
+    precio: 59,00€
     precioOriginal: 74,90€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/31zC38v+M6L._SL500_.jpg
@@ -409,8 +348,8 @@ productos:
       - name: style_name
         value: Kinderkraft Cuna Bebé LOVI,
     variantes_info:
-      total_en_stock: 2
-      mostradas: 2
+      total_en_stock: 1
+      mostradas: 1
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1205,7 +1144,7 @@ productos:
           Clair de Lune Cesta de moisés de Palma orgánica, ganadora del Premio Dorado, Viene con apósito orgánico,
           colchón de bambú Natural y sábana Suave de 75 x 28 cm (Naranja óxido)
         brand: Clair de Lune
-        precio: 175,80€
+        precio: 175,62€
         precioOriginal: No especificado
         disponibilidad: Envío en 4 a 7 meses
         imagen: https://m.media-amazon.com/images/I/41EovFt5cFL._SL500_.jpg
@@ -1358,4 +1297,4 @@ productos:
       sueño más tranquilo. La cesta es apta desde el nacimiento hasta 9 kg y está hecha a mano en Gran Bretaña, lo que
       añadió confianza en la calidad. Si buscas una solución ecológica y lista para usar, ha sido una opción muy cómoda
       para nuestros primeros meses.
-actualizacion: '2025-09-23'
+actualizacion: '2025-09-24'

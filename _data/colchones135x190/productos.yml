@@ -1341,13 +1341,16 @@ productos:
       - name: color_name
         value: Azul
     variantes_info:
-      total_en_stock: 29
+      total_en_stock: 31
       mostradas: 10
-      restantes: 19
+      restantes: 21
       truncado: true
     variantes_restantes_asins:
+      - B0B6P3S4MB
       - B0B9BVHY6M
       - B0B9BW7W4N
+      - B0B9BW8G35
+      - B0B9BWJBYS
       - B0B9BX7R2R
       - B0B9BXH28V
       - B0B9BXQBWJ
@@ -1356,7 +1359,6 @@ productos:
       - B0BLZ5ZK1B
       - B0BPYQHQ2R
       - B0BPYSH859
-      - B0BPYW4ZJ9
       - B0BPZ157H5
       - B0BPZQZWR4
       - B0BQ19C3MW
@@ -1366,8 +1368,11 @@ productos:
       - B0BQ1TCDT8
       - B0BVRHWFYK
     variantes_restantes_enlaces:
+      - https://www.amazon.es/dp/B0B6P3S4MB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BVHY6M?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BW7W4N?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0B9BW8G35?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0B9BWJBYS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BX7R2R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXH28V?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BXQBWJ?tag=recomendadorn-21&th=1&psc=1
@@ -1376,7 +1381,6 @@ productos:
       - https://www.amazon.es/dp/B0BLZ5ZK1B?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPYQHQ2R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPYSH859?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0BPYW4ZJ9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZ157H5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZQZWR4?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ19C3MW?tag=recomendadorn-21&th=1&psc=1
@@ -6730,7 +6734,7 @@ productos:
     valoracion: 4.5
     precio: 179,24€
     precioOriginal: 189,24€
-    disponibilidad: Envío en 4 a 5 días
+    disponibilidad: En stock
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/41CG8AC7UBL._SL500_.jpg
         width: 500
@@ -6887,7 +6891,7 @@ productos:
         brand: Naturalex
         precio: 215,48€
         precioOriginal: No especificado
-        disponibilidad: Envío en 4 a 5 días
+        disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51dV3DWYDML._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -7947,7 +7951,7 @@ productos:
           LUCID 5 pulgadas Colchón de espuma viscoelástica de perfil bajo, infusión de gel refrescante, hipoalergénico,
           carbón de bambú, transpirable, tamaño Queen, BLANCO
         brand: LUCID
-        precio: 491,09€
+        precio: 465,95€
         precioOriginal: No especificado
         disponibilidad: Envío en 3 a 4 días
         imagen: https://m.media-amazon.com/images/I/41ZNeNHTbXL._SL500_.jpg
@@ -8336,7 +8340,6 @@ productos:
       restantes: 15
       truncado: true
     variantes_restantes_asins:
-      - B08BXK962R
       - B08BXNWBPR
       - B08BXPFCRL
       - B08BXQ7P3D
@@ -8351,8 +8354,8 @@ productos:
       - B09FYF4Y6S
       - B09FYFBXTM
       - B09FYG17M7
+      - B09FYGVBMW
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B08BXK962R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08BXNWBPR?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08BXPFCRL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08BXQ7P3D?tag=recomendadorn-21&th=1&psc=1
@@ -8367,6 +8370,7 @@ productos:
       - https://www.amazon.es/dp/B09FYF4Y6S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYFBXTM?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B09FYG17M7?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B09FYGVBMW?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0883KR5BN
     a_tener_en_cuenta: Espuma Viscoelástica + grafeno
     brand: Imperial Confort
@@ -8384,7 +8388,7 @@ productos:
     lo_mejor: Media-Alta
     nombre: Imperial Confort - ViscoBayscent Grafeno
     valoracion: 4.4
-    precio: 326,74€
+    precio: 325,32€
     precioOriginal: 331,47€
     disponibilidad: En stock
     imagenesVariantes:
@@ -9551,7 +9555,7 @@ productos:
       sensación de acogida gracias a su capa Visco acu-point. Pensado para quienes buscan equilibrio entre firmeza y
       comodidad.
     enlace: https://amzn.to/4nrhLXM?tag=recomendadorn-21&th=1
-    imagen: https://m.media-amazon.com/images/I/31s5AyuC2YL._SL500_.jpg
+    imagen: https://m.media-amazon.com/images/I/31dwTJtIU7L._SL500_.jpg
     lo_mejor: Media-Alta
     nombre: Don descanso ZZ - Aloe Vera Mulhacén
     valoracion: 4.4
@@ -9559,25 +9563,22 @@ productos:
     precioOriginal: 199,21€
     disponibilidad: En stock
     imagenesVariantes:
-      - url: https://m.media-amazon.com/images/I/41w-NyT8PgL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51if6RQ+ZTL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41W+2kY3AYL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/41lRM8CUrYL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41SJckZ9CKL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/4161Nh0GsgL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/4135Tfnu9NL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/410wQTUWG5L._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41ypXeRRdTL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/41GD74B44iL._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41aBeNubGuL._SL500_.jpg
-        width: 500
-        height: 500
-      - url: https://m.media-amazon.com/images/I/31tSSHcHtkL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/51TCYKce8lL._SL500_.jpg
         width: 500
         height: 500
     imagenHeight: 500
@@ -11060,4 +11061,4 @@ productos:
     variantes_restantes_enlaces: []
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-23'
+actualizacion: '2025-09-24'

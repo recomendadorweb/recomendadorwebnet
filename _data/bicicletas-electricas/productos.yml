@@ -1031,7 +1031,77 @@ productos:
     title: >-
       Milecity1 26" Bicicleta Eléctrica para Adultos, Bici Electrica De 7 Velocidades con Batería Extraíble De 36V 13Ah,
       25 Km/H Y Alcance De 80-100Km E Bike para Viajeros Urbanos, Resistente Al Agua Ip65
-    variantes: []
+    variantes:
+      - ASIN: B0DKXXHK16
+        title: >-
+          Milecity1 26" Bicicleta Eléctrica para Adultos, Bici Electrica De 7 Velocidades con Batería Extraíble De 36V
+          13Ah, 25 Km/H Y Alcance De 80-100Km E Bike para Viajeros Urbanos, Resistente Al Agua Ip65
+        brand: HillMiles
+        precio: 699,00€
+        precioOriginal: 799,00€
+        disponibilidad: En stock
+        imagen: https://m.media-amazon.com/images/I/51qX+LBGCAL._SL500_.jpg
+        imagenWidth: 500
+        imagenHeight: 500
+        imagenesVariantes:
+          - url: https://m.media-amazon.com/images/I/417cyxEmUYL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51Rt+oqtKWL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/4148Zoa2JML._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51CuIuEL7tL._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41N5T5oPz3L._SL500_.jpg
+            width: 375
+            height: 500
+          - url: https://m.media-amazon.com/images/I/31nBYLBimVL._SL500_.jpg
+            width: 375
+            height: 500
+        condicion: new
+        enlace: https://www.amazon.es/dp/B0DKXXHK16?tag=recomendadorn-21&th=1&psc=1
+        caracteristicasAmazon:
+          - >-
+            🚲【Batería de larga duración de 468WH】La bicicleta eléctrica tiene una batería extraíble incorporada de 36 V
+            13 Ah, que puede proporcionar hasta 80 KM de kilometraje después de una sola carga de aproximadamente 4-5 h,
+            e incluso puede alcanzar los 100 KM en modo PAS, lo que le permite viajar libremente donde quiera ir.
+          - >-
+            🚲【Motor potente】MileCity1 Ebike está equipada con un potente motor para proporcionar suficiente potencia
+            para una aceleración y subidas suaves, con una velocidad máxima de 25KM/H, sistema de cambios de 7
+            velocidades, 5 modos de conducción para garantizar que siempre pueda encontrar el ritmo adecuado para
+            montar, lo que lo convierte en un excelente viajero en la ciudad.
+          - >-
+            🚲【Diseño conveniente】El vehículo urbano está equipado con faros LED, que se pueden encender presionando el
+            "+" en la pantalla durante 3 segundos. El portaequipajes trasero con una capacidad de carga de 25 kg se
+            utiliza para transportar artículos de primera necesidad. La pantalla LCD puede verificar el modo de potencia
+            y velocidad. La batería incorporada y resistente al agua IP65 es más hermosa, y la batería de desbloqueo con
+            llave se enfoca en el rendimiento antirrobo, por lo que no tiene que preocuparse por la bicicleta eléctrica
+            cuando sale.
+          - >-
+            🚲【Amortiguador delantero para una conducción suave y cómoda】La bicicleta eléctrica de montaña de 26
+            pulgadas está equipada con neumáticos todoterreno y una horquilla delantera que absorbe los impactos, lo que
+            garantiza una conducción cómoda en una variedad de superficies, desde calles de la ciudad hasta senderos
+            ligeros, minimizando las vibraciones y los golpes.
+          - >-
+            🚲【Marco estable y adecuado para la mayoría de las personas】El marco de la bicicleta eléctrica para adultos
+            de 27 kg está hecho de material de acero al carbono de alta calidad, que es más estable y puede soportar un
+            peso de 120 kg. El asiento ajustable es adecuado para ciclistas urbanos hombres/mujeres de 155-185 cm.
+          - >-
+            🚲【85% de premontaje y servicio posventa】La bicicleta eléctrica está premontada en un 85%, puedes consultar
+            el vídeo para la instalación. Si tienes alguna pregunta sobre la batería del producto, el cargador, los
+            distintos accesorios, etc., no dudes en contactarnos. Te proporcionaremos un año de soporte técnico y
+            reemitiremos las piezas, te responderemos en un plazo de 24 horas y resolveremos el problema lo antes
+            posible.
+        variationAttributes:
+          - name: color_name
+            value: Verde
+          - name: style_name
+            value: MileCity1
+        ParentASIN: B0DLP4VBWW
     ParentASIN: B0DLP4VBWW
     variationAttributes:
       - name: color_name
@@ -1043,8 +1113,8 @@ productos:
       25 Km/H Y Alcance De 80-100Km E Bike para Viajeros Urbanos, Resistente Al Agua Ip65
     condicion: new
     variantes_info:
-      total_en_stock: 0
-      mostradas: 0
+      total_en_stock: 1
+      mostradas: 1
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1854,4 +1924,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-23'
+actualizacion: '2025-09-24'
