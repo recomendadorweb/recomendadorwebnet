@@ -1,0 +1,88 @@
+cabecera:
+  # KW_ATACADA: mesa de centro elevable y extensible | VOL: 2900
+  principal: mesa de centro elevable y extensible
+  meta:
+    vol: 2900
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: mesa de centro elevable y extensible | VOL: 2900
+  - mesa de centro elevable y extensible
+  # KW_ATACADA: mesa centro elevable y extensible | VOL: 1300
+  - mesa de centro elevable y extensible
+  # KW_ATACADA: mesas de centro elevables y extensibles | VOL: 1300
+  - mesas de centro elevables y extensibles
+  # KW_ATACADA: mesa centro extensible | VOL: 390
+  - mesa de centro extensible
+secciones:
+  - kw: mesa de centro elevable y extensible
+    # KW_ATACADA: mesa de centro elevable y extensible | VOL: 2900
+    titulo: mesa de centro elevable y extensible
+    id: mesa-de-centro-elevable-y-extensible
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 2900
+    diff: 0
+    intent: I
+  - kw: mesa centro elevable y extensible
+    # KW_ATACADA: mesa centro elevable y extensible | VOL: 1300
+    titulo: mesa de centro elevable y extensible
+    id: mesa-centro-elevable-y-extensible
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1300
+    diff: 0
+    intent: I
+  - kw: mesas de centro elevables y extensibles
+    # KW_ATACADA: mesas de centro elevables y extensibles | VOL: 1300
+    titulo: mesas de centro elevables y extensibles
+    id: mesas-de-centro-elevables-y-extensibles
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1300
+    diff: 0
+    intent: I
+  - kw: mesa centro extensible
+    # KW_ATACADA: mesa centro extensible | VOL: 390
+    titulo: mesa de centro extensible
+    id: mesa-centro-extensible
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 390
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: mesa de centro elevable y extensible | VOL: 2900
+  - mesa de centro elevable y extensible
+  # KW_ATACADA: mesa centro elevable y extensible | VOL: 1300
+  - mesa de centro elevable y extensible
+  # KW_ATACADA: mesas de centro elevables y extensibles | VOL: 1300
+  - mesas de centro elevables y extensibles
+  # KW_ATACADA: mesa centro extensible | VOL: 390
+  - mesa de centro extensible
+  # KW_ATACADA: mesa de centro extensible | VOL: 390
+  - mesa de centro extensible
+  # KW_ATACADA: mesa extensible de centro | VOL: 390
+  - mesa de centro extensible
+  # KW_ATACADA: mesa centro extensible y elevable | VOL: 320
+  - mesa de centro extensible y elevable
+html_map:
+  h1: mesa de centro elevable y extensible
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - mesa de centro elevable y extensible
+  - mesa de centro elevable y extensible
+  - mesas de centro elevables y extensibles
+  - mesa de centro extensible
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 7
+  total_brands_detected: 66
