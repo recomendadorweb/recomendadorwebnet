@@ -7,75 +7,6 @@ productos:
     salesrank: 1208
     enlace: https://www.amazon.es/dp/B0F1MQTX77?tag=recomendadorn-21&linkCode=ogi&th=1&psc=1
     variantes:
-      - ASIN: B0CRHFV3JG
-        title: >-
-          Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Portable E-Bike, City EBike con 4.5 Pulgadas Pantalla LED,
-          Batería 36V/7.8Ah, Frenos de Doble Disco, Unisex Adulto (Aqua Azul)
-        brand: Bodywel
-        precio: 370,02€
-        precioOriginal: 419,99€
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41zUZlaCg7L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/51-Kvh5YE7L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51yv2lUCBAL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/517ckrX-xKL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51qkDoAS+sL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/418zw60QnwL._SL500_.jpg
-            width: 500
-            height: 333
-          - url: https://m.media-amazon.com/images/I/413AOJFz2SL._SL500_.jpg
-            width: 500
-            height: 334
-          - url: https://m.media-amazon.com/images/I/513EO-iV2WL._SL500_.jpg
-            width: 375
-            height: 500
-          - url: https://m.media-amazon.com/images/I/5109jcbDPUL._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0CRHFV3JG?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            【Commuter City EBike】Esta bicicleta eléctrica está equipada con neumáticos antichoque de 14 pulgadas, motor
-            de 250W, batería de 36V 7.8 de gran alcance, frenos de doble disco, suspensión delantera y amortiguador
-            central, pantalla LED inteligente, manillar plegable, sillín ajustable, luz delantera y luces traseras.
-            Perfecta para tus desplazamientos diarios y viajes cortos.
-          - >-
-            【Portable & Plegable & Confort】La ebike de ciudad se pliega fácilmente con su manillar plegable Le permite
-            llevar y almacenar fácilmente la ebike en cualquier lugar. La suspensión de horquilla delantera y los
-            amortiguadores centrales reducen los baches y hacen que su viaje sea más cómodo y estable.
-          - >-
-            【Super Motor & Large Battery】El motor sin escobillas de 250W con batería de litio recargable de 36V 7.8Ah
-            incorporada asegura un rango de viaje de 25-45KM(Nivel PAS 1) con una carga completa y proporciona una
-            velocidad máxima de 25 km/h en carreteras urbanas planas (Max 10-15 grados).
-          - >-
-            【Safer Riding】Bodywel T16PRO ebike cuenta con frenos de doble disco delanteros y traseros mejorar plenamente
-            el rendimiento de frenado y acortar la distancia de frenado. La luz delantera de seguridad, la luz trasera y
-            la campana de la bicicleta le hacen más seguro cuando usted sale especialmente en la noche.
-          - >-
-            【Sillín ajustable y 2 modos de conducción】Tiene modo de asistencia eléctrica y modo de bicicleta normal. Es
-            ideal para desplazamientos diarios, ejercicio al aire libre, diversión de fin de semana y campamento de
-            vacaciones. El sillín ajustable es adecuado para personas de diferentes complexiones para encontrar la mejor
-            posición para un paseo cómodo. Carga máxima: 264lbs/120kg, altura recomendada: 155-185cm.
-          - >-
-            【90% Pre-assembled】Tener todos los componentes principales ya preinstalados para el 90%, sin montaje
-            complicado, más rápido para disfrutar de un nuevo paseo. Proporcionamos servicio de soporte técnico las 24
-            horas. Si usted tiene algún problema acerca de este ebike, por favor no dude en contactar con nosotros.
-        variationAttributes:
-          - name: color_name
-            value: Aqua Azul
-        ParentASIN: B0CRHBM699
       - ASIN: B0CRHG997X
         title: >-
           Bodywel T16PRO Bicicleta Eléctrica Plegable, 14" Portable E-Bike, City EBike con 4.5 Pulgadas Pantalla LED,
@@ -734,8 +665,8 @@ productos:
       - name: color_name
         value: Blanco
     variantes_info:
-      total_en_stock: 9
-      mostradas: 9
+      total_en_stock: 8
+      mostradas: 8
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1603,7 +1534,7 @@ productos:
       - url: https://m.media-amazon.com/images/I/51JxDiEPUOL._SL500_.jpg
         width: 500
         height: 500
-    condicion: new
+    condicion: ''
     caracteristicasAmazon:
       - >-
         Conformidad con las normas de tráfico europeas: La bicicleta eléctrica ENGWE EP-2 BOOST cumple totalmente con

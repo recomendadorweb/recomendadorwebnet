@@ -640,9 +640,9 @@ productos:
       - name: color_name
         value: B-burdeos
     variantes_info:
-      total_en_stock: 90
+      total_en_stock: 91
       mostradas: 10
-      restantes: 80
+      restantes: 81
       truncado: true
     variantes_restantes_asins:
       - B0D53CSFQL
@@ -691,6 +691,7 @@ productos:
       - B0DXPXTWM9
       - B0DXPY1YXC
       - B0DXPY36KB
+      - B0DXPY8D5D
       - B0DXPYCFM5
       - B0DXPYTFB8
       - B0DXPYVS6S
@@ -772,6 +773,7 @@ productos:
       - https://www.amazon.es/dp/B0DXPXTWM9?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPY1YXC?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPY36KB?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0DXPY8D5D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYCFM5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYTFB8?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DXPYVS6S?tag=recomendadorn-21&th=1&psc=1
@@ -1507,11 +1509,11 @@ productos:
         la tabla de tallas de Amazon) en nuestras fotos o descripciones de productos para elegir el tamaño correcto en
         función de sus propias medidas corporales antes de comprar. Muchas gracias.
     ParentASIN: B0D4M9QDLN
-    condicion: new
+    condicion: ''
     variantes_info:
-      total_en_stock: 79
+      total_en_stock: 77
       mostradas: 10
-      restantes: 69
+      restantes: 67
       truncado: true
     variantes_restantes_asins:
       - B0D4LTBFV9
@@ -1536,7 +1538,6 @@ productos:
       - B0DF75B2J1
       - B0DF75H7ZJ
       - B0DF75K156
-      - B0DF75K3RS
       - B0DF75QB37
       - B0DF75QLL6
       - B0DF75RMRP
@@ -1556,7 +1557,6 @@ productos:
       - B0DFC5Z4GJ
       - B0DFC662TP
       - B0DFC6D9BS
-      - B0DFC7RF3D
       - B0DFC92KDP
       - B0DFC92Z1P
       - B0DFC99Y1J
@@ -1606,7 +1606,6 @@ productos:
       - https://www.amazon.es/dp/B0DF75B2J1?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF75H7ZJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF75K156?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DF75K3RS?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF75QB37?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF75QLL6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DF75RMRP?tag=recomendadorn-21&th=1&psc=1
@@ -1626,7 +1625,6 @@ productos:
       - https://www.amazon.es/dp/B0DFC5Z4GJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC662TP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC6D9BS?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0DFC7RF3D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC92KDP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC92Z1P?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0DFC99Y1J?tag=recomendadorn-21&th=1&psc=1
@@ -5787,7 +5785,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, S
         brand: DSAoTeng
-        precio: 15,15€
+        precio: 15,08€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
@@ -5843,7 +5841,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, verde, XXL
         brand: DSAoTeng
-        precio: 15,16€
+        precio: 15,50€
         precioOriginal: 15,00€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg
@@ -5899,7 +5897,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, Morado (, M
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,25€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
@@ -5952,7 +5950,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, XL
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,26€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
@@ -6008,7 +6006,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, L
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,26€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
@@ -6064,7 +6062,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, azul oscuro, XXL
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,10€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Iv1-FALEL._SL500_.jpg
@@ -6135,7 +6133,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, azul oscuro, L
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,25€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41Iv1-FALEL._SL500_.jpg
@@ -6206,7 +6204,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, floral, ajustado al cuerpo, para otoño, para fiesta
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,26€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
@@ -6259,7 +6257,7 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, Morado (, 3XL
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,25€
         precioOriginal: 10,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31+lZ+ELtAL._SL500_.jpg
@@ -6312,9 +6310,9 @@ productos:
           DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual,
           bohemio, elegante, floral, para otoño, para fiesta, rosso, M
         brand: DSAoTeng
-        precio: 15,00€
+        precio: 15,89€
         precioOriginal: 10,99€
-        disponibilidad: En stock
+        disponibilidad: Envío en 4 a 5 días
         imagen: https://m.media-amazon.com/images/I/318JEiE9InL._SL500_.jpg
         imagenWidth: 272
         imagenHeight: 500
@@ -6379,7 +6377,7 @@ productos:
       DSAoTeng Vestido largo de manga larga con cuello en V y estampado vintage para mujer, elegante, casual, bohemio,
       elegante, floral, para otoño, para fiesta, verde, L
     brand: DSAoTeng
-    precio: 15,00€
+    precio: 15,25€
     precioOriginal: 10,99€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/317Ouh5LMgL._SL500_.jpg
