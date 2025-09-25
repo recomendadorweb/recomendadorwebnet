@@ -1088,18 +1088,12 @@ productos:
           - name: size_name
             value: 10Ah
         ParentASIN: B0F83V9T8T
-      - ASIN: B0F9Y1B48K
-        nombreCompleto: >-
-          DEEPOWER K306 | Bicicleta Eléctrica Plegable | 14" Bicicleta Eléctrica | Batería Extraíble 48V 30Ah | Motor de
-          250W | Multi-Shock | Bicicleta de Ciudad para Adultos Adoles(30Ah)
-        valoracion: 4.5
-        salesrank: 7717
-        enlace: https://www.amazon.es/dp/B0F9Y1B48K?tag=recomendadorn-21&linkCode=ogv&th=1&psc=1
+      - ASIN: B0F9Y287M8
         title: >-
-          DEEPOWER K306 | Bicicleta Eléctrica Plegable | 14" Bicicleta Eléctrica | Batería Extraíble 48V 30Ah | Motor de
-          250W | Multi-Shock | Bicicleta de Ciudad para Adultos Adoles(30Ah)
+          DEEPOWER K306 | Bicicleta Eléctrica Plegable | 14" Bicicleta Eléctrica | Batería Extraíble 48V 17.5Ah |
+          Amortiguadores Múltiples | Bicicleta de Ciudad para Adultos Adoles(17.5Ah)
         brand: DEEPOWER
-        precio: 589,00€
+        precio: 549,00€
         precioOriginal: No especificado
         disponibilidad: Envío en 3 a 4 días
         imagen: https://m.media-amazon.com/images/I/41kTt+xFPaL._SL500_.jpg
@@ -1107,6 +1101,15 @@ productos:
         imagenHeight: 500
         imagenesVariantes:
           - url: https://m.media-amazon.com/images/I/51Wp7jaYQ+L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/41G3Tct0vCL._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51JyZ-ZdX7L._SL500_.jpg
+            width: 500
+            height: 500
+          - url: https://m.media-amazon.com/images/I/51pAb8jzvLL._SL500_.jpg
             width: 500
             height: 500
           - url: https://m.media-amazon.com/images/I/61M5F1kQu8L._SL500_.jpg
@@ -1118,25 +1121,17 @@ productos:
           - url: https://m.media-amazon.com/images/I/51yaYq1Zt9L._SL500_.jpg
             width: 500
             height: 500
-          - url: https://m.media-amazon.com/images/I/41mkEENI0PL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51N3wDLHtxL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51sTaAumTQL._SL500_.jpg
-            width: 500
-            height: 500
           - url: https://m.media-amazon.com/images/I/61YGCPISa0L._SL500_.jpg
             width: 500
             height: 500
         condicion: new
+        enlace: https://www.amazon.es/dp/B0F9Y287M8?tag=recomendadorn-21&th=1&psc=1
         caracteristicasAmazon:
           - >-
             [POTENTE MOTOR SIN ESCOBILLAS Y BATERÍA DE ALTA CAPACIDAD] Esta bicicleta eléctrica plegable está equipada
             con un motor sin escobillas de 250 W, potencia suficiente, bajo nivel de ruido y alta conversión energética.
-            Supera fácilmente pendientes de 25°. Batería de iones de litio de alta capacidad de 48 V y 30 Ah con función
-            extraíble, tiempo de recarga de 5 horas, autonomía máxima de hasta 90-135km (Modo PAS).
+            Supera fácilmente pendientes de 25°. Batería de iones de litio de alta capacidad de 48 V y 17.5 Ah con
+            función extraíble, tiempo de recarga de 5 horas, autonomía máxima de hasta 50-75km (Modo PAS).
           - >-
             [CÓMODO DISEÑO DE ABSORCIÓN DE IMPACTOS] Esta bicicleta eléctrica de cercanías está equipada con cuatro
             zonas de amortiguación: amortiguador central/amortiguador hidráulico/amortiguador de doble resorte de
@@ -1173,7 +1168,7 @@ productos:
             recibir el paquete, por si fuera necesario realizar una devolución.
         variationAttributes:
           - name: size_name
-            value: 30Ah
+            value: 17.5Ah
         ParentASIN: B0F83V9T8T
     title: >-
       DEEPOWER Bicicleta Eléctrica Plegable, Bicicleta Eléctrica, Batería 48V 13Ah Extraíble, Motor de 250W, Suspensión
@@ -1297,7 +1292,7 @@ productos:
           ONESPORT OT16-2 Bicicleta Eléctrica Plegable, 20" Ebike con Extraíble Bateria 48V 17Ah, 250W Bicicleta
           Electrica Adultos con Pantalla LCD y Conexión Bluetooth, Bici Eléctrica para Viajeros Urbanos
         brand: ONESPORT
-        precio: 749,00€
+        precio: 769,00€
         precioOriginal: 769,00€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/51DpVXfFFFL._SL500_.jpg
@@ -1360,7 +1355,7 @@ productos:
       Adultos con Pantalla LCD y Conexión Bluetooth (Marrón Oscuro)
     nombre: ONESPORT OT16-2 Bicicleta Eléctrica Plegable, 20"
     brand: ONESPORT
-    precio: 749,00€
+    precio: 769,00€
     precioOriginal: 769,00€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/51lo-QVNOKL._SL500_.jpg
@@ -1741,4 +1736,4 @@ productos:
       fácil de guardar; en mi caso cabe sin problema en el maletero. La suspensión y los frenos de disco junto al freno
       electrónico aportan seguridad y confort al rodar. Por eso la recomendaría para desplazamientos urbanos y para
       quien necesite una e-bike portátil con garantía de un año.
-actualizacion: '2025-09-24'
+actualizacion: '2025-09-25'

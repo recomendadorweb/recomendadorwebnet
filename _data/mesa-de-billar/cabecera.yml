@@ -1,0 +1,10 @@
+titulo: 'Encuentra la mejor mesa de billar para tu casa'
+imagen:
+  alt: Mesa de billar en sala de juegos
+  src: /global/images/mesa-de-billar.webp
+  srcset: /global/images/mesa-de-billar.webp 600w, /global/images/mesa-de-billar.webp
+  width: 600
+  style: width:100%;max-height:200px;object-fit:cover;border-radius:10px;
+literal: Mesas de billar recomendadas
+emoji: 🎱
+menu: 🎱 Mesa de billar

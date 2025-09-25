@@ -19,9 +19,9 @@ productos:
     lo_mejor: 🔊 Sonido THX posicional, ⚡ Conexión HyperSpeed, 🔋 Batería 70h
     nombre: Razer BlackShark V2 HyperSpeed
     valoracion: 5
-    precio: 118,49€
+    precio: 119,99€
     precioOriginal: 149,99€
-    disponibilidad: En stock
+    disponibilidad: Envío en 2 a 3 días
     imagenesVariantes:
       - url: https://m.media-amazon.com/images/I/51SJ-5TAOHL._SL500_.jpg
         width: 500
@@ -1394,9 +1394,9 @@ productos:
           Razer BlackShark V2 HyperSpeed para PC - Auriculares para esports inalámbricos y ligeros (280 g, Micrófono
           HyperClear, Diafragmas TriForce de titanio de 50 mm, Bluetooth) Negro
         brand: Razer
-        precio: 118,49€
+        precio: 119,99€
         precioOriginal: 149,99€
-        disponibilidad: En stock
+        disponibilidad: Envío en 2 a 3 días
         imagen: https://m.media-amazon.com/images/I/41E-UeLueWL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 500
@@ -1751,7 +1751,7 @@ productos:
           Razer Barracuda X - Auriculares Gaming inalámbricos y móviles multiplataforma (PC, Playstation, Nintendo
           Switch y Android) Quartz
         brand: Razer
-        precio: 68,80€
+        precio: 68,00€
         precioOriginal: 99,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/418+iP2AuXL._SL500_.jpg
@@ -2451,7 +2451,7 @@ productos:
     lo_mejor: 🔊 Sonido Dolby Atmos, 🎧 Diadema flotante
     nombre: Corsair HS80 RGB Wireless
     valoracion: 4.5
-    precio: 99,99€
+    precio: 112,49€
     precioOriginal: 149,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -2506,7 +2506,7 @@ productos:
           Corsair HS80 RGB USB Auriculares premium para juegos con sonido envolvente 7.1 (Micrófono omnidireccional,
           Tecnología SoundID de SonarWorks, Control de volumen en auricular de fácil acceso) Negro
         brand: Corsair
-        precio: 69,99€
+        precio: 109,78€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/31yUakRSDrL._SL500_.jpg
@@ -2673,7 +2673,7 @@ productos:
           Corsair HS80 RGB USB Auriculares premium para juegos con sonido envolvente 7.1 (Micrófono omnidireccional,
           Tecnología SoundID de SonarWorks, Control de volumen en auricular de fácil acceso) Blanco
         brand: Corsair
-        precio: 69,99€
+        precio: 102,00€
         precioOriginal: 129,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/313zpsuSEvL._SL500_.jpg
@@ -3147,7 +3147,7 @@ productos:
           SteelSeries Arctis Nova 5X Cascos Xbox Inalámbricos - Xbox, PC, Switch 2, móvil - Controladores magnéticos de
           neodimio - Más de 100 preajustes - Batería de 60 horas - 2,4 GHz o BT - Micro Gen2.X
         brand: SteelSeries
-        precio: 113,99€
+        precio: 119,99€
         precioOriginal: 139,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41MFJKfw5JL._SL500_.jpg
@@ -3862,59 +3862,6 @@ productos:
             value: Cloud II
         ParentASIN: B0F6CRD2YL
         condicion: new
-      - ASIN: B0CBQYKFR2
-        title: >-
-          HyperX Cloud III Wireless Auriculares Gaming para PC, PS5, PS4, batería hasta 120 horas, 2.4GHz, drivers 53mm,
-          Micrófono 10mm, Negro
-        brand: HyperX
-        precio: 154,10€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/31gePlHzyTL._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/41z2ZcLWXaL._SL500_.jpg
-            width: 500
-            height: 250
-          - url: https://m.media-amazon.com/images/I/31-NE0FMAFL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31i0lbnsc8L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/21gEI0kY0UL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/31tbCE-0DpL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/218UGwICegL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41FpDzYhW4L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Mn1Hp214L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41q0rO2FO1L._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0CBQYKFR2?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - Auriculares de sonido
-          - Sonido nítido y limpio
-          - Auriculares de diadema Hyperx 77Z45AA
-        variationAttributes:
-          - name: color_name
-            value: Negro
-          - name: connectivity_technology
-            value: Inalámbrico
-          - name: configuration
-            value: Cloud III
-        ParentASIN: B0F6CRD2YL
     ParentASIN: B0F6CRD2YL
     variationAttributes:
       - name: color_name
@@ -3928,8 +3875,8 @@ productos:
       DTS, espuma con memoria, marco resistente, micrófono nítido de 10 mm, USB-C, USB-A
     condicion: new
     variantes_info:
-      total_en_stock: 4
-      mostradas: 4
+      total_en_stock: 3
+      mostradas: 3
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -3953,7 +3900,7 @@ productos:
     lo_mejor: 🧊 Diseño ligero, 🔊 Sonido 7.1 con adaptador USB
     nombre: Corsair HS55 SURROUND
     valoracion: 4
-    precio: 69,99€
+    precio: 59,67€
     precioOriginal: 79,99€
     disponibilidad: En stock
     imagenesVariantes:
@@ -4140,4 +4087,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-24'
+actualizacion: '2025-09-25'

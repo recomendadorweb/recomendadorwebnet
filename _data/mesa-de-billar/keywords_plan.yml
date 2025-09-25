@@ -1,0 +1,90 @@
+cabecera:
+  # KW_ATACADA: mesa de billar | VOL: 4400
+  principal: mesa de billar
+  meta:
+    vol: 4400
+    diff: 0
+    intent: I
+    reason: ai-naturalized
+introduccion:
+  soporte:
+  # KW_ATACADA: mesa de billar | VOL: 4400
+  - mesa de billar
+  # KW_ATACADA: mesa billar | VOL: 1900
+  - mesa de billar
+  # KW_ATACADA: mesas de billar | VOL: 1300
+  - mesas de billar
+  # KW_ATACADA: mesa billar convertible | VOL: 720
+  - mesa de billar convertible
+secciones:
+  - kw: mesa de billar
+    # KW_ATACADA: mesa de billar | VOL: 4400
+    titulo: mesa de billar
+    id: mesa-de-billar
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 4400
+    diff: 0
+    intent: I
+  - kw: mesa billar
+    # KW_ATACADA: mesa billar | VOL: 1900
+    titulo: mesa de billar
+    id: mesa-billar
+    mostrar: abajo
+    motivo: keyword poco legible (mejor al final)
+    vol: 1900
+    diff: 0
+    intent: I
+  - kw: mesas de billar
+    # KW_ATACADA: mesas de billar | VOL: 1300
+    titulo: mesas de billar
+    id: mesas-de-billar
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 1300
+    diff: 0
+    intent: I
+  - kw: mesa billar convertible
+    # KW_ATACADA: mesa billar convertible | VOL: 720
+    titulo: mesa de billar convertible
+    id: mesa-billar-convertible
+    mostrar: medio
+    motivo: característica/caso de uso legible
+    vol: 720
+    diff: 0
+    intent: I
+cual_compraria_yo:
+  h2: Mis recomendaciones (lo que yo compraría)
+  seeds:
+faq:
+  targets:
+  # KW_ATACADA: mesa de billar | VOL: 4400
+  - mesa de billar
+  # KW_ATACADA: mesa billar | VOL: 1900
+  - mesa de billar
+  # KW_ATACADA: mesas de billar | VOL: 1300
+  - mesas de billar
+  # KW_ATACADA: mesa billar convertible | VOL: 720
+  - mesa de billar convertible
+  # KW_ATACADA: mesa de billar precio | VOL: 480
+  - precio de mesa de billar
+  # KW_ATACADA: mesa de billar profesional | VOL: 480
+  - mesa de billar profesional
+  # KW_ATACADA: mesas billar | VOL: 320
+  - mesas de billar
+  # KW_ATACADA: mesa billar comedor | VOL: 260
+  - mesa de billar para comedor
+html_map:
+  h1: mesa de billar
+  h2:
+  - Mis recomendaciones (lo que yo compraría)
+  - mesa de billar
+  - mesa de billar
+  - mesas de billar
+  - mesa de billar convertible
+  h3:
+    cual_compraria_yo: categorías por seeds/atributos
+    faq: preguntas-respuestas
+debug:
+  total_keywords: 8
+  total_brands_detected: 91

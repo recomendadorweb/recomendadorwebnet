@@ -3674,7 +3674,7 @@ productos:
       - url: https://m.media-amazon.com/images/I/51AEUt-Xr9L._SL500_.jpg
         width: 500
         height: 500
-      - url: https://m.media-amazon.com/images/I/41lRM8CUrYL._SL500_.jpg
+      - url: https://m.media-amazon.com/images/I/41OVYrkFggL._SL500_.jpg
         width: 500
         height: 500
       - url: https://m.media-amazon.com/images/I/4161Nh0GsgL._SL500_.jpg
@@ -4414,9 +4414,9 @@ productos:
       - name: color_name
         value: Gris
     variantes_info:
-      total_en_stock: 101
+      total_en_stock: 102
       mostradas: 10
-      restantes: 91
+      restantes: 92
       truncado: true
     variantes_restantes_asins:
       - B08W66TZQQ
@@ -4510,6 +4510,7 @@ productos:
       - B0CL4ZY6FN
       - B0CL51DGD3
       - B0D3LPNK8T
+      - B0FRFQSJKF
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B08W66TZQQ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B08W66V4DL?tag=recomendadorn-21&th=1&psc=1
@@ -4602,6 +4603,7 @@ productos:
       - https://www.amazon.es/dp/B0CL4ZY6FN?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0CL51DGD3?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0D3LPNK8T?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0FRFQSJKF?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B0B9BX7R2R
     a_tener_en_cuenta: Memory foam + HR FoamTech
     brand: Cecotec
@@ -5183,10 +5185,10 @@ productos:
       - B0B9BXQZ6D
       - B0B9BY5VKL
       - B0BLZ5ZK1B
-      - B0BPYQHQ2R
       - B0BPYSH859
       - B0BPZ157H5
       - B0BPZQZWR4
+      - B0BQ13514F
       - B0BQ19C3MW
       - B0BQ19VTQL
       - B0BQ1NM4QR
@@ -5203,10 +5205,10 @@ productos:
       - https://www.amazon.es/dp/B0B9BXQZ6D?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0B9BY5VKL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BLZ5ZK1B?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B0BPYQHQ2R?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPYSH859?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZ157H5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BPZQZWR4?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0BQ13514F?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ19C3MW?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ19VTQL?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0BQ1NM4QR?tag=recomendadorn-21&th=1&psc=1
@@ -5932,16 +5934,15 @@ productos:
       - name: color_name
         value: Colchón 25cm
     variantes_info:
-      total_en_stock: 38
+      total_en_stock: 37
       mostradas: 10
-      restantes: 28
+      restantes: 27
       truncado: true
     variantes_restantes_asins:
       - B07L9C7P8V
       - B07L9C7V72
       - B07L9CBQWG
       - B07L9CFXZJ
-      - B07L9CH15S
       - B07L9CWVXG
       - B07L9D7TPB
       - B07L9D9VLT
@@ -5970,7 +5971,6 @@ productos:
       - https://www.amazon.es/dp/B07L9C7V72?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07L9CBQWG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07L9CFXZJ?tag=recomendadorn-21&th=1&psc=1
-      - https://www.amazon.es/dp/B07L9CH15S?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07L9CWVXG?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07L9D7TPB?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07L9D9VLT?tag=recomendadorn-21&th=1&psc=1
@@ -6755,4 +6755,4 @@ productos:
       - https://www.amazon.es/dp/B0DW4KY26P?tag=recomendadorn-21&th=1&psc=1
 titulo_a_tener_en_cuenta: Material principal
 titulo_lo_mejor: Firmeza
-actualizacion: '2025-09-24'
+actualizacion: '2025-09-25'
