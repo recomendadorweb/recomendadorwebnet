@@ -447,9 +447,9 @@ productos:
       - name: color_name
         value: Negro Multicolor
     variantes_info:
-      total_en_stock: 17
+      total_en_stock: 18
       mostradas: 10
-      restantes: 7
+      restantes: 8
       truncado: true
     variantes_restantes_asins:
       - B0F5BTDJVT
@@ -458,6 +458,7 @@ productos:
       - B0F5BV5DK2
       - B0F5BVKW39
       - B0F5BVQZSP
+      - B0F5BWCY81
       - B0F5BWQWNX
     variantes_restantes_enlaces:
       - https://www.amazon.es/dp/B0F5BTDJVT?tag=recomendadorn-21&th=1&psc=1
@@ -466,6 +467,7 @@ productos:
       - https://www.amazon.es/dp/B0F5BV5DK2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F5BVKW39?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F5BVQZSP?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B0F5BWCY81?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F5BWQWNX?tag=recomendadorn-21&th=1&psc=1
   - ASIN: B08BDDT63M
     nombre: Traje Profesional 2 Piezas Lunares Gojoy Shop
@@ -3012,7 +3014,7 @@ productos:
         brand: Partilandia
         precio: 24,48€
         precioOriginal: No especificado
-        disponibilidad: En stock
+        disponibilidad: Envío en 7 a 8 días
         imagen: https://m.media-amazon.com/images/I/51a0Do1t-DL._SL500_.jpg
         imagenWidth: 500
         imagenHeight: 454
@@ -3232,4 +3234,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-25'
+actualizacion: '2025-09-26'

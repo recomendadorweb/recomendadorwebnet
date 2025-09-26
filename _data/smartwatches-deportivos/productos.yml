@@ -69,7 +69,7 @@ productos:
           Garmin Forerunner 55 - Reloj Inteligente para Running con GPS, Planes de Entrenamiento, notificaciones y
           Seguimiento del Bienestar, Blanco
         brand: Garmin
-        precio: 165,34€
+        precio: 161,45€
         precioOriginal: 199,99€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41u06XEXGYL._SL500_.jpg
@@ -110,7 +110,7 @@ productos:
       - ASIN: B0DD542SY9
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: 206,98€
+        precio: 201,98€
         precioOriginal: 239,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21EpcbLQRgL._SL500_.jpg
@@ -146,7 +146,7 @@ productos:
       - ASIN: B0DD5493Q2
         title: Garmin Forerunner 55 – GPS Running Watch Whitestone with 1.04“ Always-On Color Display & Quick Release Band
         brand: Garmin
-        precio: 204,57€
+        precio: 201,98€
         precioOriginal: 239,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/21Jzi-5UdjL._SL500_.jpg
@@ -258,7 +258,7 @@ productos:
           Garmin Forerunner 55 – GPS Running Watch Aqua with 1.04“ Always-On Color Display & Garmin Index S2, Smart
           Scale
         brand: Garmin
-        precio: 187,57€
+        precio: 189,98€
         precioOriginal: 239,98€
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/317-ngq3E4L._SL500_.jpg
@@ -363,7 +363,7 @@ productos:
           Garmin Forerunner 255 Music, Reloj Inteligente para Correr con GPS, Almacenamiento de música, Métricas
           avanzadas, Pay, Autonomía de 14 Días, Blanco
         brand: Garmin
-        precio: 371,23€
+        precio: 360,20€
         precioOriginal: No especificado
         disponibilidad: En stock
         imagen: https://m.media-amazon.com/images/I/41e6z9PjjXL._SL500_.jpg
@@ -517,54 +517,6 @@ productos:
           - name: color_name
             value: Gris
         ParentASIN: B0BYJVH4JP
-      - ASIN: B0B46N7QQL
-        title: >-
-          Garmin Forerunner 255, Reloj Inteligente para Correr con GPS, Garmin Pay, Autonomía de hasta 14 Días, Gris
-          Pizarra
-        brand: Garmin
-        precio: 241,91€
-        precioOriginal: No especificado
-        disponibilidad: En stock
-        imagen: https://m.media-amazon.com/images/I/41oPOwZvB0L._SL500_.jpg
-        imagenWidth: 500
-        imagenHeight: 500
-        imagenesVariantes:
-          - url: https://m.media-amazon.com/images/I/515dHoMhanL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51Y0KlbFlgL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/517l2MnZm0L._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/51i+quZTIhL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/41ogR4NnbhL._SL500_.jpg
-            width: 500
-            height: 500
-          - url: https://m.media-amazon.com/images/I/4114fiMgAZL._SL500_.jpg
-            width: 500
-            height: 500
-        condicion: new
-        enlace: https://www.amazon.es/dp/B0B46N7QQL?tag=recomendadorn-21&th=1&psc=1
-        caracteristicasAmazon:
-          - >-
-            Obtendrás una visión general del sueño, el estado de VFC y la sesión de entrenamiento diaria con tu morning
-            report.
-          - Desafía tus límites con la función de triatlón integrada y más de 30 perfiles de actividad.
-          - >-
-            Planifica tu estrategia con sesiones de entrenamiento diarias recomendadas, detalles del trayecto y mucho
-            más en el widget de carrera.
-          - Utiliza un conjunto completo de métricas avanzadas y herramientas de entreno para alcanzar tus objetivos.
-          - Paga el café después del entrenamiento con los pagos contactless de Garmin Pay.
-        variationAttributes:
-          - name: style_name
-            value: Forerunner 255
-          - name: color_name
-            value: Gris Pizarra
-        ParentASIN: B0BYJVH4JP
     ParentASIN: B0BYJVH4JP
     variationAttributes:
       - name: style_name
@@ -574,8 +526,8 @@ productos:
     nombreCompleto: Garmin Forerunner 255, Reloj Inteligente para Correr con GPS, Garmin Pay, Autonomía de hasta 14 Días, Azul Oscuro
     condicion: new
     variantes_info:
-      total_en_stock: 5
-      mostradas: 5
+      total_en_stock: 4
+      mostradas: 4
       restantes: 0
       truncado: false
     variantes_restantes_asins: []
@@ -1834,4 +1786,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-25'
+actualizacion: '2025-09-26'

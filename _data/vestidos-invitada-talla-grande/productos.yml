@@ -691,9 +691,9 @@ productos:
       - name: color_name
         value: Borgoña
     variantes_info:
-      total_en_stock: 232
+      total_en_stock: 233
       mostradas: 10
-      restantes: 222
+      restantes: 223
       truncado: true
     variantes_restantes_asins:
       - B07QWJMXW8
@@ -719,6 +719,7 @@ productos:
       - B07RD5G1Y5
       - B07RF5CPD6
       - B07RF6KJCL
+      - B07RF6KT6G
       - B07RG42W5G
       - B07RG49ZQ2
       - B07RG5137Q
@@ -942,6 +943,7 @@ productos:
       - https://www.amazon.es/dp/B07RD5G1Y5?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RF5CPD6?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RF6KJCL?tag=recomendadorn-21&th=1&psc=1
+      - https://www.amazon.es/dp/B07RF6KT6G?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RG42W5G?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RG49ZQ2?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07RG5137Q?tag=recomendadorn-21&th=1&psc=1
@@ -2794,8 +2796,8 @@ productos:
       Hanna Nikole Vestidos de invitado de boda para mujer, talla grande, de gasa, vestidos de noche con lentejuelas,
       cuello redondo, elegante, vestido de cóctel, vestido midi festivo para la madre de la
     brand: Hanna Nikole
-    precio: 61,21€
-    precioOriginal: No especificado
+    precio: 57,46€
+    precioOriginal: 61,37€
     disponibilidad: En stock
     imagen: https://m.media-amazon.com/images/I/41J1E9JSESL._SL500_.jpg
     imagenWidth: 384
@@ -6657,4 +6659,4 @@ productos:
       - https://www.amazon.es/dp/B0F32X33QP?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F32X77ZH?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B0F32XKCJB?tag=recomendadorn-21&th=1&psc=1
-actualizacion: '2025-09-25'
+actualizacion: '2025-09-26'

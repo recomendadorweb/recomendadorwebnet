@@ -2534,12 +2534,11 @@ productos:
       Sevillana o Flamenca. [160 x 80 cm] Tamaño Ideal para Mujer
     condicion: new
     variantes_info:
-      total_en_stock: 21
+      total_en_stock: 20
       mostradas: 10
-      restantes: 11
+      restantes: 10
       truncado: true
     variantes_restantes_asins:
-      - B07BD1YF4Y
       - B07JG5GV2L
       - B07JGPSHGJ
       - B07Q7YNGYZ
@@ -2551,7 +2550,6 @@ productos:
       - B09Q98JVGF
       - B09QCV8RL2
     variantes_restantes_enlaces:
-      - https://www.amazon.es/dp/B07BD1YF4Y?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JG5GV2L?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07JGPSHGJ?tag=recomendadorn-21&th=1&psc=1
       - https://www.amazon.es/dp/B07Q7YNGYZ?tag=recomendadorn-21&th=1&psc=1
@@ -3290,4 +3288,4 @@ productos:
       truncado: false
     variantes_restantes_asins: []
     variantes_restantes_enlaces: []
-actualizacion: '2025-09-25'
+actualizacion: '2025-09-26'
